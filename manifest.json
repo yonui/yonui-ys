@@ -1,0 +1,10 @@
+{
+  "name": "libra-project",
+  "version": "0.0.1",
+  "keyword": "demo library",
+  "themes": "A demo component library.",
+  "description": "这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库",
+  "components": {
+    "Button":"./components/Button"
+  }
+}
