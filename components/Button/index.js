@@ -1,3 +1,3 @@
-import MyComponent from './MyComponent';
+import Button from './Button';
 import { ReactWrapper, manifest } from './manifest'
-export default ReactWrapper(MyComponent,manifest)
+export default ReactWrapper(Button,manifest)
