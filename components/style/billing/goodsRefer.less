@@ -1,0 +1,572 @@
+
+tr.ant-table-expanded-row .ant-table-wrapper {
+  width: 740px;
+}
+
+.ant-table-selection {
+  visibility: hidden;
+}
+
+.comboTab .ant-checkbox {
+  display: none;
+}
+
+.comboTab .combo_hideCheckBox+.ant-table-expanded-row-level-1 .ant-checkbox {
+  display: none;
+}
+
+.comboTab .combo_showCheckBox+.ant-table-expanded-row-level-1 .ant-checkbox {
+  display: block;
+  position: relative;
+  top: 5px;
+  left: -1px;
+}
+
+.skuTab .sku_hasSpec .ant-table-selection-column span {
+  display: none;
+}
+
+.skuTab .sku_hasSpec+.ant-table-expanded-row-level-1 .ant-table-scroll .ant-table-selection-column span {
+
+  visibility: hidden;
+}
+
+.skuTab .sku_noSpec .ant-table-selection-column span {
+  display: block;
+  margin-left: -13.5px;
+}
+
+.skuTab .sku_noSpec .ant-table-row-expand-icon-cell span {
+  display: none;
+}
+
+/* 商品参照 */
+.goodsRefer_modal {
+  width: 1000px;
+  .u-modal-content{
+    width: 1000px;
+    border: none;
+  }
+  .u-modal-body{
+    padding: 0px;
+  }
+  .skuTab .ant-table-tbody>tr>td {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .skuTab .ant-table-thead>tr>th.sku_code {
+    padding-left: 0px !important;
+  }
+
+  .skuTab .ant-table-tbody>tr>td.sku_code {
+    padding-left: 0px !important;
+  }
+
+  /*存量表格*/
+  .rightPanel .ant-checkbox-wrapper {
+    margin-top: 12px;
+  }
+
+  .rightPanel .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .checkboxHD .ant-checkbox-wrapper .ant-checkbox {
+    margin-top: 0px;
+  }
+
+  .ant-spin-container,
+  .ant-table-wrapper,
+  .ant-spin-nested-loading,
+  .ant-spin-container {
+    height: 100%;
+  }
+
+  .ant-table-thead>tr>th:first-child,
+  .ant-table-tbody>tr>td:first-child {
+    padding-left: 10px !important;
+    padding-right: 0
+  }
+
+  .comboTab {
+    .ant-table-thead>tr>th {
+      height: 41px;
+    }
+  }
+
+  .leftPanel {
+    overflow-y: auto;
+    height: 497px;
+    width: 200px;
+
+    .bg-white {
+      height: 497px;
+      overflow-y: auto;
+    }
+  }
+
+  .rightPanel {
+    border-left: 1px solid #dbe0e5;
+    height: 497px;
+    width: 780px;
+    overflow-y: scroll !important;
+
+    .refer-toolbar {
+      padding: 12px 15px;
+
+      .ant-input {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+      }
+
+      button.ant-btn {
+        height: 30px;
+      }
+    }
+  }
+
+  .ant-col-6 {
+    overflow-y: auto;
+    height: 497px;
+    width: 220px;
+  }
+
+  .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active:after {
+    bottom: 1px;
+  }
+
+  .u-modal-header {
+    padding-right: 30px;
+    border-bottom: 1px solid #505766;
+    padding-bottom: 0;
+
+    .ant-tabs-tab {
+      margin-left: 0px;
+      margin-right: 40px;
+    }
+
+    .ant-col-12 {
+      .ant-switch {
+        float: right;
+        margin-top: 10px;
+      }
+
+      .ant-input-search {
+        float: right;
+        .u-form-control{
+          height: 40px!important;
+          line-height: 38px!important;
+          font-size: 14px;
+          width: 250px;
+          float: right;
+          padding: 4px 38px 4px 10px;
+          border-radius: 4px;
+          border-color: #d9d9d9;
+        }
+        .anticon-shurukuangshanchu {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .ant-tabs-bar {
+    border: none;
+  }
+
+  .ant-tree {
+    li {
+      .ant-tree-node-content-wrapper {
+        padding: 0px 8px;
+      }
+
+      span.ant-tree-switcher {
+        width: 18px !important;
+        height: 18px !important;
+      }
+    }
+  }
+
+  .ant-table-wrapper {
+    margin-top: 0 !important;
+    border-top: none !important;
+  }
+
+  .ant-table-thead>tr>th {
+    border-top: none;
+  }
+
+  .ant-col-18 {
+    border-left: 1px solid #dbe0e5;
+    height: 497px;
+    width: 780px;
+    overflow-y: scroll !important;
+  }
+
+
+  .goodsRefer_combo_tree {
+    padding: 10px 8px 13px 50px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+
+    .ant-checkbox-wrapper {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      margin-top: -11px;
+      width: 22px;
+      height: 26px;
+      padding: 0;
+    }
+
+    .ant-checkbox-wrapper+span {
+      padding: 0;
+    }
+  }
+
+  .goodsRefer_combo_tree>span:first-child {
+    width: 80%;
+    display: bolder
+  }
+
+  .ant-tree {
+    padding-left: 20px;
+    padding-top: 10px;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    li:first-child {
+      padding-top: 0;
+    }
+  }
+
+  /*表格*/
+  .ant-table-scroll table.ant-table-fixed {
+    .ant-table-wrapper {
+      margin-top: -10px;
+      background-color: #fff;
+    }
+  }
+
+  .ant-table-fixed-left {
+    width: 35px;
+  }
+
+  .tr_re {
+    position: relative;
+  }
+
+  .td_ab {
+    position: absolute !important;
+    width: 100%;
+    padding: 23px 0;
+    left: 0;
+    border: none;
+    background: none;
+    z-index: 111;
+  }
+
+  .ant-modal-body {
+    height: 497px;
+
+    .ant-pagination {
+      .ant-select-sm {
+        width: 120px;
+
+        .ant-select-selection__rendered {
+          line-height: 28px !important;
+          height: 30px !important;
+        }
+
+        .ant-select-arrow {
+          margin-top: -15px;
+        }
+      }
+    }
+
+    .rightPanel {
+      .ant-pagination {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+
+/* 表格问题 */
+.goodsRefer_modal {
+  .ant-table-pagination {
+    // margin: 0!important;
+    margin-top: 20px;
+  }
+
+  tr.ant-table-expanded-row.ant-table-expanded-row-level-1 {
+    .ant-table-wrapper {
+      position: relative;
+      z-index: 11;
+    }
+  }
+
+  tr.ant-table-expanded-row>td:first-child {
+    background: #f7f9fd
+  }
+
+  tr>td:first-child {
+    span {
+      label.ant-checkbox-wrapper {
+        position: relative;
+        top: -4px;
+      }
+    }
+  }
+
+  .columns-right,
+  .columns-Money {
+    text-align: right !important;
+    padding-right: 30px !important;
+  }
+
+  .ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after {
+    top: 2px;
+  }
+
+  .ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+    top: 3px;
+  }
+
+  .ant-tree li ul {
+    padding-top: 5px;
+  }
+
+  .ant-tree li span.ant-tree-switcher {
+    top: -2px;
+  }
+
+  .combo_name,
+  .sku_name,
+  .combo_name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 290px;
+  }
+
+
+}
+
+
+.goodsTab {
+
+  //先注释开单添加商品弹窗翻页有问题 .ant-table-pagination{
+  // 	position: absolute;
+  //     bottom: 6px;
+  //     right: 0;
+  //     margin: 0;
+  // }
+  .ant-table-tbody>tr>td {
+    padding: 0px 10px !important;
+    height: 49px;
+  }
+
+  .ant-table-tbody>tr>td:first-child {
+    padding-right: 30px;
+  }
+
+  .ant-table-thead>tr>th:first-child {
+    padding-right: 10px;
+  }
+
+  .ant-table-tbody>tr>td.columns-right {
+    padding-right: 30px !important;
+  }
+
+  .ant-table-body {
+    overflow: auto !important;
+  }
+
+}
+
+.skuTab {
+  .ant-table-thead>tr>th:first-child {
+    padding-right: 10px;
+  }
+
+  .ant-table-tbody>tr>td {
+    padding: 0px !important;
+    height: 49px;
+
+    tr td {
+      padding: 0 5px !important;
+    }
+  }
+
+  .ant-table-tbody>tr>td.columns-right {
+    padding-right: 30px !important;
+  }
+}
+
+.combo_code,
+.combo_name,
+.ant-table-thead>tr>th.sku_name,
+.ant-table-thead>tr>th.sku_code,
+.ant-table-tbody>tr>td.sku_name,
+.ant-table-tbody>tr>td.sku_code,
+.sku_brand,
+.ant-table-tbody>tr>td.sku_brand {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/*缴款单新增2018年10月17日*/
+.voucher-touch {
+  .voucher-body-left-touch {
+    .public_fixedDataTable_footer .public_fixedDataTableCell_main {
+      line-height: 56px !important;
+    }
+
+    .public_fixedDataTable_footer .fixedDataTableCellLayout_main:last-child .public_fixedDataTableCell_cellContent .textCol,
+    .public_fixedDataTable_footer .public_fixedDataTableCell_cellContent .textCol {
+      line-height: 56px !important;
+    }
+
+    .touch-grid {
+
+      .public_Scrollbar_main,
+      .public_Scrollbar_main.public_Scrollbar_mainActive {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/*2018年10月17日缴款新增*/
+@media screen and (max-width: 1024px) {
+  .voucher-touch {
+    .voucher-body-left-touch {
+      .public_fixedDataTable_footer .public_fixedDataTableCell_main {
+        line-height: 46px !important;
+      }
+
+      .public_fixedDataTable_footer .fixedDataTableCellLayout_main:last-child .public_fixedDataTableCell_cellContent .textCol,
+      .public_fixedDataTable_footer .public_fixedDataTableCell_cellContent .textCol {
+        line-height: 46px !important;
+      }
+    }
+  }
+}
+
+// /*2018年10月16日电子秤取会员价和选择营业员model重叠*/
+// .billing-switchuser-modal-wrap {
+//   z-index: 1001;
+// }
+
+/*缴款单小键盘touch-single-payment*/
+.inputpanel-pop.touch-single-payment {
+  .ant-popover-inner {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .3);
+  }
+
+  .ant-popover-inner-content {
+    padding: 8px 0 5px 0;
+  }
+
+  .InputButtonPanelWrap {
+    width: 300px !important;
+    padding: 7px 15px 0;
+  }
+
+  .ant-popover-inner {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, .3);
+  }
+
+  .InputButtonPanel-cell {
+    width: 60px !important;
+    height: 60px !important;
+
+    button {
+      font-size: 20px !important;
+      width: 60px !important;
+      height: 60px !important;
+    }
+  }
+
+  .InputButtonPanel-hasSure button {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .InputButtonPanel-button-sure {
+    height: 130px !important;
+
+    button {
+      height: 130px !important;
+      font-size: 22px !important;
+    }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .inputpanel-pop.touch-single-payment {
+    .ant-popover-inner {
+      box-shadow: 0 1px 10px rgba(0, 0, 0, .3) !important;
+    }
+
+    .InputButtonPanel-cell button {
+      box-shadow: inset 0 -3px 0 0 #9fa6b2 !important;
+    }
+
+    .InputButtonPanelWrap {
+      width: 254px !important;
+      padding: 7px 15px 0;
+    }
+
+    .InputButtonPanel-cell {
+      width: 50px !important;
+      height: 50px !important;
+      margin-right: 8px !important;
+      margin-bottom: 8px !important;
+
+      button {
+        font-size: 18px !important;
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+
+    .InputButtonPanel-hasSure button {
+      width: 50px !important;
+      height: 50px !important;
+      box-shadow: inset 0 -3px 0 0 #7b8597 !important;
+    }
+
+    .InputButtonPanel-button-clear,
+    .InputButtonPanel-button-sure {
+      margin-top: 0px;
+
+      button {
+        box-shadow: inset 0 -3px 0 0 #db0001 !important;
+      }
+    }
+
+    .InputButtonPanel-button-sure {
+      height: 108px !important;
+
+      button {
+        height: 108px !important;
+        font-size: 18px !important;
+      }
+    }
+
+    .del .InputButtonPanel-button-back svg {
+      width: 30px;
+      height: 34px;
+    }
+
+    .del .InputButtonPanel-button-clear svg {
+      width: 22px;
+      height: 34px;
+    }
+  }
+}

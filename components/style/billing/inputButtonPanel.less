@@ -1,0 +1,121 @@
+input {
+  outline: none;
+}
+
+.InputButtonPanelWrap {
+  width: 294px;
+  font-size: 16px;
+  color: #333;
+  background: rgba(219, 224, 229, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+
+  .InputButtonPanel-row:last-child {
+    .InputButtonPanel-cell {
+      margin-bottom: 0;
+    }
+  }
+
+  .num {
+    float: left;
+
+    .InputButtonPanel-cell {
+      float: left;
+      width: 60px;
+      height: 60px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+      button {
+        width: 60px;
+        height: 60px;
+        border: none;
+        background: #fff;
+        box-shadow: inset 0 -2px 0 0 rgba(173, 180, 188, 0.60);
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #505766;
+      }
+
+      button:hover {
+        background: #DCDDE0;
+      }
+
+      button:active {
+        background: #B9BCC2;
+        box-shadow: inset 0 -2px 0 0 #888d98;
+      }
+    }
+  }
+
+  .del {
+    float: left;
+
+    button {
+      width: 60px;
+      height: 128px;
+      border: none;
+      background: #d4d7dd;
+      margin-bottom: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: inset 0 -2px 0 0 #a6a9ad;
+    }
+
+    button:hover {
+      background: #D3D3D6;
+    }
+
+    button:active {
+      background: #B9BCC2;
+      box-shadow: inset 0 -2px 0 0 #888d98;
+    }
+
+    .InputButtonPanel-button-back {
+      svg {
+        width: 35px;
+        height: 40px;
+      }
+    }
+
+    .InputButtonPanel-button-clear {
+      svg {
+        width: 26px;
+        height: 40px;
+      }
+    }
+
+    div:last-child {
+      button {
+        margin-bottom: 0
+      }
+    }
+  }
+
+  .InputButtonPanel-hasSure {
+    button {
+      width: 60px;
+      height: 60px;
+      box-shadow: inset 0 -2px 0 0 #bfc1c7;
+    }
+
+    .InputButtonPanel-button-sure {
+      button {
+        height: 128px;
+        border-radius: 0 8px 0 8px;
+        background: linear-gradient(45deg, #EE2223 0%, #FC4C2F 100%);
+        color: #fff;
+        font-size: 20px;
+        padding: 11px;
+        box-shadow: inset 0 -2px 0 0 #db0001;
+      }
+
+      button:hover {
+        background: linear-gradient(45deg, #FC4C2F 0%, #EE2223 100%);
+      }
+
+    }
+  }
+
+}

@@ -1,12 +1,12 @@
 {
   "name": "yonui-ys",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "yonui ys",
   "main": "/lib",
   "scripts": {
-    "build": "libra build",
-    "start": "libra start",
-    "dev": "libra start"
+    "build": "yonui build",
+    "start": "yonui start",
+    "dev": "yonui start"
   },
   "repository": {
     "type": "git",
@@ -65,6 +65,7 @@
     "bee-tree-select": "0.0.5",
     "bee-upload": "2.1.1",
     "classnames": "^2.2.6",
+    "fixed-data-table-2": "^0.8.28",
     "libraui-extension": "^0.7.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"

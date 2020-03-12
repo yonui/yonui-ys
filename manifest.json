@@ -1,10 +1,11 @@
 {
-  "name": "libra-project",
-  "version": "0.0.1",
-  "keyword": "demo library",
+  "name": "YonUI-YS",
+  "version": "1.0.0",
+  "keyword": "yonui demo",
   "themes": "A demo component library.",
-  "description": "这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库这是一个示例的组件库",
+  "description": "YonUI-YS 主题风格组件库展示",
   "components": {
-    "Button":"./components/Button"
+    "Affix": "./components/Affix",
+    "Button": "./components/Button"
   }
 }

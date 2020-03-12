@@ -1,2 +1,634 @@
-@import '~bee-button/build/Button.css';
+@import '../../_style/index.less';
+// primary 类型button 的渐变背景色
+@primary-linear-start-bg: #FC4C2F;
+@primary-linear-end-bg: #EE2223;
 
+// 新增按钮
+@add-button-bg-color: linear-gradient(90deg, #fa482e, #f32f27);
+@add-button-arrow-bg-color: linear-gradient(90deg, #f32f27, #e23);
+
+//hover
+@add-button-bg-color-hover: linear-gradient(90deg, #f32f27, #fa482e);
+@add-button-arrow-bg-color-hover: linear-gradient(90deg, #f73e2b, #fa482e);
+
+// 基本button样式
+.u-button {
+  font-family: Microsoft YaHei, Arial;
+  font-size: 12px;
+  height: @base-input-height;
+  min-width: 60px;
+   line-height: 1;
+  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  z-index: 1;
+
+  &-icon {
+    padding: 6px 8px;
+    min-width: 0;
+    background: transparent;
+    border-radius: 0;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &-ghost,
+  &-ghost:hover {
+    background: transparent;
+    border: none;
+  }
+
+  i {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+}
+
+// tinper:button-group
+.u-button-group {
+  border: #d9d9d9 1px solid;
+  border-radius: 4px;
+
+  .u-button {
+    height: @base-input-height;
+  }
+
+  i {
+    padding: 0 6px;
+    position: relative;
+    font-size: 12px;
+  }
+
+  i::after {
+    content: "";
+    width: 1px;
+    height: @base-input-height - 6;
+    background: linear-gradient(180deg, #fff, #a5a5a5 52%, #fff);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .dropdown-btn-icon {
+    line-height: @base-input-height - 2;
+    display: inline-block;
+  }
+}
+
+// 顶部按钮
+.btn-toolbar-bottom .Toolbar_Group .u-button-group:hover {
+  border-color: #505766;
+  z-index: 1;
+  color: #333;
+  overflow: hidden;
+}
+
+.listheadRow {
+  .up-show {
+    .up-search {
+      background: @custom-color;
+      color: @custom-font-color;
+      border: 1px solid @custom-border-color;
+
+      &:hover {
+        background: @custom-color-hover;
+        color: #fff;
+      }
+    }
+
+    .u-button.showMore {
+      min-width: 24px;
+
+      &:hover {
+        color: @icon-hover-color-blue;
+      }
+
+      i {
+        margin-left: 0;
+      }
+    }
+
+    .u-button.filterSetting {
+      height: @base-input-height;
+
+      &:hover {
+        border: 1px solid @custom-color;
+      }
+    }
+  }
+  .Toolbar_Group_Length1 {
+    display: flex;
+    .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) {
+      .u-button-ghost {
+        height: @base-input-height - 2;
+      }
+    }
+  }
+  .Toolbar_Group {
+    display: flex;
+    .Toolbar_Common_Btn_Menus {
+      .dropdown-btn-icon .uf.uf-arrow-down {
+        top:0;
+      }
+    }
+    .u-button-group {
+      height: @base-input-height;
+      .u-button {
+        height: @base-input-height - 2;
+      }
+      .dropdown-btn-icon {
+        line-height: @base-input-height;
+        float: right;
+        i:after {
+          top:2px;
+        }
+      }
+    }
+  }
+  .btn-toolbar-bottom {
+    .Toolbar_Group {
+
+      .u-button,
+      .u-button-group {
+        border-radius: 0;
+        margin-left: -1px;
+
+        &:hover {
+          z-index: 4;
+        }
+      }
+
+      .u-button:first-child,
+      .u-button-group:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .u-button:last-child,
+      .u-button-group:last-child {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    // DropdownBtn
+    .Toolbar_Group_Length1 {
+      .u-button-group {
+        &:hover {
+          border: 1px solid #505766;
+        }
+
+        .u-button {
+          margin-left: 0;
+
+          &:hover {
+            background: #f3f5f9;
+          }
+        }
+
+        .dropdown-btn-icon {
+          display: inline-block;
+          border-radius: 4px;
+          z-index: 1;
+        }
+
+        .dropdown-btn-icon.disabled {
+          background: #f7f7f7;
+        }
+      }
+    }
+
+  }
+}
+
+// 底部按钮,第一个为主题色,中间为蓝灰色,最后一个为灰色.ps:strange
+.bottom-toolbar {
+  padding-left: 10px;
+
+  .u-button:not(:first-child):not(:last-child) {
+    background: @custom-color  !important;
+    border: none;
+    // padding: 0 20px;
+    // min-width: 68px;
+    color: #fff !important;
+
+    &:hover {
+      background: @custom-color-hover  !important;
+      color: #fff;
+    }
+  }
+
+  .u-button:first-child {
+    color: #fff !important;
+    background: @primary-color;
+    border: none;
+
+    &:hover {
+      background: @primary-color-hover;
+    }
+  }
+
+  .u-button:last-child:not(.u-button:nth-last-child(1):last-child) {
+    border: none;
+    background: @custom2-color;
+    color: @custom2-font-color;
+
+    &:hover {
+      background: @custom2-color-hover;
+    }
+  }
+}
+
+// popover中的按钮
+.u-popover.u-popover-tooltip.u-tooltip.inverse {
+  .tooltip-inner {
+    border: none;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+    .u-popover-content {
+      .filter-btn-fixed {
+        .filter-txt {
+          .u-button-icon {
+            padding: 6px 3px 6px 0;
+            width: auto;
+
+            i.anticon {
+              font-size: 16px;
+              margin-left: 0;
+            }
+
+            &:hover i::before {
+              color: @primary-linear-end-bg;
+            }
+          }
+
+          .ant-row:first-child .pull-right .u-button-icon:first-child i::before,
+          .ant-row:last-child .pull-right .u-button-icon:nth-child(2) i::before {
+            color: #adb4bc;
+          }
+
+          .lock_disable {
+            .u-button-icon.unlock i::before {
+              color: #adb4bc;
+            }
+          }
+        }
+
+        .filter-btn-1 {
+          .u-button {
+            float: right;
+            min-width: 54px;
+            height: @base-input-height - 2;
+            line-height: 18px;
+          }
+
+          .u-button:first-child {
+            color: #fff;
+            border: none;
+
+            &:hover {
+              background: @primary-color-hover;
+            }
+          }
+
+          .u-button:last-child {
+            border: none;
+            background: @custom2-color;
+            color: @custom2-font-color;
+
+            &:hover {
+              background: @custom2-color-hover;
+            }
+          }
+        }
+      }
+
+      .query-criteria-select .Checked-confirm-btn .u-button {
+        height: @base-input-height - 2;
+        float: right;
+        margin-right: 10px;
+        padding: 0 12px;
+        margin-top: 8px;
+        min-width: 0;
+      }
+    }
+  }
+}
+
+// modal中的button,底部按钮第一个为灰色，中间为蓝灰色，最后一个为主题色。 ？？？？？ 为什么跟底部按钮不统一 <-  线上环境通过id控制颜色，这里不管了
+.u-modal {
+  .u-button {
+    font-size: 14px;
+  }
+
+  .modal-footer {
+    .u-button:not(.u-button-primary) {
+      background: @custom2-color;
+      border: none;
+      color: @custom2-font-color;
+      padding: 0 12px;
+
+      &:hover {
+        background: @custom2-color-hover;
+      }
+    }
+  }
+}
+
+// 表格里面的button
+.meta-table {
+  .btn-caret {
+    .u-button-icon {
+      padding: 0;
+      display: block;
+      height: 6px;
+
+      i {
+        font-size: 12px;
+        vertical-align: top;
+        transform: scale(.5) rotate(0deg);
+        color: #A5ABB6;
+        transform-origin: top;
+        line-height: 1;
+      }
+    }
+  }
+
+  .columnSetting {
+    .SettingBtn.u-button {
+      height: @base-input-height + 1;
+      width: 40px;
+      padding: 0;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.search-tree-2 {
+  .u-button-icon {
+    position: absolute;
+    border: none;
+    z-index: 5;
+    padding: 6px 8px;
+    right: 24px;
+    top: 10px;
+    // height: 30px;
+
+    i.anticon {
+      // margin-top: 2px;
+      font-size: 16px;
+      margin-left: 0;
+    }
+  }
+}
+
+// TODO：这里直接使用id 台定制化，需要纠正
+.u-button[id='ed_bom|btnMoveprev'] .u-button[id='ed_bom|btnMovenext'] {
+  min-width: 64px;
+}
+
+.u-button {
+  padding: 0 12px;
+  border-color: #d9d9d9;
+  color: #535a69;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &.u-button[disabled] {
+    border-color: #d9d9d9 !important;
+    color: rgba(0, 0, 0, .25);
+    background-color: #f7f7f7;
+  }
+
+  &:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):hover {
+    color: #505766;
+    border-color: #505766;
+  }
+
+  &.u-button-primary {
+    color: #fff;
+    background: @primary-color;
+    border: none;
+
+    &:hover {
+      background: @primary-color-hover;
+      border: none;
+    }
+  }
+
+}
+
+.u-button-border svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.u-button-border:not(.cancelScheme):active,
+.u-button-border:not(.cancelScheme):hover {
+   background-color: transparent;
+}
+
+.u-modal-footer {
+  .u-button {
+    display: inline-block;
+
+    .u-button-secondary {
+      border: none;
+      background: #eef1f3;
+      color: #505766;
+      font-weight: 500;
+
+      &:hover {
+        background: rgba(0, 0, 0, .1);
+      }
+    }
+
+    .ant-btn-primary {
+      background: linear-gradient(-45deg, @primary-linear-end-bg, @primary-linear-start-bg);
+      font-weight: 500;
+
+      &:hover {
+        background: linear-gradient(-45deg, @primary-linear-start-bg, @primary-linear-end-bg);
+        border-color: @primary-linear-start-bg;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.group-container {
+  padding: 10px 0px 0 0px
+}
+
+.u-form-control-search {
+  input.u-form-control-search {
+    padding: 0 24px 0 10px;
+  }
+}
+
+.search_name .u-form-control-affix-wrapper .u-form-control-suffix {
+  line-height: 1;
+}
+
+.tooltip-inner .search_scroll {
+  text-align: center;
+
+  .haveno_search {
+    color: #999;
+    margin-top: 30px;
+    display: block;
+  }
+}
+
+.u-tooltip.inverse.bottomRight .tooltip-arrow {
+  border-bottom-color: #dcdcdc;
+}
+
+.ToolBar_isAddButton {
+  border: none !important;
+
+  &:hover {
+    border: none !important;
+  }
+
+  &>.u-button {
+    height: @base-input-height;
+  }
+
+  &:hover {
+    &>.u-button:first-child:not(:last-child) {
+      background: @add-button-bg-color-hover  !important;
+    }
+
+    .dropdown-btn-icon {
+      background: @add-button-arrow-bg-color-hover  !important;
+    }
+  }
+
+  &>.u-button:first-child:not(:last-child) {
+    background: @add-button-bg-color;
+    color: #fff;
+    // padding: 0 14px;
+
+    &:hover {
+      background: @add-button-bg-color-hover  !important;
+    }
+  }
+
+  .dropdown-btn-icon {
+    background: @add-button-arrow-bg-color;
+    width: 20px;
+    text-align: center;
+    height: @base-input-height;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+
+    .uf-arrow-down {
+      color: #fff;
+      top: 2px;
+      padding: 0;
+      &:after {
+        background: linear-gradient(180deg, #f12b26, #fff 41%, #feeeed 72%, #f33128);
+        opacity: .5;
+        // top: -2px;
+      }
+    }
+
+    &:hover {
+      background: @add-button-arrow-bg-color-hover  !important;
+    }
+  }
+}
+
+.Toolbar_Group {
+
+  .Toolbar_Group_Item .u-select .u-select-selection {
+    border-color: #d9d9d9;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .u-button {
+    border-radius: 0;
+    border-color: #d9d9d9;
+
+    &:first-child:not(:last-child) {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+}
+
+.list-top-toolbar {
+  padding: 15px 0 0px 10px;
+}
+
+// modal 底部取消按钮，仅业务适配，需工程节点侧调整
+.u-button[id='accountingDelegate|btnAbandon'] {
+  border: none;
+  background: #eef1f3;
+  color: #505766;
+
+  &:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, .1);
+  }
+}
+
+// line-tabs 下的按钮
+.line-tabs .u-button[disabled]:hover {
+  color: rgba(0, 0, 0, .25);
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+}
+
+.u-popover .ant-popover-inner-content .ant-row:hover .pull-right .ant-btn {
+  background: #f3f5f9;
+}
+
+// 参照框中的按钮
+.tag-refer.tag-refer-01 .TagList .tagBtn-add {
+  min-width: 0;
+}
+
+// fix: 新增默认方案modal 左下角“添加查询条件” 的图文居中问题
+.scheme-content .query-item-button svg.icon {
+  width: 14px;
+  height: 14px;
+}
+
+// fix: 采购管理-> 供货目录中物料参照的左侧搜索 icon
+.leftPanel .search-tree-2 .u-button {
+  top: 12px;
+}
+
+// fix: 期初采购入库单，新增页面放大按钮样式
+.u-button.u-button[disabled].btn-maximize {
+  background: #fff;
+}
+
+// fix: 弹框底部按钮，文字过长时省略
+.u-modal-footer .u-button {
+  // max-width: 40%;
+  display: inline-block;
+  // text-overflow: ellipsis;
+}

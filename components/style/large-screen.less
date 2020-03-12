@@ -1,0 +1,589 @@
+/*无控件-设置垂直居中*/
+.panelLayer-col-final {
+  position: relative;
+
+  .panelLayer-nocontrol {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    margin-top: -15px;
+  }
+}
+
+/*大屏-弹窗*/
+.eChartPanelDesign_Modal {
+
+  /*天气*/
+  .eChartWeather {
+    min-width: 220px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+
+    .col-all {
+      overflow: hidden;
+    }
+
+    .eChartWeather-1,
+    .eChartWeather-2 {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: -ms-flexbox;
+      display: flex;
+      display: -webkit-flex;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
+      line-height: 22px;
+    }
+
+    .eChartWeather-temperature {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .eChartWeather-pm {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .eChartWeather-img {
+      img {
+        vertical-align: middle;
+        width: 30px;
+        height: 21px;
+      }
+    }
+
+    .eChartWeather-temperature {
+      font-size: 24px;
+    }
+
+    .eChartWeather-temperature-title {
+      font-size: 12px;
+    }
+
+    .eChartWeather-address,
+    .eChartWeather-pm,
+    .eChartWeather-pm-degree {
+      font-size: 14px;
+    }
+  }
+
+  .ant-table-small {
+    border: none;
+  }
+
+  /*表格*/
+  .ant-table-small .ant-table-thead>tr>th {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .ant-table-tbody>tr>td {
+    border-bottom: none;
+  }
+
+
+  .ant-modal-body {
+    padding: 0px;
+  }
+
+}
+
+
+/*大屏-深色预览*/
+.eChartSkin-1-all {
+
+  /*天气*/
+  .eChartWeather {
+    min-width: 220px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+
+    .col-all {
+      overflow: hidden;
+    }
+
+    .eChartWeather-1,
+    .eChartWeather-2 {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: -ms-flexbox;
+      display: flex;
+      display: -webkit-flex;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
+      line-height: 22px;
+    }
+
+    .eChartWeather-temperature {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .eChartWeather-pm {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .eChartWeather-img {
+      img {
+        vertical-align: middle;
+        width: 30px;
+        height: 21px;
+      }
+    }
+
+    .eChartWeather-temperature {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .eChartWeather-temperature-title {
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .eChartWeather-address,
+    .eChartWeather-pm,
+    .eChartWeather-pm-degree {
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+
+  .panelLayer-row-inner {
+    position: relative;
+
+    /*无padding 四个小角问题   有padding 四个小角问题*/
+    .panelLayer-col-outer-nopadding,
+    .panelLayer-col-outer-haspadding {
+      position: relative;
+
+      .panelLayer-col-outer-corner-1 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-left: #4081EB 2px solid;
+        border-top: #4081EB 2px solid;
+        left: 7px;
+        top: 7px;
+      }
+
+      .panelLayer-col-outer-corner-2 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-right: #4081EB 2px solid;
+        border-top: #4081EB 2px solid;
+        right: 7px;
+        top: 7px;
+      }
+
+      .panelLayer-col-outer-corner-3 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-left: #4081EB 2px solid;
+        border-bottom: #4081EB 2px solid;
+        left: 7px;
+        bottom: 7px;
+      }
+
+      .panelLayer-col-outer-corner-4 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-right: #4081EB 2px solid;
+        border-bottom: #4081EB 2px solid;
+        right: 7px;
+        bottom: 7px;
+      }
+    }
+  }
+
+  .panelLayer-col-final.eChartSkin-1-final {
+    border: 2px solid #2A4776 !important;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 60px 10px rgba(42, 71, 118, 0.50);
+  }
+
+  /*排名表示例*/
+  .eChartPanel-Chart {
+    .rankTable_Row:hover td {
+      background: transparent;
+    }
+
+    .rankTable_Row {
+      line-height: 20px;
+    }
+  }
+
+  /*排名表示例*/
+  .eChartPanel-Chart {
+    .rankTable_Row:hover td {
+      background: transparent;
+    }
+
+    .rankTable_Row {
+      line-height: 20px;
+    }
+  }
+
+  /*表格*/
+  .ant-table-small .ant-table-thead>tr>th {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .ant-table-tbody>tr>td {
+    border-bottom: none;
+  }
+
+  .ant-table-small {
+    border: none;
+  }
+}
+
+/*大屏-浅色预览*/
+.eChartSkin-2-all {
+
+  /*天气*/
+  .eChartWeather {
+    min-width: 220px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+
+    .col-all {
+      overflow: hidden;
+    }
+
+    .eChartWeather-1,
+    .eChartWeather-2 {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: -ms-flexbox;
+      display: flex;
+      display: -webkit-flex;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
+      line-height: 22px;
+    }
+
+    .eChartWeather-temperature {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .eChartWeather-pm {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .eChartWeather-img {
+      img {
+        vertical-align: middle;
+        width: 30px;
+        height: 21px;
+      }
+    }
+
+    .eChartWeather-temperature {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .eChartWeather-temperature-title {
+      font-size: 12px;
+      color: #333;
+    }
+
+    .eChartWeather-address,
+    .eChartWeather-pm,
+    .eChartWeather-pm-degree {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  .panelLayer-col-final.eChartSkin-2-final {
+    box-shadow: 0 0 7px rgba(0, 0, 0, .2);
+    border: none !important;
+    background: #fff;
+  }
+
+  /*特殊部分添加投影*/
+  .panelLayer-col-outer-haspadding {
+    .panelLayer-col-inner {
+      box-shadow: 0 0 7px rgba(0, 0, 0, .2);
+    }
+  }
+
+  /*排名表示例*/
+  .eChartPanel-Chart {
+    .rankTable_Row:hover td {
+      background: transparent;
+    }
+
+    .rankTable_Row {
+      line-height: 20px;
+    }
+  }
+
+  .ant-table-small {
+    border: none;
+  }
+}
+
+/*大屏-不选颜色预览*/
+/*天气*/
+.eChartWeather {
+  min-width: 220px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+
+  .col-all {
+    overflow: hidden;
+  }
+
+  .eChartWeather-1,
+  .eChartWeather-2 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 22px;
+  }
+
+  .eChartWeather-temperature {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .eChartWeather-pm {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .eChartWeather-img {
+    img {
+      vertical-align: middle;
+      width: 30px;
+      height: 21px;
+    }
+  }
+
+  .eChartWeather-temperature {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .eChartWeather-temperature-title {
+    font-size: 12px;
+    color: #333;
+  }
+
+  .eChartWeather-address,
+  .eChartWeather-pm,
+  .eChartWeather-pm-degree {
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+/*预览无 border*/
+.eChartPanelDesign_Modal,
+.eChartCarousel_Outer {
+
+  .panelLayer-col-final.panelLayer-noborder,
+  .panelLayer-col-final.panelLayer-noborder.panelLayer-backStyle_2 {
+    border: none !important;
+    box-shadow: none;
+  }
+}
+
+/*预览无 border 无背景*/
+.eChartSkin-2-final.panelLayer-noborder,
+.eChartCarousel_Outer {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/*排名表示例*/
+.eChartPanel-Chart {
+  .rankTable_Row:hover td {
+    background: transparent;
+  }
+
+  .rankTable_Row {
+    line-height: 20px;
+  }
+}
+
+
+/*大屏 公共样式 排名表无线*/
+.ant-carousel .slick-initialized .slick-slide {
+  .eChartPanel {
+    .ant-table-small {
+      border: none;
+    }
+  }
+}
+
+/*大屏 科技蓝色*/
+.eChartSkin-1-all .panelLayer-col-final.panelLayer-backStyle_2 {
+  border: 2px solid #1458c8 !important;
+  box-shadow: inset 0 0 30px rgba(7, 97, 209, .8);
+  ;
+}
+
+.eChartCarousel_Tabs {
+  .ant-tabs-bar {
+    display: none;
+  }
+
+  .ant-tabs-content {
+    overflow-x: initial !important;
+  }
+}
+
+/*预览暂时无数据*/
+.eChartCarousel_Outer {
+  .panelLayer-col-final {
+    .eChart-nodata {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+    }
+  }
+}
+
+
+// large-screen2.less
+
+/*桌面看板*/
+
+/*排名表示例*/
+.rankTable2_Panel {
+  .rankTable2_Title {
+    padding-left: 5px;
+  }
+
+  .ant-table-small .ant-table-thead>tr>th {
+    color: #999;
+  }
+
+  .rankTable_Row:hover td {
+    background: transparent;
+  }
+
+  .rankTable_Row {
+    line-height: 20px;
+  }
+
+  .ant-table-small {
+    border: none;
+  }
+
+  .ant-table-small .ant-table-thead>tr>th {
+    border-bottom: none;
+  }
+
+  .ant-table-tbody>tr>td {
+    border-bottom: none;
+  }
+
+  .rankTable2_Col_Value {
+    line-height: 16px;
+  }
+}
+
+/*排名表示例*/
+.rankTable_Panel {
+  .rankTable_Row:hover td {
+    background: transparent;
+  }
+
+  .rankTable_Row {
+    line-height: 20px;
+  }
+}
+
+.rankTable2_Index_1 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f2474a;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.rankTable2_Index_2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fd854f;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.rankTable2_Index_3 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fdab46;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.rankTable2_Index_4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 15px;
+  text-align: center;
+}
+
+/*汇总*/
+.eChartSumSub2 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.eChartSumCountUp2-Inner {
+  .eChartSumCountUp2-Caption {
+    margin-top: 10px;
+  }
+
+  .eChartSumCountUp2-Value {
+    margin-bottom: 8px;
+  }
+}

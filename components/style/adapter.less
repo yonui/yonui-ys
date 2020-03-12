@@ -1,0 +1,937 @@
+// fix: modal 表格第一个title 的下边框
+.modal-body .fixedDataTableLayout_rowsContainer>.fixedDataTableRowLayout_rowWrapper {
+  .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1:not(.headerName):not(.public_fixedDataTableCell_disabled):before {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #dbe0e5;
+  }
+}
+
+.line-tabs {
+  .line-tabs-menu-container + .u-tabs-top.card-container {
+    height: calc(~'100% - 47px');
+  }
+
+  .u-tabs-top.card-container {
+    margin: 0;
+    height: 100%;
+  }
+
+  .line-tabs-menu-container {
+    .tab-menu {
+      margin: 0;
+    }
+  }
+}
+
+.u-popover.table-col-setting {
+  .u-form-control-search-container {
+    padding: 0 10px;
+  }
+}
+
+.form-left.Manual-calculation-left {
+  .ant-row.left-tree-select.meta-default-container>.ant-row>.col-float {
+    margin-top: 14px;
+
+    .viewSetting {
+      .u-select-show-search {
+        width: auto;
+        font-size: 14px;
+        color: #333;
+
+        .u-select-selection {
+          border: none;
+        }
+
+        .u-select-selection-rendered {
+          margin-right: 7px;
+          margin-left: 0;
+
+          .u-select-selection-selected-value {
+            padding-left: 0;
+          }
+
+          .u-select-search.u-select-search--inline .u-select-search-field-wrap {
+            display: none; // 隐藏select 自带输入框
+          }
+        }
+
+        &.u-select-focused .u-select-selection,
+        .u-select-selection:active,
+        .u-select-selection:focus {
+          border: none !important;
+        }
+
+        .u-select-selection:hover .u-select-selection-clear {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bg-white.border-r {
+    // fix: 组织单元，左树内容被遮挡
+    .search-tree-3 .u-tree {
+      padding-bottom: 60px;
+    }
+
+    .search-tree-2>i.anticon.anticon-close-circle {
+      right: 50px;
+    }
+  }
+
+  .search-tree-2 .u-button-icon {
+    right: 22px;
+    height: @base-input-height;
+    padding: 0;
+  }
+
+  .search-tree-3.edit {
+    height: calc(100% - 100px);
+    margin-top: 10px;
+
+    .u-tree {
+      padding: 0 20px !important;
+
+      &>li:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .left-tree-select-count.meta-default-container {
+    height: 100%;
+  }
+}
+
+// fix: 基础服务，商品档单
+.tree-list .height-100>.ant-row.meta-default-container {
+  overflow: auto;
+  height: 100%;
+}
+
+// fix: 基础服务，商品档案
+.tree-list .height-100 .form-left {
+  .bg-white.border-r {
+
+    .move_button_left,
+    .move_button_rigth {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .move_button_left .anticon-yemianfenlan-zhedie {
+      position: relative;
+
+      &:hover::before {
+        color: #b0c0d0;
+      }
+
+      &::before {
+        color: #ddd;
+        font-size: 26px;
+        content: "\e81f";
+        font-family: 'anticon';
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 3px solid transparent;
+        border-right: 5px solid #fff;
+        border-bottom: 3px solid transparent;
+        top: 10px;
+        left: 10.2px;
+      }
+    }
+
+    .move_button_rigth {
+      left: -8px !important;
+      top: 39px;
+
+      .anticon-yemianfenlan-zhankai {
+        &::before {
+          color: #ddd;
+          font-size: 26px;
+          content: "\e820";
+          font-family: 'anticon';
+        }
+
+        &::after {
+          content: " ";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 3px solid transparent;
+          border-left: 5px solid #fff;
+          border-bottom: 3px solid transparent;
+          top: 10px;
+          left: 11.2px;
+        }
+      }
+    }
+  }
+}
+
+// fix: 采购->转存，编辑记录时，底部的表格区域遮挡
+// !fix: 2019/12/10 删除该样式
+#container .container-browse-mode {
+  .ant-row.tab-bottom-txt {
+    margin-top: -60px;
+    z-index: 999;
+  }
+
+  .u-tabs-tabpane.u-tabs-tabpane-active {
+    .yy-tabs .yy-tabs-content .yy-tabs-pane>div.cooperation-component {
+      overflow-y: scroll; // fix: 小图标面板遮挡，精确到div，避免tabs 右侧滚动条空白
+    }
+  }
+}
+
+// fix: 采购结算余额表，查询条件展开，物料分类下拉搜索框边距
+.uretail-pop.u-popover {
+  .u-popover-content .u-form-control-search-container {
+    padding: 0 10px;
+  }
+}
+
+// fix: 到货单，查询区域设置按钮的popover 搜索框边距
+.u-popover-content .search_name.u-form-control-search-container {
+  padding: 0 10px;
+}
+
+// 客户档案，客户分类tree
+.u-popover-content .scroll_box .u-tree li span.u-tree-switcher {
+  margin-right: 0;
+}
+
+// fix: 供货目录，按钮组的primary 按钮右边距
+.Toolbar_Group {
+  .u-button.u-button-primary {
+    margin-right: 0;
+  }
+
+  .u-button-group {
+    z-index: 2;
+  }
+}
+
+.viewSetting.viewCell {
+  .basic-input-textarea {
+    // fix: 材料出库，表单中有textarea 时，外部div 默认比内嵌textarea 高出一定像素
+    &>.ant-row>.input-control {
+      line-height: 0;
+    }
+    // fix: 人员档案，组织节点，新增页面，textarea 区域的高度
+    .ant-row .input-control textarea {
+      height: auto;
+    }
+  }
+
+  // fix: 基础数据，物料规格，新增页面，textarea 区域的高度
+  &.width-percent-33 .ant-row .control-width textarea {
+    height: @base-input-height;
+    line-height: @base-input-height - 2;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: @base-input-height;
+  }
+}
+
+// fix: 表格中的 Checkbox 居中问题
+.public_fixedDataTableCell_cellContent {
+  .u-checkbox {
+    margin-right: 15px;
+  }
+}
+
+.u-modal-dialog {
+  // fix: 采购，confirm 提示框中字体样式
+  .u-modal-confirm-title .model-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    opacity: .8;
+  }
+
+  // fix: 采购，供货目录，新增弹框中“供应商物料对照表” 与表格title 行间距
+  .tab-top-right .btn-toolbar-bottom {
+    padding: 0;
+  }
+
+  // fix: ys 人员档案，职务类别，编辑弹框的底部3 个按钮间距
+  .btn-toolbar-bottom .u-button.u-button-primary {
+    margin-right: 0;
+  }
+
+  // fix: ustock-web 物流公司等，编辑弹框的底边距
+  .container-edit-mode.container-greater-height {
+    padding-bottom: 0;
+  }
+}
+
+// fix: 保存草稿的提示框，表单的标题左边距
+.ant-row .savedraft_title {
+  margin-left: 20px;
+}
+
+// fix: 采购，条码规则，编辑记录，解析类型下拉框x 图标位置
+.edit-input-number {
+  .u-select-selection-rendered .u-select-selection-selected-value {
+    line-height: @base-input-height;
+  }
+
+  .u-select-selection-clear {
+    line-height: 0;
+
+    &:before {
+      height: 100%;
+      width: 100%;
+      line-height: 12px;
+    }
+  }
+}
+
+// fix: 库存管理，实盘单，查看审核结果页面的listheadRow
+.u-tabs-content .card-tabs.st_storecheckplanhead .listheadRow {
+  margin: 0px 20px;
+  padding: 0;
+}
+
+// fix: ys 风格的下拉框按钮箭头调整
+.dropdown-btn-icon .uf.uf-arrow-down {
+  // vertical-align: middle;
+  color: gray;
+  display: block;
+  top:2px;
+}
+
+// fix: 生产制造，制造参数，inputNumber 宽度需要减去右侧山下键
+.meta-option .viewCell.width-percent-100 .ant-row .u-input-number .u-form-control {
+  width: 375px;
+}
+
+// fix: 生产制造，物料清单，新增按钮（红色背景）图标颜色
+.listheadRow .Toolbar_Group_Length1 {
+  .ToolBar_isAddButton .dropdown-btn-icon .uf.uf-arrow-down {
+    color: #fff;
+  }
+
+  .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) .dropdown-btn-icon .uf.uf-arrow-down {
+    color: unset;
+  }
+}
+
+// fix: 生产制造，物料清单，新增页面的tabs 内容上边距
+div[id='ed_bom|ed_bom_tab_product'] {
+  margin-top: 30px;
+}
+
+// fix: 生产制造，物料清单，新增页面，底部按钮间距; 物料计划
+.btn-group-bottom.bottom-toolbar button:first-child,
+.btn-group-bottom.bottom-toolbar button.u-button-primary {
+  margin-right: 0;
+}
+
+// fix: 物料需求，时界编辑弹框input 宽度
+.control-flex>span.input-after {
+  width: auto;
+  margin-left: 10px;
+}
+
+// fix: 物料计划，预测单，编辑页面，底部按钮没有svg 图标
+.btn-group-bottom button[id^='mr_internal_demand|'],
+.btn-group-bottom button[id^='mr_plan_run|'],
+.btn-group-bottom button[id^='mr_plan_workbench|'],
+.btn-group-bottom button[id^='mr_plan_workbench_batch|'],
+.btn-group-bottom button[id^='mr_sales_forecast|'] {
+  svg {
+    display: none;
+  }
+}
+
+// fix: 物料需求计划，计划工作台，子表的tabs 和表头 间距
+div[id='mr_plan_workbench_list|list_data_body_page_base'] .tab-list.u-tabs-upborder .u-tabs-bar {
+  margin-bottom: 0;
+}
+
+div[id='mr_plan_workbench_list|others_data_param'] .container-browse-mode.container-greater-height {
+  padding-top: 16px;
+}
+
+// fix: 物料计划，预测单，点击预测编号，进入页面，表格的“序号”标题
+.readOnlyTable .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main .headerName {
+  line-height: 28px;
+}
+
+// fix: 采购，alert
+.icon-tongzhixinxi:before {
+  content: "\e6cd";
+  font-family: 'uf' !important;
+}
+
+// fix: 采购 表头的小图标宽度
+.meta-table .btn-caret .u-button-icon {
+  width: auto;
+}
+
+// fix: ys 的radio 与文字对齐
+.u-radio {
+  .u-radio-label:before {
+    top: 2px;
+  }
+
+  &.is-checked .u-radio-label:after {
+    top: 6px;
+  }
+}
+
+// fix: 产品入库，新增页面，编辑表格，参照居中
+.public_fixedDataTableCell_cellContent .editCol .ant-search-input-wrapper .u-input-group.simple {
+  .u-form-control {
+    height: @base-input-height;
+  }
+
+  .u-input-group-btn {
+    line-height: @base-input-height;
+
+    i.anticon {
+      line-height: @base-input-height;
+      margin-top: 0;
+      top: 0;
+    }
+  }
+}
+
+// fix: 调入，单据日期文字按钮垂直居中
+.filter-controls .basic-predicate-data-picker .ant-row>.input-control .ant-row {
+  display: flex;
+  align-items: center;
+}
+
+// fix: 采购调价单页面，复制，表格title 图标出现有轻微的浮动
+.fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+  .editCol .ant-select-selection__rendered span {
+    line-height: @base-input-height - 2;
+  }
+}
+
+// fix: 角色权限，新增，rolePage 高度获取
+.roleControl {
+  overflow: scroll;
+  .bottom-toolbar .u-button-border {
+    margin-left: 10px;
+  }
+  .role-container .auth-control-container .u-tree .u-tree-checkbox+.u-tree-node-content-wrapper span {
+    line-height: 1em;
+    height: 1em;
+    font-size: 12px;
+    color: #666;
+    padding: 0;
+  }
+  .u-tree .u-tree-checkbox {
+    height: 14px;
+    width: 14px;
+
+    .u-tree-checkbox-inner {
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
+
+// fix: 基础服务，授权，按钮hover
+.authority-page .role-tabs .add-btn-container .u-button {
+  background: @primary-color;
+
+  &:hover {
+    color: #fff;
+    background: @primary-color-hover;
+  }
+}
+
+// fix: 采购，disable 的input 框不要有hover 边框效果
+.u-input-number-out .u-input-number.disabled-con:hover {
+  border: 1px solid #d9d9d9;
+}
+
+// fix: 图片上传 hover 样式不对
+.avatar-uploader {
+  border: none;
+  border-radius: 3px;
+}
+
+// fix: ui模板模态框，表格hover 时操作按钮样式
+.bill-modal-tabs .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
+  right: 10px;
+  top: 8px;
+}
+
+// fix: ys 的按钮样式从baseui中单独抽取出来
+.listheadRow .btn-toolbar-bottom .Toolbar_Group_Length1,
+.listheadRow .btn-toolbar-bottom .Toolbar_Group {
+  .u-button-group {
+    .dropdown-btn-icon {
+      cursor: pointer;
+      &:hover {
+        background: #f3f5f9;
+      }
+    }
+  }
+}
+
+// fix: 多语弹框form 表单样式
+.u-modal .ac-input-locale-modal .edit-panel .u-form-item {
+  &>div {
+    .u-form-item-label {
+      width: 120px;
+      line-height: @base-input-height;
+      vertical-align: top;
+
+      .u-label {
+        width: 120px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .error {
+    padding-left: 0;
+  }
+}
+
+// fix: 自定义过滤条件，新增过滤项，textarea 高度不对
+textarea.u-form-control {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+// fix: 组织中心，表格表头checkbox 位置偏差
+.meta-table .checkboxHD {
+  padding: 4px 10px;
+}
+
+// fix: 级联树下拉select
+.uf-gridcaretarrowup:before,
+.uf-treearrow-down:before {
+  transform: scale(.8);
+  display: inline-block;
+  color: rgb(152, 162, 173);
+  font-size: 12px;
+}
+
+// fix: 采购库存，新增仓库档案
+.viewCell.width-percent-100 .input-control {
+  width: 400px !important;
+}
+
+.container-edit-mode.container-greater-height {
+  .meta-default-container {
+    background-color: #fff;
+  }
+}
+
+// params.less
+.org-ref{
+  margin-top:20px
+}
+
+.u-form-control {
+  line-height: @base-input-height; // fix: 覆盖tinper 定制样式中的 1.5
+}
+
+.ac-input-locale {
+  height: @base-input-height;
+  line-height: @base-input-height;
+}
+
+#org_center_card\|functypes{
+  .col-float.label-control{
+      text-align: left;
+      padding-left: 0;
+      max-width: 63px;
+      min-width: 63px;
+      margin-right: 0;
+  }
+  .col-float.input-control{
+      min-width: 138px;
+  }
+}
+
+// ant 的loading 样式适配
+.ant-spin {
+  color: #f23f40;
+  .ant-spin-dot i {
+    background-color: #f23f40;
+  }
+}
+
+// 日期
+.anticon.anticon-star-o {
+  &:before {
+    content: "\e661";
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+  }
+}
+
+.u-popover-content .listRefer .listRefer-content {
+  margin: 0 10px;
+  label.u-checkbox {
+    display: block;
+    margin-top: 6px;
+    &:last-child {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+// 物料表格中，图文居中
+.textCol.upc-showpicture-container {
+  display: flex !important;
+  align-items: center;
+}
+
+
+.u-modal-dialog .u-modal-body .viewCell.width-percent-100 .ant-row {
+  float: unset;
+}
+
+.u-tree li span.u-tree-checkbox {
+  margin: 0 4px;
+}
+
+// 基础档案 使用组织
+.u-popover-content .listRefer {
+  .listRefer-list {
+    max-height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 6px 0px;
+    .u-checkbox {
+      display: block;
+      height: @base-input-height;
+      line-height: @base-input-height;
+      margin: 0;
+      padding: 0px 10px;
+      &:hover{
+        background: #f7f9fd;
+      }
+      .u-checkbox-label{
+        width: 100%;
+        position: relative;
+        span{
+          position: absolute;
+          right: -6px;
+          line-height: 28px;
+          z-index: 4;
+          padding: 0 10px;
+          height: 28px;
+          top: -7px;
+
+          .table-list-btn{
+            color: #666;
+          }
+          &:hover{
+            .table-list-btn{
+              color: #588ce9;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+  .no-data {
+    padding-top: 10px;
+  }
+  .filter-btn-1 {
+    margin-top: 0;
+    overflow: hidden;
+    .multiple-toolbar-wrapper{
+      float: left;
+      .table-list-toolbar{
+        svg{
+            width: 16px;
+            height: 16px;
+            vertical-align: sub;
+            margin-right: 4px;
+        }
+        .table-list-btn{
+            color: #588ce9;
+        }
+        &:hover{
+          .table-list-btn{
+              color: #ee2223;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+//treerefer多选-底部
+.uretail-pop .u-popover-content .filter-btn-1{
+  overflow: hidden;
+  padding: 6px 0 0 10px;
+  .u-checkbox{
+    float: left;
+    margin-top: 5px;
+  }
+  .multiple-toolbar-wrapper{
+    float: left;
+    svg{
+      width: 16px;
+      height: 16px;
+      vertical-align: sub;
+      margin-right: 4px;
+    }
+    .table-list-btn{
+      color: #588ce9;
+    }
+    &:hover{
+      .table-list-btn{
+        color: #ee2223;
+      }
+    }
+  }
+}
+//treerefer多选-树
+.list-with-gridToolbar.u-tree{
+  overflow-x: hidden;
+  li{
+    .u-tree-checkbox + a.u-tree-node-content-wrapper{
+      width: calc(~'100% - 38px');
+      .u-tree-title{
+        width: 100%;
+        li{
+          max-width: 400px;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .table-list-btn{
+          background: #edf1f7;
+        }
+        &:hover{
+          .table-list-btn{
+            background: #edf1f7;
+          }
+        }
+      }
+    }
+    ul.u-tree-child-tree{
+      .u-tree-checkbox + a.u-tree-node-content-wrapper{
+        width: calc(~'100% - 33px');
+      }
+      .u-tree-title{
+        li{
+          max-width: 370px!important;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+  li.u-tree-treenode-selected{
+    .u-tree-checkbox + a.u-tree-node-content-wrapper{
+      .u-tree-title{
+        .table-list-btn{
+          background: #fdf2dc;
+          &:hover{
+            background: #fdf2dc;
+          }
+        }
+        &:hover{
+          .table-list-btn{
+            background: #fdf2dc;
+          }
+        }
+      }
+
+    }
+    ul.u-tree-child-tree{
+      .u-tree-checkbox + a.u-tree-node-content-wrapper{
+        .u-tree-title{
+          &:hover{
+            .table-list-btn{
+              background: #edf1f7;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.modal-body {
+  // fix: modal-body 中自定义了底部操作按钮
+  .viewContainer .bottom-toolbar {
+    bottom: auto;
+    margin-top: 0;
+    border-top: 1px solid #e9e9e9;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+    left: 0;
+    box-shadow: none;
+  }
+}
+
+.line-tabs .u-tabs-top.card-container {
+  // TODO：新增物料模板时，lineTabs 表单页的上边距问题。理想状态：由元数据添加style
+  div[id='pc_producttpl|pc_producttpl_page_unit_base'] {
+    margin-top: 10px;
+  }
+}
+// 全球化-多页签规范
+.line-tabs {
+  .line-tabs-menu-container .tab-menu .u-menu-item .linetabs-menuitem{
+    min-width: 28px;
+    max-width: 250px;
+    overflow:hidden;
+    word-break: break-word;
+    text-overflow:ellipsis;
+  }
+}
+// 全球化-下拉框规范
+.u-select-dropdown .u-select-dropdown-menu-item {
+  white-space: normal;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; //超出两行显示省略号
+  >.menu-item-cont {
+    max-height: 34px;
+    overflow: hidden;
+  }
+}
+
+// 全球化-输入框规范
+input:not(:focus){
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.u-tabs .u-tabs-content .u-tabs-tabpane {
+  overflow-y: auto!important;//fix 全局详情页右侧数据少的情况滚动条的空白占位
+}
+
+.listheadRow .btn-toolbar-bottom .col-auto button:last-child {
+  line-height: @base-input-height - 2;
+}
+
+// 债务转移下拉框错误显示
+.has-error .u-select .u-select-selection{
+  border-color: #f44336;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.u-tabs-top .u-tabs-content {
+  font-size: 12px!important;
+}
+
+.list-top-toolbar {
+  .Toolbar_Group {
+    .u-button:hover {
+      z-index: 2;
+      position: relative;
+    }
+  }
+}
+
+// ys快捷键标识
+.u-radio-group {
+  .u-radio {
+    padding: 3px 0;
+  }
+  .u-radio-focused {
+    background-color: #EDF1F7;
+    border-radius: 4px;
+  }
+}
+.s-checkgroup-wrapper {
+  .u-checkbox {
+    height: 24px;
+    padding: 3px 3px 3px 0;
+  }
+  .u-checkbox-focused {
+    background-color: #EDF1F7;
+    border-radius: 4px;
+  }
+}
+
+.uf-arrow-up:before {
+  transform: scale(.8);
+  display: inline-block;
+}
+.u-select .u-select-selection :hover {
+  border-color:@custom-color;
+}
+.u-select-show-search {
+  .u-select-selection--multiple {
+    .u-select-selection-rendered {
+      display: flex;
+      ul {
+        display: flex;
+        overflow: hidden;
+      }
+    }
+  }
+}
+//treerefer单选
+.treeRefer-toolbar-wrapper{
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 34px !important;
+  padding: 0px 10px;
+  overflow: hidden;
+  line-height: 32px;
+  margin-bottom: -8px;
+  .table-list-toolbar{
+    float: left;
+    svg{
+      width: 16px;
+      height: 16px;
+      vertical-align: sub;
+      margin-right: 4px;
+    }
+    .table-list-btn{
+      color: #588ce9;
+    }
+    &:hover{
+      .table-list-btn{
+        color: #ee2223;
+      }
+    }
+  }
+}
+//帮助浮层
+.field_help{
+  padding: 4px 16px;
+  .help_content{
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+  }
+}

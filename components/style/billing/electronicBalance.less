@@ -1,0 +1,353 @@
+/*触屏 电子称*/
+
+// @font-face {
+//   font-family: Digital;
+//   src: url('../font/Digital.ttf');
+// }
+
+.billing-touch-wrap .electronic-balance {
+  height: 76px !important;
+  padding: 0 5px 0 0;
+
+  .electronic-display {
+    margin-right: 235px;
+
+    .electronic-display-count {
+      display: -webkit-flex;
+      display: flex;
+      width: 100%;
+    }
+
+    .electronic-display-count>div {
+      width: 1%;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      flex: 1;
+      word-break: break-all;
+      position: relative;
+
+      &:not(:last-child):after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: linear-gradient(to top, rgba(234, 237, 240, .1) 0%, #D1D7DD 50%, rgba(234, 237, 240, .1) 100%);
+        transform: translateX(.5)
+      }
+    }
+
+    .electronic-display-list {
+      text-align: center;
+      padding: 6px 15px 6px 6px;
+      border-radius: 6px;
+      height: 66px;
+
+      &:first-child .electronic-display-num {
+        background: #666F82;
+      }
+
+      .electronic-display-title {
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .electronic-display-num {
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-radius: 3px;
+        height: 36px;
+        margin-top: 4px;
+        padding: 0 2px;
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        padding-right: 6%;
+
+        .electronic-display-num-splict {
+          font-size: 34px;
+          color: rgba(173, 180, 188, 0.1);
+          line-height: 36px;
+          position: relative;
+          font-family: Digital;
+          text-align: right;
+          width: 1%;
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          flex: 1;
+          word-break: break-all;
+
+          div {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 34px;
+            color: #FFE300;
+            font-family: Digital;
+          }
+        }
+
+        .electronic-display-num-point {
+          width: 0px;
+          flex: 0.5;
+          font-size: 34px;
+          color: rgba(173, 180, 188, 0.1);
+          line-height: 36px;
+          position: relative;
+          font-family: Digital;
+          text-align: right;
+
+          div {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 34px;
+            color: #FFE300;
+            font-family: Digital;
+          }
+        }
+      }
+
+      .electronic-display-money {
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-radius: 3px;
+        height: 36px;
+        margin-top: 4px;
+        padding: 0 2px;
+        display: flex;
+        width: 100%;
+        padding-right: 6%;
+
+        .electronic-display-num-splict {
+          width: 0px;
+          flex: 1;
+          font-size: 34px;
+          color: rgba(173, 180, 188, .1);
+          line-height: 36px;
+          position: relative;
+          font-family: Digital;
+          text-align: right;
+
+          div {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 34px;
+            color: #FFE300;
+            font-family: Digital;
+          }
+        }
+
+        .electronic-display-num-point {
+          width: 0px;
+          flex: 0.5;
+          font-size: 34px;
+          color: rgba(173, 180, 188, 0.1);
+          line-height: 36px;
+          position: relative;
+          font-family: Digital;
+          text-align: right;
+
+          div {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 34px;
+            color: #FFE300;
+            font-family: Digital;
+          }
+        }
+      }
+    }
+
+    .electronic-display-list:nth-child(2),
+    .electronic-display-list:nth-child(4) {
+      flex: 1.15;
+    }
+  }
+
+  .electronic-operation-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 240px;
+
+    .ant-btn {
+      padding: 10px 12px;
+      color: #505766;
+      font-size: 16px;
+      height: 46px;
+      border-radius: 4px;
+      margin-top: 20px;
+      margin-right: 15px;
+    }
+
+    .ant-btn span {
+      vertical-align: 2px;
+    }
+
+    .peel-btn {
+      background: #fff;
+      border: 1px solid #588CE9;
+      color: #588CE9;
+    }
+
+    .reset-btn {
+      background: #fff;
+      border: 1px solid #18B681;
+      color: #18B681;
+    }
+
+    .weigher-btn {
+      background: #fee8e6;
+      border: 1px solid #EE2223;
+      color: #EE2223;
+    }
+  }
+}
+
+.billing-actions-ModifyQuotePrice {
+  .electronic_tare_are {
+    padding: 30px 30px 15px;
+    display: flex;
+    align-items: center;
+
+    input.ant-input {
+      margin-left: 0;
+      margin-bottom: 0;
+      border: 1px solid #fff;
+      width: 100%;
+    }
+
+    .unit {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  /*适配电子称*/
+  .billing-touch-wrap .electronic-balance {
+    height: 60px !important;
+
+    .electronic-display {
+      margin-right: 200px !important;
+    }
+
+    .electronic-operation-btn {
+      width: 212px !important;
+    }
+
+    .electronic-operation-btn .ant-btn {
+      height: 37px !important;
+      padding: 8px 12px !important;
+      font-size: 14px !important;
+      margin-right: 12px !important;
+      margin-top: 18px !important;
+    }
+
+    .electronic-display-list {
+      width: 88px !important;
+      height: 52px !important;
+      padding: 4px !important;
+    }
+
+    .electronic-display .electronic-display-list .electronic-display-num,
+    .electronic-display .electronic-display-list .electronic-display-money {
+      height: 28px !important;
+      margin-top: 2px !important;
+      line-height: 28px !important;
+    }
+
+    .electronic-display-num-splict,
+    .electronic-display-num-point {
+      line-height: 28px !important;
+      font-size: 26px !important;
+    }
+
+    .electronic-display-num-splict div,
+    .electronic-display-num-point div {
+      font-size: 26px !important;
+    }
+  }
+
+}
+
+#billing-TransparentMask {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*连续称重点击商品颜色*/
+.touch_touchContent_focused-cell {
+  border: 2px solid #798090 !important;
+
+  .touch_touchContent_name {
+    color: #EE2223;
+    font-weight: bold;
+  }
+
+}
+
+/*电子秤只有一个重量 取数*/
+.billing-touch-wrap {
+  .electronic-balance.electronic-home {
+    .electronic-display .electronic-display-list {
+      padding: 6px 30px 6px 6px;
+    }
+
+    .electronic-operation-btn .weigher-btn {
+      padding: 10px 30px;
+      float: right;
+      margin-right: 50px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .billing-touch-wrap {
+    .electronic-balance.electronic-home {
+      .electronic-operation-btn {
+        width: 120px !important;
+      }
+
+      .electronic-display {
+        margin-right: 120px !important;
+      }
+
+      .electronic-display .electronic-display-list {
+        padding: 6px 20px 6px 6px !important;
+      }
+
+      .electronic-operation-btn .weigher-btn {
+        padding: 10px 20px !important;
+        float: right;
+        margin-right: 40px !important;
+      }
+
+    }
+  }
+}

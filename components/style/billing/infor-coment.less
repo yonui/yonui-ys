@@ -1,0 +1,2089 @@
+﻿/*会员信息*/
+.member-infor {
+  display: block;
+  padding-left: 90px;
+  margin-top: 16px;
+  padding-bottom: 55px;
+  height: 296px;
+}
+
+.member-infor li {
+  font-size: 16px;
+  color: #333333;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+}
+
+.member-infor li span {
+  color: #999999;
+  margin-right: 24px;
+  width: 80px;
+  text-align: right;
+  display: block;
+  float: left;
+}
+
+.member-header {
+  display: block;
+  width: 100%;
+  height: 90px;
+  background: url(../images/member-header2.png);
+  position: relative;
+}
+
+.member-header li {
+  float: left;
+}
+
+.member-header li.phone {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.member-header li.phone span {
+  display: block;
+}
+
+.member-header li.phone span:first-child {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.member-header li.phone span:last-child {
+  font-size: 14px;
+  color: #fff;
+  height: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(90deg, #D6B983 0%, #C6A66B 100%);
+  text-align: center;
+  border-radius: 2px;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.member-header li.level_code {
+  display: block;
+  width: 170px;
+  padding-left: 40px;
+  float: left;
+  text-align: center;
+}
+
+.member-header li.level_code span.integral {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.member-header li.level_code span.number {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 4px;
+}
+
+.member-header li.storage-balance {
+  display: block;
+  width: 150px;
+  float: left;
+  text-align: center;
+}
+
+.member-header li.storage-balance span.balance {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.member-header li.storage-balance span.money {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #F8E483;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 4px;
+}
+
+.member-header li.birthday {
+  display: block;
+  float: right;
+  width: 320px;
+  padding-right: 110px;
+}
+
+.member-header li.birthday span.happytitle {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.member-header li.birthday span.happynumber {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 4px;
+}
+
+.member-ul {
+  display: block;
+  margin: 0 auto;
+}
+
+.ant-modal-body {
+  padding: 0 0;
+}
+
+.ant-tabs-bar {
+  margin-bottom: 0;
+}
+
+.member-head {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/*
+.member-head li .img-position{ position: relative;} */
+.member-header li span.imgpx {
+  width: 86px;
+  height: 86px;
+  border-radius: 10px;
+  border: 3px #fff solid;
+  display: block;
+  overflow: hidden;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.member-header li span.imgpx img {
+  border-radius: 10px;
+}
+
+.member-head li span.level-name {
+  position: absolute;
+  left: 50%;
+  margin-left: 47px;
+  bottom: 6px;
+  display: block;
+  padding: 0px 4px;
+  background: -webkit-linear-gradient(left, #C6A66B, #D6B983);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #C6A66B, #D6B983);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #C6A66B, #D6B983);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #C6A66B, #D6B983);
+  /* 标准的语法 */
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.member-head li span.num {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  position: relative;
+  height: 28px;
+  max-width: 220px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-head li span.sex {
+  position: absolute;
+  bottom: -3px;
+  height: 28px;
+  right: 0px;
+}
+
+.member-head li span.sex .icon {
+  font-size: 22px;
+}
+
+.member-head li span.phone {
+  color: #999999;
+  font-size: 18px;
+}
+
+/* 12.5  新版会员记录 */
+.member-info {
+  height: 465px;
+
+  .member-info-editButton {
+    margin-top: 15px;
+    width: 100%;
+
+    .ant-btn {
+      border: none;
+      padding: 0;
+      height: auto;
+      float: right;
+      font-size: 16px;
+      padding-right: 20px;
+
+      i {
+        font-size: 18px;
+      }
+
+      i:hover:before {
+        color: #ee2223;
+      }
+    }
+
+    .ant-btn:hover {
+      color: #ee2223;
+    }
+  }
+
+  .member-info-show {
+    margin-top: 10px;
+    padding: 0 20px;
+    max-height: 430px;
+    overflow-y: auto;
+
+    li {
+      width: 49%;
+      float: left;
+      font-size: 14px;
+      color: #333;
+      line-height: 38px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+
+      span.ant-radio {
+        width: 20px;
+        margin-right: 0;
+        margin-top: 7px;
+      }
+
+      span.ant-calendar-picker {
+        width: 215px !important;
+      }
+
+      input.ant-input,
+      .ant-select {
+        width: 220px;
+        height: 36px;
+
+        .ant-select-selection {
+          height: 36px;
+          width: 220px;
+        }
+      }
+
+      input.ant-input.ant-input-disabled+span.ant-calendar-picker-icon {
+        display: none;
+      }
+    }
+
+    li>span:first-child {
+      width: 96px;
+      color: #999;
+      display: block;
+      float: left;
+      text-align: right;
+      margin-right: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      i {
+        color: #f00;
+        margin-right: 5px;
+      }
+
+      i.anticon {
+        color: #000;
+        margin-right: 0px;
+      }
+    }
+
+    li:nth-child(odd) {
+      margin-right: 2%;
+    }
+  }
+
+  .member-info-show-edit {
+    margin-top: 25px;
+    max-height: 360px;
+
+    li {
+      margin-bottom: 15px;
+
+      span:first-child {
+        color: #333;
+      }
+
+      .ant-radio-wrapper {
+        font-size: 14px;
+      }
+
+      .ant-calendar-picker-clear {
+        right: 28px;
+      }
+    }
+  }
+
+  .member-btn {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+
+    .ant-btn:focus {
+      background: #dbe0e5;
+    }
+  }
+
+}
+
+.member-info .hide {
+  display: none
+}
+
+.ant-tabs-tab {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.billing-member-modal {
+  width: 740px !important;
+
+  .ant-modal-content {
+    height: 624px;
+  }
+
+  .ant-input-suffix {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    line-height: 0;
+    color: #D3D8DE;
+    right: 7px;
+  }
+
+  .ant-input:not(:last-child) {
+    padding-right: 48px;
+  }
+
+  .ant-input-search-icon {
+    font-size: 18px;
+    color: #333333;
+  }
+
+  .anticon-shurukuangshanchu {
+    font-size: 16px;
+  }
+
+  .ant-input-suffix2 {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    line-height: 0;
+    color: #ccc;
+    right: 30px;
+    top: 12px;
+  }
+}
+
+/*优惠券页面样式*/
+.billing-actions-Youhuiquan {
+  width: 846px !important;
+  height: 634px !important;
+
+  .ant-tabs-nav-container {
+    padding-left: 24px;
+    padding-right: 27px;
+  }
+
+  .no-youhui-div2 {
+    width: 100%;
+    height: 14px;
+  }
+
+  .ant-input-suffix {
+    position: absolute;
+    right: 7px;
+    top: 0px;
+  }
+
+  .Coupon {
+    margin: 25px 0px 15px 30px;
+  }
+
+  .Coupon-title {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .Coupon-list {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .Coupon-dai-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .Coupon-title .all-left-title {
+    padding-left: 10px;
+  }
+
+  .Coupon-bottom {
+    margin: 0 0 14px 30px;
+  }
+
+  .Coupon-width {
+    width: 80px;
+    text-align: right;
+    float: left;
+  }
+
+  .Coupon-width .ant-input {
+    width: 50px;
+    height: 44px;
+    border: #e4e4e4 solid 1px;
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 8px;
+  }
+
+  .Coupon-width2 {
+    width: 200px;
+    float: left;
+  }
+
+  .Coupon-width2 {
+    .ant-row span.Coupon-display-char-2 {
+      display: block;
+      float: left;
+      border: #68a7e5 solid 1px;
+      background: #eff6fc;
+      color: #6daae6;
+      font-size: 12px;
+      border-radius: 2px;
+      height: 18px;
+      width: 20px;
+      text-align: center;
+      line-height: 16px;
+      margin-right: 4px;
+      margin-top: 3px;
+    }
+  }
+
+  .Coupon-width3 {
+    width: 40px;
+    float: left;
+    line-height: 24px;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .Coupon-width3:hover {
+    .anticon-delete:before {
+      content: "\E68e";
+      color: #ee2223;
+    }
+  }
+
+  .Coupon-height {
+    width: 96%;
+    height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .delete-margin-top {
+    margin-top: 13px;
+    cursor: pointer;
+  }
+
+  .all-money {
+    margin: 10px 0 0px 50px;
+  }
+
+  .all-money-title {
+    font-size: 20px;
+    color: #333;
+  }
+
+  .all-money-Symbol {
+    font-size: 20px;
+    color: #f03536;
+    margin-left: 10px;
+  }
+
+  .all-money-all {
+    font-size: 24px;
+    color: #f03536;
+  }
+
+  .has-input {
+    width: 298px;
+    height: 44px;
+    margin-left: 10px;
+  }
+
+  .ant-input {
+    width: 294px;
+    position: relative;
+    padding-right: 86px;
+    height: 44px;
+    margin-left: 4px;
+  }
+
+  .ant-modal-content .has-btn {
+    width: 54px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    border: none;
+    border-left: #e4e4e4 solid 1px;
+    color: #999999;
+    font-size: 14px;
+    right: 1px;
+    padding: 0px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+
+  .ant-modal-content .has-btn-red {
+    color: #EE2223;
+  }
+
+  .ant-modal-content .has-btn span {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+
+  /*按钮*/
+  .Coupon-btn {
+    width: 300px;
+    text-align: center;
+    height: 60px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 60px;
+    background: -webkit-linear-gradient(left, #ff480f, #ee2223);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ff480f, #ee2223);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ff480f, #ee2223);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ff480f, #ee2223);
+    /* 标准的语法 */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .Coupon-btn:focus,
+  .Coupon-btn:hover {
+    font-size: 24px;
+    color: #fff;
+    background: -webkit-linear-gradient(left, #ee2223, #ff480f);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ee2223, #ff480f);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ee2223, #ff480f);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ee2223, #ff480f);
+    /* 标准的语法 */
+    -moz-box-shadow: 0px 0px 6px #818181;
+    -webkit-box-shadow: 0px 0px 6px #818181;
+    box-shadow: 0px 0px 6px #818181;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color='#818181')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color='#818181');
+
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px)
+  }
+
+  .InputButtonPanelWrap {
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }
+
+  .ant-modal-content .ant-tabs-bar {
+    border-bottom: none;
+    height: 128px;
+    margin-top: 30px;
+  }
+
+  .ant-tabs-nav {
+    margin-right: 30px;
+  }
+
+  .ant-tabs-nav .ant-tabs-tab-active {
+    color: #333 !important;
+  }
+
+  .ant-modal-content .ant-tabs-nav .ant-tabs-tab:hover {
+    color: #333 !important;
+  }
+
+  .ant-modal-content .ant-tabs-nav .ant-tabs-tab {
+    width: 242px;
+    height: 132px;
+    margin-left: 0px;
+    margin-right: 12px;
+    padding: 0px 0;
+    margin-top: 0px;
+    overflow: hidden;
+  }
+
+}
+
+/*折扣券*/
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active {
+  .billing-cardtype-2 {
+    width: 230px;
+    background: url(../images/shiyong1.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-2:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab {
+  .billing-cardtype-2 {
+    width: 230px;
+    background: url(../images/zhekou.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-2:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  .billing-cardtype-2 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-2 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #68A7E5;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #68A7E5;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-2 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-2 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+}
+
+
+
+/*计次券*/
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active {
+  .billing-cardtype-5 {
+    width: 230px;
+    background: url(../images/shiyong2.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-5:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab {
+  .billing-cardtype-5 {
+    width: 230px;
+    background: url(../images/jici.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-5:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  .billing-cardtype-5 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-5 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #60C8AC;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .Surplus {
+    font-size: 16px;
+    margin-right: 4px;
+    color: #60C8AC;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #60C8AC;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .Surplus-money {
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: #60C8AC;
+    bottom: 5px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #60C8AC;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-5 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-5 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+}
+
+.billing-actions-Youhuiquan .Coupon-width2 {
+  .ant-row span.Coupon-display-char-5 {
+    display: block;
+    float: left;
+    border: #60c8ac solid 1px;
+    background: #eff9f6;
+    color: #6dccb3;
+    font-size: 12px;
+    border-radius: 2px;
+    height: 18px;
+    width: 20px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 4px;
+    margin-top: 3px;
+  }
+}
+
+/*兑换券*/
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active {
+  .billing-cardtype-6 {
+    width: 230px;
+    background: url(../images/shiyong1.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-6:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab {
+  .billing-cardtype-6 {
+    width: 230px;
+    background: url(../images/duihuan.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-6:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  .billing-cardtype-6 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-6 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .Surplus {
+    font-size: 16px;
+    margin-right: 4px;
+    color: #FFB429;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #FFB429;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .Surplus-money {
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: #aeb5bd;
+    bottom: 5px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #FFB429;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-6 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-6 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+
+}
+
+.billing-actions-Youhuiquan .Coupon-width2 {
+
+  .ant-row span.Coupon-display-char-6 {
+    display: block;
+    float: left;
+    border: #ffb429 solid 1px;
+    background: #FFF7E9;
+    color: #ffb429;
+    font-size: 12px;
+    border-radius: 2px;
+    height: 18px;
+    width: 20px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 4px;
+    margin-top: 3px;
+  }
+}
+
+/*代金券*/
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active {
+  .billing-cardtype-1 {
+    width: 230px;
+    background: url(../images/shiyong1.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-1:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab {
+  .billing-cardtype-1 {
+    width: 230px;
+    background: url(../images/daijin.png) no-repeat;
+    height: 120px;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .billing-cardtype-1:hover {
+    box-shadow: 0px 0px 6px #ccc;
+    -moz-box-shadow: 0px 0px 6px #ccc;
+    -webkit-box-shadow: 0px 0px 6px #ccc;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  .billing-cardtype-1 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-1 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #FE7862;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-1 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-1 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+}
+
+.billing-actions-Youhuiquan .Coupon-width2 {
+  .ant-row span.Coupon-display-char-1 {
+    display: block;
+    float: left;
+    border: #fe7862 solid 1px;
+    background: #fef1ef;
+    color: #fe8572;
+    font-size: 12px;
+    border-radius: 2px;
+    height: 18px;
+    width: 20px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 4px;
+    margin-top: 3px;
+  }
+}
+
+/*默认状态-不能使用的情况券类型*/
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-6-true,
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-2-true,
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-1-true {
+  width: 230px;
+  background: url(../images/shiyong1.png) no-repeat;
+  height: 120px;
+  position: relative;
+  margin-top: 6px;
+  margin-left: 6px;
+
+  .billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-6-true {
+    input.ant-checkbox-input {
+      background: #F7F7F7;
+      border: #e4e4e4 solid 1px !important;
+    }
+
+    ::-webkit-scrollbar-track {
+      border: #e4e4e4 solid 1px !important;
+    }
+  }
+
+  .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-margincount .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .Surplus {
+    color: #adb4bc;
+    font-size: 16px;
+  }
+
+  .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #adb4bc;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #adb4bc;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .immediately-btn {
+    border-radius: 14px;
+    border: #dbe0e5 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #adb4bc;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+  }
+}
+
+/*默认状态-不能使用的情况卡类型*/
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-5-true {
+  width: 230px;
+  background: url(../images/shiyong2.png) no-repeat;
+  height: 120px;
+  position: relative;
+  margin-top: 6px;
+  margin-left: 6px;
+
+  .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-margincount .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .Surplus {
+    font-size: 16px;
+    margin-right: 4px;
+    color: #adb4bc;
+  }
+
+  .billing-margincount .daijin-zhe .Surplus-money {
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: #adb4bc;
+    bottom: 5px;
+  }
+
+  .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #adb4bc;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #adb4bc;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .immediately-btn {
+    border-radius: 14px;
+    border: #dbe0e5 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #adb4bc;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+  }
+
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .ant-tabs-nav .ant-tabs-tab .billing-carddisabled-5-true:hover {
+  box-shadow: 0px 0px 6px #ccc;
+  -moz-box-shadow: 0px 0px 6px #ccc;
+  -webkit-box-shadow: 0px 0px 6px #ccc;
+}
+
+.billing-actions-Youhuiquan {
+  .ant-modal-content .ant-tabs-nav .ant-tabs-tab-active:after {
+    background: transparent;
+  }
+}
+
+
+.billing-actions-Youhuiquan .Coupon-time {
+  font-size: 12px;
+  color: #333;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.billing-actions-Youhuiquan .Coupon-full-cut {
+  font-size: 14px;
+  color: #fff;
+  padding: 0px 4px;
+  background: #f14e4f;
+  width: 88px;
+  margin-left: 20px;
+}
+
+.billing-actions-Youhuiquan .Coupon-num {
+  width: 120px;
+  float: left;
+  font-size: 40px;
+  color: #333;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.billing-actions-Youhuiquan .Coupon-select {
+  float: right;
+  width: 30px;
+  height: 30px;
+}
+
+.billing-actions-Youhuiquan .Coupon-rmb {
+  font-size: 14px;
+  color: #333;
+  margin-left: 6px;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-next {
+  width: 30px;
+  height: 50px;
+  background: #eee;
+  border-radius: 4px;
+  margin: 6px 26px 0px 0px;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-arrow-show {
+  width: 30px;
+  height: 50px;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-next-icon:before,
+.ant-tabs-tab-prev-icon:before {
+  color: #999;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-prev {
+  position: absolute;
+  top: 76px;
+  right: 0px;
+  left: 788px;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-nav-scroll {
+  overflow: hidden;
+  width: 756px;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-prev-icon:before {
+  color: #DBE0E5;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-next-icon:before {
+  color: #949CA6;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-next-icon:hover::before,
+.billing-actions-Youhuiquan .ant-tabs-tab-prev-icon:hover:before {
+  color: #505766;
+}
+
+.billing-actions-Youhuiquan .ant-tabs-tab-btn-disabled {
+  .ant-tabs-tab-next-icon:hover::before {
+    color: #ccc;
+  }
+
+  .ant-tabs-tab-prev-icon:hover::before {
+    color: #ccc;
+  }
+}
+
+.billing-actions-Youhuiquan {
+  .col-all {
+    overflow: hidden;
+  }
+
+  .ant-checkbox-wrapper {
+    margin-top: 0px;
+    padding-left: 0px;
+    float: right;
+    margin-right: 5px;
+  }
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .Coupon-width2 .number-jin {
+  font-size: 14px;
+  color: #999;
+  padding-left: 24px;
+  margin-top: 3px;
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .Coupon-width {
+  line-height: 45px;
+}
+
+.billing-actions-Youhuiquan .ant-modal-content .icon-guanbi1:before {
+  line-height: 45px;
+}
+
+.billing-actions-Youhuiquan {
+  .discount-price {
+    float: left;
+    width: 320px;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 4px;
+
+    .bottom-title {
+      color: #333;
+      margin-right: 12px;
+    }
+
+    .bottom-money {
+      color: #ee2223;
+    }
+  }
+
+  .no-coupon-1 {
+    width: 147px;
+    height: 111px;
+    background: url(../images/no-youhui.png);
+    margin: 135px auto 0px auto;
+  }
+
+  .no-coupon-2 {
+    color: #ADB4BC;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 7px;
+  }
+
+  .no-coupon-3 {
+    color: #20272A;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3px;
+  }
+
+  .anticon-shurukuangshanchu {
+    font-size: 18px;
+    position: absolute;
+    right: 60px;
+    top: 12px;
+  }
+
+  .inputsearch .ant-input-affix-wrapper {
+    width: 100%;
+  }
+}
+
+.has-input-count {
+  width: 300px;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.tips-yhq {
+  color: #EE2223;
+  font-size: 14px;
+  position: absolute;
+  bottom: -27px;
+  left: 10px;
+  width: 100%;
+}
+
+.tips-yhq .anticon {
+  width: 20px;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+  line-height: 24px;
+  height: 24px;
+  float: left;
+}
+
+
+/*促销活动*/
+.billing-actions-ExecutPromotion {
+  width: 700px !important;
+  height: 525px !important;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion {
+  display: block;
+  border-bottom: #e4e4e4 1px dashed;
+  margin: 0 0 0 30px;
+  overflow: hidden;
+  padding: 16px 0px;
+  position: relative;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion:first-child {
+  border-bottom: #e4e4e4 1px dashed !important;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion:last-child {
+  border-bottom: none;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .full-cut-lf {
+  display: table-cell;
+  float: left;
+  vertical-align: middle;
+  height: 24px;
+  overflow: hidden;
+  line-height: 24px;
+  margin-right: 15px;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .count-2 {
+  width: 6%
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .count-4 {
+  width: 10%
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .count-6 {
+  width: 15%
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .full-cut-lf span {
+  padding: 0px 4px;
+  border: #ee2223 solid 1px;
+  border-radius: 2px;
+  color: #ee2223;
+  font-size: 14px;
+  height: 24px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.billing-actions-ExecutPromotion .sales-promotion .full-title {
+  width: 440px;
+  float: left;
+  line-height: 22px;
+  font-size: 16px;
+  color: #333;
+  display: table-cell;
+}
+
+.billing-actions-ExecutPromotion .check-box-input {
+  position: absolute;
+  right: 40px;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  margin-top: -9px !important;
+}
+
+.billing-actions-ExecutPromotion .ant-modal-body {
+  height: 390px;
+  overflow-y: auto;
+}
+
+.ExecutPromotion-none {
+  width: 131px;
+  height: 155px;
+  background: url(../images/ExecutPromotion-none.png);
+  margin: 110px auto 0px auto;
+}
+
+/*结算合计*/
+.ant-modal {
+
+  .ant-tabs-tab-next-icon:before,
+  .ant-tabs-tab-prev-icon:before {
+    color: #999;
+  }
+
+  .ant-tabs-tab-btn-disabled {
+
+    .ant-tabs-tab-next-icon:before,
+    .ant-tabs-tab-prev-icon:before {
+      color: #ccc;
+    }
+  }
+}
+
+
+/*会员信息页面-优惠券*/
+.billing-member-modal .billing-tabs {
+  margin: 5px 9px;
+  height: 545px;
+  overflow-y: auto;
+
+  /*折扣券*/
+  .billing-cardtype-2 {
+    float: left;
+    width: 220px;
+    background: url(../images/zhekou-m.png) no-repeat;
+    height: 120px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  /*.billing-cardtype-2:hover{ box-shadow:0px 0px 6px #ccc; -moz-box-shadow:0px 0px 6px #ccc; -webkit-box-shadow:0px 0px 6px #ccc;}*/
+  .billing-cardtype-2 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-2 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #68A7E5;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+  }
+
+  .billing-cardtype-2 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #68A7E5;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-2 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-2 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+
+  /*代金券*/
+  .billing-cardtype-1 {
+    float: left;
+    width: 220px;
+    background: url(../images/daijin-m.png) no-repeat;
+    height: 120px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  /*.billing-cardtype-1:hover{ box-shadow:0px 0px 6px #ccc; -moz-box-shadow:0px 0px 6px #ccc; -webkit-box-shadow:0px 0px 6px #ccc;}*/
+  .billing-cardtype-1 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-1 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe .money1 {
+    font-size: 32px;
+    margin-right: 4px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .daijin-zhe .symbol {
+    font-size: 16px;
+  }
+
+  .billing-cardtype-1 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #FE7862;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-1 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-1 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+
+  /*计次券*/
+  .billing-cardtype-5 {
+    float: left;
+    width: 220px;
+    background: url(../images/jici-m.png) no-repeat;
+    height: 120px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  /*.billing-cardtype-5:hover{ box-shadow:0px 0px 6px #ccc; -moz-box-shadow:0px 0px 6px #ccc; -webkit-box-shadow:0px 0px 6px #ccc;}*/
+  .billing-cardtype-5 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-5 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #60C8AC;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .Surplus {
+    font-size: 16px;
+    margin-right: 4px;
+    color: #60C8AC;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #60C8AC;
+  }
+
+  .billing-cardtype-5 .billing-margincount .daijin-zhe .Surplus-money {
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: #60C8AC;
+    bottom: 5px;
+  }
+
+  .billing-cardtype-5 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #60C8AC;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-5 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-5 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+
+  /*兑换券*/
+  .billing-cardtype-6 {
+    float: left;
+    width: 220px;
+    background: url(../images/duihuan-m.png) no-repeat;
+    height: 120px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  /*.billing-cardtype-6:hover{ box-shadow:0px 0px 6px #ccc; -moz-box-shadow:0px 0px 6px #ccc; -webkit-box-shadow:0px 0px 6px #ccc;}*/
+  .billing-cardtype-6 .billing-margincount {
+    padding: 8px 6px 8px 5px;
+    height: 120px;
+  }
+
+  .billing-cardtype-6 .daijin-btn {
+    color: #fff;
+    height: 105px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    float: left;
+    width: 20px;
+    padding-left: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-top: 20px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe {
+    width: 175px;
+    text-align: left;
+    color: #FE7862;
+    float: right;
+    margin-top: 5px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .Surplus {
+    font-size: 16px;
+    margin-right: 4px;
+    color: #FFB429;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .number {
+    font-size: 32px;
+    color: #FFB429;
+  }
+
+  .billing-cardtype-6 .billing-margincount .daijin-zhe .Surplus-money {
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+    color: #aeb5bd;
+    bottom: 5px;
+  }
+
+  .billing-cardtype-6 .billing-margincount .full-cut {
+    font-size: 12px;
+    color: #FFB429;
+    text-align: left;
+    margin-top: 14px;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-6 .billing-margincount .Term-validity {
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
+    width: 175px;
+    float: right;
+  }
+
+  .billing-cardtype-6 .immediately-btn {
+    border-radius: 14px;
+    border: #f69091 solid 1px;
+    width: 74px;
+    height: 26px;
+    padding: 0px;
+    color: #f03031;
+    font-size: 12px;
+    margin-left: 69px;
+    margin-top: 12px;
+    background: #fff;
+  }
+}
+
+/* 新增会员记录 */
+.member-info .member-info-show li span.ant-cascader-picker {
+  width: 220px;
+  margin-right: 0;
+}
+
+.member-info .member-info-show li span.ant-cascader-picker-label {
+  width: 100%;
+  margin-right: 0;
+  text-align: left;
+}
+
+.member-info .member-info-show-edit {
+  textarea {
+    width: 220px;
+    max-width: 220px;
+    min-width: 220px;
+  }
+
+  .ant-input-number {
+    width: 220px;
+
+    .ant-input-number-input {
+      height: 38px;
+      line-height: 40px;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+}
+
+.billing-member-modal-add {
+  .member-info {
+    height: 555px;
+  }
+
+  .member-info .member-info-show-edit {
+    max-height: 465px;
+    margin-top: 10px;
+
+    li span i {
+      color: #f00;
+      margin-right: 5px;
+    }
+
+    li span.ant-cascader-picker i {
+      color: #000;
+      margin-right: 0px;
+    }
+
+    li {
+      .keyboard-wrapper .keyboard-row {
+        display: block !important;
+      }
+    }
+  }
+
+}
+
+.billing-member-information {
+  .member-info-show.member-info-show-edit {
+    li {
+      .keyboard-wrapper .keyboard-row {
+        display: block !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,3823 @@
+// @import 'global.less';
+
+.fixedDataTableCellLayout_wrap3 {
+  .public_fixedDataTableCell_cellContent {
+    .ant-checkbox-wrapper {
+      .ant-checkbox {
+        float: left;
+      }
+    }
+
+    .can-modify {
+      height: 14px;
+    }
+
+    .ant-select-selection--single {
+      height: 28px !important;
+    }
+
+    .ant-select-selection__rendered {
+      line-height: 26px;
+    }
+
+    .checkboxHD {
+      .ant-checkbox-wrapper {
+        .ant-checkbox {
+          float: left;
+          margin-top: 7px;
+        }
+      }
+    }
+
+    .textCol {
+      padding: 12px 10px;
+      cursor: pointer;
+
+      &.labelswitch {
+        padding: 6px !important;
+        border-bottom: 1px solid #dbe0e5;
+      }
+
+      img {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 60px;
+        margin-top: -7px;
+
+        &.cell-avatar-logo {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .rowNo {
+      vertical-align: middle;
+      display: table-cell;
+      border-bottom: 1px solid #dbe0e5;
+    }
+
+    .ant-radio-wrapper {
+      margin-right: 0;
+    }
+  }
+}
+
+.public_fixedDataTable_header {
+  .fixedDataTableCellLayout_wrap3 {
+    .public_fixedDataTableCell_cellContent {
+      .textCol {
+        padding: 0;
+        padding-left: 10px;
+        flex-shrink: 0;
+        // line-height: 18px; // !fix: 供货目录新增modal 的表格标题
+      }
+    }
+  }
+}
+
+.public_fixedDataTableRow_expanded .fixedDataTableCellGroupLayout_cellGroupWrapper .public_fixedDataTableCell_main:first-child {
+  width: 100% !important;
+}
+
+.public_fixedDataTableRow_selected {
+  background-color: #edf1f7 !important;
+}
+
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background: #fff;
+}
+
+.public_fixedDataTableRow_disabled,
+.public_fixedDataTableRow_disabled .public_fixedDataTableCell_main {
+  color: #ccc;
+  border-color: #d9d9d9;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.public_fixedDataTableRow_delRow,
+.public_fixedDataTableRow_delRow .public_fixedDataTableCell_main {
+  // background-color: #696969;
+  color: #ccc;
+}
+
+.public_fixedDataTableCell_empty {
+  min-height: 44px;
+  padding: 4px 7px;
+
+  .ant-search-input-wrapper {
+    width: 100%;
+  }
+}
+
+// fix: 表格不可编辑的列，表格文字颜色应该为浅灰色
+.public_fixedDataTableCell_disabled .public_fixedDataTableCell_cellContent .table-header-name {
+  color: #999;
+}
+
+.public_fixedDataTableCell_disabled,
+.public_fixedDataTableCell_disabled .ant-tag,
+.public_fixedDataTableCell_disabled.textCol {
+  // pointer-events: none;
+  color: #999;
+  cursor: not-allowed !important;
+  min-height: 10px;
+  padding: 4px 10px;
+}
+
+// 解决新增界面内表格头部筛选鼠标经过后无法居中问题
+.public_fixedDataTableCell_disabled{
+  padding: 0 10px;
+  .public_fixedDataTableCell_cellContent>div{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.u-tabs-content .line-tabs .u-tabs-tabpane-active .listTable .public_fixedDataTableCell_disabled.textCol {
+  color: #333;
+}
+
+.public_fixedDataTableCell_disabled .ant-search-input-wrapper {
+  width: 100%;
+}
+
+.public_fixedDataTable_header,
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  background: @table-header-background-color;
+}
+
+.public_fixedDataTable_header .public_fixedDataTableCell_disabled {
+  pointer-events: initial;
+  cursor: initial !important;
+}
+
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  font-weight: normal;
+}
+
+.columnSetting {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  z-index: 1000;
+  top: 1px;
+  background: @table-header-background-color;
+  border: 0;
+  width: 40px;
+}
+
+.SettingBtn {
+  height: 29px;
+  border: 0px;
+  width: 40px;
+  background: @table-header-background-color;
+  border-radius: 0px;
+}
+
+.fixedDataTableCellLayout_alignRight {
+  // text-align: left; 采购单据列表的数量列数值右对齐
+}
+
+.headerName {
+  color: #333;
+  // padding-left: 10px;
+}
+
+.checkboxHD {
+  height: @base-input-height + 2;
+  line-height: @base-input-height + 2;
+  border-bottom: 1px solid #dbe0e5;
+}
+
+.ant-tabs-tabpane {
+  position: relative;
+}
+
+.ant-tabs-tabpane-active .ant-tabs-tabpane {
+  width: auto;
+}
+
+
+/*2017-05-02*/
+.table-reset .ant-table-thead>tr>th {
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0
+}
+
+.table-reset .ant-table-thead>tr>th,
+.table-reset .ant-table-tbody>tr>td {
+  padding: 10px 15px;
+}
+
+.table-reset .ant-table-header {
+  border-top: 1px solid #f23f40;
+  margin-bottom: 0;
+}
+
+.ant-table-tbody span i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.ant-table-thead>tr.ant-table-row-hover>td,
+.ant-table-tbody>tr.ant-table-row-hover>td,
+.ant-table-thead>tr:hover>td,
+.ant-table-tbody>tr:hover>td {
+  background: #edf1f7;
+}
+
+.listTable .fixedDataTableCellLayout_main {
+  border-right: 0;
+}
+
+.listTable .listTableTag {
+  padding: 2px 5px;
+  margin: 12px 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.fixedDataTableLayout_main {
+  border: none;
+  border-top: 1px solid #505766;
+}
+
+.fixedDataTableRowLayout_fixedColumnsDivider {
+  border-left: none
+}
+
+.fixedDataTableRowLayout_main {
+  border-bottom: 1px solid #DBE0E5;
+}
+
+.public_fixedDataTable_footer {
+  background-color: #f7f9fd !important;
+
+  .public_fixedDataTableCell_main {
+    border: none;
+    line-height: 35px;
+    background-color: #f7f9fd;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
+    text-align: left;
+  }
+
+  .fixedDataTable-footer-title {
+    color: #666;
+  }
+
+  border-bottom: 1px solid #dbe0e5;
+  background-color: #fcf5e6;
+  color: #505766;
+
+  .textCol {
+    color: #505766;
+  }
+
+  font-weight: 700;
+
+  .subtotal,
+  .aggregates {
+    border-bottom: 1px solid #dbe0e5;
+  }
+
+  .fixedDataTableRowLayout_body .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellLayout_main:first-of-type {
+
+    .subtotal,
+    .aggregates {
+      padding-left: 10px;
+    }
+  }
+
+}
+
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background: #fff
+}
+
+.public_fixedDataTable_bodyRow:hover .public_fixedDataTableCell_main {
+  background: #edf1f7
+}
+
+.public_fixedDataTable_bodyRow:hover {
+  background-color: #edf1f7;
+}
+
+.public_fixedDataTableCell_main {
+  background: #fff;
+}
+
+.btn-caret {
+  width: 18px;
+  display: inline-block;
+  height: 16px;
+  vertical-align: top;
+  padding-top: 4px;
+  flex-shrink: 0;
+  padding-left: 2px;
+}
+
+.btn-caret .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+  padding: 0;
+  display: block;
+  height: 6px;
+  margin: 0 auto;
+}
+
+.btn-caret .ant-btn .anticon {
+  font-size: 12px;
+  vertical-align: top;
+  transform: scale(.5) rotate(0deg);
+  color: #ccc;
+  transform-origin: top;
+}
+
+.btn-caret .ant-btn-icon-active .anticon {
+  color: #333 !important
+}
+
+.ant-popover-inner-content {
+  padding: 8px 0;
+  line-height: 33px;
+
+  .ant-row {
+    padding: 0 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    height: 32px;
+    line-height: 32px;
+
+    div {
+      height: 32px;
+      line-height: 32px;
+      /* overflow: hidden; */
+    }
+
+    &:hover {
+      background: #f3f5f9;
+    }
+
+    .ant-checkbox-wrapper {
+      width: 106px;
+      overflow: hidden;
+      height: 25px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: initial;
+    }
+  }
+
+  .popover-form {
+    .ant-row:hover {
+      background: transparent;
+    }
+  }
+}
+
+.btn-list-setting {
+  text-align: right;
+  margin-top: 12px;
+  overflow: hidden
+}
+
+.btn-list-setting button {
+  margin-right: 10px;
+}
+
+//放出表格滚动条纵向
+.ScrollbarLayout_mainVertical {
+  width: 16px;
+
+  .ScrollbarLayout_faceVertical:after {
+    left: auto !important;
+    right: 8px !important;
+  }
+}
+
+.public_fixedDataTable_scrollbarSpacer {
+  display: none;
+}
+
+/*表格里的滚动条背景透明*/
+.meta-table .public_Scrollbar_main {
+  background-color: transparent;
+  z-index: 998 !important;
+}
+
+/*表格部分按钮*/
+.acticonCell {
+  position: absolute;
+  right: 15px;
+  overflow: hidden;
+  z-index: 999;
+  // padding-left: 13px;
+  border: 0;
+  background: #edf1f7;
+
+  .anticon {
+    font-size: 17px;
+    margin-right: 20px;
+  }
+
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.25em;
+    margin-right: 5px;
+  }
+
+  span {
+    margin-left: 8px;
+    // margin-right: 3px;
+
+    &:only-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .level-2+.level-3.expand-row-end {
+      border-top-color: #dbe0e5;
+    }
+
+    .expand-row:hover {
+      background-color: #edf1f7;
+    }
+  }
+
+  .ant-row {
+    display: flex;
+  }
+
+  .table-list-btn {
+    // padding: 4px 12px;
+    padding: 0 10px;
+    background: #505766;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 22px;
+    display: inline-block;
+  }
+
+  .table-list-btn:hover {
+    background: #616875;
+    color: #fff;
+  }
+}
+
+.action-col {
+  background: #fff;
+}
+
+/*表格部分按钮-选中由黄色变为浅蓝色*/
+.actionCellSelect {
+  background: #edf1f7;
+}
+
+.ant-popover-inner-content .filter-btn-fixed {
+  min-width: 150px
+}
+
+.filter-btn-fixed {
+  overflow: hidden
+}
+
+.filter-btn-fixed .filter-btn-1 {
+  position: absolute;
+  bottom: 10px;
+  right: 1px;
+  left: 1px;
+  width: 99%;
+  text-align: right;
+  padding: 5px 0;
+}
+
+.filter-btn-1 button {
+  margin-right: 8px;
+}
+
+.filter-txt {
+  min-height: 220px;
+  overflow: auto;
+  max-height: 220px;
+  overflow-x: hidden;
+}
+
+.public_fixedDataTableCell_columnResizerKnob {
+  background-color: #505766
+}
+
+.public_fixedDataTableColumnResizerLine_main {
+  border-color: #505766
+}
+
+.ant-switch {
+  height: 12px;
+  border-radius: 12px;
+  min-width: 18px;
+  background: #ADB4BC;
+  max-width: 32px;
+}
+
+.ant-switch:after {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 1px 2px 0 #B5B5B5;
+  top: -3.5px;
+  left: -1px;
+}
+
+.ant-switch-checked:after {
+  margin-left: -14px;
+  background: #588CE9;
+  left: 100%
+}
+
+.ant-switch-checked {
+  background: rgba(88, 140, 233, 0.30);
+}
+
+.table-nodata {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  line-height: 90px;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 60px;
+}
+
+.table-nodata i {
+  font-size: 85px;
+  color: #ccc;
+  margin-right: 20px;
+  vertical-align: middle;
+  margin-bottom: 12px;
+}
+
+.ant-table-placeholder {
+  min-height: 220px;
+  position: relative;
+
+  .table-nodata {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    line-height: 90px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+/*小友表格暂无数据提示*/
+.table-nodata {
+  padding-left: 0 !important;
+  line-height: normal !important;
+
+  svg {
+    display: block !important;
+    margin: 8px auto !important;
+    position: static !important;
+    float: none !important;
+  }
+}
+
+.public_fixedDataTableCell_cellContent a {
+  color: #588CE9;
+  cursor: pointer;
+  cursor: hand;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: block;
+}
+
+.public_fixedDataTableCell_cellContent a.table-list-btn {
+  svg {
+    margin-top: 6px;
+    display: inline-block;
+  }
+}
+
+.public_fixedDataTableCell_cellContent a:hover {
+  color: @table-a-color;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.editCol {
+  .has-feedback {
+    // margin-top: -6px;
+  }
+
+  .edit-input-number {
+    // margin-top: -8px;
+
+    .ant-select-selection {
+      margin-top: 0px;
+    }
+  }
+
+  .ant-input-number,
+  .ant-input,
+  .ant-search-input,
+  .ant-select-selection {
+    height: 28px;
+  }
+
+  .ant-search-input .ant-search-btn {
+    padding: 0;
+    top: -1px;
+  }
+
+  .ant-select-selection__rendered {
+    line-height: 26px;
+  }
+
+  //影响表里里面的下拉框查询方案 .ant-select-selection{margin-top: -7px;}
+  .undefined {
+    //margin-top: -6px;  影响新增银行对账方案中 凭证  辅助核算类型
+  }
+
+}
+
+.textCol {
+  .edit-input-number {
+    margin-top: -8px;
+  }
+
+}
+
+.meta-table {
+  .editCol .edit-input-number .ant-select-selection {
+    margin-top: 2px;
+  }
+}
+
+/*报表 add by 金子涵*/
+.rpt-zhekou {
+  margin: 0px 20px 20px 20px;
+  border: #eeeeee solid 1px;
+  background: #f8faff;
+  min-height: 78px;
+  padding: 2px 0px;
+}
+
+.rpt-zhekou-list {
+  height: 48px;
+  box-sizing: border-box;
+  border-right: #eeeeee solid 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .zhekou-name h3 {
+    font-size: 14px;
+    color: #9CA5B3;
+    line-height: 26px;
+    margin-left: 12px;
+    margin-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // eslint-disable-next-line
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /*! autoprefixer: on */
+  }
+
+  .zhekou-number h4 {
+    font-size: 20px;
+    color: #494E60;
+    line-height: 26px;
+    margin-left: 12px;
+    margin-top: 2px;
+    margin-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // eslint-disable-next-line
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /*! autoprefixer: on */
+  }
+
+  .rpt-zhekou-padding {
+    padding-left: 80px;
+  }
+
+  .rpt-zhekou-center {
+    text-align: center;
+  }
+}
+
+.rpt-zhekou-list:last-child {
+  border-right: none;
+}
+
+.rpt-table {
+  .ant-table-body {
+    overflow-x: hidden !important;
+  }
+
+  .ant-table-footer {
+    overflow-x: auto;
+    border-radius: 0px;
+  }
+
+  ;
+
+  .ant-table.ant-table-bordered .ant-table-footer {
+    border: none;
+    background: #fcf5e6;
+    padding: 0px 0px;
+    height: 45px;
+    overflow-y: hidden;
+    font-weight: bold;
+    color: #ff8416;
+    line-height: 42px;
+  }
+
+  .ant-table.ant-table-bordered .ant-table-footer div>div:first-child {
+    color: #666;
+    padding: 0px 8px 0px 20px !important;
+  }
+}
+
+.rpttable-padding-header {
+  .ant-table-header {
+    padding-right: 8px;
+  }
+}
+
+;
+
+.rpt-table .ant-table-header .ant-table-thead>tr>th {
+  border-bottom: 1px solid #dbe0e5 !important;
+}
+
+.eChart-nodata {
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.react_for_echarts {
+  margin: 0px 13px 0px 15px;
+}
+
+#eChartId_chart1 .react_for_echarts>div {
+  height: 320px !important;
+}
+
+/*气泡浮窗表格处样式调整   add zk*/
+.ant-popover .ant-popover-inner-content {
+  .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 0px;
+    padding-right: 6px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .ant-btn-icon-only {
+    .anticon-arrow-up {
+      vertical-align: super;
+    }
+
+    .anticon-arrow-down {
+      vertical-align: super;
+    }
+  }
+
+  .filter-btn-1 {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #fff;
+    position: absolute;
+    width: calc(~'100% - 2px');
+    border-top: 1px solid #dcdcdc;
+    line-height: 26px;
+
+    .ant-checkbox-wrapper {
+      margin-left: 5px;
+      float: left;
+    }
+  }
+
+  .filter-btn-1 button {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  .filter-btn-1 .ant-btn-sm {
+    height: 26px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .ant-row:hover .pull-right .ant-btn {
+    background: #f3f5f9;
+  }
+
+  /*add by jinzh1 listrefer 按钮样式*/
+  .listRefer .filter-btn-1 .ant-btn-primary {
+    margin-left: 0px;
+  }
+}
+
+.ant-popover.ant-popover-placement-bottomRight {
+  .ant-popover-inner-content {
+    .filter-btn-1 {
+      bottom: 1px;
+    }
+  }
+}
+
+// async sku 浮层
+.taggroup-popover {
+  .filter-list-search{
+    margin: 7px 15px 0px 15px;
+    input.u-form-control-search{
+      padding-right: 45px;
+    }
+  }
+  .filter-list-content{
+    line-height: 32px;
+  }
+  .filter-btn-1 {
+    min-width: 260px;
+    border-top: 1px solid #dcdcdc;
+    padding: 5px 0px 0px 15px;
+    .u-checkbox{
+        margin-top: 4px;
+        .u-checkbox-label{
+          line-height: 16px;
+        }
+    }
+    .u-button{
+      height: 26px;
+    }
+    .u-button-border{
+      float: right;
+      background: #eef1f3;
+      border: none;
+      color: #555c6a;
+      &:hover{
+        background: #d5d8da;
+      }
+    }
+    .sku-newbtn {
+      float: left;
+      border: none;
+      padding: 6px 0px;
+      vertical-align: middle;
+      display: flex;
+
+      svg {
+        width: 13px;
+        height: 13px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        color: #ee2223;
+      }
+    }
+  }
+}
+
+.ant-popover-placement-left>.ant-popover-content .filter-btn-1 {
+  width: calc(~'100% - 10px');
+}
+
+.ant-popover-placement-top {
+  .ant-tree {
+    padding-bottom: 25px;
+  }
+
+  .filter-btn-1 {
+    position: absolute;
+    bottom: 9px;
+    width: 90%;
+  }
+}
+
+/*气泡浮窗选择条件样式调整   add zk*/
+.ant-popover-inner-content {
+  .filter-btn-1 .ant-btn {
+    float: left;
+    height: 26px;
+  }
+
+  .filter-btn-1 button {
+    margin-right: 0px;
+  }
+
+  .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 0px;
+    padding-right: 6px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .ant-btn-icon-only {
+    .anticon-arrow-up {
+      vertical-align: super;
+    }
+
+    .anticon-arrow-down {
+      vertical-align: super;
+    }
+  }
+
+  .lock.ant-btn-icon-only {
+
+    .anticon-weidongjie,
+    .anticon-dongjie {
+      vertical-align: super;
+    }
+
+  }
+}
+
+.icon-plus-copy {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 3px;
+}
+
+// .btn-submenu .moreButton{ margin-top: 0px;}
+/*表格的部分单独添加边距*/
+.ant-tabs-content .listheadRow {
+  margin: 0px 20px;
+  padding-top: 20px;
+}
+
+.ant-tabs-content .listheadRow {
+  .groupCondition {
+    >div {
+      >div {
+        float: left;
+      }
+    }
+  }
+}
+
+// .ant-tabs-content .meta-table {
+//   overflow: hidden;
+
+// }
+
+.public_fixedDataTable_main,
+.fixedDataTableLayout_rowsContainer,
+.fixedDataTableRowLayout_rowWrapper,
+.public_fixedDataTable_header,
+.fixedDataTableRowLayout_main {
+  outline: none;
+
+  .u-checkbox .u-checkbox-label {
+    position: absolute;
+  }
+}
+
+.fixedDataTableCellGroupLayout_cellGroupWrapper {
+  .acticonCell {
+    padding-top: 7px;
+    background: none;
+    right: 10px;
+    padding-left: 0px;
+  }
+}
+
+/*销售排名里面的表格*/
+.rpt-table {
+  /*margin: 0 20px;*/
+  width: auto !important;
+}
+
+/*数据中心*/
+.rpt-table {
+  .ant-table-fixed-header>.ant-table-content>.ant-table-scroll>.ant-table-body {
+    overflow-y: auto !important;
+  }
+
+  .ant-spin-nested-loading .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+    overflow: hidden;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .ant-table-bordered .ant-table-tbody>tr>td {
+    border-right: 1px solid #dbe0e5;
+    border-bottom: 1px solid #dbe0e5;
+    padding: 0px 8px;
+    height: 40px;
+  }
+
+  .ant-table-bordered .ant-table-tbody>tr>td:last-child {
+    border-right: none;
+  }
+
+  .ant-table-bordered .ant-table-tbody>tr>td:first-child span {
+    margin-left: 12px;
+  }
+
+  .ant-table-bordered .ant-table-header>table {
+    border-left: 0;
+    border-top: 1px solid #505766;
+    border-radius: 0px;
+  }
+
+  .ant-table-bordered .ant-table-body>table {
+    border-left: 0;
+  }
+
+  .ant-table-header {
+    .ant-table-thead>tr>th {
+      background: #f7f9fd;
+      color: #333;
+      height: 40px;
+      padding: 0px 8px;
+    }
+
+    .ant-table-thead>tr>th:first-child span {
+      margin-left: 12px;
+    }
+  }
+
+  .ant-table-body .ant-table-bordered .ant-table-thead>tr>th:last-child {
+    border-right: none;
+  }
+
+}
+
+.rpt-table-team-select {
+  width: 220px;
+  height: auto;
+  float: left;
+
+  .label-control {
+    width: 69px !important;
+    text-align: left;
+    float: left;
+    padding-right: 12px;
+  }
+
+  .control-width {
+    width: 150px !important;
+    float: left;
+  }
+}
+
+.ant-table-column-sorter-down.on .anticon-caret-down,
+.ant-table-column-sorter-down.on .anticon-caret-up,
+.ant-table-column-sorter-up.on .anticon-caret-down,
+.ant-table-column-sorter-up.on .anticon-caret-up {
+  color: #333 !important;
+  height: 5px;
+}
+
+.ant-table-column-sorter .anticon-caret-down,
+.ant-table-column-sorter .anticon-caret-up {
+  color: #ccc;
+  height: 5px;
+  line-height: 5px;
+}
+
+.ant-table-column-sorter {
+  height: 12px !important;
+}
+
+/*竖向滚动条设置*/
+.public_Scrollbar_main,
+.public_Scrollbar_main.public_Scrollbar_mainActive {
+  border-left: none;
+}
+
+/*报表--分组方案右移*/
+.container-browse-mode.container-less-height {
+  .listheadRow .ant-row {
+    .rpt-toolbar {
+      min-width: 70px;
+      float: right;
+
+      .btn-toolbar-bottom {
+        padding-right: 0px !important;
+      }
+
+      .btn-toolbar-bottom .col-auto {
+        .ant-btn {
+          cursor: pointer !important;
+        }
+
+        .ant-btn:hover {
+          border-color: #505766 !important;
+        }
+
+        .ant-btn .icon {
+          width: 15px;
+          height: 15px;
+          margin-right: 5px;
+          float: left;
+        }
+
+        .ant-btn span {
+          line-height: 14px;
+        }
+      }
+    }
+
+    .rpt-select {
+      width: 220px;
+      float: right;
+
+      .control-width .ant-select {
+        width: 150px !important;
+      }
+
+      .label-control {
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .ant-select-selection {
+        height: 31px;
+
+        .ant-select-selection__rendered {
+          line-height: 30px;
+        }
+      }
+    }
+
+    .ant-btn {
+      height: 32px;
+    }
+  }
+
+  .ant-tag-checkable {
+    margin: 0px 16px 0px 0px;
+    color: #333;
+  }
+}
+
+/*U8C调价单列表显示显示一列问题*/
+.container-browse-mode.container-greater-height .listheadRow .ant-row .rpt-toolbar {
+  min-width: 70px;
+  float: right;
+}
+
+/*新增-带下拉*/
+.ant-dropdown-menu {
+  padding: 8px 0px !important;
+
+  .ant-dropdown-menu-item {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 16px;
+    color: #333;
+  }
+
+  .ant-dropdown-menu-item:first-child {
+    border-radius: 0px;
+  }
+
+  .ant-dropdown-menu-item:hover {
+    background-color: #f3f5f9;
+  }
+
+  .ant-dropdown-menu-item-selected {
+    background-color: #fff7e7;
+    color: #333;
+  }
+}
+
+.fixedDataTableRowLayout_rowWrapper {
+  .textCol .edit-input-number {
+    margin-top: 0px;
+  }
+}
+
+/*联查零售单-下拉*/
+.ant-dropdown {
+  .ant-dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+/*新增-只能补货弹窗*/
+.ant-modal.modal-IntelligenceDemand {
+  .ant-modal-header {
+    border-bottom: none;
+  }
+
+  .ant-modal-body {
+    padding: 12px 20px;
+    height: 204px;
+
+    h3 {
+      font-size: 14px;
+      line-height: 28px !important;
+      height: 28px !important;
+    }
+
+    h4 {
+      font-size: 12px;
+      line-height: 20px !important;
+    }
+
+    .h3-margin {
+      margin-top: 4px;
+    }
+
+    .ant-input-number {
+      margin: 0px 8px;
+    }
+
+    .ant-calendar-picker {
+      margin: 0px 8px 0px 8px;
+    }
+
+    .ant-radio-wrapper {
+      margin-bottom: 10px;
+    }
+
+    .ant-time-color {
+      color: #b0b0b0;
+    }
+  }
+
+  .ant-radio-group {
+    label.ant-radio-wrapper {
+      .ant-input-number {
+        width: 100px !important;
+      }
+    }
+
+    .ant-calendar-picker {
+      width: 150px !important;
+      display: inline-block;
+    }
+  }
+
+  .ant-modal-footer {
+    padding: 15px 30px;
+  }
+}
+
+/*分组条件*/
+.Grouping-condition-left {
+  margin-right: 12px;
+}
+
+.Grouping-condition {
+  height: @base-input-height;
+
+  .Grouping-condition-input {
+    width: 236px;
+    height: @base-input-height;
+    border: #d9d9d9 solid 1px;
+    border-radius: 4px;
+    padding: 0px 6px;
+    position: relative;
+
+    span.Grouping-condition-span {
+      display: block;
+      width: 228px;
+      height: @base-input-height;
+      padding-right: 45px;
+    }
+  }
+
+  .anticon-up {
+    right: 10px;
+    top: 6px;
+    position: absolute;
+    color: rgba(0, 0, 0, .45);
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-transform: scale(.75) rotate(0deg);
+    transform: scale(.75) rotate(0deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+  }
+
+  .anticon-down {
+    right: 10px;
+    top: 6px;
+    position: absolute;
+    color: rgba(0, 0, 0, .45);
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-transform: scale(.75) rotate(0deg);
+    transform: scale(.75) rotate(0deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+  }
+
+  .anticon-close-circle {
+    position: absolute;
+    right: 26px;
+    top: 9px;
+    color: rgba(0, 0, 0, .25);
+  }
+
+  .anticon-close-circle:hover {
+    color: rgba(0, 0, 0, .43);
+  }
+}
+
+
+/*交叉分组*/
+.crossGroupingModal {
+  width: 750px !important;
+  height: 600px !important;
+
+  .u-modal-header {
+    border-bottom: none;
+    // padding: 12px 20px 0px 20px;
+  }
+
+  .u-modal-footer {
+    // padding: 15px 30px;
+  }
+
+  .u-modal-body {
+    color: #666;
+    padding: 0px 20px 0px 20px;
+
+    .ant-row {
+      margin-bottom: 10px !important;
+      line-height: 26px !important;
+    }
+
+    .ant-row.crossaddnamemargin {
+      line-height: 16px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .eChart-global {
+      margin-top: 4px;
+      float: left;
+
+      .Charts-columns {
+        margin-left: 30px;
+        margin-right: 8px;
+      }
+
+      .Charts-columns-input .ant-input {
+        width: 100px !important;
+      }
+
+      .Charts-columns-input {
+        .ant-input {
+          width: 50px !important;
+        }
+      }
+
+      .Charts-columns-input-hint {
+        margin-left: 5px;
+        color: #999;
+
+        span {
+          color: #ee2223;
+        }
+      }
+    }
+
+    .eChart-global2 {
+      margin-left: 16px;
+      border: #d9d9d9 solid 1px;
+      min-height: 28px;
+      border-radius: 4px;
+      padding-bottom: 2px;
+      padding-right: 6px;
+      width: 588px;
+      overflow: hidden;
+      float: left;
+
+      .eChart-SubChartTag {
+        margin: 4px 0 2px 6px;
+        background-color: #f7f9fd;
+        border: 1px solid #dbe0e5;
+        padding: 0 3px 0 5px;
+        border-radius: 3px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        max-width: calc(100% - 10px);
+        overflow: hidden;
+        line-height: 16px;
+        float: left;
+        cursor: pointer;
+
+        .eChart-SubChartTag-Icon {
+          margin-left: 3px;
+
+          .anticon-guanbi1::before {
+            font-size: 12px;
+            transform: scale(.83333333) rotate(0deg);
+          }
+        }
+
+        .eChart-SubChartTag-Icon:hover {
+          .anticon-guanbi1::before {
+            color: #ee2223;
+          }
+        }
+      }
+
+      .eChart-SubChartTag:hover {
+        color: rgba(0, 0, 0, .65);
+      }
+    }
+
+    .eChart-global2:hover {
+      border-color: #505766;
+    }
+
+    .eChart-displayTitle,
+    .eChart-ApplyAt {
+      color: #2a2a2a;
+      display: block;
+      float: left;
+      margin-top: 5px;
+      text-align: right;
+      width: 62px !important;
+
+      .anticon {
+        color: #ff0018;
+        margin-right: 4px;
+        transform: scale(.75);
+        transform-origin: 0 center;
+        margin-bottom: 4px;
+        width: 10px;
+        margin-top: 3px;
+        font-size: 12px;
+      }
+    }
+
+    .eChart_DisplayType,
+    .eChart-ApplyAtPc {
+      margin-left: 16px;
+    }
+
+    .eChart-ApplyAtMobile {
+      margin-left: 15px;
+    }
+
+    .eChart-ApplyAtPc,
+    .eChart-ApplyAtMobile {
+      .ant-checkbox-wrapper {
+        margin-top: 4px;
+      }
+    }
+
+    .eChart_Setting {
+      margin-left: 16px;
+
+      .ant-btn:focus {
+        border-color: #ccc;
+      }
+    }
+
+    .ant-row.crosstype {
+      width: 100%;
+      margin-bottom: 10px;
+      color: #666;
+
+      .crosstypeName {
+        width: 62px !important;
+        display: block;
+        float: left;
+        text-align: right;
+        color: #2A2A2A;
+
+        .anticon {
+          color: red;
+          margin-right: 4px;
+          transform: scale(.75);
+          transform-origin: 0 center;
+          margin-bottom: 4px;
+          width: 10px;
+          margin-top: 3px;
+          font-size: 12px;
+        }
+      }
+
+      .crossinput {
+        width: 270px !important;
+        float: left;
+      }
+
+      .crosstypeNameList {
+        margin-left: 16px;
+
+        .ant-radio-wrapper {
+          margin-right: 5px;
+        }
+      }
+
+      .ant-input {
+        width: 268px;
+        height: 28px;
+      }
+
+      .crosstypeline {
+        line-height: 28px;
+      }
+
+      .crosscheckbox {
+        margin-left: 12px;
+
+        .ant-checkbox-wrapper {
+          line-height: 28px;
+
+          .ant-checkbox+span {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .crossadddata {
+      width: 270px !important;
+      margin-left: 78px;
+
+      .crossaddnamemargin {
+        line-height: 16px !important;
+      }
+    }
+
+    .selecteddata {
+      width: 270px !important;
+    }
+
+    .crossselectborder {
+      border: #D9D9D9 solid 1px;
+      border-radius: 4px;
+      width: 268px;
+      height: 317px;
+    }
+
+    .crossselectborder2 {
+      height: 388px;
+
+      .crossadddatalist {
+        height: 334px;
+      }
+    }
+
+    .anticon-shurukuangshanchu::before {
+      content: "\e690";
+    }
+
+    .anticon-shurukuangshanchu {
+      font-size: 16px;
+      margin-right: 5px;
+      color: #D3D8DE;
+      position: relative;
+      top: 1px;
+    }
+
+    .anticon-shurukuangshanchu:hover,
+    .anticon-shurukuangshanchu:active {
+      color: #ADB4BC;
+      cursor: pointer;
+
+    }
+
+    .crossselectrightborder {
+      border: #D9D9D9 solid 1px;
+      border-radius: 4px;
+      width: 248px;
+      height: 405px;
+      overflow-y: auto;
+    }
+
+    .crossadddatalist {
+      width: 100%;
+      height: 260px;
+      overflow-y: auto;
+
+      .ant-row {
+        margin-bottom: 0px !important;
+      }
+
+      .ant-checkbox-wrapper {
+        line-height: 26px;
+      }
+
+      .ant-row {
+        .ant-checkbox-wrapper {
+          padding-left: 15px;
+          width: 100%;
+        }
+      }
+
+      .ant-row:hover {
+        background: #f3f5f9;
+      }
+    }
+
+    .crossselecteddata {
+      width: 100%;
+      height: 319px;
+      margin: 15px 0px;
+      overflow-y: auto;
+
+      .ant-row {
+        .ant-checkbox-wrapper {
+          padding-left: 15px;
+          width: 100%;
+        }
+      }
+
+      .ant-checkbox-wrapper {
+        line-height: 29px;
+      }
+
+      .ant-row:hover {
+        background: #f3f5f9;
+      }
+    }
+
+    .ant-input-search {
+      width: 240px;
+      margin: 12px 13px 5px 13px;
+    }
+
+    .crossaddnamemargin {
+      margin-bottom: 6px;
+    }
+
+    .crossbtncount {
+      width: 50px !important;
+
+      .ant-btn {
+        width: 30px;
+        height: 40px;
+        margin: 0px 9px;
+        border: none;
+      }
+
+      .ant-btn:hover {
+        border: none;
+      }
+    }
+
+    .crossbtncount.dimension {
+      .ant-btn.icon-right-enabled {
+        margin-top: 162px;
+      }
+    }
+
+    .ant-btn::before {
+      background: transparent;
+      opacity: 1;
+    }
+
+    .ant-btn.icon-left-disabled,
+    .ant-btn.icon-left-enabled {
+      background: #EDF1F7;
+      margin-top: 20px;
+    }
+
+    .ant-btn.icon-left-enabled:hover {
+      background: #E3E7EF;
+    }
+
+    .ant-btn.icon-left-disabled:before,
+    .ant-btn.icon-left-enabled::before {
+      content: "\e6a4";
+      font-size: 16px;
+      display: block;
+      font-family: anticon !important;
+      color: #ccc;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .ant-btn.icon-left-disabled::before {
+      color: #ADB4BC;
+    }
+
+    .ant-btn.icon-left-enabled::before {
+      color: #505766;
+    }
+
+    .ant-btn.icon-left-disabled:hover::before {
+      color: #ADB4BC;
+    }
+
+    .ant-btn.icon-left-enabled:hover::before {
+      color: #505766;
+    }
+
+    .ant-btn.icon-right-disabled,
+    .ant-btn.icon-right-enabled {
+      background: #EDF1F7;
+      margin-top: 148px;
+    }
+
+    .ant-btn.icon-right-enabled:hover {
+      background: #E7E9F0;
+    }
+
+    .ant-btn.icon-right-disabled:before,
+    .ant-btn.icon-right-enabled::before {
+      content: "\e6a5";
+      font-size: 16px;
+      display: block;
+      font-family: anticon !important;
+      color: #666;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .ant-btn.icon-right-disabled::before {
+      color: #ADB4BC;
+    }
+
+    .ant-btn.icon-right-enabled::before {
+      color: #505766;
+    }
+
+    .ant-btn.icon-right-disabled:hover::before {
+      color: #ADB4BC;
+    }
+
+    .ant-btn.icon-right-enabled:hover::before {
+      color: #505766;
+    }
+
+    .groupCondition-SelectedItem {
+      width: 268px;
+      height: 317px !important;
+      border: #D9D9D9 solid 1px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .groupCondition-SelectedItem-Row {
+        width: 100%;
+        height: 119px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      .groupCondition-SelectedItemNum_4 {
+        height: 96px;
+
+        .titlename-list {
+          height: 66px;
+
+          .ant-row {
+            margin-bottom: 0px !important;
+          }
+        }
+      }
+
+      .groupCondition-SelectedItem-zhibiao {
+        .anticon {
+          float: right;
+          margin-right: 10px;
+          margin-top: 9px;
+        }
+      }
+
+      .groupCondition-SelectedItem-Row2 {
+        width: 100%;
+        height: 158px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      .titlemore {
+        width: 266px;
+        height: 30px;
+        background: #F3F5F9;
+        line-height: 28px;
+        border-bottom: #DBE0E5 solid 1px;
+        border-top: #DBE0E5 solid 1px;
+        cursor: pointer;
+
+        span {
+          margin-left: 15px;
+        }
+      }
+
+      .groupCondition-SelectedItem-Selected {
+        background: #E3E7EF;
+      }
+
+      .groupCondition-HideAllZeroRow {
+        width: 180px;
+        float: right;
+        height: 28px;
+        line-height: 25px;
+
+        .ant-checkbox-wrapper {
+          display: inline;
+
+          span {
+            margin-left: 0px !important;
+          }
+        }
+      }
+
+      .titlemore-none {
+        border-top: none;
+      }
+
+      .titlename-list,
+      .titlename-list3 {
+        height: 87px;
+        overflow-y: auto;
+        margin-top: 0px;
+
+        .ant-checkbox-wrapper {
+          line-height: 29px;
+        }
+
+        .ant-row {
+          margin-bottom: 0px !important;
+
+          .ant-checkbox-wrapper {
+            line-height: 26px;
+          }
+
+          .ant-checkbox-wrapper {
+            padding-left: 15px;
+            width: 100%;
+            width: auto;
+            float: left;
+          }
+
+          .ant-checkbox-wrapper+div {
+            float: right;
+            margin-top: 5px;
+            margin-right: 10px;
+          }
+        }
+
+        .ant-row:hover {
+          background: #f3f5f9;
+        }
+      }
+
+      .titlename-list3 {
+        height: 128px;
+        width: 100%;
+
+        .ant-row {
+          label {
+            width: auto !important;
+          }
+
+          >div {
+            float: right;
+            margin-right: 10px;
+            margin-top: 5px;
+          }
+        }
+
+        .columnDeinfe_Memo-count {
+          float: left;
+          color: #a3a3a4;
+          margin-right: 12px;
+          display: flex;
+        }
+
+        .columnDeinfe_Memo {
+          display: block;
+          color: #a3a3a4;
+        }
+
+        .groupCondition-ColumnDefine-Design {
+          float: right;
+        }
+      }
+
+
+    }
+
+    .groupCondition-SelectedItem2 {
+      height: 388px !important;
+    }
+  }
+
+}
+
+.crossdefault-btn {
+  width: 30px;
+  height: 18px;
+  border: #EE2223 solid 1px !important;
+  border-radius: 4px;
+  color: #EE2223;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: text-bottom;
+  padding: 0px 2px !important;
+  background: rgba(238, 34, 35, 0.05);
+  margin-left: 4px;
+
+  span {
+    text-align: center;
+    color: #EE2223;
+    font-size: 10px;
+  }
+}
+
+.groupCondition-MouseEnter1,
+.groupCondition-MouseEnter,
+.groupCondition-MouseEnter2,
+.groupCondition-MouseEnter3 {
+  color: #666;
+  position: absolute;
+  right: 0px;
+
+  span {
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  span:hover {
+    color: #588CE9;
+  }
+
+  span:first-child {
+    margin-left: 10px;
+  }
+}
+
+.group-add-grouping-count {
+  max-height: 318px;
+  position: relative;
+  padding-bottom: 30px;
+
+  .ant-row {
+    display: flex;
+  }
+
+  .scheme-List-content {
+    .ant-row {
+      display: flex;
+    }
+  }
+
+  .groupCondition-Checked {
+    width: 20px;
+    height: 25px;
+    display: block;
+    float: left;
+
+    .ant-checkbox {
+      margin-top: 9px;
+    }
+
+    .anticon {
+      color: #EE2223;
+      font-weight: bold;
+    }
+  }
+
+  .groupCondition-Checked+span {
+    max-width: 152px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+
+  }
+
+  .groupCondition-MouseEnter,
+  .groupCondition-MouseEnter1,
+  .groupCondition-MouseEnter2,
+  .groupCondition-MouseEnter3 {
+    background: #f3f5f9;
+  }
+}
+
+.group-add-grouping-count.group-add-grouping-count-noauth {
+  padding-bottom: 0;
+
+  .group-add-grouping {
+    display: none;
+  }
+}
+
+.group-add-grouping {
+  width: 100%;
+  height: 38px;
+  position: absolute;
+  bottom: -8px;
+  left: 0px;
+  background: #EDF1F7;
+  line-height: 38px;
+
+  div {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #588CE9;
+
+    svg:not(:root) {
+      margin-right: 4px;
+    }
+  }
+
+  div:hover {
+    color: #EE2223;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+  }
+}
+
+.col-float.selecteddata {
+  .groupCondition-Selected {
+    .columnDeinfe_Memo {
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .columnDeinfe_Memo-count {
+      float: left;
+      color: #a3a3a4;
+      display: flex;
+      margin-right: 12px;
+    }
+
+    .groupCondition-ColumnDefine-Design {
+      float: right;
+    }
+
+    .columnDeinfe_Memo {
+      color: #a3a3a4;
+      display: block;
+    }
+  }
+}
+
+/* 新增分组 */
+.groupCondition-ColumnDefine {
+  .group-add-grouping-count {
+    height: auto;
+    padding: 0 0px 0 12px;
+    overflow: hidden;
+
+    >div>div {
+      >div {
+        >span {
+          display: block;
+          height: 22px;
+        }
+      }
+    }
+
+    .footer-btn {
+      .ant-btn {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  >div:last-child {
+    button {
+      margin-right: 16px;
+    }
+  }
+
+}
+
+.container-browse-mode .listheadRow {
+  .rpt-select {
+    // width: 300px !important;
+
+    .ant-input {
+      height: 31px;
+    }
+  }
+
+  .ant-input-group-addon {
+    border: none;
+    background: #fff;
+  }
+
+  .groupCondition .ant-input {
+    width: 233px;
+    padding-right: 26px;
+    border-color: #D9D9D9;
+    border-radius: 4px !important;
+  }
+
+  .ant-input-group-addon:last-child {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 24px;
+    height: 28px;
+    z-index: 999;
+
+    .anticon-down,
+    .anticon-up {
+      vertical-align: -webkit-baseline-middle;
+
+      .anticon-down:before {
+        color: #999;
+      }
+    }
+  }
+}
+
+/*add by jinzh1  switchradio样式*/
+.checkradio-checked-readonly,
+.checkradio-checked {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #505766;
+  background: #505766;
+  cursor: pointer;
+}
+
+.checkradio-checked,
+.checkradio-unchecked {
+  margin-top: 8px;
+}
+
+.checkradio-unchecked,
+.checkradio-unchecked-readonly {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #505766;
+  cursor: pointer;
+}
+
+.checkradio-unchecked:hover {
+  border: 1px solid #588CE9;
+}
+
+.checkradio-checked:hover {
+  border: 1px solid #588CE9;
+  background: #588CE9;
+}
+
+.uretail-billdesign-body {
+  margin-top: 15px;
+
+  .uretail-bill-list {
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.uretail-billdesign-body .billdesign-card .billdesign-card-title {
+  margin-bottom: 10px !important;
+}
+
+.ant-popover.ant-popover-placement-bottom .ant-popover-inner .ant-popover-inner-content,
+.ant-popover.ant-popover-placement-top .ant-popover-inner .ant-popover-inner-content {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*多表头样式 add by jinzh1*/
+.rptTable {
+  .table-group-header {
+    .group-row {
+      border-bottom: 1px solid #d3d3d3;
+
+      .group-col {
+        float: left;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        border-right: 1px solid #d3d3d3;
+      }
+    }
+
+    .group-row:last-child,
+    .group-col:last-child {
+      border: none;
+    }
+  }
+}
+
+/*盘点复核-打印模板*/
+.meta-print-button {
+  .col-float {
+    width: auto !important;
+    padding-left: 10px;
+
+    .ant-btn {
+      height: 30px;
+    }
+
+    .ant-select-selection {
+      height: 30px;
+    }
+  }
+
+  .ant-select-selection {
+    min-width: 60px;
+  }
+}
+
+/*分组条件-设置*/
+.ant-popover.ant-popover-placement-bottom {
+  .group-add-grouping-count {
+
+    .groupCondition-MouseEnter,
+    .groupCondition-MouseEnter1,
+    .groupCondition-MouseEnter2,
+    .groupCondition-MouseEnter3 {
+      padding-left: 4px;
+    }
+  }
+}
+
+/*盘点-表格*/
+.st_storecheckplanhead {
+  .meta-table.listTable {
+    .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .headerName {
+      padding-left: 10px;
+    }
+  }
+}
+
+.public_fixedDataTableRow_highlight-red {
+  background-color: #fff3f3;
+}
+
+/*表报-销售分析-发布方案*/
+.publishMenu {
+  width: 300px !important;
+
+  .publishMenu_count {
+    padding: 10px 12px 10px 12px;
+
+    span {
+      line-height: 32px;
+      color: #333333;
+      display: block;
+    }
+
+    .ant-input {
+      width: 276px;
+    }
+
+    .pc-mobile-show {
+      height: 30px;
+
+      .publishMenu_Pc,
+      .publishMenu_Mobile {
+        width: 100%;
+        display: flex;
+
+        .ant-checkbox {
+          top: 10px;
+        }
+
+      }
+    }
+
+    .pc-mobile-show-margin {
+      margin-top: 5px;
+    }
+  }
+
+  .footer-btn {
+    padding: 10px 0px 0px 0px;
+    overflow: hidden;
+
+    .u-button {
+      padding: 5px 12px;
+      height: 26px;
+      float: right;
+    }
+
+    .u-button-primary {
+      margin-right: 12px;
+    }
+
+    .u-button-default,
+    .u-button-border {
+      margin-right: 10px;
+    }
+  }
+}
+
+/*表报-销售分析-汇总设置*/
+.sumareasetting_list {
+  width: 365px;
+
+  .sumarea_list_caption {
+    height: 42px;
+    border-bottom: #eee solid 1px;
+    line-height: 42px;
+
+    .sumareaset-left {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .ant-checkbox-wrapper {
+      float: right;
+      margin-right: 4px !important;
+      font-size: 12px;
+      width: 90px;
+
+      .ant-checkbox {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .sumarea_list_items {
+    min-height: 128px;
+    max-height: 256px;
+    overflow-y: auto;
+  }
+
+  .sumarea_list_item {
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+
+    .sumarea_list_item_1 {
+      width: 250px;
+      float: left;
+
+      .ant-checkbox {
+        margin-top: 9px;
+      }
+
+      .ant-checkbox-wrapper span:last-child {
+        max-width: 116px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+    }
+
+    .ant-checkbox-wrapper {
+      float: left;
+      margin-left: 10px;
+      line-height: 32px;
+      display: flex;
+    }
+
+    .ant-input {
+      padding: 0px 4px;
+      width: 120px !important;
+      float: left;
+      height: 28px;
+    }
+
+    .summary_select_all {
+      float: left;
+      margin-left: 10px;
+      line-height: 32px;
+
+      .ant-btn {
+        border: none;
+        padding: 0px !important;
+        color: #588CE9;
+        font-size: 12px;
+        background: transparent;
+      }
+
+      .anticon-down,
+      .anticon-up {
+        margin-left: 3px;
+        -webkit-transform: scale(.75) rotate(0deg);
+        transform: scale(.75) rotate(0deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+        cursor: pointer;
+      }
+
+    }
+
+    .sumarea_list_updown {
+      position: absolute;
+      right: 2px;
+      top: 0px;
+
+      .ant-btn {
+        background: transparent;
+      }
+    }
+
+    .sumarea_showcaption_all {
+      float: left;
+      color: #a3a3a4;
+
+      span {
+        float: left;
+      }
+
+      .sumarea_showcaption_2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+        display: block;
+      }
+    }
+  }
+
+  .sumarea_list_item:hover {
+    background: #f3f5f9;
+  }
+
+  .sumarea_list_item:first-child {
+    .ant-btn-icon-only {
+      .anticon-arrow-up:before {
+        color: #adb4bc !important;
+      }
+
+      .anticon-arrow-down::before {
+        color: #505766 !important;
+      }
+    }
+
+    .ant-btn-icon-only:hover {
+      .anticon-arrow-up::before {
+        color: #adb4bc;
+      }
+
+      .anticon-arrow-down:before {
+        color: #ee2223;
+      }
+    }
+
+  }
+
+  .sumarea_list_item:last-child {
+    .ant-btn-icon-only {
+      .anticon-arrow-up::before {
+        color: #505766;
+      }
+
+      .anticon-arrow-down::before {
+        color: #adb4bc;
+      }
+    }
+
+    .ant-btn-icon-only:hover {
+      .anticon-arrow-up::before {
+        color: #ee2223;
+      }
+
+      .anticon-arrow-down:before {
+        color: #adb4bc;
+      }
+    }
+  }
+
+  .ant-popover-inner-content {
+    padding: 0px 0px 12px 0px;
+  }
+
+  .footer-btn {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+
+    .ant-btn-primary {
+      margin-right: 12px;
+      padding: 5px 12px;
+      height: 26px;
+      float: left;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .ant-btn-default {
+      margin-right: 10px;
+      padding: 5px 12px;
+      height: 26px;
+      float: left;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .sumarea_list_8 {
+      float: left;
+      font-size: 12px;
+      margin-left: 12px;
+      margin-top: 1px;
+
+      .sumarea_list_8_2 {
+        color: #ee2223;
+      }
+    }
+  }
+}
+
+.sumareasetting_card {
+  .ant-popover-inner-content {
+    padding: 15px 0 12px 12px;
+  }
+
+  .sumareasetting_disname {
+    span {
+      display: block;
+      line-height: 32px;
+    }
+
+    .ant-input {
+      width: 214px;
+      height: 30px;
+    }
+  }
+
+  .ant-popover-inner {
+    overflow: hidden;
+  }
+
+  .footer-btn {
+    height: 40px;
+
+    .ant-btn {
+      padding: 5px 12px;
+      height: 26px;
+      margin-top: 14px;
+    }
+
+    .ant-btn-primary {
+      margin-right: 12px;
+    }
+
+    .ant-btn-default {
+      margin-right: 10px;
+    }
+  }
+}
+
+/*排名表*/
+.echarts.echarts_type_ranktable {
+  .react_for_echarts {
+    margin: 0 20px 0 20px;
+
+    .ant-pagination {
+      float: right;
+    }
+  }
+}
+
+/*交货*/
+.billing-unsubscribe-modal-wrap {
+  .billing-member-record-date {
+    width: 250px !important;
+
+    .ant-calendar-picker {
+      padding-right: 0px !important;
+    }
+  }
+}
+
+/*开单-表格赠品标签-促销标签*/
+.billing-warp {
+  .fixedDataTableCellLayout_wrap3.public_fixedDataTableCell_wrap3 {
+    .public_fixedDataTableCell_cellContent {
+      .specs-promotion {
+        font-size: 14px;
+        color: #ee2223;
+        border: 1px solid #ee2223;
+        display: inline-block;
+        line-height: 18px;
+        border-radius: 2px;
+        padding: 0 4px;
+        margin-right: 6px;
+        float: left;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  .billing-expend-col,
+  .cell-text {
+    .svg-info {
+      .icon {
+        width: 24px;
+        height: 24px;
+        vertical-align: -7px;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+/*触屏开单-表格赠品标签-促销标签*/
+.billing-warp.billing-touch-wrap {
+  .fixedDataTableCellLayout_wrap3.public_fixedDataTableCell_wrap3 {
+    .public_fixedDataTableCell_cellContent {
+      .specs-promotion {
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .billing-expend-col,
+  .cell-text {
+    .svg-info {
+      .icon {
+        width: 24px;
+        height: 24px;
+        vertical-align: -7px;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+
+/* 列表第一列距离 */
+.fixedDataTableCellGroupLayout_cellGroupWrapper {
+  .fixedDataTableCellGroupLayout_cellGroup {
+    .fixedDataTableCellLayout_main:first-child {
+      .headerName.line-number {
+        padding-left: 0;
+        height: @base-input-height + 2; // fix: 核算目的
+        line-height: @base-input-height + 2;
+      }
+
+      .retail-table-cell {
+        .public_fixedDataTableCell_wrap3 {
+          .textCol {
+            .no-avatar-man {
+              width: 30px;
+              height: 30px;
+              background: url(images/icon-person.png);
+              background-size: 100%;
+              margin-top: -7px;
+
+              &.cell-avatar-logo {
+                background: url(images/default-logo-table.png);
+              }
+            }
+          }
+
+          .public_fixedDataTableCell_disabled.textCol {
+            margin-left: 0 !important
+          }
+
+          .editCol {
+            text-align: left;
+            padding: 12px 10px;
+            padding-right: 20px !important;
+
+            div:not(.checkradio-checked) {
+              height: 28px
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bill-design-modal {
+  .fixedDataTableCellGroupLayout_cellGroupWrapper {
+    .fixedDataTableCellGroupLayout_cellGroup {
+      .fixedDataTableCellLayout_main:first-child {
+        .retail-table-cell {
+          .public_fixedDataTableCell_wrap3 {
+            .public_fixedDataTableCell_disabled.textCol {
+              margin-left: 10px !important
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.fixedDataTableCellGroupLayout_cellGroup {
+  .table-header-name {
+    span.headerNameTips {
+      color: #f00;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+/*add by jinzh1 合并单元格 表格样式*/
+.mergeTable {
+
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .headerName {
+      border-bottom: 1px solid #dbe0e5;
+    }
+
+    .line-number {
+      line-height: 29px;
+    }
+  }
+
+  .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    .public_fixedDataTableCell_disabled {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .retail-table-cell {
+
+    .textCol,
+    .editCol {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .textCol {
+    .edit-input-number {
+      margin-top: -8px !important;
+    }
+  }
+
+  .editCol {
+    .edit-input-number {
+      margin-top: -7px
+    }
+  }
+
+  &.readOnlyTable {
+    .textCol {
+      .edit-input-number {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  .acticonCell .ant-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/*add by jinzh1 树表样式*/
+.tree-table {
+  .public_fixedDataTableCell_cellContent a {
+    display: inline-block;
+  }
+
+  .public_fixedDataTableCell_cellContent>.cell-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: 15px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #dbe0e5;
+    height: 35px;
+  }
+
+  .public_fixedDataTableCell_cellContent .ant-search-input-wrapper {
+    margin-top: 0px;
+  }
+
+  .expand-rows {
+    height: 100%;
+    overflow: hidden;
+
+    .expand-row {
+      height: 30px;
+      background: #fff;
+      border-bottom: 1px solid #dbe0e5;
+      .cell-text {
+        padding: 10px 12px;
+        overflow: inherit;
+        text-overflow: ellipsis;
+        .joinQueryCell {
+          color: #588ce9;
+        }
+      }
+    }
+
+    .expand-row-selected {
+      background-color: #edf1f7;
+
+      .action-col {
+        background-color: #edf1f7;
+      }
+    }
+
+    .level-2+.level-3.expand-row-end {
+      border-top-color: #dbe0e5;
+    }
+
+    .expand-row:hover {
+      background-color: #edf1f7;
+    }
+  }
+
+  .acticonCell {
+    padding-left: 0px;
+    margin-top: -4px; // 客户分类表格，操作按钮垂直居中
+    text-align: right;
+    right: 40px;
+    height: 22px;
+    span {
+      height: 22px;
+      display: inline-block;
+    }
+  }
+
+  .public_fixedDataTable_bodyRow:hover {
+    background-color: #fff;
+
+    .public_fixedDataTableCell_main {
+      background-color: #fff;
+    }
+  }
+
+  .fixedDataTableRowLayout_body {
+    width: 100%
+  }
+
+  .public_fixedDataTable_bodyRow {
+    .fixedDataTableRowLayout_body:hover {
+      background-color: #edf1f7;
+
+      .public_fixedDataTableCell_main {
+        background-color: #edf1f7 !important;
+      }
+    }
+  }
+
+  .fixedDataTableCellLayout_main {
+    border-right: none;
+  }
+
+  .public_fixedDataTable_header {
+    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+      padding: 0;
+      line-height: 30px;
+      .table-header-name {
+        line-height: 29px;
+        border-bottom: 1px solid #dbe0e5;
+        width: 100%;
+      }
+    }
+  }
+
+  .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+    width: 100%;
+    // padding: 10px 12px;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+  }
+
+  .expand-icon {
+    width: 14px;
+    height: 14px;
+    line-height: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+
+    i {
+      margin: -2px;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s;
+
+      &.anticon-plus-square-o {
+        transform: rotate(90deg) scale(.59);
+      }
+
+      &.anticon-minus-square-o {
+        transform: rotate(180deg) scale(.59);
+      }
+    }
+
+  }
+
+  .ant-input-affix-wrapper {
+    width: 100% !important;
+  }
+}
+.tree-table-more-action-menu {
+  .u-dropdown-menu {
+    margin-top: -4px ;
+  }
+}
+
+// 表格默认图片
+.product-list-item-img {
+  background: url(./images/Default-picture.png);
+}
+
+/*表格规格*/
+.product-spec {
+  color: #999;
+}
+
+/*销售分析-报表多行显示问题*/
+.ant-tabs-editable-card {
+  .container-browse-mode.container-less-height {
+    .echarts.echarts_type_scatter {
+      .react_for_echarts {
+        width: auto !important;
+      }
+    }
+
+    .echarts.echarts_type_bar {
+      .react_for_echarts {
+        width: auto !important;
+      }
+    }
+  }
+}
+
+/*多级维度导航*/
+.RptTableContainer_Row1 {
+  .RptTableContainer_Row2 {
+    display: flex;
+
+    .RptTableContainer_Col21 {
+      // border-right: 1px solid #f5f5f5;
+      width: 360px !important;
+
+      .ant-input-search {
+        margin-left: 20px;
+        margin-top: 0px;
+        position: relative;
+        width: 320px;
+        padding-right: 0;
+      }
+
+      .ant-tree {
+        padding: 0 20px;
+        margin-right: 1px;
+      }
+
+      // 库存台账多级维度导航 async
+      .dimension_nav_tree {
+        .ant-tree {
+          max-height: 340px;
+          overflow: auto;
+        }
+
+        .ant-input-search {
+          width: 340px;
+        }
+      }
+
+      .ant-tree li ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+      }
+    }
+
+    .RptTableContainer_Col22 {
+      width: calc(~"100% - 361px") !important;
+      vertical-align: top;
+      padding-left: 20px;
+    }
+  }
+}
+
+/*新增维度导航方案*/
+.addDimension {
+  .u-modal-body {
+    .groupCondition-SelectedItem {
+      height: 100%;
+    }
+
+    .selecteddata {
+      .groupCondition-SelectedItem {
+        .crossArea {
+          height: 315px;
+          overflow-x: auto;
+        }
+
+        .crossArea .fr {
+          height: 315px;
+          border: none;
+          min-width: 266px;
+          overflow-y: hidden;
+          width: auto;
+
+          .crossArea-list-content {
+            padding-top: 15px;
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*添加投影*/
+.fixedDataTableRowLayout_body {
+  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
+    position: relative;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1)::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    z-index: 99;
+    top: -2px;
+    right: 0;
+    height: 104%;
+    box-shadow: 3px 0 3px 0px rgba(0, 0, 0, .024);
+  }
+}
+.readOnlyTreeTable {
+  .fixedDataTableRowLayout_body {
+    border-bottom: 1px solid #dbe0e5;
+    height: 35px;
+    .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
+      position: absolute;
+    }
+  }
+  .public_fixedDataTable_header .fixedDataTableRowLayout_body{
+    height: 30px;
+  }
+  .fixedDataTableRowLayout_rowExpanded{
+    border-bottom: 1px solid #dbe0e5;
+  }
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+
+    .table-list-btn {
+      min-width: 44px;
+      max-width: 150px; // 多语UI规范，勿删
+      white-space: nowrap;
+      word-break: break-word;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+
+  .yxy_cell_checkbox {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: #dbe0e5;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // fix: 采购库存，表格的checkbox 居中问题
+      width: 16px;
+      height: 16px;
+      padding-left: 0;
+    }
+  }
+
+}
+/*表格悬浮公用样式*/
+.readOnlyTable {
+
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .headerName {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .retail-table-cell {
+
+    .textCol,
+    .editCol {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+
+    .table-list-btn {
+      // margin-top: 5.5px;
+      // line-height: 12px;
+      display: block;
+      min-width: 44px;
+      max-width: 150px; // 多语UI规范，勿删
+      white-space: nowrap;
+      word-break: break-word;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+
+  .fixedDataTableLayout_footer {
+    .fixedDataTableCellLayout_main {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .yxy_cell_checkbox {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: #dbe0e5;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // fix: 采购库存，表格的checkbox 居中问题
+      width: 16px;
+      height: 16px;
+      padding-left: 0;
+    }
+  }
+
+}
+
+.basic-list-refer {
+  width: 100%;
+}
+
+.public_fixedDataTableRow_selected .public_fixedDataTableCell_main {
+  background-color: #edf1f7 !important;
+}
+
+/*金额手机号右对齐*/
+.yxy_table_head_align_right {
+  width: calc(~'100% - 10px') !important;
+  text-align: right;
+  justify-content: flex-end;
+  .textCol {
+    text-align: right;
+    // margin-left: auto;
+    padding-left: 0!important;
+  }
+}
+
+/*零售单卡片详情 行居中问题*/
+.URL {
+  padding: 12px 10px;
+  display: block;
+}
+
+/*合并类型的表格*/
+.mergeTable {
+
+  //默认白色
+  .public_fixedDataTableCell_wrap1.yxy_cell_checkbox {
+    .public_fixedDataTableCell_cellContent {
+      background: #fff;
+      width: calc(~'100% - 1px') !important;
+    }
+  }
+
+  //鼠标经过和选中
+  .public_fixedDataTableRow_selected,
+  .public_fixedDataTableRow_CheckedRow {
+    .yxy_cell_checkbox {
+      .public_fixedDataTableCell_cellContent {
+        background: #edf1f7;
+        width: calc(~'100% - 1px') !important;
+      }
+    }
+  }
+}
+
+// ====================start====================
+// UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
+.u-tabs-content .listheadRow {
+  margin: 0px 20px;
+  padding-top: 10px;
+}
+
+.u-tabs-content .meta-table {
+  overflow: hidden;
+}
+
+/*多级维度导航*/
+.RptTableContainer_Row1 {
+  .RptTableContainer_Row2 {
+    display: flex;
+
+    .RptTableContainer_Col21 {
+      width: 360px !important;
+
+      .u-form-control-affix-wrapper {
+        margin-left: 20px;
+        margin-top: 0px;
+        position: relative;
+        width: 320px;
+        padding-right: 0;
+      }
+
+      .u-tree {
+        padding: 0 20px;
+        margin-right: 1px;
+      }
+
+      .u-tree li ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+      }
+    }
+
+    .RptTableContainer_Col22 {
+      width: calc(~"100% - 361px") !important;
+      vertical-align: top;
+      padding-left: 20px;
+    }
+  }
+}
+
+.eChartSetting_Modal {
+  width: 750px !important;
+  height: 644px;
+
+  .u-modal-header {
+    height: 59px;
+    line-height: 59px;
+
+    .u-modal-title {
+      line-height: 33px;
+    }
+  }
+
+  .u-modal-body {
+    padding: 0px;
+
+    .u-checkbox .u-checkbox-label,
+    .u-radio .u-radio-label {
+      padding-left: 20px;
+    }
+
+    .eChartSetting_Panel {
+      height: 530px;
+
+      .eChartSetting_Left {
+        width: 130px !important;
+        height: 530px;
+        border-right: #ccc solid 1px;
+        box-sizing: border-box;
+
+        .eChartSetting_ChartType {
+          height: 40px;
+          font-size: 12px;
+          color: #333;
+          line-height: 40px;
+          border-left: #fff solid 3px;
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 10px 10px 10px 15px;
+          }
+        }
+
+        .eChartSetting_ChartType:hover,
+        .eChartSetting_ChartType_Selected:hover {
+          color: #EE2223;
+        }
+
+        .eChartSetting_ChartType_Selected {
+          height: 40px;
+          font-size: 12px;
+          color: #ee2233;
+          line-height: 40px;
+          border-left: #505766 solid 3px;
+          background: #F3F5F9;
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 10px 10px 10px 15px;
+          }
+        }
+      }
+
+      .eChartSetting_Right {
+        width: 620px !important;
+        height: 530px;
+        overflow-y: auto;
+
+        .eChartSetting_Content:first-child {
+          margin-top: 20px;
+        }
+
+        .eChartSetting_Content {
+          margin-bottom: 15px;
+
+        }
+
+        .eChartSetting_Errors {
+          margin-top: -15px;
+          line-height: 15px;
+          height: 15px;
+        }
+
+        .eChartSetting_Errors>div {
+          color: #f04134;
+          padding-left: 95px;
+          height: 15px;
+          line-height: 15px;
+          margin-top: 0px !important;
+        }
+
+        .eChartSetting_Errors_margin {
+          div {
+
+            margin-top: -25px;
+          }
+        }
+
+        .eChartSetting_ContentCol1 {
+          width: 95px !important;
+          padding-right: 16px;
+          text-align: right;
+          color: #2A2A2A;
+
+          .eChartSetright-title {
+            line-height: 30px;
+          }
+
+          .anticon {
+            color: #ff001e;
+            width: 10px;
+            vertical-align: middle;
+            font-size: 12px;
+            transform: scale(.75);
+            transform-origin: 0 center;
+            margin-bottom: 4px;
+          }
+        }
+
+        .eChartSetting_ContentCol2 {
+          width: 517px !important;
+
+          .u-cascader-input-group {
+            display: block;
+            width: 400px !important;
+          }
+
+          .u-form-control,
+          .u-select {
+            width: 400px !important;
+            height: 30px;
+          }
+
+          .u-checkbox {
+            margin-top: 8px;
+          }
+
+          .u-checkbox .u-checkbox-label {
+            // padding-left: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            cursor: pointer;
+            // eslint-disable-next-line
+            /*! autoprefixer: off */
+            -webkit-box-orient: vertical;
+            /*! autoprefixer: on */
+          }
+
+          .u-radio {
+            margin-bottom: 4px;
+            width: 25%;
+            float: left;
+            margin-right: 0 !important;
+            white-space: inherit;
+          }
+
+          .eChartSetting_ContentCol21 {
+            color: #999999;
+            font-size: 12px;
+
+            span {
+              color: #EE2223;
+            }
+          }
+
+          .eChartSetting_ContentCol22 {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+
+            .u-checkbox {
+              margin-top: 0px;
+              width: 25%;
+            }
+
+            .u-radio-group {
+              width: 45%;
+              padding-left: 10px;
+              float: left;
+              line-height: 30px;
+
+              .u-radio {
+                width: 110px;
+                margin-bottom: 0px;
+                display: inline-block;
+                margin-top: 9px;
+              }
+            }
+          }
+
+          .eChartSet-mainwnumber {
+            width: 200px;
+            height: 32px;
+            float: left;
+
+            .inner_radius {
+              margin-right: 8px;
+            }
+
+            .u-radio {
+              display: inline-block;
+              width: 100px !important;
+            }
+          }
+
+          .eChartSet-mainwnumber2 {
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 20px;
+
+            .inner_radius {
+              margin-right: 8px;
+            }
+
+            .u-radio {
+              display: inline-block;
+              width: 100px !important;
+            }
+
+            .u-form-control.eChartSetinput {
+              width: 100px !important;
+            }
+          }
+
+          .eChart-set-radioinput {
+            width: 150px !important;
+          }
+
+          .u-radio {
+            float: left;
+            margin-top: 8px;
+          }
+
+          .u-radio-wrapper .u-radio-label {
+            padding-left: 5px;
+            padding-right: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            cursor: pointer;
+            // eslint-disable-next-line
+            /*! autoprefixer: off */
+            -webkit-box-orient: vertical;
+            /*! autoprefixer: on */
+          }
+
+          .eChartSetting_ContentCol23 {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+
+            .u-radio {
+              margin-bottom: 0px;
+            }
+
+            .u-checkbox {
+              width: 50%;
+            }
+
+            .lianyi-Special {
+              width: 50%;
+              display: inline-block;
+              margin-top: 5px;
+
+              .u-checkbox {
+                width: 40px;
+                float: left;
+              }
+
+              .u-form-control {
+                width: 40px !important;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .u-select-enabled {
+            width: 400px;
+
+            .u-select-selection {
+              height: 30px;
+            }
+          }
+
+          .margintop5 {
+            margin-top: 10px;
+          }
+        }
+
+        .eChartSet-mainwnumber .eChartSetinput {
+          width: 100px !important;
+        }
+      }
+    }
+
+    .eChartSetting_Button {
+      padding: 15px 30px;
+      text-align: right;
+      border-top: 1px solid #e9e9e9;
+
+      button {
+        padding: 0px 25px;
+        height: 32px;
+        font-size: 14px !important;
+        border-radius: 4px;
+        border: none;
+        background: #EEF1F3;
+        color: #505766;
+      }
+
+      button.u-button-primary {
+        background: linear-gradient(-45deg, #EE2223 0%, #FC4C2F 100%);
+        color: #fff !important;
+        ;
+        margin-right: 0;
+      }
+
+      button:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      button.u-button-primary:hover {
+        background: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
+        border-color: #FC4C2F;
+        color: #333;
+      }
+
+      button+button {
+        margin-left: 15px;
+      }
+    }
+  }
+
+}
+
+// ====================end====================
+
+.publishMenu .publishMenu_Pc {
+  input[type='checkout'] {
+    top: 10px;
+  }
+
+  label {
+    line-height: 32px;
+
+    &:before {
+      top: 8px;
+    }
+  }
+}
+
+// 采购二维录入
+.u-tabs-content .container-edit-mode .line-tabs {
+  padding-bottom: 50px !important;
+}
+
+.Table2D_Outer {
+  width: 100%;
+  display: flex;
+
+  .Table2D_Inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    // 左边列表
+    .Table2D_Left {
+      min-width: 300px;
+      width: 300px;
+      height: 100%;
+
+      .Table2D_GroupRefer {
+        padding: 20px 20px 10px;
+      }
+
+      .Table2D_GroupList {
+        height: 420px !important;
+        padding-bottom: 80px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .Table2D_Group {
+          font-size: 13px;
+          line-height: 16px;
+          padding: 11px 20px 11px 0;
+          color: #333;
+          display: flex;
+          justify-content: space-between;
+          width: 300px;
+          align-items: center;
+
+          .Table2D_GroupName {
+            max-width: 90%;
+            padding-left: 20px;
+            word-wrap: break-word;
+            line-height: 20px;
+          }
+
+          .Table2D_GroupDel {
+            font-size: 16px;
+            margin-top: 3px;
+          }
+        }
+
+        .Table2D_GroupFocused {
+          background-color: #EDF1F7;
+        }
+
+        .Table2D_GroupSelected {
+          background-color: #FFF7E7;
+        }
+      }
+    }
+
+    // 右边表格
+    .Table2D_Right {
+      overflow-y: scroll;
+      border-left: #dadada solid 1px;
+      position: relative;
+
+      .fixedDataTableLayout_main {
+        width: 100% !important;
+
+        // 右边滑动
+        .fixedDataTableLayout_horizontalScrollbar {
+          width: 100% !important;
+
+          &>div {
+            width: 100% !important;
+
+            .ScrollbarLayout_main {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+
+      // 表头
+      .fixedDataTableLayout_header .fixedDataTableCellLayout_main.public_fixedDataTableCell_main {
+        text-align: center;
+        border-right: 1px solid #dadada;
+        line-height: 28px;
+      }
+
+      .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main.public_fixedDataTableCell_main {
+        border-right: 1px solid #dadada;
+      }
+    }
+  }
+}
+
+// 二维录入表体最大化
+.ant-row.line-tabs.line-tabs-maximize {
+
+  //top: 75px;
+  .TableContainer_Outer {
+    height: 2000px;
+    padding-bottom: 50px;
+
+    .TableContainer_2D::after {
+      display: block;
+      content: "";
+      width: 1px;
+      background-color: #dadada;
+      position: absolute;
+      top: 1px;
+      left: 300px;
+      height: 999px;
+    }
+
+    .Table2D_Left,
+    .Table2D_Right,
+    .TableContainer_2D,
+    .Table2D_Outer {
+      height: 100%;
+    }
+
+    .Table2D_Left .Table2D_GroupList {
+      height: calc(100% - 60px) !important;
+    }
+  }
+}
+
+.ant-btn.no-border-radius.m-l-10.BtnTable2D_Selected {
+  border: #505766 solid 1px !important;
+}
+
+.ant-btn.no-border-radius.m-l-10.BtnTable2D_UnSelected {
+  border: #d9d9d9 solid 1px !important;
+}
+
+
+.textCol {
+  //add by songhlc 表格行内编辑样式处理
+  display: block !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.can-modify-icon>div {
+  display: inline-block;
+}
+
+// modify by jinzh1 表格行按钮  不在悬浮
+.fixedDataTableCellGroupLayout_cellGroupWrapper {
+  .acticonCell {
+    right: 20px;
+    padding-left: 0px;
+
+    span:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// ====== from panel.less start ========
+.rankTable_Panel .ant-table-small .ant-table-tbody>tr>td{    padding: 2px 2px !important;}
+.rankTable_Panel .ant-table-small .ant-table-thead>tr>th{    padding: 2px 2px !important;}
+// ====== from panel.less end ========
+
+// 行内编辑表格 查询区样式错乱
+.container-edit-mode .listheadRow .filter-controls {
+  margin-right: 200px;
+  padding-bottom: 10px;
+  min-height: 57px;
+}
