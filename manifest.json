@@ -9,6 +9,7 @@
     "Anchor": "./components/Anchor",
     "AutoComplete": "./components/AutoComplete",
     "Button": "./components/Button",
-    "Badge": "./components/Badge"
+    "Badge": "./components/Badge",
+    "Checkbox": "./components/Checkbox"
   }
 }
