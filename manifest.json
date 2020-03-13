@@ -10,6 +10,7 @@
     "AutoComplete": "./components/AutoComplete",
     "Button": "./components/Button",
     "Badge": "./components/Badge",
-    "Checkbox": "./components/Checkbox"
+    "Checkbox": "./components/Checkbox",
+    "Card": "./components/Card"
   }
 }

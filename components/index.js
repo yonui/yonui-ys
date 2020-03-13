@@ -4,6 +4,9 @@ import Anchor from './Anchor';
 import AutoComplete from './AutoComplete';
 import Badge from './Badge';
 import Button from './Button';
+import Checkbox from './Checkbox';
+import Card from './Card';
+
 
 
 export {
@@ -11,5 +14,7 @@ export {
   Anchor,
   AutoComplete,
   Button,
-  Badge
+  Badge,
+  Checkbox,
+  Card
 };
