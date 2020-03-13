@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import Badge from 'bee-badge';
-import { simpleMerge } from '../utils';
+import { simpleMerge } from '../_utils';
 
 /**
  * 开发说明：

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { isArray } from '../utils';
+import { isArray } from '../_utils';
 
 class AnchorLink extends Component {
   constructor (props) {
