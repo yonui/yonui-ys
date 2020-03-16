@@ -5,6 +5,15 @@
   "themes": "A demo component library.",
   "description": "YonUI-YS 主题风格组件库展示",
   "components": {
-    "Button": "./src/components/Button"
+    "Affix": "./src/components/Affix",
+    "Anchor": "./src/components/Anchor",
+    "AutoComplete": "./src/components/AutoComplete",
+    "Badge": "./src/components/Badge",
+    "Button": "./src/components/Button",
+    "Card": "./src/components/Card",
+    "Checkbox": "./src/components/Checkbox",
+    "Layout": "./src/components/Layout",
+    "Collapse": "./src/components/Collapse",
+    "Cascader": "./src/components/Cascader"
   }
 }

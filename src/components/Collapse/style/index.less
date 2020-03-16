@@ -1,0 +1,45 @@
+.u-collapse {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+  
+    .u-collapse-item {
+      border-top: 1px solid #d9d9d9;
+  
+      &:first-child {
+        border-top: none;
+  
+      }
+  
+      &-header {
+        line-height: 22px;
+        padding: 8px 0 8px 32px;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+        position: relative;
+  
+        &-icon {
+          position: absolute;
+          left: 10px;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.43)
+        }
+      }
+  
+      &-content {
+        padding: 0 16px;
+        background: #ffffff;
+  
+        &-text {
+          padding: 16px 0;
+        }
+      }
+  
+      &:last-child {
+        .u-collapse-item-content {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,39 @@
+@import '../../../theme/minxin-themeColors.less';
+
+.u-anchor {
+  display: inline-block;
+}
+
+#my-awesome-nav {
+  position: fixed;
+  top: 300px;
+  left: 10px;
+
+  li {
+    padding: 0 10px 0 12px;
+    line-height: 30px;
+    height: 30px;
+    background: #FFF;
+
+    a {
+      color: #424242;
+    }
+
+    &.active:not(#u-nav-child-wrapper) {
+      border-left: 2px solid @primary-color;
+      padding: 0 10px;
+    }
+  }
+
+  #u-nav-child-wrapper {
+    margin-left: -12px;
+    margin-right: -10px;
+
+    #u-nav-child {
+      li {
+        font-size: 14px;
+        padding-left: 20px;
+      }
+    }
+  }
+}

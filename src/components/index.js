@@ -1,14 +1,14 @@
-// import Affix from './Affix';
-// import Anchor from './Anchor';
-// import AutoComplete from './AutoComplete';
-// import Badge from './Badge';
+import Affix from './Affix';
+import Anchor from './Anchor';
+import AutoComplete from './AutoComplete';
+import Badge from './Badge';
 import Button from './Button';
-// import Checkbox from './Checkbox';
-// import Cascader from './Cascader';
-// import Collapse from './Collapse';
+import Checkbox from './Checkbox';
+import Cascader from './Cascader';
+import Collapse from './Collapse';
 // import CarouselFigure from './Carousel';
-// import { Col, Row } from './Layout';
-// import Card from './Card';
+import { Col, Row } from './Layout';
+import Card from './Card';
 // import Dropdown from './Dropdown';
 // import DatePicker from './DatePicker';
 // import Form from './Form';
@@ -39,16 +39,16 @@ import Button from './Button';
 // import MobileLocale from './MobileLocale';
 
 export {
-  // Affix,
-  // Anchor,
-  // AutoComplete,
+  Affix,
+  Anchor,
+  AutoComplete,
   Button,
-  // Badge,
-  // Checkbox,
-  // Card,
-  // Col,
-  // Collapse,
-  // Cascader,
+  Badge,
+  Checkbox,
+  Card,
+  Col,
+  Collapse,
+  Cascader,
   // CarouselFigure,
   // Dropdown,
   // DatePicker,
@@ -65,7 +65,7 @@ export {
   // Popconfirm,
   // Popover,
   // Progress,
-  // Row,
+  Row,
   // Radio,
   // Select,
   // Switch,
