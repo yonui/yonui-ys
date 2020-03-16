@@ -1,0 +1,125 @@
+.datepicker-container {
+  display: flow-root;
+}
+
+.datepicker-container .datepicker-input-group .u-input-group-btn {
+  color: #ADB4BC;
+
+  i.uf {
+    padding: 0;
+  }
+
+  .anticon {
+    font-size: 14px;
+  }
+}
+
+.datepicker-input-group .u-form-control {
+  font-size: 12px;
+}
+
+.datepicker-input-group .u-input-group-btn .uf-close-c {
+  font-size: 14px;
+  color: #adb4bc;
+}
+
+// fix: 参照弹框中日期组件被遮挡
+.rc-calendar-picker {
+  z-index: 1800;
+}
+
+// fix: DatePicker 样式差异
+.rc-calendar-date {
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+}
+
+.rc-calendar .rc-calendar-today .rc-calendar-date {
+  border-color: #588ce9;
+  color: #333;
+}
+
+.rc-calendar-selected-date .rc-calendar-date,
+.rc-calendar-selected-day .rc-calendar-date {
+
+  &,
+  &:hover {
+    background: #588ce9;
+  }
+}
+
+.rc-calendar td {
+  padding: 4px 0;
+}
+
+.rc-calendar-input-wrap .rc-calendar-clear-btn {
+  display: none;
+}
+
+.rc-calendar-day-select,
+.rc-calendar-month-select,
+.rc-calendar-year-select {
+  padding: 0 2px;
+}
+
+.rc-calendar-header a:hover,
+.rc-calendar-day-select:hover,
+.rc-calendar-month-select:hover,
+.rc-calendar-year-select:hover,
+.rc-calendar-next-month-btn:hover,
+.rc-calendar-next-year-btn:hover,
+.rc-calendar-prev-month-btn:hover,
+.rc-calendar-prev-year-btn:hover {
+  color: #588ce9;
+}
+
+.rc-calendar-day-select,
+.rc-calendar-month-select,
+.rc-calendar-year-select {
+  font-weight: bold;
+}
+
+.rc-calendar-today-btn {
+  color: #212121;
+}
+
+.rc-calendar-decade-panel-selected-cell .rc-calendar-decade-panel-decade,
+.rc-calendar-decade-panel-selected-cell .rc-calendar-decade-panel-decade:hover,
+.rc-calendar-month-panel-selected-cell .rc-calendar-month-panel-month,
+.rc-calendar-month-panel-selected-cell .rc-calendar-month-panel-month:hover,
+.rc-calendar-year-panel-selected-cell .rc-calendar-year-panel-year,
+.rc-calendar-year-panel-selected-cell .rc-calendar-year-panel-year:hover {
+  background: #108ee9;
+}
+
+.rc-calendar-decade-panel-decade,
+.rc-calendar-month-panel-cell .rc-calendar-month-panel-month,
+.rc-calendar-year-panel-year {
+  display: inline-block;
+  width: auto;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 6px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.rc-calendar-year-panel-year:hover {
+  background: #ecf6fd;
+  color: #588ce9;
+}
+
+.rc-calendar-decade-panel-body {
+  padding: 9px 4px 10px;
+}
+
+.datepicker-input-group.u-input-group:hover>input {
+  border-color: #505766;
+}
+
+// fix: 日期组件区域右边距
+.rc-calendar .rc-calendar-panel .rc-calendar-body .rc-calendar-table {
+  width: auto;
+}

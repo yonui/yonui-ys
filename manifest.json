@@ -14,6 +14,11 @@
     "Checkbox": "./src/components/Checkbox",
     "Layout": "./src/components/Layout",
     "Collapse": "./src/components/Collapse",
-    "Cascader": "./src/components/Cascader"
+    "Cascader": "./src/components/Cascader",
+    "Carousel": "./src/components/Carousel",
+    "Dropdown": "./src/components/Dropdown",
+    "DatePicker": "./src/components/DatePicker",
+    "Form": "./src/components/Form",
+    "Input": "./src/components/Input"
   }
 }

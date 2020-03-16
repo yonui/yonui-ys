@@ -6,14 +6,14 @@ import Button from './Button';
 import Checkbox from './Checkbox';
 import Cascader from './Cascader';
 import Collapse from './Collapse';
-// import CarouselFigure from './Carousel';
+import CarouselFigure from './Carousel';
 import { Col, Row } from './Layout';
 import Card from './Card';
-// import Dropdown from './Dropdown';
-// import DatePicker from './DatePicker';
-// import Form from './Form';
+import Dropdown from './Dropdown';
+import DatePicker from './DatePicker';
+import Form from './Form';
 // import Icon from './Icon';
-// import Input from './Input';
+import Input from './Input';
 // import InputNumber from './InputNumber';
 // import Loading from './Loading/simple';
 // import Menu from './Menu';
@@ -49,11 +49,11 @@ export {
   Col,
   Collapse,
   Cascader,
-  // CarouselFigure,
-  // Dropdown,
-  // DatePicker,
-  // Form,
-  // Input,
+  CarouselFigure,
+  Dropdown,
+  DatePicker,
+  Form,
+  Input,
   // InputNumber,
   // Icon,
   // Loading,
