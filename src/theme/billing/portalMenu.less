@@ -1,0 +1,333 @@
+/* 触摸板   首页  图标 */
+.portal-menu-wrap {
+  height: 100%;
+  position: relative;
+
+  .ant-btn-primary {
+    font-size: 15px;
+    height: 30px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.portal-menu-wrap .billing-expireInfoWrap-touch {
+  position: absolute;
+  height: 60px;
+  background-color: #fff7e7;
+  width: 100%;
+  line-height: 60px;
+  font-size: 20px;
+  color: #FF5735;
+  padding-left: 30px;
+}
+
+.portal-menu-wrap .billing-expireInfoWrap-touch .billing-expireInfo {
+  margin-right: 10px;
+}
+
+.portal-menu-wrap .billing-expireInfoWrap-touch .billing-expireInfo svg {
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  top: 3px;
+  position: relative;
+}
+
+.portal-menu {
+  background: url(../images/portal-menu-bg.jpg) no-repeat center center;
+  width: 100%;
+  height: 100%;
+  padding-top: 65px;
+  // padding-left: 136px;
+  // padding-right: 136px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-size: cover;
+}
+
+.portal-menu-about,
+.portal-menu-shift,
+.portal-menu-retailList,
+.portal-menu-retailBilling,
+.portal-menu-otherOutbreaks,
+.portal-menu-endOfDay,
+.portal-menu-signOut,
+.portal-menu-electronicScale,
+.portal-menu-switch,
+.portal-menu-Application,
+.portal-menu-Warehousing,
+.portal-menu-Store-left,
+.portal-menu-Store-right,
+.portal-menu-Quick,
+.portal-menu-other-warehouses,
+.portal-menu-payment,
+.portal-menu-offline-documents {
+  width: 110px;
+  height: 110px;
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -55px;
+  background-size: 100% !important;
+  margin-bottom: 15px;
+  margin-top: 45px;
+  background-repeat: no-repeat !important;
+}
+
+.portal-menu-about+span,
+.portal-menu-shift+span,
+.portal-menu-retailList+span,
+.portal-menu-retailBilling+span,
+.portal-menu-otherOutbreaks+span,
+.portal-menu-endOfDay+span,
+.portal-menu-signOut+span,
+.portal-menu-electronicScale+span,
+.portal-menu-switch+span,
+.portal-menu-Application+span,
+.portal-menu-Warehousing+span,
+.portal-menu-Store-left+span,
+.portal-menu-Store-right+span,
+.portal-menu-Quick+span,
+.portal-menu-other-warehouses+span,
+.portal-menu-payment+span,
+.portal-menu-offline-documents+span {
+  text-align: center;
+  display: block;
+  margin: 0 !important;
+  color: #fff;
+  font-size: 24px;
+}
+
+.portal-menu-list {
+  width: 16.66%;
+  float: left;
+}
+
+/* 关于 */
+.portal-menu-about {
+  background: url(../images/portal-menu-about.png)
+}
+
+/* 交班 */
+.portal-menu-shift {
+  background: url(../images/portal-menu-shift.png)
+}
+
+/* 零售单 */
+.portal-menu-retailList {
+  background: url(../images/portal-menu-retailList.png)
+}
+
+/* 零售开单 */
+.portal-menu-retailBilling {
+  background: url(../images/portal-menu-retailBilling.png)
+}
+
+/* 其它出库 */
+.portal-menu-otherOutbreaks {
+  background: url(../images/portal-menu-otherOutbreaks.png)
+}
+
+/* 日结 */
+.portal-menu-endOfDay {
+  background: url(../images/portal-menu-endOfDay.png)
+}
+
+/* 退出 */
+.portal-menu-signOut {
+  background: url(../images/portal-menu-signOut.png)
+}
+
+/* 电子秤 */
+.portal-menu-electronicScale {
+  background: url(../images/portal-menu-electronicScale.png)
+}
+
+/* 切换账号 */
+.portal-menu-switch {
+  background: url(../images/portal-menu-switch.png)
+}
+
+/*要货申请*/
+.portal-menu-Application {
+  background: url(../images/portal-menu-Application.png)
+}
+
+/*入库通知*/
+.portal-menu-Warehousing {
+  background: url(../images/portal-menu-Warehousing.png)
+}
+
+/*店存入库*/
+.portal-menu-Store-left {
+  background: url(../images/portal-menu-Store-left.png)
+}
+
+/*店存出库*/
+.portal-menu-Store-right {
+  background: url(../images/portal-menu-Store-right.png)
+}
+
+/*快速盘点*/
+.portal-menu-Quick {
+  background: url(../images/portal-menu-Quick.png)
+}
+
+/*其他入库*/
+.portal-menu-other-warehouses {
+  background: url(../images/portal-menu-other-warehouses.png)
+}
+
+/*缴款*/
+.portal-menu-payment {
+  background: url(../images/portal-menu-payment.png)
+}
+
+/*离线单据*/
+.portal-menu-offline-documents {
+  background: url(../images/portal-menu-offline-documents.png);
+}
+
+// 智能补货触屏
+.touchDevice {
+  .ant-modal.modal-IntelligenceDemand {
+    .intelligence-detail {
+      h3 {
+        font-size: 16px;
+      }
+
+      h4 {
+        font-size: 16px;
+        margin: 5px 0 30px;
+      }
+
+      .ant-input-number-input {
+        height: 38px;
+      }
+
+      .ant-radio-group {
+        .ant-radio-wrapper {
+          font-size: 16px;
+        }
+
+        .ant-calendar-picker {
+          width: 180px !important;
+          padding-right: 0;
+
+          .ant-calendar-picker-icon {
+            right: 15px;
+          }
+        }
+      }
+    }
+
+    .ant-radio-group {
+      label.ant-radio-wrapper {
+        .ant-input-number {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/* 1280适配 触摸板首页  图标*/
+@media screen and (max-width: 1400px) {
+  .ant-btn-primary {
+    font-size: 14px;
+  }
+
+  .portal-menu {
+    padding-top: 30px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .portal-menu-about,
+  .portal-menu-shift,
+  .portal-menu-retailList,
+  .portal-menu-retailBilling,
+  .portal-menu-otherOutbreaks,
+  .portal-menu-endOfDay,
+  .portal-menu-signOut,
+  .portal-menu-electronicScale,
+  .portal-menu-switch,
+  .portal-menu-Application,
+  .portal-menu-Warehousing,
+  .portal-menu-Store-left,
+  .portal-menu-Store-right,
+  .portal-menu-Quick,
+  .portal-menu-other-warehouses,
+  .portal-menu-payment,
+  .portal-menu-offline-documents {
+    width: 78px;
+    height: 78px;
+    margin-left: -39px;
+    margin-bottom: 10px;
+    margin-top: 45px;
+    background-size: 100%;
+  }
+
+  .portal-menu-about+span,
+  .portal-menu-shift+span,
+  .portal-menu-retailList+span,
+  .portal-menu-retailBilling+span,
+  .portal-menu-otherOutbreaks+span,
+  .portal-menu-endOfDay+span,
+  .portal-menu-signOut+span,
+  .portal-menu-electronicScale+span,
+  .portal-menu-switch+span,
+  .portal-menu-Application+span,
+  .portal-menu-Warehousing+span,
+  .portal-menu-Store-left+span,
+  .portal-menu-Store-right+span,
+  .portal-menu-Quick+span,
+  .portal-menu-other-warehouses+span,
+  .portal-menu-payment+span,
+  .portal-menu-offline-documents+span {
+    font-size: 18px !important;
+  }
+
+  .portal-menu-wrap .billing-expireInfoWrap-touch {
+    height: 48px;
+    line-height: 48px;
+    font-size: 17px;
+    padding-left: 20px;
+  }
+
+  .portal-menu-wrap .billing-expireInfoWrap-touch .billing-expireInfo svg {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portal-menu-wrap .billing-expireInfoWrap-touch {
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .portal-menu-wrap .billing-expireInfoWrap-touch .billing-expireInfo svg {
+    margin-right: 9px;
+    width: 22px;
+    height: 22px;
+    top: 4px;
+  }
+
+  .portal-menu-wrap .ant-btn-primary {
+    font-size: 13px;
+    height: 28px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    padding: 0 8px;
+  }
+}

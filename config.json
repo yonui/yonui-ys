@@ -1,8 +1,8 @@
 {
-  "port": "8090",
+  "port": "8091",
   "autoTemplate": true,
-  "sourcePath": "components",
-  "libPath": "components",
+  "sourcePath": "src/components",
+  "libPath": "src",
   "type": "js",
   "device": "PC",
   "lib": [],

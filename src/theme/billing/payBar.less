@@ -1,0 +1,1007 @@
+/*赊销-零售收款单弹窗*/
+.billing-settle-modal-wrap{
+  .u-modal-body{
+      padding: 0px;
+
+      .fr{
+         float: right;
+      }
+    .pay-body{
+      padding: 30px 30px 10px;
+      .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab{
+        padding: 0px;
+      }
+      .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab-active:after{
+        display: none;
+      }
+       .pay-style-wrapper{
+          width: 120px;
+           height: 106px;
+           border: 2px solid #DBE0E5;
+           border-radius: 4px;
+           display: block;
+           margin: 0 15px 20px 0 !important;
+           text-align: center;
+           font-size:16px;
+           cursor: pointer;
+          svg{
+            width: 48px;
+            height: 48px;
+            display: block;
+            margin: 7px auto;
+            margin-bottom: 0px;
+          }
+          svg.payment-style-smallIcon{
+            width: 48px;
+          }
+         span.active{
+            border: 2px solid #ff2c2a;
+         }
+         .pay-style-shortcut{
+          font-size: 14px;
+          margin-top: -2px;
+          color: #999;
+         }
+       }
+       .pay-style:hover{
+         border: 2px solid #ADB4BC;
+       }
+
+       .InputButtonPanelWrap{
+        float: right;
+       }
+       .pay-total{
+          width: 355px;
+          span{
+            font-size:20px;
+          }
+          span:last-child{
+            color: #ee2223;
+            float: right;
+            max-width: 225px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+          }
+          .pay-zl{
+            margin-top: 5px;
+            span{
+              font-size:34px;
+            }
+         }
+       }
+       .pay-title{
+        margin-bottom: 10px;
+        font-size: 16px;
+
+         span:last-child{
+            color: #333;
+            margin-right: 45px;
+          }
+       }
+       .empty-scroll{
+          width: 400px;
+          height: 240px;
+          max-height: 240px;
+          overflow-y: auto;
+        }
+        .pay-style-list-num{
+              font-size: 16px;
+              width: 390px;
+          div{
+            height: 40px;
+            line-height: 40px;
+            margin-bottom:8px;
+            span.fr.pay-close-btn{
+              width: 30px;
+              height: 40px;
+              cursor: pointer;
+              text-align: center;
+              margin-left:5px;
+            }
+            span.fr.empty{
+              display: block;
+              width: 10px;
+              height: 100%;
+            }
+            input{
+              height: 40px;
+              line-height: 18px;
+              border:1px solid #e4e4e4;
+              border-radius: 4px;
+              width: 120px;
+              text-align: right;
+              padding: 11px 10px;
+              font-size: 18px;
+              -webkit-appearance: none;
+              outline: none;
+            }
+            input:focus{
+              border: 1px solid #505766;
+              color: #505766;
+            }
+          }
+        }
+      .checkout{
+          width: 294px;
+          height: 60px;
+          line-height: 60px;
+          background-color: #fc4c2f;
+          background: linear-gradient(90deg,#ff480f,#ee2223);
+          font-size: 20px;
+          color: #fff;
+          padding: 0;
+          float: right;
+          border: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 8px;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 0;
+          margin-top: 37px;
+        span{
+            width: 304px !important;
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+      }
+      .checkout:hover {
+           color: #fff;
+          background: linear-gradient(90deg,#ee2223,#ff480f);
+         /* box-shadow: 0 0 8px #afafaf;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#afafaf')";
+          filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8,Direction=135,Color="#afafaf");
+          -webkit-transform: translateY(-4px);
+          transform: translateY(-4px); */
+      }
+    }
+  }
+  }
+
+/* 支付方式 */
+   .ant-tabs-tab-next{right:0;}
+  .billing-pay-tab{
+    .ant-tabs-nav-container-scrolling{
+      padding-left: 0;
+    }
+    .ant-tabs-tab-next.ant-tabs-tab-arrow-show, .ant-tabs-tab-prev.ant-tabs-tab-arrow-show{
+       display: block;
+      width: 30px;
+      height: 46px;
+      background: #EDEFF2;
+      z-index: 11111111;
+      border-radius: 4px;
+    }
+    .ant-tabs-tab-prev {
+      left: auto;
+      right: 0;
+      top: 60px;
+    }
+
+    .ant-tabs-tab-prev-icon::before,  .ant-tabs-tab-next-icon::before{
+      color: #999;
+    }
+    .ant-tabs-tab-next-icon:hover::before, .ant-tabs-tab-prev-icon:hover::before{
+      color: #505766;
+    }
+    .ant-tabs-tab-btn-disabled{
+      .ant-tabs-tab-next-icon:hover::before{
+        color: #ccc;
+      }
+      .ant-tabs-tab-prev-icon:hover::before{
+         color: #ccc;
+      }
+    }
+    .ant-tabs-tab-next{
+
+      background: #EDEFF2;
+      right: 0;
+    }
+    .ant-tabs-nav .ant-tabs-tab{
+      padding:0;
+      margin:0 !important;
+    }
+    .ant-tabs-nav-scroll{
+      margin-left: 0;
+    }
+    .ant-tabs-bar{
+      margin-bottom: 0;
+      border: none
+    }
+    .ant-tabs-nav .ant-tabs-tab-active{
+      color: #333;
+      .pay-style{
+        border: 2px solid #ee2223;
+      }
+    }
+    .ant-tabs-ink-bar{
+      display: none !important
+    }
+    .pay-style-DefaultType{ position: absolute; top:0px; left: 0px; width: 42px!important; height: 42px!important;
+         svg{ margin:-3px 0px 0px -3px!important;}
+  }
+  }
+  /*赊销-零售收款单支付方式弹窗  微信和支付宝支付*/
+  .billing-settle-barInputModal{
+    width: 550px!important;
+    height: 450px!important;
+    .pay-logo{
+      width: 110px;
+      height: 90px;
+      margin: 5px auto 10px auto;
+      .icon {
+        width: 110px;
+        height: 110px;
+      }
+
+    }
+    .pay-logo-title{
+      font-size: 24px;
+      color: #505766;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .pay-input-count{
+      width: 450px;
+      height: 70px;
+      margin: 30px auto 60px auto;
+      input::-webkit-input-placeholder{
+        font-size: 20px;
+        color: #999;
+        transform: translate(0, -4px);
+       }
+       input:-moz-placeholder{
+        font-size: 20px;
+         color: #999;
+         transform: translate(0, -4px);
+       }
+       input::-moz-placeholder{
+        font-size: 20px;
+        color: #999;
+        transform: translate(0, -4px);
+       }
+       input:-ms-input-placeholder{
+        font-size: 20px;
+        color: #999;
+        transform: translate(0, -4px);
+       }
+      span{ display: block;
+            position: relative;
+            input{
+            text-align: center;
+            width: 450px;
+            height: 70px;
+            border-radius: 100px;
+            border: 2px solid #DBE0E5;
+            font-size: 30px;
+            color: #333;
+            padding: 0 50px;
+           }
+           .ant-input-search-icon{
+             display: none;
+            position: absolute;
+            right: 10px;
+            top:23px;
+            font-size: 24px;
+           }
+          }
+
+    }
+  .pay-footer-btn{
+    margin: 0 auto 30px auto;
+    height: 50px;
+    width: 320px;
+    button{
+      width: 150px;
+      height: 50px;
+      font-size: 20px !important;
+      border-radius: 6px;
+      border: none;
+      background: #E5E9EC;
+      color: #505766;
+    }
+    button.ant-btn-primary{
+      background: linear-gradient(-45deg,#F33244  0%,  #FC4C2F 100%);
+      color: #fff !important;;
+    }
+    button:hover {
+     background: #DBE0E5;
+    }
+    button.ant-btn-primary:hover {
+      background: linear-gradient(-45deg, #FC4C2F 0%,#F33244   100%);
+      border-color: #FC4C2F;
+      color: #333;
+    }
+    button+button{
+      margin-left: 15px;
+    }
+
+  }
+  }
+
+  /*零售收款 结算中*/
+  .billing-onsettle-ModalLight{
+    .ant-modal-content{
+      width: 200px!important;
+      height: 200px!important;
+      text-align: center;
+
+    }
+
+    .billing-onsettle-ModalLight-content{
+      margin-top: 30px;
+    }
+    .billing-onsettle-ModalLight-text{
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .ant-spin-dot i {
+      width: 16px;
+      height: 16px;
+      transform: scale(1.5);
+    }
+  }
+
+  /* 结算合计    公用弹窗*/
+  .Uretail-ModalLight{
+    .fr {
+      float: right!important;
+    }
+    .ant-modal-body{
+      padding: 0px;
+    }
+    .ant-modal-content{
+      padding: 30px;
+      .pay-center{
+        text-align: center;
+        font-size: 24px;
+        padding-bottom: 25px;
+        color: #18B681;
+        margin-top: 12px;
+        div.pay-success{
+          width: 88px;
+          height: 97px;
+          background-image: url(../images/pay-success.png);
+          background-repeat: no-repeat;
+          margin-left: 175px;
+          margin-bottom: 10px;
+        }
+      }
+      .pay-receivable{
+        padding:0 30px;
+
+        span{
+          font-size: 22px;
+          line-height: 40px;
+          color: #999;
+        }
+        span.fr{
+          color: #505766;
+
+        }
+        span:last-child{
+          font-size: 24px;
+        }
+      }
+      .pay-change{
+        padding-top: 10px;
+        margin-top: 4px;
+        color: #505766;
+        padding-bottom: 15px;
+        font-size: 26px;
+        div:last-child{
+          font-size:50px;
+        }
+      }
+    }
+    .pay-star{ color: #A7ABB2; font-size: 14px; overflow: hidden; height: 16px; width: 90%; margin: 10px auto 0px auto;}
+  }
+  /*零售收款 结算弹窗*/
+  .retail_receipts{
+    .u-modal-content{
+      height: 565px;
+    }
+    .u-modal-body .pay-body .pay-style{
+      width: 120px;
+      height: 92px;
+      border: 2px solid #dbe0e5;
+      border-radius: 4px;
+      display: block;
+      margin: 0 15px 20px 0!important;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      svg {
+        width: 38px;
+        height: 38px;
+        display: block;
+        margin: 4px auto;
+        margin-bottom: 0;
+      }
+      .payment-style-title{
+        font-size: 14px;
+        margin: 0 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical /*! autoprefixer: on */;
+      }
+      .pay-style-shortcut{
+        font-size: 14px;
+        margin-top: -2px;
+        color: #999;
+      }
+    }
+    .billing-pay-tab .ant-tabs-tab-next.ant-tabs-tab-arrow-show,.billing-pay-tab .ant-tabs-tab-prev.ant-tabs-tab-arrow-show{
+      height: 40px;
+    }
+    .billing-pay-tab .ant-tabs-tab-prev{
+      top: 52px;
+    }
+    .InputButtonPanelWrap .num{
+      width: 204px;
+      overflow: hidden;
+    }
+  }
+  @media screen and (min-width:1920px){
+    /*零售收款结算弹窗*/
+    .retail_receipts{
+      .ant-modal-content .ant-modal-body{
+        .pay-body {
+          padding: 40px 40px 10px!important;
+           .pay-style{
+              margin: 0 20px 34px 0!important;
+              width: 160px;
+              height: 140px;
+              border-radius: 6px;
+              svg {
+                width: 56px!important;
+                height: 56px!important;
+                margin: 13px auto 0;
+              }
+              .payment-style-title{
+                font-size: 22px;
+              }
+
+           }
+           .touch-pay-padding{
+            padding: 0;
+           }
+        }
+      }
+    }
+    .billing-settle-modal-wrap{
+      .ant-modal{
+        width: 1200px!important;
+      }
+      .ant-modal-content{
+        height: 820px!important;
+        .pay-body{
+          padding: 0px!important;
+          .fixedRow.fixedRow-fixed{
+            position: absolute;
+            width: 100%;
+            background: #fff;
+            padding: 40px 40px 0px 40px;
+            border-radius: 4px;
+            .content-base{
+              height: 174px;
+              overflow: hidden;
+              // -webkit-transition: height 0.3s linear;
+              // transition: height 0.3s linear;
+            }
+          }
+          .pay-content-padding{
+            padding: 0px 40px 10px 40px;
+            padding-top: 214px;
+          }
+        .fixedRow{
+            .content-base{
+              height: 174px;
+              overflow: hidden;
+            }
+          }
+          .fixedRow{
+            .content-base{
+              height: 174px!important;
+              overflow: hidden;
+            }
+          }
+            /*触屏*/
+            .touch-pay-padding{
+              padding: 0px 40px 10px 40px;
+              padding-top: 214px;
+          }
+          .pay-style{
+            width: 180px!important;
+          }
+          /*多支付方式展开*/
+          .meta-settle-container{
+            @keyframes payheight2{
+              0% {
+              height: 195px;
+              }
+              100% {
+              height: 100%;
+              }
+              }
+              .list-rollup{
+                left: 1120px!important;
+                width: 40px!important;
+                height: 140px!important;
+                font-size: 20px!important;
+                padding: 25px 10px!important;
+                top: 40px;
+              }
+              /*滚动*/
+              .fixedRow-expend.fixedRow-scroll .content-base{
+                height: 820px!important;
+                // animation: payheight2 0.16s ease;
+                // -webkit-transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+                // transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+                overflow: hidden;
+                padding: 40px 40px 10px;
+                .rows-container{
+                  height: 720px;
+                  overflow-y: auto;
+                  .pay-style-wrapper{
+                    width: 160px;
+                  }
+                }
+              }
+               /*翻页*/
+             .fixedRow-expend.fixedRow-page .content-base{
+              height: 820px!important;
+              // animation: payheight2 0.16s ease;
+              // -webkit-transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              // transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              padding: 40px 40px 10px;
+              .rows-container{
+                height: 680px;
+                overflow-y: auto;
+                .pay-style-wrapper{
+                  width: 160px;
+                }
+              }
+            }
+          }
+          .billing-pay-tab .ant-tabs-tab-next.ant-tabs-tab-arrow-show,
+          .billing-pay-tab .ant-tabs-tab-prev.ant-tabs-tab-arrow-show{
+            width: 50px;
+            height: 60px;
+            .ant-tabs-tab-next-icon:before,.ant-tabs-tab-prev-icon:before{
+                font-size: 22px;
+            }
+          }
+          .ant-tabs-tab-prev{
+            top: 80px;
+          }
+          .pay-title{
+            font-size: 22px;
+            color: #999;
+            span:last-child {
+              color: #999;
+              margin-right: 220px;
+            }
+          }
+          .pay-list{
+            width: 660px!important;
+            .pay-style-list{
+              height: 325px;
+              .empty-scroll{
+                height: 264px;
+                max-height: 264px;
+                width: 100%;
+                .pay-style-list-num{
+                  width: auto;
+                  div{
+                    height: 54px;
+                    line-height: 54px;
+                    margin-bottom: 12px;
+                  }
+                  .payment-name-list{
+                    font-size: 22px;
+                    line-height: 27px;
+                    width: 280px;
+                  }
+                  div input{
+                    width: 160px;
+                    height: 54px;
+                    font-size: 22px;
+                  }
+                  .anticon-delete:before{
+                    font-size: 22px;
+                  }
+                  div span.fl.pay-close-btn{
+                    height: 54px;
+                    margin-left: 20px;
+                  }
+                  span.fl.edite{
+                    height: 54px;
+                    .anticon-bianji:before{
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .InputButtonPanelWrap .num{
+            width: auto;
+          }
+          .pay-style-wrapper{
+            margin: 0 20px 34px 0!important;
+            height: 140px;
+            border-radius: 6px;
+            width: 160px!important;
+            svg{
+              width: 56px!important;
+              height: 56px!important;
+              margin: 13px auto 0px auto;
+            }
+            .payment-style-title{
+              font-size: 22px;
+            }
+            .pay-style-shortcut{
+              font-size: 18px;
+            }
+
+          }
+          .list-expand{
+            width: 40px!important;
+            height: 140px!important;
+            font-size: 20px!important;
+            padding: 25px 10px!important;
+            .anticon-zhankai:before{
+              font-size: 22px!important;
+            }
+          }
+          .checkout{
+            width: 420px;
+            height: 70px;
+            line-height: 60px;
+            font-size: 32px;
+            margin-top: 50px;
+            border-radius:0px 12px 0px 12px;
+            span{
+              font-size: 32px;
+            }
+          }
+          .pay-total{
+            width: 440px;
+            span{
+              font-size: 26px;
+            }
+            .pay-zl span{
+              font-size: 50px;
+            }
+            .gathering_memo{
+              input{
+                width: 440px;
+                height: 54px;
+                font-size: 22px;
+              }
+              input::-webkit-input-placeholder{
+                font-size: 22px;
+               }
+               input:-moz-placeholder{
+                font-size: 22px;
+               }
+               input:-ms-input-placeholder{
+                font-size: 22px;
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+  .billing-settle-modal-wrap{
+    .u-modal-dialog{ width: 900px!important; }
+    .u-modal-content{ height: 596px;}
+    .yxy_web_pagination{
+      padding-right: 4px;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+        font-size: 16px;
+        color: #333 !important;
+    }
+    .ant-modal-content .ant-tabs-nav .ant-tabs-tab:hover{
+      color: #333 !important;
+    }
+    .ant-modal-body{
+      padding-bottom: 20px;
+      padding-top: 0px;
+      .pay-body{
+        padding: 0px!important;
+        .pay-style{
+          width: 136px!important;
+          .pay-style-wrapper{
+            width: 120px;
+          }
+        }
+
+        .pay-content-padding{
+          padding: 0px 25px 10px 25px;
+          padding-top: 151px;
+        }
+        /*触屏*/
+        .touch-pay-padding{
+          padding: 0px 25px 10px 25px;
+          padding-top: 151px;
+        }
+        /*多支付方式展开*/
+        .meta-settle-container{
+          position: relative;
+        }
+      }
+    }
+    .pay-list{ margin-top: -2px; width: 530px!important;}
+    .pay-list .pay-style-list{ height: 230px; width: 100%;}
+    .pay-delect-margin{ margin-top: 12px; cursor: pointer;}
+    span.pay-close-btn:hover{
+      .anticon-delete:before {
+        content: "\E68e";
+        color: #ee2223;
+      }
+    }
+  .payment-style-title{
+      margin: 0px 4px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      // eslint-disable-next-line
+      /*! autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /*! autoprefixer: on */
+
+     }
+    .ant-tabs-tab{ overflow: hidden;}
+    .payment-name-list{ width: 180px; display: block; float: left; line-height: 18px; margin-top: 8px; display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      white-space: normal !important;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;}
+
+    .billing-infor-proportion{ position:relative; font-size: 14px; color: #444444; overflow: hidden; margin-bottom: 5px;
+          .icon-infor{ width: 20px!important; height: 20px!important; float: left; margin-right: 4px;}
+
+    }
+        .ant-tabs-nav-container-scrolling{ padding-right: 40px;}
+  }
+  //开单收款结算
+  @media screen and (min-width:1920px){
+    .billing-settle-modal-wrap{
+
+      .u-modal-dialog{
+        width: 1200px!important;
+      }
+      .u-modal-content{
+        height: 820px!important;
+        .pay-body{
+          padding: 0px!important;
+          // .fixedRow.fixedRow-fixed{
+          //   position: absolute;
+          //   width: 100%;
+          //   background: #fff;
+          //   padding: 40px 40px 0px 40px;
+          //   border-radius: 4px;
+          //   .content-base{
+          //     height: 174px;
+          //     overflow: hidden;
+          //     // -webkit-transition: height 0.3s linear;
+          //     // transition: height 0.3s linear;
+          //   }
+          // }
+          .pay-content-padding{
+            padding: 0px 40px 10px 40px;
+            padding-top: 214px;
+          }
+        // .fixedRow{
+        //     .content-base{
+        //       height: 174px;
+        //       overflow: hidden;
+        //     }
+        //   }
+        //   .fixedRow{
+        //     .content-base{
+        //       height: 174px!important;
+        //       overflow: hidden;
+        //     }
+        //   }
+          /*触屏*/
+        .touch-pay-padding{
+          padding: 0px 40px 10px 40px;
+          padding-top: 214px;
+        }
+        .pay-style{
+          width: 180px!important;
+        }
+          /*多支付方式展开*/
+          .meta-settle-container{
+            .list-rollup{
+              left: 1120px!important;
+              width: 40px!important;
+              height: 140px!important;
+              font-size: 20px!important;
+              padding: 25px 10px!important;
+              top: 40px;
+            }
+            @keyframes payheight2{
+              0% {
+              height: 195px;
+              }
+              100% {
+              height: 100%;
+              }
+              }
+            /*滚动*/
+            .fixedRow-expend.fixedRow-scroll .content-base{
+              // height: 820px!important;
+              height: hidden;
+              // animation: payheight2 0.16s ease;
+              // -webkit-transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              // transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              padding: 40px 0 10px 40px;
+              .rows-container{
+                height: 720px;
+                overflow-y: auto;
+                .pay-style-wrapper{
+                  width: 160px;
+                }
+              }
+            }
+             /*翻页*/
+             .fixedRow-expend.fixedRow-page .content-base{
+              height: 820px!important;
+              // animation: payheight2 0.16s ease;
+              // -webkit-transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              // transition: height 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+              padding: 40px 40px 10px;
+              .rows-container{
+                height: 680px;
+                overflow-y: auto;
+                .pay-style-wrapper{
+                  width: 160px;
+                }
+              }
+            }
+
+          }
+          .billing-pay-tab .ant-tabs-tab-next.ant-tabs-tab-arrow-show,
+          .billing-pay-tab .ant-tabs-tab-prev.ant-tabs-tab-arrow-show{
+            width: 50px;
+            height: 60px;
+            .ant-tabs-tab-next-icon:before,.ant-tabs-tab-prev-icon:before{
+                font-size: 22px;
+            }
+          }
+          .ant-tabs-tab-prev{
+            top: 80px;
+          }
+          .pay-title{
+            font-size: 22px;
+            color: #999;
+            span:last-child {
+              color: #999;
+              margin-right: 220px;
+            }
+          }
+          .pay-list{
+            width: 660px!important;
+            .pay-style-list{
+              height: 325px;
+              .empty-scroll{
+                height: 264px;
+                max-height: 264px;
+                width: 100%;
+                .pay-style-list-num{
+                  width: auto;
+                  div{
+                    height: 54px;
+                    line-height: 54px;
+                    margin-bottom: 12px;
+                  }
+                  .payment-name-list{
+                    font-size: 22px;
+                    line-height: 27px;
+                    width: 280px;
+                  }
+                  div input{
+                    width: 160px;
+                    height: 54px;
+                    font-size: 22px;
+                  }
+                  .anticon-delete:before{
+                    font-size: 22px;
+                  }
+                  div span.fl.pay-close-btn{
+                    height: 54px;
+                    margin-left: 20px;
+                  }
+                  span.fl.edite{
+                    height: 54px;
+                    .anticon-bianji:before{
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .InputButtonPanelWrap .num{
+            width: auto;
+          }
+          .pay-style-wrapper{
+            margin: 0 20px 34px 0!important;
+            height: 140px;
+            border-radius: 6px;
+            width: 160px!important;
+            svg{
+              width: 56px!important;
+              height: 56px!important;
+              margin: 13px auto 0px auto;
+            }
+            .payment-style-title{
+              font-size: 22px;
+            }
+            .pay-style-shortcut{
+              font-size: 18px;
+            }
+
+          }
+          .list-expand{
+            width: 40px!important;
+            height: 140px!important;
+            font-size: 20px!important;
+            padding: 25px 10px!important;
+            left: 1120px!important;
+            .anticon-zhankai:before{
+              font-size: 22px!important;
+            }
+          }
+          .checkout{
+            width: 420px;
+            height: 70px;
+            line-height: 60px;
+            font-size: 32px;
+            margin-top: 50px;
+            border-radius:0px 12px 0px 12px;
+            span{
+              font-size: 32px;
+            }
+          }
+          .pay-total{
+            width: 440px;
+            span{
+              font-size: 26px;
+            }
+            .pay-zl span{
+              font-size: 50px;
+            }
+            .gathering_memo{
+              input{
+                width: 440px;
+                height: 54px;
+                font-size: 22px;
+              }
+              input::-webkit-input-placeholder{
+                font-size: 22px;
+               }
+               input:-moz-placeholder{
+                font-size: 22px;
+               }
+               input:-ms-input-placeholder{
+                font-size: 22px;
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+

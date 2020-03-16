@@ -5,12 +5,6 @@
   "themes": "A demo component library.",
   "description": "YonUI-YS 主题风格组件库展示",
   "components": {
-    "Affix": "./components/Affix",
-    "Anchor": "./components/Anchor",
-    "AutoComplete": "./components/AutoComplete",
-    "Button": "./components/Button",
-    "Badge": "./components/Badge",
-    "Checkbox": "./components/Checkbox",
-    "Card": "./components/Card"
+    "Button": "./src/components/Button"
   }
 }

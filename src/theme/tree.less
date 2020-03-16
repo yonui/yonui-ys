@@ -1,0 +1,719 @@
+.search-tree-2 {
+  padding: 10px 14px 0;
+  position: relative;
+
+  .anticon-close-circle,
+  .ant-btn-icon-only {
+    position: absolute;
+  }
+
+  .ant-btn-icon-only {
+    right: 8px;
+  }
+
+  .anticon-close-circle {
+    right: 50px;
+    z-index: 2;
+    top: 17px;
+    &::before {
+      color: rgba(0, 0, 0, .25);
+    }
+    &:hover{
+      &::before {
+        color: rgba(0, 0, 0, .43);
+      }
+    }
+  }
+
+  .ant-select-search__field {
+    padding-right: 40px;
+  }
+
+  .ant-btn {
+    position: absolute;
+    left: 6px;
+    z-index: 99
+  }
+
+  .ant-input {
+    height: 32px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #eceeef
+  }
+
+  &:hover .ant-input {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ececec
+  }
+
+  .ant-input-affix-wrapper:hover .ant-input {
+    border-color: #eceeef
+  }
+
+  .ant-input-search-icon {
+    color: #999
+  }
+
+  .ant-input-affix-wrapper {
+    .ant-input:not(:last-child) {
+      padding-left: 20px;
+    }
+    .ant-input-suffix {
+      left: 0;
+      width: 20px
+    }
+    .ant-input:hover,
+    .ant-input:focus {
+      border: none !important;
+      border-bottom: 1px solid #ececec !important
+    }
+  }
+}
+
+.search-tree-3 {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  h4 {
+    padding: 10px 14px 0;
+    font-weight: normal;
+    i {
+      color: #ccc;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  .u-tree {
+    padding: 0 20px 0 20px;
+    // margin-right: 1px;
+    overflow-y: scroll;
+    height: 100%;
+
+    li {
+      .u-tree-title {
+        .ant-btn {
+          display: none;
+        }
+      }
+
+      &:hover {
+        .u-tree-title {
+          .ant-btn {
+            display: block;
+            position: absolute;
+            right: 10px;
+          }
+        }
+      }
+
+      a {
+        border: 1px solid transparent;
+        // width: 100%;
+        width: calc(~'100% - 8px');
+        position: relative;
+
+        &.u-tree-node-selected,
+        &:hover {
+          background-color: transparent;
+          border: 1px solid transparent;
+        }
+      }
+
+      a:hover:after,
+      a.u-tree-node-selected:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -100%;
+        width: 200%;
+        height: 28px;
+        // background: #fffaf5;
+        top: -4px;
+        z-index: -1;
+        // border-top: 1px solid #ffedb8;
+        // border-bottom: 1px solid #ffedb8;
+      }
+    }
+  }
+}
+
+.u-tree li span {
+  position: relative
+}
+
+// .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
+//   content: "\e512"
+// }
+
+// .ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
+// .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
+//   content: "\e512"
+// }
+
+.anticon-all:before {
+  content: "\e517";
+}
+
+.border-r {
+  overflow-y: hidden;
+  overflow-x: hidden
+}
+
+// 2017-10-11
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background: #FDF2DC !important;
+  border-radius: 12px;
+  color: #505766;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper:hover {
+  background: #edf1f7;
+  border-radius: 12px;
+  color: #505766;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper {
+  color: #333;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px !important;
+  max-width: calc(~'100% - 17px ');
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle !important
+}
+
+.ant-tree li span.ant-tree-iconEle,
+.ant-tree li span.ant-tree-switcher {
+  width: 14px !important;
+  height: 14px !important;
+  line-height: 12px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+  // margin-top: 3px !important; // !fix: ui模板管理左树对齐
+  margin-right: 3px !important;
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher-noop {
+  border: none !important;
+}
+
+.uretail-pop {
+
+  .ant-tree li .ant-tree-checkbox {
+    top: -1px
+  }
+}
+
+.uretail-pop .ant-popover-inner-content {
+  .ant-input-search.ant-input-affix-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .ant-input-suffix {
+      right: 20px;
+    }
+  }
+
+  /*带搜索的下拉框加上清空*/
+  .ant-select-selection__clear {
+    opacity: 1;
+    z-index: 9;
+    right: 45px !important;
+    margin-top: 0px;
+    top: 20px;
+  }
+
+  .ant-select-selection__clear::before {
+    content: "\e690" !important;
+    font-size: 14px;
+  }
+
+  ul {
+    margin-top: 5px;
+
+    li {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+
+      ul li {
+        padding-right: 0 !important
+      }
+    }
+  }
+
+  max-height: 300px !important;
+
+  .ant-tree {
+    max-height: 210px;
+    overflow-y: auto;
+  }
+}
+
+.uretail-pop .ant-popover-inner-content .ant-input-search.ant-input-affix-wrapper+span {
+  padding-left: 20px;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree li span.ant-tree-iconEle,
+.uretail-pop .ant-popover-inner-content .ant-tree li span.ant-tree-switcher {
+  margin-top: -1px;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree li ul {
+  padding-top: 0;
+  padding: 0 0 0 9px;
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher-noop {
+  border: none;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree {
+  margin-top: 5px;
+  padding-bottom: 42px;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree.tree-refer-radio {
+  padding-bottom: 5px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree li {
+  line-height: 24px;
+  padding: 2px 0;
+}
+
+.uretail-pop .ant-popover-inner-content .ant-tree {
+  li {
+    .ant-tree-checkbox {
+      margin: 0px 4px 0 2px;
+    }
+  }
+}
+
+.ant-tree li span.ant-tree-checkbox {
+  margin: -6px 4px 0 2px;
+  vertical-align: middle;
+}
+
+.ant-tree li {
+  padding: 2px 0;
+}
+
+.ant-popover-inner-content .filter-btn-1 button.lf-margin {
+  margin-left: 0px;
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after,
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  font-size: 14px !important;
+  margin-left: -1px;
+
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after {
+  content: "\E52a" !important;
+  font-family: "iconfont";
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  content: "\E672" !important;
+  font-family: "iconfont";
+}
+
+/*带搜索的下拉搜索结果定位显示*/
+.uretail-pop .ant-popover-inner-content .scroll_box {
+  max-height: 220px !important;
+  padding-bottom: 5px;
+  margin-top: 5px;
+
+  .ant-tree.tree-refer-radio {
+    max-height: initial;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    overflow-y: inherit;
+  }
+}
+
+// 菜单管理
+.Menu-box {
+  height: calc(~'100% - 86px') !important;
+  display: block !important;
+  overflow: auto;
+
+  .form-left .bg-white.border-r {
+    height: 100% !important;
+  }
+
+  .search-tree-2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    .ant-btn {
+      top: 1px !important;
+    }
+  }
+
+  .form-base .ant-row-flex-start {
+    margin-top: 0 !important;
+  }
+
+  .face-img {
+    .avatar-uploader {
+      height: 60px;
+      line-height: 60px;
+      margin-right: 15px;
+
+      .ant-upload {
+        height: 60px;
+        width: 60px !important
+      }
+    }
+
+    span:last-child {
+      white-space: nowrap;
+    }
+  }
+
+  .info-person-mask {
+    border-radius: 5px;
+
+    p {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    i {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+  }
+
+  .info-person-01 img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+  }
+
+  .info-person-01 {
+    background: none;
+    width: 60px;
+    height: 60px;
+
+    .avatar-uploader-trigger {
+      display: none;
+    }
+  }
+
+  .info-person-01 span {
+    color: #c6c6c6;
+    background: #f4f4f4;
+    border-radius: 50%;
+    display: inline-block;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .btn-toolbar-bottom.btn-group-bottom {
+    position: fixed;
+    bottom: 0;
+    width: calc(~'100% - 415px');
+    z-index: 999;
+    background: #fff;
+    left: 400px;
+    right: 10px;
+    box-shadow: 0 -5px 12px -5px #dedede;
+    height: 52px;
+    padding: 12px 0 !important;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    .ant-btn-primary {
+      margin-left: 119px !important;
+    }
+  }
+
+  .form-left {
+    float: left;
+    height: 100%;
+  }
+
+  .form-base {
+    float: left;
+    height: calc(~'100% - 50px');
+    overflow: hidden !important;
+
+    &>.ant-row:nth-child(3) {
+      height: calc(~'100% - 92px');
+      overflow: auto;
+    }
+  }
+
+  .search-tree-3 {
+    height: calc(~'100% - 32px');
+    overflow: auto
+  }
+}
+
+.left-menu span {
+  white-space: nowrap;
+  // overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.left-menu .ant-menu-vertical .ant-menu-item {
+  padding-right: 0;
+}
+
+.menu-management .ant-radio-group {
+  line-height: 22px !important;
+}
+
+// iframe
+.uretail-right-content iframe {
+  height: 99% !important;
+}
+
+#container .meta-dynamic-view {
+  height: 100%;
+}
+
+.form-left.Manual-calculation-left {
+  // display: block;
+  height: 100%;
+  // border-right: 1px solid #f5f5f5;
+  // overflow-y: auto; // !fix: zhangkunk 折叠效果样式调整
+  display: block !important;
+  float: left;
+  width: 240px;
+
+  .left-tree-select-count.meta-default-container {
+    // async: zhangkunk 展开折叠细节调整
+    height: 100%;
+  }
+
+  .bg-white.border-r {
+    border-right: none !important;
+    height: 100%;
+    overflow: initial; // fix: zhangkunk 折叠效果样式调整
+
+    .search-tree-2 {
+      .anticon-close-circle {
+        top: 17px;
+        right: 18px;
+      }
+    }
+
+    .search-tree-3 {
+      height: calc(~'100% - 52px');
+      overflow-y: auto;
+    }
+  }
+}
+
+.form-base.Manual-calculation {
+  overflow-y: auto;
+  // padding-bottom: 60px; // !fix: 物料需求计划，时界编辑弹框边距
+}
+
+.search-tree-2 {
+  padding: 10px 20px 0;
+  .u-button-icon{
+    height: 28px;  // 通过设置height 来实现居中
+    right: 22px;
+    &:hover{
+      background: transparent;
+    }
+  }
+  .u-select-selection-placeholder{
+    margin-top: -10px;
+  }
+}
+
+/*左树右表结构添加下拉框 left-tree-select-count*/
+.tree-list .height-100 .form-left .left-tree-select-count {
+
+  .left-tree-select {
+    .viewCell.width-percent-100 {
+      padding: 0 20px 3px 20px;
+
+      .ant-select {
+        width: auto !important;
+        font-size: 14px;
+        color: #333;
+
+        .ant-select-selection {
+          border: none;
+          display: flex;
+          height: 26px !important;
+
+          .ant-select-search__field__wrap {
+            input {
+              caret-color: transparent;
+            }
+          }
+
+          .ant-select-selection__rendered {
+            margin-left: 0px !important;
+
+            .ant-select-selection-selected-value {
+              padding-right: 6px;
+              max-width: 190px;
+            }
+          }
+
+          .ant-select-selection-selected-value {
+            opacity: 1 !important;
+          }
+
+          .ant-select-selection__clear {
+            display: none !important;
+          }
+
+          .ant-select-arrow {
+            position: relative;
+            top: initial;
+            margin-top: 0px;
+            line-height: 27px;
+
+            &::before {
+              line-height: 32px;
+            }
+          }
+
+          &:active,
+          &:focus,
+          &:hover {
+            border: none !important;
+          }
+        }
+      }
+
+      // async zhangkunk 左树右表 左树的分类
+      .ant-select-focused .ant-select-selection,
+      .ant-select-selection:active,
+      .ant-select-selection:focus,
+      .ant-select-selection:visited {
+        border: none !important;
+      }
+    }
+  }
+
+  .bg-white.border-r {
+    .search-tree-2 {
+      padding-top: 0px;
+      .u-button {
+        top: 1px;
+      }
+      .anticon-close-circle {
+        top: 9px;
+      }
+    }
+
+    .search-tree-3 {
+      height: calc(~'100% - 100px') !important;
+      margin-top: 10px;
+
+      .ant-tree>li:first-child {
+        padding-top: 0px;
+      }
+    }
+  }
+}
+
+// 将baseui 中的ys 样式放到theme-default中
+.u-tree li {
+  a.u-tree-node-content-wrapper {
+    &:hover {
+      background: #ffffff;
+    }
+
+    &.u-tree-node-selected {
+      background: #ffffff;
+    }
+  }
+}
+//编辑树 添加编辑和删除
+.editable_tree{
+      .u-tree-treenode-selected.u-tree-treenode-close,
+      .u-tree-treenode-close
+      {
+          .u-tree-title{
+              width: 100%;
+              white-space: normal;
+              >span{
+                  display: block;
+                  height: 24px;
+                  position: relative;
+                  white-space:nowrap;
+                  overflow:hidden;
+                  text-overflow:ellipsis;
+                  .treebody_button{
+                      display: none;
+                      position: absolute;
+                      top: 0px;
+                      right: 0px;
+                      padding: 0px 4px 0px 6px;
+                      border-bottom-right-radius: 8px;
+                      border-top-right-radius: 8px;
+                      .anticon-edit-disabled{
+                          margin-right: 5px;
+                      }
+                      .anticon-edit-disabled,
+                      .anticon-delete-disabled{
+                          &::before{
+                              font-size: 14px;
+                              color: #999;
+                          }
+                          &:hover{
+                              &::before{
+                                  color: #505766;
+                              }
+                          }
+                      }
+                  }
+              }
+              &:hover{
+                    >span{
+                        .treebody_button{
+                            display: inline-block;
+                            background: #edf1f7;
+                        }
+                    }
+            }
+          }
+      }
+      .u-tree-treenode-selected.u-tree-treenode-close{
+        .u-tree-title{
+          &:hover{
+            >span{
+                .treebody_button{
+                    display: inline-block;
+                    background: #fdf2dc;
+                }
+            }
+          }
+        }
+      }
+}
