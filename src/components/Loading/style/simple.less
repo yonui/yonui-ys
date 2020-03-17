@@ -1,0 +1,121 @@
+/* 简易版加载框样式  */
+.s-loading-wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    height: 100%;
+  
+    .s-loading {
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      transform: translate(-30px, -30px);
+  
+      &.s-loading-small {
+        .s-loading-tip {
+          margin-top: 0px;
+        }
+  
+        .s-loading-dot {
+          width: 20px;
+          height: 20px;
+  
+          i {
+            width: 9px;
+            height: 9px;
+          }
+        }
+      }
+  
+      &.s-loading-large {
+        .s-loading-tip {
+          margin-top: 2px;
+        }
+  
+        .s-loading-dot {
+          width: 32px;
+          height: 32px;
+  
+          i {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+  
+      .s-loading-tip {
+        position: absolute;
+        display: block;
+        font-size: 12px;
+        width: 100%;
+        color: #f23f40;
+      }
+  
+      .s-loading-dot {
+        display: inline-block;
+        position: relative;
+        animation: uRotate 1s 0s linear infinite;
+  
+        i {
+          position: absolute;
+          display: block;
+          transform: scale(0.75);
+          border-radius: 100%;
+          opacity: 0.3;
+          animation: uSpinMove 1s infinite linear alternate;
+          background-color: #f23f40;
+  
+          &:nth-child(1) {
+            left: 0;
+            top: 0;
+          }
+  
+          &:nth-child(2) {
+            right: 0;
+            top: 0;
+            animation-delay: 0.4s;
+          }
+  
+          &:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            animation-delay: 0.8s;
+          }
+  
+          &:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            animation-delay: 1.2s;
+          }
+        }
+      }
+    }
+  }
+  
+  .s-nested-loading {
+    position: relative;
+  
+    .s-loading-wrapper {
+      position: absolute;
+    }
+  }
+  
+  @keyframes uSpinMove {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes uRotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

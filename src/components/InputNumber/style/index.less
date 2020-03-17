@@ -1,0 +1,46 @@
+
+.u-input-number-out {
+    width: 100% !important;
+  }
+  
+  .u-input-number {
+    background-color: #fff;
+  
+    &.u-input-group {
+      &>span:last-child {
+        border-bottom-right-radius: 4px; // fix: 数字框加减按钮 hover 样式错误
+      }
+  
+      &.simple .u-input-group-btn .icon-group {
+        .plus {
+          border-top-right-radius: 4px;
+        }
+  
+        .reduce {
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+  }
+  
+  // 适配 UStock-web 工程，InputNumber 宽度撑满剩余空间
+  .twoInclusion .width-percent-33 .control-flex .u-input-number-out+span,
+  .twoInclusion .width-percent-33 .control-flex .control-text+span,
+  .productAssistUnitExchanges .width-percent-50 .frc-inputnumber.frc-inputnumber-mainUnitCount .frc-inputnumber-content .control-flex .u-input-number-out+span {
+    text-align: left;
+    white-space: nowrap;
+    margin-left: 4px;
+  }
+  // fix: 数字框加减按钮 hover 样式错误
+  .u-input-number.u-input-group > span:last-child {
+      border-bottom-right-radius: 4px;
+  }
+  .u-input-number.u-input-group.simple .u-input-group-btn .icon-group {
+      .plus{
+          border-top-right-radius: 4px;
+      }
+      .reduce{
+          border-bottom-right-radius: 4px;
+      }
+  }
+  

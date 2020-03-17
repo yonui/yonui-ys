@@ -58,16 +58,15 @@ class Search extends Component {
       value,
       className,
       attrs,
-      style,
-      placeholder
+      style
     } = this.state;
 
     return (
       <span className={classnames(className, 'u-form-control-search-container')} style={style}>
         <FormControl
-          {...omit(attrs, ['style'])}
+          {...omit(attrs, ['style', 'placeholder'])}
           value={value}
-          placeholder={placeholder}
+          placeholder={this.props.placeholder}
           ref={(e) => { this.ref = e }}
           onSearch={(val, e) => { this.handleEvent(val, e, 'onSearch') }}
           onChange={(val, e) => { this.handleEvent(val, e, 'onChange') }}

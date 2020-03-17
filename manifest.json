@@ -19,6 +19,9 @@
     "Dropdown": "./src/components/Dropdown",
     "DatePicker": "./src/components/DatePicker",
     "Form": "./src/components/Form",
-    "Input": "./src/components/Input"
+    "Input": "./src/components/Input",
+    "InputNumber": "./src/components/InputNumber",
+    "Icon": "./src/components/Icon",
+    "Loading": "./src/components/Loading"
   }
 }

@@ -12,10 +12,10 @@ import Card from './Card';
 import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
 import Form from './Form';
-// import Icon from './Icon';
+import Icon from './Icon';
 import Input from './Input';
-// import InputNumber from './InputNumber';
-// import Loading from './Loading/simple';
+import InputNumber from './InputNumber';
+import Loading from './Loading/simple';
 // import Menu from './Menu';
 // import Modal from './Modal';
 // import Message from './Message';
@@ -54,9 +54,9 @@ export {
   DatePicker,
   Form,
   Input,
-  // InputNumber,
-  // Icon,
-  // Loading,
+  InputNumber,
+  Icon,
+  Loading,
   // Message,
   // Modal,
   // Menu,
