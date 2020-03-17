@@ -534,6 +534,7 @@ textarea.u-form-control {
 // fix: 采购库存，新增仓库档案
 .viewCell.width-percent-100 .input-control {
   width: 400px !important;
+  height: @base-input-height;
 }
 
 .container-edit-mode.container-greater-height {
@@ -587,7 +588,8 @@ textarea.u-form-control {
 }
 
 .u-popover-content .listRefer .listRefer-content {
-  margin: 0 10px;
+  margin: 0 0px 0px 10px;
+  overflow-y: auto;
   label.u-checkbox {
     display: block;
     margin-top: 6px;
@@ -946,3 +948,6 @@ input:not(:focus){
     width: 56%;
   }
 }
+
+// 参照控件右侧间距
+.u-input-group.simple .u-form-control:not(:last-child){padding-right:45px}

@@ -940,6 +940,7 @@ textarea::-webkit-input-placeholder {
     flex-flow: wrap;
     max-height: 261px;
     overflow: auto;
+    transform: translate(5px, 0); // 微调下popover 的偏移量
 
     .tag_item {
       padding: 1px 0;
@@ -949,6 +950,7 @@ textarea::-webkit-input-placeholder {
       .u-tag {
         border-color: #DBE0E5;
         background: #f7f9fd;
+        margin-bottom: 0 !important;
 
         &:hover {
           border-color: #DBE0E5;
@@ -3251,9 +3253,17 @@ span.Toolbar_Notification_FailCount {
         float: right;
         margin-right: 24px;
         height: @base-input-height;
-        padding: 6px 16px;
       }
-
+      .u-button-primary {
+        border: 1px solid #d9d9d9;
+        color: #535a69;
+        background:#fff;
+        font-size: 12px;
+        &:hover {
+          border: 1px solid #505766;
+          background:#fff;
+        }
+      }
     }
 
     .meta-table.listTable {

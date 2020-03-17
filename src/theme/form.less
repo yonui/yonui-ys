@@ -349,6 +349,7 @@
       display: flex;
       display: -webkit-flex;
       align-items: center;
+      min-height: 32px;
     }
 
     .input-control {
@@ -707,7 +708,7 @@
 .viewCell {
   float: left;
   width: 400px;
-  line-height: 28px;
+  // line-height: 28px;
   padding-left: 18px;
 
   .btn-preview {
@@ -1095,7 +1096,8 @@
     .ant-row {
       margin-right: 10px;
       float: left;
-
+      min-height: 32px;
+      line-height: 28px;
       .control-width {
         .undefined:first-child {
           margin-right: 8px;
@@ -1585,7 +1587,10 @@
     &.width-percent-100 {
       margin-left: 10px;
       width: 56%;
-
+      .u-button {
+        width: 100%;
+        vertical-align: top;
+      }
       .control-text {
         min-width: auto;
       }
@@ -1926,7 +1931,7 @@
         margin-right: 2px;
         &:hover{
           border: none;
-          color: #ee2223;
+          color: #91BCFF;
         }
       }
       .up-search{
@@ -2407,7 +2412,7 @@ i.uf-search,
     li.u-menu-item {
       transition: none;
       &:hover {
-        background-color:#f7f9fd;
+        background-color: #f7f9fd;
       }
       &:after{
         transition: none;
@@ -3903,6 +3908,7 @@ i.uf-search,
   .Manual-calculation-left {
     .tree-left {
       float: left;
+      width: 100%;
     }
   }
 }
