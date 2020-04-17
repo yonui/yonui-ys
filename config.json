@@ -5,6 +5,7 @@
   "libPath": "src",
   "type": "js",
   "device": "PC",
+  "useManifest": false,
   "lib": [],
   "previewUrl": "",
   "plugins": [],

@@ -4,9 +4,10 @@
   "description": "yonui ys",
   "main": "/lib",
   "scripts": {
-    "build": "yonui build",
-    "start": "yonui start",
-    "dev": "yonui start"
+    "start": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
+    "dev": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
+    "build": "rm -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build -p",
+    "dist": "rm -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build dist -p"
   },
   "repository": {
     "type": "git",
@@ -82,7 +83,9 @@
     "highlight.js": "^9.18.1",
     "marked": "^0.8.0",
     "qrcode.react": "^1.0.0",
-    "react-highlight": "^0.12.0"
+    "react-highlight": "^0.12.0",
+    "yonui-cli": "^0.1.71",
+    "yonui-extension": "^0.7.17"
   },
   "author": "FED",
   "license": "MIT",
