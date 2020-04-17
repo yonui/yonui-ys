@@ -38,6 +38,7 @@ class FormItemAdapter extends Component {
 
 FormAdapter.Item = FormItemAdapter;
 FormAdapter.create = Form.createForm;
+FormAdapter.createForm = Form.createForm;
 FormAdapter.getFieldDecorator = Form.getFieldDecorator;
 FormAdapter.getFieldValue = Form.getFieldValue;
 FormAdapter.setFields = Form.setFields;
