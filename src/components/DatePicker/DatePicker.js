@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import DatePicker from 'bee-datepicker';
 import moment from 'moment';
 
-const dateFormats = ['YYYY-MM-DD', 'DD-MM-YYYY', 'YYYY/MM/DD', 'DD/MM/YYYY', 'YYYY.MM.DD', 'DD.MM.YYYY'];
-const __THEMETYPE__ = process.env.__THEMETYPE__;
-
 class DatePickerAdapter extends Component {
   constructor (props) {
     super(props);
@@ -23,24 +20,34 @@ class DatePickerAdapter extends Component {
     onChange && onChange(time, timeString);
   };
 
+  // handleFocus = (e) => {
+  //   const target = e.target;
+  //   const { outInputFocus } = this.props;
+  //   if (__THEMETYPE__ === 'ys') {
+  //     if (target && target.tagName === 'INPUT') {
+  //       target.click();
+  //     }
+  //   }
+  //   outInputFocus && outInputFocus(e);
+  // }
+
   // 日期图标
   renderIcon = () => {
     return <i className='anticon anticon-star-o' />;
   }
 
   render () {
-    const { format } = this.props;
-    // 日期录入按自己设置的格式录入+去掉分割符的
-    // 需要支持4种输入格式（YYYYMMDD）：20191201     2019/12/01     2019.12.01    2019-12-01
-    const defaultFormat = dateFormats.includes(format) ? format.replace(/[-|/|.]/g, '') : '';
+    const {dateTimeType} = this.props;
+    // 支持首选项中的所有格式
+    const dateFormats = window.cb && cb.format.getDefaultDateFormats(dateTimeType);
     const a2tProps = {
       ...this.props,
       onChange: this.onChangeEventAdapter,
       // 未指定则传 undefined 使用默认值
       locale: this.locale,
       renderIcon: this.renderIcon,
-      format: defaultFormat ? [format].concat(defaultFormat) : format,
-      enterKeyDown: __THEMETYPE__ !== 'ys'
+      format: dateFormats,
+      enterKeyDown: false
     };
     return <DatePicker showToday={false} {...a2tProps} />;
   }
