@@ -28,9 +28,9 @@ import Radio from './Radio';
 import Switch from './Switch';
 import Select from './Select';
 import Steps from './Steps';
-// import Tabs from './Tabs';
-// import Tag from './Tag/simple';
-// import TimePicker from './TimePicker';
+import Tabs from './Tabs';
+import Tag from './Tag/simple';
+import TimePicker from './TimePicker';
 // import Tree from './Tree';
 // import TreeSelect from './TreeSelect';
 // import Upload from './Upload';
@@ -70,9 +70,9 @@ export {
   Select,
   Switch,
   Steps,
-  // Tag,
-  // Tabs,
-  // TimePicker,
+  Tag,
+  Tabs,
+  TimePicker,
   // Tree,
   // TreeSelect,
   // Transfer,

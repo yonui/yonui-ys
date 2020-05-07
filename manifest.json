@@ -34,6 +34,9 @@
     "Radio": "./src/components/Radio",
     "Switch": "./src/components/Switch",
     "Select": "./src/components/Select",
-    "Steps": "./src/components/Steps"
+    "Steps": "./src/components/Steps",
+    "Tabs": "./src/components/Tabs",
+    "Tag": "./src/components/Tag",
+    "TimePicker": "./src/components/TimePicker"
   }
 }
