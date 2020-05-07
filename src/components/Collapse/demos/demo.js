@@ -8,6 +8,7 @@ import Button from '../../Button'
 const Panel = Collapse.Panel;
 import '../style';
 import './demo.less';
+import '../../../theme/index.less'
 const text = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,

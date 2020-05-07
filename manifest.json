@@ -22,6 +22,18 @@
     "Input": "./src/components/Input",
     "InputNumber": "./src/components/InputNumber",
     "Icon": "./src/components/Icon",
-    "Loading": "./src/components/Loading"
+    "Loading": "./src/components/Loading",
+    "Menu": "./src/components/Menu",
+    "Message": "./src/components/Message",
+    "Modal": "./src/components/Modal",
+    "Notification": "./src/components/notification",
+    "Popover": "./src/components/Popover",
+    "Progress": "./src/components/Progress",
+    "Popconfirm": "./src/components/Popconfirm",
+    "Pagination": "./src/components/Pagination",
+    "Radio": "./src/components/Radio",
+    "Switch": "./src/components/Switch",
+    "Select": "./src/components/Select",
+    "Steps": "./src/components/Steps"
   }
 }

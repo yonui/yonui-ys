@@ -166,7 +166,6 @@
       }
 
       &:last-child {
-        // border: none;
         margin-bottom: 0;
 
         span {
@@ -278,8 +277,8 @@
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
-      border-top: 2px solid #fff;
-
+      background: #fff;
+      border: none;
       &:hover {
         color: #ee2223;
       }
@@ -467,7 +466,15 @@
         }
       }
     }
-
+    .topMenu_accs_svgicon{
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+    span.potal-qiehuan-span{
+      margin-left: 12px;
+    }
     span.TopMenu-qiehuanchuping {
       margin-left: 15px;
 
@@ -537,8 +544,6 @@
   z-index: 3;
 }
 
-// from adapter.less
-
 // ============ fix: portal 页面（生产制造-生产订单）==================
 .left-menu .ant-layout-sider-children .u-menu-vertical {
   padding-top: 0;
@@ -559,3 +564,47 @@
   border: none;
 }
 // ============================================================
+//左侧菜单浮层
+.u-menu-item:hover{
+  background: #fff;
+}
+/*触屏切换、更新日志添加到浮层*/
+.title-more {
+  .title-setting.top-right-title {
+    padding: 0px!important;
+
+    p a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 32px;
+      .anticon-gengxinrizhi {
+        margin-top: 0px;
+        margin-right: 5px;
+        padding-bottom: 2px;
+        line-height: 32px;
+      }
+
+      .anticon-gengxinrizhi::before {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .TopMenu-qiehuanchuping {
+    height: 36px;
+    p a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+        float: left;
+        margin-top: 7px;
+      }
+    }
+  }
+}

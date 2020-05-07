@@ -44,7 +44,6 @@
   }
 }
 
-// ========== from adapter start ====================
 .u-popover .u-button {
   min-width: auto;
 }
@@ -53,43 +52,8 @@
   top: 0;
 }
 
-// ========== from adapter end ====================
-
-// ========== from form.less start ====================
-
 .button-group {
   padding: 10px 15px;
-}
-
-.btn-group-bottom .u-button {
-  background: #E5E9EC;
-  border: none;
-}
-
-.btn-group-bottom .u-button:hover {
-  background: #DBE0E5;
-  border: none;
-}
-
-.btn-group-bottom .u-button:active,
-.btn-group-bottom .u-button:visited {
-  background: #DBE0E5;
-  border: none;
-}
-
-.u-button-primary:hover,
-.u-button-primary:focus,
-.btn-group-bottom .u-button-primary:hover {
-  color: #fff;
-  background: linear-gradient(-225deg, #fc4c2f, #ee2223);
-  border: none;
-}
-
-.u-button-primary,
-.btn-group-bottom .u-button-primary {
-  color: #fff;
-  background: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
-  border: none;
 }
 
 .listheadRow .btn-toolbar-bottom {
@@ -107,7 +71,6 @@
   .u-button.u-button-downpage {
     min-width: 32px;
     width: 32px;
-    // padding: 6px 7px;
     padding: 0 7px;
   }
 }
@@ -128,12 +91,13 @@
 
 // 不带分割线的下拉按钮
 .Toolbar_Group_Length1 .u-button.Toolbar_Common_Btn {
-  padding: 0 10px 0 12px;
+  .no-split-drown-button-mixin();
 }
 
-// ========== from form.less end ====================
+.Toolbar_Group_Length1 .u-button.draft_header {
+  .no-split-drown-button-mixin();
+}
 
-// ========== from home.less start ====================
 .tab-list .u-tabs-content .p-l-20 .u-button {
   font-size: 14px;
   padding: 0;
@@ -142,9 +106,6 @@
   margin-top: 10px;
 }
 
-// ========== from home.less end ====================
-
-// ========== from modal.less start ====================
 .btn-toolbar-bottom {
   button+button {
     margin-left: 8px;
@@ -157,31 +118,6 @@
 
 .u-confirm-btns,
 .u-modal-footer {
-  button {
-    padding: 0px 20px;
-    height: @base-input-height;
-    // font-size: 14px !important;
-    border-radius: 4px;
-    border: none;
-    background: #EEF1F3;
-    color: #505766;
-  }
-
-  button.u-button-primary {
-    background: @primary-color;
-    color: #fff !important;
-  }
-
-  button:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  button.u-button-primary:hover {
-    background: @primary-color-hover;
-    // border-color: #FC4C2F;
-    color: #333;
-  }
-
   button+button {
     margin-left: 8px;
   }
@@ -204,30 +140,13 @@
   padding: 0 18px;
 }
 
-
-//底部toolbar按钮第一个为红色 最后一个为灰色中间都为蓝灰色 .btn-toolbar-bottom .ant-btn-primary:nth-child(2){background: #505766;}
-// .btn-toolbar-bottom .ant-btn-primary:nth-child(2):hover{background:#616875}
-.bottom-toolbar .u-button {
-  background: #505766;
-  color: #fff;
-}
 .bottom-toolbar.ant-row-flex-start{
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
-.bottom-toolbar .u-button:hover {
-  background: #616875;
-  color: #fff;
-}
-
 .bottom-toolbar .u-button:last-child:not(.u-button-primary) {
-  background: #dbe0e5;
-  border: none;
-  color: #535a69;
-  &:hover {
-    background: #e5e9ec;
-  }
+  .cancel-button-mixin();
 }
 
 .testBtn {
@@ -238,49 +157,23 @@
   background: #616875 !important;
 }
 
-.u-modal-body {
-  .bottom-toolbar .u-button {
-    &:first-child {
-      background: #e5e9ec;
-      border: none;
-      color: #535a69 !important;
 
-      &:active,
-      &:hover,
-      &:visited {
-        background: #dbe0e5;
+.u-modal-dialog {
+  div:not(.tab-top-right) {
+    // 部分modal 底部按钮父样式为 btn-toolbar-bottom
+    & > .btn-toolbar-bottom {
+      .u-button:not(:first-child):not(:last-child) {
+        background: @custom-color  !important;
         border: none;
+        padding: 0 20px;
+        min-width: 68px;
+        color: #fff !important;
+
+        &:hover {
+          background: @custom-color-hover  !important;
+          color: #fff;
+        }
       }
-    }
-    &:last-child {
-      margin-left: 0;
-      color: #fff !important;
-      background: @primary-color;
-      border: none;
-
-      &:hover {
-        background: @primary-color-hover;
-        color: #fff;
-      }
-    }
-  }
-
-}
-
-// ========== from modal.less end ====================
-
-// 部分modal 底部按钮父样式为 btn-toolbar-bottom
-.u-modal-dialog .btn-toolbar-bottom {
-  .u-button:not(:first-child):not(:last-child) {
-    background: @custom-color  !important;
-    border: none;
-    padding: 0 20px;
-    min-width: 68px;
-    color: #fff !important;
-
-    &:hover {
-      background: @custom-color-hover  !important;
-      color: #fff;
     }
   }
 }
@@ -319,6 +212,58 @@
     &:hover {
       background-color: #dfe1e6;
       border: none;
+    }
+  }
+}
+// button-only-icon样式
+.u-button.button-only-icon.u-button-border{
+  border-width: 0px;
+  padding: 0px 0px;
+  min-width: 30px;
+  .icon{
+    margin-right: 0px;
+    width: 20px;
+    height: 20px;
+    vertical-align:-0.5em;
+  }
+}
+
+.u-button.button-only-icon:hover{
+  background:#f1f1f1;
+}
+
+// portal 页面的 menu
+.ant-card .ant-card-body {
+  .col-float {
+    margin-bottom: 10px;
+  }
+
+  .ant-tag {
+    margin: 0!important;
+    height: 38px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    width: 90%;
+    text-align: center;
+    color: #666;
+    border: 1px solid #f7f7f7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    white-space: normal;
+    vertical-align: middle;
+    display: table;
+    line-height: 14px;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: #505766;
+      border: 1px solid #505766;
+      background: #fff;
     }
   }
 }

@@ -1,0 +1,193 @@
+@menu-color-hover: #ee2223;
+
+.u-menu {
+  border-radius: 0;
+
+  &-horizontal {
+    background: #fff;
+
+    .u-menu-item-selected {
+      border-bottom: 0;
+
+      &:hover {
+        border-bottom: 0;
+      }
+
+      >a:before {
+        bottom: 0;
+        position: absolute;
+        border-bottom: 4px solid #505766;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        content: "";
+        width: 0;
+        left: 50%;
+        display: block;
+        margin-left: -6px;
+      }
+    }
+  }
+
+  // 特殊的hover状态
+  &.tab-menu {
+    .u-menu-item {
+      border-bottom: 0;
+      padding: 0 12px;
+
+      &:hover {
+        a {
+          color: @menu-color-hover;
+        }
+      }
+    }
+  }
+}
+
+// 消除某些**样式的影响
+.u-dropdown.drop_menu {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding: 0 !important;
+}
+
+// portal 页面菜单导航样式
+.left-menu {
+  &:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #f8f8f8;
+    color: @menu-color-hover;
+  }
+
+  .u-menu.u-menu-vertical {
+    .u-menu-submenu-title:hover {
+      color: @menu-color-hover;
+    }
+
+    .u-menu-item-selected {
+      color: #333;
+      border-left-color: @menu-color-hover !important;
+      background-color: #f8f8f8;
+
+      span {
+        color: @menu-color-hover;
+      }
+    }
+
+    .u-menu-submenu-selected {
+      color: #333;
+      border-left-color: @menu-color-hover !important;
+      background-color: #f8f8f8;
+
+      li.u-menu-item:hover span,
+      .u-menu-submenu-title span {
+        color: @menu-color-hover;
+      }
+    }
+
+    .u-menu-submenu.u-menu-submenu-open {
+      color: @menu-color-hover;
+      border-left-color: @menu-color-hover;
+    }
+
+    &>.u-menu-submenu>.u-menu-submenu-title {
+      line-height: 44px;
+    }
+
+    .u-menu-submenu-popup {
+      background: none;
+      border-radius: none;
+    }
+
+    .u-menu-submenu-placement-rightTop {
+      &>ul.u-menu-vertical {
+        background-color: #fff;
+        color: #000 !important;
+        margin-left: 6px;
+        box-shadow: 0 3px 26px rgba(0, 0, 0, .2);
+
+        &:after {
+          width: 0;
+          height: 0;
+          border: 8px solid transparent;
+          border-right-color: #fff;
+          position: absolute;
+          display: block;
+          content: "";
+          left: -10px;
+          top: 16px;
+          z-index: 1051;
+        }
+      }
+    }
+  }
+
+  li.u-menu-submenu-vertical>ul.u-menu-vertical.u-menu-sub li:hover {
+    background: none;
+    color: @menu-color-hover;
+  }
+
+  div>ul.u-menu.u-menu-vertical>li:not(.u-menu-item-group) {
+    border-left: 2px solid transparent;
+    line-height: 44px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  ._warpSubMenu>.u-menu-item-group-title {
+    display: none;
+  }
+
+  ._warpSubMenu>.u-menu-item-group-list {
+    margin-left: 0;
+
+    &>li:last-child .u-menu-item-group-list {
+      border: none;
+    }
+  }
+
+  .u-menu-item-group-list {
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    width: 360px;
+    .u-menu-item{
+      &.u-menu-item-active,
+      &.u-menu-item-selected {
+        background: none;
+        color: @menu-color-hover;
+      }
+    }
+    .u-menu-item-group {
+      .u-menu-item-group-list {
+        margin-left: 20px;
+
+        &>.u-menu-item {
+          float: left;
+          line-height: 30px;
+          height: 30px;
+          color: #000;
+          border-bottom: 0;
+          width: 110px;
+          overflow: hidden;
+          font-size: 14px;
+          padding: 0 15px 0 0;
+          margin: 0;
+
+          &.u-menu-item-active,
+          &.u-menu-item-selected {
+            background: none;
+            color: @menu-color-hover;
+          }
+        }
+      }
+    }
+
+    .u-menu-item-group-title {
+      color: #999;
+      padding: 10px 0 5px 20px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+}

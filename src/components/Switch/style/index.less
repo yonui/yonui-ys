@@ -1,0 +1,37 @@
+@import '../../../theme/minxin-themeColors.less';
+
+.u-switch-span {
+
+  .u-switch {
+    height: 16px;
+    width: 32px;
+
+    &:after {
+      height: 14px;
+      width: 14px;
+      top: 0;
+    }
+
+    &.is-checked {
+      border-color: #4586fa;
+      background-color: #4586fa;
+      &:after {
+        left: 16px;
+      }
+    }
+
+    &.u-switch-sm {
+      width: 28px;
+      height: 14px;
+
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+
+      &.is-checked::after {
+        left: 14px;
+      }
+    }
+  }
+}

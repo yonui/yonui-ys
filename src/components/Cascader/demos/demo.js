@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 import Cascader from '../index'
 import '../style';
 import './demo.less';
+import '../../../theme/index.less'
 const options = [{
     value: 'zhejiang',
     label: 'Zhejiang',

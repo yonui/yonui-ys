@@ -60,8 +60,9 @@
 .newfanyezhankai,
 .newfanyeshouqi{
   border: none!important;
-  padding: 0px 4px 0px 0px!important;
+  padding: 0!important;
   cursor: pointer!important;
+  margin-top: -1px;
   .anticon-fanyezhankai:before,
   .anticon-fanyeshouqi:before
   {
@@ -233,14 +234,17 @@
   color: #666 !important;
 }
 
-// from adapter.less
-
 // fix: 分页每页多少条下拉框弹出时，整个页面右侧出现滚动条
 .u-pagination-data_per_select.u-select-dropdown {
   min-width: auto !important;
 
   .u-select-dropdown-menu {
     max-height: 128px;
+  }
+  //TINPER-2472
+  .u-select-dropdown-menu-item{
+    padding: 8px 0;
+    text-align: center;
   }
 }
 
@@ -269,10 +273,14 @@
 }
 
 .u-pagination .data_per_select {
-  margin: 0 12px 0 4px;
+  margin: 0 8px 0 4px;
 }
 
 .u-pagination-sm+.u-pagination-total+.data_per_select+.page_jump>span,
 .u-pagination-sm+.u-pagination-total+.data_per_select>span {
   line-height: 28px;
+}
+//TINPER-2472
+.u-pagination-list>li.u-pagination-item-ellipsis>a{
+  background: none;
 }

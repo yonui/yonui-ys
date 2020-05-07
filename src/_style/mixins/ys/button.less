@@ -1,0 +1,133 @@
+// ============================================
+// button 类控件的原子样式
+// ============================================
+
+.u-button-mixin() {
+  padding: 0 12px;
+  height: 28px;
+  min-width: 60px;
+  line-height: 26px;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+// 主操作按钮
+.primary-button-mixin() {
+  .u-button-mixin();
+  color: #fff;
+  background: linear-gradient(-45deg, #fc4c2f, #ee2223);
+  border: none;
+  border-radius: 4px;
+  &:hover {
+    background: linear-gradient(-225deg, #FC4C2F, #EE2223);
+  }
+}
+
+// 次操作按钮（灰色底部）
+.secondary-button-mixin() {
+  .u-button-mixin();
+  background: #505766;
+  color: #fff;
+  // border: 1px solid #505766;
+  &:hover {
+    background: #616875;
+    color: #fff;
+  }
+}
+
+// 取消类，按钮
+.cancel-button-mixin() {
+  .u-button-mixin();
+  background: #dbe0e5;
+  border: none;
+  color: #535a69;
+  &:hover {
+    color: #505766;
+    background: #e5e9ec;
+  }
+}
+
+// 普通按钮
+.normal-button-mixin() {
+  .u-button-mixin();
+  color: #535a69;
+  border: #d9d9d9 solid 1px;
+  &:hover {
+    border: 1px solid #505766;
+  }
+}
+
+// 重置
+.reset-button-mixin() {
+  .u-button-mixin();
+  padding: 0px;
+  color: #588ce9;
+  min-width: auto;
+  border: none;
+  &:hover {
+    border: none;
+    color: #91BCFF;
+  }
+}
+
+// 按钮组，主按钮
+.group-primary-button-mixin() {
+  .primary-button-mixin();
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  & > svg {
+    margin: 0 4px 0 0;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+// 按钮组，下拉
+.group-dropdown-button-mixin() {
+  .group-normal-button-mixin();
+  .anticon-down {
+    font-size: 12px;
+    margin-left: 4px;
+    margin-right: -2px;
+    &:before {
+      content: '\e633';
+      transform: scale(0.8) rotate(0deg);
+      font-family: 'iconfont' !important;
+      font-size: 12px;
+    }
+  }
+}
+
+// 按钮组，普通
+.group-normal-button-mixin() {
+  border: 1px solid #d9d9d9;
+  color: #535a69;
+  background: #fff;
+  text-align: center;
+  padding: 0 12px;
+}
+
+// svg + 按钮 (保存草稿)
+.svg-button-mixin() {
+  .u-button-mixin();
+  border-color: #d9d9d9;
+  color: #535a69;
+  &:hover {
+    color: #505766;
+    border-color: #505766;
+  }
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    float: left;
+    margin-top: 6px;
+  }
+}

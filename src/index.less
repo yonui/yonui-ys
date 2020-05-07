@@ -4,24 +4,24 @@
 @import './components/Card/style/index.less';
 @import './components/Checkbox/style/index.less';
 @import './components/Collapse/style/index.less';
-// @import './Dropdown/style/index.less';
-// @import './Message/style/index.less';
-// @import './Select/style/index.less';
-// @import './Switch/style/index.less';
+@import './components/Dropdown/style/index.less';
+@import './components/Message/style/index.less';
+@import './components/Select/style/index.less';
+@import './components/Switch/style/index.less';
 // @import './Tabs/style/index.less';
 // @import './Tag/style/index.less';
-// @import './Cascader/style/index.less';
-// @import './Popover/style/index.less';
+@import './components/Cascader/style/index.less';
+@import './components/Popover/style/index.less';
 @import './components/DatePicker/style/index.less';
 // @import './TimePicker/style/index.less';
-// @import './Popconfirm/style/index.less';
-// @import './Pagination/style/index.less';
-// @import './Progress/style/index.less';
-// @import './Modal/style/index.less';
+@import './components/Popconfirm/style/index.less';
+@import './components/Pagination/style/index.less';
+@import './components/Progress/style/index.less';
+@import './components/Modal/style/index.less';
 @import './components/Loading/style/simple.less';
-// @import './Menu/style/index.less';
+@import './components/Menu/style/index.less';
 // @import './Tree/style/index.less';
-// @import './Radio/style/index.less';
+@import './components/Radio/style/index.less';
 @import './components/Form/style/index.less';
 @import './components/Input/style/index.less';
 @import './components/InputNumber/style/index.less';
@@ -29,15 +29,16 @@
 // @import './MobileLocale/style/index.less';
 
 body {
-    height: 100% !important;
-    font-size: 12px;
+  height: 100% !important;
+  font-size: 12px;
 }
 
 * {
+  outline: none;
+
+  &:focus {
     outline: none;
-    &:focus {
-        outline: none;
-    }
+  }
 }
 
 svg.icon {
@@ -45,82 +46,99 @@ svg.icon {
 }
 
 /* 修改placeholder样式 */
-input::-webkit-input-placeholder{
-  color:@base-input-placeholder-color;
+input::-webkit-input-placeholder {
+  color: @base-input-placeholder-color;
 }
-input::-moz-placeholder{
-  color:@base-input-placeholder-color;
+
+input::-moz-placeholder {
+  color: @base-input-placeholder-color;
 }
-input:-moz-placeholder{
-  color:@base-input-placeholder-color;
+
+input:-moz-placeholder {
+  color: @base-input-placeholder-color;
 }
-input:-ms-input-placeholder{
-  color:@base-input-placeholder-color;
+
+input:-ms-input-placeholder {
+  color: @base-input-placeholder-color;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.padding-bottom-none {
+  padding-bottom: 0;
 }
 
 .uf-add-s-o:before {
-    color: #666;
+  color: #666;
 }
 
 .meta-table .columnSetting .SettingBtn.u-button {
-    text-align: left;
-    &:hover {
-      background-color: #f7f9fd;
-    }
+  text-align: left;
+
+  &:hover {
+    background-color: #f7f9fd;
+  }
 }
 
 .public_fixedDataTableCell_wrap3 .public_fixedDataTableCell_cellContent .table-header-name {
-    color: #333;
+  color: #333;
 }
 
 .headerName {
-    color: #c0c1c1;
+  color: #c0c1c1;
 }
 
 .Manual-calculation-left .meta-default-container {
-    height: auto;
+  height: auto;
 }
 
 .container-edit-mode.container-greater-height {
-    height: 100%;
-}
-
-.crossArea .fr {
-    width: auto;
-    min-width: 266px;
-
-    .crossArea-list-content {
-        padding-top: 15px;
-        padding-right: 30px;
-    }
-}
-
-.container-browse-mode{
   height: 100%;
 }
 
-.viewSetting.viewCell.width-percent-33{
-  .ant-row{
-      line-height: @base-input-height;
-      min-height: @base-input-height + 4;//兼容多语的title两行正常显示
+.crossArea .fr {
+  width: auto;
+  min-width: 266px;
+
+  .crossArea-list-content {
+    padding-top: 15px;
+    padding-right: 30px;
   }
-  .refer-div {
-    .input-control {
-      .ant-row {
-        align-items: flex-start;
-      }
-    }
+}
+
+.container-browse-mode {
+  height: 100%;
+}
+
+.viewSetting.viewCell {
+  .ant-row {
+    line-height: @base-input-height;
+    min-height: @base-input-height + 4; //兼容多语的title两行正常显示
   }
 }
 
 .rc-calendar-time-picker-btn {
   color: #418FDE;
+
   &:hover {
     color: #0f70d2;
   }
 }
 
-.u-button.rc-calendar-btn-ok[disabled]:hover {
-  color: rgba(0,0,0,.25);
-  background-color: #f7f7f7;
+.u-button.rc-calendar-btn-ok[disabled] {
+  color: #fff;
+  opacity: .5;
+}
+
+.input-control .u-radio {
+  .u-radio-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

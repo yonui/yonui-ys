@@ -57,3 +57,34 @@ const floatRegex = /^[0-9]+\.?[0-9]+?$/;
 export function isFloat (number) {
   return floatRegex.test(number);
 }
+
+export function findIndex (arr, item) {
+  const i = arr.indexOf(item);
+  return i === -1 ? '' : i;
+}
+
+/**
+ * 普通字符串
+ * @param
+ */
+export function isPlainString (target) {
+  let data = target;
+  try {
+    data = JSON.parse(target);
+  } catch (e) {
+    data = target;
+  }
+  return Object.prototype.toString.call(data) === '[object String]';
+}
+
+/**
+ * 数值类型
+ * @param
+ */
+export function isNumericalValue (target) {
+  return !isNaN(target);
+}
+
+export function isFunction (target) {
+  return Object.prototype.toString.call(target) === '[object Function]';
+}

@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 import Dropdown from '../index'
 import '../style';
 import './demo.less';
+import '../../../theme/index.less'
 
 const menu = (
     <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>

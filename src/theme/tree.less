@@ -12,13 +12,13 @@
   }
 
   .anticon-close-circle {
-    right: 50px;
     z-index: 2;
-    top: 17px;
+
     &::before {
       color: rgba(0, 0, 0, .25);
     }
-    &:hover{
+
+    &:hover {
       &::before {
         color: rgba(0, 0, 0, .43);
       }
@@ -60,14 +60,59 @@
     .ant-input:not(:last-child) {
       padding-left: 20px;
     }
+
     .ant-input-suffix {
       left: 0;
       width: 20px
     }
+
     .ant-input:hover,
     .ant-input:focus {
       border: none !important;
       border-bottom: 1px solid #ececec !important
+    }
+  }
+}
+
+.search-tree-2.with-expand-button {
+
+  >i.anticon.anticon-close-circle {
+    right: calc(~'20% + 34px') !important;
+  }
+
+  .u-button-icon {
+    right: calc(~'20% + 10px') !important;
+  }
+
+  .u-select {
+    width: 80% !important;
+
+    .u-select-selection {
+
+      .u-select-selection-rendered {
+
+        .u-select-search-field-wrap {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .uf {
+    padding: 0 4px;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    transform: rotate(-90deg);
+    border: 1px solid #d9d9d9;
+
+    &:before {
+      color: #adb4bc;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -80,6 +125,7 @@
   h4 {
     padding: 10px 14px 0;
     font-weight: normal;
+
     i {
       color: #ccc;
       font-size: 12px;
@@ -89,7 +135,6 @@
 
   .u-tree {
     padding: 0 20px 0 20px;
-    // margin-right: 1px;
     overflow-y: scroll;
     height: 100%;
 
@@ -112,7 +157,6 @@
 
       a {
         border: 1px solid transparent;
-        // width: 100%;
         width: calc(~'100% - 8px');
         position: relative;
 
@@ -131,11 +175,8 @@
         left: -100%;
         width: 200%;
         height: 28px;
-        // background: #fffaf5;
         top: -4px;
         z-index: -1;
-        // border-top: 1px solid #ffedb8;
-        // border-bottom: 1px solid #ffedb8;
       }
     }
   }
@@ -144,20 +185,6 @@
 .u-tree li span {
   position: relative
 }
-
-// .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-//   content: "\e512"
-// }
-
-// .ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
-// .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
-//   content: "\e512"
-// }
 
 .anticon-all:before {
   content: "\e517";
@@ -208,7 +235,6 @@
   line-height: 12px !important;
   border: 1px solid #ccc !important;
   border-radius: 2px !important;
-  // margin-top: 3px !important; // !fix: ui模板管理左树对齐
   margin-right: 3px !important;
 }
 
@@ -478,7 +504,6 @@
 
 .left-menu span {
   white-space: nowrap;
-  // overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -500,10 +525,7 @@
 }
 
 .form-left.Manual-calculation-left {
-  // display: block;
   height: 100%;
-  // border-right: 1px solid #f5f5f5;
-  // overflow-y: auto; // !fix: zhangkunk 折叠效果样式调整
   display: block !important;
   float: left;
   width: 240px;
@@ -518,13 +540,6 @@
     height: 100%;
     overflow: initial; // fix: zhangkunk 折叠效果样式调整
 
-    .search-tree-2 {
-      .anticon-close-circle {
-        top: 17px;
-        right: 18px;
-      }
-    }
-
     .search-tree-3 {
       height: calc(~'100% - 52px');
       overflow-y: auto;
@@ -534,21 +549,11 @@
 
 .form-base.Manual-calculation {
   overflow-y: auto;
-  // padding-bottom: 60px; // !fix: 物料需求计划，时界编辑弹框边距
 }
 
 .search-tree-2 {
-  padding: 10px 20px 0;
-  .u-button-icon{
-    height: 28px;  // 通过设置height 来实现居中
-    right: 22px;
-    &:hover{
-      background: transparent;
-    }
-  }
-  .u-select-selection-placeholder{
-    margin-top: -10px;
-  }
+  padding: 10px 14px 0;
+  .left-search-tree-input-control-mixin();
 }
 
 /*左树右表结构添加下拉框 left-tree-select-count*/
@@ -623,11 +628,13 @@
   .bg-white.border-r {
     .search-tree-2 {
       padding-top: 0px;
+
       .u-button {
-        top: 1px;
+        top: 0px;
       }
+
       .anticon-close-circle {
-        top: 9px;
+        top: 8px;
       }
     }
 
@@ -654,66 +661,132 @@
     }
   }
 }
+
 //编辑树 添加编辑和删除
-.editable_tree{
-      .u-tree-treenode-selected.u-tree-treenode-close,
-      .u-tree-treenode-close
-      {
-          .u-tree-title{
-              width: 100%;
-              white-space: normal;
-              >span{
-                  display: block;
-                  height: 24px;
-                  position: relative;
-                  white-space:nowrap;
-                  overflow:hidden;
-                  text-overflow:ellipsis;
-                  .treebody_button{
-                      display: none;
-                      position: absolute;
-                      top: 0px;
-                      right: 0px;
-                      padding: 0px 4px 0px 6px;
-                      border-bottom-right-radius: 8px;
-                      border-top-right-radius: 8px;
-                      .anticon-edit-disabled{
-                          margin-right: 5px;
-                      }
-                      .anticon-edit-disabled,
-                      .anticon-delete-disabled{
-                          &::before{
-                              font-size: 14px;
-                              color: #999;
-                          }
-                          &:hover{
-                              &::before{
-                                  color: #505766;
-                              }
-                          }
-                      }
-                  }
-              }
-              &:hover{
-                    >span{
-                        .treebody_button{
-                            display: inline-block;
-                            background: #edf1f7;
-                        }
-                    }
-            }
+.editable_tree {
+
+  .u-tree-treenode-selected.u-tree-treenode-close,
+  .u-tree-treenode-close {
+    .u-tree-title {
+      width: 100%;
+      white-space: normal;
+
+      >span {
+        display: block;
+        height: 24px;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .treebody_button {
+          display: none;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          padding: 0px 4px 0px 6px;
+          border-bottom-right-radius: 8px;
+          border-top-right-radius: 8px;
+
+          .anticon-edit-disabled {
+            margin-right: 5px;
           }
-      }
-      .u-tree-treenode-selected.u-tree-treenode-close{
-        .u-tree-title{
-          &:hover{
-            >span{
-                .treebody_button{
-                    display: inline-block;
-                    background: #fdf2dc;
-                }
+
+          .anticon-edit-disabled,
+          .anticon-delete-disabled {
+            &::before {
+              font-size: 14px;
+              color: #999;
+            }
+
+            &:hover {
+              &::before {
+                color: #505766;
+              }
             }
           }
         }
       }
+
+      &:hover {
+        >span {
+          .treebody_button {
+            display: inline-block;
+            background: #edf1f7;
+          }
+        }
+      }
+    }
+  }
+
+  .u-tree-treenode-selected.u-tree-treenode-close {
+    .u-tree-title {
+      &:hover {
+        >span {
+          .treebody_button {
+            display: inline-block;
+            background: #fdf2dc;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 电商通 -物流配送区域 - 双树结构
+.u-tabs-tabpane .portal-container>.meta-default-container {
+  height: 100%;
+}
+
+.form-base.Manual-calculation {
+  .tree-left {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    width: 240px;
+    height: 100%;
+
+    &>.ant-row {
+      height: 100%;
+
+      &>div {
+        height: 100%;
+
+        .group-buttons {
+          height: calc(~'100% - 32px');
+
+          .meta-default-container {
+            height: 100%;
+
+            .border-r {
+              height: 100%;
+
+              .search-tree-3 {
+                height: calc(~'100% - 96px');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Manual-calculation-left,
+.form-base.Manual-calculation {
+  .group-buttons .group-container {
+    padding-top: 0;
+
+    .search-tree-2 {
+      margin-top: 0 !important;
+    }
+  }
+
+  .group-title {
+    padding-left: 0;
+  }
+}
+
+.u-tree li a.u-tree-node-content-wrapper {
+  display: inline-flex;
+  align-items: center;
 }

@@ -15,6 +15,7 @@
 .u-select {
   vertical-align: initial; //输入框对齐方式
 }
+
 .ant-input,
 .ant-input-number,
 .ant-time-picker-input {
@@ -37,12 +38,13 @@
 .ant-select-focused .ant-select-selection,
 .ant-select-selection:active,
 .ant-select-selection:focus {
-  border: 1px solid #505766 !important;
+  border: 1px solid #505766;
 }
 
 .ant-select-disabled .ant-select-selection:hover,
 .ant-select-selection:focus {
   border: 1px solid #d9d9d9;
+  box-shadow: none;
 }
 
 .ant-select-open .ant-select-selection {
@@ -59,7 +61,7 @@
 }
 
 .ant-select-selection--single {
-  height: @base-input-height !important;
+  height: @base-input-height;
 }
 
 .ant-input-number,
@@ -75,7 +77,7 @@
 
 .ant-input {
   border-color: #D9D9D9;
-  padding: 4px 10px;
+  padding: 4px 8px;
 }
 
 // radio
@@ -101,7 +103,7 @@
   }
 }
 
-.ant-tabs-nav .ant-tabs-tab:hover{
+.ant-tabs-nav .ant-tabs-tab:hover {
   color: #ee2223;
 }
 
@@ -261,6 +263,7 @@
       width: 130px;
       margin: 0 10px 5px 0;
       overflow: initial;
+
       .uf-close {
         position: absolute;
         right: -7px;
@@ -280,16 +283,18 @@
         font-weight: 700;
         margin-left: 3px;
         opacity: .66;
+
         &::before {
           display: inline-block;
           transform: scale(.6);
-          transform-origin: 7px 4px!important;
-          -webkit-transform-origin: 7px 4px!important;
-          -moz-transform-origin: 7px 4px!important;
-          -ms-transform-origin: 7px 4px!important;
-          -o-transform-origin: 7px 4px!important;
+          transform-origin: 7px 4px !important;
+          -webkit-transform-origin: 7px 4px !important;
+          -moz-transform-origin: 7px 4px !important;
+          -ms-transform-origin: 7px 4px !important;
+          -o-transform-origin: 7px 4px !important;
         }
-        &:hover{
+
+        &:hover {
           opacity: 1;
         }
       }
@@ -302,7 +307,6 @@
       margin-right: 10px;
       justify-content: flex-end;
       height: 32px;
-      // line-height: 32px; // fix: wangjing sku规格问题
       overflow: hidden;
       float: left;
       display: flex;
@@ -315,8 +319,8 @@
       }
     }
 
-    .pic-book-list + span,
-    .pic-book-title + span {
+    .pic-book-list+span,
+    .pic-book-title+span {
       display: inline-block; // 改span 标签是popover 添加的，此处临时设置成内敛快，避免popover 出现偏差
     }
 
@@ -325,6 +329,7 @@
       padding: 0 10px;
       line-height: 30px;
       float: left;
+
       .anticon {
         margin: 0 4px 0 0;
         font-size: 13px;
@@ -339,51 +344,71 @@
   margin: 0 20px;
   padding: 20px 0 12px;
 
+  .col-all {
+    overflow: inherit;
+  }
+
+  .tag-group {
+    .tag-group-mixin();
+
+    .label-control {
+      .form-label-mixin();
+    }
+  }
+
   .filter-hide {
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
 
     .ant-row {
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      min-height: 32px;
+      .form-item-mixin();
     }
 
-    .input-control {
-      height: @base-input-height;
-      width: 100%;
-      min-width: 0;
-      // overflow-y: auto;
+    .has-error {
 
-      .ant-input {
-        height: @base-input-height;
+      .u-form-control {
+        border-color: #ee2233;
       }
-
-      .control-radio {
-        height: @base-input-height;
-        line-height: @base-input-height;
+      .ant-form-explain {
+        position: absolute;
+        top: 28px;
       }
     }
+
+    // .input-control {
+    //   height: @base-input-height;
+    //   width: 100%;
+    //   min-width: 0;
+
+    //   .ant-input {
+    //     height: @base-input-height;
+    //   }
+
+    //   .control-radio {
+    //     height: @base-input-height;
+    //     line-height: @base-input-height;
+    //   }
+    // }
   }
 
-  .label-control {
-    width:120px !important;
-    text-align: right;
-    padding-right: 10px;
-    line-height: 16px;
-    max-height: @base-input-height + 4;
-    overflow: hidden;
-    padding-left: 15px;
-    min-width: 100px;
-    word-wrap: break-word;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
+  // .label-control {
+  //   width: 120px !important;
+  //   text-align: right;
+  //   padding-right: 10px;
+  //   line-height: 14px;
+  //   max-height: @base-input-height + 4;
+  //   overflow: hidden;
+  //   padding-left: 15px;
+  //   min-width: 100px;
+  //   word-wrap: break-word;
+  //   display: -webkit-box;
+  //   /* autoprefixer: off */
+  //   -webkit-box-orient: vertical;
+  //   -webkit-line-clamp: 2; //超出两行显示省略号
+  //   -moz-hyphens: auto;
+  //   -ms-hyphens: auto;
+  //   -webkit-hyphens: auto;
+  //   hyphens: auto;
+  // }
 
   .basic-predicate-data-picker {
     margin-bottom: 15px;
@@ -398,23 +423,6 @@
     .label-control {
       line-height: 26px;
       width: 100px !important;
-    }
-  }
-
-  .tag-group {
-    margin-bottom: 8px;
-    height: 24px;
-    line-height: 24px;
-
-    .label-control {
-      line-height: @base-input-height;
-      width: 100px !important;
-    }
-
-    .col-float {
-      .ant-tag {
-        margin-top: 4px;
-      }
     }
   }
 
@@ -477,16 +485,32 @@
 
   .u-select-selection--single {
     height: @base-input-height;
+
+    .u-select-selection-selected-value {
+      padding-right: 23px;
+    }
   }
+
+  .u-radio-group .u-radio-button {
+    height: 24px;
+    line-height: 22px;
+    padding: 0 8px;
+  }
+
   // 销售管理-发货统计表-分组条件
   .rpt-toolbar {
     .u-button {
       vertical-align: top;
     }
   }
+
   .rpt-select {
     margin-bottom: -4px;
   }
+}
+
+.container-browse-mode .listheadRow .ant-row .rpt-select {
+  margin-bottom: 8px;
 }
 
 .btn-submenu .ant-menu-item:hover,
@@ -552,7 +576,7 @@
 .up-show {
   .ant-btn-ghost {
     width: 68px;
-    height: 32px !important;
+    height: 32px;
   }
 
   .showMore {
@@ -588,7 +612,7 @@
 }
 
 .listheadRow .btn-toolbar-bottom {
-  padding-bottom: 0;
+  padding-bottom: 12px !important;
   padding-right: 0px !important;
 
   .ant-btn-primary {
@@ -627,6 +651,10 @@
 
   >.col-auto {
     display: flex;
+    height: 28px;
+    .u-button{
+      vertical-align: top;
+    }
   }
 
   .ant-dropdown-button.ant-btn-group>.ant-btn.ant-btn-ghost {
@@ -650,12 +678,28 @@
   }
 }
 
+/* 店存入库 - 入库 - 表格上方单选间距*/
+.listheadRow .sum-switch {
+  float: left;
+  margin-bottom: 12px;
+}
+
 /*筛选条件部分-修改*/
 .listheadRow .input-control .has-feedback,
 .listheadRow .input-control .ant-select,
 .listheadRow .input-control .Test-time-two,
 .listheadRow .input-control .ant-cascader-picker {
   width: 100% !important;
+}
+
+.listheadRow .input-control .Test-time-two {
+  .u-form-control {
+    padding-right: 15px !important;
+  }
+
+  .anticon-star-o {
+    right: 0px;
+  }
 }
 
 .listheadRow .input-control .ant-radio-group {
@@ -705,11 +749,37 @@
   right: 5px;
 }
 
+// 浏览态间距小一些
+.container-browse-mode {
+  .viewCell .ant-row {
+    margin-bottom: 4px;
+  }
+}
+
 .viewCell {
   float: left;
   width: 400px;
-  // line-height: 28px;
-  padding-left: 18px;
+  padding-left: 15px;
+
+  .pictureupload {
+    .input-control.control-width {
+      height: auto !important;
+    }
+
+    .label-control {
+      align-self: stretch;
+      line-height: 28px;
+    }
+  }
+
+  .timepicker .ant-select-selection {
+    border: 0px;
+    height: 28px;
+
+    & .u-time-picker-input {
+      height: 28px;
+    }
+  }
 
   .btn-preview {
     float: right;
@@ -728,40 +798,46 @@
 
     .control-width {
       line-height: @base-input-height;
+      &>.u-input-group {
+        line-height: 0;
+        &>div {
+          line-height: @base-input-height;
+        }
+      }
     }
   }
+
   .basic-input-textarea {
     .label-control {
       align-self: self-start;
     }
   }
+
   // 制造 - 新增仓库档案
   .map {
     .ant-row {
       .control-width {
-        height:auto ;
+        height: auto;
       }
     }
   }
 
   .label-control {
     text-align: right;
-    width:87px !important;
+    width: 87px !important;
     color: #666;
     margin-right: 15px;
-    // line-height: 14px;
-    line-height: 16px;
-    // max-height: @base-input-height;
+    line-height: 14px;
     max-height: @base-input-height + 4;
     min-width: 87px;
     padding-left: 15px;
     word-break: break-word;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    display:-webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
     /* autoprefixer: off */
-    -webkit-box-orient:vertical;
-    -webkit-line-clamp:2; //超出两行显示省略号
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; //超出两行显示省略号
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
@@ -808,15 +884,25 @@
     .input-bottom-text {
       position: absolute;
       bottom: -16px;
-      line-height: 20px;
+      line-height: 16px;
       overflow: hidden;
       white-space: nowrap;
       color: #999;
       text-overflow: ellipsis;
       width: 100%;
-      // transform: scale(0.9);
-      // margin-left: -18px;
-      // max-width: 110%;
+    }
+  }
+
+  .has-related {
+    .related-bottom-text {
+      position: absolute;
+      top: 66px;
+      line-height: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #999;
+      text-overflow: ellipsis;
+      width: 100%;
     }
   }
 
@@ -832,7 +918,6 @@
     color: @base-tip-text-color;
     display: table;
 
-    // width: 755px !important;
     .avatar-uploader {
       vertical-align: middle;
       margin-right: 20px;
@@ -1034,7 +1119,6 @@
   textarea.ant-input {
     height: 52px !important; // fix: 优先级被ant-input 覆盖了，导致textarea 单行显示
     line-height: 22px;
-    // resize: none;
   }
 
   .title-memo {
@@ -1059,26 +1143,33 @@
     line-height: 32px;
   }
 
+  .basic-input-editor {
+    .label-control {
+      align-self: stretch;
+      line-height: 28px;
+    }
+  }
+
   // 一列
   &.width-percent-100 {
-    .input-control{
-      .u-input-group{
-        input{
+    .input-control {
+      .u-input-group {
+        input {
           padding-right: 30px;
         }
-        .u-input-group-btn{
-          .anticon-close-circle{
+
+        .u-input-group-btn {
+          .anticon-close-circle {
             right: 6px;
           }
         }
       }
     }
+
     .tag-refer-01 {
       .TagList {
         width: 400px;
         margin-right: 10px;
-        // margin-bottom: 2px;
-        // padding-bottom: 2px;
       }
     }
 
@@ -1095,9 +1186,10 @@
 
     .ant-row {
       margin-right: 10px;
-      float: left;
+      // float: left;
       min-height: 32px;
       line-height: 28px;
+
       .control-width {
         .undefined:first-child {
           margin-right: 8px;
@@ -1159,7 +1251,6 @@
       }
 
       .u-button {
-        // padding: 8px 14px;
         margin-left: 8px;
         height: @base-input-height;
         line-height: @base-input-height;
@@ -1202,45 +1293,55 @@
         width: 742px !important
       }
     }
-    .upload-content{
-      .ant-row{
-          //margin-top: -5px !important;
-          width: 100%;
-          //拖拽区域提成公用
-          .upload-drag-wrapper{
-            margin-top: 10px;
-            width: 75%;
-            //初始状态 将文件拖拽至此区域上传有线，拖拽之后默认没线，鼠标经过有线
-            .upload-drag-area{
-              .u-upload.u-upload-drag{
-                border: 1px dashed #d9d9d9;
-                &:hover{
-                  border: 1px dashed #505766;
-                }
+
+    .upload-content {
+      .ant-row {
+        //margin-top: -5px !important;
+        width: 100%;
+        //拖拽区域提成公用
+        margin-bottom: 8px;
+
+        .upload-drag-wrapper {
+          margin-top: 10px;
+          width: 75%;
+
+          //初始状态 将文件拖拽至此区域上传有线，拖拽之后默认没线，鼠标经过有线
+          .upload-drag-area {
+            .u-upload.u-upload-drag {
+              border: 1px dashed #d9d9d9;
+
+              &:hover {
+                border: 1px dashed #505766;
               }
             }
-            .u-upload.u-upload-drag{
-              min-height: 120px;
-              border: 1px dashed #fff;
-             &:hover{
+          }
+
+          .u-upload.u-upload-drag {
+            min-height: 120px;
+            border: 1px dashed #fff;
+
+            &:hover {
               border-color: #fff;
-             }
-             .stop-propagation{
-               overflow: hidden;
-               .s-checkgroup-wrapper{
+            }
+
+            .stop-propagation {
+              overflow: hidden;
+
+              .s-checkgroup-wrapper {
                 padding-bottom: 10px;
                 overflow: hidden;
-               }
-             }
-             //没拖拽效果
-             .noFile-drag-content{
+              }
+            }
+
+            //没拖拽效果
+            .noFile-drag-content {
               display: block;
               width: 100%;
               min-height: 120px;
-              background: rgba(250,250,250,1);
+              background: rgba(250, 250, 250, 1);
               position: relative;
 
-              p{
+              p {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -1248,73 +1349,81 @@
                 color: #999;
                 width: 100%;
               }
-             }
-             .u-checkbox-group{
-               overflow: hidden;
-               padding-bottom: 10px;
-             }
             }
-            .u-upload.u-upload-drag.u-upload-drag-hover{
-              border: 1px dashed #40aded;
-              position: relative;
-              // &::before{
-              //     position: absolute;
-              //     content: "";
-              //     left: 0px;
-              //     top: 0px;
-              //     width: 100%;
-              //     height: 100%;
-              //     background: url(images/noFile-drag-img.png) no-repeat  center center rgba(251,251,251,0.9);;
-              //     background-size: 132px 12px;
-              //     z-index: 1;
-              // }
+
+            .u-checkbox-group {
+              overflow: hidden;
+              padding-bottom: 10px;
             }
-            .u-upload-drag-container{
-              position: relative;
-              .upload-mask-wrapper{
+          }
+
+          .u-upload.u-upload-drag.u-upload-drag-hover {
+            border: 1px dashed #40aded;
+            position: relative;
+          }
+
+          .u-upload-drag-container {
+            position: relative;
+
+            .upload-mask-wrapper {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background: rgba(251, 251, 251, 0.9);
+              z-index: 4;
+
+              p {
+                color: @base-tip-text-color;
                 position: absolute;
-                width: 100%;
-                height: 100%;
-                background:rgba(251,251,251,0.9);
-                z-index: 4;
-                p{
-                    color: @base-tip-text-color;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                }
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
               }
             }
           }
-          .control-width{
-            width: calc(~'100% - 140px')!important;
-            height: auto;
-            .fileupload{
-              overflow: hidden;
-              >span,.u-button{
+        }
+
+        .control-width {
+          width: calc(~'100% - 140px') !important;
+          height: auto;
+
+          .fileupload {
+            overflow: hidden;
+            min-height: 30px;//TINPER-2490
+            >span,
+            .u-button {
+              display: block;
+              float: left;
+            }
+
+            .u-button {
+              line-height: 0px;
+            }
+
+            span {
+              .u-upload {
                 display: block;
                 float: left;
-              }
-              .u-button{
-                line-height: 0px;
-              }
-              span{
-                .u-upload{
-                  display: block;
+
+                .btn-gray {
                   float: left;
-                  .btn-gray{
-                    float: left;
-                  }
                 }
-              }
-              .fileupload-txt{
-                width: 100%;
               }
             }
 
-
+            .fileupload-txt {
+              width: 100%;
+            }
           }
+
+
+        }
+      }
+    }
+
+    .has-related {
+      textarea.u-form-control {
+        width: 400px;
       }
     }
   }
@@ -1323,20 +1432,41 @@
   &.width-percent-33 {
     position: relative;
     width: 33.33%;
-    z-index: 2;
-    .has-related{
-      .width-percent-100{
+
+    .has-related {
+      .width-percent-100 {
         width: auto;
         flex: initial;
       }
     }
+
     .contorl-switch {
       // fix: zhangkunk 计划运行三列展开关闭按钮切换
       line-height: @base-input-height;
     }
 
-    .input-control.control-width {
-      height: @base-input-height; // fix: 制造云 生产订单，表单错位
+    .control-width {
+      .u-input-group.u-input-number {
+        display: table;
+      }
+      .u-input-group {
+        display: block;
+
+        &.simple {
+          .u-form-control-affix-wrapper {
+            position: static;
+          }
+        }
+
+        .u-form-control-affix-wrapper {
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .basic-input-editor .input-control.control-width {
+      height: auto;
     }
 
     // 错误提示
@@ -1346,11 +1476,10 @@
 
     .ant-form-explain {
       position: absolute;
-      // left: 135px;
-      left: 100px; // fix: 之前有调整过label 宽度为120，暂改回为87，提示文字对应调整
-      top: 23px;
+      left: 102px; // fix: 之前有调整过label 宽度为120，暂改回为87，提示文字对应调整
+      top: 31px;
       margin: 0 !important;
-      line-height: @base-input-height;
+      line-height: 12px;
     }
 
     .control-width {
@@ -1405,27 +1534,38 @@
           width: 60% !important;
         }
       }
+
+      >div .ant-row+.ant-form-explain {
+        position: absolute;
+        left: 100px;
+        top: 19px;
+      }
     }
+
     //新增收款协议协议有效期添加特殊类名
-    .enableStartDate{
-      .has-related{
+    .enableStartDate {
+      .has-related {
         display: block;
-        .viewCell{
+
+        .viewCell {
           width: 45.8333%;
         }
-        .width-percent-100{
+
+        .width-percent-100 {
           width: 54.1667%;
           margin-left: 0px;
-          .label-control{
+
+          .label-control {
             margin-left: 0px;
-            width: 15.3845444%!important;
+            width: 15.3845444% !important;
             margin-right: 0px;
             padding-left: 0px;
             text-align: center;
             line-height: 28px;
           }
-          .control-width{
-            width: 84.6154556%!important;
+
+          .control-width {
+            width: 84.6154556% !important;
           }
         }
       }
@@ -1447,28 +1587,34 @@
   }
 }
 
+// 错误提示
+.has-error {
+  position: relative;
+
+  .ant-form-explain {
+    position: absolute;
+    bottom: -12px;
+    line-height: 12px;
+  }
+}
+
 //两列
 .width-percent-50 {
   width: 50%;
 
-  // 错误提示
-  .has-error {
-    position: relative;
-
-    .ant-form-explain {
-      position: absolute;
-      left: 100px;
-      bottom: -18px;
-    }
+  .ant-row {
+    line-height: 28px;
+    min-height: 32px;
   }
 
   &+.width-percent-100 {
     width: 100%
   }
 
-  .control-width {
-    width: calc(~"100% - 170px") !important;
-  }
+  //TINPER-2490
+  // .control-width {
+  //   width: calc(~"100% - 170px") !important;
+  // }
 
   .basic-input-textarea .input-control .invoice-remark {
     width: 100% !important;
@@ -1516,10 +1662,10 @@
       float: none;
     }
 
-    .TagList,
-    .input-control {
-      width: calc(~'100% - 170px') !important;
-    }
+    // .TagList,
+    // .input-control {
+    //   width: calc(~'100% - 170px') !important;
+    // }
 
     .ant-select,
     .ant-input {
@@ -1563,12 +1709,14 @@
       }
     }
   }
-  .u-radio-group {
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    min-height: 24px;
-  }
+}
+
+.control-radio .u-radio-group {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  min-height: 24px;
+  padding-top: 4px;
 }
 
 .has-related {
@@ -1577,8 +1725,6 @@
   .viewCell {
     padding-left: 0 !important;
     width: 100%;
-    flex: 1;
-    // width: 42px;
 
     .ant-row {
       margin-bottom: 0;
@@ -1587,10 +1733,12 @@
     &.width-percent-100 {
       margin-left: 10px;
       width: 56%;
+
       .u-button {
         width: 100%;
         vertical-align: top;
       }
+
       .control-text {
         min-width: auto;
       }
@@ -1611,6 +1759,7 @@
   }
 
   .viewCell+.filter-hide {
+    margin-bottom: 0;
 
     /*u8c凭证查询问题*/
     &.filter-hide {
@@ -1620,12 +1769,14 @@
     }
   }
 }
+
 // 付款协议日期
 .list-top {
   .has-related .viewCell.width-percent-100 {
     width: 100%;
   }
 }
+
 .control-flex {
   display: flex;
   display: -webkit-flex;
@@ -1660,8 +1811,12 @@
 
 .group-container {
   margin-bottom: 0;
-  // padding: 20px 0 0; // !fix: 模态框中出现的group-container，上边距已改为u-modal-body 上设置了
-
+  padding: 0;
+  // margin-top: 16px;
+  .group-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
   .viewCell {
     padding-left: 15px;
 
@@ -1686,11 +1841,24 @@
   }
 }
 
+.group-container .ant-row+.group-buttons {
+  .group-container {
+    padding-top: 2px;
+  }
+}
+
 .u-tabs.u-tabs-upborder {
   .group-container {
     padding-top: 0;
   }
 }
+
+.u-modal .u-modal-body {
+  .group-container {
+    padding-top: 0;
+  }
+}
+
 // 折叠展开
 .member-list {
   overflow: hidden;
@@ -1741,16 +1909,15 @@
   width: 720px;
 }
 
+.listheadRow .filter-hide .ant-row .input-control .ant-row {
+  display: block;
+}
+
 .container-browse-mode {
 
-  // overflow: hidden;
   .viewCell {
     .control-text {
       border-color: #eee;
-    }
-
-    .ant-row {
-      margin-bottom: 4px;
     }
 
     .ant-row .ant-row {
@@ -1764,6 +1931,14 @@
     .TagList {
       border-color: #eee !important;
       padding: 0 10px;
+    }
+
+    // 法人证件、营业执照
+    .id-card-front,
+    .id-card-license {
+      &>.ant-row {
+        margin-bottom: 40px;
+      }
     }
 
     .logo-face-label {
@@ -1870,44 +2045,43 @@
     }
   }
 
-  .group-container {
-    padding-bottom: 10px;
+  .list-top-toolbar+.group-container {
+    padding-top: 0;
+
+    .ant-row .ant-row .group-title {
+      margin-top: 0;
+    }
   }
 
   .filterSetting {
-    border: #d9d9d9 solid 1px;
-    height: 30px;
+    // border: #d9d9d9 solid 1px;
+    // height: 30px;
+    .normal-button-mixin();
     margin-left: 8px;
-    float: right;
-  }
-
-  .filterSetting {
     float: right;
   }
 
   .listheadRow {
     padding: 15px 0px 12px 0px;
 
-    // &>.ant-row>.col-float {
-    //   min-height: 84px;
-    // }
-
     .filter-controls {
       margin-right: 220px;
-      padding-bottom: 10px;
-      // min-height: 57px; // 将min-height 提升，避免展开/收缩时的边距差
+      padding-bottom: 6px;
 
       .col-float {
         .tag-group {
-          height: @base-input-height;
-          // padding-top: 4px;
+          min-height: @base-input-height + 4;
 
           // zhangkunk 总账-凭证查询-设置中选了会计期间，但不显示期间段选择框
           .has-related {
             .viewCell {
               width: auto;
               display: inline-flex;
-              min-width: 200px;
+              align-items: center;
+            }
+
+            .tagCell {
+              min-width: 210px;
             }
           }
         }
@@ -1918,30 +2092,22 @@
       width: 220px;
       float: left;
       margin-right: 0px;
-      overflow-x: hidden;
-      bottom: 8px;
-      overflow-y: hidden;
-      padding-bottom: 10px;
-      .filter-reset{
+      overflow: hidden;
+      padding-bottom: 8px;
+
+      .filter-reset {
+        .reset-button-mixin();
         float: right;
-        padding: 0px;
-        color: #588ce9;
-        min-width: auto;
-        border: none;
         margin-right: 2px;
-        &:hover{
-          border: none;
-          color: #91BCFF;
-        }
       }
-      .up-search{
+
+      .up-search {
         margin-left: 10px;
       }
 
     }
 
     .ant-popover-open-count {
-      // width: 80px;
       height: @base-input-height;
       float: right;
     }
@@ -1949,6 +2115,13 @@
 
   .twoInclusion .basic-input-textarea .input-control .invoice-remark {
     width: 100% !important;
+  }
+}
+
+//门店经营范围浏览态调整
+.container-browse-mode {
+  .Business-scope-store-count.group-container {
+    padding-bottom: 2px;
   }
 }
 
@@ -2005,12 +2178,22 @@
   float: left;
 }
 
+.line-tabs .u-tabs .u-tabs-content {
+  .group-container {
+    margin-top: 0;
+  }
+}
+
 .group-title {
   font-size: 14px;
   font-weight: bolder;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   color: #505766;
   padding-left: 25px;
+
+  span {
+    cursor: pointer;
+  }
 
   .group-collapse {
     font-size: 12px;
@@ -2071,7 +2254,6 @@
 
   .p-v-5 {
     width: 87px;
-    // width: 120px; // fix: label-control 宽度调整为了120px
     margin-right: 15px;
     text-align: right;
     color: #666;
@@ -2084,13 +2266,17 @@
     width: 60%;
     border-radius: 4px;
     margin: 0;
-    line-height: @base-input-height;
-    min-height: @base-input-height;
+    line-height: 26px;
+    min-height: 26px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
 
-    & > span:last-child {
+    &:hover .ant-select-selection__clear {
+      opacity: 1;
+    }
+
+    &>span:last-child {
       display: inline-block;
       position: absolute;
       right: 0;
@@ -2098,6 +2284,10 @@
 
     &:hover {
       border-color: #505766
+    }
+
+    &.tag-focused {
+      border-color: #505766;
     }
 
     .tag-refer-icon-container {
@@ -2136,7 +2326,6 @@
       margin-left: 5px;
       float: right;
       margin-right: 2px;
-      // margin-top: 2px;
 
       .anticon.anticon-canzhao:before {
         line-height: @base-input-height - 2;
@@ -2159,25 +2348,48 @@
     }
 
     &.tag-disabled {
+      .form-control-disabled-mixin();
       .tagBtn-add {
-        border-color: #e5e9ec;
+        border-color: @input-border-color;
 
         &:hover {
-          border-color: #e5e9ec;
+          border-color: @input-border-color;
         }
       }
     }
+
     .u-select-search--inline {
       position: static;
       flex: 1;
       padding-right: 30px;
+
       .u-select-search-field {
-        height: 28px;
+        height: 26px;
         padding-left: 8px;
       }
     }
   }
 
+}
+
+// treeRefer 多选参照样式
+.uretail-treerefer-selection .ant-select-selection__rendered.multiple {
+  display: flex;
+  flex-wrap: wrap;
+
+  .ant-select-selection-selected-value {
+    padding-right: 0;
+  }
+
+  .u-select-search--inline {
+    position: static;
+    flex: 1;
+    padding-right: 30px;
+
+    .u-select-search-field {
+      height: 26px;
+    }
+  }
 }
 
 /*popover*/
@@ -2358,7 +2570,6 @@ i.uf-search,
 
 //下拉带搜索
 .uretail-pop {
-  // width: 140px;
   padding-top: 0px;
 
   .ant-popover-inner-content {
@@ -2367,30 +2578,22 @@ i.uf-search,
     min-width: 200px;
   }
 
-  .u-popover-content > .listRefer {
+  .u-popover-content>.listRefer {
     padding-bottom: 0;
 
     .ant-select-selection__clear {
       top: 28px;
       right: 38px !important;
-      opacity: 0.4;
     }
 
-    .ant-select-selection__clear:hover {
-      opacity: 0.7;
-    }
   }
 
-  .u-popover-content > .link-filter-content {
+  .u-popover-content>.link-filter-content {
     .ant-select-selection__clear {
       top: 28px;
       right: 38px !important;
-      opacity: 0.4;
     }
 
-    .ant-select-selection__clear:hover {
-      opacity: 0.7;
-    }
   }
 
   // 多选框列表
@@ -2408,14 +2611,16 @@ i.uf-search,
   }
 
   // 默认列表
-  .defaut-list {
-    li.u-menu-item {
-      transition: none;
-      &:hover {
-        background-color: #f7f9fd;
+  .defaut-list {
+    li.u-menu-item {
+      transition: none;
+
+      &:hover {
+        background-color: #EDF1F7;
       }
-      &:after{
-        transition: none;
+
+      &:after {
+        transition: none;
       }
     }
   }
@@ -2465,7 +2670,6 @@ i.uf-search,
 }
 
 .ant-select-selection__rendered {
-  // margin-left: 10px !important;
   line-height: 26px;
 }
 
@@ -2490,19 +2694,18 @@ i.uf-search,
   max-height: 192px;
 }
 
-.ant-search-input-wrapper:hover .u-form-control:not([disabled]),
-.ant-input-affix-wrapper:hover .u-form-control:not([disabled]),
-.u-form-control-affix-wrapper:hover .u-form-control:not([disabled]) {
-  border-color: #505766
-}
-
 .ant-input-disabled,
 .ant-input-number-disabled {
   color: #999 !important;
 
   &:hover {
-    border-color: #ccc !important;
+    border-color: @input-border-color;
   }
+
+  .u-form-control {
+    .form-control-disabled-mixin();
+  }
+
 }
 
 .ant-select-dropdown-menu-item-selected {
@@ -2692,11 +2895,6 @@ i.uf-search,
   overflow-x: hidden
 }
 
-.form-left,
-.form-base {
-  display: table-cell
-}
-
 .ant-input-number-focused {
   border-color: #ccc;
   box-shadow: none;
@@ -2711,13 +2909,6 @@ i.uf-search,
 
 .col {
   padding-left: 20px;
-}
-
-.textCol {
-  display: block !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
@@ -2788,7 +2979,7 @@ i.uf-search,
 /*手工计算*/
 .btn-tail-mannual-cost-cal {
   background: @primary-color;
-  height: @base-input-height !important;
+  height: @base-input-height  !important;
   border: none;
   color: #fff;
   width: 72px;
@@ -2803,7 +2994,7 @@ i.uf-search,
   padding-left: 107px;
 
   .ant-btn {
-    height: @base-input-height !important;
+    height: @base-input-height  !important;
     background: #505766;
     color: #fff;
     border: none;
@@ -2834,7 +3025,7 @@ i.uf-search,
 }
 
 .touchBasicSetting {
-  padding-top: 20px;
+  padding-top: 16px !important;
 
   &>.ant-row {
     margin-bottom: 20px;
@@ -2843,12 +3034,14 @@ i.uf-search,
       width: auto !important;
 
       h3 {
+        display: block !important;
         font-size: 12px;
         color: #666;
-        line-height: 32px;
-        margin-left: 18px;
+        line-height: 16px;
         padding-left: 15px;
+        margin-left: 18px;
         margin-right: 15px;
+        margin-top: 5px;
       }
 
       &>.viewCell {
@@ -2856,6 +3049,29 @@ i.uf-search,
 
         &:first-child {
           margin-left: 0;
+        }
+
+        .label-control {
+          margin-right: 8px;
+        }
+
+        .anticon-star {
+          margin-left: 2px;
+        }
+
+        .control-radio {
+          line-height: 28px;
+          margin-left: 0;
+        }
+
+        .u-checkbox {
+          height: 28px;
+          margin-right: 0;
+          line-height: 28px;
+
+          &.u-checkbox.disabled .u-checkbox-label {
+            color: #333;
+          }
         }
       }
     }
@@ -2868,6 +3084,8 @@ i.uf-search,
   .has-related .viewCell {
     margin-top: 0 !important;
     width: 100%;
+    width: auto;
+    flex: initial;
 
     .control-radio {
       margin-top: 0 !important;
@@ -3012,10 +3230,10 @@ i.uf-search,
   }
 
   .ant-btn-group.ToolBar_isAddButton>.ant-btn:first-child:not(:last-child) {
-    background: @group-primary-first-button !important;
+    background: @group-primary-first-button  !important;
     color: #fff;
     padding: 6px 14px;
-    height: @base-input-height !important;
+    height: @base-input-height  !important;
 
     span {
       position: relative;
@@ -3036,7 +3254,7 @@ i.uf-search,
   .ant-dropdown-button.ant-btn-group.ToolBar_isAddButton>.ant-btn:last-child:not(:first-child) {
     background: @group-primary-last-button;
     width: 26px;
-    height: @base-input-height !important;
+    height: @base-input-height  !important;
 
     .anticon-down:before {
       color: #fff;
@@ -3051,11 +3269,11 @@ i.uf-search,
 
   .ant-btn-group.ToolBar_isAddButton:hover {
     >.ant-btn:first-child:not(:last-child) {
-      background: @group-primary-first-button-hover !important;
+      background: @group-primary-first-button-hover  !important;
     }
 
     >.ant-btn:last-child:not(:first-child) {
-      background: @group-primary-last-button-hover !important;
+      background: @group-primary-last-button-hover  !important;
 
     }
   }
@@ -3064,7 +3282,7 @@ i.uf-search,
 .Toolbar_Group_Length1 {
   .ant-dropdown-trigger.ToolBar_isAddButton {
     height: 32px;
-    background: @primary-color!important;
+    background: @primary-color !important;
     color: #fff;
     padding: 6px 14px;
     border: none;
@@ -3088,7 +3306,7 @@ i.uf-search,
   }
 
   .ant-dropdown-trigger.ToolBar_isAddButton:hover {
-    background: @primary-color-hover !important;
+    background: @primary-color-hover  !important;
     color: #fff;
 
     .anticon-down:before {
@@ -3158,118 +3376,66 @@ i.uf-search,
     }
   }
 
-  /*一个按钮是配置的 模板按钮*/
+  /*一个按钮是配置的 卡片模板按钮*/
   .temp_header {
     height: @base-input-height;
-    line-height: @base-input-height;
-
-    svg {
-      width: 15px;
-      height: 15px;
-      margin-right: 5px;
-      float: left;
-      margin-top: 6px;
+    line-height: @base-input-height - 2;
+    padding: 0 10px;
+    i{
+      margin-right: -2px;
+      margin-left: 4px;
     }
   }
 }
 
 // 组合分页按钮
 .btn-toolbar-bottom .col-auto .Toolbar_Group:last-child {
-   .u-button.icon-normal-width {
+  .u-button.icon-normal-width {
     min-width: 32px;
     width: 32px;
     padding: 0 7px;
+
     .icon {
       width: 12px;
       height: 12px;
       vertical-align: -.2em;
       margin: 0;
     }
-   }
+  }
 }
 
 /*组合 都是ant-btn-group类型*/
 .btn-toolbar-bottom .Toolbar_Group {
   .u-button.icon-normal-width {
-    width: auto;
-    // padding: 0 12px;
-    .icon {
-      margin: 0 4px 0 0;
+    .group-normal-button-mixin();
+    &.u-button-primary {
+      .primary-button-mixin();
     }
   }
 
-  .ant-btn-group {
-    border: 1px solid rgba(217, 217, 217, 1);
-    margin-left: -1px;
-    border-left: #d9d9d9 solid 1px;
-    box-sizing: border-box;
+  // .Toolbar_Common_Btn_Menus {
+  //   .ant-btn {
+  //     &:hover {
+  //       background: #F3F5F9;
+  //     }
+  //   }
 
-    .ant-btn {
-      height: 30px !important;
-      min-width: auto;
+  //   .ant-btn:first-child {
+  //     border-right: 1px solid transparent;
+  //   }
 
-      span {
-        display: block;
-        position: relative;
+  //   .ant-btn:first-child:hover {
+  //     border-right: 1px solid #fff;
+  //     box-sizing: border-box;
+  //   }
+  // }
+}
 
-        &::before {
-          content: '';
-          width: 1px;
-          height: 24px;
-          background: @group-secondary-line;
-          opacity: 0.49340000000000006;
-          position: absolute;
-          top: -6px;
-          right: -8px !important;
-        }
-      }
-    }
+// 电商通单笔容差
+.btn-toolbar-bottom .Toolbar_Group_Length1 .basic-input-text {
 
-    &:hover {
-      border-color: #505766;
-      z-index: 1;
-      color: #333;
-      overflow: hidden;
-
-      .ant-btn {
-        color: #333;
-      }
-
-      .anticon-down:before {
-        color: #505766;
-      }
-    }
-
-    .ant-btn-ghost {
-      min-width: auto !important;
-    }
-  }
-
-  .ant-btn-group:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-
-  .ant-btn-group:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-
-  .Toolbar_Common_Btn_Menus {
-    .ant-btn {
-      &:hover {
-        background: #F3F5F9;
-      }
-    }
-
-    .ant-btn:first-child {
-      border-right: 1px solid transparent;
-    }
-
-    .ant-btn:first-child:hover {
-      border-right: 1px solid #fff;
-      box-sizing: border-box;
-    }
+  >.ant-row {
+    display: flex;
   }
 }
 
@@ -3287,121 +3453,131 @@ i.uf-search,
     min-width: 60px;
   }
 
-  .ant-btn+.ant-btn {
-    border-radius: 0px;
-  }
+  // .ant-btn+.ant-btn {
+  //   border-radius: 0px;
+  // }
 
-  .ant-btn:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
+  // .ant-btn:first-child {
+  //   border-top-left-radius: 4px;
+  //   border-bottom-left-radius: 4px;
+  //   border-top-right-radius: 0px;
+  //   border-bottom-right-radius: 0px;
+  // }
 
-  .ant-btn:last-child {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
+  // .ant-btn:last-child {
+  //   border-top-left-radius: 0px;
+  //   border-bottom-left-radius: 0px;
+  //   border-top-right-radius: 4px;
+  //   border-bottom-right-radius: 4px;
+  // }
 
-  .ant-btn-primary {
-    margin-right: 0px !important;
-    height: 32px !important;
+  // .ant-btn-primary {
+  //   margin-right: 0px !important;
+  //   height: 32px !important;
 
-    svg {
-      margin-top: -2px !important;
-    }
+  //   svg {
+  //     margin-top: -2px !important;
+  //   }
 
-    &:hover {
-      color: #fff !important;
-      z-index: 0 !important;
-    }
-  }
+  //   &:hover {
+  //     color: #fff !important;
+  //     z-index: 0 !important;
+  //   }
+  // }
 
-  .ant-btn-clicked {
-    svg {
-      width: 13px;
-      height: 13px;
-      margin-right: 5px; // async
-    }
-  }
+  // .ant-btn-clicked {
+  //   svg {
+  //     width: 13px;
+  //     height: 13px;
+  //     margin-right: 5px; // async
+  //   }
+  // }
 
-  .ant-btn {
-    margin-left: -1px;
-    height: 32px !important;
-    float: left;
-    min-width: 60px;
-    border-radius: 0px;
-  }
+  // .ant-btn {
+  //   margin-left: -1px;
+  //   height: 32px !important;
+  //   float: left;
+  //   min-width: 60px;
+  //   border-radius: 0px;
+  // }
 
-  .ant-btn.ant-btn-primary:hover {
-    margin-left: 0px;
-  }
+  // .ant-btn.ant-btn-primary:hover {
+  //   margin-left: 0px;
+  // }
 
-  .ant-btn:hover {
-    border-color: #505766;
-    z-index: 1;
-    color: #505766;
-    overflow: hidden;
+  // .ant-btn:hover {
+  //   border-color: #505766;
+  //   z-index: 1;
+  //   color: #505766;
+  //   overflow: hidden;
 
-    .ant-btn {
-      color: #505766;
-    }
+  //   .ant-btn {
+  //     color: #505766;
+  //   }
 
-    .anticon-down:before {
-      color: #505766;
-    }
-  }
+  //   .anticon-down:before {
+  //     color: #505766;
+  //   }
+  // }
 
-  .ant-btn-primary+.ant-btn {
-    // async 分组按钮线的问题
-    border-left: #fff solid 1px;
-  }
+  // .ant-btn-primary+.ant-btn {
+  //   // async 分组按钮线的问题
+  //   border-left: #fff solid 1px;
+  // }
 }
 
-.btn-toolbar-bottom .Toolbar_Group .ant-btn:first-child:not(:last-child),
-.btn-toolbar-bottom .Toolbar_Group .ant-btn-group:first-child:not(:last-child) {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
+// .btn-toolbar-bottom .Toolbar_Group .ant-btn:first-child:not(:last-child),
+// .btn-toolbar-bottom .Toolbar_Group .ant-btn-group:first-child:not(:last-child) {
+//   border-top-left-radius: 4px;
+//   border-bottom-left-radius: 4px;
+//   border-top-right-radius: 0px;
+//   border-bottom-right-radius: 0px;
+// }
 
-.btn-toolbar-bottom .Toolbar_Group .ant-btn:last-child:not(:first-child),
-.btn-toolbar-bottom .Toolbar_Group .ant-btn-group:last-child:not(:first-child) {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
+// .btn-toolbar-bottom .Toolbar_Group .ant-btn:last-child:not(:first-child),
+// .btn-toolbar-bottom .Toolbar_Group .ant-btn-group:last-child:not(:first-child) {
+//   border-top-left-radius: 0px;
+//   border-bottom-left-radius: 0px;
+//   border-top-right-radius: 4px;
+//   border-bottom-right-radius: 4px;
+// }
 
 .btn-toolbar-bottom .Toolbar_Group .Toolbar_Group_Item {
   border-radius: 0px;
+
   .u-select {
     .u-select-selection {
-      padding: 0 12px;
-      .u-select-selection-rendered{
+      padding: 0 22px 0px 12px;
+      z-index: 2;
+
+      &:hover {
+        border-color: #505766;
+      }
+
+      .u-select-selection-rendered {
         margin-left: 0;
         margin-right: 4px;
         display: inline-block;
         line-height: 26px;
+        width: 100%;
       }
     }
+
     .u-select-selection--single {
       .u-select-selection-selected-value {
         padding-right: 0;
         padding-left: 0;
       }
     }
+
     .u-select-arrow {
-      position: relative;
-      margin-top: 0;
-      top:0;
+      position: absolute;
+      top: 14px;
       display: inline-block;
-      right: auto;
+      right: 8px;
     }
   }
+
   .ant-select-selection {
     border-radius: 0px;
     margin-left: -1px;
@@ -3411,16 +3587,25 @@ i.uf-search,
     }
   }
 }
+
 .btn-toolbar-bottom .Toolbar_Group .u-button {
   line-height: 26px;
+
   .uf-arrow-down:before {
     transform: scale(.8);
     display: inline-block;
   }
 }
+
 .list-top-toolbar .icon {
   vertical-align: -0.25em;
 }
+// 上面的样式影响了按钮中的图标居中的问题，这里复现下
+.list-top-toolbar button .icon {
+  vertical-align: -0.15em
+}
+
+
 .btn-toolbar-bottom .Toolbar_Group .Toolbar_Group_Item:first-child:not(:last-child) {
   .ant-select-selection {
     border-top-left-radius: 4px;
@@ -3439,13 +3624,20 @@ i.uf-search,
   }
 }
 
-.ant-tabs-tabpane .btn-toolbar-bottom .col-auto .Toolbar_Group button.ant-dropdown-trigger {
-  margin-left: -1px;
-}
+// .ant-tabs-tabpane .btn-toolbar-bottom .col-auto .Toolbar_Group button.ant-dropdown-trigger {
+//   margin-left: -1px;
+// }
 
 .container-edit-mode .list-top-toolbar .ant-row .btn-toolbar-bottom .col-auto,
 .list-top-toolbar .col-auto {
   display: flex;
+}
+
+//按钮下拉符号统一
+.Toolbar_Group {
+  .anticon-down:before {
+    transform: scale(.8) rotate(0deg);
+  }
 }
 
 /*line-tabs切换+三列展示*/
@@ -3607,8 +3799,10 @@ i.uf-search,
 
 // ====================end====================
 
-.group-title {
-  margin-top: 0px;
+.st_demandapplylist {
+  .group-title {
+    margin-bottom: 0;
+  }
 }
 
 .container-edit-mode {
@@ -3640,9 +3834,7 @@ i.uf-search,
 .ant-popover .ant-popover-inner-content {
   .link-filter-content {
     .ant-tree {
-      padding-bottom: 0px;
       max-height: 204px;
-      overflow-y: initial;
     }
 
     .scroll_box {
@@ -3653,14 +3845,17 @@ i.uf-search,
       position: relative;
       padding-bottom: 0px;
     }
+
+    .filter-btn-1 {
+      position: absolute;
+    }
   }
 }
 
 // 表单基本控件（输入框、数字、下拉）
 .u-form-control,
 .u-input-number,
-.u-time-picker-input
-{
+.u-time-picker-input {
   outline: none;
   height: @base-input-height;
   color: #333;
@@ -3683,9 +3878,10 @@ i.uf-search,
   border: 1px solid #505766 !important;
 }
 
-.u-select-disabled .u-select-selection:hover,
-.u-select-selection:focus {
-  border: 1px solid #d9d9d9;
+.u-select-disabled {
+  .u-select-selection {
+    border: 1px solid #d9d9d9 !important;
+  }
 }
 
 .u-select-open .u-select-selection {
@@ -3699,57 +3895,72 @@ i.uf-search,
   margin-bottom: 15px;
 }
 
+// 新增过滤条件，的枚举弹框层级
+.enum-pop.u-popover {
+  z-index: 1701;
+}
+
 //自定义项下拉带搜索
-.enum-pop{
-  .u-popover-content{
-    >div{
+.enum-pop {
+  .u-popover-content {
+    >div {
       position: relative;
-      .u-form-control-affix-wrapper{
-          .u-form-control-search{
-            padding-right: 45px;
-          }
+
+      .u-form-control-affix-wrapper {
+        .u-form-control-search {
+          padding-right: 45px;
+        }
       }
-      .u-tree-title{
-        display: block!important;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
+
+      .u-tree-title {
+        display: block !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
-      .enum_close{
+
+      .enum_close {
         position: absolute;
         right: 40px;
         z-index: 2;
-        top: 9px;
-        &::before{
-          color: rgba(0,0,0,.25);
+        top: 8px;
+
+        &::before {
+          color: rgba(0, 0, 0, .25);
         }
-        &:hover{
-          &::before{
-              color: rgba(0,0,0,.43);
+
+        &:hover {
+          &::before {
+            color: rgba(0, 0, 0, .43);
           }
         }
       }
 
-      .u-tree{
+      .u-tree {
         padding-bottom: 5px;
         overflow-x: hidden;
         max-height: 200px;
-        .enum_nodata{
+
+        .enum_nodata {
           pointer-events: none;
-          .u-tree-switcher-noop{
+
+          .u-tree-switcher-noop {
             display: none;
           }
-          .u-tree-node-content-wrapper-normal{
+
+          .u-tree-node-content-wrapper-normal {
             display: block;
             text-align: center;
             max-width: 100%;
             height: 80px;
             width: 100%;
-            .u-tree-title{
-                height: 100%;
-                line-height: 80px;
+
+            .u-tree-title {
+              height: 100%;
+              line-height: 80px;
             }
-            &:hover{
+
+            &:hover {
               background: #fff;
             }
           }
@@ -3758,75 +3969,91 @@ i.uf-search,
     }
   }
 }
+
 //智能搜索组件smart-search-popover
-.smart-search-popover{
-    //去掉箭头
-    .tooltip-arrow{
-        display: none;
-    }
-    .tooltip-inner{
-        padding: 0px!important;
-        .u-popover-content{
-          .ant-row{
-            padding: 0px!important;
-            height: auto!important;
-            border: none!important;
-            &:hover{
-              background: transparent!important;
-            }
-          }
-          .readOnlyTable{
-              //去除表格里面的线
-              .fixedDataTableRowLayout_main,
-              .public_fixedDataTable_header,
-              .public_fixedDataTable_hasBottomBorder,
-              .fixedDataTableLayout_main,
-              .fixedDataTableCellLayout_main .headerName,
-              .retail-table-cell .textCol
-              {
-                  border: none;
-              }
-              .public_fixedDataTableCell_wrap3 .public_fixedDataTableCell_cellContent .table-header-name{
-                  color: #999;
-              }
-          }
+.smart-search-popover {
+
+  //去掉箭头
+  .tooltip-arrow {
+    display: none;
+  }
+
+  .tooltip-inner {
+    padding: 0px !important;
+
+    .u-popover-content {
+      .ant-row {
+        padding: 0px !important;
+        height: auto !important;
+        border: none !important;
+
+        &:hover {
+          background: transparent !important;
         }
-    }
-}
-/*表格筛选气泡浮层*/
-.colFilter-pop{
-  .colFilter-container{
-    position: relative;
-    .u-form-control-search-container{
-      padding: 0 10px;
-    }
-    .anticon-close-circle{
-      right: 38px;
-      top: 7px;
-      font-size: 13px;
-      &::before{
-        color: rgba(0, 0, 0, 0.25);
       }
-      &:hover{
-        &::before{
+
+      .readOnlyTable {
+
+        //去除表格里面的线
+        .fixedDataTableRowLayout_main,
+        .public_fixedDataTable_header,
+        .public_fixedDataTable_hasBottomBorder,
+        .fixedDataTableLayout_main,
+        .fixedDataTableCellLayout_main .headerName,
+        .retail-table-cell .textCol {
+          border: none;
+        }
+
+        .public_fixedDataTableCell_wrap3 .public_fixedDataTableCell_cellContent .table-header-name {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+/*表格筛选气泡浮层*/
+.colFilter-pop {
+  .colFilter-container {
+    position: relative;
+
+    .u-form-control-search-container {
+      padding: 0 10px;
+
+      .u-form-control-search input.u-form-control-search {
+        padding: 0 40px 0 10px;
+      }
+    }
+
+    .anticon-close-circle {
+      right: 38px;
+      top: 8px;
+      font-size: 12px;
+      position: absolute;
+
+      &:hover {
+        &::before {
           color: rgba(0, 0, 0, 0.43);
         }
       }
     }
-    .colFilter-scroll{
+
+    .colFilter-scroll {
       height: 224px;
       overflow-y: auto;
       margin: 6px 0;
       overflow-x: hidden;
       max-width: 520px;
-      .u-checkbox{
+
+      .u-checkbox {
         display: block;
         height: 28px;
         line-height: 28px;
         position: relative;
         padding: 0px 10px;
         margin-right: 0px;
-        .u-checkbox-label{
+
+        .u-checkbox-label {
           line-height: 28px;
           display: block;
           white-space: nowrap;
@@ -3834,26 +4061,32 @@ i.uf-search,
           overflow: hidden;
           text-overflow: ellipsis;
         }
-        .u-checkbox-label{
+
+        .u-checkbox-label {
           padding: 0px 0px 0px 22px;
-          &::before,&:after{
+
+          &::before,
+          &:after {
             top: 50%;
             margin-top: -8px;
             left: 10px;
           }
         }
-        &:hover{
+
+        &:hover {
           background: #f3f5f9;
         }
       }
+
       //暂无搜索结果
-      .no-data{
+      .no-data {
         color: #999;
-        margin-top: 30px;
+        margin-top: 70px;
         display: block;
         height: 30px;
       }
     }
+
     .colFilter-footer{
       border-top: 1px solid #dcdcdc;
       background: #ffffff;
@@ -3862,8 +4095,16 @@ i.uf-search,
       padding-right: 4px;
       overflow: hidden;
       .u-checkbox{
-        margin-top: 4px;
+        margin-top: 6px;
         float: left;
+        .u-checkbox-label{
+          &::before{
+            top: 1px;
+          }
+          &::after{
+            top: 1px;
+          }
+        }
       }
       .u-button{
         min-width: 54px;
@@ -3884,25 +4125,22 @@ i.uf-search,
 
 }
 
-// // 采购税票明细匹配
-// .meta-default-container.view-container {
-//   .form-left.Manual-calculation-left {
-//     width: 50%;
-//     margin-right: 10px;
-//   }
-//   .form-left+.form-base {
-//     width: 50%;
-//   }
-// }
 // 左树右表各占50%特殊处理
-.balanceadjust-list{
+.balanceadjust-list {
   .form-left.Manual-calculation-left {
     width: 50%;
   }
+
   .form-base {
     width: 50%;
+
+    >.group-container>.group-container {
+      padding-top: 0;
+    }
+
   }
 }
+
 // 电商通 - 仓库配送范围
 .tree-include {
   .Manual-calculation-left {
@@ -3913,27 +4151,250 @@ i.uf-search,
   }
 }
 
+.ec_expressrangelist,
+.ec_warehouserangelist {
+  .height-100 .meta-default-container:not(.footbar-bottom) {
+    height: 100%;
+  }
+}
+
+.ec_distributionStocks {
+  .container-browse-mode .listheadRow .ant-row .rpt-select {
+    margin-right: 7px;
+  }
+}
+
+.ec_passauditlist {
+  .meta-default-container {
+    .viewCell.width-percent-33 .has-related .width-percent-100 {
+      flex: auto;
+    }
+    div[id='ec_passaudit|group1'],
+    div[id='ec_passaudit|group2'] {
+      .group-container {
+        > div > .group-container {
+          padding-top: 16px;
+
+          &>.group-container {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+    .control-radio.ticket-opening {
+      height: 32px;
+      min-height: 32px;
+    }
+    .viewCell .has-related {
+      .viewCell {
+        &:first-child {
+          width: 44%;
+          display: flex;
+          align-items: center;
+        }
+
+        &:last-child {
+          width: 56%;
+        }
+      }
+    }
+
+    .viewCell .has-related.has-related-select {
+      .u-select-show-search.u-select {
+        display: inline-block;
+      }
+      .viewCell {
+        &:first-child {
+          width: 110px;
+        }
+
+        &:last-child {
+          width: 100%;
+        }
+      }
+
+      &.hasProductName {
+        .viewCell {
+          &:last-child {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+
+    div[id='ec_passaudit|skuNumMin'],
+    div[id='ec_passaudit|productNumMin'] {
+      > div {
+        > .ant-row {
+          .col-float.input-control.control-width {
+            .has-related {
+              .viewCell:first-child {
+                width: 33.5%;
+              }
+              div[id='ec_passaudit|skuNumMax'],
+              div[id='ec_passaudit|productNumMax'] {
+                .col-float.label-control {
+                  width: 30px !important;
+                  min-width: 30px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ec_downloadAnalysis {
+  .group-buttons .meta-checkbox-container {
+    padding-left: 130px;
+  }
+}
+.ec_invoiceconfigurelist {
+  .control-radio > .ant-row {
+    display: flex;
+    .label-control {
+      padding-top: 0;
+    }
+  }
+}
+.ec_expressCoFeeTree,
+.ec_shoplist{
+  .u-tabs.u-tabs-top .u-tabs-bar {
+    margin-bottom: 16px;
+  }
+}
+.ec_shoplist {
+  div[id='ec_shop|token'] {
+    .has-related {
+      .viewCell:first-child {
+        width: 240%;
+      }
+      .viewSetting.viewCell {
+        text-align: right;
+        margin-left: 8px;
+      }
+    }
+  }
+  div[id='ec_shop|group_1'],
+  div[id='ec_shop|group_2'],
+  div[id='ec_shop|group_3'] {
+
+    .group-container {
+      padding-top: 0;
+    }
+  }
+}
+.ec_expressCoFeeTree {
+  .listheadRow .btn-toolbar-bottom > .col-auto {
+    height: auto;
+  }
+}
+// .aa_electronicbalanceschemelist {
+//   div[id='aa_electronicbalancescheme|cPrinterVID'],
+//   div[id='aa_electronicbalancescheme|cPrinterParallelPortNum'],
+//   div[id='aa_electronicbalancescheme|COM'],
+//   div[id='aa_electronicbalancescheme|cPort'],
+//   div[id='aa_electronicbalancescheme|iDataSplite'],
+//   div[id='aa_electronicbalancescheme|iDataReadLength'],
+//   div[id='aa_electronicbalancescheme|iDataAccuracy'],
+//   div[id='aa_electronicbalancescheme|cServerIPAddress'],
+//   div[id='aa_electronicbalancescheme|cPrinterPortType'],
+//   div[id='aa_electronicbalancescheme|iPrinterDataBits'],
+//   div[id='aa_electronicbalancescheme|cPrinterParity'],
+//   div[id='aa_electronicbalancescheme|iDataBits'],
+//   div[id='aa_electronicbalancescheme|cParity'],
+//   div[id='aa_electronicbalancescheme|bContinuedDataRead'],
+//   div[id='aa_electronicbalancescheme|bRecognitionInterval'],
+//   div[id='aa_electronicbalancescheme|bRecognitionPhoto'],
+//   div[id='aa_electronicbalancescheme|cCardType'] {
+//     > div {
+//       > .ant-row {
+//         > .input-control.control-width {
+//           width: calc(~'(60% - 72px)') !important;
+//         }
+//       }
+//     }
+//   }
+//   div[id='aa_electronicbalancescheme|cServerIPAddress'],
+//   div[id='aa_electronicbalancescheme|cCardType'] {
+//     width: 50%;
+//     > div {
+//       width: 100%;
+//       > .ant-row {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+.accountStatement {
+  &.u-modal {
+    .modal-header,
+    .u-modal-footer {
+      border:none;
+    }
+    .u-modal-body .viewCell.width-percent-100 .input-control {
+      width: 60%!important;
+      min-width: auto;
+    }
+  }
+  .Archive.u-modal-dialog .u-modal-body {
+    min-height: 160px;
+  }
+}
+.ec_invoicemanagementlist {
+  .container-browse-mode .group-buttons {
+    margin-bottom: 10px;
+  }
+}
+
+.business_option {
+  .control-radio > .ant-row {
+    display: flex;
+  }
+  .basic-input-text .ant-row .control-width {
+    height: 28px;
+  }
+  .meta-option.container-browse-mode {
+    padding-right: 25px;
+  }
+}
+.ec_itemFixedFee {
+  .viewCell.width-percent-100 .basic-input-text {
+    .input-control {
+      height: 28px;
+    }
+  }
+}
 //文本提示样式
 .basic-label-msg-content-div {
   display: flex;
+
   label {
     width: 100px;
   }
+
   .basic-label-msg-label-text {
     display: flex;
     word-break: break-all;
     overflow: auto;
   }
-  .basic-label-msg-labeltext{
+
+  .basic-label-msg-labeltext {
     min-width: 60px;
   }
 }
+
 .label-msg-primary {
   color: #ff0000;
 }
+
 .label-msg-default {
   color: #1890ff;
 }
+
 .label-msg-success {
   color: #47c479;
 }
@@ -3945,4 +4406,191 @@ i.uf-search,
       border-color: #d9d9d9;
     }
   }
+}
+
+// 时间选择
+// 零售 - 门店信息营业时间
+.timer-range {
+  .timepicker {
+    width: calc(50% - 10px);//TINPER-2730
+    margin-right: 0 !important;
+    float: left; //日期区间格式错乱
+  }
+
+  .sp-range-txt {
+    width: 8.33333%;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+
+  .ant-select-selection__clear {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+}
+
+//select 多选
+.u-select-selection--multiple {
+  .u-select-selection-rendered>ul>li {
+    padding: 0 20px 0 8px;
+  }
+
+  .u-select-selection-rendered {
+    margin-left: 8px;
+  }
+
+  .u-select-selection-choice-remove {
+    top: -3px;
+
+    &::before {
+      color: #adb4bc;
+      font-weight: normal;
+    }
+
+    &:hover {
+      &::before {
+        color: #ee2233;
+      }
+    }
+  }
+}
+
+//层级
+.u-popover.u-popover-tooltip.u-tooltip.inverse {
+  z-index: 1700;
+  transform: translateY(-4px);
+
+  &.inverse-arrow {
+    transform: translateY(8px);
+  }
+
+  &.temp-popover {
+    transform: none;
+  }
+
+  &.table-col-setting {
+    transform: translateX(-4px);
+  }
+}
+
+// 票税匹配复选框右对齐
+.public_fixedDataTableCell_alignRight .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .scheckbox {
+  text-align: right !important;
+}
+.pu_taxticketmatch {
+  .meta-option .viewCell.width-percent-100 .ant-row .u-input-number {
+    width: 80px;
+    .u-form-control {
+      width: 69px;
+      padding-right: 8px;
+    }
+  }
+}
+// 交班单
+.view-container .meta-default-container+.group-container {
+  padding-top: 0;
+}
+
+.viewContainer.width-percent-33 .tag-refer.tag-refer-01.has-error .ant-form-explain {
+  left: 100px;
+  line-height: 1.5;
+}
+
+.viewSetting.viewCell.width-percent-33 .ant-row .control-width textarea {
+  resize: none;
+}
+
+//日期浮层
+.ant-calendar-picker-container {
+  z-index: 1700;
+}
+
+//checkbox改成14
+.u-checkbox .u-checkbox-label:after,
+.u-checkbox .u-checkbox-label:before {
+  content: "";
+  font-family: uf;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  position: absolute;
+  border-radius: 2px;
+}
+.u-checkbox input[type=checkbox]:hover+.u-checkbox-label:before {
+  border-color: #505766;
+ }
+ .u-checkbox.disabled input[type=checkbox]+.u-checkbox-label:before {
+  border-color: #e4e4e4;
+  background: #f7f7f7;
+}
+.u-checkbox.disabled input[type=checkbox]:hover+.u-checkbox-label:before {
+  border-color: #e4e4e4;
+  background: #f7f7f7;
+}
+//select输入光标距离左侧的距离
+.u-select-selection-rendered {
+  margin-left: 8px;
+
+  .u-select-selection-selected-value {
+    padding-left: 0px;
+  }
+}
+
+//表格编辑态数字输入框调整
+.editCol .edit-input-number {
+  .u-input-number-out {
+    .u-input-number {
+      height: 26px !important;
+
+      .u-form-control {
+        height: 24px !important;
+      }
+    }
+  }
+}
+
+.st_materialoutlist .container-edit-mode {
+  .list-top-toolbar {
+    padding-bottom: 0;
+  }
+}
+.Test-time-two {
+  .datepicker-input-group.u-input-group .u-form-control {
+    text-overflow: initial;
+    padding-right: 24px!important;//TINPER-2597
+  }
+}
+//TINPER-2490
+// .aa_selfscreensetting {
+
+//   .listheadRow {
+
+//     .basic-input-text {
+
+//       .input-control.control-width {
+//         width: 381px !important;
+//       }
+//     }
+//   }
+// }
+
+.rm_productconvertlist {
+  .beforeProductInfo:not(.ant-row) {
+    margin-top: 4px;
+  }
+  .afterProductInfo:not(.ant-row), .conversionRate:not(.ant-row) {
+    margin-top: 5px;
+  }
+
+  .group-title {
+    margin-bottom: 0;
+  }
+}
+//YS 规范 33% 后面的 100% 宽度必须是 60%
+.viewCell.width-percent-33 + .width-percent-100 .inputemail .input-control {
+  width: 60% !important;
 }

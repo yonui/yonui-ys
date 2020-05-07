@@ -1,0 +1,121 @@
+// ============================================
+// form 表单控件样式
+// ============================================
+
+@import './input.less';
+
+// label
+.form-label-mixin() {
+  min-width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 14px;
+  max-height: 32px;
+  overflow: hidden;
+  padding-left: 15px;
+  word-wrap: break-word;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  hyphens: auto;
+  position: relative;
+}
+
+// 普通输入框
+.basic-input-text-mixin() {
+  height: 28px;
+  .u-form-control-affix-wrapper {
+    .u-form-control {
+      .input-mixin();
+    }
+    .u-form-control-suffix {
+      color: #A7ABB2;
+      cursor: pointer;
+      line-height: 28px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      right: 7px;
+
+      .uf-close-c {
+        color: rgba(0, 0, 0, 0.25);
+        line-height: 12px;
+        font-size: 12px;
+        &:before {
+          content: "\e66b";
+        }
+      }
+    }
+  }
+}
+
+// 下拉参照框 list-refer
+.basic-list-refer-mixin() {
+  height: 28px;
+  .s-popover-inner-span {
+    line-height: 0;
+    .ant-select {
+      color: #666;
+
+      &.ant-select-open,
+      &.ant-select-focused {
+        .ant-select-selection {
+          border: 1px solid #505766;
+          box-shadow: none;
+        }
+      }
+
+      .ant-select-selection {
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid #505766;
+        }
+
+        .ant-select-selection__rendered {
+          margin-right: 38px;
+          margin-left: 8px!important;
+          display: block;
+          position: relative;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+// label + control
+.form-item-mixin() {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  position: relative;
+  margin-bottom: 12px;
+
+  .label-control {
+    .form-label-mixin();
+  }
+
+  .input-control {
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+
+    .basic-input-text {
+      .basic-input-text-mixin();
+    }
+
+    .basic-list-refer {
+      .basic-list-refer-mixin()
+    }
+  }
+}

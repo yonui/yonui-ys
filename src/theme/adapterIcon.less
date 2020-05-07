@@ -1,7 +1,5 @@
-// ============== from base-new.less start ===================
 .anticon-zuidahua:before {
   content: "\e7cc";
-  margin-top: 1px;
   color: #999;
   font-size: 16px;
   font-family: "iconfont" !important;
@@ -50,10 +48,12 @@
 
 .anticon-password-hide:before {
   content: "\e6ab";
+  font-family: 'iconfont' !important;
 }
 
 .anticon-user:before {
   content: "\e401";
+  font-family: 'iconfont' !important;
 }
 
 .anticon-jia:before {
@@ -62,12 +62,14 @@
 
 .anticon-lock:before {
   content: "\e403";
+  font-family: 'iconfont' !important;
 }
 
 .anticon-erweima:before {
   content: "\E6be";
   color: #ee2223;
   font-size: 70px;
+  font-family: 'iconfont' !important;
 }
 
 .anticon-kuaisu:before {
@@ -126,6 +128,7 @@
 
 .anticon-changyonggongnengshezhi::before {
   content: "\e7b4";
+  font-family: 'iconfont' !important;
 }
 
 .anticon-xuanzhong1-copy:before {
@@ -151,6 +154,7 @@
 
 .icon-xuanzhong1::before {
   content: "\E6af";
+  font-family: 'iconfont' !important;
 }
 
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item:after {
@@ -163,11 +167,13 @@
 
 .ant-input-number-handler-down-inner:before {
   content: "\E633";
+  font-family: 'iconfont' !important;
 }
 
 .ant-input-number-handler-up-inner:before {
   content: "\E633";
-  transform: rotate(180deg)
+  transform: rotate(180deg);
+  font-family: 'iconfont' !important;
 }
 
 .anticon-jianpan::before {
@@ -294,6 +300,8 @@
 
 .anticon-tuodong::before {
   content: "\e805";
+  font-family: iconfont!important;
+  color: #ccc;
 }
 
 .anticon-zuotuyoubiao:before {
@@ -314,14 +322,17 @@
 
 .ant-tabs-tab-prev-icon:before {
   content: "\E515";
+  font-family: "iconfont" !important;
 }
 
 .anticon-yemianfenlan-zhankai:before {
   content: "\e820"; // async
+  font-family: 'iconfont' !important;
 }
 
 .anticon-yemianfenlan-zhedie:before {
   content: "\e81f"; // async
+  font-family: 'iconfont' !important;
 }
 
 .icon {
@@ -400,8 +411,8 @@
 
 .anticon-shanchu1:before {
   content: "\e68f";
+  font-family: 'iconfont' !important;
 }
-
 
 .anticon-step-info:before {
   content: "\e532";
@@ -415,9 +426,6 @@
   content: "\e528";
 }
 
-// ============== from base-new.less end ===================
-
-// ============== from home.less start =====================
 .ant-select-arrow:before {
   content: "\E633";
   color: #98a2ad;
@@ -438,12 +446,8 @@
 
 .anticon-biaogeshanchu::before {
   content: "\e68f";
+  font-family: iconfont!important;
 }
-
-// ============== from home.less end =====================
-
-
-// ============== from common.less start =================
 
 .anticon-home:before {
   content: "\e503";
@@ -630,13 +634,6 @@
   font-family: "iconfont" !important;
 }
 
-// .anticon-caret-circle-up:before,
-// .anticon-circle-up:before,
-// .anticon-up-circle:before {
-//   content: "\e685";
-//   font-family: "iconfont" !important;
-// }
-
 .ant-menu-item:hover,
 .ant-menu-item-active,
 .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
@@ -649,9 +646,6 @@
 	content: "\e77c";
 }
 
-// ============== from common.less end =================
-// ============== from home-new.less start =================
-
 .iconfont{
 	font-style: normal;
 }
@@ -662,6 +656,21 @@
 
 .icon-home:before{
 	content: "\e627";
+}
+.icon-dingdanzhongxin:before{
+  content: "\e78b";
+}
+.icon-shangchengshezhi:before{
+  content: "\e797";
+}
+.icon-quyuzhandian:before{
+  content: "\e796";
+}
+.icon-shangjiaguanli:before{
+  content: "\e7b0";
+}
+.icon-shujufenxi:before{
+  content: "\e791";
 }
 .icon-jigoudangan:before{
 	content: "\e638";
@@ -734,8 +743,6 @@
   }
 }
 
-// ============== from home-new.less end =================
-// ============== from home.less start ===================
 .anticon-edit-disabled::before{
   content: "\e699";
 }
@@ -746,9 +753,6 @@
   content: "\E6AF";
   font-family: "iconfont" !important;
 }
-// ============== from home.less end =================
-
-
 
 // fix: ys 风格alert error 弹框
 .icon-qingkong:before {
@@ -760,14 +764,14 @@
 .anticon-down:before {
   content: '\e633';
   font-family: 'iconfont' !important;
-  // transform: scale(.8);
-  // margin-top: 1px;
+  font-size: 12px;
+  transform: scale(.8);
 }
 
 .anticon.anticon-up:before {
   content: '\e633';
   font-family: 'iconfont' !important;
-  transform: rotate(180deg);
+  transform: rotate(180deg) scale(.8);
 }
 
 // fix: ys 银行网点记录删除状态的图标
@@ -855,13 +859,14 @@
   span.u-tree-switcher.icon-none .uf {
     width: 14px;
     height: 14px;
-    line-height: 12px;
+    line-height: 13px;
     border: 1px solid #ccc;
     border-radius: 2px;
+    display: block;
 
     &::before {
       font-family: 'iconfont';
-      display: inline-block;
+      display: block;
       font-weight: 700;
       color: #333;
       transition: transform .3s;
@@ -878,7 +883,11 @@
 }
 
 .anticon.anticon-close-circle:before {
-  color: rgba(0,0,0,.25);
+  font-size: 12px;
+  color: #ccc;
+  &:hover {
+    color: #999;
+  }
 }
 
 .anticon-ellipsis:before {
@@ -944,7 +953,7 @@
   font-size: 16px;
   font-family: "iconfont" !important;
   line-height: 28px;
-  color: #adb4bc;
+  color: #ccc;
 }
 .anticon-checked:before{
   content: "\e673";
@@ -962,4 +971,7 @@
 .anticon-delete::before{
   content: "\E68F";
   font-family: "iconfont" !important;
+}
+.anticon-zuixiaohua1::before {
+  content: "\e7cd";
 }

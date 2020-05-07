@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 import {Col,Row} from '../index'
 import '../style';
 import './demo.less';
+import '../../../theme/index.less'
 export default class Demo extends Component {
     render() {
         return (

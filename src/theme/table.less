@@ -1,4 +1,3 @@
-// @import 'global.less';
 
 .fixedDataTableCellLayout_wrap3 {
   .public_fixedDataTableCell_cellContent {
@@ -30,7 +29,6 @@
     }
 
     .textCol {
-      padding: 12px 10px;
       cursor: pointer;
 
       &.labelswitch {
@@ -39,10 +37,11 @@
       }
 
       img {
-        width: 30px !important;
-        height: 30px !important;
+        width: 28px !important;
+        height: 28px !important;
         border-radius: 60px;
-        margin-top: -7px;
+        margin-top: 3px;//TINPER-2676
+        margin-left: 10px;
 
         &.cell-avatar-logo {
           border-radius: 4px;
@@ -69,7 +68,6 @@
         padding: 0;
         padding-left: 10px;
         flex-shrink: 0;
-        // line-height: 18px; // !fix: 供货目录新增modal 的表格标题
       }
     }
   }
@@ -98,7 +96,6 @@
 
 .public_fixedDataTableRow_delRow,
 .public_fixedDataTableRow_delRow .public_fixedDataTableCell_main {
-  // background-color: #696969;
   color: #ccc;
 }
 
@@ -119,7 +116,6 @@
 .public_fixedDataTableCell_disabled,
 .public_fixedDataTableCell_disabled .ant-tag,
 .public_fixedDataTableCell_disabled.textCol {
-  // pointer-events: none;
   color: #999;
   cursor: not-allowed !important;
   min-height: 10px;
@@ -128,7 +124,6 @@
 
 // 解决新增界面内表格头部筛选鼠标经过后无法居中问题
 .public_fixedDataTableCell_disabled{
-  // padding: 0 10px;
   padding: 0;
   .public_fixedDataTableCell_cellContent>div{
     display: flex;
@@ -162,11 +157,11 @@
   position: absolute;
   right: 0;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 999;
   top: 1px;
   background: @table-header-background-color;
   border: 0;
-  width: 40px;
+  width: 36px;
 }
 
 .SettingBtn {
@@ -177,19 +172,13 @@
   border-radius: 0px;
 }
 
-.fixedDataTableCellLayout_alignRight {
-  // text-align: left; 采购单据列表的数量列数值右对齐
-}
-
 .headerName {
   color: #333;
-  // padding-left: 10px;
 }
 
 .checkboxHD {
   height: @base-input-height + 2;
   line-height: @base-input-height + 2;
-  border-bottom: 1px solid #dbe0e5;
 }
 
 .ant-tabs-tabpane {
@@ -235,14 +224,21 @@
 
 .listTable .listTableTag {
   padding: 2px 5px;
-  margin: 12px 10px;
+  margin: 5px 10px;
   border-radius: 2px;
   display: inline-block;
+  line-height: 18px;
 }
 
 .fixedDataTableLayout_main {
   border: none;
   border-top: 1px solid #505766;
+
+  .has-error {
+    .ant-form-explain {
+      display: none;
+    }
+  }
 }
 
 .fixedDataTableRowLayout_fixedColumnsDivider {
@@ -322,25 +318,6 @@
   padding-left: 2px;
 }
 
-.btn-caret .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
-  padding: 0;
-  display: block;
-  height: 6px;
-  margin: 0 auto;
-}
-
-.btn-caret .ant-btn .anticon {
-  font-size: 12px;
-  vertical-align: top;
-  transform: scale(.5) rotate(0deg);
-  color: #ccc;
-  transform-origin: top;
-}
-
-.btn-caret .ant-btn-icon-active .anticon {
-  color: #333 !important
-}
-
 .ant-popover-inner-content {
   padding: 8px 0;
   line-height: 33px;
@@ -355,7 +332,6 @@
     div {
       height: 32px;
       line-height: 32px;
-      /* overflow: hidden; */
     }
 
     &:hover {
@@ -415,7 +391,6 @@
   right: 15px;
   overflow: hidden;
   z-index: 999;
-  // padding-left: 13px;
   border: 0;
   background: #edf1f7;
 
@@ -433,7 +408,6 @@
 
   span {
     margin-left: 8px;
-    // margin-right: 3px;
 
     &:only-child {
       margin-left: 0;
@@ -454,7 +428,6 @@
   }
 
   .table-list-btn {
-    // padding: 4px 12px;
     padding: 0 10px;
     background: #505766;
     color: #fff;
@@ -491,7 +464,11 @@
 }
 
 .filter-btn-fixed {
-  overflow: hidden
+  height: auto!important;
+  max-height: 298px;
+  overflow: hidden!important;
+  padding-bottom: 34px;
+
 }
 
 .filter-btn-fixed .filter-btn-1 {
@@ -509,7 +486,6 @@
 }
 
 .filter-txt {
-  min-height: 220px;
   overflow: auto;
   max-height: 220px;
   overflow-x: hidden;
@@ -621,13 +597,7 @@
 }
 
 .editCol {
-  .has-feedback {
-    // margin-top: -6px;
-  }
-
   .edit-input-number {
-    // margin-top: -8px;
-
     .ant-select-selection {
       margin-top: 0px;
     }
@@ -647,11 +617,6 @@
 
   .ant-select-selection__rendered {
     line-height: 26px;
-  }
-
-  //影响表里里面的下拉框查询方案 .ant-select-selection{margin-top: -7px;}
-  .undefined {
-    //margin-top: -6px;  影响新增银行对账方案中 凭证  辅助核算类型
   }
 
 }
@@ -772,10 +737,17 @@
 
 .eChart-nodata {
   color: #999;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 40px;
+  svg{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .react_for_echarts {
@@ -883,7 +855,9 @@
       }
     }
     .sku-newbtn {
-      float: left;
+      float: right;
+      background: transparent;
+      margin-right: 34px;
       border: none;
       padding: 6px 0px;
       vertical-align: middle;
@@ -896,7 +870,8 @@
       }
 
       &:hover {
-        color: #ee2223;
+        background: transparent !important;
+        color: #ee2223 !important;
       }
     }
   }
@@ -962,7 +937,6 @@
   margin-right: 3px;
 }
 
-// .btn-submenu .moreButton{ margin-top: 0px;}
 /*表格的部分单独添加边距*/
 .ant-tabs-content .listheadRow {
   margin: 0px 20px;
@@ -978,11 +952,6 @@
     }
   }
 }
-
-// .ant-tabs-content .meta-table {
-//   overflow: hidden;
-
-// }
 
 .public_fixedDataTable_main,
 .fixedDataTableLayout_rowsContainer,
@@ -1007,7 +976,6 @@
 
 /*销售排名里面的表格*/
 .rpt-table {
-  /*margin: 0 20px;*/
   width: auto !important;
 }
 
@@ -1111,7 +1079,10 @@
 }
 
 /*报表--分组方案右移*/
-.container-browse-mode.container-less-height {
+.container-browse-mode{
+  .meta-table.listTable.readOnlyTable {
+    // padding-bottom: 60px;
+  }
   .listheadRow .ant-row {
     .rpt-toolbar {
       min-width: 70px;
@@ -1144,8 +1115,10 @@
     }
 
     .rpt-select {
-      width: 220px;
+      min-width: 300px;
+      width: auto;
       float: right;
+      padding: 0 1px;
 
       .control-width .ant-select {
         width: 150px !important;
@@ -1222,16 +1195,13 @@
   }
 }
 
-/*新增-只能补货弹窗*/
-.ant-modal.modal-IntelligenceDemand {
-  .ant-modal-header {
-    border-bottom: none;
-  }
-
-  .ant-modal-body {
-    padding: 12px 20px;
-    height: 204px;
-
+/*新增-智能补货弹窗*/
+.modal-IntelligenceDemand {
+  width: 880px!important;
+  .u-modal-body {
+    margin: 0px 0px 0px 20px;
+    height: 390px;
+    overflow-y: auto;
     h3 {
       font-size: 14px;
       line-height: 28px !important;
@@ -1249,6 +1219,7 @@
 
     .ant-input-number {
       margin: 0px 8px;
+      width: 60px;
     }
 
     .ant-calendar-picker {
@@ -1265,18 +1236,63 @@
   }
 
   .ant-radio-group {
+    .intelligence-count{
+      margin-left: 26px;
+      width: 800px;
+      white-space: initial;
+    }
     label.ant-radio-wrapper {
       .ant-input-number {
-        width: 100px !important;
+        width: 60px !important;
+        .ant-input-number-input{
+          height: 26px;
+        }
       }
     }
+    .opToken{
+      margin: 0px 8px 0px 8px;
+      font-size: 14px;
+    }
+    .ant-input-number+.opToken{
+      margin: 0px 8px 0px 0px;
+    }
+    .opToken+.ant-checkbox-wrapper{
+      padding-left: 0px;
+    }
+    .ant-checkbox-wrapper+span{
+      padding: 0px;
+    }
+    .ant-checkbox-wrapper{
+      margin-right: 8px;
 
+      &:last-child{
+        margin-right: 8px;
+      }
+    }
     .ant-calendar-picker {
-      width: 150px !important;
+      width: 140px !important;
       display: inline-block;
     }
   }
-
+  p{
+    padding-left: 22px;
+    line-height: 26px;
+    margin-top: 26px;
+  }
+  .ant-radio-group.intelligence-time{
+      background: #F9F9F9;
+      width: 770px;
+      padding: 15px 20px;
+      margin-left: 22px;
+      .ant-radio-wrapper:last-child{
+        margin-bottom: 0px;
+      }
+      .ant-radio-group{
+        .ant-radio-wrapper{
+          margin-bottom: 0px;
+        }
+      }
+  }
   .ant-modal-footer {
     padding: 15px 30px;
   }
@@ -1302,6 +1318,7 @@
       display: block;
       width: 228px;
       height: @base-input-height;
+      line-height: @base-input-height - 2;
       padding-right: 45px;
     }
   }
@@ -1320,7 +1337,7 @@
 
   .anticon-down {
     right: 10px;
-    top: 6px;
+    top: 7px;
     position: absolute;
     color: rgba(0, 0, 0, .45);
     cursor: pointer;
@@ -1347,23 +1364,15 @@
 .crossGroupingModal {
   width: 750px !important;
   height: 600px !important;
-
-  .u-modal-header {
-    border-bottom: none;
-    // padding: 12px 20px 0px 20px;
-  }
-
-  .u-modal-footer {
-    // padding: 15px 30px;
-  }
-
   .u-modal-body {
     color: #666;
-    padding: 0px 20px 0px 20px;
-
+    padding: 16px 20px 0px 20px;
+    height: 548px;
+    .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
+      top: 1px;
+    }
     .ant-row {
       margin-bottom: 10px !important;
-      line-height: 26px !important;
     }
 
     .ant-row.crossaddnamemargin {
@@ -1472,7 +1481,9 @@
         font-size: 12px;
       }
     }
-
+    .eChart-ApplyAt {
+      margin-top: 2px;
+    }
     .eChart_DisplayType,
     .eChart-ApplyAtPc {
       margin-left: 16px;
@@ -1567,6 +1578,9 @@
 
     .selecteddata {
       width: 270px !important;
+      .selectattention{
+        color: #999;
+      }
     }
 
     .crossselectborder {
@@ -1574,13 +1588,29 @@
       border-radius: 4px;
       width: 268px;
       height: 317px;
+      .search-tree-2{
+        .u-select-disabled.u-select .u-select-selection{
+          .u-select-search-field-wrap .u-select-search-field{
+            cursor: not-allowed;
+          }
+        }
+        .u-button-icon{
+          height: 20px;
+          left: 210px!important;
+          top: 10px!important;
+          background: transparent;
+        }
+        .u-button-icon[disabled]{
+          background: transparent!important;
+        }
+      }
     }
 
     .crossselectborder2 {
       height: 388px;
 
       .crossadddatalist {
-        height: 334px;
+        height: 336px!important;
       }
     }
 
@@ -1613,11 +1643,13 @@
 
     .crossadddatalist {
       width: 100%;
-      height: 260px;
+      height: 264px;
       overflow-y: auto;
 
       .ant-row {
         margin-bottom: 0px !important;
+        height: 26px;
+        line-height: 22px;
       }
 
       .ant-checkbox-wrapper {
@@ -1680,6 +1712,49 @@
       .ant-btn:hover {
         border: none;
       }
+    }
+
+    .crossbtncount+.selecteddata{
+      ul li{
+        height: 32px;
+        padding-left: 10px;
+        line-height: 30px;
+        font-size: 12px;
+        color: #333;
+        position: relative;
+        padding-right: 40px;
+        display: block;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .anticon-tuodong{
+          margin-right: 5px;
+          font-size: 13px;
+          color: #ccc;
+        }
+        .anticon-biaogeshanchu{
+          position: absolute;
+          right: 12px;
+          top: 10px;
+          font-size: 14px;
+          color: #505766;
+          display: none;
+          &:hover{
+          color: #ee2233;
+          }
+        }
+        &:hover{
+          background: #f3f5f9;
+          .anticon-biaogeshanchu{
+            display: block;
+          }
+          .anticon-tuodong{
+            color: #333;
+          }
+        }
+    }
+
     }
 
     .crossbtncount.dimension {
@@ -1785,7 +1860,7 @@
         height: 96px;
 
         .titlename-list {
-          height: 66px;
+          height: 65px;
 
           .ant-row {
             margin-bottom: 0px !important;
@@ -1816,9 +1891,15 @@
         border-bottom: #DBE0E5 solid 1px;
         border-top: #DBE0E5 solid 1px;
         cursor: pointer;
-
-        span {
-          margin-left: 15px;
+        .groupCondition-HideAllZeroRow{
+          .u-checkbox .u-checkbox-label{
+            padding-right: 24px;
+          }
+          .u-checkbox .u-checkbox-label:before,
+          .u-checkbox .u-checkbox-label:after{
+            left: auto;
+            right: 0px;
+          }
         }
       }
 
@@ -1831,7 +1912,7 @@
         float: right;
         height: 28px;
         line-height: 25px;
-
+        margin-left: 23px!important;
         .ant-checkbox-wrapper {
           display: inline;
 
@@ -1847,7 +1928,7 @@
 
       .titlename-list,
       .titlename-list3 {
-        height: 87px;
+        height: 88px;
         overflow-y: auto;
         margin-top: 0px;
 
@@ -1857,7 +1938,8 @@
 
         .ant-row {
           margin-bottom: 0px !important;
-
+          height: 26px;
+          line-height: 22px;
           .ant-checkbox-wrapper {
             line-height: 26px;
           }
@@ -1882,7 +1964,7 @@
       }
 
       .titlename-list3 {
-        height: 128px;
+        height: 120px;
         width: 100%;
 
         .ant-row {
@@ -1911,6 +1993,9 @@
 
         .groupCondition-ColumnDefine-Design {
           float: right;
+          span:hover{
+            color: #588ce9;
+          }
         }
       }
 
@@ -2084,9 +2169,12 @@
 .groupCondition-ColumnDefine {
   .group-add-grouping-count {
     height: auto;
-    padding: 0 0px 0 12px;
+    padding: 0 0 0 12px;
     overflow: hidden;
-
+    .footer-btn {
+      margin-top: 8px;
+      padding-right: 12px;
+    }
     >div>div {
       >div {
         >span {
@@ -2105,7 +2193,7 @@
 
   >div:last-child {
     button {
-      margin-right: 16px;
+      margin:0 4px;
     }
   }
 
@@ -2113,8 +2201,6 @@
 
 .container-browse-mode .listheadRow {
   .rpt-select {
-    // width: 300px !important;
-
     .ant-input {
       height: 31px;
     }
@@ -2216,7 +2302,7 @@
         float: left;
         width: 100%;
         text-align: center;
-        line-height: 40px;
+        line-height: 30px;
         border-right: 1px solid #d3d3d3;
       }
     }
@@ -2232,7 +2318,7 @@
 .meta-print-button {
   .col-float {
     width: auto !important;
-    padding-left: 10px;
+    padding-left: 8px;
 
     .ant-btn {
       height: 30px;
@@ -2245,6 +2331,9 @@
 
   .ant-select-selection {
     min-width: 60px;
+  }
+  &+.u-button {
+    margin-left: 8px;
   }
 }
 
@@ -2334,13 +2423,33 @@
 
 /*表报-销售分析-汇总设置*/
 .sumareasetting_list {
-  width: 365px;
-
+  width: 400px;
+  .tooltip-inner{
+    padding-top: 0px!important;
+    padding-bottom: 5px!important;
+  }
   .sumarea_list_caption {
-    height: 42px;
-    border-bottom: #eee solid 1px;
-    line-height: 42px;
-
+    height: 38px;
+    border-bottom: #eeeeee solid 1px;
+    line-height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .u-checkbox-focused{
+      .u-checkbox-label:before{
+        border: 1px solid #d9d9d9!important;
+      }
+    }
+    .u-checkbox {
+      .u-checkbox-label{
+        padding-left: 22px;
+      }
+      .u-checkbox-label:before,
+      .u-checkbox-label:after
+      {
+        top: 1px;
+      }
+    }
     .sumareaset-left {
       margin-left: 20px;
       font-size: 14px;
@@ -2349,10 +2458,15 @@
 
     .ant-checkbox-wrapper {
       float: right;
-      margin-right: 4px !important;
+      margin-right: 4px!important;
       font-size: 12px;
       width: 90px;
-
+      .sumarea_list_items{
+        min-height: 128px;
+        max-height: 206px;
+        overflow-y: scroll;
+        padding: 5px 0 0;
+      }
       .ant-checkbox {
         margin-top: 14px;
       }
@@ -2369,43 +2483,59 @@
     position: relative;
     height: 32px;
     overflow: hidden;
-
+    .anticon-tuodong{
+      position: absolute;
+      left: 10px;
+      top: 11px;
+      cursor: pointer;
+      &:hover{
+        &::before{
+          color: #505766;
+        }
+      }
+    }
     .sumarea_list_item_1 {
       width: 250px;
       float: left;
-
-      .ant-checkbox {
-        margin-top: 9px;
+      margin-left: 27px;
+      .u-checkbox-primary {
+        float: left;
+        height: 32px;
+        line-height: 32px;
+        display: flex;
+        margin-right: 0;
       }
-
-      .ant-checkbox-wrapper span:last-child {
+      .u-checkbox-label{
+        height: 32px;
+        line-height: 32px;
         max-width: 116px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         display: block;
+        &::before,
+        &::after {
+          margin-top: 9.5px;
+        }
       }
-    }
-
-    .ant-checkbox-wrapper {
-      float: left;
-      margin-left: 10px;
-      line-height: 32px;
-      display: flex;
-    }
-
-    .ant-input {
-      padding: 0px 4px;
-      width: 120px !important;
-      float: left;
-      height: 28px;
+      .sumarea_showcaption_all{
+        line-height: 32px;
+      }
     }
 
     .summary_select_all {
       float: left;
       margin-left: 10px;
       line-height: 32px;
-
+      min-width: 87px;
+      text-align: right;
+      .u-button{
+        border: none;
+        background: transparent;
+        span{
+          color: #588CE9 ;
+        }
+      }
       .ant-btn {
         border: none;
         padding: 0px !important;
@@ -2436,7 +2566,7 @@
     }
 
     .sumarea_showcaption_all {
-      float: left;
+      float: right;
       color: #a3a3a4;
 
       span {
@@ -2449,6 +2579,12 @@
         text-overflow: ellipsis;
         max-width: 100px;
         display: block;
+        cursor: pointer;
+      }
+    }
+    &:hover{
+      .anticon-tuodong::before{
+        color: #505766;
       }
     }
   }
@@ -2508,33 +2644,39 @@
 
   .footer-btn {
     width: 100%;
-    height: 30px;
     overflow: hidden;
-
-    .ant-btn-primary {
+    padding-top: 5px;
+    border-top: 1px solid #eeeeee;
+    .u-button-primary {
       margin-right: 12px;
       padding: 5px 12px;
       height: 26px;
       float: left;
       font-size: 12px;
-      margin-top: 4px;
     }
 
-    .ant-btn-default {
+    .u-button-default {
       margin-right: 10px;
       padding: 5px 12px;
       height: 26px;
       float: left;
       font-size: 12px;
-      margin-top: 4px;
+    }
+
+    .up-search {
+      background: #505766;
+      color: #fff;
+      &:hover{
+        color: #fff!important;
+      }
     }
 
     .sumarea_list_8 {
       float: left;
       font-size: 12px;
       margin-left: 12px;
-      margin-top: 1px;
-
+      line-height: 26px;
+      color: rgba(0,0,0,.65);
       .sumarea_list_8_2 {
         color: #ee2223;
       }
@@ -2543,8 +2685,9 @@
 }
 
 .sumareasetting_card {
-  .ant-popover-inner-content {
-    padding: 15px 0 12px 12px;
+  width: 460px;
+  .u-popover-content {
+    padding: 7px 0 5px 12px;
   }
 
   .sumareasetting_disname {
@@ -2553,31 +2696,41 @@
       line-height: 32px;
     }
 
-    .ant-input {
+    .u-form-control {
       width: 214px;
       height: 30px;
     }
   }
 
-  .ant-popover-inner {
+  .tooltip-inner {
     overflow: hidden;
+    .u-radio-group{
+      line-height: 32px;
+    }
   }
 
   .footer-btn {
     height: 40px;
 
-    .ant-btn {
+    .u-button {
       padding: 5px 12px;
       height: 26px;
       margin-top: 14px;
     }
 
-    .ant-btn-primary {
+    .u-button-primary {
       margin-right: 12px;
     }
 
-    .ant-btn-default {
-      margin-right: 10px;
+    .u-button-default,
+    .up-search.u-button-primary
+    {
+      margin-right: 8px;
+    }
+
+    .up-search{
+      background: #505766;
+      color: #fff;
     }
   }
 }
@@ -2673,13 +2826,13 @@
       .retail-table-cell {
         .public_fixedDataTableCell_wrap3 {
           .textCol {
-            .no-avatar-man {
-              width: 30px;
-              height: 30px;
+            .no-avatar-man {//TINPER-2676
+              width: 28px;
+              height: 28px;
               background: url(images/icon-person.png);
               background-size: 100%;
-              margin-top: -7px;
-
+              margin-top: 3px;
+              margin-left: 10px;
               &.cell-avatar-logo {
                 background: url(images/default-logo-table.png);
               }
@@ -2773,7 +2926,10 @@
 
   .editCol {
     .edit-input-number {
-      margin-top: -7px
+      margin-top: -7px;
+      .u-select {
+        top: 6px;
+      }
     }
   }
 
@@ -2892,8 +3048,6 @@
       height: 30px;
       .table-header-name {
         line-height: 29px;
-        // border-bottom: 1px solid #dbe0e5;
-        // width: 100%;
         height: 29px;
         & + .table-form-screen {
           margin-left: 4px;
@@ -2904,7 +3058,6 @@
 
   .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
     width: 100%;
-    // padding: 10px 12px;
   }
 
   .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
@@ -2951,7 +3104,8 @@
 
 // 表格默认图片
 .product-list-item-img {
-  background: url(./images/Default-picture.png);
+  background-image: url(./images/Default-picture.png);
+  background-position: center;
 }
 
 /*表格规格*/
@@ -2982,32 +3136,19 @@
     display: flex;
 
     .RptTableContainer_Col21 {
-      // border-right: 1px solid #f5f5f5;
-      width: 360px !important;
+      width: 240px !important;
 
       .ant-input-search {
         margin-left: 20px;
         margin-top: 0px;
         position: relative;
-        width: 320px;
+        width: 200px;
         padding-right: 0;
       }
 
       .ant-tree {
         padding: 0 20px;
         margin-right: 1px;
-      }
-
-      // 库存台账多级维度导航 async
-      .dimension_nav_tree {
-        .ant-tree {
-          max-height: 340px;
-          overflow: auto;
-        }
-
-        .ant-input-search {
-          width: 340px;
-        }
       }
 
       .ant-tree li ul {
@@ -3017,13 +3158,45 @@
     }
 
     .RptTableContainer_Col22 {
-      width: calc(~"100% - 361px") !important;
+      width: calc(~"100% - 241px") !important;
       vertical-align: top;
-      padding-left: 20px;
     }
   }
 }
+.st_standingbook {
+  .RptTableContainer_Row1 .RptTableContainer_Row2 .RptTableContainer_Col21 {
+    border-right: 1px solid #d9d9d9;
+    .u-form-control-affix-wrapper {
+      width: 200px;
+    }
+  }
+  .rpt-select2 {
+    margin-bottom: 10px;
+  }
+}
+.st_materialoutlist {
+  .voucher-list .view-container>.group-container {
+    padding-top: 0;
+    >.group-container {
+      padding-top: 0;
+    }
+  }
 
+  .container-edit-mode .list-top-toolbar {
+    padding-bottom: 8px;
+  }
+}
+.pc_product {
+  .twoInclusion .width-percent-33 .has-related .viewCell+.width-percent-100 {
+    //position: inherit;
+  }
+}
+.pu_pursettlefee {
+  .list-top-toolbar {
+    padding-bottom: 0;
+    margin-bottom: -15px;
+  }
+}
 /*新增维度导航方案*/
 .addDimension {
   .u-modal-body {
@@ -3160,8 +3333,6 @@
     background: #edf1f7;
 
     .table-list-btn {
-      // margin-top: 5.5px;
-      // line-height: 12px;
       display: block;
       min-width: 44px;
       max-width: 150px; // 多语UI规范，勿删
@@ -3220,7 +3391,6 @@
   justify-content: flex-end;
   .textCol {
     text-align: right;
-    // margin-left: auto;
     padding-left: 0!important;
   }
 }
@@ -3261,17 +3431,12 @@
   padding-top: 10px;
 }
 
-.u-tabs-content .meta-table {
-  overflow: hidden;
-}
-
 /*多级维度导航*/
 .RptTableContainer_Row1 {
   .RptTableContainer_Row2 {
     display: flex;
 
     .RptTableContainer_Col21 {
-      width: 360px !important;
 
       .u-form-control-affix-wrapper {
         margin-left: 20px;
@@ -3293,9 +3458,9 @@
     }
 
     .RptTableContainer_Col22 {
-      width: calc(~"100% - 361px") !important;
+      // width: calc(~"100% - 361px") !important;// 影响表格定位父元素宽度
       vertical-align: top;
-      padding-left: 20px;
+      // padding-left: 20px;
     }
   }
 }
@@ -3305,8 +3470,8 @@
   height: 644px;
 
   .u-modal-header {
-    height: 59px;
-    line-height: 59px;
+    height: 40px;
+    line-height: 40px;
 
     .u-modal-title {
       line-height: 33px;
@@ -3319,14 +3484,15 @@
     .u-checkbox .u-checkbox-label,
     .u-radio .u-radio-label {
       padding-left: 20px;
+      margin-right: 8px;
     }
 
     .eChartSetting_Panel {
-      height: 530px;
+      height: 560px;
 
       .eChartSetting_Left {
         width: 130px !important;
-        height: 530px;
+        height: 560px;
         border-right: #ccc solid 1px;
         box-sizing: border-box;
 
@@ -3369,7 +3535,7 @@
 
       .eChartSetting_Right {
         width: 620px !important;
-        height: 530px;
+        height: 560px;
         overflow-y: auto;
 
         .eChartSetting_Content:first-child {
@@ -3425,7 +3591,7 @@
 
         .eChartSetting_ContentCol2 {
           width: 517px !important;
-
+          min-height: 22px;
           .u-cascader-input-group {
             display: block;
             width: 400px !important;
@@ -3434,24 +3600,9 @@
           .u-form-control,
           .u-select {
             width: 400px !important;
-            height: 30px;
+            height: 28px;
           }
 
-          .u-checkbox {
-            margin-top: 8px;
-          }
-
-          .u-checkbox .u-checkbox-label {
-            // padding-left: 5px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-            cursor: pointer;
-            // eslint-disable-next-line
-            /*! autoprefixer: off */
-            -webkit-box-orient: vertical;
-            /*! autoprefixer: on */
-          }
 
           .u-radio {
             margin-bottom: 4px;
@@ -3474,15 +3625,15 @@
             width: 100%;
             height: auto;
             overflow: hidden;
-
             .u-checkbox {
-              margin-top: 0px;
               width: 25%;
+              margin-right: 0;
+              float: left;
+              margin-top: 11px;
             }
 
             .u-radio-group {
               width: 45%;
-              padding-left: 10px;
               float: left;
               line-height: 30px;
 
@@ -3506,7 +3657,8 @@
 
             .u-radio {
               display: inline-block;
-              width: 100px !important;
+              width: auto !important;
+              margin-top: 6px;
             }
           }
 
@@ -3522,7 +3674,8 @@
 
             .u-radio {
               display: inline-block;
-              width: 100px !important;
+              width: auto !important;
+              margin-top: 6px;
             }
 
             .u-form-control.eChartSetinput {
@@ -3536,7 +3689,6 @@
 
           .u-radio {
             float: left;
-            margin-top: 8px;
           }
 
           .u-radio-wrapper .u-radio-label {
@@ -3563,21 +3715,24 @@
 
             .u-checkbox {
               width: 50%;
+              margin-top: 0;
+              margin-bottom: 15px;
             }
 
             .lianyi-Special {
               width: 50%;
               display: inline-block;
-              margin-top: 5px;
-
+              margin-bottom: 5px;
               .u-checkbox {
                 width: 40px;
+                line-height: 28px;
                 float: left;
+                margin-right: 0px;
               }
 
               .u-form-control {
                 width: 40px !important;
-                margin-right: 10px;
+                margin-right: 8px;
               }
             }
           }
@@ -3602,39 +3757,11 @@
     }
 
     .eChartSetting_Button {
-      padding: 15px 30px;
+      padding: 10px 18px;
       text-align: right;
       border-top: 1px solid #e9e9e9;
-
-      button {
-        padding: 0px 25px;
-        height: 32px;
-        font-size: 14px !important;
-        border-radius: 4px;
-        border: none;
-        background: #EEF1F3;
-        color: #505766;
-      }
-
-      button.u-button-primary {
-        background: linear-gradient(-45deg, #EE2223 0%, #FC4C2F 100%);
-        color: #fff !important;
-        ;
-        margin-right: 0;
-      }
-
-      button:hover {
-        background: rgba(0, 0, 0, 0.1);
-      }
-
-      button.u-button-primary:hover {
-        background: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
-        border-color: #FC4C2F;
-        color: #333;
-      }
-
-      button+button {
-        margin-left: 15px;
+      button+button{
+        margin-left: 8px;
       }
     }
   }
@@ -3814,8 +3941,9 @@
 // modify by jinzh1 表格行按钮  不在悬浮
 .fixedDataTableCellGroupLayout_cellGroupWrapper {
   .acticonCell {
-    right: 20px;
-    padding-left: 0px;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 20px;
 
     span:last-child {
       margin-right: 0;
@@ -3833,4 +3961,426 @@
   margin-right: 200px;
   padding-bottom: 10px;
   min-height: 57px;
+}
+//table编辑态时间的控件
+.public_fixedDataTableCell_cellContent{
+  .editCol{
+    .timepicker{
+      .ant-select-selection{
+        .ant-select-selection__clear{
+          background: transparent;
+          right: 36px!important; //编辑态距离右侧时钟按钮4px
+        }
+      }
+    }
+  }
+}
+
+// UI模板上，高度被其他的！important 样式影响了。我加了个作用域覆盖下
+.bill-design-modal .u-input-number.u-input-group.simple .u-form-control{
+  height: 26px !important
+}
+.bill-design-modal  .ant-select-selection:hover { // hover时时间框重复
+  .u-time-picker .u-time-picker-input{
+    border: 0px;
+  }
+}
+//订单列表
+.order-lists-wrapper{
+  .order-lists-scroll{
+    //去除滚动条扔可滚动
+    .u-table-body::-webkit-scrollbar {
+      display: none;
+    }
+    //暂无数据
+    .order-nodata{
+      color: #999;
+      font-size: 12px;
+      text-align: center;
+      height: 280px;
+      padding-top: 80px;
+      svg{
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+      }
+    }
+    //表头
+    .order-header-wrapper{
+      position: relative;
+      //order-column-setting/u-checkbox定位
+      .order-column-setting,.u-checkbox{
+        position: absolute;
+      }
+      .order-column-setting{
+        right: 0px;
+        .SettingBtn{
+          height: 28px;
+          padding: 0px;
+          i{
+            font-size: 16px;
+          }
+        }
+      }
+      .u-checkbox{
+        left: 20px;
+        margin-right: 0px;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 14px;
+      }
+      .order-header-table{
+        .u-table-body{
+          table{
+            //隐藏第一行
+            .u-table-tbody{
+              display: none;
+            }
+          }
+        }
+        //表头线
+        .u-table-bordered table{
+          border-left: none;
+          border-right: none;
+          border-top-color: #505766;
+        }
+        .u-table th{
+          padding: 6px 10px;
+          color: #333;
+          font-weight: 400;
+          border-right: none;
+          background: #F7F9FD;
+          border-bottom-color: #dbe0e5;
+          &:first-child{
+            padding: 6px 10px 6px 47px;
+          }
+        }
+      }
+    }
+    //表体
+    .order-body-wrapper{
+      .s-checkgroup-wrapper{
+        .order-item-wrapper{
+          position: relative;
+          border: #e4e4e4 solid 1px;
+          border-top: none;
+          .u-checkbox{
+            margin: 20px 4px 0px 20px;
+            position: absolute;
+          }
+          .order-item-detail{
+            &:hover{
+              background: #edf1f7;
+            }
+            .u-table-row-hover{
+              background: #edf1f7;
+            }
+            .order-operation{
+              height: 54px;
+              display: block;
+              padding: 10px 10px 10px 45px;
+              max-width: calc(~'100% - 680px');;
+              float: left;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              >span{
+                margin-right: 8px;
+                a{
+                  color: #588ce9;
+                  &:hover{
+                    color: #588ce9;
+                  }
+                }
+              }
+              //标签tag
+              .order-tags-wrapper{
+                .u-tag{
+                  background:rgba(251,184,184,0.2);
+                  border-radius:2px;
+                  border: none;
+                  color: #EE2233;
+                  margin-bottom: 0px!important;
+                  margin-right: 8px;
+                  &:last-child{
+                    margin-right: 0px;
+                  }
+                }
+              }
+              .member-phone-brand{
+                &::before{
+                  content: '\D\A';
+                  white-space: pre;
+                }
+              }
+            }
+            .order-button-wrapper{
+              display: flex;
+              height: 54px;
+              padding-right: 20px;
+              justify-content: flex-end;
+              flex-flow: row wrap;
+              max-width: 680px;
+              float: right;
+              padding-left: 200px;
+              >span{
+                border-radius: 4px;
+                background:rgba(255,255,255,1);
+                border:1px solid rgba(217,217,217,1);
+                display: block;
+                padding: 5px 10px;
+                margin-left: 8px;
+                height: 28px;
+                align-self: center;
+                position: relative;
+                a{
+                  color: #333;
+                }
+                &:hover{
+                  border:1px solid #505766;
+                  a{
+                    color: #333;
+                  }
+                }
+                //更多浮层
+                .u-popover.u-popover-tooltip.u-tooltip.inverse.inverse-arrow{
+                  left: auto!important;
+                  right: -1px!important;
+                  top: 20px!important;
+                  min-width: 60px;
+                  .tooltip-arrow{
+                    display: none;
+                  }
+                  .tooltip-inner{
+                    min-width: 62px;
+                    max-width: 200px;
+                    .u-popover-content{
+                      .more-list-wrapper{
+                        max-height: 168px;
+                        overflow-y: auto;
+                        >span{
+                          padding: 0px 10px;
+                          height: 28px;
+                          display: block;
+                          white-space:nowrap;
+                          overflow:hidden;
+                          text-overflow:ellipsis;
+                          line-height: 28px;
+                          a{
+                            color: #666;
+                          }
+                          &:hover{
+                            background: #f3f5f9;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                span{
+                  svg{
+                    transform: scale(0.8) rotate(0deg);
+                    margin-left: 4px;
+                    transition: transform .2s ease;
+                  }
+                }
+                span.ant-popover-open,
+                .more-pop-display
+                {
+                  svg{
+                    transform: scale(0.8) rotate(180deg);
+                  }
+                }
+                //查发票下拉浮层
+                .check-invoice-list{
+                  width: 100%;
+                  height: 168px;
+                  overflow-y: auto;
+                  display: block;
+                  span{
+                    width: 100%;
+                    height: 28px;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 28px;
+                    padding: 0 10px;
+                    &:hover{
+                      background: #f3f5f9;
+                    }
+                  }
+                }
+              }
+            }
+            .order-control{
+              clear: both;
+              .u-table-bordered table{
+                border: #dbe0e5 solid 1px;
+                border-left: none;
+                border-bottom: none;
+                border-top: none;
+                position: relative;
+                border-right: none;
+                &::after{
+                  position: absolute;
+                  content: '';
+                  width: 100%;
+                  height: 1px;
+                  background: #dbe0e5;
+                  top: 0px;
+                  left: 46px;
+                }
+                tr{
+                  &:last-child{
+                    td{
+                      border-bottom: none;
+                      &::before{
+                        display: none;
+                      }
+                    }
+                  }
+                }
+                td{
+                  border-right: 1px solid #dbe0e5;
+                  border-bottom: 1px solid #dbe0e5;
+                  padding: 12px 10px;
+                  &:first-child{
+                    border-bottom: none;
+                    position: relative;
+                    overflow: initial;
+                    &::before{
+                      position: absolute;
+                      content: '';
+                      width: 100%;
+                      height: 1px;
+                      background: #dbe0e5;
+                      bottom: -1px;
+                      left: 46px;
+                    }
+                    .cell-wrapper{
+                      padding-left: 35px;
+                      display: block;
+                    }
+                  }
+                  &:last-child{
+                    border-right: none;
+                  }
+                  .cell-wrapper{
+                    //图片和订单信息
+                    .order-info-brand{
+                      overflow: hidden;
+                      .order-info-img{
+                        width: 68px;
+                        height: 68px;
+                        float: left;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        position: relative;
+                        background: #f8f8f8;
+                        //暂无图片
+                        .order-without-image{
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                          svg{
+                            width: 68px;
+                            height: 68px;
+                          }
+                        }
+                        //有图片上下垂直居中
+                        img{
+                          max-height: 100%;
+                          transform: translate(-50%,-50%);
+                          top: 50%;
+                          left: 50%;
+                          position: absolute;
+                          max-width: 100%;
+                        }
+                      }
+                      .order-info-content{
+                        font-size: 12px;
+                        color: #333;
+                        width: calc(~'100% - 68px');
+                        float: left;
+                        padding-left: 12px;
+                        .order-info-code,
+                        .order-info-spec
+                        {
+                          color: #999999;
+                          display: block;
+                          white-space:nowrap;
+                          overflow:hidden;
+                          text-overflow:ellipsis;
+                        }
+                        .order-info-name{
+                          overflow:hidden;
+                          text-overflow:ellipsis;
+                          display:-webkit-box;
+                          -webkit-box-orient:vertical;
+                          -webkit-line-clamp:2;
+                          white-space: normal;
+                          height: 32px;
+                          line-height: 16px;
+                        }
+                      }
+                    }
+
+                  }
+                }
+                //合并单元格
+                td[rowspan]{
+                  border-bottom: none;
+                }
+                td{
+                  //收货信息
+                  .reciver-info-brand{
+                    p{
+                      white-space: normal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        }
+        .order-item-selected{
+          .order-item-detail{
+            background: #edf1f7;
+          }
+          &:hover{
+            .order-item-detail{
+              background: #edf1f7;
+            }
+          }
+        }
+      }
+    }
+  }
+  //表格滚动条
+  .extra-area-outer{
+    .extra-area-div{
+      .extra-area-inner{
+        height: 1px;
+      }
+    }
+  }
+}
+//订单列表翻页
+.order-pagination{
+  padding: 10px 20px 8px 20px;
+  .u-pagination{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    .data_per_select{
+      .u-select{
+        width: 64px;
+        margin-left: 0;
+      }
+    }
+  }
 }

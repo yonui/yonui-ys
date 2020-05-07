@@ -16,18 +16,18 @@ import Icon from './Icon';
 import Input from './Input';
 import InputNumber from './InputNumber';
 import Loading from './Loading/simple';
-// import Menu from './Menu';
-// import Modal from './Modal';
-// import Message from './Message';
-// import notification from './notification';
-// import Popover from './Popover';
-// import Progress from './Progress';
-// import Popconfirm from './Popconfirm';
-// import Pagination from './Pagination';
-// import Radio from './Radio';
-// import Switch from './Switch';
-// import Select from './Select';
-// import Steps from './Steps';
+import Menu from './Menu';
+import Modal from './Modal';
+import Message from './Message';
+import notification from './notification';
+import Popover from './Popover';
+import Progress from './Progress';
+import Popconfirm from './Popconfirm';
+import Pagination from './Pagination';
+import Radio from './Radio';
+import Switch from './Switch';
+import Select from './Select';
+import Steps from './Steps';
 // import Tabs from './Tabs';
 // import Tag from './Tag/simple';
 // import TimePicker from './TimePicker';
@@ -57,19 +57,19 @@ export {
   InputNumber,
   Icon,
   Loading,
-  // Message,
-  // Modal,
-  // Menu,
-  // notification,
-  // Pagination,
-  // Popconfirm,
-  // Popover,
-  // Progress,
+  Message,
+  Modal,
+  Menu,
+  notification,
+  Pagination,
+  Popconfirm,
+  Popover,
+  Progress,
   Row,
-  // Radio,
-  // Select,
-  // Switch,
-  // Steps,
+  Radio,
+  Select,
+  Switch,
+  Steps,
   // Tag,
   // Tabs,
   // TimePicker,

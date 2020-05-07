@@ -4,6 +4,8 @@
   @import './minxin-themeColors.less';
   @import '~@mdf/baseui/lib/index.less';
 
+  @import './mixin.less';
+
 	@import './base.less';
 	@import './billings.less';
 	@import './menu.less';
@@ -26,11 +28,42 @@
 
   div[id='yxyweb-filter'] {
     clear: both;
+
+    .container-browse-mode {
+
+      .ant-row.listheadRow {
+        padding-top: 20px;
+        padding-bottom: 5px;
+
+        .filter-controls {
+          .u-input-number.u-input-group.simple .u-input-group-btn {
+            position: relative;
+            top: 0;
+            z-index: 2;
+            right: 0;
+            width: 22px;
+          }
+        }
+      }
+    }
+
+    .scheme-list {
+      margin-bottom: 5px;
+    }
+
+    .has-error .u-form-control {
+      border-color: #505766;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
   }
 
   div[id='yxyweb-support-mount-popover'] {
     position: relative;
     clear: both;
+
+    .tips_style.u-popover.u-popover-tooltip.u-tooltip {
+      z-index: 1702;
+    }
   }
 
   .anticon {
@@ -47,53 +80,147 @@
 
   .anticon:before {
     display: block;
-    font-family: "anticon" !important;
+    font-family: "iconfont" !important;
   }
 
   // 这里主要修改font-family
   // 理论上为iconfont 也应该可以，但显示错误，暂未深入定位
   .anticon-canzhao:before {
-    content: "\e6fe";
-    font-family: 'anticon' !important;
+    content: "\e665";
   }
 
   .anticon-down:before {
     content: '\e633';
-    font-family: 'anticon' !important;
   }
 
   .anticon-up:before {
     content: "\e61e";
-    font-family: "anticon" !important;
   }
 
   .anticon.anticon-star-o:before {
     content: "\e661";
-    font-family: 'anticon' !important;
   }
 
   .ant-select-arrow:before {
     content: "\E633";
-    font-family: 'anticon' !important;
   }
 
   .anticon-up-circle:before {
     content: "\e684;" !important;
-    font-family: 'anticon' !important;
   }
 
   .anticon-down-circle:before {
     content: "\e685;" !important;
-    font-family: 'anticon' !important;
   }
 
   .uf-search:before {
     content: "\e518";
-    font-family: 'anticon' !important;
   }
 
   .anticon-ellipsis:before {
     content: "\e73c";
     font-family: "uf" !important;
+  }
+
+  .listheadRow { // 过滤区样式修改，有的样式会被引用项目自带的样式覆盖
+    font-size: 12px;
+
+    .anticon.anticon-star-o {
+
+      &:before {
+        color: #adb4bc;
+      }
+    }
+  }
+
+  .filter_scheme_popover.u-popover.u-popover-tooltip.u-tooltip.inverse,
+  .table-col-setting.u-popover.u-popover-tooltip.u-tooltip.inverse,
+  .colFilter-pop.u-popover.u-popover-tooltip.u-tooltip.inverse,
+  .lookup-pop.u-popover.u-popover-tooltip.u-tooltip.inverse {
+    z-index: 1701;
+
+    .tooltip-arrow {
+      display: none;
+    }
+  }
+
+  .refer-toolbar .refer-toolbar-btn-add {
+    display: none;
+  }
+
+  .readOnlyTable .acticonCell .ant-row .table-list-btn {
+    display: none;
+  }
+
+  .u-popover.u-popover-tooltip.u-tooltip {
+    .query-criteria-select .ant-checkbox-group {
+      display: block;
+    }
+  }
+
+  .u-checkbox.is-checked .u-checkbox-label:after {
+    color: #f53c32;
+    content: "\e658";
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+}
+
+.u-modal-confirm.u-modal-confirm-confirm.uretail_confirm.u-modal { // Model.confirm暂时挂不到特定dom节点上去，先将里面的样式抽出来
+  z-index: 1702;
+
+  .u-modal-content {
+    min-height: 150px;
+
+    .u-modal-header {
+      padding-top: 30px;
+
+      .u-modal-title {
+        font-size: 14px;
+        line-height: 40px;
+        color: rgba(0,0,0,.85);
+
+        .model-title {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 30px;
+          opacity: .8;
+          color: rgba(0,0,0,.85);
+          padding-bottom: 40px;
+
+          svg {
+            width: 1.8em;
+            height: 1.8em;
+            margin-right: 10px;
+            vertical-align: middle;
+            float: left;
+          }
+        }
+      }
+    }
+
+    .u-modal-body {
+      padding: 0;
+    }
+
+    .u-modal-footer {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      padding: 0;
+
+      .u-button {
+        font-size: 12px;
+        padding: 0 18px;
+        height: 28px;
+        min-width: 60px;
+      }
+
+      .u-button-primary {
+        margin-right: 8px;
+      }
+    }
   }
 }

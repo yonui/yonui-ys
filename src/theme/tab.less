@@ -1,45 +1,16 @@
-// .ant-tabs-tabpane {
-//   min-height: 100%;
-// }
-
-// .ant-tabs.ant-tabs-card>.ant-tabs-bar {
-//   .ant-tabs-tab {
-//     margin: 0;
-//     border: 0px;
-//     border-radius: 0;
-//     background: transparent;
-//     margin-right: 0px;
-//   }
-
-//   .ant-tabs-tab-active {
-//     background: #fff;
-//     border-radius: 0;
-//     transform: translateZ(0);
-//     border-color: #E4E4E4;
-//     color: #505766;
-//     border-bottom: 1px solid #fff;
-//     border-left: 1px solid #E4E4E4;
-//     border-right: 1px solid #E4E4E4;
-//     border-top: 2px solid #505766;
-//   }
-// }
 
 .u-tabs-tabpane {
   .btn-toolbar-bottom {
     .col-auto {
 
       button.no-border-radius {
-        height: @base-input-height;
-        // float: left; // !fix: 底部按钮顺序调整
+        // height: @base-input-height;
 
         svg {
           // async zhangkunk 新增里面的图标大小控制
           width: 13px;
           height: 13px;
-          margin-right: 5px;
-          // float: left;
-          // margin-top: 2px !important;
-          margin-bottom: 1px;
+          margin-right: 4px;
         }
 
         svg.icon-left,
@@ -57,6 +28,7 @@
 
         span {
           line-height: 16px;
+          font-size: 12px;
         }
       }
 
@@ -181,7 +153,7 @@
   &:last-child,
   &:nth-last-child(2) {
     min-width: 32px;
-    padding: 6px 7px;
+    padding: 0 12px;//TINPER-2664 左右改为 12
   }
 
   svg {
@@ -208,7 +180,6 @@
   height: 100%;
 }
 
-// ===== from adapter.less start =====
 .meta-container>.u-tabs-content,
 .meta-container>.u-tabs-content>.u-tabs-tabpane-active,
 .rootTabs>.u-tabs-content,
@@ -253,38 +224,48 @@
   }
 }
 
-// ===== from adapter.less end =====
-
-// ===== from modal.less start =====
 .u-tabs-content .height-100 .list-top-toolbar+.ant-row {
   .viewCell h1,
   .group-title {
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+
+  &>.ant-row > div:first-child .group-title {
     margin-top: 0;
   }
 
   &.card-tabs {
-    margin-top: 10px;
     margin-bottom: 10px;
   }
 }
 
 // 请购单最大化
 .line-tabs-menu-container {
+  .tab-top-right-operater-mixin();
   .tab-top-right .btn-toolbar-bottom {
     padding: 0;
     .btn-maximize {
       padding: 0;
-      margin-right: 15px;
-      text-align: right;
+      .top-right-toolbar-icon-mixin();
       i {
         margin-left: 0;
+        margin-top: 1px; // 图片自身偏上了一些
       }
     }
   }
 }
-// ===== from modal.less end =====
 
-// tabs 页签与下面的表格间距
-.u-tabs .u-tabs-content .u-tabs-tabpane .meta-default-container.group-container {
+// tabs 页签与下面的表格间距0
+.line-tabs .u-tabs .u-tabs-content .u-tabs-tabpane .meta-default-container.group-container {
   padding: 0;
+  // tabs 页签与下面的开单logo单独设置
+  .basic-avatar {
+    padding-top: 16px;
+    .basic-avatar-billing-logo{
+      .basic-avatar-right{
+        line-height: 17px;
+      }
+    }
+  }
 }

@@ -24,13 +24,14 @@ a.active {
   color: @base-hover
 }
 
+canvas {
+  cursor: pointer !important;
+}
+
 @font-face {
   font-family: 'iconfont';
   src: url('./newfont/iconfont.eot');
-  src: url('./newfont/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('./newfont/iconfont.woff') format('woff'),
-    url('./newfont/iconfont.ttf') format('truetype'),
-    url('./newfont/iconfont.svg#iconfont') format('svg');
+  src: url('./newfont/iconfont.eot?#iefix') format('embedded-opentype'), url('./newfont/iconfont.woff') format('woff'), url('./newfont/iconfont.ttf') format('truetype'), url('./newfont/iconfont.svg#iconfont') format('svg');
 }
 
 //输入框不可用状态透明度恢复
@@ -67,19 +68,23 @@ select:-webkit-autofill {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #CDD9E6!important;
+  background-color: #CDD9E6 !important;
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
   border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #B0C0D0!important;
+  background-color: #B0C0D0 !important;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #ccc;
+}
+
+[disabled] {
+  cursor: not-allowed;
 }
 
 .hide {
@@ -134,6 +139,10 @@ textarea::-webkit-input-placeholder {
   margin-right: 5px;
 }
 
+.m-r-8 {
+  margin-right: 8px;
+}
+
 .m-r-10 {
   margin-right: 10px;
 }
@@ -144,6 +153,10 @@ textarea::-webkit-input-placeholder {
 
 .m-b-15 {
   margin-bottom: 15px;
+}
+
+.m-l-8 {
+  margin-left: 8px;
 }
 
 .m-l-10 {
@@ -170,6 +183,10 @@ textarea::-webkit-input-placeholder {
   padding-bottom: 20px;
 }
 
+.margin-top-16 {
+  margin-top: 16px;
+}
+
 .padd-bottom-60 {
   padding-bottom: 60px !important;
 }
@@ -183,6 +200,7 @@ textarea::-webkit-input-placeholder {
   background: #fff;
   height: 100%;
   width: 100%;
+
   .touch-grid {
     background: #fff;
   }
@@ -192,12 +210,44 @@ textarea::-webkit-input-placeholder {
     height: calc(~"100% - 85px");
   }
 }
+
+// 特征样式，表格右上部分的操作区域
+.table-toolbar {
+  margin-right: 20px;
+  margin-bottom: 12px;
+}
+
+// 特征样式，tab 内容区域容器样式
+
+// 特征样式，portal 内容区域底部间距
+.tab-padding-bottom {
+  padding-bottom: 60px;
+}
+
+// 特征样式，应收参数等垂直form 页面
+.vetical-form {
+  .viewCell.width-percent-100 .input-control{
+    max-width: 400px;
+  }
+}
+
+// 特征样式，页面顶部间距
+.normal-space {
+  padding-top: 16px;
+}
+
+.u-tabs-content .container-edit-mode .line-tabs.line-tabs-maximize {
+  padding-bottom: 0px;
+}
+
 /*add by jinzh1 portal中的最大化*/
+
 .portal-container .line-tabs-maximize {
   height: calc(~"100% - 75px");
   top: 75px;
   width: calc(~"100% - 175px");
 }
+
 .line-tabs.line-tabs-upload.line-tabs-maximize,
 .line-tabs.line-tabs-maximize {
   padding-bottom: 0px !important;
@@ -271,6 +321,7 @@ textarea::-webkit-input-placeholder {
 }
 
 /*自定义Col控件样式*/
+
 .col-none {
   display: none;
 }
@@ -365,6 +416,7 @@ textarea::-webkit-input-placeholder {
 }
 
 /*步骤条样式*/
+
 .register-box .ant-steps {
   padding: 28px 0 48px 4px;
 }
@@ -415,6 +467,7 @@ textarea::-webkit-input-placeholder {
 }
 
 /*表格页头添加筛选*/
+
 .lookup-pop {
   z-index: 1000;
 
@@ -475,52 +528,70 @@ textarea::-webkit-input-placeholder {
     align-items: center;
   }
 }
-.tree-table {
-  .public_fixedDataTableCell_cellContent {
-    .table-form-screen{
-      & + .icon {
-        // margin-top: 9px;
-      }
-    }
-  }
-}
+
 .public_fixedDataTableCell_cellContent {
   padding: 0;
 
   .btn-caret {
     padding-top: 3px;
-    .u-button{
+
+    .u-button {
       padding: 0;
       display: block;
       height: 6px;
       margin: 0 auto;
-      i{
+
+      i {
         margin-left: 0px;
       }
     }
   }
+
   .table-form-search {
     width: 16px;
     flex-shrink: 0;
-    svg{
+    // margin-left: 3px;
+    line-height: 0;
+    svg {
       width: 15px;
       height: 15px;
     }
   }
-  .table-form-screen{
+
+  .table-form-screen {
     width: 16px;
     flex-shrink: 0;
-    svg{
+
+    svg {
       width: 14px;
       height: 14px;
     }
   }
+
   .icon {
     width: 13px;
-    height: 28px;
-    // margin-top: 2px;
     vertical-align: -.25em;
     flex-shrink: 0;
+  }
+
+  .upc-showpicture {
+    padding-left: 10px;
+    padding-right: 4px;
+
+    .icon-tupian {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .btn-dongjie {
+    padding-top: 1px;
+    height: 28px;
+    margin-right: 2px;
+  }
+
+  .textCol+.table-form-screen {
+    margin-left: 4px;
   }
 
   .btn-caret+.icon {
@@ -558,9 +629,6 @@ textarea::-webkit-input-placeholder {
     height: 28px
   }
 
-  // .public_fixedDataTableCell_cellContent {
-  //   height: 28px
-  // }
   .ant-select-selection__rendered {
     height: 28px
   }
@@ -589,7 +657,6 @@ textarea::-webkit-input-placeholder {
       height: 24px;
       line-height: 24px;
       float: left;
-
       font-weight: 100;
     }
 
@@ -641,7 +708,9 @@ textarea::-webkit-input-placeholder {
 }
 
 /******************通用表格样式** end*********************/
+
 /******************新UE 查询过滤**start*******************/
+
 .common-query-popover .ant-popover-inner {
   border-radius: 0;
 }
@@ -732,9 +801,9 @@ textarea::-webkit-input-placeholder {
 /******************新UE 查询过滤**end*******************/
 
 /******************新UE 采购订单**start*******************/
+
 .rootTabs>.ant-tabs-content {
-  background-color: #f1f0f1;
-  // height: calc(~'100% - 70px');
+  background-color: #f1f0f1; // height: calc(~'100% - 70px');
   overflow-y: auto;
 }
 
@@ -851,6 +920,7 @@ textarea::-webkit-input-placeholder {
 }
 
 /*ant-tag*/
+
 .ant-tag-checkable-checked {
   background: @base-hover-btn;
   color: @base
@@ -881,6 +951,7 @@ textarea::-webkit-input-placeholder {
 
     &.show_tag {
       margin-right: 5px !important;
+      margin-bottom: 4px !important;
     }
 
     .uf-close:hover {
@@ -929,7 +1000,6 @@ textarea::-webkit-input-placeholder {
         }
       }
     }
-
   }
 }
 
@@ -943,7 +1013,7 @@ textarea::-webkit-input-placeholder {
     transform: translate(5px, 0); // 微调下popover 的偏移量
 
     .tag_item {
-      padding: 1px 0;
+      padding: 3px 0;
       height: auto;
       line-height: 100%;
 
@@ -1047,8 +1117,7 @@ i.anticon.anticon-ellipsis {
 .public_Scrollbar_faceActive:after,
 .public_Scrollbar_main:hover .public_Scrollbar_face:after,
 .public_Scrollbar_mainActive .public_Scrollbar_face:after {
-  background-color: #B0C0D0;
-  // height:7px;
+  background-color: #B0C0D0; // height:7px;
 }
 
 .fixedDataTableLayout_horizontalScrollbar {
@@ -1187,6 +1256,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*档案 新增门店-门店信息*/
+
 .ant-time-picker-panel {
   .ant-time-picker-panel-inner {
     .ant-time-picker-panel-addon {
@@ -1210,6 +1280,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*平台管理*/
+
 .Platform_management {
   margin-top: 20px;
 
@@ -1239,6 +1310,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*更新日志*/
+
 .uretial-update-log {
   height: 100%;
 
@@ -1433,9 +1505,14 @@ i.anticon.anticon-ellipsis {
 }
 
 /*暂无数据*/
+
+.no-data-search {
+  padding-left: 8px;
+  color: #999;
+}
+
 .no-data {
   height: 140px;
-  line-height: 140px;
   text-align: center;
   color: #999;
   font-size: 12px;
@@ -1446,10 +1523,10 @@ i.anticon.anticon-ellipsis {
     margin: 20px auto 5px auto;
     display: block;
   }
-
 }
 
 /*日志详情*/
+
 .pc_logo_height {
   height: 100%;
 }
@@ -1538,7 +1615,6 @@ i.anticon.anticon-ellipsis {
           height: auto;
           max-width: 100%;
         }
-
       }
     }
 
@@ -1651,6 +1727,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*无物流信息*/
+
 .wuliu_none {
   width: 300px;
   min-height: 70px;
@@ -1679,6 +1756,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*物流信息*/
+
 .wuliu_infor_more {
   width: 300px;
   padding: 0;
@@ -1758,6 +1836,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*物流信息-多条*/
+
 .wuliu_infor_more_list {
   width: 340px;
   padding: 0 18px;
@@ -1867,6 +1946,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*更新日志下拉*/
+
 .title-setting-telephone {
   width: 138px;
   background: #FFF7E7;
@@ -1897,6 +1977,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*赊销-零售收款单*/
+
 .sell_credit {
   background: #fff;
   line-height: 70px;
@@ -1972,7 +2053,6 @@ i.anticon.anticon-ellipsis {
   .cash-Settlement[disabled] {
     background: #fcfcfd;
 
-    // box-shadow: inset 0 -4px 0px #e9ecee;
     .pay-title {
       color: #999;
     }
@@ -1980,7 +2060,6 @@ i.anticon.anticon-ellipsis {
     svg {
       fill-opacity: 0.5;
     }
-
   }
 
   .ant-btn-pay {
@@ -2012,6 +2091,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*收款单 筛选条件表格变高特殊样式 gathering-list*/
+
 .ant-tabs-content {
   .gathering-list {
     height: 100%;
@@ -2087,7 +2167,6 @@ i.anticon.anticon-ellipsis {
         height: 40px;
         font-size: 14px;
       }
-
     }
 
     /*表格部分*/
@@ -2132,6 +2211,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*零售收款小屏适配*/
+
 @media screen and (max-height:826px) {
   .ant-tabs-content {
     .gathering-list {
@@ -2143,20 +2223,25 @@ i.anticon.anticon-ellipsis {
 }
 
 /*公式编辑器*/
+
 .FormulaDesigner {
-  height: 600px;
+  height: 586px;
   background: #fff;
   box-shadow: 0 0 14px 6px #666666;
   border-radius: 6px;
-  .ant-input-number{
-    height:30px;
+
+  .ant-input-number {
+    height: 30px;
   }
-  .ant-input-number-input{
+
+  .ant-input-number-input {
     height: 28px;
   }
-  .ant-select-selection--single{
-    height: 28px!important;
+
+  .ant-select-selection--single {
+    height: 28px !important;
   }
+
   .ant-modal-content {
 
     /*头部*/
@@ -2184,6 +2269,12 @@ i.anticon.anticon-ellipsis {
         padding-top: 20px;
         height: 494px;
         overflow-y: auto;
+
+        .add_defined {
+          .refer-div.has-feedback .ant-row {
+            margin-bottom: 0; // 新增过滤项
+          }
+        }
 
         .ant-row {
           margin-bottom: 15px;
@@ -2278,9 +2369,8 @@ i.anticon.anticon-ellipsis {
     /*底部按钮*/
     .ant-modal-footer {
       height: 48px;
-      padding: 10px 24px;
+      padding: 10px 24px; // 按钮的文字均为2 个，这里临时设置固定宽度 60px
 
-      // 按钮的文字均为2 个，这里临时设置固定宽度 60px
       .ant-btn {
         padding: 0 12px;
         width: 60px;
@@ -2290,6 +2380,7 @@ i.anticon.anticon-ellipsis {
         background-color: #eceff1;
         border: none;
         color: #505766;
+
         &:hover {
           background-color: #dfe1e6;
           border: none;
@@ -2300,6 +2391,7 @@ i.anticon.anticon-ellipsis {
         background: #505766;
         border: none;
         color: #fff;
+
         &:hover {
           background: #616875;
         }
@@ -2320,15 +2412,14 @@ i.anticon.anticon-ellipsis {
 }
 
 /*编辑采购分析*/
+
 .report-design-modal {
   width: 800px !important;
   height: 600px;
 
   .ant-modal-header {
     padding: 23px 16px 5px 16px;
-
   }
-
 
   .ant-modal-body {
     min-height: auto;
@@ -2399,6 +2490,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*消息列表*/
+
 .unreadtime,
 .readtime {
   color: #999;
@@ -2420,6 +2512,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*新增订阅方案*/
+
 .FormulaDesigner {
   .subscribe_cycle_radio {
     .ant-radio-group {
@@ -2436,7 +2529,6 @@ i.anticon.anticon-ellipsis {
         width: 80px !important;
         margin: 0 10px;
       }
-
     }
   }
 
@@ -2551,6 +2643,7 @@ i.anticon.anticon-ellipsis {
 }
 
 /*浮窗结构*/
+
 .ant-notification-notice {
   padding: 16px;
   border-radius: 4px;
@@ -2565,28 +2658,48 @@ i.anticon.anticon-ellipsis {
   height: 110px;
   box-sizing: border-box;
 }
+
 //异步导入
-.u-notification{
+.u-notification {
   width: 384px;
+
+  &.u-notification-bottomRight {
+    bottom: 0;
+    right: 0;
+  }
 }
-.u-notification-notice{
+
+.u-notification.u-notification-bottomRight .u-notification-notice {
+  box-shadow: 0px 2px 23px 0px rgba(0, 0, 0, 0.1)
+}
+
+.u-notification-notice {
   padding: 12px 16px;
   width: 384px;
-  .Toolbar_Notification_Desc2{
-      overflow:hidden;
-      text-overflow:ellipsis;
-      display:-webkit-box;
-      -webkit-box-orient:vertical;
-      -webkit-line-clamp:2;
-      max-height: 40px;
+
+  .Toolbar_Notification_Desc2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 40px;
   }
-  .u-notification-notice-close{
-    .uf-close:before{
-      color: #AAAAAA;
+
+  .u-notification-notice-close {
+    .uf-close:before {
+      color: #ccc;
       font-weight: normal;
+    }
+
+    &:hover {
+      .uf-close:before {
+        color: #ee2233;
+      }
     }
   }
 }
+
 .Toolbar_Notification_Img {
   width: 28px;
   height: 28px;
@@ -2594,6 +2707,10 @@ i.anticon.anticon-ellipsis {
   margin-right: 16px;
   background-image: url(./images/Backstage1.png);
   background-size: 100% 100%;
+}
+
+.Toolbar_Notification_Img.Toolbar_Notification_Img_import {
+  background-image: url(./images/Backstage2.png);
 }
 
 .Toolbar_Notification_Desc1 {
@@ -2621,6 +2738,10 @@ a.Toolbar_Notification_Log {
   line-height: 17px;
   position: relative;
   margin-top: 4px;
+
+  &:hover {
+    color: #8DBBF5;
+  }
 }
 
 .Toolbar_Notification_Desc {
@@ -2656,6 +2777,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*新增开票设置 间距问题特殊设置*/
+
 .Manual-calculation-left {
   .viewCell.width-percent-100 .ant-upload {
     margin-bottom: 0px;
@@ -2669,6 +2791,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*2018年10月16日消息列表进入的存量查询页面*/
+
 .container-browse-mode.container-less-height .listheadRow .ant-row .col-auto .ant-btn .icon {
   width: 15px;
   height: 15px;
@@ -2677,26 +2800,30 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*2018年10月16日新增商品转换关系页面*/
+
 .ant-row.use {
   margin-top: 10px;
+  margin-bottom: 12px;
 
   .viewCell.width-percent-33 {
     .ant-row {
       margin-bottom: 0px;
+      min-height: 26px;
     }
 
     .label-control {
-      margin-top: 20px;
+      margin-top: 0px;
     }
 
     .control-width {
       line-height: initial;
-      margin-top: 20px;
+      margin-top: 0px;
     }
   }
 }
 
 /*地图问题*/
+
 .map {
   .input-control {
     .control-text.invoice-remark {
@@ -2717,18 +2844,22 @@ span.Toolbar_Notification_FailCount {
         }
       }
     }
-    .u-time-picker i.ufP{
+
+    .u-time-picker i.ufP {
       opacity: 1 !important;
     }
+
     .ant-select-selection__clear {
       position: absolute !important;
       top: 16px !important;
       opacity: 1 !important;
+      right: 30px !important;
     }
   }
 }
 
 /*商品转换关系*/
+
 .beforeProductInfo,
 .afterProductInfo {
 
@@ -2739,6 +2870,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*零售开单：底部功能操作按钮添加快捷键*/
+
 .hotKey {
   float: right;
   opacity: 0.6;
@@ -2779,6 +2911,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*快捷支付添加快捷键*/
+
 .billing-js-zfb .billing-settleButton-wrap {
   .ant-btn {
     display: flex;
@@ -2804,27 +2937,23 @@ span.Toolbar_Notification_FailCount {
     .quick_payment_method {
       max-width: 62px;
     }
-
   }
 }
 
 /*鼠标经过背景颜色变化*/
+
 .Toolbar_Group_Length1 .Toolbar_Common_Btn_Menus .ant-btn-ghost:hover {
   background-color: #f3f5f9;
 }
 
 /*查询方案*/
+
 .scheme-list {
-  // margin-top: -10px;
   width: auto;
   display: inline-block !important;
   display: inline;
   height: 24px;
   overflow: hidden;
-
-  // .Grouping-condition {
-  //   height: 24px;
-  // }
 
   .Grouping-condition .Grouping-condition-input:hover {
 
@@ -2872,11 +3001,11 @@ span.Toolbar_Notification_FailCount {
       color: #505766;
       font-size: 14px;
     }
-
   }
 }
 
 /*查询方案-弹窗*/
+
 .u-modal-dialog.scheme-content {
   width: 750px !important;
 
@@ -2885,12 +3014,14 @@ span.Toolbar_Notification_FailCount {
 
     .Scheme-Content-body {
       height: 470px;
-      padding: 10px 0px 20px 50px;
+      padding: 16px 0px 20px 50px;
       overflow-y: auto;
 
       .add-scheme {
         position: relative;
-
+        .show_pubper{
+          padding-left: 98px;
+        }
         .input_schemename {
           border: #ee2222 solid 1px;
         }
@@ -2899,6 +3030,7 @@ span.Toolbar_Notification_FailCount {
         .scheme-name-mention {
           position: absolute;
           font-size: 12px;
+          line-height: 12px;
           color: #ee2222;
           left: 98px;
         }
@@ -2946,7 +3078,7 @@ span.Toolbar_Notification_FailCount {
         .add-scheme-content {
           display: flex;
           align-items: center;
-          margin-top: 20px;
+          margin-top: 10px;
 
           .scheme-name {
             width: 83px !important;
@@ -2961,7 +3093,7 @@ span.Toolbar_Notification_FailCount {
           }
 
           .scheme-set {
-            margin-left: 15px;
+            margin-left: 5px;
           }
         }
 
@@ -2994,7 +3126,7 @@ span.Toolbar_Notification_FailCount {
             width: 83px !important;
             line-height: 16px;
             max-height: 32px;
-            margin-right: 15px;
+            margin-right: 15px!important;
             overflow: hidden;
             text-align: right;
           }
@@ -3022,7 +3154,7 @@ span.Toolbar_Notification_FailCount {
           align-items: initial;
 
           .query-content-title {
-            line-height: 32px;
+            line-height: 28px;
           }
 
           .query-component-3 {
@@ -3046,10 +3178,12 @@ span.Toolbar_Notification_FailCount {
         .Test-time-two {
           display: flex;
           margin-top: 20px;
+
           .u-radio-group .u-radio-button {
             margin-top: 3px;
             padding: 0 6px;
           }
+
           .query-picker.query-copypicker {
             width: 270px;
 
@@ -3148,7 +3282,6 @@ span.Toolbar_Notification_FailCount {
         width: 14px;
         height: 14px;
       }
-
     }
 
     .add-query-criteria:hover {
@@ -3158,6 +3291,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*查询条件*/
+
 .ant-popover.filter_scheme_popoverdown {
   .ant-popover-content {
     margin-left: 10px !important;
@@ -3214,8 +3348,17 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*查询方案-自定义过滤条件*/
+
 .scheme-List.group-add-grouping-count.defined-filterItem {
-  padding-bottom: 64px !important;
+  padding-bottom: 64px;
+
+  &.haveno_addScheme {
+    padding-bottom: 0;
+
+    .haveno_addIcon {
+      padding: 0;
+    }
+  }
 
   .group-add-grouping {
     line-height: 28px;
@@ -3235,6 +3378,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*查询方案-自定义过滤条件弹窗*/
+
 .u-modal-dialog.filter_defined_list {
   width: 800px !important;
 
@@ -3254,14 +3398,16 @@ span.Toolbar_Notification_FailCount {
         margin-right: 24px;
         height: @base-input-height;
       }
+
       .u-button-primary {
         border: 1px solid #d9d9d9;
         color: #535a69;
-        background:#fff;
+        background: #fff;
         font-size: 12px;
+
         &:hover {
           border: 1px solid #505766;
-          background:#fff;
+          background: #fff;
         }
       }
     }
@@ -3306,6 +3452,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*查询方案-自定义过滤条件弹窗-新增过滤项弹窗*/
+
 .u-modal-dialog.addfilter_content {
   width: 800px !important;
 
@@ -3333,7 +3480,8 @@ span.Toolbar_Notification_FailCount {
 
           i {
             font-size: 14px;
-            color: #999;
+            color: #ccc;
+
             &:hover {
               color: #505766;
             }
@@ -3372,12 +3520,13 @@ span.Toolbar_Notification_FailCount {
 
         .u-button.u-button-icon {
           height: 28px;
-          right: 20px;
+          right: 24px;
           position: absolute;
           z-index: 2;
           top: 0;
           border: none;
           cursor: pointer;
+          padding: 0;
 
           i {
             font-size: 16px;
@@ -3390,23 +3539,31 @@ span.Toolbar_Notification_FailCount {
           top: 0;
           right: 52px;
           height: 30px;
-          line-height: 32px;
+          line-height: 30px;
           z-index: 1;
           cursor: pointer;
+
+          &:hover {
+            &::before {
+              color: #505766;
+            }
+          }
         }
 
         .u-select {
           width: 210px !important;
 
-          .u-select-search__field {
+          .u-select-search-field {
             padding-right: 40px;
           }
         }
       }
     }
+
     .u-select {
       vertical-align: middle;
     }
+
     .RightContent {
       width: 514px;
       float: left;
@@ -3414,6 +3571,12 @@ span.Toolbar_Notification_FailCount {
       padding-top: 20px;
       height: 494px;
       overflow-y: auto;
+
+      .add_defined {
+        .refer-div.has-feedback .ant-row {
+          margin-bottom: 0; // 新增过滤项
+        }
+      }
 
       .ant-row {
         margin-bottom: 15px;
@@ -3423,13 +3586,15 @@ span.Toolbar_Notification_FailCount {
         padding: 0px;
         min-width: 0;
         font-size: 12px;
+        height: 26px;
+        margin-bottom: 8px;
       }
 
       .ant-row .label-control {
         width: 86px !important; // zhangkunk 自定义过滤项细节调整
         color: #2a2a2a;
         text-align: right;
-        line-height:@base-input-height;
+        line-height: @base-input-height;
       }
 
       .ant-row .input-control {
@@ -3443,7 +3608,15 @@ span.Toolbar_Notification_FailCount {
 
           .anticon {
             font-size: 8px;
-            margin-left: .3em;
+            margin-left: .3em; // 这里是向上、向下图标视觉效果微调
+
+            &.anticon-up-circle {
+              transform: scale(.8) translateY(1px);
+            }
+
+            &.anticon-down-circle {
+              transform: scale(.8) translateY(0px);
+            }
           }
         }
       }
@@ -3454,7 +3627,7 @@ span.Toolbar_Notification_FailCount {
         background: #fff;
         line-height: 22px;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 8px !important;
         margin-left: 0;
         margin-right: 7px;
         border: 1px solid #d9d9d9;
@@ -3500,10 +3673,6 @@ span.Toolbar_Notification_FailCount {
   }
 
   .u-modal-footer {
-    button+button {
-      // margin-left: 15px;
-    }
-
     .u-button:first-of-type {
       background: #e5e9ec;
       color: #505766;
@@ -3511,7 +3680,9 @@ span.Toolbar_Notification_FailCount {
 
     .u-button:nth-of-type(2) {
       background: #505766;
-
+      &:disabled {
+        opacity: .5;
+      }
       span {
         color: #fff;
       }
@@ -3528,6 +3699,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*智能要货弹窗*/
+
 .query-scheme-modal-container {
   .group-title {
     margin-bottom: 15px;
@@ -3773,63 +3945,61 @@ span.Toolbar_Notification_FailCount {
   }
 }
 
-/*开单logo*/
+/*开单logo设置*/
+
+.no-avatar-man.basic-avatar-billing-logo {
+  width: 90px !important;
+  height: 50px !important;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background: url(images/icon_billing_logo.png) center center #f8f8f8;
+}
+
 .basic-avatar-billing-logo {
-  display: flex;
-  align-items: center;
+  width: 750px;
 
-  .info-person {
-    background-image: url(images/icon_billing_logo.png);
-    width: 90px;
-    height: 60px;
-    border-radius: 0px;
-  }
+  .basic-avatar-btn-item {
+    width: 90px !important;
+    height: 50px !important;
+    background: url(images/icon_billing_logo.png) center center #f8f8f8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
-  .avatar-uploader {
-    height: 60px;
-    width: 90px;
-  }
-
-  .info-person {
-    width: 90px;
-    height: 60px;
+    &.basic-avatar-bg {
+      background: url(images/icon_billing_logo.png) center center #f8f8f8;
+      background-size: 100% 100%;
+    }
 
     img {
-      width: 90px;
-      height: 60px;
-      background-color: #f3f3f3;
+      width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+
+    .ant-upload {
+      height: 100%;
+    }
+
+    span.basic-avator-changeimg {
+      height: 25px !important;
+
+      .anticon-uploadimg:before {
+        font-size: 18px !important;
+      }
+    }
+
+    .basic-avator-deleteimg {
+      height: 25px !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
     }
   }
-
-  .info-person-mask {
-    border-radius: 0px;
-
-    i {
-      margin-top: 5px;
-    }
-
-    p {
-      font-size: 12px;
-      margin-top: -4px;
-    }
-  }
-}
-
-.container-browse-mode .viewCell .logo-face-label+.control-width>img.basic-avatar-billing-logo {
-  width: 90px;
-  height: 60px;
-  border-radius: 0px;
-  background-color: #f3f3f3;
-}
-
-.container-browse-mode .viewCell .logo-face-label+.control-width .no-avatar-man.basic-avatar-billing-logo {
-  background-image: url(images/icon_billing_logo.png);
-  width: 90px;
-  height: 60px;
-  border-radius: 0px;
 }
 
 /*电商订单-弹窗*/
+
 .filterArea {
   margin-top: 15px;
   height: 40px;
@@ -3867,6 +4037,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*表单合并*/
+
 .ant-btn-down,
 .ant-btn-up {
   height: 32px;
@@ -3941,6 +4112,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*货位*/
+
 .cargo-location-head {
   padding-bottom: 0px;
 
@@ -3983,7 +4155,6 @@ span.Toolbar_Notification_FailCount {
         top: 2px !important;
       }
     }
-
   }
 
   .form-base.Manual-calculation {
@@ -3991,31 +4162,8 @@ span.Toolbar_Notification_FailCount {
   }
 }
 
-/*保存为草稿*/
-.savedraft_modal {
-  width: 450px !important;
-
-  .ant-modal-body {
-    height: 150px;
-    padding: 20px;
-
-    .savedraft_title {
-      width: auto !important;
-      margin-right: 15px;
-    }
-
-    .ant-col-4 {
-      width: 250px !important;
-    }
-
-    .draft_name {
-      color: #ee2233;
-      padding-left: 64px;
-    }
-  }
-}
-
 /*草稿-新增态只有list-top-toolbar其他页面没有这种结构*/
+
 .container-edit-mode {
   .list-top-toolbar+.group-container {
     padding-top: 0px;
@@ -4024,6 +4172,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*pc商品选配*/
+
 .special-rows {
   .special-row {
     display: flex;
@@ -4035,6 +4184,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*草稿下拉框*/
+
 .drop_menu {
   padding: 8px 0px !important;
   border: #ccc solid 1px;
@@ -4078,6 +4228,7 @@ span.Toolbar_Notification_FailCount {
     .draft_itemName {
       width: 100%;
       padding: 0;
+      padding-right: 22px;
     }
 
     .draft_font {
@@ -4086,24 +4237,20 @@ span.Toolbar_Notification_FailCount {
       color: #666;
       padding: 0px 15px 0px 10px;
 
+      .anticon-shanchu1 {
+        line-height: 28px;
+      }
+
       .anticon-shanchu1::before {
-        color: #505766;
-        font-size: 16px;
+        color: #999;
+        font-size: 14px;
       }
 
       .anticon-shanchu1:hover::before {
-        color: #505766;
-      }
-
-    }
-
-    &:hover {
-      .draft_font {
-        display: block;
-        top: 0;
-        margin-top: 0;
+        color: #ee2233;
       }
     }
+
   }
 
   .draft_lipc {
@@ -4134,6 +4281,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*汇总明细切换按钮*/
+
 .ant-btn.switch_button {
   height: 32px;
 
@@ -4147,21 +4295,30 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*下拉框带搜索条件的不动 列表出滚动条*/
+
 .defaut-list.listRefer-list {
-  height: 192px;
+  max-height: 198px;
   overflow-y: auto;
 
   li {
     position: relative;
     padding: 8px 10px 8px 35px;
     display: block;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 16px;
 
     &.selected {
       background-color: #fff7e7;
+
+      &:hover {
+        background-color: #EDF1F7;
+      }
+
+      &.u-menu-item-active {
+        background-color: #EDF1F7;
+      }
     }
 
     .anticon {
@@ -4193,12 +4350,12 @@ span.Toolbar_Notification_FailCount {
         }
       }
     }
-    &:hover{
-      span{
+
+    &:hover {
+      span {
         background: #f7f9fd;
       }
     }
-
   }
 
   li.no-data {
@@ -4208,25 +4365,30 @@ span.Toolbar_Notification_FailCount {
       background: #fff;
     }
   }
+
   &.u-menu-vertical {
     border: none;
     padding: 0;
-    > .u-menu-item {
+
+    >.u-menu-item {
       font-size: 12px;
       line-height: inherit;
       height: initial;
       padding: 8px 10px 8px 35px;
-      span{
+
+      span {
         display: none;
         background: transparent;
       }
-      &:hover{
-        span{
+
+      &:hover {
+        span {
           display: block;
         }
       }
     }
   }
+
   &.u-menu {
     color: #333;
     border: none;
@@ -4247,6 +4409,7 @@ span.Toolbar_Notification_FailCount {
   padding-bottom: 3px;
   margin-bottom: -8px;
   overflow: hidden;
+
   span {
     display: block;
     width: 100%;
@@ -4269,12 +4432,14 @@ span.Toolbar_Notification_FailCount {
       }
     }
   }
-  span.table-list-toolbar{
+
+  span.table-list-toolbar {
     float: left;
   }
 }
 
 /*桌面看板-过滤条件*/
+
 .filter-inDesktop-container {
   width: 650px;
   z-index: 1000;
@@ -4405,6 +4570,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*桌面看板-设置过滤*/
+
 .filter-inDesktop {
   display: flex;
   align-items: center;
@@ -4473,8 +4639,13 @@ span.Toolbar_Notification_FailCount {
   }
 }
 
+// 法人证件
 .viewCell .basic-avatar-default .basic-avatar-right {
-  margin-left: 10px;
+  margin-left: 0;
+  line-height: 12px;
+  position: absolute;
+  bottom: -14px;
+  color: #ccc;
 }
 
 .viewCell .basic-avatar-default .ant-upload.ant-upload-select {
@@ -4487,7 +4658,6 @@ span.Toolbar_Notification_FailCount {
 }
 
 .viewCell .basic-avatar-btn-item:hover {
-
   span.avatar-uploader {
     position: absolute;
     left: 0px;
@@ -4503,6 +4673,13 @@ span.Toolbar_Notification_FailCount {
 
     .anticon-uploadimg:before {
       font-size: 26px;
+    }
+    //TINPER-2662
+    .u-upload.u-upload-select{
+      display:block;
+      strong{
+        line-height: 50px;
+      }
     }
   }
 
@@ -4544,6 +4721,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*上传企业logo*/
+
 .basic-avatar-billing-logo {
   .basic-avatar-btn-item {
     .ant-upload-select-text {
@@ -4567,10 +4745,11 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*设置自助大屏企业logo*/
-.face-img.basic-avatar-logo {
-  width: 750px;
 
-  .basic-avatar-btn-item {
+.face-img.basic-avatar-logo {
+  width: 750px; //无图片默认背景
+
+  .basic-avatar-btn-item.basic-avatar-bg {
     width: 160px;
     height: 70px;
     background: url(images/logo-gray2.png) center center #f3f6f8;
@@ -4581,6 +4760,22 @@ span.Toolbar_Notification_FailCount {
     img {
       width: 100%;
       max-height: 100%;
+    }
+  }
+
+  //有图片
+  .basic-avatar-btn-item {
+    width: 160px;
+    height: 70px;
+    border-radius: 4px;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-height: 100%;
+      height: auto;
     }
   }
 
@@ -4668,18 +4863,20 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*维度导航方案右对齐*/
+
 .rpt-select2 {
   float: right;
 }
 
 /*资质信息-法人证件*/
+
 .viewCell .id-card-front {
 
   .basic-avatar-default,
   .basic-avatar-bg {
     background: url(./images/shenfenzheng-zheng.png) no-repeat center;
-    background-size: 120px 70px;
-    height: 70px;
+    background-size: 120px 64px;
+    height: 64px;
     flex: 0 0 120px;
     width: 120px;
     display: block !important;
@@ -4690,17 +4887,9 @@ span.Toolbar_Notification_FailCount {
     border-radius: 4px;
   }
 
-  >.ant-row {
-    margin-bottom: 56px;
-  }
-
-  .id-card-Front>.ant-row {
-    margin-bottom: 0px;
-  }
-
   .avatar-uploader,
   .basic-avatar-default {
-    height: 70px !important;
+    height: 64px;
   }
 
   .input-bottom {
@@ -4709,7 +4898,7 @@ span.Toolbar_Notification_FailCount {
 
   .basic-avatar-btn-item {
     width: 120px;
-    height: 70px !important;
+    height: 64px;
     margin-right: 0px;
     border-radius: 4px;
   }
@@ -4753,7 +4942,7 @@ span.Toolbar_Notification_FailCount {
     }
 
     .viewCell .basic-avatar-default .avatar-uploader .info-person-01 {
-      height: 70px;
+      height: 64px;
     }
 
     .viewSetting.viewCell {
@@ -4774,25 +4963,36 @@ span.Toolbar_Notification_FailCount {
   .basic-avatar-default,
   .basic-avatar-bg {
     background: url(./images/shenfenzhengfanmian.png) no-repeat center !important;
-    background-size: 120px 70px !important;
-    height: 70px !important;
+    background-size: 120px 64px !important;
+    height: 64px;
   }
 }
 
+// 营业执照、法人证件等图片控件
+.viewCell .id-card-front,
+.viewCell .id-card-license {
+  &>.ant-row {
+    margin-bottom: 14px !important;
+  }
+  .form-lable-top-mixin();
+}
+
+// 品牌，广告图片
+.viewCell .pc_brand_adImage {
+  .form-lable-top-mixin();
+}
 
 /*资质信息-营业执照*/
-.viewCell .id-card-license {
-  >.ant-row {
-    margin-bottom: 40px;
-  }
 
+.viewCell .id-card-license {
   .basic-avatar-btn-item,
   .basic-avatar-default {
     background: url(./images/yingyezhizhao.png) no-repeat center #eceaea;
-    background-size: 100px 70px;
-    height: 70px;
+    background-size: 100px 64px;
+    height: 64px;
     width: 100px;
     display: block !important;
+    border-radius: 4px;
   }
 
   .input-bottom {
@@ -4801,14 +5001,11 @@ span.Toolbar_Notification_FailCount {
 
   .avatar-uploader,
   .basic-avatar-default {
-    height: 72px !important;
+    height: 64px;
     border-radius: 4px;
   }
 
   .basic-avatar-btn-item {
-    width: 100px;
-    height: 72px !important;
-    margin-right: 0px;
     border-radius: 4px;
 
     img {
@@ -4842,7 +5039,6 @@ span.Toolbar_Notification_FailCount {
       float: none;
       margin-top: 8px;
     }
-
   }
 
   .input-bottom-text {
@@ -4852,6 +5048,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*营业执照浏览态*/
+
 .container-browse-mode {
 
   .id-card-front>.ant-row,
@@ -4864,6 +5061,10 @@ span.Toolbar_Notification_FailCount {
     border: 1px solid #eee;
   }
 
+  .id-card-front .basic-avatar-default,
+  .id-card-license .basic-avatar-default {
+    height: 64px;
+  }
 }
 
 .merchant-fileupload {
@@ -4919,11 +5120,8 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*常用功能设置*/
-.ant-card-extra {
-  .anticon-changyonggongnengshezhi {
-    margin-top: 15px;
-  }
 
+.u-tile-extra {
   .anticon-changyonggongnengshezhi:before {
     font-size: 20px;
   }
@@ -5044,6 +5242,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*表单/档案看板*/
+
 .kanban_row {
   padding-left: 20px;
   padding-right: 5px;
@@ -5154,7 +5353,6 @@ span.Toolbar_Notification_FailCount {
           background: #e7e7e7;
           left: -10px;
           top: 2px;
-
         }
 
         a.set_default::before {
@@ -5165,11 +5363,9 @@ span.Toolbar_Notification_FailCount {
           background: #e7e7e7;
           right: -10px;
           top: 2px;
-
         }
       }
     }
-
   }
 
   .kanban_addstyle {
@@ -5221,11 +5417,11 @@ span.Toolbar_Notification_FailCount {
         margin-top: 2px;
       }
     }
-
   }
 }
 
 /*桌面看板-公告弹窗*/
+
 .eChartPanelDesign_SetNotice {
   .ant-modal-body {
     padding: 16px 0px;
@@ -5260,6 +5456,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*单据联查按钮*/
+
 .voucher-showflow-content-wrapper {
   background: #F7F7F7;
 }
@@ -5280,6 +5477,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*空白页*/
+
 .error-blank-pages {
   width: 380px;
   position: absolute;
@@ -5311,21 +5509,27 @@ span.Toolbar_Notification_FailCount {
 }
 
 // 顶部无筛选条件-商品属性新增
-.ant-tabs-tabpane {
-  .height-100 {
-    .hide {
-      margin-bottom: 20px;
-    }
-  }
+// .ant-tabs-tabpane {
+//   .height-100 {
+//     .hide {
+//       margin-bottom: 20px;
+//     }
+//   }
 
+//   .list-top {
+//     padding-top: 40px;
+//   }
+// }
+.container-edit-mode {
   .list-top {
-    padding-top: 40px;
+    margin-top: 16px;
   }
 }
 
 .container-browse-mode {
   .list-top {
-    margin-top: 20px;
+    margin-top: 16px;
+    margin-bottom: 12px;
     padding-top: 0;
   }
 
@@ -5344,12 +5548,12 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*tree-list 左树右表*/
+
 .tree-list {
   height: 100%;
 
   .height-100 .form-left {
-    border-right: 1px solid #f5f5f5;
-    // overflow: hidden;
+    border-right: 1px solid #f5f5f5; // overflow: hidden;
 
     //展开折叠 zhangkunk 左树右表展开折叠效果
     .move_left {
@@ -5482,6 +5686,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /* 左树右表-左侧新增 zhangkunk */
+
 .tree-list .height-100 .unitlistTreeOuter {
 
   //展开折叠细节 zhangkunk
@@ -5511,7 +5716,6 @@ span.Toolbar_Notification_FailCount {
         }
       }
     }
-
   }
 
   .bg-white.border-r {
@@ -5525,6 +5729,7 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*带搜索框的下拉框*/
+
 .uretail-pop .ant-popover-inner-content ul li {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -5532,11 +5737,12 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*锚点*/
+
 .group-container-anchor {
   position: fixed;
   right: 0px;
   top: 15%;
-  z-index: 3;
+  z-index: 101;
   border-right: none;
   border-radius: 3px;
   padding: 12px 0 2px 40px;
@@ -5690,7 +5896,6 @@ span.Toolbar_Notification_FailCount {
       }
     }
   }
-
 }
 
 .group-container-anchor:hover {
@@ -5715,15 +5920,33 @@ span.Toolbar_Notification_FailCount {
 }
 
 /*广告图片*/
+
 .pc_brand_adImage .basic-avatar-bg,
-.container-browse-mode .width-percent-100 .pc_brand_adImage .control-width .no-avatar-man.basic-avatar-default {
+.container-browse-mode .pc_brand_adImage .control-width .no-avatar-man.basic-avatar-default {
   width: 120px;
   height: 60px;
   border-radius: 4px;
   background: url(images/ad.png) center center #f3f6f8;
 }
 
+.pc_brand_adImage .basic-avatar-bg {
+  &:hover span.avatar-uploader .u-upload.u-upload-select strong {
+    line-height: 60px;
+  }
+}
+
+.pc_brand_adImage > .ant-row {
+  margin-bottom: 17px;
+  // .basic-avatar-default {
+  //   .basic-avatar-right {
+  //     line-height: 12px;
+  //     bottom: -14px;
+  //   }
+  // }
+}
+
 /*分类图片*/
+
 .pc_presentationclass_adImage,
 .pc_presentationclass_image {
   .basic-avatar-browse-img-container {
@@ -5768,10 +5991,15 @@ span.Toolbar_Notification_FailCount {
   height: 70px;
   border: 1px solid #eee;
   border-radius: 4px;
+  background: #F8F8F8;
+  position: relative;
+  display: flex;
+  align-items: center;
 
   img {
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    max-height: 100%;
+    height: auto;
   }
 }
 
@@ -5827,239 +6055,6 @@ span.Toolbar_Notification_FailCount {
   }
 }
 
-/*导入导出进度条*/
-.ImportProgressBall_Outer {
-  position: fixed;
-  bottom: 120px;
-  right: 26px;
-  background: #fff;
-  z-index: 111111;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 67px;
-  height: 67px;
-  line-height: 60px;
-  text-align: center;
-  box-shadow: 0px 0px 18px 0px rgba(199, 211, 227, 1);
-
-  .ImportProgressBall_Rate {
-    .ant-progress-circle .ant-progress-inner {
-      text-align: center;
-      line-height: 57px;
-      width: 57px !important;
-      height: 57px !important;
-      position: relative;
-      left: -2px;
-
-      svg.ant-progress-circle {
-        border-radius: 50%;
-        width: 62px;
-        height: 62px;
-        background: linear-gradient(45deg, #def0fd 0%, #f3f3ff 100%);
-
-        .ant-progress-circle-trail {
-          stroke: #fbfbfb;
-        }
-
-        .ant-progress-circle-path {
-          stroke: #6ec2ff;
-        }
-      }
-
-      .ImportProgressBall_Percent {
-        height: 76px;
-        text-align: center;
-        line-height: 80px;
-        position: relative;
-        left: 3px;
-
-        .ImportProgressBall_PercentNum {
-          font-size: 20px;
-          color: #4E97FF;
-        }
-
-        .ImportProgressBall_Percent100 {
-          font-size: 14px;
-          color: #4E97FF;
-        }
-      }
-    }
-  }
-}
-
-// 异步导入左边方框
-.ImportProgressBall_Popover {
-  background-color: transparent;
-  border: none;
-  box-shadow: 0 0 0px 0 rgba(0, 0, 0, .2);
-  width: 240px;
-  height: 262px;
-  left: auto !important; // fix: liulili 异步导入
-  right: 98px;
-  .tooltip-inner {
-    padding: 12px 0;
-    box-shadow: 0 0 0px 0 rgba(0, 0, 0, .2);
-    background-color: #fff !important;
-    border-radius: 6px !important;
-    border: 1px solid #dcdcdc;
-  }
-  .u-popover-content {
-    .ImportProgressBall_Content {
-      padding: 0 12px;
-    }
-    .ImportProgressBall_Items {
-      width: 217px;
-      height: 212px;
-      overflow-y: scroll;
-      padding-right: 16px;
-      margin-top: 10px;
-
-      .ImportProgressBall_Title {
-        font-size: 14px;
-        font-weight: 400;
-        color: rgba(51, 51, 51, 1);
-        line-height: 20px;
-        margin-top: 3px
-      }
-
-      .ImportProgressBall_Item {
-        // margin-bottom: 9px;
-        margin-bottom: 8px; // async: liulili 导入导出
-
-        .ImportProgressBall_Progress {
-          .u-progress {
-            display: block;
-          }
-          .u-progress-inner {
-            height: 5px;
-            background-color: #F5F5F5 !important;
-            position: relative;
-            top: -6px;
-
-            .u-progress-bg {
-              height: 4px !important;
-              border-radius: 6px;
-              margin-top: -7px;
-              background-color: #6ec2ff;
-              position: relative;
-              top: 7px;
-            }
-          }
-        }
-
-        .ImportProgressBall_Info {
-          font-size: 12px;
-          font-weight: 400;
-          color: rgba(153, 153, 153, 1);
-          line-height: 17px;
-          // margin-top: -16px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-
-          .ImportProgressBall_Info_busName {
-            max-width: 55%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis
-          }
-        }
-      }
-    }
-  }
-
-  .ant-popover-content {
-    box-shadow: 0 0 0px 0 rgba(0, 0, 0, .2);
-
-    .ant-popover-arrow {
-      top: 50%;
-      margin-top: -5px;
-      left: 233px;
-      border-width: 8px;
-
-      &::after {
-        bottom: -7px;
-      }
-    }
-
-    .ant-popover-inner {
-      border: none !important;
-      background-color: #fff !important;
-      border-radius: 6px !important;
-      border: 1px solid #dcdcdc;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, .2) !important;
-      transform-origin: right;
-    }
-
-    .ant-popover-inner-content {
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-      border: none !important;
-      padding-left: 15px;
-      padding-right: 0px;
-      background-color: transparent;
-
-      .ImportProgressBall_Items {
-        width: 217px;
-        height: 212px;
-        overflow-y: scroll;
-        padding-right: 16px;
-        // margin-top: -6px;
-        margin-top: -1px; // async: liulili 导入导出
-
-        .ImportProgressBall_Title {
-          font-size: 14px;
-          font-weight: 400;
-          color: rgba(51, 51, 51, 1);
-          line-height: 20px;
-          margin-top: 3px
-        }
-
-        .ImportProgressBall_Item {
-          // margin-bottom: 9px;
-          margin-bottom: 8px; // async: liulili 导入导出
-
-          .ImportProgressBall_Progress {
-            height: 8px;
-            .ant-progress-inner {
-              height: 5px;
-              background-color: #f7f7f7 !important;
-              position: relative;
-              top: -7px;
-
-              .ant-progress-bg {
-                height: 4px !important;
-                border-radius: 6px;
-                margin-top: -7px;
-                background-color: #6ec2ff;
-                position: relative;
-                top: 7px;
-              }
-            }
-          }
-
-          .ImportProgressBall_Info {
-            font-size: 12px;
-            font-weight: 400;
-            color: rgba(153, 153, 153, 1);
-            line-height: 17px;
-            margin-top: -16px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
-            .ImportProgressBall_Info_busName {
-              max-width: 55%;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .ant-notification-notice.ant-notification-notice-closable.Toolbar_Notification {
   padding: 16px 16px 4px 16px !important;
   height: auto;
@@ -6085,8 +6080,8 @@ span.Toolbar_Notification_FailCount {
 .btn-maximize,
 .btn-maximize {
   border: none;
-  // padding: 6px 0px 8px 14px;
-  min-width: 30px !important;
+  width: 20px;
+  min-width: unset;
 
   .anticon-zuixiaohua2::before,
   .anticon-zuidahua:before {
@@ -6127,14 +6122,19 @@ span.Toolbar_Notification_FailCount {
       }
 
       .viewCell+.width-percent-100 {
-        margin-left: 10px !important;
+        position: absolute;
+        left: 132px;
         padding-left: 0px !important;
         padding-right: 0px;
-        .anticon-bangzhu:hover{
-          &::before{
+
+        .anticon-bangzhu:hover {
+          cursor: pointer;
+
+          &::before {
             color: #505766;
           }
         }
+
         .ant-input-number {
           min-width: 60px;
         }
@@ -6155,13 +6155,14 @@ span.Toolbar_Notification_FailCount {
 .u-tabs-tabpane {
   .height-100 {
     .hide {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+      height: 0;
     }
   }
 
-  .list-top {
-    padding-top: 40px;
-  }
+  // .list-top {
+  //   padding-top: 40px;
+  // }
 }
 
 .lookup-pop .grid-header- {
@@ -6190,9 +6191,8 @@ span.Toolbar_Notification_FailCount {
 
 // async
 .tab-list .u-tabs-content .u-tabs-tabpane {
-
   div[id='pc_product|imgName'] .upload-content {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 
   .enclosure-list-count {
@@ -6220,6 +6220,7 @@ span.Toolbar_Notification_FailCount {
 
       .u-button-icon {
         top: 3px;
+        right: 20px;//TINPER-2677
       }
 
       .anticon-close-circle {
@@ -6263,7 +6264,7 @@ span.Toolbar_Notification_FailCount {
         .u-button {
           border: none;
           float: right;
-          margin-top: 13px;
+          margin-top: 8px;//TINPER-2677
           margin-left: 0px !important;
           padding-bottom: 0px;
           padding-right: 20px;
@@ -6297,6 +6298,7 @@ span.Toolbar_Notification_FailCount {
 // 冲突解决：基础档案：云端导入
 .TreeList.u-modal-dialog .u-modal-body {
   padding-top: 0;
+
   .form-left.Manual-calculation-left {
     height: 580px; // 模态框左侧树设置高度，以支持垂直滚动
   }
@@ -6306,11 +6308,45 @@ span.Toolbar_Notification_FailCount {
 .timeFenceRemark.u-modal-dialog .u-modal-body {
   padding-top: 0;
 }
-// ================================================
 
+// 保存草稿
+.savedraft_modal.u-modal-dialog {
+  width: 450px !important;
+  .single-item-modal-mixin();
+}
+
+// 模板更名
+.change_tempName.u-modal-dialog {
+  width: 450px !important;
+  .single-item-modal-mixin();
+}
+
+// 客户分类 模态框最小高度450px
+.Archive.u-modal-dialog .u-modal-body {
+  min-height: 360px;
+}
+
+.mr_plan_scheme {
+  .Archive.u-modal-dialog .u-modal-body {
+    .list-top-toolbar {
+      padding-top: 0;
+      margin-top: -12px;
+    }
+  }
+}
+
+// 客户档案,开票客户新增
+.aa_merchant {
+  .Archive.u-modal-dialog .u-modal-body {
+    .list-top-toolbar {
+      margin-top: 0;
+    }
+  }
+}
+
+// ================================================
 // 保存草稿的confirm 框
 .savedraft_modal .u-modal .u-modal-body {
-  padding: 30px 0 30px;
   .ant-row .savedraft_title {
     line-height: @base-input-height;
   }
@@ -6443,6 +6479,14 @@ span.Toolbar_Notification_FailCount {
               white-space: normal;
               opacity: 1 !important;
             }
+
+            .u-select-search {
+              .u-select-search-field {
+                color: transparent;
+                text-shadow: 0 0 0 #000;
+                cursor: pointer;
+              }
+            }
           }
         }
 
@@ -6463,7 +6507,6 @@ span.Toolbar_Notification_FailCount {
       &:hover {
         border-right: 1px solid #505766 !important;
       }
-
     }
 
     .toright {
@@ -6482,21 +6525,40 @@ span.Toolbar_Notification_FailCount {
       &:hover {
         cursor: w-resize;
       }
-
     }
   }
 
   .split_right {
-    flex: 1;
+    flex: 1; // 物料清单全阶维护
+
+    .jDiwork-container {
+      height: 100%;
+      // overflow-y: auto; // !fix: 友零售，库存工作台
+    }
+
+    //树卡底部按钮样式占用了左侧树
+    .ant-row-flex.btn-toolbar-bottom.bottom-toolbar,[uitype=footer]{
+      width: calc(~"100% - 251px");
+      margin-left: 250px;
+      .ant-row-flex.btn-toolbar-bottom.bottom-toolbar{
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
   }
 }
+
 // 电商通新增定时任务
 .group-buttons {
   .meta-checkbox-container {
-    margin-bottom: 15px;
     padding-left: 117px;
+
     .ant-row .col-float>div {
       float: left;
+
+      label.u-checkbox {
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -6504,12 +6566,301 @@ span.Toolbar_Notification_FailCount {
 .ed_bom_structure_ref {
   padding-right: 10px;
   margin-top: 15px;
+
   .viewCell .label-control {
-    width: auto!important;
+    width: auto !important;
     min-width: 26px;
     padding-left: 0;
   }
+
   .viewCell.width-percent-100 .input-control {
-    width: 162px!important;
+    width: 162px !important;
+  }
+}
+
+//店员头像
+.viewCell .customerAvatar .basic-avatar-browse-img-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+// 自动化营销客户档案头像
+.viewCell .customerAvatar .face-img.basic-avatar-portrait {
+  >.ant-row {
+    .control-width .no-avatar-man {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #d9d9d9;
+      background: url(./images/user.png);
+      background-size: 100%;
+    }
+  }
+
+  .basic-avatar-browse-img-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .basic-avatar-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .basic-avatar-btn-item {
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .avatar-uploader.basic-avator-changeimg {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    &:hover {
+      span.avatar-uploader {
+        width: 100%;
+        height: 100% !important;
+
+        &.basic-avator-uploadimg {
+          .ant-upload.ant-upload-select strong {
+            margin-top: 0px;
+            width: 100%;
+
+            .anticon-uploadimg:before {
+              font-size: 30px;
+            }
+          }
+        }
+
+        &.basic-avator-changeimg {
+          &:hover {
+            background: rgba(0, 0, 0, .5);
+          }
+
+          .anticon-uploadimg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 0;
+
+            &:before {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      strong {
+        flex-direction: column;
+        line-height: 100%;
+
+        .anticon-uploadimg {
+          margin-right: 0;
+        }
+
+        &.basic-avator-deleteimg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.container-browse-mode .customerAvatar .no-avatar-man {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url(images/icon-person.png);
+  background-size: 100%;
+}
+
+/*公告详情*/
+
+.aa_notice_header,
+.aa_notice_div1 {
+  padding-left: 62px;
+  width: 70%;
+
+  .control-text {
+    border: none;
+  }
+}
+
+.aa_notice_header {
+  margin-top: 20px;
+
+  .width-percent-100+.width-percent-100 {
+    line-height: 20px;
+
+    .has-related {
+      .viewCell.width-percent-100 {
+        width: auto;
+      }
+    }
+  }
+
+  .cTitle .invoice-remark {
+    font-size: 22px;
+    color: #333;
+    min-height: 28px;
+    height: auto;
+    line-height: 28px;
+    max-height: 56px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  }
+
+  .dCreateTime {
+    .viewCell {
+      width: auto;
+    }
+
+    .control-text {
+      font-size: 12px;
+      color: #999;
+      padding: 0 2px 0 10px;
+      line-height: 26px;
+      min-height: 26px;
+      height: auto;
+    }
+
+    .width-percent-100 {
+      margin-left: 0px;
+      line-height: 20px;
+
+      .iType_name {
+        .control-text {
+          background: rgba(238, 246, 255, 1);
+          border-radius: 2px;
+          padding: 4px 4px 6px;
+          font-size: 12px;
+          line-height: 12px;
+          height: auto;
+          min-height: 12px;
+          color: #5799F0;
+          transform: scale(.85);
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+.aa_notice_div1 {
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  .sender-column,
+  .italic,
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #666;
+
+    strong {
+      margin-top: 0px;
+      display: block;
+      line-height: 24px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto 25px auto;
+  }
+
+  p:last-child {
+    margin-bottom: 20px;
+  }
+
+  .browse {
+    border: none !important;
+    max-height: 100% !important;
+    overflow-y: hidden !important;
+  }
+}
+
+//表格编辑态数字输入框调整
+.editCol .edit-input-number {
+  .u-input-number-out {
+    .u-input-number {
+      height: 26px !important;
+
+      .u-form-control {
+        height: 24px !important;
+      }
+    }
+  }
+}
+
+//三列显示图标跑偏的问题
+.viewCell.width-percent-33 {
+  .control-width .u-input-group .u-form-control-affix-wrapper {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+//商品详情电脑手机切换
+.menu-management .inventory-process {
+  padding: 16px 0 15px 100px!important;
+}
+// 采购-税票匹配
+.pu_taxticketmatch {
+  .u-tabs-content .container-browse-mode .line-tabs {
+    padding-bottom: 0;
+  }
+  .form-left+.form-base {
+    margin-left: 20px;
+  }
+}
+//查询方案支持个人方案
+.add-personal-plan{
+  overflow-y: auto!important;
+  max-height: 212px!important;
+  padding-left: 0px!important;
+  padding-bottom: 0px!important;
+  .public_plan,
+  .show_perPlan{
+    .public_plan_name{
+      height: 22px;
+      line-height: 20px;
+      background: #f7f7f7;
+      color: #999;
+      padding-left: 12px;
+    }
+  }
+  .hide_perPlan{
+    display: none;
+  }
+}
+
+// 生成结算单查询样式
+.uit_uitbalancelist {
+
+  .uit_prebalance_grid {
+    padding-bottom: 60px;
   }
 }
