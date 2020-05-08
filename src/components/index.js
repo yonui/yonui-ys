@@ -31,12 +31,12 @@ import Steps from './Steps';
 import Tabs from './Tabs';
 import Tag from './Tag/simple';
 import TimePicker from './TimePicker';
-// import Tree from './Tree';
-// import TreeSelect from './TreeSelect';
-// import Upload from './Upload';
-// import Tooltip from './Tooltip';
-// import Transfer from 'bee-transfer';
-// import MobileLocale from './MobileLocale';
+import Tree from './Tree';
+import TreeSelect from './TreeSelect';
+import Upload from './Upload';
+import Tooltip from './Tooltip';
+import Transfer from 'bee-transfer';
+import MobileLocale from './MobileLocale';
 
 export {
   Affix,
@@ -73,10 +73,10 @@ export {
   Tag,
   Tabs,
   TimePicker,
-  // Tree,
-  // TreeSelect,
-  // Transfer,
-  // Upload,
-  // Tooltip,
-  // MobileLocale
+  Tree,
+  TreeSelect,
+  Transfer,
+  Upload,
+  Tooltip,
+  MobileLocale
 };

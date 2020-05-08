@@ -37,6 +37,11 @@
     "Steps": "./src/components/Steps",
     "Tabs": "./src/components/Tabs",
     "Tag": "./src/components/Tag",
-    "TimePicker": "./src/components/TimePicker"
+    "TimePicker": "./src/components/TimePicker",
+    "Tree": "./src/components/Tree",
+    "TreeSelect": "./src/components/TreeSelect",
+    "Upload": "./src/components/Upload",
+    "Tooltip": "./src/components/Tooltip",
+    "MobileLocale": "./src/components/MobileLocale"
   }
 }
