@@ -18,6 +18,7 @@ import InputNumber from './InputNumber';
 import Loading from './Loading/simple';
 import Menu from './Menu';
 import Modal from './Modal';
+import MobileLocale from './MobileLocale';
 import Message from './Message';
 import notification from './notification';
 import Popover from './Popover';
@@ -27,6 +28,7 @@ import Pagination from './Pagination';
 import Radio from './Radio';
 import Switch from './Switch';
 import Select from './Select';
+import Slider from './Slider';
 import Steps from './Steps';
 import Tabs from './Tabs';
 import Tag from './Tag/simple';
@@ -36,7 +38,7 @@ import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
-import MobileLocale from './MobileLocale';
+import Table from 'bee-table';
 
 export {
   Affix,
@@ -68,10 +70,12 @@ export {
   Row,
   Radio,
   Select,
+  Slider,
   Switch,
   Steps,
   Tag,
   Tabs,
+  Table,
   TimePicker,
   Tree,
   TreeSelect,

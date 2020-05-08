@@ -35,6 +35,7 @@
     "Switch": "./src/components/Switch",
     "Select": "./src/components/Select",
     "Steps": "./src/components/Steps",
+    "Slider": "./src/components/Slider",
     "Tabs": "./src/components/Tabs",
     "Tag": "./src/components/Tag",
     "TimePicker": "./src/components/TimePicker",
