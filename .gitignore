@@ -105,6 +105,6 @@ dist
 lib
 .libraui
 .yonui
-
+package-lock.json
 # Mac
 .DS_Store
