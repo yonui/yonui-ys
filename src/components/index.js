@@ -38,7 +38,7 @@ import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
-import Table from 'bee-table';
+import Grid from './Grid';
 
 export {
   Affix,
@@ -75,7 +75,7 @@ export {
   Steps,
   Tag,
   Tabs,
-  Table,
+  Grid,
   TimePicker,
   Tree,
   TreeSelect,

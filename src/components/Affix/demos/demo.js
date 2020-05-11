@@ -3,13 +3,22 @@
  * @description: Demo Description
  */
 import React, { Component } from 'react'
-import MyComponent from '../index'
+import Affix from '../index'
+import Button from '../../Button';
 import '../style';
 import './demo.less';
 export default class Demo extends Component {
     render() {
         return (
-            <MyComponent />
+            <div>
+                <Affix>
+                    <Button type="primary">Affix top</Button>
+                </Affix>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
         )
     }
 }
