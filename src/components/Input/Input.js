@@ -24,14 +24,14 @@ const propsType = {
 };
 
 class InputAdapter extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       value: this.props.value || this.props.defaultValue || ''
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.value !== this.state.value) {
       this.setState({
         value: nextProps.value
@@ -76,7 +76,7 @@ class InputAdapter extends Component {
     }
   }
 
-  render() {
+  render () {
     let { defaultValue, disabled, size, placeholder, addonBefore, addonAfter, suffix, type, ...others } = this.props;
     const { value } = this.state;
 
@@ -112,7 +112,7 @@ class InputAdapter extends Component {
     if (suffix || withAddon) {
       // 目前 suffix 主要用于处理参照的 icon
       return (
-        <InputGroup simple={!!suffix}>
+        <InputGroup simple={!!suffix} className={disabled ? 'disabled' : ''}>
           {
             withAddon && addonBefore && <InputGroup.Addon>{addonBefore}</InputGroup.Addon>
           }

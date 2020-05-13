@@ -220,7 +220,7 @@ class MobileLocale extends Component {
 
   componentWillReceiveProps (nextProps) {
     const { country_code, mobile } = nextProps
-    if(country_code != this.state.country_code || mobile != this.state.mobile) {
+    if (country_code != this.state.country_code || mobile != this.state.mobile) {
       const _country_code = country_code != this.state.country_code ? country_code : this.state.country_code;
       const _mobile = mobile != this.state.mobile ? mobile : this.state.mobile;
       this.setState({
@@ -237,7 +237,7 @@ class MobileLocale extends Component {
   }
 
   validateValue=(value) => {
-    if(!value || value === '')return true;
+    if (!value || value === '') return true;
     const reg = /^[0-9]\d{0,10}$/;
     return reg.test(value);
   }
@@ -249,7 +249,7 @@ class MobileLocale extends Component {
 
   getFindObj = (code) => {
     const {countryList} = this.props;
-    if(!countryList) return zhcnInfo;
+    if (!countryList) return zhcnInfo;
     return countryList.forEach(da => da.country_code === code);
   }
 
@@ -257,7 +257,7 @@ class MobileLocale extends Component {
     const { country_code, mobile} = this.state
     const {countryList, selectProps, className, inputProps, placeholder} = this.props;
     const _defaultValue = zhcnInfo.country_code;
-    var styleProp = {}
+    let styleProp = {}
     if (this.state.elWidth) {
       styleProp = { width: parseInt(this.state.elWidth)};
     }
@@ -273,10 +273,10 @@ class MobileLocale extends Component {
             dropdownMatchSelectWidth={false}
             value={country_code || _defaultValue}
             onChange={(key, e) => {
-              const current = countryList.find(value => value.country_code === key, e);
+              const current = countryList.find(value => String(value.country_code) === key, e);
               this.onChange({country_code: current.country_code, country: current.country, mobile});
             }}>
-            {countryList.map((account) => <Option key={account.country_code} value={account.country_code}>
+            {countryList.map((account) => <Option key={account.country_code} value={String(account.country_code)}>
               <span>{account.country}</span>
               <span className='opt1'>+{account.country_code}</span>
             </Option>)}
@@ -295,7 +295,7 @@ class MobileLocale extends Component {
               this.props.onBlur && this.props.onBlur({...this.state})
             }}
             onChange={(v) => {
-              if(!this.validateValue(v)) return false // 校验合法性
+              if (!this.validateValue(v)) return false // 校验合法性
               this.onChange({...this.state, mobile: v, })
             }}
             {...inputProps}

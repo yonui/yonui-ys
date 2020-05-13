@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import classnames from 'classnames';
 import InputNumber from 'bee-input-number';
 
 class InputNumberAdapter extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       focused: false
@@ -24,7 +24,7 @@ class InputNumberAdapter extends Component {
     this.props.onBlur && this.props.onBlur(val, e);
   }
 
-  render() {
+  render () {
     const { iconStyle, formatter, className } = this.props;
     const cls = classnames(className, {
       'u-input-number-focused': this.state.focused,

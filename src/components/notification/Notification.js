@@ -33,7 +33,7 @@ function notice (args) {
         onClose: args.onClose ? args.onClose : noop
       });
     });
-  }else{
+  } else {
     instance.notice({
       title: message,
       content: description,
