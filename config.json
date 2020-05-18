@@ -15,7 +15,7 @@
   },
   "buildImport": {
     "js": [],
-    "css": [],
+    "css": ["@import '../../../src/theme/index.less';"],
     "export": []
   }
 }
