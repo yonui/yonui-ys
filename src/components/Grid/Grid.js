@@ -1,3 +1,3 @@
-import Grid from 'bee-modal';
+import Grid from 'bee-complex-grid';
 
 export default Grid;
