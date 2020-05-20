@@ -17,5 +17,8 @@
     "js": [],
     "css": ["@import '../../../src/theme/index.less';"],
     "export": []
+  },
+  "outputConfig": {
+    "library":"YonuiYs"
   }
 }

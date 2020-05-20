@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "yonui ys",
   "main": "/lib",
   "scripts": {
@@ -88,7 +88,7 @@
     "marked": "^0.8.0",
     "qrcode.react": "^1.0.0",
     "react-highlight": "^0.12.0",
-    "yonui-cli": "^0.1.77",
+    "yonui-cli": "^0.1.83",
     "yonui-extension": "^0.7.17"
   },
   "author": "FED",
