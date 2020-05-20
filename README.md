@@ -18,6 +18,7 @@ YonSuite交互风格主题包
 
 ```js
 import { Button } from 'yonui-ys';
+import 'yonui/lib/theme/index.less';
 ...
 
 ReactDOM.render(
@@ -29,6 +30,15 @@ ReactDOM.render(
   </div>
 , mountNode);
 ```
+
+使用CDN的方式使用，页面加载`yonui-ys/dist/index.css` 和 `yonui-ys/dist/index.js`后，设置
+```json
+  // 构建排除指定包
+  externals: {
+      "yonui-ys": "YonuiYs"
+  }
+```
+
 
 ### 包含组件
 
