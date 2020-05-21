@@ -13,6 +13,7 @@ export {
   Calendar,
   Dropdown,
   DatePicker,
+  Grid,
   Form,
   Input,
   InputNumber,
