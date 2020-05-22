@@ -40,6 +40,9 @@ import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
 import Grid from './Grid';
 
+//部分tinper组件导出
+import FormControl from 'bee-form-control';
+
 export {
   Affix,
   Anchor,
@@ -82,5 +85,6 @@ export {
   Transfer,
   Upload,
   Tooltip,
-  MobileLocale
+  MobileLocale,
+  FormControl
 };

@@ -41,5 +41,6 @@ export {
   TreeSelect,
   Transfer,
   Upload,
-  Tooltip
+  Tooltip,
+  FormControl
 } from './components/index';
