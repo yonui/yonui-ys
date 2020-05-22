@@ -42,6 +42,9 @@ import Grid from './Grid';
 
 //部分tinper组件导出
 import FormControl from 'bee-form-control';
+import ProgressBar from 'bee-progress-bar';
+import Timeline from 'bee-timeline';
+import Panel from 'bee-panel';
 
 export {
   Affix,
@@ -86,5 +89,8 @@ export {
   Upload,
   Tooltip,
   MobileLocale,
-  FormControl
+  FormControl,
+  ProgressBar,
+  Timeline,
+  Panel,
 };

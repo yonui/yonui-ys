@@ -27,8 +27,10 @@
     "Message": "./src/components/Message",
     "Modal": "./src/components/Modal",
     "Notification": "./src/components/notification",
+    "Panel": "./src/components/Panel",
     "Popover": "./src/components/Popover",
     "Progress": "./src/components/Progress",
+    "ProgressBar": "./src/components/ProgressBar",
     "Popconfirm": "./src/components/Popconfirm",
     "Pagination": "./src/components/Pagination",
     "Radio": "./src/components/Radio",
@@ -39,10 +41,12 @@
     "Tabs": "./src/components/Tabs",
     "Tag": "./src/components/Tag",
     "TimePicker": "./src/components/TimePicker",
+    "Timeline": "./src/components/Timeline",
     "Tree": "./src/components/Tree",
     "TreeSelect": "./src/components/TreeSelect",
     "Upload": "./src/components/Upload",
     "Tooltip": "./src/components/Tooltip",
-    "MobileLocale": "./src/components/MobileLocale"
+    "MobileLocale": "./src/components/MobileLocale",
+    "Grid": "./src/components/Grid"
   }
 }
