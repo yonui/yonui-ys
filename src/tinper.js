@@ -42,5 +42,8 @@ export {
   Transfer,
   Upload,
   Tooltip,
-  FormControl
+  FormControl,
+  ProgressBar,
+  Timeline,
+  Panel,
 } from './components/index';
