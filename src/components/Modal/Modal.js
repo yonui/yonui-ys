@@ -10,7 +10,9 @@ const defaultProps = {
   closable: true,
   mask: true,
   maskClosable: true,
-  _innerType: ''
+  _innerType: '',
+  onHide:()=>{},
+  onCancel:()=>{},
 };
 
 class ModalAdapter extends Component {
@@ -25,7 +27,7 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    let { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType, ...other } = this.props;
+    let { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType,onHide, ...other } = this.props;
     if(visible==undefined)visible=show;
     let defaultFooter = (
       <Footer className='modal-footer'>
@@ -47,7 +49,8 @@ class ModalAdapter extends Component {
         className={wrapClassName}
         dialogClassName={className}
         show={visible}
-        onHide={onCancel}
+        onHide={onHide}
+        onCancel={onCancel}
         onExited={afterClose}
         container={this.target}
         backdrop={mask}
