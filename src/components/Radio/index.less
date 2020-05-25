@@ -1,0 +1,95 @@
+.u-radio-group {
+  display: inherit;
+}
+
+.u-radio {
+  .u-radio-label {
+    white-space: nowrap;
+    color: #666;
+    margin-right: 20px;
+    padding-left: 20px;
+
+    &:before {
+      width: 14px;
+      height: 14px;
+      border-width: 1px;
+    }
+  }
+
+  &:not(.is-checked) {
+    .u-radio-label {
+      &:after {
+        width: 14px;
+        height: 14px;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.custom-radio {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  margin: 0 auto;
+  cursor: pointer;
+  &:hover {
+    border-color: #505766;
+  }
+}
+
+.custom-radio-checked {
+  .radio-red-circle {
+    background: red;
+    width: 6px;
+    height: 6px;
+    display: block;
+    border-radius: 50%;
+    margin: 3px;
+  }
+}
+.u-radio.disabled .u-radio-label {
+  color: #999;
+  cursor: not-allowed;
+}
+.u-radio.disabled .u-radio-label:before {
+  background-color: #f7f7f7;
+  border-color: #e4e4e4 !important;
+}
+
+.u-radio.is-checked .u-radio-label:after {
+  top: 7px;
+  margin-left: 4px;
+}
+
+// fix: 出入库查询，RadioGroup 改为蓝色主题
+.u-radio-group .u-radio-button {
+  float: none;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+
+  &:hover {
+    background: #fff;
+    color: #588ce9;
+  }
+
+  &.active,
+  &.focus,
+  &.is-checked,
+  &:active,
+  &:focus {
+    border-color: #588ce9;
+    background: #fff;
+    z-index: 11;
+    color: #588ce9;
+
+    .u-radio-button-label {
+      color: #588ce9;
+    }
+  }
+}

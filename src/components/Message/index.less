@@ -1,0 +1,196 @@
+// 适配 antd 的样式
+.u-message-notice-close {
+  display: none;
+}
+
+.u-message-notice-description {
+  background: #fff;
+
+  .u-message-notice-description-content {
+    padding: 8px 16px 8px 4px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.65) !important;
+    line-height: 1.4;
+    min-width: auto;
+  }
+
+  .u-message-notice-description-icon {
+    .uf {
+      font-size: 16px;
+      line-height: 32px;
+      border-radius: 50%;
+    }
+
+    .uf-i {
+      background: #108ee9;
+      color: #fff;
+    }
+
+    .uf-correct {
+      background: #00a854;
+      color: #fff;
+      padding: 2px;
+      font-size: 12px;
+    }
+
+    .uf-close {
+      transform: scale(.6);
+      display: inline-block;
+      padding: 6px;
+      line-height: 1;
+      top: 4px;
+      position: absolute;
+      background: #f04134;
+      font-size: 12px;
+
+      &::before {
+        color: #fff;
+      }
+    }
+
+    .uf-exc {
+      background: #ffbf00;
+      color: #fff;
+    }
+  }
+}
+
+.u-message-notice-light .u-message-notice-description-icon {
+  background: #fff;
+}
+
+@info-bg-color: #E6F0F7;
+@info-icon-color: #588CE9;
+@info-border-color: #ADD8F7;
+
+@error-bg-color: #FEF3EB;
+@error-icon-color: #FF5735;
+@error-border-color: #FCCCA7;
+
+@warning-bg-color: #FFFAEB;
+@warning-icon-color: #FFA600;
+@warning-border-color: #FFE9A7;
+
+@success-bg-color: #EBF8F2;
+@success-icon-color: #18B681;
+@success-border-color: #A7E1C4;
+
+.u-message {
+
+  .u-message-notice-close {
+    display: none;
+  }
+
+  .u-message-notice {
+    line-height: 20px;
+    border-radius: 3px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: block;
+    width: auto;
+    line-height: 1.5;
+    position: relative;
+    margin: 10px 0;
+
+    &-success {
+      border: @success-border-color solid 1px;
+
+      .u-message-notice-description,
+      .u-message-notice-description-content {
+        background: @success-bg-color  !important;
+      }
+
+      .u-message-notice-description-icon {
+        background: @success-bg-color;
+
+        .icon {
+          color: @success-icon-color;
+        }
+      }
+    }
+
+    &-info {
+      border: @info-border-color solid 1px;
+
+      .u-message-notice-description,
+      .u-message-notice-description-content {
+        background: @info-bg-color  !important;
+      }
+
+      .u-message-notice-description-icon {
+        background: @info-bg-color;
+
+        .icon {
+          color: @info-icon-color;
+        }
+      }
+    }
+
+    &-danger {
+      border: @error-border-color solid 1px;
+
+      .u-message-notice-description,
+      .u-message-notice-description-content {
+        background: @error-bg-color  !important;
+      }
+
+      .u-message-notice-description-icon {
+        background: @error-bg-color;
+
+        .icon {
+          color: @error-icon-color;
+        }
+      }
+    }
+
+    &-warning {
+      border: @warning-border-color solid 1px;
+
+      .u-message-notice-description,
+      .u-message-notice-description-content {
+        background: @warning-bg-color  !important;
+      }
+
+      .u-message-notice-description-icon {
+        background: @warning-bg-color;
+
+        .icon {
+          color: @warning-icon-color;
+        }
+      }
+    }
+
+    .u-message-notice-content {
+      max-width: 400px;
+      word-break: break-all;
+
+      .u-message-notice-description {
+        .u-message-notice-description-icon {
+          padding: 0 6px;
+          height: 100%;
+        }
+
+        .u-message-notice-description-content {
+          min-width: auto;
+          max-width: auto;
+          margin-left: 30px;
+          padding-right: 14px;
+        }
+      }
+    }
+  }
+
+  .icon {
+    padding-top: 3px;
+    width: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+}

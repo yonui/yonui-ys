@@ -1,0 +1,709 @@
+.u-modal {
+  .u-modal-content {
+    border-radius: 4px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .modal-header {
+    position: relative;
+    border-bottom-color: #e9e9e9;
+    padding: 0px 24px 0px 16px;
+    line-height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+
+    button.u-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: @base-input-height;
+      height: @base-input-height;
+      margin-top: 0;
+      line-height: @base-input-height;
+      font-size: 12px;
+      font-weight: 100;
+      opacity: .8;
+
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top-color: #e9e9e9;
+  }
+
+  .modal-body {
+    .padd-bottom-60 {
+      padding-bottom: 20px;
+
+    }
+
+    .refer-toolbar {
+      .u-button {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Confirm 弹框
+.u-modal-confirm {
+  .u-modal-content {
+    min-height: 150px;
+
+    .u-modal-header {
+      padding-top: 30px;
+    }
+  }
+
+  &.u-modal .u-modal-body {
+    padding: 0;
+  }
+
+  &.u-modal .u-modal-footer {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    padding: 0;
+    border: none;
+  }
+}
+
+
+// confirm 确认弹框
+.uretail_confirm.u-modal-confirm {
+  z-index: 1702;
+}
+
+//新增方案
+
+.u-modal .scheme-content {
+  &.u-modal-dialog {
+    min-width: 750px;
+  }
+
+  .u-modal-content {
+    .Scheme-Content-body {
+      padding: 10px 0 20px 50px;
+      height: 470px;
+      overflow: auto;
+
+      .add-scheme {
+        position: relative;
+
+        .scheme-name-mention {
+          position: absolute;
+          font-size: 12px;
+          color: #ee2222;
+          left: 102px;
+        }
+      }
+
+      .add-scheme-content {
+        position: relative;
+        line-height: 32px;
+        margin-top: 20px;
+        display: flex;
+
+        .scheme-name-content {
+          min-width: 400px;
+        }
+
+        .scheme-set {
+          padding-left: 15px;
+        }
+
+      }
+
+      .query-content-ranking {
+        .query-content-list.sumarea_list_item {
+          display: flex;
+          -ms-flex-align: initial;
+          align-items: initial;
+          margin-top: 14px;
+
+          .query-content-title {
+            width: 87px;
+            margin-right: 18px;
+            line-height: 32px;
+            text-align: right;
+
+            +div {
+              .compareLogic {
+                min-width: 120px;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .query-component-3 {
+            width: 270px;
+            overflow-y: hidden;
+          }
+
+          .sumarea_list_updown {
+            .u-button {
+              min-width: 0;
+
+              &:hover {
+                background: #ffffff;
+                color: #ee2223;
+              }
+            }
+          }
+        }
+
+        .Test-time-two.sumarea_list_item {
+          display: flex;
+          margin-top: 12px;
+
+          .query-content-title {
+            width: 87px;
+            line-height: 28px;
+            max-height: 32px;
+            overflow: hidden;
+            text-align: right;
+          }
+
+          .compareLogic {
+            width: 120px !important;
+            margin-right: 10px;
+          }
+
+          .query-component-2 {
+            width: 20px;
+            text-align: center;
+          }
+
+          .query-content-title+div+.query-component-1,
+          .query-content-title+div+.query-component-1+.query-component-2+.query-component-3 {
+            width: 125px !important;
+          }
+
+          .query-content-title+div+.query-component-1+.query-component-2 {
+            line-height: 28px;
+            height: 28px;
+          }
+
+          .query-component-1,
+          .query-component-3 {
+            width: 270px !important;
+          }
+
+          .query-component-1 {
+            .basic-predicate-data-picker {
+              .ant-row.m-b-10 {
+                >div.m-r-10 {
+                  margin-right: 0px;
+
+                  .u-radio-group {
+                    .u-radio-button {
+                      padding: 0 18.45px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .query-scheme-date {
+              margin-top: 10px;
+
+              .col-float {
+                width: 119px !important;
+              }
+            }
+          }
+
+          .sumarea_list_updown {
+            .u-button {
+              min-width: 0;
+              padding: 4px 0 4px 8px;
+
+              &:hover {
+                background: #ffffff;
+                color: #ee2223;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .query-button {
+      .query-item-button.add-query-criteria {
+        svg.icon {
+          margin-right: 5px;
+        }
+
+        float: left;
+        margin-top: 6px;
+        font-size: 12px;
+        color: #588CE9;
+        cursor: pointer;
+      }
+    }
+
+    .ant-modal-footer {
+      padding: 15px 30px;
+
+      .add-query-criteria:hover {
+        color: #ee2223;
+      }
+    }
+  }
+}
+
+.u-modal-modal.referModal.Table {
+  .refer-toolbar {
+    padding-top: 0;
+
+    .u-form-control-affix-wrapper {
+      width: 295.5px;
+    }
+  }
+}
+
+// 交叉分组，穿梭框适配
+.u-modal {
+  .crossGroupingModal {
+    .u-modal-body {
+      margin-bottom: 10px;
+
+      .crosstype {
+        width: 100%;
+        color: #666;
+        margin-bottom: 10px;
+        line-height: 26px;
+
+        .u-form-control {
+          height: 28px;
+        }
+
+        &Name,
+        .eChart-displayTitle,
+        .eChart-ApplyAt {
+          min-width: 62px;
+          display: inline-block;
+          text-align: right;
+          vertical-align: top;
+        }
+
+        &NameList {
+          display: inline-block;
+          margin: 0 5px 0 16px;
+
+          .custom-radio-wrapper {
+            position: relative;
+            top: 3px;
+          }
+        }
+
+        .crosscheckbox {
+          margin-left: 7px;
+        }
+
+        .eChart-global {
+          display: inline-block;
+
+          .eChart_DisplayType {
+            margin: 0 8px 0 16px;
+
+            .custom-radio-wrapper {
+              position: relative;
+              top: 3px;
+            }
+          }
+
+          .eChart_Setting {
+            margin-left: 16px;
+
+            .u-button {
+              height: 28px;
+              font-size: 12px;
+              vertical-align: initial;
+            }
+          }
+
+          .Charts-columns {
+            margin: 0 8px 0 30px;
+          }
+
+          .Charts-columns-input {
+            width: 50px;
+            display: inline-block;
+          }
+
+          .Charts-columns-input-hint {
+            margin-left: 5px;
+            color: #999;
+
+            span {
+              color: #ee2223;
+            }
+          }
+        }
+
+        .eChart-ApplyAt {
+
+          &Pc,
+          &Mobile {
+            margin-left: 16px;
+          }
+        }
+
+        .eChart-global2 {
+          margin-left: 16px;
+          border: #d9d9d9 solid 1px;
+          min-height: 28px;
+          border-radius: 4px;
+          padding-bottom: 2px;
+          padding-right: 6px;
+          width: 588px;
+          overflow: hidden;
+          display: inline-block;
+
+          &:hover {
+            border-color: #505766;
+          }
+        }
+      }
+
+      .crossadddata {
+        margin-left: 78px;
+        max-width: 270px;
+
+        .crossaddnamemargin {
+          line-height: 16px;
+          margin-bottom: 6px;
+        }
+
+        .crossselectborder {
+          border: #D9D9D9 solid 1px;
+          border-radius: 4px;
+          width: 268px;
+          height: 317px;
+
+          &.crossselectborder2 {
+            height: 388px;
+            ;
+          }
+        }
+
+        .crossadddatalist {
+          width: 100%;
+          height: 264px;
+          overflow-y: auto;
+
+          .ant-row {
+
+            .u-checkbox {
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+
+      .crossbtncount {
+        padding-top: 128px;
+        max-width: 50px;
+
+        .u-button-icon {
+          width: 30px;
+          height: 40px;
+          display: block;
+          margin-top: 20px;
+          background: #edf1f7;
+          color: #535a69;
+          border: none;
+          padding: 0;
+          border-radius: 4px;
+          &:hover {
+            background: #e3e7ef;
+          }
+
+          &::before {
+            content: "";
+            font-size: 16px;
+            display: block;
+            font-family: anticon;
+            color: #666;
+            line-height: 40px;
+            text-align: center;
+          }
+
+          &.icon-right-enabled::before,
+          &.icon-right-disabled::before {
+            content: "\e6a5";
+          }
+
+          &.icon-left-enabled::before,
+          &.icon-left-disabled::before {
+            content: "\e6a4";
+          }
+
+          &.icon-right-disabled::before,
+          &.icon-left-disabled::before {
+            color: rgba(0, 0, 0, 0.25);
+          }
+
+        }
+      }
+
+      .selecteddata {
+        .crossaddnamemargin {
+          line-height: 16px;
+          margin-bottom: 6px;
+        }
+
+        .groupCondition-SelectedItem {
+          width: 268px;
+          border: 1px solid #d9d9d9;
+          border-radius: 4px;
+
+          .groupCondition-SelectedItem-Row2 {
+            height: 158px;
+
+            .titlemore {
+              padding-left: 15px;
+              height: 30px;
+              line-height: 28px;
+              border-bottom: 1px solid #dbe0e5;
+              border-top: 1px solid #dbe0e5;
+              background: #F3F5F9;
+              cursor: pointer;
+
+              &.titlemore-none {
+                border-top: none;
+              }
+
+              .groupCondition-HideAllZeroRow {
+                width: 180px;
+                float: unset;
+                display: inline-block;
+                margin-left: 20px;
+                .u-checkbox{
+                  vertical-align: unset;
+                }
+              }
+
+              &.groupCondition-SelectedItem-Selected {
+                background: #e3e7ef;
+              }
+            }
+
+            .titlename-list3 {
+              height: 120px;
+              width: 100%;
+              overflow-y: auto;
+
+              .ant-row {
+                height: 26px;
+                line-height: 22px;
+                overflow: hidden;
+                &:hover {
+                  background: #f3f5f9;
+                }
+
+                .u-checkbox {
+                  padding-left: 15px;
+                }
+
+                .u-checkbox+div {
+                  float: right;
+                  margin-top: 2px;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+
+          &.groupCondition-SelectedItem2 {
+            height: 388px;
+
+            .titlemore {
+              height: 30px;
+              background: #F3F5F9;
+              cursor: pointer;
+              border-top: #DBE0E5 solid 1px;
+              border-bottom: #DBE0E5 solid 1px;
+              padding-left: 15px;
+              line-height: 30px;
+
+              &.titlemore-none {
+                border-top: none;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+              }
+
+              .anticon {
+                float: right;
+                margin-right: 9px;
+              }
+            }
+
+            .titlename-list {
+              .u-checkbox {
+                margin-left: 15px;
+
+                +div {
+                  display: inline-block;
+                  position: absolute;
+                  right: 10px;
+
+                  .groupCondition-ColumnDefine-Design {
+                    float: none;
+                    span:hover{
+                      color: #588ce9;
+                    }
+                  }
+                }
+              }
+            }
+
+            .groupCondition-SelectedItemNum_3 {
+              height: 119px;
+            }
+
+            .groupCondition-SelectedItemNum_4 {
+              height: 96px;
+            }
+
+            .groupCondition-SelectedItem-Selected {
+              background: #E3E7EF;
+            }
+          }
+
+          .groupCondition-SelectedItemNum_4 {
+            height: 96px;
+
+            .titlename-list {
+              height: 65px;
+              overflow-y: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 上述modal中的popover样式
+.u-popover.u-popover-tooltip.u-tooltip.inverse.groupCondition-ColumnDefine {
+  .tooltip-inner {
+    min-width: 140px;
+  }
+
+  .group-add-grouping-count {
+    .u-checkbox {
+      height: 33px;
+      line-height: 33px;
+    }
+
+    .footer-btn {
+      .u-button {
+        float: right;
+      }
+
+      [type='default'] {
+        border: none;
+        background: @custom2-color;
+        color: @custom2-font-color;
+
+        &:hover {
+          background: @custom2-color-hover;
+        }
+      }
+    }
+  }
+}
+
+.bottom-toolbar {
+  padding-left: 10px;
+}
+
+.u-modal-content .u-modal-body .refer-toolbar .u-form-control-search {
+  width: 300px;
+}
+
+.TreeTable.u-modal-dialog {
+  top: 6%;
+
+  .u-modal-body {
+    padding-top: 0;
+
+    .leftPanel {
+      border-right: 1px solid #ebebeb;
+
+      .u-tree {
+        padding: 7px 10px 0;
+        height: 100%;
+        overflow: scroll;
+      }
+    }
+  }
+}
+
+.u-modal {
+
+  // issue: f12 打开上下变动高度，模态框会动态添加padding-left: 7px  导致页面tabel部分布局右边溢出
+  &.in .u-modal-dialog {
+    padding-left: 0 !important;
+  }
+
+  .model-header {
+    button.u-close {
+      top: 8px;
+      right: 8px;
+    }
+  }
+
+  .u-modal-title,
+  .model-title {
+    font-size: 14px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, .85);
+  }
+
+  .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-modal-footer {
+    padding: 10px 18px;
+  }
+}
+
+// fix: 供货目录，编辑参照tab 的toolbar
+// .tab-top-right .btn-toolbar-bottom {
+//   padding: 0 30px;
+// }
+
+.u-modal-dialog {
+  &.referModal {
+    top: 30px;
+  }
+
+  .btn-toolbar-bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.tab-menu+.tab-top-right .btn-toolbar-bottom {
+  border-top: none;
+}
+
+.u-modal-backdrop {
+  background-color: rgba(55, 55, 55, .6);
+
+  &.in {
+    opacity: 1;
+  }
+}
+.u-tree .u-tree-checkbox-disabled .u-tree-checkbox-inner{
+  background: #F7F7F7;
+}

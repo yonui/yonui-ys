@@ -44,3 +44,19 @@ glob(`*${path.sep}*.js`, { cwd: BASEUI_PATH }, (err, allpath) => {
     });
     // console.log('YONUI_PATH', YONUI_PATH);
 });
+
+glob(`*${path.sep}*.less`, { cwd: BASEUI_PATH }, (err, allpath) => {
+    allpath.forEach((_path, _index) => {
+        let _soursepath = path.resolve(BASEUI_PATH, _path);
+        let _scompname = _path;
+        let _objcomppath = path.resolve(YONUI_PATH, `${_scompname}`);
+        
+        fse.copy(_soursepath, _objcomppath, err => {
+            if (err) {
+                console.log(` error ${_scompname}`, err)
+            } else {
+                console.log(` success ${_scompname}`)
+            }
+        })
+    });
+});

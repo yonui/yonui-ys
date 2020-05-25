@@ -1,0 +1,163 @@
+.u-tree {
+  li {
+    a:hover {
+      background-color: #edf1f7;
+    }
+    a.u-tree-node-content-wrapper {
+      width: calc(~'100% - 16px');
+      padding: 0;
+      color: @custom-color;
+
+      .u-tree-title {
+        display: inline-block;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 8px;
+        border-radius: 12px;
+        margin: 0 5px;
+        li{
+          position: relative;
+          // padding: 0px 10px;
+          margin-left: 5px;
+          span{
+            position: absolute;
+            right: 0px;
+            height: 100%;
+            .table-list-btn{
+              padding: 0px 4px;
+              display: block;
+              color: #666;
+              &:hover{
+                color: #588ce9;
+              }
+            }
+          }
+        }
+        .node-sign{
+          left: -10px;
+          top: 10px;
+          width: 4px;
+          height: 4px;
+          display: in;
+          margin-left: 2px;
+          border-radius: 50%;
+        }
+        .node-blue{
+          background: #588CE9;
+        }
+        .node-warning{
+          background: #FFA600;
+        }
+      }
+
+      & .u-tree-title:hover {
+        background: #edf1f7;
+      }
+
+      &.u-tree-node-selected {
+        .u-tree-title {
+          background: #fdf2dc;
+          color: @custom-color;
+        }
+      }
+
+    }
+    ul li{
+      a.u-tree-node-content-wrapper{
+        width: calc(~'100% - 11px');
+      }
+    }
+    &.u-tree-treenode-focused > a {
+      background-color: transparent;
+      .u-tree-title {
+        background: #edf1f7;
+      }
+    }
+  }
+
+  >li:last-child {
+    padding-bottom: 7px;
+  }
+
+  >li:first-child {
+    padding-top: 7px;
+  }
+}
+
+.form-left.Manual-calculation-left .bg-white.border-r,
+.referModal.TreeTable.u-modal .u-modal-body .leftPanel {
+  border-right: 1px solid #ebebeb;
+
+  .search-tree-3 {
+    overflow: auto;
+
+    .u-tree {
+      padding: 8px 20px;
+    }
+  }
+}
+
+
+.referModal.TreeTable.u-modal .u-modal-body .leftPanel .u-tree li a.u-tree-node-content-wrapper {
+  height: 24px;
+  line-height: 24px;
+}
+
+
+.uretail-pop .u-popover-content {
+  .u-tree {
+    max-height: 224px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  .filter-btn-1 {
+    line-height: @base-input-height - 2;
+    border-top: 1px solid #dcdcdc;
+    padding: 5px 0 0 10px;
+    margin-top: 5px;
+
+    .u-button {
+      margin-right: 10px;
+      height: @base-input-height - 2;
+      line-height: @base-input-height - 2;
+      min-width: 52px;
+      padding: 0 12px;
+
+    }
+  }
+}
+
+.uretail-pop .u-tree li {
+  padding: 2px 5px;
+}
+
+.org-cite .treebox .u-tree {
+  padding: 0;
+  border: 1px solid #eee;
+  font-size: 12px;
+  margin: 10px 0;
+  padding-left: 8px;
+  overflow: auto;
+  height: 300px;
+}
+
+.u-tree li span.u-tree-switcher {
+  text-align: center;
+  width: 14px;
+  height: 14px;
+  line-height: 16px;
+}
+.u-tree li span.u-tree-switcher-disabled {
+  cursor: not-allowed;
+}
+.u-tree li {
+  margin: 0;
+  padding: 2px 0; // fix: 组织单元，编辑，左树节点间距
+}
+// fix: 树组织参照，收起展开和文字的间距
+.scroll_box .u-tree li span.u-tree-switcher {
+  margin-right:8px;
+}
