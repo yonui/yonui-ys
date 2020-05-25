@@ -20,11 +20,13 @@ const Icon = props => {
     spin,
     ...restProps
   } = props;
+  let key = clsPrefix+'-'+type;
+  if(clsPrefix=='uf')key=type;
   const classString = classNames(
     {
       [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
-      [`${clsPrefix}-${type}`]: Boolean(type)
+      [`${key}`]: Boolean(type)
     },
     className
   );

@@ -10,7 +10,7 @@ import '../../../theme/index.less'
 export default class Demo extends Component {
     render() {
         return (
-            <Icon type="star" />
+            <Icon type="uf-star" clsPrefix='uf'/>
         )
     }
 }
