@@ -46,5 +46,6 @@ export {
   Timeline,
   Panel,
   Loading,
-  Message
+  Message,
+  ButtonGroup
 } from './components/index';
