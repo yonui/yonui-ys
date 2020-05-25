@@ -1,0 +1,204 @@
+.u-popover.u-popover-tooltip.u-tooltip.inverse {
+  z-index: 1600;
+
+  .tooltip-inner {
+    border: none;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: inherit;
+    min-width: 180px;
+    padding-right: 0;
+    padding-left: 0;
+    border: 1px solid #dcdcdc;
+
+    // .u-checkbox .u-checkbox-label {
+    //   color: rgba(0, 0, 0, 0.65);
+    // }
+
+    .u-popover-content {
+      .ant-row {
+        padding: 0 10px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        height: @base-input-height;
+        line-height: @base-input-height - 2;
+
+        &:hover {
+          background: #f3f5f9;
+        }
+      }
+
+      .filter-btn-fixed {
+        .filter-txt {
+          .search_scroll {
+            height: 160px;
+            overflow: auto;
+            margin: 6px 0;
+
+            .lock_disable,
+            .unlock_able {
+              padding-left: 10px;
+
+              &:hover {
+                background: #f3f5f9;
+              }
+            }
+          }
+
+          .pull-right {
+            display: flex;
+            // position: absolute; // !fix: 部分版本浏览器columnSetting 的右侧图标
+            right: 0;
+          }
+
+          .lock_disable>[icon='dongjie'] {
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        .filter-btn-1 {
+          border-top: 1px solid #eeeeee;
+          background: #ffffff;
+        }
+      }
+
+      // 表格头部弹出框
+      [class^='grid-header-'] {
+        >div {
+          max-width: 200px;
+          display: inline-block;
+        }
+
+        >svg.icon {
+          width: 20px;
+          height: 20px;
+          margin-left: 15px;
+          position: relative;
+          top: 0;
+
+          &:last-child {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .tree-refer-radio {
+        max-height: 300px;
+        overflow: auto;
+        overflow-x: hidden;
+        .u-tree-title {
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          width: 100%;
+        }
+      }
+
+      .footer-btn {
+        .u-button {
+          min-width: 52px;
+          height: 28px;
+        }
+      }
+    }
+  }
+
+  &.topLeft {
+    margin-left: 15px;
+  }
+}
+
+// 查询方案-添加查询条件弹窗
+.query-criteria-select {
+  .Checked-confirm-btn .cancelChecked {
+    background: #eef1f3;
+    border: none;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// 处理小尖尖
+.u-popover {
+  // &.bottom {
+  //   margin-top: 5px;
+  // }
+
+  &.uretail-pop {
+    .tooltip-arrow {
+      display: none;
+    }
+  }
+}
+
+.u-popover.tinper-popover-setting-position {
+  margin-left: 196px;
+  margin-top: 35px;
+}
+
+
+// group condition
+.u-tabs-content {
+  .listheadRow {
+    .groupCondition {
+      height: 32px;
+
+      .Grouping-condition-left {
+        display: inline-block;
+        vertical-align: top;
+
+        +span {
+          display: inline-block;
+
+          .Grouping-condition {
+            i.anticon-close-circle {
+              right: 27px;
+              top: 7px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// fix: 基础服务
+.u-popover.u-popover-tooltip {
+  box-shadow: none;
+  border: none;
+  display: block;
+  background-color: unset;
+}
+
+// fix: 1366*768 分辨率，listRefer 显示不全问题
+@media screen and (max-width: 1440px) {
+  .u-popover.u-popover-tooltip.u-tooltip.inverse .tooltip-inner .u-popover-content .tree-refer-radio {
+    max-height: 200px;
+  }
+}
+// fix: 1366*768 分辨率，listRefer 显示不全问题
+@media screen and (max-width: 1280px) {
+  .u-popover.u-popover-tooltip.u-tooltip.inverse .tooltip-inner .u-popover-content .tree-refer-radio {
+    max-height: 160px;
+  }
+  .uretail-pop .u-popover-content .u-tree {
+    max-height: 160px;
+  }
+}
+
+.s-popover-inner-span {
+  &.temp {
+    display: block;
+  }
+  &.sketch-picker {
+    height: 20px !important;
+    width: 20px;
+  }
+}
+
+.u-popover-content .temp_content {
+  width: 300px;
+}

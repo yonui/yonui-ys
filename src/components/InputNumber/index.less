@@ -1,0 +1,102 @@
+.u-input-number-out {
+  width: 100% !important;
+}
+
+.u-input-number {
+  background-color: #fff;
+
+  &.u-input-group {
+    &>span:last-child {
+      border-bottom-right-radius: 4px; // fix: 数字框加减按钮 hover 样式错误
+    }
+
+    &.simple .u-input-group-btn .icon-group {
+      .plus {
+        border-top-right-radius: 4px;
+      }
+
+      .reduce {
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    .u-form-control {
+      border: none;
+    }
+  }
+}
+
+// 适配 UStock-web 工程，InputNumber 宽度撑满剩余空间
+.twoInclusion .width-percent-33 .control-flex .u-input-number-out+span,
+.twoInclusion .width-percent-33 .control-flex .control-text+span,
+.productAssistUnitExchanges .width-percent-50 .frc-inputnumber.frc-inputnumber-mainUnitCount .frc-inputnumber-content .control-flex .u-input-number-out+span {
+  text-align: left;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+// fix: 数字框加减按钮 hover 样式错误
+.u-input-number.u-input-group > span:last-child {
+    border-bottom-right-radius: 4px;
+}
+.u-input-number.u-input-group.simple .u-input-group-btn .icon-group {
+    .plus{
+        border-top-right-radius: 4px;
+    }
+    .reduce{
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.u-input-number.u-input-group {
+  overflow: hidden;
+}
+
+.text-align-right {
+  .input-control, .u-input-number.u-input-group.simple .u-form-control {
+    text-align: right;
+  }
+}
+.text-align-center{
+  .input-control, .u-input-number.u-input-group.simple .u-form-control {
+    text-align: center;
+  }
+}
+
+.computer{
+  width: 100%;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 100;
+  background: #FFF;
+  .calc-res{
+    width: 100%;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    text-align: right;
+    padding-right: 15px;
+  }
+  .comp-item-container{
+    border-left: 1px solid #d9d9d9;
+    .comp-item{
+      width: 25%;
+      text-align: center;
+      display: inline-block;
+      border-right: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      color: rgba(51,51,51,1);
+      font-weight: 400;
+      cursor: pointer;
+      &.double-btn{
+        width: 50%;
+      }
+      &.opt-btn{
+        background: #ff8002;
+        color: #FFF;
+      }
+    }
+  }
+
+}

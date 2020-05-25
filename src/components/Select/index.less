@@ -1,0 +1,121 @@
+@ative-hover-bg-color: #f7f9fd;
+@selected-ative-hover-bg-color: #fff7e7;
+@font-color: rgba(0, 0, 0, 0.65);
+@group-title-color: rgba(0, 0, 0, 0.43);
+
+.u-select {
+  .u-select-selection {
+    min-width: 60px;
+    overflow: hidden;
+  }
+
+  .u-select-selection:focus,
+  .u-select-selection:hover {
+    border: 1px solid #505766;
+    box-shadow: none;
+  }
+
+  .u-select-selection-clear {
+    right: 25px;
+  }
+
+  // 禁用样式
+  &.u-select-disabled .u-select-selection {
+    background: #f7f7f7;
+    border-color: #d9d9d9;
+  }
+}
+
+.u-select-dropdown {
+  .u-select-dropdown-menu-item {
+    width: 100% !important;
+    color: @font-color;
+    &.no-search-data {
+      color: #999;
+    }
+  }
+
+  .u-select-dropdown-menu-item-active,
+  .u-select-dropdown-menu-item:hover {
+    background-color: @ative-hover-bg-color;
+  }
+
+  .u-select-dropdown-menu-item-selected,
+  .u-select-dropdown-menu-item-selected:hover {
+    background-color: @selected-ative-hover-bg-color;
+    font-weight: 400;
+    color: @font-color;
+  }
+
+  .u-select-dropdown-menu-item-group-title {
+    border-bottom: none;
+    color: @group-title-color;
+  }
+}
+
+
+.listRefer-list-container {
+  ul {
+
+    li {
+      padding: 8px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: #EDF1F7;
+      }
+    }
+  }
+}
+
+.u-select-selection--multiple {
+  cursor: pointer;
+
+  .u-select-selection-choice {
+    background-color: #f7f9fd;
+    border: 1px solid #dbe0e5;
+  }
+
+  .u-select-selection-rendered>ul>li {
+    margin-top: 2px;
+    margin-bottom: 3px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 16px 0 6px;
+    cursor: pointer;
+  }
+}
+
+// .search-tree-2 .u-select .u-select-selection {
+//   border: 1px solid #d9d9d9;
+// }
+
+
+.u-select-selection--single {
+  height: @base-input-height;
+}
+
+.u-select-selection-rendered {
+  margin-left: 5px;
+  line-height: @base-input-height - 2;
+}
+
+.ant-search-input-wrapper {
+  height: @base-input-height;
+  width: 100%;
+}
+
+.ant-select-selection {
+  height: @base-input-height;
+  line-height: @base-input-height;
+  overflow: hidden;
+}
+
+.u-select-nowarp {
+  overflow: hidden; }
+  .u-select-nowarp .u-select-selection-rendered {
+    display: flex;
+    white-space: nowrap; }
+    .u-select-nowarp .u-select-selection-rendered ul {
+      display: flex;
+      white-space: nowrap; }
