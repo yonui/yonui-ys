@@ -58,13 +58,13 @@ class ModalAdapter extends Component {
         {
           //通过title判断是否antd的用法
           title?<Fragment>
-              <Header closeButton={closable} className='modal-header'>
+              <Header closeButton={closable} className='u-modal-header'>
                 <Title>{title}</Title>
               </Header>
-              <Body className='modal-body'>
+              <Body className='u-modal-body'>
                 {children}
               </Body>
-              {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
+              {footer ? <Footer className='u-modal-footer'>{footer}</Footer> : defaultFooter}
           </Fragment>:<Fragment>{children}</Fragment>
         }
       </Modal>
