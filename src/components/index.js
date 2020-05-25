@@ -89,7 +89,6 @@ export {
   Upload,
   Tooltip,
   MobileLocale,
-  FormControl,
   ProgressBar,
   Timeline,
   Panel,
