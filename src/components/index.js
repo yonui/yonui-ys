@@ -17,7 +17,7 @@ import Input from './Input';
 import InputNumber from './InputNumber';
 import Loading from './Loading/simple';
 import Menu from './Menu';
-// import Modal from './Modal';
+import Modal from './Modal';
 import MobileLocale from './MobileLocale';
 import Message from './Message';
 import notification from './notification';
@@ -41,12 +41,10 @@ import Transfer from 'bee-transfer';
 import Grid from './Grid';
 
 //部分tinper组件导出
-import FormControl from 'bee-form-control';
 import ProgressBar from 'bee-progress-bar';
 import Timeline from 'bee-timeline';
 import Panel from 'bee-panel';
 import ButtonGroup from 'bee-button-group';
-import Modal from 'bee-modal';
 
 export {
   Affix,

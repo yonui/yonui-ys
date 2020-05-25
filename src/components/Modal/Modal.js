@@ -1,10 +1,10 @@
 // ModalAdapter
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';
 
-const { Header, Body, Footer, Title } = Modal;
+const { Header, Body, Footer, Title, Dialog } = Modal;
 
 const defaultProps = {
   closable: true,
@@ -25,8 +25,8 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType, ...other } = this.props;
-
+    const { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType, ...other } = this.props;
+    if(visible==undefined)visible=show;
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
@@ -36,7 +36,7 @@ class ModalAdapter extends Component {
       </Footer>
     );
 
-    if (footer === null) {
+    if (footer === null || footer === undefined) {
       defaultFooter = null;
     }
 
@@ -55,13 +55,18 @@ class ModalAdapter extends Component {
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
       >
-        <Header closeButton={closable} className='modal-header'>
-          <Title>{title}</Title>
-        </Header>
-        <Body className='modal-body'>
-          {children}
-        </Body>
-        {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
+        {
+          //通过title判断是否antd的用法
+          title?<Fragment>
+              <Header closeButton={closable} className='modal-header'>
+                <Title>{title}</Title>
+              </Header>
+              <Body className='modal-body'>
+                {children}
+              </Body>
+              {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
+          </Fragment>:<Fragment>{children}</Fragment>
+        }
       </Modal>
     );
   }
@@ -87,6 +92,11 @@ ModalAdapter.success = modalMethod('success');
 ModalAdapter.error = modalMethod('error');
 ModalAdapter.warning = modalMethod('warning');
 ModalAdapter.info = modalMethod('info');
+ModalAdapter.Header = Header;
+ModalAdapter.Body = Body;
+ModalAdapter.Footer = Footer; 
+ModalAdapter.Title = Title;
+ModalAdapter.Dialog = Dialog;
 
 ModalAdapter.defaultProps = defaultProps;
 export default ModalAdapter;

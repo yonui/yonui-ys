@@ -41,7 +41,7 @@ export {
   Transfer,
   Upload,
   Tooltip,
-  FormControl,
+  Input as FormControl,
   ProgressBar,
   Timeline,
   Panel,

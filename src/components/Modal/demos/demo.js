@@ -33,14 +33,24 @@ export default class Demo extends Component {
             <div>
                 <Button type="primary" onClick={this.showModal}>Open</Button>
                 <Modal
-                    title="Basic Modal"
                     visible={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                 >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                <Modal.Header closeButton>
+                      <Modal.Title>标题</Modal.Title>
+                  </Modal.Header>
+  
+                  <Modal.Body>
+                      <p>Some contents...</p>
+                      <p>Some contents...</p>
+                      <p>Some contents...</p>
+                  </Modal.Body>
+  
+                  <Modal.Footer>
+                      <Button onClick={ this.close } colors="secondary" style={{marginRight: 8}}>取消</Button>
+                      <Button onClick={ this.close } colors="primary">确认</Button>
+                  </Modal.Footer>
                 </Modal>
             </div>
         )
