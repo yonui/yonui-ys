@@ -9,7 +9,7 @@ const propTypes = {
   spin: PropTypes.bool
 };
 const defaultProps = {
-  clsPrefix: 'anticon'
+  clsPrefix: 'uf'
 };
 
 const Icon = props => {
