@@ -33,7 +33,7 @@ export default class Demo extends Component {
             <div>
                 <Button type="primary" onClick={this.showModal}>Open</Button>
                 <Modal
-                    visible={this.state.visible}
+                    show={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                 >

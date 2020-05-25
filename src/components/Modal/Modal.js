@@ -25,7 +25,7 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    const { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType, ...other } = this.props;
+    let { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType, ...other } = this.props;
     if(visible==undefined)visible=show;
     let defaultFooter = (
       <Footer className='modal-footer'>
