@@ -35,7 +35,6 @@ export {
   Steps,
   Tag,
   Tabs,
-  Table,
   TimePicker,
   Tree,
   TreeSelect,
@@ -46,4 +45,6 @@ export {
   ProgressBar,
   Timeline,
   Panel,
+  Loading,
+  Message
 } from './components/index';
