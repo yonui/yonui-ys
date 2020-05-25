@@ -84,6 +84,8 @@ class RadioGroup extends Component {
 }
 
 RadioAdapter.Group = RadioGroup;
+RadioAdapter.RadioGroup = RadioGroup;
+RadioAdapter.RadioButton = Radio.RadioButton;
 RadioAdapter.Button = Radio.RadioButton;
 
 export default RadioAdapter;
