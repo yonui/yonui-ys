@@ -96,5 +96,6 @@ export {
   Panel,
   ButtonGroup,
   Label,
-  SearchPanel
+  SearchPanel,
+  Tile
 };
