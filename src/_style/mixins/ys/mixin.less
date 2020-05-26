@@ -1,0 +1,245 @@
+// ============================================
+// 原子样式，组装的容器控件的样式
+// ============================================
+
+.left-search-tree-2-mixin() {
+  padding: 10px 14px 0;
+  position: relative;
+
+  .u-button-icon {
+    right: 15px;
+    height: 28px;
+    width: 28px;
+    padding: 0;
+    position: absolute;
+    border: none;
+    z-index: 5;
+
+    i.anticon {
+      font-size: 16px;
+      margin-left: 0;
+      color: #adb4bc;
+      padding: 0;
+
+      &:before {
+        content: "\e518";
+        font-family: 'iconfont' !important;
+      }
+    }
+  }
+
+  // 清空图标
+  i.anticon.anticon-close-circle {
+    right: 42px;
+    height: 28px;
+    line-height: 28px;
+    z-index: 2;
+    position: absolute;
+
+    &:before {
+      font-size: 12px;
+      color: #ccc;
+      font-family: "uf" !important;
+      content: "\e66b" !important;
+    }
+
+    &:hover {
+      &::before {
+        color: rgba(0, 0, 0, .43);
+      }
+    }
+  }
+
+  .u-select .u-select-selection {
+    border: 1px solid #d9d9d9;
+    overflow: hidden;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+
+    .u-select-selection-rendered {
+      margin-left: 0;
+      margin-right: 0;
+      line-height: 26px;
+      display: block;
+      position: relative;
+
+      .u-select-selection-placeholder {
+        left: 8px;
+      }
+
+      ul > li {
+        input.u-select-search-field {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.left-search-tree-3-mixin() {
+  height: ~"calc(100% - 48px)";
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  .u-tree {
+    padding: 0 20px 0 20px;
+    overflow-y: scroll;
+    height: 100%;
+
+    li {
+      margin: 0;
+      padding: 2px 0;
+
+      span {
+        position: relative;
+      }
+
+      a {
+        border: 1px solid transparent;
+        width: ~"calc(100% - 8px)";
+        position: relative;
+
+        &.u-tree-node-selected,
+        &:hover {
+          background-color: transparent;
+          border: 1px solid transparent;
+        }
+      }
+
+      a:hover:after,
+      a.u-tree-node-selected:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -100%;
+        width: 200%;
+        height: 28px;
+        top: -4px;
+        z-index: -1;
+      }
+
+      a.u-tree-node-content-wrapper {
+        display: inline-flex;
+        align-items: center;
+
+        .u-tree-title {
+          display: inline-block;
+          height: 24px;
+          line-height: 24px;
+          padding: 0 8px;
+          border-radius: 12px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.left-tree-select-mixin() {
+  padding-right: 20px;
+  margin-top: 14px;
+  padding-left: 2px;
+
+  .viewCell {
+    width: 100%;
+    line-height: 16px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .u-select-selection {
+      border: none;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      display: inline-block;
+      min-width: 60px;
+      overflow: hidden;
+
+      .u-select-selection-clear {
+        display: none;
+      }
+
+      .u-select-focused .u-select-selection,
+      .u-select-selection:active,
+      .u-select-selection:focus {
+        border: none !important;
+      }
+
+      .u-select-selection-rendered {
+        padding-right: 8px;
+        line-height: 14px;
+        display: block;
+        margin-left: 2px;
+
+        .u-select-selection-selected-value {
+          padding-left: 0px;
+          white-space: normal;
+          opacity: 1 !important;
+        }
+
+        .u-select-search {
+          .u-select-search-field {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.scheme-list-mixin() {
+  width: auto;
+  display: inline-block !important;
+  height: 24px;
+  overflow: hidden;
+
+  .scheme-popover {
+    .filter-scheme {
+      height: 28px;
+
+      .filter-scheme-input {
+        border: none;
+        padding: 0px;
+        width: auto;
+        height: 28px;
+        border-radius: 4px;
+        position: relative;
+
+        .filter-scheme-span {
+          margin-right: 5px;
+          color: #333;
+          float: left;
+          font-size: 14px;
+          line-height: 28px;
+          cursor: pointer;
+        }
+
+        div {
+          float: left;
+
+          .anticon-up,
+          .anticon-down {
+            right: 8px;
+            top: 8px;
+          }
+
+          .anticon-down:before {
+            color: #919191;
+            font-size: 14px;
+          }
+
+          .anticon-up:before {
+            color: #505766;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

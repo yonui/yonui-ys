@@ -1,0 +1,177 @@
+// ============================================
+// pagination 类控件的样式
+// ============================================
+
+// .table-pagination-container
+
+.pagination-new {
+  float: right;
+  color: #666;
+  padding-right: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+  .pag-selected-op {
+    display: none;
+
+    span {
+      line-height: initial;
+      margin-left: 10px;
+      color: #666;
+    }
+
+    i {
+      font-style: normal;
+    }
+  }
+
+  .pagination-delayload-text {
+    line-height: 28px;
+    font-size: 12px;
+    color: #666;
+  }
+}
+
+.u-pagination {
+  display: flex;
+
+  .u-pagination-list {
+    order: 0;
+    margin-left: 4px;
+
+    & > li.disabled {
+      a {
+        cursor: not-allowed;
+        background: #fafafa;
+      }
+
+      &.u-pagination-prev {
+        cursor: not-allowed;
+
+        a {
+          border-color: #e4e4e4;
+        }
+      }
+    }
+
+    .active {
+      a,
+      a:hover {
+        background-color: #adb4bc;
+        color: #fff;
+        border-color: #adb4bc;
+      }
+    }
+
+  }
+
+  .u-pagination-total {
+    margin-right: 8px !important;
+
+    span {
+      padding: 0;
+    }
+  }
+
+  .u-pagination-list,
+  .u-pagination-total,
+  .page_jump {
+    margin: 0;
+  }
+
+  .data_per_select {
+    margin: 0 8px 0 4px;
+  }
+}
+
+.u-pagination-sm {
+  & + .u-pagination-total {
+    height: 28px;
+    line-height: 28px;
+
+    & +.data_per_select+.page_jump>span,
+    & +.data_per_select>span {
+      line-height: 28px;
+    }
+  }
+}
+
+.pagination-simple{
+  span{
+    display: block;
+    padding: 5px 7px;
+    border: #e4e4e4 solid 1px;
+    border-radius: 5px;
+    height: 28px;
+    cursor: pointer;
+    .anticon-left::before,
+    .anticon-right::before{
+        font-size: 12px;
+        color: #939dad;
+    }
+    &:hover{
+      .anticon-left::before,
+      .anticon-right::before{
+        color: #505766;
+      }
+    }
+  }
+  .disabled{
+    cursor: not-allowed;
+    .anticon-left::before,
+    .anticon-right::before{
+      color: #c1c7d0;
+    }
+    &:hover{
+      .anticon-left::before,
+      .anticon-right::before{
+        color: #c1c7d0;
+      }
+    }
+  }
+}
+
+// .newfanyezhankai,
+// .newfanyeshouqi{
+//   border: none!important;
+//   padding: 0!important;
+//   cursor: pointer!important;
+//   margin-top: -1px;
+//   .anticon-fanyezhankai:before,
+//   .anticon-fanyeshouqi:before
+//   {
+//     color: #ccc;
+//   }
+//   &:hover{
+//     .anticon-fanyezhankai:before,
+//     .anticon-fanyeshouqi:before
+//     {
+//       color: #505766;
+//     }
+//   }
+// }
+
+// 分页每页多少条下拉框弹出时，整个页面右侧出现滚动条
+.u-pagination-data_per_select.u-select-dropdown {
+  min-width: auto !important;
+  margin-bottom: 0;
+
+  .u-select-dropdown-menu {
+    max-height: 120px;
+  }
+  // TINPER-2472
+  .u-select-dropdown-menu-item{
+    padding: 8px 0;
+    text-align: center;
+  }
+}
+
+// TINPER-2472
+.u-pagination-list>li.u-pagination-item-ellipsis>a{
+  background: none;
+}
+
+.u-pagination.u-pagination-disabled .u-pagination-disabled-mask {
+  height: 28px;
+}

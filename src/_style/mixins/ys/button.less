@@ -1,11 +1,12 @@
 // ============================================
 // button 类控件的原子样式
+// 【描述】1. mixin 定义；2. 样式定义
 // ============================================
 
-.u-button-mixin() {
+.u-button-mixin(@height: 28px, @minWidth: 60px) {
   padding: 0 12px;
-  height: 28px;
-  min-width: 60px;
+  height: @height;
+  min-width: @minWidth;
   line-height: 26px;
   font-weight: 500;
   font-size: 12px;
@@ -14,8 +15,8 @@
 }
 
 // 主操作按钮
-.primary-button-mixin() {
-  .u-button-mixin();
+.primary-button-mixin(@height: 28px, @minWidth: 60px) {
+  .u-button-mixin(@height, @minWidth);
   color: #fff;
   background: linear-gradient(-45deg, #fc4c2f, #ee2223);
   border: none;
@@ -26,8 +27,8 @@
 }
 
 // 次操作按钮（灰色底部）
-.secondary-button-mixin() {
-  .u-button-mixin();
+.secondary-button-mixin(@height: 28px, @minWidth: 60px) {
+  .u-button-mixin(@height, @minWidth);
   background: #505766;
   color: #fff;
   // border: 1px solid #505766;
@@ -38,8 +39,8 @@
 }
 
 // 取消类，按钮
-.cancel-button-mixin() {
-  .u-button-mixin();
+.cancel-button-mixin(@height: 28px, @minWidth: 60px) {
+  .u-button-mixin(@height, @minWidth);
   background: #dbe0e5;
   border: none;
   color: #535a69;
@@ -129,5 +130,315 @@
     margin-right: 5px;
     float: left;
     margin-top: 6px;
+  }
+}
+
+// 浮层中底部按钮，通常为“确定” & “取消”
+.popover-filter-button-mixin() {
+  .u-button {
+    float: right;
+    .u-button-mixin(26px, 52px);
+    margin-right: 8px;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &.u-button-primary {
+      .primary-button-mixin(26px, 52px);
+    }
+
+    &.u-button-default {
+      .cancel-button-mixin(26px, 52px);
+    }
+  }
+}
+
+// columnSetting 浮层底部区域
+.popover-columnsetting-bottom-mixin() {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+  .popover-filter-button-mixin();
+
+  .recover_default {
+    float: left;
+    line-height: 26px;
+    padding-left: 16px;
+    margin-right: 47px;
+    color: #588ce9;
+    cursor: pointer;
+    &:hover {
+      color: #91BCFF;
+    }
+  }
+}
+
+// colFilter 浮层底部区域
+.popover-colFilter-bottom-mixin() {
+  border-top: 1px solid #eee;
+  background: #ffffff;
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 4px;
+  overflow: hidden;
+  .popover-filter-button-mixin();
+  .u-checkbox{
+    margin-top: 6px;
+    float: left;
+    .u-checkbox-label{
+      &::before{
+        top: 1px;
+      }
+      &::after{
+        top: 1px;
+      }
+    }
+  }
+}
+
+// listRefer 浮层底部区域
+.popover-filter-bottom-mixin() {
+  overflow: hidden;
+  padding: 8px 10px 0;
+  margin-top: 0;
+  line-height: 26px;
+  border-top: 1px solid #eee;
+
+  .popover-filter-button-mixin();
+
+  .u-checkbox {
+    float: left;
+    margin-top: 5px;
+  }
+}
+
+// 没有分割线的下拉按钮
+.no-split-drown-button-mixin() {
+  padding: 0 10px;
+  i.anticon {
+    margin-left: 4px;
+    margin-right: -2px;
+    &.anticon-up {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.u-input-group-btn {
+  font-size: 14px;
+}
+
+.u-button-default {
+  background: #eef1f3;
+  border: none;
+  color: #555c6a;
+}
+
+.u-button-default.active,
+.u-button-default:active,
+.u-button-default:focus,
+.u-button-default:hover {
+  background: #d5d8da;
+  border: none;
+  color: #535a69;
+}
+
+.button-group {
+  padding: 10px 15px;
+}
+
+// button-only-icon样式
+.u-button.button-only-icon.u-button-border{
+  border-width: 0px;
+  padding: 0px 0px;
+  min-width: 30px;
+  .icon{
+    margin-right: 0px;
+    width: 20px;
+    height: 20px;
+    vertical-align:-0.5em;
+  }
+}
+
+.u-button.button-only-icon:hover{
+  background:#f1f1f1;
+}
+
+// fix: 供货目录，按钮组的primary 按钮右边距
+.Toolbar_Group {
+  .u-button.u-button-primary {
+    margin-right: 0;
+  }
+
+  .u-button-group {
+    z-index: 2;
+  }
+}
+
+// 不带分割线的下拉按钮
+.Toolbar_Group_Length1 .u-button.Toolbar_Common_Btn {
+  .no-split-drown-button-mixin();
+}
+
+.Toolbar_Group_Length1 .u-button.draft_header {
+  .no-split-drown-button-mixin();
+}
+
+.Toolbar_Group_Length1 {
+  .u-button.u-button-uppage,
+  .u-button.u-button-downpage {
+    min-width: 32px;
+    width: 32px;
+    padding: 0 7px;
+  }
+}
+
+.Toolbar_Group .u-button-group {
+  span.dropdown-btn-icon {
+    width: 20px;
+    text-align: center;
+    & > i.uf-arrow-down {
+      padding: 0;
+    }
+  }
+}
+
+// fix: 生产制造，物料清单，新增按钮（红色背景）图标颜色
+.Toolbar_Group_Length1 {
+  .ToolBar_isAddButton .dropdown-btn-icon .uf.uf-arrow-down {
+    color: #fff;
+  }
+
+  .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) .dropdown-btn-icon .uf.uf-arrow-down {
+    color: unset;
+  }
+}
+
+// 按钮下拉符号统一
+.Toolbar_Group {
+  .anticon-down:before {
+    transform: scale(.8) rotate(0deg);
+  }
+}
+
+// fix: ys 的按钮样式从baseui中单独抽取出来
+.btn-toolbar-bottom .Toolbar_Group_Length1,
+.btn-toolbar-bottom .Toolbar_Group {
+  .u-button-group {
+    .dropdown-btn-icon {
+      cursor: pointer;
+      .uf-arrow-down{
+        padding: 0px 4px;
+      }
+      &:hover {
+        background: #f3f5f9;
+      }
+    }
+  }
+}
+
+.btn-toolbar-bottom .Toolbar_Group .u-button {
+  line-height: 26px;
+
+  .uf-arrow-down:before {
+    transform: scale(.8);
+    display: inline-block;
+  }
+}
+
+.bottom-toolbar .u-button:last-child:not(.u-button-primary) {
+  .cancel-button-mixin();
+}
+
+.bottom-toolbar button {
+  margin-right: 0px;
+  float: right;
+}
+
+// fix: 采购 表头的小图标宽度
+.meta-table .btn-caret .u-button-icon {
+  width: auto;
+}
+
+.list-top-toolbar {
+  .Toolbar_Group {
+    .u-button:hover {
+      z-index: 2;
+      position: relative;
+    }
+  }
+}
+
+.u-modal-dialog {
+  div:not(.tab-top-right) {
+    // 部分modal 底部按钮父样式为 btn-toolbar-bottom
+    & > .btn-toolbar-bottom {
+      .u-button:not(:first-child):not(:last-child) {
+        background: @custom-color  !important;
+        border: none;
+        padding: 0 20px;
+        min-width: 68px;
+        color: #fff !important;
+
+        &:hover {
+          background: @custom-color-hover  !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.list-top-toolbar {
+  .u-button-uppage .icon,
+  .u-button-downpage .icon {
+    height: 12px;
+  }
+}
+
+.list-top-toolbar .ant-row-flex .u-button:first-child {
+  margin-left: 0 !important;
+}
+
+// 上面的样式影响了按钮中的图标居中的问题，这里复现下
+// cardHeader 中图标位置不对齐
+.list-top-toolbar button .icon {
+  vertical-align: -0.15em
+}
+
+/*组合 都是ant-btn-group类型*/
+.btn-toolbar-bottom .Toolbar_Group {
+  .u-button.icon-normal-width {
+    .group-normal-button-mixin();
+    &.u-button-primary {
+      .primary-button-mixin();
+    }
+  }
+}
+
+.container-browse-mode {
+  .filterSetting {
+    .normal-button-mixin();
+    margin-left: 8px;
+    float: right;
+  }
+
+  .up-show {
+    .filter-reset {
+      .reset-button-mixin();
+      float: right;
+      margin-right: 2px;
+    }
+  }
+}
+
+.listheadRow .btn-toolbar-bottom {
+  .u-button-primary {
+    svg {
+      width: 13px;
+      height: 13px;
+    }
   }
 }

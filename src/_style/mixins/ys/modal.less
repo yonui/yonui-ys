@@ -1,0 +1,220 @@
+// ============================================
+// modal 类控件的原子样式
+// ============================================
+
+@import './button.less';
+
+.u-modal-header-mixin() {
+  overflow: hidden;
+
+  .u-close .uf-close {
+    top: 8px;
+    right: 17px;
+    position: absolute;
+    color: #999;
+
+    &:hover {
+      color: #ee2233;
+    }
+  }
+}
+
+.u-modal-footer-mixin() {
+  padding: 10px 18px;
+  // border-top-color: #e9e9e9;
+
+  .u-button:not(.u-button-primary) {
+    .cancel-button-mixin();
+  }
+}
+
+
+
+// 保存草稿/模板/模板更名等单输入项弹框
+.single-item-modal-mixin() {
+  // 总高度180px
+  .u-modal-header {
+    border-bottom: transparent;
+  }
+  .u-modal-footer {
+    border-top: transparent;
+  }
+  .u-modal-body {
+    padding: 32px 0;
+    max-height: 92px;
+
+    &>.ant-row:first-child {
+      min-height: @base-input-height;
+      display: flex;
+      align-items: center;
+    }
+
+    .hasError {
+      border-color: #ee2233;
+      &:focus {
+        border-color: #ee2233;
+      }
+    }
+  }
+}
+
+// ==================== 模态框的上下边距问题 =========
+// 规范定义：
+// 第一种：24PX 用于弹框全删输入框的列表
+// 第二种：12px 弹框是参照\树、搜索条件的
+// 冲突解决，可以结合父级dialog 的class 来区分
+
+.u-modal .u-modal-body {
+  padding: 24px 0 0;
+}
+
+.u-modal .u-modal-footer {
+  padding: 10px 18px;
+  border-top-color: #e9e9e9;
+}
+
+// 基础档案：云端导入
+.TreeList.u-modal-dialog .u-modal-body {
+  padding-top: 0;
+
+  .form-left.Manual-calculation-left {
+    height: 580px; // 模态框左侧树设置高度，以支持垂直滚动
+  }
+}
+
+// 时界，详情
+.timeFenceRemark.u-modal-dialog .u-modal-body {
+  padding-top: 0;
+}
+
+// 保存草稿
+.savedraft_modal.u-modal-dialog {
+  width: 450px !important;
+  .single-item-modal-mixin();
+}
+
+// 模板更名
+.change_tempName.u-modal-dialog {
+  width: 450px !important;
+  .single-item-modal-mixin();
+}
+
+// 客户分类 模态框最小高度450px
+.Archive.u-modal-dialog .u-modal-body {
+  min-height: 360px;
+}
+
+.mr_plan_scheme {
+  .Archive.u-modal-dialog .u-modal-body {
+    .list-top-toolbar {
+      padding-top: 0;
+      margin-top: -12px;
+    }
+  }
+}
+
+// 客户档案,开票客户新增
+.aa_merchant {
+  .Archive.u-modal-dialog .u-modal-body {
+    .list-top-toolbar {
+      margin-top: 0;
+    }
+  }
+}
+
+.u-modal-dialog {
+  // fix: 采购，confirm 提示框中字体样式
+  .u-modal-confirm-title .model-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    opacity: .8;
+  }
+
+  // fix: 采购，供货目录，新增弹框中“供应商物料对照表” 与表格title 行间距
+  .tab-top-right .btn-toolbar-bottom {
+    padding: 0;
+  }
+
+  // fix: ys 人员档案，职务类别，编辑弹框的底部3 个按钮间距
+  .btn-toolbar-bottom .u-button.u-button-primary {
+    margin-right: 0;
+  }
+
+  // fix: ustock-web 物流公司等，编辑弹框的底边距
+  .container-edit-mode.container-greater-height {
+    padding-bottom: 0;
+  }
+}
+
+.modal-body {
+  // fix: modal-body 中自定义了底部操作按钮
+  .viewContainer .bottom-toolbar {
+    bottom: auto;
+    margin-top: 0;
+    border-top: 1px solid #e9e9e9;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+    left: 0;
+    box-shadow: none;
+  }
+}
+
+// Model.confirm 暂时挂不到特定dom节点上去，先将里面的样式抽出来
+.u-modal-confirm.u-modal-confirm-confirm.uretail_confirm.u-modal {
+  z-index: 1702;
+
+  .u-modal-content {
+    min-height: 150px;
+
+    .u-modal-header {
+      padding-top: 30px;
+
+      .u-modal-title {
+        font-size: 14px;
+        line-height: 40px;
+        color: rgba(0,0,0,.85);
+
+        .model-title {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 30px;
+          opacity: .8;
+          color: rgba(0,0,0,.85);
+          padding-bottom: 40px;
+
+          svg {
+            width: 1.8em;
+            height: 1.8em;
+            margin-right: 10px;
+            vertical-align: middle;
+            float: left;
+          }
+        }
+      }
+    }
+
+    .u-modal-body {
+      padding: 0;
+    }
+
+    .u-modal-footer {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      padding: 0;
+
+      .u-button {
+        font-size: 12px;
+        padding: 0 18px;
+        height: 28px;
+        min-width: 60px;
+      }
+
+      .u-button-primary {
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -6,24 +6,29 @@
 
 // label
 .form-label-mixin() {
-  min-width: 100px;
-  text-align: right;
-  padding-right: 10px;
+  display: block;
+  position: relative;
+  width: 100px !important;
+  flex: 0 0 100px;
   line-height: 14px;
   max-height: 32px;
   overflow: hidden;
   padding-left: 15px;
+  padding-right: 10px;
+  text-align: right;
   word-wrap: break-word;
-  display: block;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   hyphens: auto;
-  position: relative;
+
+  &.multi-line {
+    padding-top: 4px;
+  }
 }
 
 // 普通输入框
 .basic-input-text-mixin() {
-  height: 28px;
+  // height: 28px;
   .u-form-control-affix-wrapper {
     .u-form-control {
       .input-mixin();
@@ -52,11 +57,13 @@
 
 // 下拉参照框 list-refer
 .basic-list-refer-mixin() {
-  height: 28px;
+  // height: 28px;
   .s-popover-inner-span {
     line-height: 0;
+    font-size: 0;
     .ant-select {
       color: #666;
+      display: block;
 
       &.ant-select-open,
       &.ant-select-focused {
@@ -93,29 +100,332 @@
   }
 }
 
+// eg: 物料档案-新增-多条码
+.basic-tagarea-mixin() {
+  width: 100%;
+  overflow: hidden;
+  &>.ant-row {
+    width: 100%;
+    display: block;
+
+    .label-control {
+      .form-label-mixin();
+      padding-top: 8px;
+      max-height: 38px;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+    }
+
+    .input-control {
+      width: 60%!important;
+      height: auto;
+      line-height: 28px;
+      textarea {
+        padding: 4px 8px;
+        resize: none;
+        margin-top: 2px;
+      }
+    }
+  }
+  &>.ant-row+.ant-form-explain {
+    position: absolute;
+    left: 100px;
+    top: 48px;
+    margin: 0!important;
+    line-height: 32px;
+  }
+}
+
 // label + control
 .form-item-mixin() {
   display: flex;
   align-items: center;
   min-height: 32px;
   position: relative;
-  margin-bottom: 12px;
-
-  .label-control {
-    .form-label-mixin();
-  }
+  margin-bottom: 12px; // 这里的12px 只有在编辑态时是这个边距；浏览态时需要其他让是覆盖
 
   .input-control {
     height: 28px;
     line-height: 28px;
+    // flex: 1;
     width: 100%;
 
-    .basic-input-text {
-      .basic-input-text-mixin();
-    }
+    .refer-div {
+      height: 28px;
+      &>.ant-row {
+        margin-bottom: 0;
+        min-height: 28px;
 
-    .basic-list-refer {
-      .basic-list-refer-mixin()
+        .ant-search-input-wrapper {
+          width: 100%;
+          height: 28px;
+          vertical-align: top;
+
+          .u-input-group .u-input-group-btn {
+            top: 0px;
+            line-height: 28px;
+            min-width: auto;
+          }
+        }
+      }
     }
   }
+}
+
+// group 容器组件dom 结构
+.group-buttons {
+  .basic-input-text,
+  .basic-list-refer,
+  .basic-tree-refer {
+    & > .ant-row {
+      .form-item-mixin();
+    }
+  }
+
+  .basic-tagarea {
+    .basic-tagarea-mixin();
+  }
+
+  div[id='pc_product|detail!businessAttribute']>div,
+  .control-radio {
+    .form-lable-top-mixin();
+  }
+}
+
+.label-control {
+  .form-label-mixin();
+}
+
+.basic-input-text {
+  .basic-input-text-mixin();
+}
+
+.basic-list-refer {
+  .basic-list-refer-mixin();
+}
+
+.basic-tree-refer {
+  .basic-list-refer-mixin();
+}
+
+.form-left.Manual-calculation-left {
+  .ant-row.left-tree-select.meta-default-container>.ant-row>.col-float {
+    margin-top: 14px;
+
+    .viewSetting {
+      .u-select-show-search {
+        width: auto;
+        font-size: 14px;
+        color: #333;
+
+        .u-select-selection {
+          border: none;
+        }
+
+        .u-select-selection-rendered {
+          margin-left: 0;
+
+          .u-select-selection-selected-value {
+            padding-left: 0;
+          }
+
+          .u-select-search.u-select-search--inline .u-select-search-field-wrap {
+            display: none; // 隐藏select 自带输入框
+          }
+        }
+
+        &.u-select-focused .u-select-selection,
+        .u-select-selection:active,
+        .u-select-selection:focus {
+          border: none !important;
+        }
+
+        .u-select-selection:hover .u-select-selection-clear {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bg-white.border-r {
+    .search-tree-3 .u-tree {
+      padding-bottom: 60px;
+    }
+  }
+
+  .search-tree-3.edit {
+    height: calc(100% - 100px);
+    margin-top: 10px;
+
+    .u-tree {
+      padding: 0 20px !important;
+
+      &>li:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .left-tree-select-count.meta-default-container {
+    height: 100%;
+  }
+}
+
+// 左树右表各占50%特殊处理
+.balanceadjust-list {
+  .form-left.Manual-calculation-left {
+    width: 50%;
+  }
+
+  .form-base {
+    width: 50%;
+
+    >.group-container>.group-container {
+      padding-top: 0;
+    }
+
+  }
+}
+
+.listheadRow {
+  .filter-hide {
+
+    .ant-row {
+      .form-item-mixin();
+    }
+  }
+}
+
+// TODO：待确定
+.cargo-location-count {
+  height: calc(~'100% - 72px') !important;
+
+  .form-left.Manual-calculation-left {
+    overflow: hidden;
+
+    .bg-white.border-r {
+      height: 100% !important;
+    }
+
+    .search-tree-2 {
+      height: 40px;
+      margin-top: 0px !important;
+      padding-top: 0px;
+
+      .ant-btn {
+        top: 2px !important;
+      }
+    }
+  }
+
+  .form-base.Manual-calculation {
+    height: calc(~'100% - 60px') !important;
+  }
+}
+
+
+//零售管理 - 微信配置、支付宝、兴业银行配置、开票配置
+.alipay_page,
+.wechat_page,
+.wft_page,
+.electroinvoice_page {
+  .form-left + .form-base{
+    width: 550px;
+    flex-shrink: 0;
+  }
+  .form-left.Manual-calculation-left {
+    display: table-cell;
+    width: inherit;
+    border: none;
+    float: none;
+
+    .basic-input-textarea {
+      .input-control {
+        height: inherit;
+      }
+
+      textarea {
+        line-height: 18px;
+      }
+    }
+  }
+
+  .Manual-calculation {
+    display: table-cell;
+
+    .alipaysetting {
+      line-height: 26px;
+      border: none;
+      background: #f7f9fd !important;
+      border-radius: 0;
+      padding: 20px 30px;
+      margin-right: 20px;
+
+      .control-width {
+        height: inherit;
+
+        .invoice-remark {
+          min-height: 120px;
+          line-height: 22px !important;
+        }
+      }
+    }
+  }
+}
+
+//自助大屏设置
+.aa_selfscreensetting {
+  .meta-default-container.group-container {
+    display: block !important;
+
+    .form-left.Manual-calculation-left {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// 左树右表结构
+.form-left.Manual-calculation-left {
+  height: 100%;
+  display: block !important;
+  float: left;
+  width: 240px;
+
+  .left-tree-select-count.meta-default-container {
+    height: 100%;
+  }
+
+  .bg-white.border-r {
+    border-right: none !important;
+    height: 100%;
+    overflow: initial; // fix: zhangkunk 折叠效果样式调整
+
+    .search-tree-3 {
+      height: calc(~'100% - 52px');
+      overflow-y: auto;
+    }
+  }
+}
+
+// 电商通 - 仓库配送范围
+.tree-include {
+  .Manual-calculation-left {
+    .tree-left {
+      float: left;
+      width: 100%;
+    }
+  }
+}
+
+.control-text {
+  border: 1px solid #eee;
+  height: 28px;
+  min-height: 28px;
+  line-height: 26px;
+  border-radius: 4px;
+  padding: 0 10px;
+  overflow: hidden;
+  width: 100%;
+  word-wrap: break-word;
 }
