@@ -28,6 +28,7 @@ function notice (args) {
 }
 
 const api = {
+  create:Message.create,
   config (options) {
 
   },

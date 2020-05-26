@@ -12,9 +12,39 @@ const info = () => {
     Message.info('This is a normal message');
   };
 export default class Demo extends Component {
+
     render() {
+        const dark1 = function () {
+            Message.destroy();
+            Message.config({
+                top: 200,
+                duration: 3,
+            });
+            Message.create({content: '新单据状态更新，请在审批中心查看最新状态。', color: "dark"});
+        };
+        const dark2 = function () {
+            Message.destroy();
+            Message.config({
+                width: 500
+            });
+            Message.create({content: '单据提交成功。', color: "dark", position: 'bottomLeft'});
+        };
+        
         return (
-            <Button type="primary" onClick={info}>Display normal message</Button>
+            <div>
+                <Button type="primary" onClick={info}>Display normal message</Button>
+                <Button
+                    colors="dark"
+                    onClick={dark1}>
+                    自定义 top
+                </Button>
+                <Button
+                    shape="border"
+                    onClick={dark2}>
+                    自定义 width
+                </Button>
+            </div>
+            
         )
     }
 }
