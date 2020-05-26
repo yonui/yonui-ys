@@ -46,6 +46,7 @@ import Timeline from 'bee-timeline';
 import Panel from 'bee-panel';
 import ButtonGroup from 'bee-button-group';
 import Label from 'bee-label';
+import SearchPanel from 'bee-search-panel';
 
 export {
   Affix,
@@ -94,5 +95,6 @@ export {
   Timeline,
   Panel,
   ButtonGroup,
-  Label
+  Label,
+  SearchPanel
 };

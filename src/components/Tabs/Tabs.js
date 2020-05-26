@@ -20,19 +20,30 @@ class TabsAdapter extends Component {
       // Todo：单独把 change 事件抽取出来，而不直接使用 props，因为onchange 会被其他组件（如radio ）触发
       const {
         onChange,
+        style,
+        tabPosition,
+        tabBarExtraContent,
+        type,
         ...others
-      } = this.props;
-
-      const newProps = {
-        ...others,
+      } = this.props;//tinper写法全放到other里
+      let newProps = {
         extraContent: this.props.tabBarExtraContent,
-        style: {
-          ...this.props.style,
-          ...this.props.tabBarStyle
-        },
         tabBarPosition: this.props.tabPosition,
-        tabBarStyle: tabBarStyleTypeMap[this.props.type]
-      };
+        tabBarStyle: tabBarStyleTypeMap[this.props.type],
+        ...others
+      }
+      if(tabBarStyle){
+        if(typeof tabBarStyle == 'string'){//tinper写法
+          newProps.style = {
+            ...style
+          }
+        }else if(typeof tabBarStyle == 'object'){//antd写法
+          newProps.style = {
+            ...style,
+            ...tabBarStyle
+          }
+        }
+      }
       return <Tabs {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>;
     }
 }
