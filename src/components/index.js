@@ -39,11 +39,11 @@ import Upload from './Upload';
 import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
 import Grid from './Grid';
+import Panel from './Panel';
 
 //部分tinper组件导出
 import ProgressBar from 'bee-progress-bar';
 import Timeline from 'bee-timeline';
-import Panel from 'bee-panel';
 import ButtonGroup from 'bee-button-group';
 import Label from 'bee-label';
 import SearchPanel from 'bee-search-panel';
