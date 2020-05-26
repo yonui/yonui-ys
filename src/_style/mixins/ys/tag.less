@@ -1,0 +1,202 @@
+// ============================================
+// tag 类控件的原子样式
+// ============================================
+
+// @import './form.less';
+// 全局变量
+
+// tag-group
+.tag-group-mixin() {
+  & > .ant-row {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+  }
+
+  .label-control {
+    width: 100px!important;
+  }
+
+  .u-tag.u-tag-checkable {
+    margin-bottom: 0 !important;
+    padding: 0 6px;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 18px;
+  }
+  // 单行
+  &.single-line {
+    .u-tag {
+      margin-top: 0px;
+      margin-right: 4px;
+    }
+  }
+  // 折行
+  &:not(.single-line) {
+    .form-lable-top-mixin();
+    .label-control {
+      padding-top: 8px !important;
+    }
+    .enum-control {
+      max-height: 42px;
+      padding-top: 2px;
+    }
+    .u-tag {
+      margin-top: 2px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.tag-group {
+  .tag-group-mixin();
+
+  .label-control {
+    .form-label-mixin();
+  }
+}
+
+.tag-refer.tag-refer-01 .TagList {
+  padding-right: 48px;
+}
+
+.tag-refer.tag-refer-01 .TagList .tagBtn-add {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  right: 6px;
+  position: absolute;
+}
+
+.tag-refer.tag-refer-01 .TagList .ant-select-selection__clear {
+  top: 7px;
+  margin-top: 0;
+}
+
+
+// tag 类型参照
+.tag-refer.tag-refer-01 {
+  width: 100%;
+  display: block;
+
+  .p-v-5 {
+    width: 87px;
+    margin-right: 15px;
+    text-align: right;
+    color: #666;
+    line-height: @base-input-height;
+  }
+
+  .TagList {
+    float: left;
+    border: 1px solid #d9d9d9;
+    width: 60%;
+    border-radius: 4px;
+    margin: 0;
+    line-height: 26px;
+    min-height: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:hover .ant-select-selection__clear {
+      opacity: 1;
+    }
+
+    &>span:last-child {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+      border-color: #505766
+    }
+
+    &.tag-focused {
+      border-color: #505766;
+    }
+
+    .tag-refer-icon-container {
+      height: @base-input-height - 2;
+    }
+
+    .u-tag {
+      margin: 3px 0 2px 6px;
+      background-color: #F7F9FD;
+      border: 1px solid #DBE0E5;
+      padding: 0px 3px 0px 5px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      max-width: calc(~'100% - 10px');
+      overflow: hidden;
+
+      .u-tag-text {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+      }
+
+      .anticon-cross:hover {
+        color: #EE2223;
+      }
+    }
+
+    .tagBtn-add {
+      border: none;
+      width: 22px;
+      height: @base-input-height - 2;
+      border-radius: 18px;
+      padding: 0;
+      margin-left: 5px;
+      float: right;
+      margin-right: 2px;
+
+      .anticon.anticon-canzhao:before {
+        line-height: @base-input-height - 2;
+      }
+
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-left: -1px;
+        margin-top: -1px;
+
+        &:hover {
+          fill: #505766;
+        }
+      }
+
+      .anticon-xinzeng:hover {
+        color: #505766;
+      }
+    }
+
+    &.tag-disabled {
+      .form-control-disabled-mixin();
+      .tagBtn-add {
+        border-color: @input-border-color;
+
+        &:hover {
+          border-color: @input-border-color;
+        }
+      }
+    }
+
+    .u-select-search--inline {
+      position: static;
+      flex: 1;
+      padding-right: 30px;
+
+      .u-select-search-field {
+        height: 26px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+}

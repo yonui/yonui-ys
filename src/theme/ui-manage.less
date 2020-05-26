@@ -1,0 +1,199 @@
+// UI 模板中使用的额外样式
+
+// UI 模板左树
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background: #FDF2DC !important;
+  border-radius: 12px;
+  color: #505766;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper:hover {
+  background: #edf1f7;
+  border-radius: 12px;
+  color: #505766;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper {
+  color: #333;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px !important;
+  max-width: calc(~'100% - 17px ');
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle !important
+}
+
+.ant-tree li span.ant-tree-iconEle,
+.ant-tree li span.ant-tree-switcher {
+  width: 14px !important;
+  height: 14px !important;
+  line-height: 12px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+  margin-right: 3px !important;
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher-noop {
+  border: none !important;
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher-noop {
+  border: none;
+}
+
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after,
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  font-size: 14px !important;
+  margin-left: -1px;
+
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after {
+  content: "\E52a" !important;
+  font-family: "iconfont";
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  content: "\E672" !important;
+  font-family: "iconfont";
+}
+
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after,
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  font-size: 14px !important;
+  margin-left: -1px;
+
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after {
+  content: "\E52a" !important;
+  font-family: "iconfont";
+}
+
+.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open:after {
+  content: "\E672" !important;
+  font-family: "iconfont";
+}
+
+// ui 模板的导航风格
+.bill-setting-tabs {
+  .u-tabs {
+    .u-tabs-nav-container {
+      .u-tabs-nav-scroll {
+        background: #fff;
+        border: none;
+        padding: 0;
+        height: unset;
+
+        .u-tabs-nav {
+          height: auto;
+
+          .u-tabs-tab {
+            padding: 8px 0px 8px 10px;
+            margin-right: 15px;
+            background: #fff;
+            border: none;
+            color: #000;
+            text-align: center;
+            line-height: unset;
+
+            &.u-tabs-tab-active {
+              color: #ee2233;
+              border: none;
+              margin-top: 0;
+              line-height: unset;
+            }
+          }
+        }
+      }
+    }
+    .u-tabs-content {
+      &.u-tabs-content-no-animated {
+        display: none;
+      }
+    }
+
+    // .u-tabs-bar .u-tabs-tab-prev,
+    // .u-tabs-bar .u-tabs-tab-next {
+    //   display: none;
+    // }
+    .u-tabs-bar {
+      padding-top: 8px;
+    }
+  }
+}
+
+.bill-design-modal {
+  .fixedDataTableCellGroupLayout_cellGroupWrapper {
+    .fixedDataTableCellGroupLayout_cellGroup {
+      .fixedDataTableCellLayout_main:first-child {
+        .retail-table-cell {
+          .public_fixedDataTableCell_wrap3 {
+            .public_fixedDataTableCell_disabled.textCol {
+              margin-left: 10px !important
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// UI模板上，高度被其他的！important 样式影响了。我加了个作用域覆盖下
+.bill-design-modal .u-input-number.u-input-group.simple .u-form-control{
+  height: 26px !important
+}
+
+.bill-design-modal  .ant-select-selection:hover { // hover时时间框重复
+  .u-time-picker .u-time-picker-input{
+    border: 0px;
+  }
+}
+
+.ant-modal.bill-design-modal {
+  .listTable {
+    .btn-caret {
+      margin-top: 6px;
+    }
+
+    .icon {
+      margin-top: 4px;
+    }
+  }
+}
+
+// fix: ui模板模态框，表格hover 时操作按钮样式
+.bill-modal-tabs .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
+  right: 10px;
+  top: 8px;
+}
+
+.ant-modal-footer > .ant-btn:first-child {
+  background: #e5e9ec;
+  border: none;
+  color: #535a69;
+}
+
+.ant-modal-footer {
+  .u-button.u-button-border {
+    background-color: #eceff1;
+    border: none;
+    color: #505766;
+    &:hover {
+      background-color: #dfe1e6;
+      border: none;
+    }
+  }
+}

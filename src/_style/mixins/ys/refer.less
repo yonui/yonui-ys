@@ -1,0 +1,38 @@
+// ============================================
+// refer 类控件的样式
+// ============================================
+
+.refer-search-mixin() {
+  display: block;
+  float: left;
+  width: unset;
+
+  .u-form-control-affix-wrapper {
+    position: relative;
+    display: inline-block;
+
+    input {
+      padding: 0 24px 0 10px;
+    }
+
+    .u-form-control-suffix {
+      color: #A7ABB2;
+      cursor: pointer;
+      line-height: 28px;
+
+      .uf-search {
+        color: #adb4bc;
+        padding: 0;
+
+        &:before {
+          content: "\e518";
+          font-family: 'iconfont';
+        }
+      }
+    }
+  }
+
+  .u-form-control-search {
+    width: 300px;
+  }
+}

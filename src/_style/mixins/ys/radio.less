@@ -1,0 +1,299 @@
+// ============================================
+// radio 类控件的原子样式
+// ============================================
+
+// fix: ys 的radio 与文字对齐
+.u-radio {
+  .u-radio-label:before {
+    top: 2px;
+  }
+
+  &.is-checked .u-radio-label:after {
+    top: 6px;
+  }
+}
+
+// 图片radio
+.radio-svg {
+  text-align: center;
+  margin-top: 20px;
+  height: 24px;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// ys快捷键标识
+.u-radio-group {
+  input[type='radio']:focus + .u-radio-label:before, input[type='radio']:hover + .u-radio-label:before{
+    border-color: #505766;
+  }
+}
+
+
+// ui 模板中有涉及
+.checkradio-checked-readonly,
+.checkradio-checked {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #505766;
+  background: #505766;
+  cursor: pointer;
+}
+
+.checkradio-checked,
+.checkradio-unchecked {
+  margin-top: 8px;
+}
+
+.checkradio-unchecked,
+.checkradio-unchecked-readonly {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #505766;
+  cursor: pointer;
+}
+
+.checkradio-unchecked:hover {
+  border: 1px solid #588CE9;
+}
+
+.checkradio-checked:hover {
+  border: 1px solid #588CE9;
+  background: #588CE9;
+}
+
+// start=================== TODO: 待确定删除 =========================
+// 更新日志
+.ant-radio-group {
+  width: 362px;
+  margin: 0 auto;
+  display: block;
+  padding: 25px 0;
+
+  .ant-radio-button-wrapper,
+  .ant-radio-button-wrapper-checked {
+    border: none;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child):before,
+  .ant-radio-button-wrapper:not(:first-child):before {
+    background-color: transparent !important;
+  }
+
+  .ant-radio-button-wrapper-checked:before {
+    background-color: transparent !important;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    box-shadow: none;
+  }
+
+  .ant-radio-button-wrapper {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0 35px;
+
+    span {
+      svg {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .ant-radio-button-wrapper:hover {
+    color: #999;
+  }
+
+  .ant-radio-button-wrapper:first-child {
+    margin: 0 35px 0 0px;
+  }
+
+  .ant-radio-button-wrapper:last-child {
+    margin: 0 0px 0 35px;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    color: #333333;
+    font-size: 14px;
+  }
+}
+
+// 新增订阅方案
+.FormulaDesigner {
+  .subscribe_cycle_radio {
+    .ant-radio-group {
+      float: left;
+    }
+  }
+
+  .RightContent {
+    .ant-radio-button-wrapper-checked:first-child {
+      border-color: #588ce9;
+      color: #588ce9;
+    }
+
+    .ant-radio-button-wrapper-checked {
+      border-color: #588ce9;
+      color: #588ce9;
+      box-shadow: -1px 0 0 0 #588ce9;
+    }
+
+    .ant-radio-button-wrapper:hover {
+      color: #588ce9;
+    }
+  }
+}
+
+.sum_switch {
+  background: #588CE9;
+  border-radius: 20px;
+  float: left;
+  clear: both;
+  padding: 0 4px;
+  margin-top: 8px;
+
+  label {
+    float: left;
+  }
+
+  .ant-radio-button-wrapper {
+    background: transparent;
+    color: #fff;
+    padding: 0 14px;
+    border: none;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+    color: #535a69;
+    background: #fff;
+    border-color: transparent;
+    box-shadow: none;
+    height: 24px !important;
+    line-height: 22px !important;
+    padding: 0 10px;
+    margin: 4px 0px 4px 0px;
+    border-radius: 20px;
+
+    span {
+      color: #535a69;
+    }
+  }
+
+  .ant-radio-button-wrapper.ant-radio-button-wrapper-checked:hover {
+    color: #535a69 !important;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child):before {
+    content: "";
+    display: block;
+    top: 0;
+    left: -1px;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .ant-radio-button-wrapper {
+    background: #588CE9;
+    height: 24px !important;
+    line-height: 22px !important;
+    padding: 0 10px;
+    margin: 4px 0px 4px 0px;
+    border-radius: 20px;
+  }
+
+  .ant-radio-button-wrapper:hover {
+    color: #fff;
+  }
+}
+
+
+// radio
+.ant-radio-group {
+  line-height: @base-input-height;
+}
+
+.ant-radio-inner {
+  border-color: #D9D9D9;
+
+  &:after {
+    background-color: #EE2223;
+  }
+}
+
+.ant-radio-checked {
+  .ant-radio-inner {
+    border-color: #ccc;
+  }
+
+  &:after {
+    border-color: #EE2223
+  }
+}
+
+.ant-radio-wrapper:hover .ant-radio .ant-radio-inner,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-focused .ant-radio-inner {
+  border-color: #ccc;
+}
+
+.radio-svg-btn {
+  float: left;
+  width: 80px;
+  cursor: pointer;
+
+  .ant-radio-wrapper {
+    margin-right: 0;
+    color: #ccc;
+    width: 100%;
+    text-align: center;
+
+    .ant-radio {
+      display: none;
+    }
+
+    &.ant-radio-wrapper-checked {
+      color: #333;
+    }
+
+  }
+
+  &:hover {
+    .ant-radio-wrapper {
+      color: #999;
+    }
+  }
+}
+// end =========================================
+
+// .listheadRow .input-control .ant-radio-group {
+//   .ant-radio-button-wrapper-checked {
+//     border-color: #588ce9;
+//     color: #588ce9;
+//     box-shadow: -1px 0 0 0 #588ce9;
+//   }
+
+//   .ant-radio-button-wrapper-focused,
+//   .ant-radio-button-wrapper:hover {
+//     color: #588ce9;
+//   }
+// }
+
+
+// .listheadRow .ant-radio-group .ant-radio-button-wrapper {
+//   line-height: 26px;
+//   height: @base-input-height;
+// }

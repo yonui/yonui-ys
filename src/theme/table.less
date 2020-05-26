@@ -1,358 +1,10 @@
 
-.fixedDataTableCellLayout_wrap3 {
-  .public_fixedDataTableCell_cellContent {
-    .ant-checkbox-wrapper {
-      .ant-checkbox {
-        float: left;
-      }
-    }
-
-    .can-modify {
-      height: 14px;
-    }
-
-    .ant-select-selection--single {
-      height: 28px !important;
-    }
-
-    .ant-select-selection__rendered {
-      line-height: 26px;
-    }
-
-    .checkboxHD {
-      .ant-checkbox-wrapper {
-        .ant-checkbox {
-          float: left;
-          margin-top: 7px;
-        }
-      }
-    }
-
-    .textCol {
-      cursor: pointer;
-
-      &.labelswitch {
-        padding: 6px !important;
-        border-bottom: 1px solid #dbe0e5;
-      }
-
-      img {
-        width: 28px !important;
-        height: 28px !important;
-        border-radius: 60px;
-        margin-top: 3px;//TINPER-2676
-        margin-left: 10px;
-
-        &.cell-avatar-logo {
-          border-radius: 4px;
-        }
-      }
-    }
-
-    .rowNo {
-      vertical-align: middle;
-      display: table-cell;
-      border-bottom: 1px solid #dbe0e5;
-    }
-
-    .ant-radio-wrapper {
-      margin-right: 0;
-    }
-  }
-}
-
-.public_fixedDataTable_header {
-  .fixedDataTableCellLayout_wrap3 {
-    .public_fixedDataTableCell_cellContent {
-      .textCol {
-        padding: 0;
-        padding-left: 10px;
-        flex-shrink: 0;
-      }
-    }
-  }
-}
-
-.public_fixedDataTableRow_expanded .fixedDataTableCellGroupLayout_cellGroupWrapper .public_fixedDataTableCell_main:first-child {
-  width: 100% !important;
-}
-
-.public_fixedDataTableRow_selected {
-  background-color: #edf1f7 !important;
-}
-
-.public_fixedDataTableRow_highlighted,
-.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
-  background: #fff;
-}
-
-.public_fixedDataTableRow_disabled,
-.public_fixedDataTableRow_disabled .public_fixedDataTableCell_main {
-  color: #ccc;
-  border-color: #d9d9d9;
-  cursor: not-allowed !important;
-  pointer-events: none;
-}
-
-.public_fixedDataTableRow_delRow,
-.public_fixedDataTableRow_delRow .public_fixedDataTableCell_main {
-  color: #ccc;
-}
-
-.public_fixedDataTableCell_empty {
-  min-height: 44px;
-  padding: 4px 7px;
-
-  .ant-search-input-wrapper {
-    width: 100%;
-  }
-}
-
-// fix: 表格不可编辑的列，表格文字颜色应该为浅灰色
-.public_fixedDataTableCell_disabled .public_fixedDataTableCell_cellContent .table-header-name {
-  color: #999;
-}
-
-.public_fixedDataTableCell_disabled,
-.public_fixedDataTableCell_disabled .ant-tag,
-.public_fixedDataTableCell_disabled.textCol {
-  color: #999;
-  cursor: not-allowed !important;
-  min-height: 10px;
-  padding: 4px 10px;
-}
-
-// 解决新增界面内表格头部筛选鼠标经过后无法居中问题
-.public_fixedDataTableCell_disabled{
-  padding: 0;
-  .public_fixedDataTableCell_cellContent>div{
-    display: flex;
-    align-items: center;
-  }
-}
-
-.u-tabs-content .line-tabs .u-tabs-tabpane-active .listTable .public_fixedDataTableCell_disabled.textCol {
-  color: #333;
-}
-
-.public_fixedDataTableCell_disabled .ant-search-input-wrapper {
-  width: 100%;
-}
-
-.public_fixedDataTable_header,
-.public_fixedDataTable_header .public_fixedDataTableCell_main {
-  background: @table-header-background-color;
-}
-
-.public_fixedDataTable_header .public_fixedDataTableCell_disabled {
-  pointer-events: initial;
-  cursor: initial !important;
-}
-
-.public_fixedDataTable_header .public_fixedDataTableCell_main {
-  font-weight: normal;
-}
-
-.columnSetting {
-  position: absolute;
-  right: 0;
-  overflow: hidden;
-  z-index: 999;
-  top: 1px;
-  background: @table-header-background-color;
-  border: 0;
-  width: 36px;
-}
-
-.SettingBtn {
-  height: 29px;
-  border: 0px;
-  width: 40px;
-  background: @table-header-background-color;
-  border-radius: 0px;
-}
-
-.headerName {
-  color: #333;
-}
-
-.checkboxHD {
-  height: @base-input-height + 2;
-  line-height: @base-input-height + 2;
-}
-
-.ant-tabs-tabpane {
-  position: relative;
-}
-
-.ant-tabs-tabpane-active .ant-tabs-tabpane {
-  width: auto;
-}
-
-
-/*2017-05-02*/
-.table-reset .ant-table-thead>tr>th {
-  background: #fafafa;
-  border-bottom: 1px solid #f0f0f0
-}
-
-.table-reset .ant-table-thead>tr>th,
-.table-reset .ant-table-tbody>tr>td {
-  padding: 10px 15px;
-}
-
-.table-reset .ant-table-header {
-  border-top: 1px solid #f23f40;
-  margin-bottom: 0;
-}
-
-.ant-table-tbody span i {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-.ant-table-thead>tr.ant-table-row-hover>td,
-.ant-table-tbody>tr.ant-table-row-hover>td,
-.ant-table-thead>tr:hover>td,
-.ant-table-tbody>tr:hover>td {
-  background: #edf1f7;
-}
-
-.listTable .fixedDataTableCellLayout_main {
-  border-right: 0;
-}
-
 .listTable .listTableTag {
   padding: 2px 5px;
   margin: 5px 10px;
   border-radius: 2px;
   display: inline-block;
   line-height: 18px;
-}
-
-.fixedDataTableLayout_main {
-  border: none;
-  border-top: 1px solid #505766;
-
-  .has-error {
-    .ant-form-explain {
-      display: none;
-    }
-  }
-}
-
-.fixedDataTableRowLayout_fixedColumnsDivider {
-  border-left: none
-}
-
-.fixedDataTableRowLayout_main {
-  border-bottom: 1px solid #DBE0E5;
-}
-
-.public_fixedDataTable_footer {
-  background-color: #f7f9fd !important;
-
-  .public_fixedDataTableCell_main {
-    border: none;
-    line-height: 35px;
-    background-color: #f7f9fd;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
-    text-align: left;
-  }
-
-  .fixedDataTable-footer-title {
-    color: #666;
-  }
-
-  border-bottom: 1px solid #dbe0e5;
-  background-color: #fcf5e6;
-  color: #505766;
-
-  .textCol {
-    color: #505766;
-  }
-
-  font-weight: 700;
-
-  .subtotal,
-  .aggregates {
-    border-bottom: 1px solid #dbe0e5;
-  }
-
-  .fixedDataTableRowLayout_body .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellLayout_main:first-of-type {
-
-    .subtotal,
-    .aggregates {
-      padding-left: 10px;
-    }
-  }
-
-}
-
-.public_fixedDataTableRow_highlighted,
-.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
-  background: #fff
-}
-
-.public_fixedDataTable_bodyRow:hover .public_fixedDataTableCell_main {
-  background: #edf1f7
-}
-
-.public_fixedDataTable_bodyRow:hover {
-  background-color: #edf1f7;
-}
-
-.public_fixedDataTableCell_main {
-  background: #fff;
-}
-
-.btn-caret {
-  width: 18px;
-  display: inline-block;
-  height: 16px;
-  vertical-align: top;
-  padding-top: 4px;
-  flex-shrink: 0;
-  padding-left: 2px;
-}
-
-.ant-popover-inner-content {
-  padding: 8px 0;
-  line-height: 33px;
-
-  .ant-row {
-    padding: 0 10px;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    height: 32px;
-    line-height: 32px;
-
-    div {
-      height: 32px;
-      line-height: 32px;
-    }
-
-    &:hover {
-      background: #f3f5f9;
-    }
-
-    .ant-checkbox-wrapper {
-      width: 106px;
-      overflow: hidden;
-      height: 25px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      display: initial;
-    }
-  }
-
-  .popover-form {
-    .ant-row:hover {
-      background: transparent;
-    }
-  }
 }
 
 .btn-list-setting {
@@ -365,104 +17,6 @@
   margin-right: 10px;
 }
 
-//放出表格滚动条纵向
-.ScrollbarLayout_mainVertical {
-  width: 16px;
-
-  .ScrollbarLayout_faceVertical:after {
-    left: auto !important;
-    right: 8px !important;
-  }
-}
-
-.public_fixedDataTable_scrollbarSpacer {
-  display: none;
-}
-
-/*表格里的滚动条背景透明*/
-.meta-table .public_Scrollbar_main {
-  background-color: transparent;
-  z-index: 998 !important;
-}
-
-/*表格部分按钮*/
-.acticonCell {
-  position: absolute;
-  right: 15px;
-  overflow: hidden;
-  z-index: 999;
-  border: 0;
-  background: #edf1f7;
-
-  .anticon {
-    font-size: 17px;
-    margin-right: 20px;
-  }
-
-  .icon {
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: -0.25em;
-    margin-right: 5px;
-  }
-
-  span {
-    margin-left: 8px;
-
-    &:only-child {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .level-2+.level-3.expand-row-end {
-      border-top-color: #dbe0e5;
-    }
-
-    .expand-row:hover {
-      background-color: #edf1f7;
-    }
-  }
-
-  .ant-row {
-    display: flex;
-  }
-
-  .table-list-btn {
-    padding: 0 10px;
-    background: #505766;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 3px;
-    line-height: 22px;
-    display: block;
-    min-width: 44px;
-    max-width: 150px;
-    white-space: nowrap;
-    word-break: break-word;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-
-  .table-list-btn:hover {
-    background: #616875;
-    color: #fff;
-  }
-}
-
-.action-col {
-  background: #fff;
-}
-
-/*表格部分按钮-选中由黄色变为浅蓝色*/
-.actionCellSelect {
-  background: #edf1f7;
-}
-
-.ant-popover-inner-content .filter-btn-fixed {
-  min-width: 150px
-}
-
 .filter-btn-fixed {
   height: auto!important;
   max-height: 298px;
@@ -471,154 +25,10 @@
 
 }
 
-.filter-btn-fixed .filter-btn-1 {
-  position: absolute;
-  bottom: 10px;
-  right: 1px;
-  left: 1px;
-  width: 99%;
-  text-align: right;
-  padding: 5px 0;
-}
-
-.filter-btn-1 button {
-  margin-right: 8px;
-}
-
 .filter-txt {
   overflow: auto;
   max-height: 220px;
   overflow-x: hidden;
-}
-
-.public_fixedDataTableCell_columnResizerKnob {
-  background-color: #505766
-}
-
-.public_fixedDataTableColumnResizerLine_main {
-  border-color: #505766
-}
-
-.ant-switch {
-  height: 12px;
-  border-radius: 12px;
-  min-width: 18px;
-  background: #ADB4BC;
-  max-width: 32px;
-}
-
-.ant-switch:after {
-  width: 16px;
-  height: 16px;
-  box-shadow: 0 1px 2px 0 #B5B5B5;
-  top: -3.5px;
-  left: -1px;
-}
-
-.ant-switch-checked:after {
-  margin-left: -14px;
-  background: #588CE9;
-  left: 100%
-}
-
-.ant-switch-checked {
-  background: rgba(88, 140, 233, 0.30);
-}
-
-.table-nodata {
-  text-align: center;
-  font-size: 14px;
-  color: #999;
-  line-height: 90px;
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  top: 60px;
-}
-
-.table-nodata i {
-  font-size: 85px;
-  color: #ccc;
-  margin-right: 20px;
-  vertical-align: middle;
-  margin-bottom: 12px;
-}
-
-.ant-table-placeholder {
-  min-height: 220px;
-  position: relative;
-
-  .table-nodata {
-    text-align: center;
-    font-size: 14px;
-    color: #999;
-    line-height: 90px;
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-  }
-}
-
-/*小友表格暂无数据提示*/
-.table-nodata {
-  padding-left: 0 !important;
-  line-height: normal !important;
-
-  svg {
-    display: block !important;
-    margin: 8px auto !important;
-    position: static !important;
-    float: none !important;
-  }
-}
-
-.public_fixedDataTableCell_cellContent a {
-  color: #588CE9;
-  cursor: pointer;
-  cursor: hand;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
-  display: block;
-}
-
-.public_fixedDataTableCell_cellContent a.table-list-btn {
-  svg {
-    margin-top: 6px;
-    display: inline-block;
-  }
-}
-
-.public_fixedDataTableCell_cellContent a:hover {
-  color: @table-a-color;
-  cursor: pointer;
-  cursor: hand;
-}
-
-.editCol {
-  .edit-input-number {
-    .ant-select-selection {
-      margin-top: 0px;
-    }
-  }
-
-  .ant-input-number,
-  .ant-input,
-  .ant-search-input,
-  .ant-select-selection {
-    height: 28px;
-  }
-
-  .ant-search-input .ant-search-btn {
-    padding: 0;
-    top: -1px;
-  }
-
-  .ant-select-selection__rendered {
-    line-height: 26px;
-  }
-
 }
 
 .textCol {
@@ -758,69 +168,6 @@
   height: 320px !important;
 }
 
-/*气泡浮窗表格处样式调整   add zk*/
-.ant-popover .ant-popover-inner-content {
-  .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
-    padding-left: 0px;
-    padding-right: 6px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .ant-btn-icon-only {
-    .anticon-arrow-up {
-      vertical-align: super;
-    }
-
-    .anticon-arrow-down {
-      vertical-align: super;
-    }
-  }
-
-  .filter-btn-1 {
-    padding-left: 5px;
-    padding-top: 5px;
-    background-color: #fff;
-    position: absolute;
-    width: calc(~'100% - 2px');
-    border-top: 1px solid #dcdcdc;
-    line-height: 26px;
-
-    .ant-checkbox-wrapper {
-      margin-left: 5px;
-      float: left;
-    }
-  }
-
-  .filter-btn-1 button {
-    margin-left: 0px;
-    margin-right: 10px;
-  }
-
-  .filter-btn-1 .ant-btn-sm {
-    height: 26px;
-    float: left;
-    margin-right: 10px;
-  }
-
-  .ant-row:hover .pull-right .ant-btn {
-    background: #f3f5f9;
-  }
-
-  /*add by jinzh1 listrefer 按钮样式*/
-  .listRefer .filter-btn-1 .ant-btn-primary {
-    margin-left: 0px;
-  }
-}
-
-.ant-popover.ant-popover-placement-bottomRight {
-  .ant-popover-inner-content {
-    .filter-btn-1 {
-      bottom: 1px;
-    }
-  }
-}
-
 // async sku 浮层
 .taggroup-popover {
   .filter-list-search{
@@ -877,101 +224,10 @@
   }
 }
 
-.ant-popover-placement-left>.ant-popover-content .filter-btn-1 {
-  width: calc(~'100% - 10px');
-}
-
-.ant-popover-placement-top {
-  .ant-tree {
-    padding-bottom: 25px;
-  }
-
-  .filter-btn-1 {
-    position: absolute;
-    bottom: 9px;
-    width: 90%;
-  }
-}
-
-/*气泡浮窗选择条件样式调整   add zk*/
-.ant-popover-inner-content {
-  .filter-btn-1 .ant-btn {
-    float: left;
-    height: 26px;
-  }
-
-  .filter-btn-1 button {
-    margin-right: 0px;
-  }
-
-  .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
-    padding-left: 0px;
-    padding-right: 6px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .ant-btn-icon-only {
-    .anticon-arrow-up {
-      vertical-align: super;
-    }
-
-    .anticon-arrow-down {
-      vertical-align: super;
-    }
-  }
-
-  .lock.ant-btn-icon-only {
-
-    .anticon-weidongjie,
-    .anticon-dongjie {
-      vertical-align: super;
-    }
-
-  }
-}
-
 .icon-plus-copy {
   font-size: 14px;
   color: #fff;
   margin-right: 3px;
-}
-
-/*表格的部分单独添加边距*/
-.ant-tabs-content .listheadRow {
-  margin: 0px 20px;
-  padding-top: 20px;
-}
-
-.ant-tabs-content .listheadRow {
-  .groupCondition {
-    >div {
-      >div {
-        float: left;
-      }
-    }
-  }
-}
-
-.public_fixedDataTable_main,
-.fixedDataTableLayout_rowsContainer,
-.fixedDataTableRowLayout_rowWrapper,
-.public_fixedDataTable_header,
-.fixedDataTableRowLayout_main {
-  outline: none;
-
-  .u-checkbox .u-checkbox-label {
-    position: absolute;
-  }
-}
-
-.fixedDataTableCellGroupLayout_cellGroupWrapper {
-  .acticonCell {
-    padding-top: 7px;
-    background: none;
-    right: 10px;
-    padding-left: 0px;
-  }
 }
 
 /*销售排名里面的表格*/
@@ -1072,17 +328,8 @@
   height: 12px !important;
 }
 
-/*竖向滚动条设置*/
-.public_Scrollbar_main,
-.public_Scrollbar_main.public_Scrollbar_mainActive {
-  border-left: none;
-}
-
 /*报表--分组方案右移*/
 .container-browse-mode{
-  .meta-table.listTable.readOnlyTable {
-    // padding-bottom: 60px;
-  }
   .listheadRow .ant-row {
     .rpt-toolbar {
       min-width: 70px;
@@ -1111,6 +358,10 @@
         .ant-btn span {
           line-height: 14px;
         }
+      }
+      .u-button-primary[disabled]{
+        background: linear-gradient(90deg, #f79191, #fda497);
+        color: #fff;
       }
     }
 
@@ -1180,12 +431,6 @@
   }
 }
 
-.fixedDataTableRowLayout_rowWrapper {
-  .textCol .edit-input-number {
-    margin-top: 0px;
-  }
-}
-
 /*联查零售单-下拉*/
 .ant-dropdown {
   .ant-dropdown-menu {
@@ -1226,72 +471,15 @@
       margin: 0px 8px 0px 8px;
     }
 
-    .ant-radio-wrapper {
-      margin-bottom: 10px;
-    }
-
     .ant-time-color {
       color: #b0b0b0;
     }
   }
 
-  .ant-radio-group {
-    .intelligence-count{
-      margin-left: 26px;
-      width: 800px;
-      white-space: initial;
-    }
-    label.ant-radio-wrapper {
-      .ant-input-number {
-        width: 60px !important;
-        .ant-input-number-input{
-          height: 26px;
-        }
-      }
-    }
-    .opToken{
-      margin: 0px 8px 0px 8px;
-      font-size: 14px;
-    }
-    .ant-input-number+.opToken{
-      margin: 0px 8px 0px 0px;
-    }
-    .opToken+.ant-checkbox-wrapper{
-      padding-left: 0px;
-    }
-    .ant-checkbox-wrapper+span{
-      padding: 0px;
-    }
-    .ant-checkbox-wrapper{
-      margin-right: 8px;
-
-      &:last-child{
-        margin-right: 8px;
-      }
-    }
-    .ant-calendar-picker {
-      width: 140px !important;
-      display: inline-block;
-    }
-  }
   p{
     padding-left: 22px;
     line-height: 26px;
     margin-top: 26px;
-  }
-  .ant-radio-group.intelligence-time{
-      background: #F9F9F9;
-      width: 770px;
-      padding: 15px 20px;
-      margin-left: 22px;
-      .ant-radio-wrapper:last-child{
-        margin-bottom: 0px;
-      }
-      .ant-radio-group{
-        .ant-radio-wrapper{
-          margin-bottom: 0px;
-        }
-      }
   }
   .ant-modal-footer {
     padding: 15px 30px;
@@ -1540,9 +728,6 @@
       .crosstypeNameList {
         margin-left: 16px;
 
-        .ant-radio-wrapper {
-          margin-right: 5px;
-        }
       }
 
       .ant-input {
@@ -2237,40 +1422,6 @@
   }
 }
 
-/*add by jinzh1  switchradio样式*/
-.checkradio-checked-readonly,
-.checkradio-checked {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #505766;
-  background: #505766;
-  cursor: pointer;
-}
-
-.checkradio-checked,
-.checkradio-unchecked {
-  margin-top: 8px;
-}
-
-.checkradio-unchecked,
-.checkradio-unchecked-readonly {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #505766;
-  cursor: pointer;
-}
-
-.checkradio-unchecked:hover {
-  border: 1px solid #588CE9;
-}
-
-.checkradio-checked:hover {
-  border: 1px solid #588CE9;
-  background: #588CE9;
-}
-
 .uretail-billdesign-body {
   margin-top: 15px;
 
@@ -2283,13 +1434,6 @@
 
 .uretail-billdesign-body .billdesign-card .billdesign-card-title {
   margin-bottom: 10px !important;
-}
-
-.ant-popover.ant-popover-placement-bottom .ant-popover-inner .ant-popover-inner-content,
-.ant-popover.ant-popover-placement-top .ant-popover-inner .ant-popover-inner-content {
-  max-height: 500px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 /*多表头样式 add by jinzh1*/
@@ -2357,10 +1501,6 @@
       padding-left: 10px;
     }
   }
-}
-
-.public_fixedDataTableRow_highlight-red {
-  background-color: #fff3f3;
 }
 
 /*表报-销售分析-发布方案*/
@@ -2858,244 +1998,6 @@
   }
 }
 
-.bill-design-modal {
-  .fixedDataTableCellGroupLayout_cellGroupWrapper {
-    .fixedDataTableCellGroupLayout_cellGroup {
-      .fixedDataTableCellLayout_main:first-child {
-        .retail-table-cell {
-          .public_fixedDataTableCell_wrap3 {
-            .public_fixedDataTableCell_disabled.textCol {
-              margin-left: 10px !important
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
-.fixedDataTableCellGroupLayout_cellGroup {
-  .table-header-name {
-    span.headerNameTips {
-      color: #f00;
-      position: relative;
-      top: 2px;
-    }
-  }
-}
-
-/*add by jinzh1 合并单元格 表格样式*/
-.mergeTable {
-
-  .fixedDataTableRowLayout_main,
-  .fixedDataTableCellGroupLayout_cellGroup,
-  .fixedDataTableCellLayout_main {
-    overflow: inherit !important;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
-    .headerName {
-      border-bottom: 1px solid #dbe0e5;
-    }
-
-    .line-number {
-      line-height: 29px;
-    }
-  }
-
-  .public_fixedDataTable_header .public_fixedDataTableCell_main {
-    .public_fixedDataTableCell_disabled {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
-
-  .retail-table-cell {
-
-    .textCol,
-    .editCol {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
-
-  .textCol {
-    .edit-input-number {
-      margin-top: -8px !important;
-    }
-  }
-
-  .editCol {
-    .edit-input-number {
-      margin-top: -7px;
-      .u-select {
-        top: 6px;
-      }
-    }
-  }
-
-  &.readOnlyTable {
-    .textCol {
-      .edit-input-number {
-        margin-top: 0 !important;
-      }
-    }
-  }
-
-  .acticonCell .ant-row {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-/*add by jinzh1 树表样式*/
-.tree-table {
-  .public_fixedDataTableCell_cellContent a {
-    display: inline-block;
-  }
-
-  .public_fixedDataTableCell_cellContent>.cell-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-height: 15px;
-    padding: 10px 12px;
-    border-bottom: 1px solid #dbe0e5;
-    height: 35px;
-  }
-
-  .public_fixedDataTableCell_cellContent .ant-search-input-wrapper {
-    margin-top: 0px;
-  }
-
-  .expand-rows {
-    height: 100%;
-    overflow: hidden;
-
-    .expand-row {
-      height: 30px;
-      background: #fff;
-      border-bottom: 1px solid #dbe0e5;
-      .cell-text {
-        padding: 10px 12px;
-        overflow: inherit;
-        text-overflow: ellipsis;
-        .joinQueryCell {
-          color: #588ce9;
-        }
-      }
-    }
-
-    .expand-row-selected {
-      background-color: #edf1f7;
-
-      .action-col {
-        background-color: #edf1f7;
-      }
-    }
-
-    .level-2+.level-3.expand-row-end {
-      border-top-color: #dbe0e5;
-    }
-
-    .expand-row:hover {
-      background-color: #edf1f7;
-    }
-  }
-
-  .acticonCell {
-    padding-left: 0px;
-    margin-top: -4px; // 客户分类表格，操作按钮垂直居中
-    text-align: right;
-    right: 40px;
-    height: 22px;
-    span {
-      height: 22px;
-      display: inline-block;
-    }
-  }
-
-  .public_fixedDataTable_bodyRow:hover {
-    background-color: #fff;
-
-    .public_fixedDataTableCell_main {
-      background-color: #fff;
-    }
-  }
-
-  .fixedDataTableRowLayout_body {
-    width: 100%
-  }
-
-  .public_fixedDataTable_bodyRow {
-    .fixedDataTableRowLayout_body:hover {
-      background-color: #edf1f7;
-
-      .public_fixedDataTableCell_main {
-        background-color: #edf1f7 !important;
-      }
-    }
-  }
-
-  .fixedDataTableCellLayout_main {
-    border-right: none;
-  }
-
-  .public_fixedDataTable_header {
-    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
-      padding: 0;
-      line-height: 29px;
-      border-bottom: 1px solid #dbe0e5;
-      height: 30px;
-      .table-header-name {
-        line-height: 29px;
-        height: 29px;
-        & + .table-form-screen {
-          margin-left: 4px;
-        }
-      }
-    }
-  }
-
-  .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
-    width: 100%;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
-  }
-
-  .expand-icon {
-    width: 14px;
-    height: 14px;
-    line-height: 12px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-block;
-
-    i {
-      margin: -2px;
-      transition: -webkit-transform .3s;
-      transition: transform .3s;
-      transition: transform .3s, -webkit-transform .3s;
-
-      &.anticon-plus-square-o {
-        transform: rotate(90deg) scale(.59);
-      }
-
-      &.anticon-minus-square-o {
-        transform: rotate(180deg) scale(.59);
-      }
-    }
-
-  }
-
-  .ant-input-affix-wrapper {
-    width: 100% !important;
-  }
-}
 .tree-table-more-action-menu {
   .u-dropdown-menu {
     margin-top: -4px ;
@@ -3186,11 +2088,7 @@
     padding-bottom: 8px;
   }
 }
-.pc_product {
-  .twoInclusion .width-percent-33 .has-related .viewCell+.width-percent-100 {
-    //position: inherit;
-  }
-}
+
 .pu_pursettlefee {
   .list-top-toolbar {
     padding-bottom: 0;
@@ -3228,162 +2126,6 @@
   }
 }
 
-/*添加投影*/
-.fixedDataTableRowLayout_body {
-  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
-    position: relative;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1)::before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    z-index: 99;
-    top: -2px;
-    right: 0;
-    height: 104%;
-    box-shadow: 3px 0 3px 0px rgba(0, 0, 0, .024);
-  }
-}
-.readOnlyTreeTable {
-  .fixedDataTableRowLayout_body {
-    border-bottom: 1px solid #dbe0e5;
-    height: 35px;
-    .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
-      position: absolute;
-    }
-  }
-  .public_fixedDataTable_header .fixedDataTableRowLayout_body{
-    height: 30px;
-  }
-  .fixedDataTableRowLayout_rowExpanded{
-    border-bottom: 1px solid #dbe0e5;
-  }
-  .fixedDataTableRowLayout_main,
-  .fixedDataTableCellGroupLayout_cellGroup,
-  .fixedDataTableCellLayout_main {
-    overflow: inherit !important;
-  }
-
-  .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
-
-    .table-list-btn {
-      min-width: 44px;
-      max-width: 150px; // 多语UI规范，勿删
-      white-space: nowrap;
-      word-break: break-word;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-  }
-
-  .yxy_cell_checkbox {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: '';
-      height: 1px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      background: #dbe0e5;
-    }
-
-    label {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      // fix: 采购库存，表格的checkbox 居中问题
-      width: 16px;
-      height: 16px;
-      padding-left: 0;
-    }
-  }
-
-}
-/*表格悬浮公用样式*/
-.readOnlyTable {
-
-  .fixedDataTableRowLayout_main,
-  .fixedDataTableCellGroupLayout_cellGroup,
-  .fixedDataTableCellLayout_main {
-    overflow: inherit !important;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
-    .headerName {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
-
-  .retail-table-cell {
-
-    .textCol,
-    .editCol {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
-
-  .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
-
-    .table-list-btn {
-      display: block;
-      min-width: 44px;
-      max-width: 150px; // 多语UI规范，勿删
-      white-space: nowrap;
-      word-break: break-word;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-  }
-
-  .fixedDataTableLayout_footer {
-    .fixedDataTableCellLayout_main {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
-
-  .yxy_cell_checkbox {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: '';
-      height: 1px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      background: #dbe0e5;
-    }
-
-    label {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      // fix: 采购库存，表格的checkbox 居中问题
-      width: 16px;
-      height: 16px;
-      padding-left: 0;
-    }
-  }
-
-}
-
-.basic-list-refer {
-  width: 100%;
-}
-
-.public_fixedDataTableRow_selected .public_fixedDataTableCell_main {
-  background-color: #edf1f7 !important;
-}
-
 /*金额手机号右对齐*/
 .yxy_table_head_align_right {
   width: calc(~'100% - 10px') !important;
@@ -3399,29 +2141,6 @@
 .URL {
   padding: 4px 10px;
   display: block;
-}
-
-/*合并类型的表格*/
-.mergeTable {
-
-  //默认白色
-  .public_fixedDataTableCell_wrap1.yxy_cell_checkbox {
-    .public_fixedDataTableCell_cellContent {
-      background: #fff;
-      width: calc(~'100% - 1px') !important;
-    }
-  }
-
-  //鼠标经过和选中
-  .public_fixedDataTableRow_selected,
-  .public_fixedDataTableRow_CheckedRow {
-    .yxy_cell_checkbox {
-      .public_fixedDataTableCell_cellContent {
-        background: #edf1f7;
-        width: calc(~'100% - 1px') !important;
-      }
-    }
-  }
 }
 
 // ====================start====================
@@ -3956,35 +2675,7 @@
 .rankTable_Panel .ant-table-small .ant-table-thead>tr>th{    padding: 2px 2px !important;}
 // ====== from panel.less end ========
 
-// 行内编辑表格 查询区样式错乱
-.container-edit-mode .listheadRow .filter-controls {
-  margin-right: 200px;
-  padding-bottom: 10px;
-  min-height: 57px;
-}
-//table编辑态时间的控件
-.public_fixedDataTableCell_cellContent{
-  .editCol{
-    .timepicker{
-      .ant-select-selection{
-        .ant-select-selection__clear{
-          background: transparent;
-          right: 36px!important; //编辑态距离右侧时钟按钮4px
-        }
-      }
-    }
-  }
-}
 
-// UI模板上，高度被其他的！important 样式影响了。我加了个作用域覆盖下
-.bill-design-modal .u-input-number.u-input-group.simple .u-form-control{
-  height: 26px !important
-}
-.bill-design-modal  .ant-select-selection:hover { // hover时时间框重复
-  .u-time-picker .u-time-picker-input{
-    border: 0px;
-  }
-}
 //订单列表
 .order-lists-wrapper{
   .order-lists-scroll{
@@ -4371,7 +3062,7 @@
 }
 //订单列表翻页
 .order-pagination{
-  padding: 10px 20px 8px 20px;
+  padding: 10px 20px 24px 20px;
   .u-pagination{
     display: flex;
     justify-content: flex-end;

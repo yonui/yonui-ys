@@ -1,0 +1,90 @@
+// ============================================
+// message 类控件的原子样式
+// ============================================
+
+
+/*浮窗结构*/
+
+.ant-notification-notice {
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  background: #fff;
+  line-height: 1.5;
+  position: relative;
+  right: 40px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 384px;
+  height: 110px;
+  box-sizing: border-box;
+}
+
+//异步导入
+.u-notification {
+  width: 384px;
+
+  &.u-notification-bottomRight {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.u-notification.u-notification-bottomRight .u-notification-notice {
+  box-shadow: 0px 2px 23px 0px rgba(0, 0, 0, 0.1)
+}
+
+.u-notification-notice {
+  padding: 12px 16px;
+  width: 384px;
+
+  .Toolbar_Notification_Desc2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 40px;
+  }
+
+  .u-notification-notice-close {
+    .uf-close:before {
+      color: #ccc;
+      font-weight: normal;
+    }
+
+    &:hover {
+      .uf-close:before {
+        color: #ee2233;
+      }
+    }
+  }
+}
+
+.ant-notification-notice-close-x:after {
+  font-size: 12px;
+  content: "\e636";
+  font-family: anticon;
+  cursor: pointer;
+}
+
+span.Toolbar_Notification_Count {
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+span.Toolbar_Notification_SucessCount {
+  color: #18B681;
+  margin: 0 4px;
+  font-weight: bold;
+}
+
+span.Toolbar_Notification_FailCount {
+  color: #EE2223;
+  margin: 0 4px;
+  font-weight: bold;
+}
+
+.ant-notification-notice-close:hover {
+  color: #EE2233;
+}

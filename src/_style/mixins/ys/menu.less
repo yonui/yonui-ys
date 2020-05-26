@@ -1,0 +1,41 @@
+// ============================================
+// menu 类控件的样式
+// ============================================
+
+// 左侧菜单
+
+.left-menu {
+  .iconfont {
+    margin-right: 7px;
+    float: left;
+    font-size: 20px;
+  }
+
+  .ant-layout-sider-children .u-menu-vertical {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  // 菜单右侧没有小箭头
+  .u-menu-submenu-vertical>.u-menu-submenu-title {
+    .u-menu-submenu-arrow:after,
+    .u-menu-submenu-arrow:before {
+      content: unset;
+    }
+  }
+
+  //左侧菜单浮层
+  .u-menu-item:hover{
+    background: #fff;
+  }
+
+  background: #fff;
+  position: relative;
+  flex: 0 0 144px !important;
+  width: 144px !important;
+}
+
+.defaut-list.listRefer-list.u-menu-vertical > .u-menu-item-active {
+  background-color: #EDF1F7;
+}

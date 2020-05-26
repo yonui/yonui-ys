@@ -1,0 +1,43 @@
+// ============================================
+// switch 类控件的原子样式
+// ============================================
+
+// TODO: 待检查 ant-switch 是否已无效
+
+.ant-switch {
+  height: 12px;
+  border-radius: 12px;
+  min-width: 18px;
+  background: #ADB4BC;
+  max-width: 32px;
+}
+
+.ant-switch:after {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 1px 2px 0 #B5B5B5;
+  top: -3.5px;
+  left: -1px;
+}
+
+.ant-switch-checked:after {
+  margin-left: -14px;
+  background: #588CE9;
+  left: 100%
+}
+
+.ant-switch-checked {
+  background: rgba(88, 140, 233, 0.30);
+}
+
+.ant-switch-inner {
+  line-height: 18px;
+}
+
+.ant-switch.longSwitch {
+  width: 60px;
+
+  &.ant-switch-checked:after {
+    left: 58px;
+  }
+}

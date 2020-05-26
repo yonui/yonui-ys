@@ -36,7 +36,6 @@ body {
 
 * {
   outline: none;
-
   &:focus {
     outline: none;
   }
@@ -47,20 +46,17 @@ svg.icon {
 }
 
 /* 修改placeholder样式 */
-input::-webkit-input-placeholder {
-  color: @base-input-placeholder-color;
+input::-webkit-input-placeholder{
+  color:@base-input-placeholder-color;
 }
-
-input::-moz-placeholder {
-  color: @base-input-placeholder-color;
+input::-moz-placeholder{
+  color:@base-input-placeholder-color;
 }
-
-input:-moz-placeholder {
-  color: @base-input-placeholder-color;
+input:-moz-placeholder{
+  color:@base-input-placeholder-color;
 }
-
-input:-ms-input-placeholder {
-  color: @base-input-placeholder-color;
+input:-ms-input-placeholder{
+  color:@base-input-placeholder-color;
 }
 
 .clearfix:after {
@@ -70,7 +66,7 @@ input:-ms-input-placeholder {
 }
 
 .padding-bottom-none {
-  padding-bottom: 0;
+padding-bottom: 0;
 }
 
 .uf-add-s-o:before {
@@ -79,7 +75,6 @@ input:-ms-input-placeholder {
 
 .meta-table .columnSetting .SettingBtn.u-button {
   text-align: left;
-
   &:hover {
     background-color: #f7f9fd;
   }
@@ -111,20 +106,19 @@ input:-ms-input-placeholder {
   }
 }
 
-.container-browse-mode {
+.container-browse-mode{
   height: 100%;
 }
 
 .viewSetting.viewCell {
-  .ant-row {
-    line-height: @base-input-height;
-    min-height: @base-input-height + 4; //兼容多语的title两行正常显示
-  }
+.ant-row{
+  line-height: @base-input-height;
+  min-height: @base-input-height + 4;//兼容多语的title两行正常显示
+}
 }
 
 .rc-calendar-time-picker-btn {
   color: #418FDE;
-
   &:hover {
     color: #0f70d2;
   }
@@ -136,7 +130,7 @@ input:-ms-input-placeholder {
 }
 
 .input-control .u-radio {
-  .u-radio-label {
+  .u-radio-label{
     display: block;
     white-space: nowrap;
     overflow: hidden;
