@@ -32,15 +32,15 @@ class TabsAdapter extends Component {
         tabBarStyle: tabBarStyleTypeMap[this.props.type],
         ...others
       }
-      if(tabBarStyle){
-        if(typeof tabBarStyle == 'string'){//tinper写法
+      if(this.props.tabBarStyle){
+        if(typeof this.props.tabBarStyle == 'string'){//tinper写法
           newProps.style = {
             ...style
           }
-        }else if(typeof tabBarStyle == 'object'){//antd写法
+        }else if(typeof this.props.tabBarStyle == 'object'){//antd写法
           newProps.style = {
             ...style,
-            ...tabBarStyle
+            ...this.props.tabBarStyle
           }
         }
       }
