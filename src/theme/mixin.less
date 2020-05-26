@@ -18,8 +18,9 @@
     width: 100%;
     display: block;
     & > .label-control {
+      .form-label-mixin();
       padding-top: 8px;
-      max-height: 38px; // form 表单中 textarea 的高度默认60+ ，label 区域会2 行多出省略；这里设置 38 仅为了避免2 行省略时第二行部分遮挡
+      // max-height: 38px; // form 表单中 textarea 的高度默认60+ ，label 区域会2 行多出省略；这里设置 38 仅为了避免2 行省略时第二行部分遮挡
       align-self: flex-start;
     }
   }
@@ -59,34 +60,6 @@
   }
 }
 
-// 保存草稿/模板/模板更名等单输入项弹框
-.single-item-modal-mixin() {
-  // 总高度180px
-  .u-modal-header {
-    border-bottom: transparent;
-  }
-  .u-modal-footer {
-    border-top: transparent;
-  }
-  .u-modal-body {
-    padding: 32px 0;
-    max-height: 92px;
-
-    &>.ant-row:first-child {
-      min-height: @base-input-height;
-      display: flex;
-      align-items: center;
-    }
-
-    .hasError {
-      border-color: #ee2233;
-      &:focus {
-        border-color: #ee2233;
-      }
-    }
-  }
-}
-
 // 输入类控件disabled 状态样式
 .form-control-disabled-mixin() {
   &:focus,
@@ -96,108 +69,6 @@
   }
 }
 
-// 放大、缩小等icon 的效果
-.top-right-toolbar-icon-mixin() {
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  justify-content: center;
-  &:hover {
-    color: #535a69;
-    background: #f1f1f1;
-    border-radius: 3px;
-  }
-}
-
-// tag-group
-.tag-group-mixin() {
-  & > .ant-row {
-    display: flex;
-    align-items: center;
-    min-height: 32px;
-  }
-
-  .label-control {
-    width: 100px!important;
-  }
-
-  .u-tag.u-tag-checkable {
-    margin-bottom: 0 !important;
-    padding: 0 6px;
-    display: block;
-    float: left;
-    height: 20px;
-    line-height: 18px;
-  }
-  // 单行
-  &.single-line {
-    .u-tag {
-      margin-top: 0px;
-      margin-right: 4px;
-    }
-  }
-  // 折行
-  &:not(.single-line) {
-    .form-lable-top-mixin();
-    .label-control {
-      padding-top: 8px !important;
-    }
-    .enum-control {
-      max-height: 42px;
-      padding-top: 2px;
-    }
-    .u-tag {
-      margin-top: 2px;
-      margin-right: 2px;
-    }
-  }
-}
-
-// 没有分割线的下拉按钮
-.no-split-drown-button-mixin() {
-  padding: 0 10px;
-  i.anticon {
-    margin-left: 4px;
-    margin-right: -2px;
-    &.anticon-up {
-      transform: translateY(-1px);
-    }
-  }
-}
-
-// 左树的搜索区域
-// search-tree-2
-.left-search-tree-input-control-mixin() {
-  padding: 10px 14px 0;
-  // 搜索图标
-  .u-button-icon {
-    right: 15px;
-    height: 28px;
-    width: 28px;
-    padding: 0;
-    position: absolute;
-    border: none;
-    z-index: 5;
-  }
-  // 清空图标
-  i.anticon.anticon-close-circle {
-    right: 42px;
-    height: 28px;
-    line-height: 28px;
-  }
-  .u-select {
-    .u-select-selection-rendered {
-      margin-left: 0;
-      margin-right: 0;
-      .u-select-selection-placeholder {
-        left: 8px;
-      }
-      input.u-select-search-field {
-        padding-left: 8px;
-      }
-    }
-  }
-}
 
 // 页面顶部16px
 .page-top-16-mixin() {

@@ -18,3 +18,71 @@
     box-shadow: none;
   }
 }
+
+.filter-search-mixin(@paddingLR: 10px) {
+  padding: 0 @paddingLR;
+  display: inline-block;
+  width: 100%;
+
+  input.u-form-control-search {
+    padding-right: 45px;
+    padding: 0 24px 0 10px;
+  }
+
+  .u-form-control-suffix {
+    color: #A7ABB2;
+    line-height: 28px;
+    cursor: pointer;
+
+    i.uf-search {
+      padding: 0;
+    }
+  }
+
+  & + .anticon-close-circle {
+    right: 38px;
+    top: 8px;
+    font-size: 12px;
+    position: absolute;
+
+    &:hover {
+      &::before {
+        color: rgba(0, 0, 0, 0.43);
+      }
+    }
+  }
+}
+
+.u-form-control {
+  line-height: 28px; // fix: 覆盖tinper 定制样式中的 1.5
+}
+
+.ac-input-locale {
+  height: @base-input-height;
+  line-height: @base-input-height;
+}
+
+// 全球化-输入框规范
+input:not(:focus){
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// [TINPER-2240] 禁用区域样式
+.ant-input-disabled,
+.ant-input-number-disabled {
+  color: #999 !important;
+
+  &:hover {
+    border-color: @input-border-color;
+  }
+
+  .u-form-control {
+    .form-control-disabled-mixin();
+  }
+}
+
+.input-control > div {
+  width: 100%;
+}

@@ -1,0 +1,176 @@
+// ============================================
+// tab 类控件的样式
+// ============================================
+
+@import './icon.less';
+
+.u-tabs {
+  max-width: none;
+
+  .u-tabs-bar {
+    margin-bottom: 2px;
+
+    .u-tabs-tab-prev,
+    .u-tabs-tab-next {
+      opacity: 0;
+    }
+
+    .u-tabs-nav-wrap {
+      .u-tabs-nav-scroll {
+        overflow: visible;
+        white-space: nowrap;
+        background: #f3f5f9;
+        height: 32px;
+        border: 1px solid #e9e9e9;
+        padding: 0px 0 2px 0;
+        margin-left: -1px;
+
+        .u-tabs-nav {
+          height: 28px;
+          line-height: 28px;
+
+          .u-tabs-tab {
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            margin-right: 0;
+            min-width: 50px;
+            color: #666;
+            display: inline-block;
+            padding: 0 16px;
+            font-size: 12px;
+            outline: none;
+            line-height: 30px;
+            font-weight: normal;
+            background: #f3f5f9;
+            border-bottom: 2px solid #e4e4e4;
+
+            &.u-tabs-tab-active {
+              color: #505766;
+              background: #fff;
+              transform: translateZ(0);
+              border-left: 1px solid #e4e4e4;
+              border-right: 1px solid #e4e4e4;
+              border-top: 2px solid #505766;
+              border-bottom: 1px solid #fff;
+              border-radius: 0;
+              margin-top: -1px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .u-tabs-content {
+    margin-top: -1px;
+    font-size: 12px;
+    height: 100%;
+
+    .group-container {
+      .group-title {
+        font-size: 14px;
+        font-weight: bolder;
+        color: #505766;
+        padding-left: 25px;
+        margin-top: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .u-tabs-tabpane {
+      height: 100%;
+    }
+
+    .u-tabs-tabpane .card-tabs {
+      margin-top: 0;
+    }
+  }
+}
+
+// 电商通 -物流配送区域 - 双树结构
+.u-tabs-tabpane .portal-container>.meta-default-container {
+  height: 100%;
+}
+
+// 电商通 -portal
+.rootTabs > .ant-tabs-bar {
+  display: none;
+}
+
+// line-tabs 内容区域的 tab-top-right 区域按钮
+.line-tabs-menu-container {
+  .tab-top-right .btn-toolbar-bottom {
+    padding: 0;
+  }
+}
+
+.line-tabs .u-tabs .u-tabs-content .u-tabs-tabpane {
+  // tabs 页签与下面的开单logo单独设置
+  .basic-avatar {
+    padding-top: 16px;
+    .basic-avatar-billing-logo{
+      .basic-avatar-right{
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+// 最大化
+.line-tabs-menu-container {
+  .tab-top-right .btn-toolbar-bottom {
+    padding: 0;
+    .btn-maximize {
+      padding: 0;
+      .top-right-toolbar-icon-mixin();
+      i {
+        margin-left: 0;
+        margin-top: 1px; // 图片自身偏上了一些
+      }
+    }
+  }
+}
+
+.line-tabs {
+  .line-tabs-menu-container + .u-tabs-top.card-container {
+    height: calc(~'100% - 47px');
+  }
+
+  .u-tabs-top.card-container {
+    margin: 0;
+    height: 100%;
+  }
+
+  .line-tabs-menu-container {
+    .tab-menu {
+      margin: 0;
+    }
+  }
+}
+
+.ant-tabs-nav .ant-tabs-tab:hover {
+  color: #ee2223;
+}
+
+.line-tabs .u-tabs-top.card-container {
+  // TODO：新增物料模板时，lineTabs 表单页的上边距问题。理想状态：由元数据添加style
+  div[id='pc_producttpl|pc_producttpl_page_unit_base'] {
+    margin-top: 10px;
+  }
+}
+// 全球化-多页签规范
+.line-tabs {
+  .line-tabs-menu-container .tab-menu .u-menu-item .linetabs-menuitem{
+    min-width: 28px;
+    max-width: 250px;
+    overflow:hidden;
+    word-break: break-word;
+    text-overflow:ellipsis;
+  }
+}
+
+.u-tabs .u-tabs-content .u-tabs-tabpane {
+  overflow-y: auto;//fix 全局详情页右侧数据少的情况滚动条的空白占位
+}

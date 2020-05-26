@@ -1,0 +1,123 @@
+// ============================================
+// popover 类控件的样式
+// ============================================
+
+@import './button.less';
+@import './input.less';
+
+.u-popover {
+  &.table-col-setting {
+    .filter-text {
+      .u-form-control-search-container {
+        .filter-search-mixin();
+        padding: 0 15px !important;
+      }
+    }
+
+    .filter-btn-1 {
+      .popover-columnsetting-bottom-mixin();
+    }
+  }
+
+  &.colFilter-pop {
+    .colFilter-container {
+      position: relative;
+
+      .u-form-control-search-container {
+        .filter-search-mixin();
+      }
+
+      .colFilter-scroll {
+        height: 224px;
+        margin: 6px 0;
+        overflow-x: hidden;
+        max-width: 520px;
+
+        .u-checkbox {
+          display: block;
+          height: 28px;
+          line-height: 28px;
+          position: relative;
+          padding: 0px 10px;
+          margin-right: 0px;
+
+          .u-checkbox-label {
+            line-height: 28px;
+            display: block;
+            white-space: nowrap;
+            height: 28px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .u-checkbox-label {
+            padding: 0px 0px 0px 22px;
+
+            &::before,
+            &:after {
+              top: 50%;
+              margin-top: -8px;
+              left: 10px;
+            }
+          }
+
+          &:hover {
+            background: #f3f5f9;
+          }
+        }
+
+        //暂无搜索结果
+        .no-data {
+          color: #999;
+          margin-top: 70px;
+          display: block;
+          height: 30px;
+        }
+      }
+
+      .colFilter-footer{
+        .popover-colFilter-bottom-mixin();
+      }
+    }
+  }
+}
+
+.u-popover.u-popover-tooltip.u-tooltip.inverse {
+  z-index: 1700;
+  transform: translateY(-4px);
+
+  &.inverse-arrow {
+    transform: translateY(8px);
+  }
+
+  &.temp-popover {
+    transform: none;
+  }
+
+  &.table-col-setting {
+    transform: translateX(-4px);
+  }
+}
+
+.u-popover.table-col-setting {
+  .u-form-control-search-container {
+    padding: 0 10px;
+  }
+}
+
+// fix: 采购结算余额表，查询条件展开，物料分类下拉搜索框边距
+.uretail-pop.u-popover {
+  .u-popover-content .u-form-control-search-container {
+    padding: 0 10px;
+  }
+}
+
+// fix: 到货单，查询区域设置按钮的popover 搜索框边距
+.u-popover-content .search_name.u-form-control-search-container {
+  padding: 0 10px;
+}
+
+// 客户档案，客户分类tree
+.u-popover-content .scroll_box .u-tree li span.u-tree-switcher {
+  margin-right: 0;
+}

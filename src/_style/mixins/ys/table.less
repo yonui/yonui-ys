@@ -1,0 +1,1029 @@
+// ============================================
+// table 样式
+// 【依赖】：fixed-data-table-2/dist/fixed-data-table.css
+// ============================================
+
+// TODO 提取mixin
+
+// 表格第一个title 的下边框
+.fixedDataTableLayout_rowsContainer>.fixedDataTableRowLayout_rowWrapper {
+  .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1:not(.headerName):not(.public_fixedDataTableCell_disabled):before {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #dbe0e5;
+  }
+}
+
+// 表格中的 Checkbox 居中问题
+.public_fixedDataTableCell_cellContent {
+  .u-checkbox {
+    margin-right: 15px;
+  }
+}
+
+// 产品入库，新增页面，编辑表格，参照居中
+.public_fixedDataTableCell_cellContent .editCol .ant-search-input-wrapper .u-input-group.simple {
+  .u-form-control {
+    height: 28px;
+  }
+
+  .u-input-group-btn {
+    line-height: 28px;
+
+    i.anticon {
+      line-height: 24px;
+      margin-top: 0px;
+      top: -2px;
+      vertical-align: middle;
+    }
+    .anticon-close-circle{
+      top: 0px!important;
+      margin-top: 0px!important;
+    }
+  }
+}
+
+// 采购调价单页面，复制，表格title 图标出现有轻微的浮动
+.fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+  .editCol .ant-select-selection__rendered span {
+    line-height: 26;
+  }
+}
+
+// 避免表格中展开/收缩的图标，右侧出现小黑点
+.public_fixedDataTableCell_wrap1.expand-cell {
+  .public_fixedDataTableCell_wrap2 {
+    .public_fixedDataTableCell_cellContent {
+      .cell-text {
+        text-overflow: clip;
+      }
+    }
+  }
+}
+
+.public_fixedDataTableRow_LookUpRow,
+.public_fixedDataTableRow_LookUpRow .public_fixedDataTableCell_main {
+  background: #fff7e7 !important
+}
+
+.public_fixedDataTableRow_LookUpRow_Focused {
+  position: relative;
+}
+
+.fixedDataTableCellGroupLayout_cellGroupWrapper {
+  .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main .headerName {
+    .public_fixedDataTableCell_cellContent > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.fixedDataTableLayout_horizontalScrollbar {
+  height: 8px !important;
+  bottom: 8px;
+}
+
+.fixedDataTableLayout_horizontalScrollbar div:first-child {
+  height: 8px !important;
+}
+
+.public_fixedDataTableRow_columnsShadow {
+  background: none;
+}
+
+// 票税匹配复选框右对齐
+.public_fixedDataTableCell_alignRight .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .scheckbox {
+  text-align: right !important;
+}
+
+// #start======================= 迁移 theme-default 中的 tree.less ==========================
+.table-nodata {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  line-height: 90px;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 60px;
+}
+
+.table-nodata i {
+  font-size: 85px;
+  color: #ccc;
+  margin-right: 20px;
+  vertical-align: middle;
+  margin-bottom: 12px;
+}
+
+// 小友表格暂无数据提示
+.table-nodata {
+  padding-left: 0 !important;
+  line-height: normal !important;
+
+  svg {
+    display: block !important;
+    margin: 8px auto !important;
+    position: static !important;
+    float: none !important;
+  }
+}
+
+.fixedDataTableCellLayout_wrap3 {
+  .public_fixedDataTableCell_cellContent {
+    .ant-checkbox-wrapper {
+      .ant-checkbox {
+        float: left;
+      }
+    }
+
+    .can-modify {
+      height: 14px;
+    }
+
+    .ant-select-selection--single {
+      height: 28px !important;
+    }
+
+    .ant-select-selection__rendered {
+      line-height: 26px;
+    }
+
+    .checkboxHD {
+      .ant-checkbox-wrapper {
+        .ant-checkbox {
+          float: left;
+          margin-top: 7px;
+        }
+      }
+    }
+
+    .textCol {
+      cursor: pointer;
+
+      &.labelswitch {
+        padding: 6px !important;
+        border-bottom: 1px solid #dbe0e5;
+      }
+
+      img {
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 60px;
+        margin-top: 3px;//TINPER-2676
+        // margin-left: 10px;
+
+        &.cell-avatar-logo {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .rowNo {
+      vertical-align: middle;
+      display: table-cell;
+      border-bottom: 1px solid #dbe0e5;
+    }
+
+    .ant-radio-wrapper {
+      margin-right: 0;
+    }
+  }
+}
+
+.public_fixedDataTable_header {
+  .fixedDataTableCellLayout_wrap3 {
+    .public_fixedDataTableCell_cellContent {
+      .textCol {
+        padding: 0;
+        padding-left: 10px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.public_fixedDataTableRow_expanded .fixedDataTableCellGroupLayout_cellGroupWrapper .public_fixedDataTableCell_main:first-child {
+  width: 100% !important;
+}
+
+.public_fixedDataTableRow_selected {
+  background-color: #edf1f7 !important;
+}
+
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background: #fff;
+}
+
+.public_fixedDataTableRow_disabled,
+.public_fixedDataTableRow_disabled .public_fixedDataTableCell_main {
+  color: #ccc;
+  border-color: #d9d9d9;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.public_fixedDataTableRow_delRow,
+.public_fixedDataTableRow_delRow .public_fixedDataTableCell_main {
+  color: #ccc;
+}
+
+.public_fixedDataTableCell_empty {
+  min-height: 44px;
+  padding: 4px 7px;
+
+  .ant-search-input-wrapper {
+    width: 100%;
+  }
+}
+
+// fix: 表格不可编辑的列，表格文字颜色应该为浅灰色
+.public_fixedDataTableCell_disabled .public_fixedDataTableCell_cellContent .table-header-name {
+  color: #999;
+}
+
+.public_fixedDataTableCell_disabled,
+.public_fixedDataTableCell_disabled .ant-tag,
+.public_fixedDataTableCell_disabled.textCol {
+  color: #999;
+  cursor: not-allowed !important;
+  min-height: 10px;
+  padding: 4px 10px;
+}
+
+// 解决新增界面内表格头部筛选鼠标经过后无法居中问题
+.public_fixedDataTableCell_disabled{
+  padding: 0;
+  .public_fixedDataTableCell_cellContent>div{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.public_fixedDataTableCell_disabled.textCol {
+  color: #333;
+}
+
+.public_fixedDataTableCell_disabled .ant-search-input-wrapper {
+  width: 100%;
+}
+
+.public_fixedDataTable_header,
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  background: @table-header-background-color;
+}
+
+.public_fixedDataTable_header .public_fixedDataTableCell_disabled {
+  pointer-events: initial;
+  cursor: initial !important;
+}
+
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  font-weight: normal;
+}
+
+.columnSetting {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  z-index: 999;
+  top: 1px;
+  background: @table-header-background-color;
+  border: 0;
+  width: 36px;
+}
+
+.SettingBtn {
+  height: 29px;
+  border: 0px;
+  width: 40px;
+  background: @table-header-background-color;
+  border-radius: 0px;
+}
+
+.headerName {
+  color: #333;
+}
+
+.checkboxHD {
+  height: @base-input-height + 2;
+  line-height: @base-input-height + 2;
+}
+
+.listTable .fixedDataTableCellLayout_main {
+  border-right: 0;
+}
+
+
+.fixedDataTableLayout_main {
+  border: none;
+  border-top: 1px solid #505766;
+
+  .has-error {
+    .ant-form-explain {
+      display: none;
+    }
+  }
+}
+
+.fixedDataTableRowLayout_fixedColumnsDivider {
+  border-left: none
+}
+
+.fixedDataTableRowLayout_main {
+  border-bottom: 1px solid #DBE0E5;
+}
+
+.public_fixedDataTable_footer {
+  background-color: #f7f9fd !important;
+
+  .public_fixedDataTableCell_main {
+    border: none;
+    line-height: 35px;
+    background-color: #f7f9fd;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
+    text-align: left;
+  }
+
+  .fixedDataTable-footer-title {
+    color: #666;
+  }
+
+  border-bottom: 1px solid #dbe0e5;
+  background-color: #fcf5e6;
+  color: #505766;
+
+  .textCol {
+    color: #505766;
+  }
+
+  font-weight: 700;
+
+  .subtotal,
+  .aggregates {
+    border-bottom: 1px solid #dbe0e5;
+  }
+
+  .fixedDataTableRowLayout_body .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellLayout_main:first-of-type {
+
+    .subtotal,
+    .aggregates {
+      padding-left: 10px;
+    }
+  }
+
+}
+
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background: #fff
+}
+
+.public_fixedDataTable_bodyRow:hover .public_fixedDataTableCell_main {
+  background: #edf1f7
+}
+
+.public_fixedDataTable_bodyRow:hover {
+  background-color: #edf1f7;
+}
+
+.public_fixedDataTableCell_main {
+  background: #fff;
+}
+
+.btn-caret {
+  width: 18px;
+  display: inline-block;
+  height: 16px;
+  vertical-align: top;
+  padding-top: 4px;
+  flex-shrink: 0;
+  padding-left: 2px;
+}
+
+
+// 放出表格滚动条纵向
+.ScrollbarLayout_mainVertical {
+  width: 16px;
+
+  .ScrollbarLayout_faceVertical:after {
+    left: auto !important;
+    right: 8px !important;
+  }
+}
+
+// 竖向滚动条设置
+.public_Scrollbar_main,
+.public_Scrollbar_main.public_Scrollbar_mainActive {
+  border-left: none;
+}
+
+.public_fixedDataTable_scrollbarSpacer {
+  display: none;
+}
+
+/*表格里的滚动条背景透明*/
+.meta-table .public_Scrollbar_main {
+  background-color: transparent;
+  z-index: 998 !important;
+}
+
+/*表格部分按钮*/
+.acticonCell {
+  position: absolute;
+  right: 15px;
+  overflow: hidden;
+  z-index: 999;
+  border: 0;
+  background: #edf1f7;
+
+  .anticon {
+    font-size: 17px;
+    margin-right: 20px;
+  }
+
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.25em;
+    margin-right: 5px;
+  }
+
+  span {
+    margin-left: 8px;
+
+    &:only-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .level-2+.level-3.expand-row-end {
+      border-top-color: #dbe0e5;
+    }
+
+    .expand-row:hover {
+      background-color: #edf1f7;
+    }
+  }
+
+  .ant-row {
+    display: flex;
+  }
+
+  .table-list-btn {
+    padding: 0 10px;
+    background: #505766;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 22px;
+    display: block;
+    min-width: 44px;
+    max-width: 150px;
+    white-space: nowrap;
+    word-break: break-word;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .table-list-btn:hover {
+    background: #616875;
+    color: #fff;
+  }
+}
+
+.action-col {
+  background: #fff;
+}
+
+// 表格部分按钮-选中由黄色变为浅蓝色
+.actionCellSelect {
+  background: #edf1f7;
+}
+
+.public_fixedDataTableCell_columnResizerKnob {
+  background-color: #505766
+}
+
+.public_fixedDataTableColumnResizerLine_main {
+  border-color: #505766
+}
+
+.public_fixedDataTableCell_cellContent a {
+  color: #588CE9;
+  cursor: pointer;
+  cursor: hand;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.public_fixedDataTableCell_cellContent a.table-list-btn {
+  svg {
+    margin-top: 6px;
+    display: inline-block;
+  }
+}
+
+.public_fixedDataTableCell_cellContent a:hover {
+  color: @table-a-color;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.editCol {
+  .edit-input-number {
+    .ant-select-selection {
+      margin-top: 0px;
+    }
+  }
+
+  .ant-input-number,
+  .ant-input,
+  .ant-search-input,
+  .ant-select-selection {
+    height: 28px;
+  }
+
+  .ant-search-input .ant-search-btn {
+    padding: 0;
+    top: -1px;
+  }
+
+  .ant-select-selection__rendered {
+    line-height: 26px;
+  }
+
+}
+
+.public_fixedDataTable_main,
+.fixedDataTableLayout_rowsContainer,
+.fixedDataTableRowLayout_rowWrapper,
+.public_fixedDataTable_header,
+.fixedDataTableRowLayout_main {
+  outline: none;
+
+  .u-checkbox .u-checkbox-label {
+    position: absolute;
+  }
+}
+
+.fixedDataTableCellGroupLayout_cellGroupWrapper {
+  .acticonCell {
+    padding-top: 7px;
+    background: none;
+    right: 10px;
+    padding-left: 0px;
+  }
+}
+
+.fixedDataTableRowLayout_rowWrapper {
+  .textCol .edit-input-number {
+    margin-top: 0px;
+  }
+}
+
+.public_fixedDataTableRow_highlight-red {
+  background-color: #fff3f3;
+}
+
+/*add by jinzh1 树表样式*/
+.tree-table {
+  .public_fixedDataTableCell_cellContent a {
+    display: inline-block;
+  }
+
+  .public_fixedDataTableCell_cellContent>.cell-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: 15px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #dbe0e5;
+    height: 35px;
+  }
+
+  .public_fixedDataTableCell_cellContent .ant-search-input-wrapper {
+    margin-top: 0px;
+  }
+
+  .expand-rows {
+    height: 100%;
+    overflow: hidden;
+
+    .expand-row {
+      height: 30px;
+      background: #fff;
+      border-bottom: 1px solid #dbe0e5;
+      .cell-text {
+        padding: 10px 12px;
+        overflow: inherit;
+        text-overflow: ellipsis;
+        .joinQueryCell {
+          color: #588ce9;
+        }
+      }
+    }
+
+    .expand-row-selected {
+      background-color: #edf1f7;
+
+      .action-col {
+        background-color: #edf1f7;
+      }
+    }
+
+    .level-2+.level-3.expand-row-end {
+      border-top-color: #dbe0e5;
+    }
+
+    .expand-row:hover {
+      background-color: #edf1f7;
+    }
+  }
+
+  .acticonCell {
+    padding-left: 0px;
+    margin-top: -4px; // 客户分类表格，操作按钮垂直居中
+    text-align: right;
+    right: 40px;
+    height: 22px;
+    span {
+      height: 22px;
+      display: inline-block;
+    }
+  }
+
+  .public_fixedDataTable_bodyRow:hover {
+    background-color: #fff;
+
+    .public_fixedDataTableCell_main {
+      background-color: #fff;
+    }
+  }
+
+  .fixedDataTableRowLayout_body {
+    width: 100%
+  }
+
+  .public_fixedDataTable_bodyRow {
+    .fixedDataTableRowLayout_body:hover {
+      background-color: #edf1f7;
+
+      .public_fixedDataTableCell_main {
+        background-color: #edf1f7 !important;
+      }
+    }
+  }
+
+  .fixedDataTableCellLayout_main {
+    border-right: none;
+  }
+
+  .public_fixedDataTable_header {
+    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+      padding: 0;
+      line-height: 29px;
+      border-bottom: 1px solid #dbe0e5;
+      height: 30px;
+      .table-header-name {
+        line-height: 29px;
+        height: 29px;
+        & + .table-form-screen {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
+    width: 100%;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+  }
+
+  .expand-icon {
+    width: 14px;
+    height: 14px;
+    line-height: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+
+    i {
+      margin: -2px;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s;
+
+      &.anticon-plus-square-o {
+        transform: rotate(90deg) scale(.59);
+      }
+
+      &.anticon-minus-square-o {
+        transform: rotate(180deg) scale(.59);
+      }
+    }
+
+  }
+
+  .ant-input-affix-wrapper {
+    width: 100% !important;
+  }
+}
+
+.public_fixedDataTableRow_selected .public_fixedDataTableCell_main {
+  background-color: #edf1f7 !important;
+}
+
+/*合并类型的表格*/
+.mergeTable {
+
+  //默认白色
+  .public_fixedDataTableCell_wrap1.yxy_cell_checkbox {
+    .public_fixedDataTableCell_cellContent {
+      background: #fff;
+      width: calc(~'100% - 1px') !important;
+    }
+  }
+
+  //鼠标经过和选中
+  .public_fixedDataTableRow_selected,
+  .public_fixedDataTableRow_CheckedRow {
+    .yxy_cell_checkbox {
+      .public_fixedDataTableCell_cellContent {
+        background: #edf1f7;
+        width: calc(~'100% - 1px') !important;
+      }
+    }
+  }
+}
+
+// 行内编辑表格 查询区样式错乱
+.container-edit-mode .listheadRow .filter-controls {
+  margin-right: 200px;
+  padding-bottom: 10px;
+  min-height: 57px;
+}
+
+//table编辑态时间的控件
+.public_fixedDataTableCell_cellContent{
+  .editCol{
+    .timepicker{
+      .ant-select-selection{
+        .ant-select-selection__clear{
+          background: transparent;
+          right: 36px!important; //编辑态距离右侧时钟按钮4px
+        }
+      }
+    }
+  }
+}
+
+.fixedDataTableCellGroupLayout_cellGroup {
+  .table-header-name {
+    span.headerNameTips {
+      color: #f00;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+/*add by jinzh1 合并单元格 表格样式*/
+.mergeTable {
+
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .headerName {
+      border-bottom: 1px solid #dbe0e5;
+    }
+
+    .line-number {
+      line-height: 29px;
+    }
+  }
+
+  .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    .public_fixedDataTableCell_disabled {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .retail-table-cell {
+
+    .textCol,
+    .editCol {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .textCol {
+    .edit-input-number {
+      margin-top: -8px !important;
+    }
+  }
+
+  .editCol {
+    .edit-input-number {
+      margin-top: -7px;
+      .u-select {
+        top: 6px;
+      }
+    }
+  }
+
+  &.readOnlyTable {
+    .textCol {
+      .edit-input-number {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  .acticonCell .ant-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+/*添加投影*/
+.fixedDataTableRowLayout_body {
+  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
+    position: relative;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1)::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    z-index: 99;
+    top: -2px;
+    right: 0;
+    height: 104%;
+    box-shadow: 3px 0 3px 0px rgba(0, 0, 0, .024);
+  }
+}
+.readOnlyTreeTable {
+  .fixedDataTableRowLayout_body {
+    border-bottom: 1px solid #dbe0e5;
+    height: 35px;
+    .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-of-type(1) {
+      position: absolute;
+    }
+  }
+  .public_fixedDataTable_header .fixedDataTableRowLayout_body{
+    height: 30px;
+  }
+  .fixedDataTableRowLayout_rowExpanded{
+    border-bottom: 1px solid #dbe0e5;
+  }
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+
+    .table-list-btn {
+      min-width: 44px;
+      max-width: 150px; // 多语UI规范，勿删
+      white-space: nowrap;
+      word-break: break-word;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+
+  .yxy_cell_checkbox {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: #dbe0e5;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // fix: 采购库存，表格的checkbox 居中问题
+      width: 16px;
+      height: 16px;
+      padding-left: 0;
+    }
+  }
+
+}
+/*表格悬浮公用样式*/
+.readOnlyTable {
+
+  .fixedDataTableRowLayout_main,
+  .fixedDataTableCellGroupLayout_cellGroup,
+  .fixedDataTableCellLayout_main {
+    overflow: inherit !important;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .headerName {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .retail-table-cell {
+
+    .textCol,
+    .editCol {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .acticonCell {
+    padding-top: 0px;
+    background: #edf1f7;
+
+    .table-list-btn {
+      display: block;
+      min-width: 44px;
+      max-width: 150px; // 多语UI规范，勿删
+      white-space: nowrap;
+      word-break: break-word;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+
+  .fixedDataTableLayout_footer {
+    .fixedDataTableCellLayout_main {
+      border-bottom: 1px solid #dbe0e5;
+    }
+  }
+
+  .yxy_cell_checkbox {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: #dbe0e5;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // fix: 采购库存，表格的checkbox 居中问题
+      width: 16px;
+      height: 16px;
+      padding-left: 0;
+    }
+  }
+
+}
+
+// #end======================= 迁移 theme-default 中的 tree.less ==========================
+
+// fix: 物料计划，预测单，点击预测编号，进入页面，表格的“序号”标题
+.readOnlyTable .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main .headerName {
+  line-height: 28px;
+}
+
+// fix: 组织中心，表格表头checkbox 位置偏差
+.meta-table .checkboxHD {
+  padding: 4px 10px;
+}

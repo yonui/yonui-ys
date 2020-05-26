@@ -1,0 +1,144 @@
+// ============================================
+// tree 类控件的样式
+// ============================================
+
+// treerefer 单选
+.treeRefer-toolbar-wrapper{
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 34px !important;
+  padding: 0px 10px;
+  overflow: hidden;
+  line-height: 32px;
+  margin-bottom: -8px;
+  .table-list-toolbar{
+    float: left;
+    svg{
+      width: 16px;
+      height: 16px;
+      vertical-align: sub;
+      margin-right: 4px;
+    }
+    .table-list-btn{
+      color: #588ce9;
+    }
+    &:hover{
+      .table-list-btn{
+        color: #ee2223;
+      }
+    }
+  }
+}
+
+.tree-refer-checked-toolbar{
+  padding: 8px 15px;
+  padding-top: 12px;
+  padding-bottom: 3px;
+  border-top: 1px solid #E4E4E4;
+  padding-left: 10px;
+  .sign{
+    width:8px;
+    height:8px;
+    margin-right: 5px;
+    margin-left: -3px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .blue{
+    background: #588CE9;
+  }
+  .warning{
+    background: #FFA600;
+  }
+}
+
+.u-tree li {
+  a.u-tree-node-content-wrapper {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      background: #ffffff;
+    }
+
+    &.u-tree-node-selected {
+      background: #ffffff;
+    }
+  }
+}
+
+.tree-list .height-100>.ant-row.meta-default-container {
+  overflow: auto;
+  height: 100%;
+}
+
+.tree-list .height-100 .form-left {
+  .bg-white.border-r {
+
+    .move_button_left,
+    .move_button_rigth {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .move_button_left .anticon-yemianfenlan-zhedie {
+      position: relative;
+
+      &:hover::before {
+        color: #b0c0d0;
+      }
+
+      &::before {
+        color: #ddd;
+        font-size: 26px;
+        content: "\e81f";
+        font-family: 'anticon';
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 3px solid transparent;
+        border-right: 5px solid #fff;
+        border-bottom: 3px solid transparent;
+        top: 10px;
+        left: 10.2px;
+      }
+    }
+
+    .move_button_rigth {
+      left: -8px !important;
+      top: 39px;
+
+      .anticon-yemianfenlan-zhankai {
+        &::before {
+          color: #ddd;
+          font-size: 26px;
+          content: "\e820";
+          font-family: 'anticon';
+        }
+
+        &::after {
+          content: " ";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 3px solid transparent;
+          border-left: 5px solid #fff;
+          border-bottom: 3px solid transparent;
+          top: 10px;
+          left: 11.2px;
+        }
+      }
+    }
+  }
+}
+
+.u-tree li span.u-tree-checkbox {
+  margin: 2px 0 0 6px;
+}

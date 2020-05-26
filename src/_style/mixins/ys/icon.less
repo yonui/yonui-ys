@@ -1,0 +1,34 @@
+// ============================================
+// icon 规范
+// ============================================
+
+// 放大、缩小等icon 的效果
+.top-right-toolbar-icon-mixin() {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  justify-content: center;
+  &:hover {
+    color: #535a69;
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+}
+
+.uf-close-c {
+  color: rgba(0,0,0,.25);
+  line-height: 12px;
+  font-size: 12px;
+  &:hover {
+    color: rgba(0,0,0,.43);
+  }
+}
+
+// 日期
+.anticon.anticon-star-o {
+  &:before {
+    content: "\e661";
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+  }
+}

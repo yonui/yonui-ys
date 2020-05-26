@@ -1,0 +1,217 @@
+// ============================================
+// select 类控件的原子样式
+// ============================================
+
+.u-select {
+  vertical-align: initial;
+}
+
+.u-select-selection:hover {
+  border: 1px solid #505766;
+  box-shadow: none;
+}
+
+.u-select-focused .u-select-selection,
+.u-select-selection:active,
+.u-select-selection:focus {
+  border: 1px solid #505766 !important;
+}
+
+.u-select-disabled {
+  .u-select-selection {
+    border: 1px solid #d9d9d9 !important;
+  }
+}
+
+.u-select-open .u-select-selection {
+  border: 1px solid #505766;
+  box-shadow: none;
+}
+
+// select输入光标距离左侧的距离
+.u-select-selection-rendered {
+  margin-left: 8px;
+
+  .u-select-selection-selected-value {
+    padding-left: 0px;
+  }
+}
+
+//select 多选
+.u-select-selection--multiple {
+  .u-select-selection-rendered>ul>li {
+    padding: 0 20px 0 8px;
+  }
+
+  .u-select-selection-rendered {
+    margin-left: 8px;
+  }
+
+  .u-select-selection-choice-remove {
+    top: -3px;
+
+    &::before {
+      color: #adb4bc;
+      font-weight: normal;
+    }
+
+    &:hover {
+      &::before {
+        color: #ee2233;
+      }
+    }
+  }
+}
+
+.uf-arrow-up:before {
+  transform: scale(.8);
+  display: inline-block;
+}
+
+.u-select .u-select-selection :hover {
+  border-color:@custom-color;
+}
+
+.u-select-show-search {
+  .u-select-selection--multiple {
+    .u-select-selection-rendered {
+      display: flex;
+      ul {
+        overflow: hidden;
+      }
+    }
+    .u-select-arrow,
+    .u-select-selection-clear {
+      top:0;
+      margin-top: 8px;
+    }
+  }
+}
+
+.u-select-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 #E4E4E4;
+  min-width: 100px !important;
+}
+
+// 全球化-下拉框规范
+.u-select-dropdown .u-select-dropdown-menu-item {
+  white-space: normal;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient:vertical;
+  padding-left: 8px;
+  -webkit-line-clamp:2; //超出两行显示省略号
+  padding: 6px 16px 6px 6px;
+  line-height: initial;
+  max-height: 36px;
+}
+
+// TODO：将metaui-web 中的对应样式调整为 u
+.ant-select-selection {
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid #505766;
+    box-shadow: none;
+  }
+}
+
+.ant-select-open .ant-select-selection {
+  border: 1px solid #505766;
+  box-shadow: none;
+}
+
+.ant-select-focused .ant-select-selection {
+  box-shadow: none;
+}
+
+// 下拉
+.ant-select-dropdown.ant-select-dropdown--multiple {
+  .ant-select-dropdown-menu-item-selected:hover:after {
+    &:after,
+    &:hover:after {
+      color: #ee2223;
+      display: inline-block;
+    }
+  }
+}
+
+.ant-select-dropdown-menu-item-selected,
+.ant-select-dropdown-menu-item-selected:hover {
+  font-weight: normal;
+}
+
+.ant-select-selection--multiple>ul>li,
+.ant-select-selection--multiple .ant-select-selection__rendered>ul>li {
+  margin-top: 4px;
+  height: 22px;
+  padding: 0 16px 0 6px;
+
+  .ant-select-selection__choice__remove {
+    right: 0;
+  }
+}
+
+.ant-select-selection--multiple .ant-select-selection__rendered {
+  margin-left: 0 !important;
+
+  ul {
+    padding: 0 5px;
+  }
+
+  .ant-select-selection__clear {
+    top: 17px;
+  }
+
+  .ant-select-selection__choice {
+    background-color: #f7f9fd;
+    border: 1px solid #dbe0e5;
+  }
+}
+
+.ant-select-dropdown-menu-item {
+  color: #666;
+  text-overflow: ellipsis;
+}
+
+.ant-select-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 #E4E4E4;
+  min-width: 100px !important;
+}
+
+.ant-select-dropdown--single.ant-select-dropdown-placement-bottomLeft.ant-select-dropdown {
+  min-width: 120px !important;
+
+  .ant-select-dropdown-menu {
+    li {
+      width: 100% !important;
+    }
+  }
+}
+
+.ant-select-dropdown-menu {
+  max-height: 192px;
+}
+
+.ant-select-dropdown-menu-item-selected {
+  background-color: #FFF7E7;
+  color: #757576;
+  font-weight: normal;
+}
+
+.ant-select-dropdown-menu-item:hover {
+  background-color: #F7F9FD !important;
+}
+
+.ant-select-dropdown-menu-item-active {
+  background-color: #fff7e7;
+}
+
+.ant-select-selection__clear {
+  right: 26px !important;
+}

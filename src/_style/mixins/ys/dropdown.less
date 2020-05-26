@@ -1,0 +1,57 @@
+// ============================================
+// dropdown 类控件的原子样式
+// ============================================
+
+// 新增采购入库-草稿列表的两行省略显示
+.u-dropdown {
+  .u-dropdown-menu .draft_menuItem {
+    white-space: unset;
+    height: 50px;
+    line-height: 16px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    &.single-line {
+      height: 32px;
+      line-height: 32px;
+      .draft_itemName {
+        margin-top: 0;
+      }
+      &:hover {
+        .draft_font {
+          top: 0;
+          .anticon-shanchu1 {
+            line-height: 32px;
+          }
+        }
+      }
+    }
+
+    /*! autoprefixer: on */
+    .draft_itemName {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      /*! autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /*! autoprefixer: on */
+      margin-top: 9px;
+    }
+    .draft_font {
+      display: none;
+    }
+    &:hover {
+      .draft_font {
+        display: block;
+        top: 12px;
+      }
+    }
+  }
+  .u-dropdown-menu-item.draft_haveNodata {
+    line-height: 12px;
+    height: 12px;
+    color: #999;
+  }
+}

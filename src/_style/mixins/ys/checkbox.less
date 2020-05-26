@@ -1,0 +1,48 @@
+// ============================================
+// checkbox 类控件的原子样式
+// ============================================
+
+// checkbox改成14
+.u-checkbox .u-checkbox-label:after,
+.u-checkbox .u-checkbox-label:before {
+  content: "";
+  font-family: uf;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.u-checkbox input[type=checkbox]:hover+.u-checkbox-label:before {
+  border-color: #505766;
+}
+
+.u-checkbox.disabled input[type=checkbox]+.u-checkbox-label:before {
+  border-color: #e4e4e4;
+  background: #f7f7f7;
+}
+
+.u-checkbox.disabled input[type=checkbox]:hover+.u-checkbox-label:before {
+  border-color: #e4e4e4;
+  background: #f7f7f7;
+}
+
+.s-checkgroup-wrapper {
+  input[type='checkbox']:focus + .u-checkbox-label:before, input[type='checkbox']:hover + .u-checkbox-label:before{
+    border-color: #505766;
+  }
+}
+
+.u-checkbox .u-checkbox-label {
+  padding-left: 22px;
+  line-height: 14px;
+  color: #666;
+}
+
+.u-checkbox:not(:last-child) {
+  margin-right: 20px;
+}
