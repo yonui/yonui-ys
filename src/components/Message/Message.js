@@ -28,7 +28,6 @@ function notice (args) {
 }
 
 const api = {
-  create:Message.create,
   config (options) {
 
   },
@@ -47,5 +46,7 @@ const api = {
     return api.open({ content, duration, type, onClose, icon, color, style });
   };
 });
+
+api.create = api.open;
 
 export default api;

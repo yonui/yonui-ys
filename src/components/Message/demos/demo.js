@@ -20,7 +20,7 @@ export default class Demo extends Component {
                 top: 200,
                 duration: 3,
             });
-            Message.create({content: '新单据状态更新，请在审批中心查看最新状态。', color: "dark"});
+            Message.create({content: '单据状态异常，请重新提交。', color: 'warning',duration:null});
         };
         const dark2 = function () {
             Message.destroy();
