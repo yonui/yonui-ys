@@ -45,6 +45,7 @@ import ProgressBar from 'bee-progress-bar';
 import Timeline from 'bee-timeline';
 import Panel from 'bee-panel';
 import ButtonGroup from 'bee-button-group';
+import Label from 'bee-label';
 
 export {
   Affix,
@@ -93,4 +94,5 @@ export {
   Timeline,
   Panel,
   ButtonGroup,
+  Label
 };
