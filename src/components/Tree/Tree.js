@@ -8,10 +8,10 @@ class TreeAdapter extends Component {
     return (
       <Tree
         mustExpandable={true}
-        {...other}
         // showIcon={true}
         openIcon={<i className='uf uf-reduce-s-o' />}
         closeIcon={<i className='uf uf-add-s-o' />}
+        {...other}
       >
         {children}
       </Tree>
