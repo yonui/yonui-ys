@@ -46,6 +46,7 @@ import ProgressBar from './ProgressBar';
 import ButtonGroup from './ButtonGroup';
 import Label from './Label';
 import SearchPanel from './SearchPanel';
+import Tile from './Tile';
 
 export {
   Affix,

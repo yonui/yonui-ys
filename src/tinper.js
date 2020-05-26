@@ -49,5 +49,6 @@ export {
   Message,
   ButtonGroup,
   Label,
-  SearchPanel
+  SearchPanel,
+  Tile
 } from './components/index';
