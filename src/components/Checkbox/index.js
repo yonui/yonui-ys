@@ -1,6 +1,6 @@
 import Checkbox from './Checkbox';
-import FeCheckbox from './FeCheckbox';
+import Checkbox2 from './FeCheckbox';
 
-export const FeCheckbox = FeCheckbox;
+export const FeCheckbox = Checkbox2;
 
 export default Checkbox

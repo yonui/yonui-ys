@@ -1,6 +1,6 @@
 import Input from './Input'
-import FeInput from './FeInput'
+import Input2 from './FeInput'
 
-export const FeInput = FeInput;
+export const FeInput = Input2;
 
 export default Input
