@@ -8,6 +8,10 @@ const tabBarStyleTypeMap = {
   'editable-card': 'editable-card'
 };
 
+const defaultProps = {
+  tabBarStyle:'upborder'
+}
+
 class TabsAdapter extends Component {
     handleChange = (key) => {
       // 疑点：这里的change 事件参数key 有时会是 Proxy 对象，导致页面出错，暂未找到原因，通过下面判断条件临时解决
@@ -47,7 +51,7 @@ class TabsAdapter extends Component {
       return <Tabs {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>;
     }
 }
-
+TabsAdapter.defaultProps = defaultProps;
 TabsAdapter.TabPane = Tabs.TabPane;
 TabsAdapter.SearchTabs = Tabs.SearchTabs;
 export default TabsAdapter;
