@@ -3,7 +3,7 @@ import Anchor from './Anchor';
 import AutoComplete from './AutoComplete';
 import Badge from './Badge';
 import Button from './Button';
-import Checkbox from './Checkbox';
+import Checkbox,{ FeCheckbox } from './Checkbox';
 import Cascader from './Cascader';
 import Collapse from './Collapse';
 import CarouselFigure from './Carousel';
@@ -13,7 +13,7 @@ import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
 import Form from './Form';
 import Icon from './Icon';
-import Input from './Input';
+import Input,{ FeInput } from './Input';
 import InputNumber from './InputNumber';
 import Loading from './Loading/simple';
 import Menu from './Menu';
@@ -25,7 +25,7 @@ import Popover from './Popover';
 import Progress from './Progress';
 import Popconfirm from './Popconfirm';
 import Pagination from './Pagination';
-import Radio from './Radio';
+import Radio,{ FeRadio } from './Radio';
 import Switch from './Switch';
 import Select from './Select';
 import Slider from './Slider';
@@ -55,6 +55,7 @@ export {
   Button,
   Badge,
   Checkbox,
+  FeCheckbox,
   Card,
   Col,
   Collapse,
@@ -64,6 +65,7 @@ export {
   DatePicker,
   Form,
   Input,
+  FeInput,
   InputNumber,
   Icon,
   Loading,
@@ -77,6 +79,7 @@ export {
   Progress,
   Row,
   Radio,
+  FeRadio,
   Select,
   Slider,
   Switch,

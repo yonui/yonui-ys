@@ -54,7 +54,7 @@ class RadioGroup extends Component {
           value: value
         }
       };
-      this.props.onChange(res,value);
+      this.props.onChange(value,res);
     }
 
     render () {

@@ -50,5 +50,8 @@ export {
   ButtonGroup,
   Label,
   SearchPanel,
-  Tile
+  Tile,
+  FeCheckbox,
+  FeInput,
+  FeRadio
 } from './components/index';
