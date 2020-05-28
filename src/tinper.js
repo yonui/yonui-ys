@@ -41,7 +41,7 @@ export {
   Transfer,
   Upload,
   Tooltip,
-  Input as FormControl,
+  FeInput as FormControl,
   ProgressBar,
   Timeline,
   Panel,
@@ -52,6 +52,5 @@ export {
   SearchPanel,
   Tile,
   FeCheckbox,
-  FeInput,
   FeRadio
 } from './components/index';
