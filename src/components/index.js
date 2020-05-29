@@ -8,6 +8,9 @@ import Cascader from './Cascader';
 import Collapse,{ FeCollapse } from './Collapse';
 import CarouselFigure from './Carousel';
 import Layout from './Layout';
+import Row from './Row';
+import Col from './Col';
+import Con from './Con';
 import Card from './Card';
 import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
@@ -49,7 +52,6 @@ import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
 
-const { Row,Col,Con } = Layout;
 
 export {
   Affix,
@@ -60,6 +62,7 @@ export {
   Checkbox,
   FeCheckbox,
   Card,
+  Layout,
   Col,
   Con,
   Collapse,
