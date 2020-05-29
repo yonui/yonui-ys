@@ -7,7 +7,7 @@ import Checkbox,{ FeCheckbox } from './Checkbox';
 import Cascader from './Cascader';
 import Collapse,{ FeCollapse } from './Collapse';
 import CarouselFigure from './Carousel';
-import { Col, Row } from './Layout';
+import Layout from './Layout';
 import Card from './Card';
 import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
@@ -49,6 +49,8 @@ import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
 
+const { Row,Col,Con } = Layout;
+
 export {
   Affix,
   Anchor,
@@ -59,6 +61,7 @@ export {
   FeCheckbox,
   Card,
   Col,
+  Con,
   Collapse,
   FeCollapse,
   Cascader,
