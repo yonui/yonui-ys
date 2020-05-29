@@ -52,5 +52,6 @@ export {
   SearchPanel,
   Tile,
   FeCheckbox,
-  FeRadio
+  FeRadio,
+  Drawer
 } from './components/index';

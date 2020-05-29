@@ -47,6 +47,8 @@ import ButtonGroup from './ButtonGroup';
 import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
+import Drawer from 'bee-drawer';
+
 
 export {
   Affix,
@@ -100,5 +102,6 @@ export {
   ButtonGroup,
   Label,
   SearchPanel,
-  Tile
+  Tile,
+  Drawer
 };
