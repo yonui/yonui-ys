@@ -1,5 +1,6 @@
 import Collapse from './Collapse';
-import Collapse2 from 'bee-collapse';
+import FeCollapse from 'bee-collapse';
 
-export const FeCollapse = Collapse2;
+Collapse.FeCollapse = FeCollapse;
+
 export default Collapse

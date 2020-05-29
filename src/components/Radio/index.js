@@ -1,6 +1,6 @@
 import Radio from './Radio'
-import Radio2 from './FeRadio'
+import FeRadio from './FeRadio'
 
-export const FeRadio = Radio2;
+Radio.FeRadio = FeRadio;
 
 export default Radio

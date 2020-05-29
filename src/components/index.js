@@ -3,9 +3,9 @@ import Anchor from './Anchor';
 import AutoComplete from './AutoComplete';
 import Badge from './Badge';
 import Button from './Button';
-import Checkbox,{ FeCheckbox } from './Checkbox';
+import Checkbox from './Checkbox';
 import Cascader from './Cascader';
-import Collapse,{ FeCollapse } from './Collapse';
+import Collapse from './Collapse';
 import CarouselFigure from './Carousel';
 import Layout from './Layout';
 import Row from './Row';
@@ -16,7 +16,7 @@ import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
 import Form from './Form';
 import Icon from './Icon';
-import Input,{ FeInput } from './Input';
+import Input from './Input';
 import InputNumber from './InputNumber';
 import Loading from './Loading/simple';
 import Menu from './Menu';
@@ -28,7 +28,7 @@ import Popover from './Popover';
 import Progress from './Progress';
 import Popconfirm from './Popconfirm';
 import Pagination from './Pagination';
-import Radio,{ FeRadio } from './Radio';
+import Radio from './Radio';
 import Switch from './Switch';
 import Select from './Select';
 import Slider from './Slider';
@@ -52,6 +52,9 @@ import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
 
+const FeRadio = Radio.FeRadio; 
+const FeInput = Input.FeInput; 
+const FeCheckbox = Checkbox.FeCheckbox; 
 
 export {
   Affix,
