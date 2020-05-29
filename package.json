@@ -2,7 +2,7 @@
   "name": "yonui-ys",
   "version": "0.0.54",
   "description": "yonui ys",
-  "main": "/lib",
+  "main": "./dist/index",
   "scripts": {
     "start": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
     "dev": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
