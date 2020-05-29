@@ -48,7 +48,7 @@ import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from 'bee-drawer';
-
+import FeCollapse from 'bee-collapse'
 
 export {
   Affix,
@@ -61,6 +61,7 @@ export {
   Card,
   Col,
   Collapse,
+  FeCollapse,
   Cascader,
   CarouselFigure,
   Dropdown,

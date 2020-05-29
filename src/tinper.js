@@ -9,6 +9,7 @@ export {
   Checkbox,
   Card,
   Collapse,
+  FeCollapse,
   Cascader,
   Calendar,
   Dropdown,

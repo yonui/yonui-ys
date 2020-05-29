@@ -4,7 +4,7 @@ import Collapse from 'bee-collapse';
 class CollapseAdapter extends Component {
   render () {
     const { className, children, ...other } = this.props;
-    const cls = `${className} u-collapse`;
+    const cls = `${className} collapse`;
     return (
       <div className={cls} {...other}>
         {children}
@@ -32,14 +32,14 @@ class PanelAdapter extends Component {
       const { header } = this.props;
       const icon = this.state.open ? 'uf-arrow-down' : 'uf-arrow-right';
       return (
-        <div className='u-collapse-item'>
-          <div className='u-collapse-item-header' onClick={this.openCollapse}>
-            <i className={`uf ${icon} u-collapse-item-header-icon`} />
+        <div className='collapse-item'>
+          <div className='collapse-item-header' onClick={this.openCollapse}>
+            <i className={`uf ${icon} collapse-item-header-icon`} />
             {header}
           </div>
-          <Collapse className='u-collapse-item-content' in={this.state.open}>
+          <Collapse className='collapse-item-content' in={this.state.open}>
             <div>
-              <div className='u-collapse-item-content-text'>
+              <div className='collapse-item-content-text'>
                 {this.props.children}
               </div>
             </div>
