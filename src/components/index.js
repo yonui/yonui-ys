@@ -55,6 +55,7 @@ import Drawer from './Drawer';
 const FeRadio = Radio.FeRadio; 
 const FeInput = Input.FeInput; 
 const FeCheckbox = Checkbox.FeCheckbox; 
+const FeCollapse = Collapse.FeCollapse; 
 
 export {
   Affix,
