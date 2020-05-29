@@ -6,6 +6,7 @@ export {
   Badge,
   CarouselFigure as Carousel,
   Col,
+  Con,
   Checkbox,
   Card,
   Collapse,
