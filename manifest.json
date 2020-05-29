@@ -50,6 +50,7 @@
     "Grid": "./src/components/Grid",
     "Tile": "./src/components/Tile",
     "SearchPanel": "./src/components/SearchPanel",
-    "Label": "./src/components/Label"
+    "Label": "./src/components/Label",
+    "Drawer": "./src/components/Drawer"
   }
 }

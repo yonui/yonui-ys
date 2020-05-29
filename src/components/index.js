@@ -5,7 +5,7 @@ import Badge from './Badge';
 import Button from './Button';
 import Checkbox,{ FeCheckbox } from './Checkbox';
 import Cascader from './Cascader';
-import Collapse from './Collapse';
+import Collapse,{ FeCollapse } from './Collapse';
 import CarouselFigure from './Carousel';
 import { Col, Row } from './Layout';
 import Card from './Card';
@@ -47,8 +47,7 @@ import ButtonGroup from './ButtonGroup';
 import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
-import Drawer from 'bee-drawer';
-import FeCollapse from 'bee-collapse'
+import Drawer from './Drawer';
 
 export {
   Affix,
