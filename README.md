@@ -42,6 +42,7 @@ ReactDOM.render(
 
 ### tinper项目升级指南
 
+- `SvgIcon` 目前需要单独引入，参考[这里](http://bee.tinper.org/tinper-bee/bee-svgicon)
 - 新增以下配置文件，即可兼容
 
 ```js
@@ -51,7 +52,7 @@ export {
   AutoComplete,
   Button,
   Badge,
-  Carousel as CarouselFigure,
+  CarouselFigure,
   Col,
   Con,
   Checkbox,
@@ -66,7 +67,7 @@ export {
   Input,
   InputNumber,
   Menu,
-  notification as Notification,
+  Notification,
   Popconfirm,
   Popover,
   Pagination,
