@@ -57,6 +57,20 @@ import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
+import SvgIcon from './SvgIcon';
+import PageLayout from './PageLayout';
+import Clipboard from './Clipboard';
+import ColorPicker from './ColorPicker';
+import LoadingState from './LoadingState';
+import Viewer from './Viewer';
+import Breadcrumb from './Breadcrumb';
+import Navbar from './Navbar';
+import Backtop from './Backtop';
+import Alert from './Alert';
+import InputGroup from './InputGroup';
+import FormGroup from './FormGroup';
+import Rate from './Rate';
+import Table from './Table';
 
 
 export {
@@ -111,10 +125,24 @@ export {
   Label,
   SearchPanel,
   Tile,
-  Drawer,
   FormControl,
   FeCheckbox,
   FeRadio,
   FeCollapse,
-  FeLoading
+  FeLoading,
+  SvgIcon,
+  PageLayout,
+  Clipboard,
+  ColorPicker,
+  LoadingState,
+  Viewer,
+  Breadcrumb,
+  Navbar,
+  Backtop,
+  Alert,
+  Drawer,
+  InputGroup,
+  FormGroup,
+  Rate,
+  Table,
 };

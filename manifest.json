@@ -60,6 +60,19 @@
     "Tile": "./src/components/Tile",
     "SearchPanel": "./src/components/SearchPanel",
     "Label": "./src/components/Label",
+    "Navbar": "./src/components/Navbar",
+    "Backtop": "./src/components/Backtop",
+    "Alert": "./src/components/Alert",
+    "InputGroup": "./src/components/InputGroup",
+    "FormGroup": "./src/components/FormGroup",
+    "Table": "./src/components/Table",
+    "Rate": "./src/components/Rate",
+    "ColorPicker": "./src/components/ColorPicker",
+    "LoadingState": "./src/components/LoadingState",
+    "Viewer": "./src/components/Viewer",
+    "Breadcrumb": "./src/components/Breadcrumb",
+    "PageLayout": "./src/components/PageLayout",
+    "Clipboard": "./src/components/Clipboard",
     "Drawer": "./src/components/Drawer"
   }
 }
