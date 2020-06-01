@@ -23,7 +23,7 @@ import Menu from './Menu';
 import Modal from './Modal';
 import MobileLocale from './MobileLocale';
 import Message from './Message';
-import notification from './notification';
+import Notification from './Notification';
 import Popover from './Popover';
 import Progress from './Progress';
 import Popconfirm from './Popconfirm';
@@ -99,7 +99,7 @@ export {
   Message,
   Modal,
   Menu,
-  notification,
+  Notification,
   Pagination,
   Popconfirm,
   Popover,

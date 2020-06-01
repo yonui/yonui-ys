@@ -1,18 +1,16 @@
 // ModalAdapter
-import React, { Component,Fragment } from 'react';
+import React, { Component } from 'react';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';
 
-const { Header, Body, Footer, Title, Dialog } = Modal;
+const { Header, Body, Footer, Title } = Modal;
 
 const defaultProps = {
   closable: true,
   mask: true,
   maskClosable: true,
-  _innerType: '',
-  onHide:()=>{},
-  onCancel:()=>{},
+  _innerType: ''
 };
 
 class ModalAdapter extends Component {
@@ -27,8 +25,8 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    let { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType,onHide, ...other } = this.props;
-    if(visible==undefined)visible=show;
+    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props;
+
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
@@ -38,7 +36,7 @@ class ModalAdapter extends Component {
       </Footer>
     );
 
-    if (footer === null || footer === undefined) {
+    if (footer === null) {
       defaultFooter = null;
     }
 
@@ -89,11 +87,6 @@ ModalAdapter.success = modalMethod('success');
 ModalAdapter.error = modalMethod('error');
 ModalAdapter.warning = modalMethod('warning');
 ModalAdapter.info = modalMethod('info');
-ModalAdapter.Header = Header;
-ModalAdapter.Body = Body;
-ModalAdapter.Footer = Footer; 
-ModalAdapter.Title = Title;
-ModalAdapter.Dialog = Dialog;
 
 ModalAdapter.defaultProps = defaultProps;
 export default ModalAdapter;
