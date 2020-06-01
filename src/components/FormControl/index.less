@@ -1,0 +1,227 @@
+.u-input-group {
+    width: 100%;
+  
+    &[disabled] {
+      .u-input-group-btn {
+        cursor: no-drop;
+      }
+    }
+  
+    &.simple .u-input-group-btn {
+      width: auto;
+      height: 28px;
+    }
+  }
+  
+  .u-form-control {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .u-form-control-close .u-form-control {
+    padding: 4px 23px 4px 8px;
+  }
+  .anticon.anticon-canzhao {
+    margin-left: 3px;
+    cursor: pointer;
+  }
+  
+  .anticon.anticon-close-circle {
+    cursor: pointer;
+  }
+  
+  // textarea默认高度
+  .u-modal {
+    .viewCell {
+      textarea {
+        height: 52px;
+      }
+    }
+  }
+  
+  .u-modal {
+    .viewCell.width-percent-100 .input-control {
+      min-width: 320px;
+    }
+  }
+  
+  // 非表格内：input-number样式问题
+  .u-input-number.u-input-group.simple {
+    &.disabled-con {
+      .u-input-group-btn {
+        display: none;
+      }
+    }
+  
+    .u-input-group-btn {
+      opacity: 0;
+      // transition: opacity .24s linear .1s;
+      color: #f9f9f9;
+  
+      .icon-group {
+        height: @base-input-height - 2;
+      }
+    }
+  
+    &:hover {
+      .u-input-group-btn {
+        opacity: 1;
+      }
+    }
+  
+    .u-form-control {
+      height: @base-input-height - 2;
+      line-height: @base-input-height - 2;
+      text-align: left!important;
+    }
+  }
+  
+  //表格内：通过public_fixedDataTableCell_cellContent 来限定是表格内样式
+  //liushld  表格内的inputNumber改为26px
+  .public_fixedDataTableCell_cellContent {
+  
+    .u-input-number.u-input-group.simple {
+      .u-form-control {
+        height: @base-input-height - 6;
+      }
+  
+      .u-input-group-btn {
+        .icon-group {
+          height: @base-input-height - 6;
+        }
+      }
+    }
+  
+    .u-form-control,
+    .u-input-number,
+    .u-time-picker-input{
+      height: 28px!important;
+    }
+  }
+  
+  .public_fixedDataTableCell_cellContent .u-input-group.simple .u-form-control.sm + .u-input-group-btn{
+    top: 0;
+  }
+  
+  // 采购参数 /meta/option/pu_business_option
+  .viewCell.width-percent-100 .input-control {
+    width: 400px;
+  
+    .ant-row {
+      width: 100%;
+    }
+  }
+  
+  // 输入框错误时边框为红
+  .u-form-control.input_schemename {
+    border: #ee2222 solid 1px;
+  }
+  
+  .u-modal.scheme-content .u-modal-body .Scheme-Content-body .add-scheme {
+    position: relative;
+  
+    .scheme-name-mention {
+      position: absolute;
+      font-size: 12px;
+      color: #ee2222;
+      left: 98px;
+    }
+  }
+  
+  .u-form-control {
+    border-color: #d9d9d9;
+  }
+  
+  // 采购管理-> 采购参数
+  .meta-option .viewCell.width-percent-100 .ant-row {
+  
+    .u-form-control,
+    .u-select {
+      width: 400px;
+    }
+  }
+  
+  // fix: 采购管理->供应目录，查询区域参照按钮不居中；modal弹框中参照图标
+  // .listheadRow,
+  .Scheme-Content-body {
+    .ant-row .ant-search-input-wrapper .u-input-group-btn {
+      line-height: @base-input-height; // fix: 采购管理->参照按钮不居中
+      top: 0;
+    }
+  }
+  
+  // fix: 采购管理->供应目录，采购调价单，默认方案新增查询条件日期控件图标
+  .u-input-group.simple .u-input-group-btn {
+    top: 0px;
+    line-height: @base-input-height;
+    min-width: auto;
+  }
+  
+  //输入框
+  .u-input-group.simple {
+    &.u-input-number {
+      .u-form-control:not(:last-child) {
+        padding-right: 0;
+      }
+    }
+  
+    .u-form-control:not(:last-child) {
+      padding-right: 38px;
+    }
+  
+    .u-form-control{
+      border-radius: 4px;
+      padding-right: 38px;
+  
+      & + .u-form-control-suffix {
+        right: 18px;
+      }
+    }
+  
+    .u-form-control-close {
+      .u-form-control {
+        padding-right: 24px;
+      }
+      .u-form-control-suffix {
+        right: 0;
+      }
+    }
+  }
+  
+  // fix: 采购管理->供应目录，编辑
+  .u-form-control[disabled] {
+    background-color: #f7f7f7;
+    color: #999!important;
+    &:hover {
+      border-color: #dfe1e6; // hover 覆盖可编辑的border 颜色
+    }
+  }
+  
+  // fix: 期初采购发票，表格头部过滤条件icon
+  .lookup-pop .grid-header- .icon {
+    margin-top: 0;
+  
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+  
+  .u-form-control-search-container {
+    display: inline-block;
+    width: 100%; // fix: 采购参数，物料参照columnSetting 中的搜索框
+  }
+  
+  // 零售管理 - 管理端 - 店存入库，参照输入框
+  .listheadRow .filter-hide .refer-div .anticon-close-circle{
+    position: absolute;
+    top: 9px;
+    right: 22px;
+    &::before{
+      color: rgba(0,0,0,.25);
+    }
+    &:hover{
+      &::before{
+        color: rgba(0,0,0,.43);
+      }
+    }
+  }
+  

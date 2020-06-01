@@ -41,6 +41,12 @@ import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
+//无法兼容组件导出两个
+import FormControl from './FormControl';
+import FeCheckbox from './FeCheckbox';
+import FeRadio from './FeRadio';
+import FeCollapse from './FeCollapse';
+import FeLoading from './FeLoading';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -52,10 +58,6 @@ import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
 
-const FeRadio = Radio.FeRadio; 
-const FeInput = Input.FeInput; 
-const FeCheckbox = Checkbox.FeCheckbox; 
-const FeCollapse = Collapse.FeCollapse; 
 
 export {
   Affix,
@@ -64,20 +66,17 @@ export {
   Button,
   Badge,
   Checkbox,
-  FeCheckbox,
   Card,
   Layout,
   Col,
   Con,
   Collapse,
-  FeCollapse,
   Cascader,
   CarouselFigure,
   Dropdown,
   DatePicker,
   Form,
   Input,
-  FeInput,
   InputNumber,
   Icon,
   Loading,
@@ -91,7 +90,6 @@ export {
   Progress,
   Row,
   Radio,
-  FeRadio,
   Select,
   Slider,
   Switch,
@@ -113,5 +111,10 @@ export {
   Label,
   SearchPanel,
   Tile,
-  Drawer
+  Drawer,
+  FormControl,
+  FeCheckbox,
+  FeRadio,
+  FeCollapse,
+  FeLoading
 };

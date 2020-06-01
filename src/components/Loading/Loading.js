@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 import React, { Component } from 'react';
-import Loading from 'bee-loading';
+import Loading from './simple';
 
 // 值映射
 const sizeMap = {

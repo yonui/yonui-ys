@@ -5,8 +5,8 @@ import FormControl from 'bee-form-control';
 import InputGroup from 'bee-input-group';
 import omit from 'omit.js';
 
-import TextArea from './TextArea';
-import Search from './Search';
+import TextArea from '../Input/TextArea';
+import Search from '../Input/Search';
 
 const sizeMap = {
   small: 'sm',

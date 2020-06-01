@@ -10,7 +10,6 @@ export {
   Checkbox,
   Card,
   Collapse,
-  FeCollapse,
   Cascader,
   Calendar,
   Dropdown,
@@ -43,7 +42,6 @@ export {
   Transfer,
   Upload,
   Tooltip,
-  FeInput as FormControl,
   ProgressBar,
   Timeline,
   Panel,
@@ -53,7 +51,10 @@ export {
   Label,
   SearchPanel,
   Tile,
+  Drawer,
+  FormControl,
   FeCheckbox,
   FeRadio,
-  Drawer
+  FeCollapse,
+  FeLoading
 } from './components/index';
