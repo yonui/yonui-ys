@@ -33,22 +33,19 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 // ModalAdapter
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';
 var Header = Modal.Header,
     Body = Modal.Body,
     Footer = Modal.Footer,
-    Title = Modal.Title,
-    Dialog = Modal.Dialog;
+    Title = Modal.Title;
 var defaultProps = {
   closable: true,
   mask: true,
   maskClosable: true,
-  _innerType: '',
-  onHide: function onHide() {},
-  onCancel: function onCancel() {}
+  _innerType: ''
 };
 
 var ModalAdapter = /*#__PURE__*/function (_Component) {
@@ -78,7 +75,6 @@ var ModalAdapter = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           children = _this$props.children,
           visible = _this$props.visible,
-          show = _this$props.show,
           title = _this$props.title,
           closable = _this$props.closable,
           onCancel = _this$props.onCancel,
@@ -90,12 +86,11 @@ var ModalAdapter = /*#__PURE__*/function (_Component) {
           mask = _this$props.mask,
           maskClosable = _this$props.maskClosable,
           className = _this$props.className,
+          enforceFocus = _this$props.enforceFocus,
           wrapClassName = _this$props.wrapClassName,
           _innerType = _this$props._innerType,
-          onHide = _this$props.onHide,
-          other = _objectWithoutProperties(_this$props, ["children", "visible", "show", "title", "closable", "onCancel", "onOk", "footer", "afterClose", "cancelText", "okText", "mask", "maskClosable", "className", "wrapClassName", "_innerType", "onHide"]);
+          other = _objectWithoutProperties(_this$props, ["children", "visible", "title", "closable", "onCancel", "onOk", "footer", "afterClose", "cancelText", "okText", "mask", "maskClosable", "className", "enforceFocus", "wrapClassName", "_innerType"]);
 
-      if (visible == undefined) visible = show;
       var defaultFooter = /*#__PURE__*/React.createElement(Footer, {
         className: "modal-footer"
       }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Button, {
@@ -108,7 +103,7 @@ var ModalAdapter = /*#__PURE__*/function (_Component) {
         className: "s-ok-button"
       }, okText || '确认')));
 
-      if (footer === null || footer === undefined) {
+      if (footer === null) {
         defaultFooter = null;
       } // const backdropClassName = this.props.backdropClassName || `${className}-backdrop`;
 
@@ -169,11 +164,6 @@ ModalAdapter.success = modalMethod('success');
 ModalAdapter.error = modalMethod('error');
 ModalAdapter.warning = modalMethod('warning');
 ModalAdapter.info = modalMethod('info');
-ModalAdapter.Header = Header;
-ModalAdapter.Body = Body;
-ModalAdapter.Footer = Footer;
-ModalAdapter.Title = Title;
-ModalAdapter.Dialog = Dialog;
 ModalAdapter.defaultProps = defaultProps;
 export default ModalAdapter;
 //# sourceMappingURL=Modal.js.map

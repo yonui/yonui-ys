@@ -18,7 +18,7 @@ import Form from './Form';
 import Icon from './Icon';
 import Input from './Input';
 import InputNumber from './InputNumber';
-import Loading from './Loading/simple';
+import Loading from './Loading';
 import Menu from './Menu';
 import Modal from './Modal';
 import MobileLocale from './MobileLocale';
