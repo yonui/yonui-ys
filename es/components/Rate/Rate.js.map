@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Rate/Rate.js"],"names":["Rate"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,UAAjB;AAEA,eAAeA,IAAf","sourcesContent":["import Rate from 'bee-rate';\n\nexport default Rate;\n"],"file":"Rate.js"}

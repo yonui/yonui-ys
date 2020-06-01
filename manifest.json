@@ -73,6 +73,8 @@
     "Breadcrumb": "./src/components/Breadcrumb",
     "PageLayout": "./src/components/PageLayout",
     "Clipboard": "./src/components/Clipboard",
-    "Drawer": "./src/components/Drawer"
+    "Drawer": "./src/components/Drawer",
+    "FeModal": "./src/components/FeModal",
+    "FeIcon": "./src/components/FeIcon"
   }
 }

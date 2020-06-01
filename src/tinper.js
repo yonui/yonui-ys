@@ -71,4 +71,6 @@ export {
   FormGroup,
   Rate,
   Table,
+  FeModal,
+  FeIcon
 } from './components/index';

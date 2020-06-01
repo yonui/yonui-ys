@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Anchor/index.js"],"names":["Anchor"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AACA,eAAeA,MAAf","sourcesContent":["import Anchor from './Anchor'\nexport default Anchor;\n"],"file":"index.js"}

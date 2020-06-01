@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/PageLayout/PageLayout.js"],"names":["PageLayout"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,iBAAvB;AAEA,eAAeA,UAAf","sourcesContent":["import PageLayout from 'bee-page-layout';\n\nexport default PageLayout;\n"],"file":"PageLayout.js"}

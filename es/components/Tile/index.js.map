@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Tile/index.js"],"names":["Tile"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,QAAjB;AACA,eAAeA,IAAf","sourcesContent":["import Tile from './Tile'\nexport default Tile\n"],"file":"index.js"}

@@ -47,6 +47,8 @@ import FeCheckbox from './FeCheckbox';
 import FeRadio from './FeRadio';
 import FeCollapse from './FeCollapse';
 import FeLoading from './FeLoading';
+import FeIcon from './FeIcon';
+import FeModal from './FeModal';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -145,4 +147,6 @@ export {
   FormGroup,
   Rate,
   Table,
+  FeModal,
+  FeIcon
 };

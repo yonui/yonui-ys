@@ -49,28 +49,21 @@ class ModalAdapter extends Component {
         className={wrapClassName}
         dialogClassName={className}
         show={visible}
-        onHide={onHide}
-        onCancel={onCancel}
+        onHide={onCancel}
         onExited={afterClose}
         container={this.target}
         backdrop={mask}
-        enforceFocus={false}
+        enforceFocus={enforceFocus}
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
-        {...other}
       >
-        {
-          //通过title判断是否antd的用法
-          title?<Fragment>
-              <Header closeButton={closable} className='u-modal-header'>
-                <Title>{title}</Title>
-              </Header>
-              <Body className='u-modal-body'>
-                {children}
-              </Body>
-              {footer ? <Footer className='u-modal-footer'>{footer}</Footer> : defaultFooter}
-          </Fragment>:<Fragment>{children}</Fragment>
-        }
+        <Header closeButton={closable} className='modal-header'>
+          <Title>{title}</Title>
+        </Header>
+        <Body className='modal-body'>
+          {children}
+        </Body>
+        {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
       </Modal>
     );
   }

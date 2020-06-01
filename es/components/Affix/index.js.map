@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Affix/index.js"],"names":["Affix"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;AACA,eAAeA,KAAf","sourcesContent":["import Affix from './Affix'\nexport default Affix;\n"],"file":"index.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Rate/index.js"],"names":["Rate"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,QAAjB;AAEA,eAAeA,IAAf","sourcesContent":["import Rate from './Rate'\n\nexport default Rate\n"],"file":"index.js"}
