@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Breadcrumb/Breadcrumb.js"],"names":["Breadcrumb"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,gBAAvB;AAEA,eAAeA,UAAf","sourcesContent":["import Breadcrumb from 'bee-breadcrumb';\n\nexport default Breadcrumb;\n"],"file":"Breadcrumb.js"}

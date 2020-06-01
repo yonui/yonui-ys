@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Layout/index.js"],"names":["Layout"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AAEA,eAAeA,MAAf","sourcesContent":["import Layout from './Layout';\n\nexport default Layout;"],"file":"index.js"}

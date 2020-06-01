@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Tabs/index.js"],"names":["Tabs"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,QAAjB;AACA,eAAeA,IAAf","sourcesContent":["import Tabs from './Tabs'\nexport default Tabs\n"],"file":"index.js"}

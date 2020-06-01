@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Navbar/Navbar.js"],"names":["Navbar"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,YAAnB;AAEA,eAAeA,MAAf","sourcesContent":["import Navbar from 'bee-navbar';\n\nexport default Navbar;\n"],"file":"Navbar.js"}

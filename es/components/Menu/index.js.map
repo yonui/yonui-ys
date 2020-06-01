@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Menu/index.js"],"names":["Menu"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,QAAjB;AACA,eAAeA,IAAf","sourcesContent":["import Menu from './Menu'\nexport default Menu\n"],"file":"index.js"}

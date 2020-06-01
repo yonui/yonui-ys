@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Con/Con.js"],"names":["Col"],"mappings":"AAAA,SAASA,GAAT,QAAoB,YAApB;AAEA,eAAeA,GAAf","sourcesContent":["import { Col } from 'bee-layout';\n\nexport default Col;\n"],"file":"Con.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/SearchPanel/SearchPanel.js"],"names":["SearchPanel"],"mappings":"AAAA,OAAOA,WAAP,MAAwB,kBAAxB;AAEA,eAAeA,WAAf","sourcesContent":["import SearchPanel from 'bee-search-panel';\n\nexport default SearchPanel;\n"],"file":"SearchPanel.js"}

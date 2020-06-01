@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Icon/index.js"],"names":["Icon"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,QAAjB;AACA,eAAeA,IAAf","sourcesContent":["import Icon from './Icon'\nexport default Icon\n"],"file":"index.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/InputGroup/index.js"],"names":["InputGroup"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,cAAvB;AAEA,eAAeA,UAAf","sourcesContent":["import InputGroup from './InputGroup'\n\nexport default InputGroup\n"],"file":"index.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Col/index.js"],"names":["Col"],"mappings":"AAAA,OAAOA,GAAP,MAAgB,OAAhB;AACA,eAAeA,GAAf","sourcesContent":["import Col from './Col'\nexport default Col\n"],"file":"index.js"}

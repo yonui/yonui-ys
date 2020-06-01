@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Tag/index.js"],"names":["Tag"],"mappings":"AAAA,OAAOA,GAAP,MAAgB,OAAhB;AACA,eAAeA,GAAf","sourcesContent":["import Tag from './Tag'\nexport default Tag\n"],"file":"index.js"}

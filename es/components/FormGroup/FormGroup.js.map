@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/FormGroup/FormGroup.js"],"names":["FormGroup"],"mappings":"AAAA,OAAOA,SAAP,MAAsB,gBAAtB;AAEA,eAAeA,SAAf","sourcesContent":["import FormGroup from 'bee-form-group';\n\nexport default FormGroup;\n"],"file":"FormGroup.js"}

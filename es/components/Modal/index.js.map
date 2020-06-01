@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Modal/index.js"],"names":["Modal"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;AACA,eAAeA,KAAf","sourcesContent":["import Modal from './Modal'\nexport default Modal\n"],"file":"index.js"}

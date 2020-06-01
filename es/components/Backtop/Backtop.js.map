@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Backtop/Backtop.js"],"names":["Backtop"],"mappings":"AAAA,OAAOA,OAAP,MAAoB,aAApB;AAEA,eAAeA,OAAf","sourcesContent":["import Backtop from 'bee-backtop';\n\nexport default Backtop;\n"],"file":"Backtop.js"}

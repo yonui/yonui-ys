@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Carousel/index.js"],"names":["Carousel"],"mappings":"AAAA,OAAOA,QAAP,MAAqB,YAArB;AACA,eAAeA,QAAf","sourcesContent":["import Carousel from './Carousel'\nexport default Carousel\n"],"file":"index.js"}

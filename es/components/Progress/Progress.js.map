@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Progress/Progress.js"],"names":["Progress"],"mappings":"AACA,OAAOA,QAAP,MAAqB,cAArB;AACA,eAAeA,QAAf","sourcesContent":["\nimport Progress from 'bee-progress';\nexport default Progress;\n"],"file":"Progress.js"}

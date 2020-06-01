@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Grid/Grid.js"],"names":["Grid"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,kBAAjB;AAEA,eAAeA,IAAf","sourcesContent":["import Grid from 'bee-complex-grid';\n\nexport default Grid;\n"],"file":"Grid.js"}

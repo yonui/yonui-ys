@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Alert/index.js"],"names":["Alert"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;AACA,eAAeA,KAAf","sourcesContent":["import Alert from './Alert'\nexport default Alert\n"],"file":"index.js"}
