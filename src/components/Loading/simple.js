@@ -19,11 +19,13 @@ class LoadingSimple extends Component {
   }
 
   render () {
-    const { size, tip, wrapperClassName } = this.props;
+    let { size, tip, wrapperClassName } = this.props;
 
     const sizeArr = ['small', 'large'];
     if (!sizeArr.includes(size)) {
-      console.error(`${size} is not allowed in component simple-loading`);
+      console.warn(`${size} is not allowed in component simple-loading`);
+      // 兼容
+      size = size === 'lg' ? 'large' : size;
     }
 
     const _class = {
