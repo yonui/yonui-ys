@@ -7,7 +7,10 @@ import Checkbox from './Checkbox';
 import Cascader from './Cascader';
 import Collapse from './Collapse';
 import CarouselFigure from './Carousel';
-import { Col, Row } from './Layout';
+import Layout from './Layout';
+import Row from './Row';
+import Col from './Col';
+import Con from './Con';
 import Card from './Card';
 import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';
@@ -38,6 +41,12 @@ import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
 import Transfer from 'bee-transfer';
+//无法兼容组件导出两个
+import FormControl from './FormControl';
+import FeCheckbox from './FeCheckbox';
+import FeRadio from './FeRadio';
+import FeCollapse from './FeCollapse';
+import FeLoading from './FeLoading';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -47,6 +56,22 @@ import ButtonGroup from './ButtonGroup';
 import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
+import Drawer from './Drawer';
+import SvgIcon from './SvgIcon';
+import PageLayout from './PageLayout';
+import Clipboard from './Clipboard';
+import ColorPicker from './ColorPicker';
+import LoadingState from './LoadingState';
+import Viewer from './Viewer';
+import Breadcrumb from './Breadcrumb';
+import Navbar from './Navbar';
+import Backtop from './Backtop';
+import Alert from './Alert';
+import InputGroup from './InputGroup';
+import FormGroup from './FormGroup';
+import Rate from './Rate';
+import Table from './Table';
+
 
 export {
   Affix,
@@ -56,7 +81,9 @@ export {
   Badge,
   Checkbox,
   Card,
+  Layout,
   Col,
+  Con,
   Collapse,
   Cascader,
   CarouselFigure,
@@ -97,5 +124,25 @@ export {
   ButtonGroup,
   Label,
   SearchPanel,
-  Tile
+  Tile,
+  FormControl,
+  FeCheckbox,
+  FeRadio,
+  FeCollapse,
+  FeLoading,
+  SvgIcon,
+  PageLayout,
+  Clipboard,
+  ColorPicker,
+  LoadingState,
+  Viewer,
+  Breadcrumb,
+  Navbar,
+  Backtop,
+  Alert,
+  Drawer,
+  InputGroup,
+  FormGroup,
+  Rate,
+  Table,
 };

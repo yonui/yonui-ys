@@ -1,1 +1,3 @@
-export { Col, Row } from 'bee-layout';
+import Layout from './Layout';
+
+export default Layout;

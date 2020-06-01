@@ -18,9 +18,9 @@ export default class Demo extends Component {
             Message.destroy();
             Message.config({
                 top: 200,
-                duration: 3,
+                duration: 300,
             });
-            Message.create({content: '单据状态异常，请重新提交。', color: 'warning',duration:null});
+            Message.create({content: '单据状态异常，请重新提交。', color: 'warning',duration:30});
         };
         const dark2 = function () {
             Message.destroy();

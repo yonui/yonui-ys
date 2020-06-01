@@ -57,6 +57,7 @@ class ModalAdapter extends Component {
         enforceFocus={false}
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
+        {...other}
       >
         {
           //通过title判断是否antd的用法
