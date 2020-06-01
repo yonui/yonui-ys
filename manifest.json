@@ -38,7 +38,7 @@
     "message": "./src/components/Message",
     "Modal": "./src/components/Modal",
     "Notification": "./src/components/Notification",
-    "notification": "./src/components/notification",
+    "notification": "./src/components/Notification",
     "Panel": "./src/components/Panel",
     "Popover": "./src/components/Popover",
     "Progress": "./src/components/Progress",
