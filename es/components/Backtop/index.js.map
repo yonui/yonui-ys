@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Backtop/index.js"],"names":["Backtop"],"mappings":"AAAA,OAAOA,OAAP,MAAoB,WAApB;AAEA,eAAeA,OAAf","sourcesContent":["import Backtop from './Backtop'\n\nexport default Backtop\n"],"file":"index.js"}

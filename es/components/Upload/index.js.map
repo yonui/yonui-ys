@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Upload/index.js"],"names":["Upload"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AACA,eAAeA,MAAf","sourcesContent":["import Upload from './Upload'\nexport default Upload\n"],"file":"index.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Layout/Layout.js"],"names":["Layout"],"mappings":"AAAA,OAAO,KAAKA,MAAZ,MAAwB,YAAxB;AAEA,eAAeA,MAAf","sourcesContent":["import * as Layout from 'bee-layout';\n\nexport default Layout;\n"],"file":"Layout.js"}

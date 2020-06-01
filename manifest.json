@@ -20,6 +20,7 @@
     "Collapse": "./src/components/Collapse",
     "Cascader": "./src/components/Cascader",
     "Carousel": "./src/components/Carousel",
+    "CarouselFigure": "./src/components/Carousel",
     "Dropdown": "./src/components/Dropdown",
     "DatePicker": "./src/components/DatePicker",
     "Form": "./src/components/Form",
@@ -34,8 +35,10 @@
     "Loading": "./src/components/Loading",
     "Menu": "./src/components/Menu",
     "Message": "./src/components/Message",
+    "message": "./src/components/Message",
     "Modal": "./src/components/Modal",
-    "Notification": "./src/components/notification",
+    "Notification": "./src/components/Notification",
+    "notification": "./src/components/Notification",
     "Panel": "./src/components/Panel",
     "Popover": "./src/components/Popover",
     "Progress": "./src/components/Progress",
@@ -73,6 +76,8 @@
     "Breadcrumb": "./src/components/Breadcrumb",
     "PageLayout": "./src/components/PageLayout",
     "Clipboard": "./src/components/Clipboard",
-    "Drawer": "./src/components/Drawer"
+    "Drawer": "./src/components/Drawer",
+    "FeModal": "./src/components/FeModal",
+    "FeIcon": "./src/components/FeIcon"
   }
 }

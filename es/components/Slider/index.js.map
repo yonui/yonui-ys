@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Slider/index.js"],"names":["Slider"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AACA,eAAeA,MAAf","sourcesContent":["import Slider from './Slider'\nexport default Slider\n"],"file":"index.js"}

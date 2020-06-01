@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Panel/Panel.js"],"names":["PanelGroup","Panel"],"mappings":"AAAA,SAASA,UAAT,EAAoBC,KAApB,QAAkC,WAAlC;AAEAA,KAAK,CAACD,UAAN,GAAmBA,UAAnB;AAEA,eAAeC,KAAf","sourcesContent":["import { PanelGroup,Panel }  from 'bee-panel';\n\nPanel.PanelGroup = PanelGroup;\n\nexport default Panel;\n"],"file":"Panel.js"}

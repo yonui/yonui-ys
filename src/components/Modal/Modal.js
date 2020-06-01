@@ -1,18 +1,16 @@
 // ModalAdapter
-import React, { Component,Fragment } from 'react';
+import React, { Component } from 'react';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';
 
-const { Header, Body, Footer, Title, Dialog } = Modal;
+const { Header, Body, Footer, Title } = Modal;
 
 const defaultProps = {
   closable: true,
   mask: true,
   maskClosable: true,
-  _innerType: '',
-  onHide:()=>{},
-  onCancel:()=>{},
+  _innerType: ''
 };
 
 class ModalAdapter extends Component {
@@ -27,8 +25,8 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    let { children, visible, show, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, wrapClassName, _innerType,onHide, ...other } = this.props;
-    if(visible==undefined)visible=show;
+    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props;
+
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
@@ -38,7 +36,7 @@ class ModalAdapter extends Component {
       </Footer>
     );
 
-    if (footer === null || footer === undefined) {
+    if (footer === null) {
       defaultFooter = null;
     }
 
@@ -49,28 +47,21 @@ class ModalAdapter extends Component {
         className={wrapClassName}
         dialogClassName={className}
         show={visible}
-        onHide={onHide}
-        onCancel={onCancel}
+        onHide={onCancel}
         onExited={afterClose}
         container={this.target}
         backdrop={mask}
-        enforceFocus={false}
+        enforceFocus={enforceFocus}
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
-        {...other}
       >
-        {
-          //通过title判断是否antd的用法
-          title?<Fragment>
-              <Header closeButton={closable} className='u-modal-header'>
-                <Title>{title}</Title>
-              </Header>
-              <Body className='u-modal-body'>
-                {children}
-              </Body>
-              {footer ? <Footer className='u-modal-footer'>{footer}</Footer> : defaultFooter}
-          </Fragment>:<Fragment>{children}</Fragment>
-        }
+        <Header closeButton={closable} className='modal-header'>
+          <Title>{title}</Title>
+        </Header>
+        <Body className='modal-body'>
+          {children}
+        </Body>
+        {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
       </Modal>
     );
   }
@@ -96,11 +87,6 @@ ModalAdapter.success = modalMethod('success');
 ModalAdapter.error = modalMethod('error');
 ModalAdapter.warning = modalMethod('warning');
 ModalAdapter.info = modalMethod('info');
-ModalAdapter.Header = Header;
-ModalAdapter.Body = Body;
-ModalAdapter.Footer = Footer; 
-ModalAdapter.Title = Title;
-ModalAdapter.Dialog = Dialog;
 
 ModalAdapter.defaultProps = defaultProps;
 export default ModalAdapter;

@@ -4,6 +4,7 @@ export {
   AutoComplete,
   Button,
   Badge,
+  CarouselFigure,
   CarouselFigure as Carousel,
   Col,
   Con,
@@ -24,6 +25,7 @@ export {
   Menu,
   Modal,
   notification,
+  Notification,
   Popconfirm,
   Popover,
   Pagination,
@@ -71,4 +73,6 @@ export {
   FormGroup,
   Rate,
   Table,
+  FeModal,
+  FeIcon
 } from './components/index';

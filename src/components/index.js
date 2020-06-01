@@ -18,12 +18,12 @@ import Form from './Form';
 import Icon from './Icon';
 import Input from './Input';
 import InputNumber from './InputNumber';
-import Loading from './Loading/simple';
+import Loading from './Loading';
 import Menu from './Menu';
 import Modal from './Modal';
 import MobileLocale from './MobileLocale';
 import Message from './Message';
-import notification from './notification';
+import Notification from './Notification';
 import Popover from './Popover';
 import Progress from './Progress';
 import Popconfirm from './Popconfirm';
@@ -47,6 +47,8 @@ import FeCheckbox from './FeCheckbox';
 import FeRadio from './FeRadio';
 import FeCollapse from './FeCollapse';
 import FeLoading from './FeLoading';
+import FeIcon from './FeIcon';
+import FeModal from './FeModal';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -97,7 +99,7 @@ export {
   Message,
   Modal,
   Menu,
-  notification,
+  Notification,
   Pagination,
   Popconfirm,
   Popover,
@@ -145,4 +147,6 @@ export {
   FormGroup,
   Rate,
   Table,
+  FeModal,
+  FeIcon
 };

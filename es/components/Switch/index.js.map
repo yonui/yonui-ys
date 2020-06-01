@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Switch/index.js"],"names":["Switch"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AACA,eAAeA,MAAf","sourcesContent":["import Switch from './Switch'\nexport default Switch\n"],"file":"index.js"}

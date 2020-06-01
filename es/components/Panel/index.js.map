@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Panel/index.js"],"names":["Panel"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;AACA,eAAeA,KAAf","sourcesContent":["import Panel from './Panel'\nexport default Panel\n"],"file":"index.js"}

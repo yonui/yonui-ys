@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Carousel/Carousel.js"],"names":["CarouselFigure"],"mappings":"AAAA,OAAOA,cAAP,MAA2B,qBAA3B;AACA,eAAeA,cAAf","sourcesContent":["import CarouselFigure from 'bee-carousel-figure';\r\nexport default CarouselFigure;\r\n"],"file":"Carousel.js"}

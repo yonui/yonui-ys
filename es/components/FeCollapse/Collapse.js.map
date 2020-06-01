@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/FeCollapse/Collapse.js"],"names":["Collapse"],"mappings":"AAAA,OAAOA,QAAP,MAAqB,cAArB;AAEA,eAAeA,QAAf","sourcesContent":["import Collapse from 'bee-collapse';\n\nexport default Collapse;\n"],"file":"Collapse.js"}

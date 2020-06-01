@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/MobileLocale/index.js"],"names":["MobileLocale"],"mappings":"AAAA,OAAOA,YAAP,MAAyB,gBAAzB;AACA,eAAeA,YAAf","sourcesContent":["import MobileLocale from './MobileLocale'\nexport default MobileLocale\n"],"file":"index.js"}

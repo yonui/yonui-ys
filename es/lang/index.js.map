@@ -1,0 +1,1 @@
+{"version":3,"sources":["lang/index.js"],"names":["require"],"mappings":"AAAA,eAAeA,OAAO,CAAC,aAAD,CAAP,WAAf","sourcesContent":["export default require('./tinper.js').default\n"],"file":"index.js"}

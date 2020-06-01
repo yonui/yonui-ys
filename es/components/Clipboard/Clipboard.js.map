@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Clipboard/Clipboard.js"],"names":["Clipboard"],"mappings":"AAAA,OAAOA,SAAP,MAAsB,eAAtB;AAEA,eAAeA,SAAf","sourcesContent":["import Clipboard from 'bee-clipboard';\n\nexport default Clipboard;\n"],"file":"Clipboard.js"}

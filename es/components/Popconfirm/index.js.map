@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Popconfirm/index.js"],"names":["Popconfirm"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,cAAvB;AACA,eAAeA,UAAf","sourcesContent":["import Popconfirm from './Popconfirm'\nexport default Popconfirm\n"],"file":"index.js"}

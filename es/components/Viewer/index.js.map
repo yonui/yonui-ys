@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Viewer/index.js"],"names":["Viewer"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,UAAnB;AAEA,eAAeA,MAAf","sourcesContent":["import Viewer from './Viewer'\n\nexport default Viewer\n"],"file":"index.js"}
