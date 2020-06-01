@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Table/Table.js"],"names":["Table"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,WAAlB;AAEA,eAAeA,KAAf","sourcesContent":["import Table from 'bee-table';\n\nexport default Table;\n"],"file":"Table.js"}

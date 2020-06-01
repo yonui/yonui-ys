@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Viewer/Viewer.js"],"names":["Viewer"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,YAAnB;AAEA,eAAeA,MAAf","sourcesContent":["import Viewer from 'bee-viewer';\n\nexport default Viewer;\n"],"file":"Viewer.js"}

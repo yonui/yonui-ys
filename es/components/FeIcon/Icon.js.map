@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/FeIcon/Icon.js"],"names":["Icon"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,UAAjB;AAEA,eAAeA,IAAf","sourcesContent":["import Icon from 'bee-icon';\r\n\r\nexport default Icon;\r\n"],"file":"Icon.js"}

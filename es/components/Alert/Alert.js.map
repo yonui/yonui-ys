@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Alert/Alert.js"],"names":["Alert"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,WAAlB;AAEA,eAAeA,KAAf","sourcesContent":["import Alert from 'bee-alert';\n\nexport default Alert;\n"],"file":"Alert.js"}

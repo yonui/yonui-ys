@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/ColorPicker/ColorPicker.js"],"names":["ColorPicker"],"mappings":"AAAA,OAAOA,WAAP,MAAwB,iBAAxB;AAEA,eAAeA,WAAf","sourcesContent":["import ColorPicker from 'bee-colorpicker';\n\nexport default ColorPicker;\n"],"file":"ColorPicker.js"}

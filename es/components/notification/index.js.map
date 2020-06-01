@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Notification/index.js"],"names":["Notification"],"mappings":"AAAA,OAAOA,YAAP,MAAyB,gBAAzB;AACA,eAAeA,YAAf","sourcesContent":["import Notification from './Notification'\nexport default Notification\n"],"file":"index.js"}

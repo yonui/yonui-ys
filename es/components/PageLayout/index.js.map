@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/PageLayout/index.js"],"names":["PageLayout"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,cAAvB;AACA,eAAeA,UAAf","sourcesContent":["import PageLayout from './PageLayout'\nexport default PageLayout\n"],"file":"index.js"}

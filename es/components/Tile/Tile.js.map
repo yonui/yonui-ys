@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Tile/Tile.js"],"names":["Tile"],"mappings":"AAAA,OAAOA,IAAP,MAAiB,UAAjB;AAEA,eAAeA,IAAf","sourcesContent":["import Tile from 'bee-tile';\n\nexport default Tile;\n"],"file":"Tile.js"}

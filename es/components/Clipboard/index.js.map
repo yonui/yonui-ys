@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Clipboard/index.js"],"names":["Clipboard"],"mappings":"AAAA,OAAOA,SAAP,MAAsB,aAAtB;AACA,eAAeA,SAAf","sourcesContent":["import Clipboard from './Clipboard'\nexport default Clipboard\n"],"file":"index.js"}

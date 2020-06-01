@@ -1,1 +1,0 @@
-{"version":3,"sources":["theme/index.jsx"],"names":["require"],"mappings":"AAAAA,OAAO,CAAC,wBAAD,CAAP;;AACAA,OAAO,CAAC,WAAD,CAAP","sourcesContent":["require('./index-no-tinper.less');\nrequire('./font.js');\n"],"file":"index.js"}

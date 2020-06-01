@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Label/Label.js"],"names":["Label"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,WAAlB;AAEA,eAAeA,KAAf","sourcesContent":["import Label from 'bee-label';\n\nexport default Label;\n"],"file":"Label.js"}

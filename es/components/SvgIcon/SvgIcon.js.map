@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/SvgIcon/SvgIcon.js"],"names":["SvgIcon"],"mappings":"AAAA,OAAOA,OAAP,MAAoB,aAApB;AAEA,eAAeA,OAAf","sourcesContent":["import SvgIcon from 'bee-svgicon';\n\nexport default SvgIcon;\n"],"file":"SvgIcon.js"}
