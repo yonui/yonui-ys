@@ -64,6 +64,7 @@ export {
   DatePicker,
   Grid,
   Form,
+  Locale,
   Input,
   InputNumber,
   Menu,
