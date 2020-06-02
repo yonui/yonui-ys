@@ -81,6 +81,7 @@
     "Drawer": "./src/components/Drawer",
     "FeModal": "./src/components/FeModal",
     "FeIcon": "./src/components/FeIcon",
+    "FePopconfirm": "./src/components/FePopconfirm",
     "Locale": "./src/components/Locale"
   }
 }

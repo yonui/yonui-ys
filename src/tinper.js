@@ -78,4 +78,5 @@ export {
   FeIcon,
   Locale,
   FeTabs,
+  FePopconfirm,
 } from './components/index';

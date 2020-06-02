@@ -51,6 +51,7 @@ import FeIcon from './FeIcon';
 import FeModal from './FeModal';
 import FeButton from './FeButton';
 import FeTabs from './FeTabs';
+import FePopconfirm from './FePopconfirm';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -154,5 +155,6 @@ export {
   FeModal,
   FeIcon,
   Locale,
-  FeTabs
+  FeTabs,
+  FePopconfirm
 };
