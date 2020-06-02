@@ -50,7 +50,7 @@ class LoadingSimple extends Component {
       return (
         <div className={classnames('s-nested-loading', wrapperClassName)}>
           {spinElement}
-          <div className='s-container'>{this.props.children}</div>
+          {/* <div className='s-container'>{this.props.children}</div> */}
         </div>
       );
     }
