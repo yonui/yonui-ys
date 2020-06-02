@@ -43,6 +43,7 @@ ReactDOM.render(
 ### tinper项目升级指南
 
 - `SvgIcon` 目前需要单独引入，参考[这里](http://bee.tinper.org/tinper-bee/bee-svgicon)
+- 样式引入改为 `import 'yonui/lib/theme/tinper.less`
 - 新增以下配置文件，即可兼容
 
 ```js
@@ -117,9 +118,9 @@ export {
   BeeCollapse as Collapse,
   BeeLoading as Loading,
   BeeButton as Button,
+  BeePopconfirm as Popconfirm,
+  BeeTabs as Tabs
 } from 'yonui-ys';
 
 ```
 
-
-## TODO
