@@ -50,7 +50,6 @@ export {
   Affix,
   Anchor,
   AutoComplete,
-  Button,
   Badge,
   CarouselFigure,
   Col,
@@ -97,10 +96,6 @@ export {
   SearchPanel,
   Tile,
   FormControl,
-  FeCheckbox as Checkbox,
-  FeRadio as Radio,
-  FeCollapse as Collapse,
-  FeLoading as Loading,
   PageLayout,
   Clipboard,
   ColorPicker,
@@ -116,7 +111,12 @@ export {
   Rate,
   Table,
   FeModal as Modal,
-  FeIcon as Icon
+  FeIcon as Icon,
+  FeCheckbox as Checkbox,
+  FeRadio as Radio,
+  FeCollapse as Collapse,
+  FeLoading as Loading,
+  FeButton as Button,
 } from 'yonui-ys';
 
 ```
