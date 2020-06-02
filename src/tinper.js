@@ -58,6 +58,7 @@ export {
   FeRadio,
   FeCollapse,
   FeLoading,
+  FeButton,
   SvgIcon,
   PageLayout,
   Clipboard,

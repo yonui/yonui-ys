@@ -28,6 +28,7 @@
     "FeRadio": "./src/components/FeRadio",
     "FeLoading": "./src/components/FeLoading",
     "FeCollapse": "./src/components/FeCollapse",
+    "FeButton": "./src/components/FeButton",
     "FormControl": "./src/components/FormControl",
     "Input": "./src/components/Input",
     "InputNumber": "./src/components/InputNumber",

@@ -49,6 +49,7 @@ import FeCollapse from './FeCollapse';
 import FeLoading from './FeLoading';
 import FeIcon from './FeIcon';
 import FeModal from './FeModal';
+import FeButton from './FeButton';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -133,6 +134,7 @@ export {
   FeRadio,
   FeCollapse,
   FeLoading,
+  FeButton,
   SvgIcon,
   PageLayout,
   Clipboard,

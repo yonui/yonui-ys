@@ -93,9 +93,8 @@ class ButtonAdapter extends Component {
       const { delay, children, ...other } = this.props;
       return (
         <Button
-          // {...other}
-          {...props}
           {...other}
+          {...props}
         >
           {this.renderIcon()}
           {this.renderChilren(children)}
