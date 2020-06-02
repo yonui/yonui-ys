@@ -73,6 +73,7 @@ import InputGroup from './InputGroup';
 import FormGroup from './FormGroup';
 import Rate from './Rate';
 import Table from './Table';
+import Locale from './Locale';
 
 
 export {
@@ -148,5 +149,6 @@ export {
   Rate,
   Table,
   FeModal,
-  FeIcon
+  FeIcon,
+  Locale
 };

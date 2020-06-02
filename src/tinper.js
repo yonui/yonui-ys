@@ -74,5 +74,6 @@ export {
   Rate,
   Table,
   FeModal,
-  FeIcon
+  FeIcon,
+  Locale,
 } from './components/index';

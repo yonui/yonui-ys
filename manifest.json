@@ -78,6 +78,7 @@
     "Clipboard": "./src/components/Clipboard",
     "Drawer": "./src/components/Drawer",
     "FeModal": "./src/components/FeModal",
-    "FeIcon": "./src/components/FeIcon"
+    "FeIcon": "./src/components/FeIcon",
+    "Locale": "./src/components/Locale"
   }
 }
