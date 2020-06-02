@@ -42,15 +42,15 @@ import Upload from './Upload';
 import Tooltip from './Tooltip';
 //无法兼容组件导出两个
 import FormControl from './FormControl';
-import FeCheckbox from './FeCheckbox';
-import FeRadio from './FeRadio';
-import FeCollapse from './FeCollapse';
-import FeLoading from './FeLoading';
-import FeIcon from './FeIcon';
-import FeModal from './FeModal';
-import FeButton from './FeButton';
-import FeTabs from './FeTabs';
-import FePopconfirm from './FePopconfirm';
+import BeeCheckbox from './BeeCheckbox';
+import BeeRadio from './BeeRadio';
+import BeeCollapse from './BeeCollapse';
+import BeeLoading from './BeeLoading';
+import BeeIcon from './BeeIcon';
+import BeeModal from './BeeModal';
+import BeeButton from './BeeButton';
+import BeeTabs from './BeeTabs';
+import BeePopconfirm from './BeePopconfirm';
 //部分tinper组件导出
 import Transfer from './Transfer';
 import Grid from './Grid';
@@ -132,11 +132,11 @@ export {
   SearchPanel,
   Tile,
   FormControl,
-  FeCheckbox,
-  FeRadio,
-  FeCollapse,
-  FeLoading,
-  FeButton,
+  BeeCheckbox,
+  BeeRadio,
+  BeeCollapse,
+  BeeLoading,
+  BeeButton,
   SvgIcon,
   PageLayout,
   Clipboard,
@@ -152,9 +152,9 @@ export {
   FormGroup,
   Rate,
   Table,
-  FeModal,
-  FeIcon,
+  BeeModal,
+  BeeIcon,
   Locale,
-  FeTabs,
-  FePopconfirm
+  BeeTabs,
+  BeePopconfirm
 };

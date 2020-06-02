@@ -110,13 +110,16 @@ export {
   FormGroup,
   Rate,
   Table,
-  FeModal as Modal,
-  FeIcon as Icon,
-  FeCheckbox as Checkbox,
-  FeRadio as Radio,
-  FeCollapse as Collapse,
-  FeLoading as Loading,
-  FeButton as Button,
+  BeeModal as Modal,
+  BeeIcon as Icon,
+  BeeCheckbox as Checkbox,
+  BeeRadio as Radio,
+  BeeCollapse as Collapse,
+  BeeLoading as Loading,
+  BeeButton as Button,
 } from 'yonui-ys';
 
 ```
+
+
+## TODO
