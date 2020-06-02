@@ -50,6 +50,7 @@ import FeLoading from './FeLoading';
 import FeIcon from './FeIcon';
 import FeModal from './FeModal';
 import FeButton from './FeButton';
+import FeTabs from './FeTabs';
 //部分tinper组件导出
 import Grid from './Grid';
 import Panel from './Panel';
@@ -152,5 +153,6 @@ export {
   Table,
   FeModal,
   FeIcon,
-  Locale
+  Locale,
+  FeTabs
 };

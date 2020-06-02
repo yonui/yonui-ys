@@ -77,4 +77,5 @@ export {
   FeModal,
   FeIcon,
   Locale,
+  FeTabs,
 } from './components/index';
