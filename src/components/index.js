@@ -40,7 +40,6 @@ import Tree from './Tree';
 import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
-import Transfer from 'bee-transfer';
 //无法兼容组件导出两个
 import FormControl from './FormControl';
 import FeCheckbox from './FeCheckbox';
@@ -53,6 +52,7 @@ import FeButton from './FeButton';
 import FeTabs from './FeTabs';
 import FePopconfirm from './FePopconfirm';
 //部分tinper组件导出
+import Transfer from './Transfer';
 import Grid from './Grid';
 import Panel from './Panel';
 import Timeline from './Timeline';
