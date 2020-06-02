@@ -40,7 +40,6 @@ import Tree from './Tree';
 import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
-import Transfer from 'bee-transfer';
 //无法兼容组件导出两个
 import FormControl from './FormControl';
 import FeCheckbox from './FeCheckbox';
@@ -49,7 +48,11 @@ import FeCollapse from './FeCollapse';
 import FeLoading from './FeLoading';
 import FeIcon from './FeIcon';
 import FeModal from './FeModal';
+import FeButton from './FeButton';
+import FeTabs from './FeTabs';
+import FePopconfirm from './FePopconfirm';
 //部分tinper组件导出
+import Transfer from './Transfer';
 import Grid from './Grid';
 import Panel from './Panel';
 import Timeline from './Timeline';
@@ -73,6 +76,7 @@ import InputGroup from './InputGroup';
 import FormGroup from './FormGroup';
 import Rate from './Rate';
 import Table from './Table';
+import Locale from './Locale';
 
 
 export {
@@ -132,6 +136,7 @@ export {
   FeRadio,
   FeCollapse,
   FeLoading,
+  FeButton,
   SvgIcon,
   PageLayout,
   Clipboard,
@@ -148,5 +153,8 @@ export {
   Rate,
   Table,
   FeModal,
-  FeIcon
+  FeIcon,
+  Locale,
+  FeTabs,
+  FePopconfirm
 };

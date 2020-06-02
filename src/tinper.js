@@ -58,6 +58,7 @@ export {
   FeRadio,
   FeCollapse,
   FeLoading,
+  FeButton,
   SvgIcon,
   PageLayout,
   Clipboard,
@@ -74,5 +75,8 @@ export {
   Rate,
   Table,
   FeModal,
-  FeIcon
+  FeIcon,
+  Locale,
+  FeTabs,
+  FePopconfirm,
 } from './components/index';

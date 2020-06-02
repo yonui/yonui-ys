@@ -59,10 +59,10 @@ class PopoverAdapter extends Component {
     const cls = classnames(overlayClassName, tinperClassName, 'ant-popover');
     const innerSpanCls = classnames(_innerType, 's-popover-inner-span');
 
-    if (!process.env.__CLIENT__) {
-      // 修复服务端渲染 Popover 问题
-      return <div />;
-    }
+    // if (!process.env.__CLIENT__) {
+    //   // 修复服务端渲染 Popover 问题
+    //   return <div />;
+    // }
 
     if (trigger === 'hover') {
       return (

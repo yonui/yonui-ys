@@ -28,6 +28,8 @@
     "FeRadio": "./src/components/FeRadio",
     "FeLoading": "./src/components/FeLoading",
     "FeCollapse": "./src/components/FeCollapse",
+    "FeButton": "./src/components/FeButton",
+    "FeTabs": "./src/components/FeTabs",
     "FormControl": "./src/components/FormControl",
     "Input": "./src/components/Input",
     "InputNumber": "./src/components/InputNumber",
@@ -78,6 +80,8 @@
     "Clipboard": "./src/components/Clipboard",
     "Drawer": "./src/components/Drawer",
     "FeModal": "./src/components/FeModal",
-    "FeIcon": "./src/components/FeIcon"
+    "FeIcon": "./src/components/FeIcon",
+    "FePopconfirm": "./src/components/FePopconfirm",
+    "Locale": "./src/components/Locale"
   }
 }

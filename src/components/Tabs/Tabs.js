@@ -8,10 +8,6 @@ const tabBarStyleTypeMap = {
   'editable-card': 'editable-card'
 };
 
-const defaultProps = {
-  tabBarStyle:'upborder'
-}
-
 class TabsAdapter extends Component {
     handleChange = (key) => {
       // 疑点：这里的change 事件参数key 有时会是 Proxy 对象，导致页面出错，暂未找到原因，通过下面判断条件临时解决
@@ -24,34 +20,23 @@ class TabsAdapter extends Component {
       // Todo：单独把 change 事件抽取出来，而不直接使用 props，因为onchange 会被其他组件（如radio ）触发
       const {
         onChange,
-        style,
-        tabPosition,
-        tabBarExtraContent,
-        type,
         ...others
-      } = this.props;//tinper写法全放到other里
-      let newProps = {
+      } = this.props;
+
+      const newProps = {
+        ...others,
         extraContent: this.props.tabBarExtraContent,
+        style: {
+          ...this.props.style,
+          ...this.props.tabBarStyle
+        },
         tabBarPosition: this.props.tabPosition,
-        tabBarStyle: tabBarStyleTypeMap[this.props.type],
-        ...others
-      }
-      if(this.props.tabBarStyle){
-        if(typeof this.props.tabBarStyle == 'string'){//tinper写法
-          newProps.style = {
-            ...style
-          }
-        }else if(typeof this.props.tabBarStyle == 'object'){//antd写法
-          newProps.style = {
-            ...style,
-            ...this.props.tabBarStyle
-          }
-        }
-      }
+        tabBarStyle: tabBarStyleTypeMap[this.props.type]
+      };
       return <Tabs {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>;
     }
 }
-TabsAdapter.defaultProps = defaultProps;
+
 TabsAdapter.TabPane = Tabs.TabPane;
 TabsAdapter.SearchTabs = Tabs.SearchTabs;
 export default TabsAdapter;
