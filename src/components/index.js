@@ -53,7 +53,7 @@ import BeeTabs from './BeeTabs';
 import BeePopconfirm from './BeePopconfirm';
 //部分tinper组件导出
 import Transfer from './Transfer';
-import Grid from './Grid';
+// import Grid from './Grid';
 import Panel from './Panel';
 import Timeline from './Timeline';
 import ProgressBar from './ProgressBar';
@@ -115,7 +115,7 @@ export {
   Steps,
   Tag,
   Tabs,
-  Grid,
+  // Grid,
   TimePicker,
   Tree,
   TreeSelect,

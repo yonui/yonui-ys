@@ -64,7 +64,6 @@
     "Upload": "./src/components/Upload",
     "Tooltip": "./src/components/Tooltip",
     "MobileLocale": "./src/components/MobileLocale",
-    "Grid": "./src/components/Grid",
     "Tile": "./src/components/Tile",
     "SearchPanel": "./src/components/SearchPanel",
     "Label": "./src/components/Label",
