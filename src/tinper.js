@@ -59,7 +59,7 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  SvgIcon,
+  // SvgIcon,
   PageLayout,
   Clipboard,
   ColorPicker,

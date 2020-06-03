@@ -62,7 +62,7 @@ import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
-import SvgIcon from './SvgIcon';
+// import SvgIcon from './SvgIcon';
 import PageLayout from './PageLayout';
 import Clipboard from './Clipboard';
 import ColorPicker from './ColorPicker';
@@ -136,7 +136,7 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  SvgIcon,
+  // SvgIcon,
   PageLayout,
   Clipboard,
   ColorPicker,
