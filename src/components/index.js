@@ -76,8 +76,7 @@ import InputGroup from './InputGroup';
 import FormGroup from './FormGroup';
 import Rate from './Rate';
 import Table from './Table';
-import Locale from './Locale';
-
+import BeeLocale from './Locale';
 
 export {
   Affix,
@@ -137,7 +136,6 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  BeeLocale,
   SvgIcon,
   PageLayout,
   Clipboard,
@@ -155,7 +153,7 @@ export {
   Table,
   BeeModal,
   BeeIcon,
-  Locale,
+  BeeLocale,
   BeeTabs,
   BeePopconfirm
 };
