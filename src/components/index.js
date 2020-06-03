@@ -78,7 +78,6 @@ import Rate from './Rate';
 import Table from './Table';
 import Locale from './Locale';
 
-
 export {
   Affix,
   Anchor,
@@ -137,7 +136,6 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  BeeLocale,
   SvgIcon,
   PageLayout,
   Clipboard,
