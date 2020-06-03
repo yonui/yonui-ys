@@ -62,7 +62,7 @@ import Label from './Label';
 import SearchPanel from './SearchPanel';
 import Tile from './Tile';
 import Drawer from './Drawer';
-import SvgIcon from './SvgIcon';
+// import SvgIcon from './SvgIcon';
 import PageLayout from './PageLayout';
 import Clipboard from './Clipboard';
 import ColorPicker from './ColorPicker';
@@ -76,8 +76,7 @@ import InputGroup from './InputGroup';
 import FormGroup from './FormGroup';
 import Rate from './Rate';
 import Table from './Table';
-import Locale from './Locale';
-
+import BeeLocale from './Locale';
 
 export {
   Affix,
@@ -137,8 +136,7 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  BeeLocale,
-  SvgIcon,
+  // SvgIcon,
   PageLayout,
   Clipboard,
   ColorPicker,
@@ -155,7 +153,7 @@ export {
   Table,
   BeeModal,
   BeeIcon,
-  Locale,
+  BeeLocale,
   BeeTabs,
   BeePopconfirm
 };

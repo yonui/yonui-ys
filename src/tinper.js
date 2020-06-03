@@ -59,8 +59,7 @@ export {
   BeeCollapse,
   BeeLoading,
   BeeButton,
-  BeeLocale,
-  SvgIcon,
+  // SvgIcon,
   PageLayout,
   Clipboard,
   ColorPicker,
@@ -78,6 +77,7 @@ export {
   BeeModal,
   BeeIcon,
   Locale,
+  BeeLocale,
   BeeTabs,
   BeePopconfirm,
 } from './components/index';
