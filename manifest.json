@@ -33,6 +33,7 @@
     "BeeModal": "./src/components/BeeModal",
     "BeeIcon": "./src/components/BeeIcon",
     "BeePopconfirm": "./src/components/BeePopconfirm",
+    "BeeLocale": "./src/components/BeeLocale",
     "FormControl": "./src/components/FormControl",
     "Input": "./src/components/Input",
     "InputNumber": "./src/components/InputNumber",
