@@ -15,22 +15,21 @@
     // }
 
     .u-popover-content {
-      .ant-row {
-        padding: 0 10px;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        height: @base-input-height;
-        line-height: @base-input-height - 2;
+      // .ant-row {
+      //   padding: 0 10px;
+      //   border-top: 1px solid transparent;
+      //   border-bottom: 1px solid transparent;
+      //   height: @base-input-height;
+      //   line-height: @base-input-height - 2;
 
-        &:hover {
-          background: #f3f5f9;
-        }
-      }
+      //   &:hover {
+      //     background: #f3f5f9;
+      //   }
+      // }
 
       .filter-btn-fixed {
         .filter-txt {
           .search_scroll {
-            height: 160px;
             overflow: auto;
             margin: 6px 0;
 
@@ -59,6 +58,10 @@
         .filter-btn-1 {
           border-top: 1px solid #eeeeee;
           background: #ffffff;
+
+          &>.u-button {
+            margin-right: 8px;
+          }
         }
       }
 
@@ -136,8 +139,17 @@
 .u-popover.tinper-popover-setting-position {
   margin-left: 196px;
   margin-top: 35px;
+
+  .u-popover-content {
+    padding: 0;
+  }
 }
 
+.u-popover.table-col-setting {
+  .u-popover-content {
+    padding: 0;
+  }
+}
 
 // group condition
 .u-tabs-content {
@@ -161,6 +173,24 @@
         }
       }
 
+    }
+  }
+}
+
+.u-popover.u-popover-tooltip.u-tooltip.inverse:not('.refer-popover-wrapper') {
+  .tooltip-inner {
+    .u-popover-content {
+      .ant-row {
+        padding: 0 10px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        height: @base-input-height;
+        line-height: @base-input-height - 2;
+
+        &:hover {
+          background: #f3f5f9;
+        }
+      }
     }
   }
 }
