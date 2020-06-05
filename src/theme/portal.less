@@ -440,3 +440,18 @@
   cursor: pointer;
   line-height: 28px;
 }
+
+.u-menu {
+  &.u-menu-root {
+    .u-menu-submenu-placement-rightTop {
+      z-index: 1000;
+      display: inline-block;
+
+      ul.u-menu-item-group-list {
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
