@@ -64,6 +64,7 @@ export {
   Clipboard,
   ColorPicker,
   LoadingState,
+  Layout,
   Viewer,
   Breadcrumb,
   Navbar,
