@@ -459,3 +459,40 @@
     }
   }
 }
+
+// 零售portal 页面，租户popover
+.ant-popover .ant-popover-content {
+  .ant-popover-inner-content {
+    height: 430px;
+    overflow: scroll;
+  }
+
+  .ant-popover-inner-content p {
+    padding: 0 30px 0 15px;
+    line-height: 28px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .ant-popover-inner-content p:hover {
+    background: #f3f5f9;
+    border-color: #f3f5f9;
+    color: #333;
+  }
+
+  .ant-popover-inner-content p:hover a {
+    color: #333;
+  }
+
+  .ant-popover-inner-content p.topMenu_checked {
+    background: #fff7e7;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+  }
+}
+
