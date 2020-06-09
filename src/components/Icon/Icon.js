@@ -23,6 +23,7 @@ const Icon = props => {
   let key = clsPrefix+'-'+type;
   if(clsPrefix=='uf')key=type;
   const classString = classNames(
+    's-icon',
     {
       [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
