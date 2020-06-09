@@ -27,12 +27,20 @@
   font-family: "iconfont" !important;
 }
 
-.s-cion.anticon-canzhao:before {
+.s-icon.anticon-canzhao:before {
   content: "\e6fe";
   color: #adb4bc;
   font-size: 16px;
   font-family: "iconfont" !important;
   line-height: 28px;
+}
+
+// fix: ys 默认方案箭头/下拉按钮箭头
+.s-icon.anticon-down:before {
+  content: '\e633';
+  font-family: 'iconfont' !important;
+  font-size: 12px;
+  transform: scale(.8);
 }
 
 .anticon-canzhao:hover:before {
@@ -62,7 +70,7 @@
   font-weight: bold;
 }
 
-.anticon-ellipsis:before {
+.anticon.anticon-ellipsis:before {
   content: "\e521" !important;
   font-family: "iconfont" !important;
 }
