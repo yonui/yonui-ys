@@ -14,6 +14,7 @@ const propTypes = {
   placeholder: PropTypes.string,
   inputProps: PropTypes.object,
   selectProps: PropTypes.object,
+  disabled: PropTypes.bool
 }
 const defaultProps = {
   className: '',
@@ -255,7 +256,7 @@ class MobileLocale extends Component {
 
   render () {
     const { country_code, mobile} = this.state
-    const {countryList, selectProps, className, inputProps, placeholder} = this.props;
+    const {countryList, selectProps, className, inputProps, placeholder, disabled} = this.props;
     const _defaultValue = zhcnInfo.country_code;
     let styleProp = {}
     if (this.state.elWidth) {
@@ -272,6 +273,7 @@ class MobileLocale extends Component {
             dropdownStyle={styleProp}
             dropdownMatchSelectWidth={false}
             value={country_code || _defaultValue}
+            disabled={disabled}
             onChange={(key, e) => {
               const current = countryList.find(value => String(value.country_code) === key, e);
               this.onChange({country_code: current.country_code, country: current.country, mobile});
@@ -298,6 +300,7 @@ class MobileLocale extends Component {
               if (!this.validateValue(v)) return false // 校验合法性
               this.onChange({...this.state, mobile: v, })
             }}
+            disabled={disabled}
             {...inputProps}
             value={mobile}
             placeholder={placeholder}
