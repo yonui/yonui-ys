@@ -244,7 +244,7 @@ class MobileLocale extends Component {
       return validate(value)
     }else{
       if (!value || value === '') return true;
-      const reg = /^[0-9]\d{0,10}$/;
+      const reg = /^[0-9]\d{0,}$/;
       return reg.test(value);
     }
   }
