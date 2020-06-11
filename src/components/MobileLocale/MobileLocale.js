@@ -14,7 +14,8 @@ const propTypes = {
   placeholder: PropTypes.string,
   inputProps: PropTypes.object,
   selectProps: PropTypes.object,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  validate:PropTypes.func,//自定义校验方法，return true校验成功，return false 校验失败
 }
 const defaultProps = {
   className: '',
@@ -238,9 +239,14 @@ class MobileLocale extends Component {
   }
 
   validateValue=(value) => {
-    if (!value || value === '') return true;
-    const reg = /^[0-9]\d{0,10}$/;
-    return reg.test(value);
+    let { validate } = this.props;
+    if(validate&&typeof validate == 'function'){
+      return validate(value)
+    }else{
+      if (!value || value === '') return true;
+      const reg = /^[0-9]\d{0,10}$/;
+      return reg.test(value);
+    }
   }
 
   onChange = (obj) => {
