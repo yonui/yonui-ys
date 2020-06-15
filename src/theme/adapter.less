@@ -967,3 +967,14 @@ div[id$="|tips"] {
     padding-left: 10px;
   }
 }
+
+div[id="pc_spepro"],
+div[id="pc_productorderpro"],
+div[id="pc_productskupro"],
+div[id="pc_productbrandpro"] {
+  // 这里规范化，需要meta 去掉对应节点的类名，这里先适配修复下
+  .container-edit-mode .tab-bottom-txt {
+    display: block;
+  }
+}
+
