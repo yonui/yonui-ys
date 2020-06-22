@@ -13,11 +13,11 @@ function unDefined (target) {
 let instance = null;
 
 function notice (args) {
-  const { description, position, duration, icon } = args;
+  const { description, position, duration, icon,container } = args;
   let message = args.message;
 
   if (instance == null) {
-    Notification.newInstance({ position }, n => {
+    Notification.newInstance({ position,container }, n => {
       if (icon) {
         message = <div className='notification-icon-title'>
           {icon}
