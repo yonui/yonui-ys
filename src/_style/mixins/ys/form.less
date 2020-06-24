@@ -22,7 +22,7 @@
   hyphens: auto;
 
   &.multi-line {
-    padding-top: 4px;
+    padding-top: 2px;
   }
 }
 
@@ -186,10 +186,12 @@
     .basic-tagarea-mixin();
   }
 
-  div[id='pc_product|detail!businessAttribute']>div,
-  .control-radio {
-    .form-lable-top-mixin();
-  }
+}
+
+div[id='pc_product|detail!businessAttribute']>div,
+.basic-tagarea.has-feedback,
+.control-radio {
+  .form-lable-top-mixin();
 }
 
 .label-control {
