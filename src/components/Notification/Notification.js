@@ -55,7 +55,7 @@ const api = {
 };
 
 ['open', 'success', 'info', 'warning', 'error'].forEach(type => {
-  api[type] = ({ duration, message, description, placement, icon, style }) => {
+  api[type] = ({ duration, message, description, placement, icon, style,container }) => {
     switch (type) {
       case 'info':
         icon = <Icon type='uf-i' />;
@@ -78,7 +78,8 @@ const api = {
       position: placement || 'topRight',
       message,
       icon,
-      description
+      description,
+      container
     });
   };
 });
