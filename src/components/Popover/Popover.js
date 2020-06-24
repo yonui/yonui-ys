@@ -63,23 +63,41 @@ class PopoverAdapter extends Component {
     //   // 修复服务端渲染 Popover 问题
     //   return <div />;
     // }
-
     if (trigger === 'hover') {
-      return (
-        <Popover
-          {...omit(other, ['visible', 'getPopupContainer'])}
-          placement={placement}
-          show={visible}
-          className={cls}
-          trigger={trigger}
-          container={this.target}
-          style={overlayStyle}
-        >
-          <span className={innerSpanCls}>
-            {children}
-          </span>
-        </Popover>
-      )
+      if(onVisibleChange){
+        return (
+          <Popover
+            {...omit(other, ['getPopupContainer'])}
+            placement={placement}
+            show={visible}
+            className={cls}
+            trigger={trigger}
+            container={this.target}
+            onVisibleChange={this.onVisibleChange}
+            style={overlayStyle}
+          >
+            <span className={innerSpanCls}>
+              {children}
+            </span>
+          </Popover>
+        )
+      }else{
+        return (
+          <Popover
+            {...omit(other, ['visible', 'getPopupContainer'])}
+            placement={placement}
+            className={cls}
+            trigger={trigger}
+            container={this.target}
+            style={overlayStyle}
+          >
+            <span className={innerSpanCls}>
+              {children}
+            </span>
+          </Popover>
+        )
+      }
+      
     }
 
     return (
