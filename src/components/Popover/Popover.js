@@ -69,6 +69,7 @@ class PopoverAdapter extends Component {
         <Popover
           {...omit(other, ['visible', 'getPopupContainer'])}
           placement={placement}
+          show={visible}
           className={cls}
           trigger={trigger}
           container={this.target}
