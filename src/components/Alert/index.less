@@ -1,0 +1,329 @@
+// ============================================
+// alert 类控件的样式
+// ============================================
+// 短文本提示消息框
+.uretail-notification {
+  .anticon {
+    position: absolute;
+    left: 6px;
+  }
+  .anticon-circle {
+    font-size: 12px;
+    color: #666;
+    white-space: pre-wrap;
+    margin-left: 4px;
+  }
+  .uretail-notification-notice-content {
+    max-width: 400px;
+    word-break: break-all
+  }
+  .uretail-message-custom-content {
+    position: relative;
+    padding-left: 32px !important
+  }
+  .icon {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .uretail-message-success {
+    background: #EBF8F2;
+    border: #A7E1C4 solid 1px;
+    border-radius: 4px;
+    width: auto;
+    line-height: 20px;
+    color: #666;
+    padding: 8px 12px;
+    .icon {
+      color: #18B681;
+    }
+  }
+  .uretail-message-info {
+    background: #E6F0F7;
+    border: #ADD8F7 solid 1px;
+    border-radius: 4px;
+    width: auto;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    padding: 8px 12px;
+    .icon {
+      color: #588CE9;
+    }
+  }
+  .uretail-message-error {
+    background: #FEF3EB;
+    border: #FCCCA7 solid 1px;
+    border-radius: 4px;
+    width: auto;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    padding: 8px 12px;
+    .icon {
+      color: #FF5735;
+    }
+  }
+  .uretail-message-warning {
+    background: #FFFAEB;
+    border: #FFE9A7 solid 1px;
+    border-radius: 4px;
+    width: auto;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    padding: 8px 12px;
+    .icon {
+      color: #FFA600;
+    }
+  }
+} // 长文本提示消息框
+.uretail-notification-notice {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  .uretail-notification-success {
+    display: -webkit-flex;
+    display: flex;
+    padding: 8px 12px;
+    background: #EBF8F2;
+    border: #A7E1C4 solid 1px;
+    border-radius: 4px;
+    max-width: 800px;
+    min-width: 300px;
+    .anticon-check-circle-o:before {
+      font-size: 22px;
+      color: #18B681;
+    }
+  }
+  /*错误*/
+  .uretail-notification-error {
+    display: -webkit-flex;
+    display: flex;
+    padding: 8px 12px;
+    background: #FEF3EB;
+    border: #FCCCA7 solid 1px;
+    border-radius: 4px;
+    max-width: 800px;
+    min-width: 300px;
+    .anticon-cross-circle-o:before {
+      font-size: 22px;
+      color: #FF5735;
+    }
+  }
+  /*消息*/
+  .uretail-notification-info {
+    display: -webkit-flex;
+    display: flex;
+    padding: 8px 12px;
+    background: #E6F0F7;
+    border: #ADD8F7 solid 1px;
+    border-radius: 4px;
+    max-width: 800px;
+    min-width: 300px;
+    .anticon-info-circle-o:before {
+      font-size: 22px;
+      color: #588ce9;
+    }
+  }
+  /*警告*/
+  .uretail-notification-warning {
+    display: -webkit-flex;
+    display: flex;
+    padding: 8px 12px;
+    background: #FFFAEB;
+    border: #FFE9A7 solid 1px;
+    border-radius: 4px;
+    max-width: 800px;
+    min-width: 300px;
+    .anticon-exclamation-circle-o:before {
+      font-size: 22px;
+      color: #FFA600;
+    }
+  }
+  /*公共样式*/
+  .uretail-notice-count {
+    min-width: 240px;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+  .icon-count {
+    width: 22px;
+    .icon {
+      font-size: 24px;
+    }
+  }
+  .long-title {
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+  }
+  .long-count {
+    font-size: 12px;
+    color: #666;
+  }
+  .anticon-close:before {
+    color: #a4a4a4;
+    content: "\E633";
+    font-size: 14px;
+  }
+  .long-closed {
+    font-size: 26px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@message-prefix-cls: ~"uretail-message";
+@font-size-base: 12px;
+@zindex-message: 1800;
+@border-radius-base: 4px;
+@shadow-color: rgba(0, 0, 0, .2);
+@shadow-2: 0 2px 8px @shadow-color;
+@component-background: #fff;
+@iconfont-css-prefix: anticon; // -------- Colors -----------
+@info-color: #108ee9;
+@success-color: #00a854;
+@error-color: #ee2233;
+@highlight-color: #ee2233;
+@warning-color: #ffbf00;
+@normal-color: #d9d9d9;
+@font-size-lg: @font-size-base +2px;
+.@{message-prefix-cls} {
+  font-size: @font-size-base;
+  position: fixed;
+  z-index: @zindex-message;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  pointer-events: none;
+  &-notice {
+    padding: 8px;
+    text-align: center;
+    &:first-child {
+      margin-top: -8px;
+    }
+  }
+  &-notice-content {
+    border-radius: @border-radius-base;
+    box-shadow: @shadow-2;
+    background: @component-background;
+    display: inline-block;
+    pointer-events: all;
+  }
+  &-success .@{iconfont-css-prefix} {
+    color: @success-color;
+  }
+  &-error .@{iconfont-css-prefix} {
+    color: @error-color;
+  }
+  &-warning .@{iconfont-css-prefix} {
+    color: @warning-color;
+  }
+  &-info .@{iconfont-css-prefix},
+  &-loading .@{iconfont-css-prefix} {
+    color: @info-color;
+  }
+  .@{iconfont-css-prefix} {
+    font-size: @font-size-lg;
+    top: 1px;
+    position: relative;
+  }
+  &-notice.move-up-leave.move-up-leave-active {
+    animation-name: MessageMoveOut;
+    overflow: hidden;
+    animation-duration: .3s;
+  }
+}
+
+@keyframes MessageMoveOut {
+  0% {
+    opacity: 1;
+    max-height: 150px;
+    padding: 8px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+  }
+} // 长文本可手动关闭提示框
+@notificationPrefixCls: uretail-notification;
+.@{notificationPrefixCls} {
+  position: fixed;
+  z-index: 1710;
+  &-notice {
+    border-radius: 3px 3px;
+    border: 1px solid #999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 0px solid rgba(0, 0, 0, 0);
+    background: #fff;
+    display: block;
+    width: auto;
+    line-height: 1.5;
+    position: relative;
+    margin: 10px 0;
+    &-closable {
+      padding-right: 20px;
+    }
+    &-close {
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      color: #000;
+      cursor: pointer;
+      outline: none;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 1px 0 #fff;
+      filter: alpha(opacity=20);
+      opacity: .2;
+      text-decoration: none;
+      &-x:after {
+        content: '×';
+      }
+      &:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        text-decoration: none;
+      }
+    }
+  }
+  .fade-effect() {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+  &-fade-enter {
+    opacity: 0;
+    .fade-effect();
+    animation-play-state: paused;
+  }
+  &-fade-leave {
+    .fade-effect();
+    animation-play-state: paused;
+  }
+  &-fade-enter&-fade-enter-active {
+    animation-name: uretailNotificationFadeIn;
+    animation-play-state: running;
+  }
+  &-fade-leave&-fade-leave-active {
+    animation-name: uretailDialogFadeOut;
+    animation-play-state: running;
+  }
+  @keyframes uretailNotificationFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes uretailDialogFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
