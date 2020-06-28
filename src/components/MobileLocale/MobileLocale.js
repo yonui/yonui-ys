@@ -14,6 +14,8 @@ const propTypes = {
   placeholder: PropTypes.string,
   inputProps: PropTypes.object,
   selectProps: PropTypes.object,
+  disabled: PropTypes.bool,
+  validate:PropTypes.func,//自定义校验方法，return true校验成功，return false 校验失败
 }
 const defaultProps = {
   className: '',
@@ -237,9 +239,14 @@ class MobileLocale extends Component {
   }
 
   validateValue=(value) => {
-    if (!value || value === '') return true;
-    const reg = /^[0-9]\d{0,10}$/;
-    return reg.test(value);
+    let { validate } = this.props;
+    if(validate&&typeof validate == 'function'){
+      return validate(value)
+    }else{
+      if (!value || value === '') return true;
+      const reg = /^[0-9]\d{0,}$/;
+      return reg.test(value);
+    }
   }
 
   onChange = (obj) => {
@@ -255,7 +262,7 @@ class MobileLocale extends Component {
 
   render () {
     const { country_code, mobile} = this.state
-    const {countryList, selectProps, className, inputProps, placeholder} = this.props;
+    const {countryList, selectProps, className, inputProps, placeholder, disabled} = this.props;
     const _defaultValue = zhcnInfo.country_code;
     let styleProp = {}
     if (this.state.elWidth) {
@@ -272,6 +279,7 @@ class MobileLocale extends Component {
             dropdownStyle={styleProp}
             dropdownMatchSelectWidth={false}
             value={country_code || _defaultValue}
+            disabled={disabled}
             onChange={(key, e) => {
               const current = countryList.find(value => String(value.country_code) === key, e);
               this.onChange({country_code: current.country_code, country: current.country, mobile});
@@ -298,6 +306,7 @@ class MobileLocale extends Component {
               if (!this.validateValue(v)) return false // 校验合法性
               this.onChange({...this.state, mobile: v, })
             }}
+            disabled={disabled}
             {...inputProps}
             value={mobile}
             placeholder={placeholder}

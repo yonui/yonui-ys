@@ -51,7 +51,7 @@ class ModalAdapter extends Component {
         onExited={afterClose}
         container={this.target}
         backdrop={mask}
-        enforceFocus={enforceFocus}
+        enforceFocus={false}
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
       >

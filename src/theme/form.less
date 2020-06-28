@@ -77,6 +77,7 @@
       .ant-form-explain {
         position: absolute;
         top: 28px;
+        left: 0;
       }
     }
   }
@@ -267,7 +268,7 @@
 
 .listheadRow+.line-tabs {
   position: relative;
-  top: -15px;
+  // top: -15px;
 
   .viewCell.width-percent-100>.upload-content .col-float.input-control.control-width {
     width: calc(~'100% - 120px') !important;
@@ -363,7 +364,7 @@
 
     .control-width {
       line-height: @base-input-height;
-      &>.u-input-group {
+      .u-input-group {
         line-height: 0;
         &>div {
           line-height: @base-input-height;
@@ -436,10 +437,18 @@
     }
   }
 
+  .id-card {
+    .has-related {
+      .related-bottom-text {
+        top: 66px;
+      }
+    }
+  }
+
   .has-related {
     .related-bottom-text {
       position: absolute;
-      top: 66px;
+      top: 30px;
       line-height: 12px;
       overflow: hidden;
       white-space: nowrap;
@@ -758,7 +767,7 @@
     }
 
     .ant-form-explain {
-      line-height: 32px;
+      // line-height: 32px;
     }
 
     .ant-select {
@@ -828,11 +837,6 @@
         .input-control {
           width: 742px !important
         }
-      }
-
-      // 富文本编辑器
-      .edui-editor {
-        width: 742px !important
       }
     }
 
@@ -1086,7 +1090,7 @@
     //新增收款协议协议有效期添加特殊类名
     .enableStartDate {
       .has-related {
-        display: block;
+        // display: block;
 
         .viewCell {
           width: 45.8333%;
@@ -1586,6 +1590,7 @@
       .col-float {
         .tag-group {
           min-height: @base-input-height + 4;
+          margin-bottom: 12px;
 
           // zhangkunk 总账-凭证查询-设置中选了会计期间，但不显示期间段选择框
           .has-related {
@@ -1893,10 +1898,6 @@ i.uf-search,
     height: @base-input-height;
     line-height: @base-input-height;
   }
-}
-
-.ant-input-number-input {
-  height: 30px;
 }
 
 .ant-btn {
@@ -3039,6 +3040,15 @@ i.uf-search,
 .ec_downloadAnalysis {
   .group-buttons .meta-checkbox-container {
     padding-left: 130px;
+    .control-width {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      flex-wrap: wrap;
+      &>div {
+        flex: 1;
+      }
+    }
   }
 }
 .ec_invoiceconfigurelist {

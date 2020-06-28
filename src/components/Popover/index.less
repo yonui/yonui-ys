@@ -15,17 +15,17 @@
     // }
 
     .u-popover-content {
-      .ant-row {
-        padding: 0 10px;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        height: @base-input-height;
-        line-height: @base-input-height - 2;
+      // .ant-row {
+      //   padding: 0 10px;
+      //   border-top: 1px solid transparent;
+      //   border-bottom: 1px solid transparent;
+      //   height: @base-input-height;
+      //   line-height: @base-input-height - 2;
 
-        &:hover {
-          background: #f3f5f9;
-        }
-      }
+      //   &:hover {
+      //     background: #f3f5f9;
+      //   }
+      // }
 
       .filter-btn-fixed {
         .filter-txt {
@@ -173,6 +173,24 @@
         }
       }
 
+    }
+  }
+}
+
+.u-popover.u-popover-tooltip.u-tooltip.inverse:not('.refer-popover-wrapper') {
+  .tooltip-inner {
+    .u-popover-content {
+      .ant-row {
+        padding: 0 10px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        height: @base-input-height;
+        line-height: @base-input-height - 2;
+
+        &:hover {
+          background: #f3f5f9;
+        }
+      }
     }
   }
 }

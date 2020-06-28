@@ -380,6 +380,7 @@
 
 /*基础服务-个人中心底部按钮问题*/
 .meta-dynamic-view {
+  height: 100%;
   .info-content+.bottom-toolbar-self {
     width: 100% !important;
     left: 0px !important;
@@ -1092,10 +1093,6 @@
   }
 }
 
-.form-base .ant-row-flex.btn-toolbar-bottom {
-  padding: 0
-}
-
 .red-txt {
   margin-right: 20px;
   color: #ef524d
@@ -1438,8 +1435,8 @@
 
     .haveno_search {
       height: 50px;
-      line-height: 50px;
-      text-align: left;
+      // line-height: 50px;
+      text-align: center;
       margin-left: 18px;
       color: #999;
     }
@@ -2388,33 +2385,6 @@
 
 .ant-popover-inner-content .title-setting.top-right-title {
   padding: 4px 0;
-}
-
-.ant-popover-inner-content p {
-  padding: 0 30px 0 15px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-}
-
-.ant-popover-inner-content p:hover {
-  background: #f3f5f9;
-  border-color: #f3f5f9;
-  color: #333;
-}
-
-.ant-popover-inner-content p:hover a {
-  color: #333;
-}
-
-.ant-popover-inner-content p.topMenu_checked {
-  background: #fff7e7;
-  position: relative;
-
-  svg {
-    position: absolute;
-    right: 10px;
-    top: 11px;
-  }
 }
 
 .ant-popover.uretail-pop.ant-popover-placement-bottom {
@@ -3578,6 +3548,7 @@
       &.no-data {
         color: #999;
         text-align: left;
+        padding-left: 6px;
       }
 
       &:hover {
@@ -5333,4 +5304,69 @@
 
 .u-modal .refer-toolbar .refer-toobar-wrapper {
   .refer-search-mixin();
+}
+
+/*参照最大化*/
+.refer-modal-header {
+  .refer-header-icon {
+    font-size: 14px;
+    margin-right: 16px;
+    color: #999999;
+    &:hover {
+      color: #EE2233;
+      cursor: pointer;
+    }
+  }
+  .refer-header-close {
+    font-size: 14px;
+    color: #999999;
+    &:hover {
+      color: #EE2233;
+      cursor: pointer;
+    }
+  }
+}
+.referModal.refer-modal-maximize {
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  padding-bottom: 0 !important;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  height: unset;
+  width: unset !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  .u-modal-content {
+    box-shadow: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .modal-body {
+      flex: 1;
+      overflow-y: scroll;
+    }
+  }
+}
+//无iframe
+.no-iframe .referModal.refer-modal-maximize {
+  height: unset;
+  width: unset;
+  top: 83px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+}
+.no-iframe {
+  .u-modal-open .u-modal {
+    overflow-y: hidden;
+  }
+  .u-modal .u-modal-body {
+    overflow-x: hidden;
+  }
 }

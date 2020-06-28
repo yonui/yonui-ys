@@ -98,7 +98,7 @@
     margin-left: 4px;
     margin-right: -2px;
     &:before {
-      content: '\e633';
+      content: '\e633' !important;
       transform: scale(0.8) rotate(0deg);
       font-family: 'iconfont' !important;
       font-size: 12px;
@@ -381,6 +381,7 @@
         padding: 0 20px;
         min-width: 68px;
         color: #fff !important;
+        // margin-left: 0;
 
         &:hover {
           background: @custom-color-hover  !important;
@@ -441,4 +442,21 @@
       height: 13px;
     }
   }
+}
+
+.btn-toolbar-bottom {
+  .u-button-group {
+    height: 28px;
+    vertical-align: top;
+  }
+
+  svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.u-button.rc-calendar-btn-ok[disabled] {
+  color: #fff;
+  opacity: .5;
 }

@@ -89,7 +89,7 @@
 .dropdown-btn-icon .uf.uf-arrow-down {
   color: gray;
   display: block;
-  top:1px;
+  // top:1px;
 }
 
 // fix: 生产制造，制造参数，inputNumber 宽度需要减去右侧山下键
@@ -517,17 +517,6 @@ textarea.u-form-control {
   font-size: 12px!important;
 }
 
-
-//帮助浮层
-.field_help{
-  padding: 4px 16px;
-  .help_content{
-    font-size: 12px;
-    color: #666;
-    line-height: 18px;
-  }
-}
-
 .viewCell.width-percent-33 .control-radio .input-control.control-width {
   min-height: @base-input-height;
 }
@@ -590,12 +579,6 @@ div[id='pc_attachmentgrouplist|lookat1'] {
       .tab-top-right-operater-mixin();
     }
   }
-}
-
-div[id='pc_product|detail!businessAttribute']>div,
-.basic-tagarea.has-feedback,
-.control-radio {
-  .form-lable-top-mixin();
 }
 
 // 参照关闭按钮微调，使垂直居中
@@ -922,4 +905,125 @@ div[id^='business_option'] {
 .ranklist,
 .timeaxis_list {
   height: 100%;
+}
+
+// 部门节点，内容区域上边距
+.bd_admindepttree {
+  padding-top: 12px;
+}
+
+div[id="pc_product|productTemplate_NameTips"] {
+  right: -26px;
+  position: absolute;
+  width: 16px!important;
+}
+
+div[id$="|tips"] {
+  right: -26px;
+  left: unset !important;
+  position: absolute;
+  width: 16px!important;
+  flex: unset;
+}
+
+// TINPER-4333 arap_ar_verifyrule
+.arap_ar_verifyrule{
+  .group-buttons .meta-checkbox-container{
+    padding-left: 0;
+  }
+  .meta-checkbox-container .input-control > div{
+    width: auto;
+  }
+} 
+.ar-writeoffrule-param-wrap{
+  .group-buttons .meta-checkbox-container{
+    padding-left: 0;
+  }
+  .meta-checkbox-container .input-control > div{
+    width: auto;
+  }
+}
+
+.ant-spin-nested-loading {
+  position: relative;
+  height: 100%;
+}
+
+.query-criteria-select .ant-checkbox-group {
+  max-height: 320px;
+  height: auto;
+  overflow-y: auto;
+  padding-left: 0;
+
+  &>div {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 10px;
+  }
+}
+
+div[id="pc_spepro"],
+div[id="pc_productorderpro"],
+div[id="pc_productskupro"],
+div[id="pc_productbrandpro"] {
+  // 这里规范化，需要meta 去掉对应节点的类名，这里先适配修复下
+  .container-edit-mode .tab-bottom-txt {
+    display: block;
+  }
+}
+
+div[id="st_transferapplylist"],
+div[id="st_morphologyconversionlist"],
+div[id="st_transferreqlist"] {
+  min-width: 1200px;
+}
+//TINPER-5221
+.st_wareandinv_ware.u-modal{
+  button[id='st_wareandinv_ware|btnAddRow']{
+    margin-right: 20px;
+  }
+}
+//TINPER-5224
+.aa_vendor.u-modal{
+  button[id='aa_vendor|btnSaveAndAdd']{
+    margin-left: 8px !important;
+  }
+}
+
+
+.meta-table .columnSetting .SettingBtn.u-button {
+  text-align: left;
+  &:hover {
+    background-color: #f7f9fd;
+  }
+}
+
+
+.Manual-calculation-left .meta-default-container {
+  height: auto;
+}
+
+.container-edit-mode.container-greater-height {
+  height: 100%;
+}
+
+.crossArea .fr {
+  width: auto;
+  min-width: 266px;
+
+  .crossArea-list-content {
+    padding-top: 15px;
+    padding-right: 30px;
+  }
+}
+
+.viewSetting.viewCell {
+.ant-row{
+  line-height: @base-input-height;
+  min-height: @base-input-height + 4;//兼容多语的title两行正常显示
+}
+}
+
+i.anticon:before {
+  display: block;
 }

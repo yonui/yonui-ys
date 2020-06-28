@@ -13,11 +13,11 @@ function unDefined (target) {
 let instance = null;
 
 function notice (args) {
-  const { description, position, duration, icon } = args;
+  const { description, position, duration, icon,container } = args;
   let message = args.message;
 
   if (instance == null) {
-    Notification.newInstance({ position }, n => {
+    Notification.newInstance({ position,container }, n => {
       if (icon) {
         message = <div className='notification-icon-title'>
           {icon}
@@ -55,7 +55,7 @@ const api = {
 };
 
 ['open', 'success', 'info', 'warning', 'error'].forEach(type => {
-  api[type] = ({ duration, message, description, placement, icon, style }) => {
+  api[type] = ({ duration, message, description, placement, icon, style,container }) => {
     switch (type) {
       case 'info':
         icon = <Icon type='uf-i' />;
@@ -78,7 +78,8 @@ const api = {
       position: placement || 'topRight',
       message,
       icon,
-      description
+      description,
+      container
     });
   };
 });

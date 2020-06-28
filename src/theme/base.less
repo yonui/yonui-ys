@@ -47,6 +47,20 @@
   width: calc(~"100% - 175px");
 }
 
+.jDiwork-container .line-tabs-maximize {
+  height: calc(~"100% - 80px");
+  top: 80px;
+  width: calc(~"100% - 16px"); // 16px 是容器padding 边距效果
+}
+
+.line-tabs-maximize {
+  &.org-structure-tabs {
+    height: calc(~"100% - 80px");
+    top: 80px;
+    width: calc(~"100% - 16px");
+  }
+}
+
 .line-tabs.line-tabs-upload.line-tabs-maximize,
 .line-tabs.line-tabs-maximize {
   padding-bottom: 0px !important;
@@ -62,7 +76,7 @@
 
 .tree-list .height-100>.ant-row.meta-default-container {
   // async zhangkunk 树的展开拖拽
-  overflow: hidden;
+  // overflow: hidden;
   height: 100%;
 }
 
@@ -3534,8 +3548,22 @@ a.Toolbar_Notification_Log {
   margin-left: 10px;
 }
 
-/*上传企业logo*/
+// 员工，新增logo
+div[id='bd_staff_card|photo'] {
+  .face-img.basic-avatar-default {
+    .basic-avatar-btn-item {
+      margin-left: 30px;
+      height: 150px;
+    }
+    .basic-avatar-right {
+      margin-left: 26px;
+      margin-top: 4px;
+      position: static;
+    }
+  }
+}
 
+/*上传企业logo*/
 .basic-avatar-billing-logo {
   .basic-avatar-btn-item {
     .ant-upload-select-text {
@@ -5521,6 +5549,9 @@ a.Toolbar_Notification_Log {
 //商品详情电脑手机切换
 .menu-management .inventory-process {
   padding: 16px 0 15px 100px!important;
+}
+.menu-management .u-tabs.u-tabs-upborder .u-tabs-content {
+  margin-top: 0;
 }
 // 采购-税票匹配
 .pu_taxticketmatch {

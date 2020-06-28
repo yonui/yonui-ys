@@ -4,10 +4,15 @@
 
 * {
   font-family: Microsoft YaHei, Arial;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 body {
   color: #333;
+  font-size: 12px;
   height: 100% !important;
 }
 
@@ -153,11 +158,15 @@ canvas {
 }
 
 .width-percent-50 {
-  width: 50%;
+  width: 50% !important;
+}
+
+.width-percent-75 {
+  width: 75% !important;
 }
 
 .width-percent-100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .margin-top-16 {
@@ -238,4 +247,37 @@ input[disabled] + span {
 
 .has-error {
   position: relative;
+}
+
+.react-draggable-transparent-selection * {
+  pointer-events: unset !important
+}
+
+
+/* 修改placeholder样式 */
+input::-webkit-input-placeholder{
+  color:@base-input-placeholder-color;
+}
+input::-moz-placeholder{
+  color:@base-input-placeholder-color;
+}
+input:-moz-placeholder{
+  color:@base-input-placeholder-color;
+}
+input:-ms-input-placeholder{
+  color:@base-input-placeholder-color;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.padding-bottom-none {
+  padding-bottom: 0;
+}
+
+.container-browse-mode{
+  height: 100%;
 }

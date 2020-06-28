@@ -102,6 +102,7 @@ export {
   Message,
   Modal,
   Menu,
+  Notification as notification,
   Notification,
   Pagination,
   Popconfirm,

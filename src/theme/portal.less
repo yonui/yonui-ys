@@ -440,3 +440,59 @@
   cursor: pointer;
   line-height: 28px;
 }
+
+.u-menu {
+  &.u-menu-root {
+    .u-menu-submenu-placement-rightTop {
+      z-index: 1000;
+      display: inline-block;
+
+      ul.u-menu-item-group-list {
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .u-menu-submenu-title + div > div{
+      height: 0;
+    }
+  }
+}
+
+// 零售portal 页面，租户popover
+.ant-popover .ant-popover-content {
+  .ant-popover-inner-content {
+    max-height: 430px;
+    overflow: scroll;
+  }
+
+  .ant-popover-inner-content p {
+    padding: 0 30px 0 15px;
+    line-height: 28px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .ant-popover-inner-content p:hover {
+    background: #f3f5f9;
+    border-color: #f3f5f9;
+    color: #333;
+  }
+
+  .ant-popover-inner-content p:hover a {
+    color: #333;
+  }
+
+  .ant-popover-inner-content p.topMenu_checked {
+    background: #fff7e7;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+  }
+}
+

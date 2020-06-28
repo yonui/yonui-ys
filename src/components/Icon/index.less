@@ -1,7 +1,9 @@
 @import '../../static/iconfont/iconfont.less';
 @import '../../static/antd/anticon.less';
 
-.anticon {
+.anticon,
+.s-icon.anticon
+ {
   display: inline-block;
   font-style: normal;
   vertical-align: baseline;
@@ -13,9 +15,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.anticon:before {
+.s-icon.anticon:before {
   display: block;
   font-family: 'iconfont' !important;
+}
+
+.s-icon.anticon-zuidahua:before {
+  content: "\e7cc";
+  color: #999;
+  font-size: 16px;
+  font-family: "iconfont" !important;
+}
+
+.s-icon.anticon-canzhao:before {
+  content: "\e6fe";
+  color: #adb4bc;
+  font-size: 16px;
+  font-family: "iconfont" !important;
+  line-height: 28px;
+}
+
+// fix: ys 默认方案箭头/下拉按钮箭头
+.s-icon.anticon-down:before {
+  content: '\e633';
+  font-family: 'iconfont' !important;
+  font-size: 12px;
+  transform: scale(.8);
+}
+
+.anticon-canzhao:before {
+  content: "\e6fe";
+  color: #adb4bc;
+  font-size: 16px;
+  font-family: "iconfont" !important;
+  line-height: 28px;
+}
+
+.anticon-down:before {
+  content: '\e633';
+  font-family: 'iconfont' !important;
+  font-size: 12px;
+  transform: scale(.8);
+}
+
+.anticon-canzhao:hover:before {
+  color: #505766;
 }
 
 // 必填
@@ -36,10 +80,14 @@
 }
 
 // 树展开图标
-.anticon-minus-square-o:before {
-  font-family: "uf" !important;
-  content: "\e6ce" !important;
+.anticon.anticon-minus-square-o:before {
+  content: "\e672" !important;
   font-weight: bold;
+}
+
+.anticon.anticon-ellipsis:before {
+  content: "\e521" !important;
+  font-family: "iconfont" !important;
 }
 
 // 下拉框选项勾选态
