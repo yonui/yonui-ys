@@ -109,3 +109,4 @@ package-lock.json
 # Mac
 .DS_Store
 es
+.idea/

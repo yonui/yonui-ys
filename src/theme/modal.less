@@ -3548,6 +3548,7 @@
       &.no-data {
         color: #999;
         text-align: left;
+        padding-left: 6px;
       }
 
       &:hover {
@@ -5303,4 +5304,81 @@
 
 .u-modal .refer-toolbar .refer-toobar-wrapper {
   .refer-search-mixin();
+}
+
+/*参照最大化*/
+.refer-modal-header {
+  .refer-header-icon {
+    font-size: 14px;
+    margin-right: 16px;
+    color: #999999;
+    &:hover {
+      color: #EE2233;
+      cursor: pointer;
+    }
+  }
+  .refer-header-close {
+    font-size: 14px;
+    color: #999999;
+    &:hover {
+      color: #EE2233;
+      cursor: pointer;
+    }
+  }
+}
+.referModal.refer-modal-maximize {
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  padding-bottom: 0 !important;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  height: unset;
+  width: unset !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  .u-modal-content {
+    box-shadow: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .modal-body {
+      flex: 1;
+      overflow-y: scroll;
+    }
+    .modal-header {
+
+    }
+  }
+}
+//无iframe
+.no-iframe .referModal.refer-modal-maximize {
+  height: unset;
+  width: unset;
+  top: 83px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  margin: 0;
+}
+.no-iframe {
+  .u-modal-open .u-modal {
+    overflow-y: hidden;
+  }
+  .u-modal .u-modal-body {
+    overflow-x: hidden;
+  }
+  .u-modal .u-modal-header {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 10px 15px;
+  }
+}
+
+ .u-modal  .u-modal-content  .u-modal-header {
+  padding: 10px 15px;
 }

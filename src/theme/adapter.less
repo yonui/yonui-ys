@@ -16,8 +16,6 @@
   }
 }
 
-
-
 .viewSetting.viewCell {
   .basic-input-textarea {
     // fix: 材料出库，表单中有textarea 时，外部div 默认比内嵌textarea 高出一定像素
@@ -581,12 +579,6 @@ div[id='pc_attachmentgrouplist|lookat1'] {
   }
 }
 
-div[id='pc_product|detail!businessAttribute']>div,
-.basic-tagarea.has-feedback,
-.control-radio {
-  .form-lable-top-mixin();
-}
-
 // 参照关闭按钮微调，使垂直居中
 .viewSetting.viewCell {
   .refer-div {
@@ -982,4 +974,54 @@ div[id="st_transferapplylist"],
 div[id="st_morphologyconversionlist"],
 div[id="st_transferreqlist"] {
   min-width: 1200px;
+}
+//TINPER-5221
+.st_wareandinv_ware.u-modal{
+  button[id='st_wareandinv_ware|btnAddRow']{
+    margin-right: 20px;
+  }
+}
+//TINPER-5224
+.aa_vendor.u-modal{
+  button[id='aa_vendor|btnSaveAndAdd']{
+    margin-left: 8px !important;
+  }
+}
+
+
+.meta-table .columnSetting .SettingBtn.u-button {
+  text-align: left;
+  &:hover {
+    background-color: #f7f9fd;
+  }
+}
+
+
+.Manual-calculation-left .meta-default-container {
+  height: auto;
+}
+
+.container-edit-mode.container-greater-height {
+  height: 100%;
+}
+
+.crossArea .fr {
+  width: auto;
+  min-width: 266px;
+
+  .crossArea-list-content {
+    padding-top: 15px;
+    padding-right: 30px;
+  }
+}
+
+.viewSetting.viewCell {
+.ant-row{
+  line-height: @base-input-height;
+  min-height: @base-input-height + 4;//兼容多语的title两行正常显示
+}
+}
+
+i.anticon:before {
+  display: block;
 }

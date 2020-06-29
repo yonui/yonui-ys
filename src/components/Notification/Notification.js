@@ -10,31 +10,32 @@ function unDefined (target) {
   return target === undefined;
 }
 
-let instance = null;
+let instance = {};
 
 function notice (args) {
-  const { description, position, duration, icon } = args;
+  const { description, position, duration, icon,container,serviceCode } = args;
   let message = args.message;
-
-  if (instance == null) {
-    Notification.newInstance({ position }, n => {
+  
+  if (instance[serviceCode] == null) {
+    Notification.newInstance({ position,container }, n => {
       if (icon) {
         message = <div className='notification-icon-title'>
           {icon}
           <span>{message}</span>
         </div>;
       }
-      instance = n;
-      instance.notice({
+      instance[serviceCode]=n;
+      instance[serviceCode].notice({
         title: message,
         content: description,
         color: 'light',
         duration: duration,
         onClose: args.onClose ? args.onClose : noop
       });
+      
     });
   } else {
-    instance.notice({
+    instance[serviceCode].notice({
       title: message,
       content: description,
       color: 'light',
@@ -49,13 +50,13 @@ const api = {
 
   },
   close (key) {
-    instance && instance.remove(key)
+    instance[serviceCode] && instance[serviceCode].remove(key)
   },
   notice
 };
 
 ['open', 'success', 'info', 'warning', 'error'].forEach(type => {
-  api[type] = ({ duration, message, description, placement, icon, style }) => {
+  api[type] = ({ duration, message, description, placement, icon, style,container,serviceCode='notification' }) => {
     switch (type) {
       case 'info':
         icon = <Icon type='uf-i' />;
@@ -78,7 +79,9 @@ const api = {
       position: placement || 'topRight',
       message,
       icon,
-      description
+      description,
+      container,
+      serviceCode,
     });
   };
 });
