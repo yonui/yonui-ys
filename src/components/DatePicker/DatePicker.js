@@ -39,7 +39,7 @@ class DatePickerAdapter extends Component {
   render () {
     const {dateTimeType} = this.props;
     // 支持首选项中的所有格式
-    const dateFormats = window.cb && cb.format.getDefaultDateFormats(dateTimeType);
+    const dateFormats = window.cb && cb.format.getDefaultDateFormats(dateTimeType,this.props.format);
     const a2tProps = {
       ...this.props,
       onChange: this.onChangeEventAdapter,
