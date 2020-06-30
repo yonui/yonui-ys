@@ -1,2 +1,2 @@
-import Con from './Con'
+import Con from './_Con'
 export default Con
