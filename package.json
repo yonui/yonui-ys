@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "1.0.92",
+  "version": "1.0.93",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
