@@ -1901,29 +1901,44 @@ i.anticon.anticon-ellipsis {
   color: #999;
   margin-left: 3px;
 }
+.Toolbar_Notification {
+  width: 384px;
+  .u-notification-notice-closable {
+    padding-right: 16px;
+  }
+  .u-notification-notice-close {
+    top: 15px;
+    right: 16px;
+    color: #999;
+    &:hover {
+      color: #ee2233;
+    }
+  }
+}
 
 .Toolbar_Notification_Img {
   width: 28px;
   height: 28px;
   float: left;
   margin-right: 16px;
-  background-image: url(./images/Backstage1.png);
+  background-image: url(./images/batch-operation.svg);
   background-size: 100% 100%;
 }
 
 .Toolbar_Notification_Img.Toolbar_Notification_Img_import {
-  background-image: url(./images/Backstage2.png);
+  background-image: url(./images/batch-operation.svg);
 }
 
 .Toolbar_Notification_Desc1 {
   font-size: 15px;
+  font-weight:500;
   line-height: 21px;
   color: #333;
-  line-height: 17px;
   margin-bottom: 5px;
 }
 
 .Toolbar_Notification_Desc2 {
+  margin-left: 44px;
   color: #666;
 }
 
@@ -1932,6 +1947,15 @@ i.anticon.anticon-ellipsis {
   line-height: 17px;
   color: #666;
   margin-top: 6px;
+  .Toolbar_Notification_Count {
+    color: #333;
+  }
+  .Toolbar_Notification_SucessCount {
+    color: #18B681;
+  }
+  .Toolbar_Notification_FailCount {
+    color: #EE2223;
+  }
 }
 
 a.Toolbar_Notification_Log {
