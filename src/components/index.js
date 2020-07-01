@@ -10,7 +10,7 @@ import CarouselFigure from './Carousel';
 import Layout from './Layout';
 import Row from './Row';
 import Col from './Col';
-import Con from './Con';
+import Con from './_Con';
 import Card from './Card';
 import Dropdown from './Dropdown';
 import DatePicker from './DatePicker';

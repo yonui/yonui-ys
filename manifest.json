@@ -16,7 +16,7 @@
     "Layout": "./src/components/Layout",
     "Row": "./src/components/Row",
     "Col": "./src/components/Col",
-    "Con": "./src/components/Con",
+    "Con": "./src/components/_Con",
     "Collapse": "./src/components/Collapse",
     "Cascader": "./src/components/Cascader",
     "Carousel": "./src/components/Carousel",
