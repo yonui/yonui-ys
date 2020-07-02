@@ -1,8 +1,8 @@
 const path = require('path');
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
-const babel = require("gulp-babel");
 const rimraf = require('rimraf');
 
 const argvs = process.argv.splice(2, process.argv.length)
@@ -13,14 +13,48 @@ const targetPath = process.env.MDF_DEBUG_TARGET || path.join(__dirname, '../yony
 const targetPackage = path.join(targetPath, 'node_modules/yonui-ys/lib')
 const targetLib = path.resolve('.', targetPackage);
 
+// babel 配置文件
 const babelConfig = {
   presets: [
-    "@babel/preset-env",
-    "@babel/preset-react"
+    '@babel/preset-env',
+    '@babel/preset-react'
   ],
   plugins: [
-    "@babel/plugin-proposal-class-properties"
+    '@babel/plugin-proposal-class-properties'
   ]
+}
+
+function log(message) {
+  console.log('\x1B[32m' + message + '\x1B[39m');
+}
+
+/**
+ * 编译js 文件，并输出到执行路径
+ * @param source 输人路径
+ * @param target 输出路径
+ */
+function compileJs(target = './lib', cb) {
+  const task = gulp.src(['./src/**/*.js'])
+    .pipe(plumber());
+
+  if (sourcemap) {
+    task.pipe(sourcemaps.init())
+      .pipe(babel(babelConfig))
+      .on('error', () => { process.exit(1) })
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest(target))
+      .on('end', () => { })
+
+    cb && cb();
+    return task
+  }
+
+  task.pipe(babel(babelConfig))
+    .on('error', () => { process.exit(1) })
+    .pipe(gulp.dest(target));
+
+  cb && cb();
+  return task;
 }
 
 gulp.task('style', (done) => {
@@ -38,26 +72,8 @@ gulp.task('style', (done) => {
   done();
 })
 
-gulp.task("js", function (done) {
-  const task = gulp.src("./src/**/*.js")
-    .pipe(plumber());
-
-  if (sourcemap) {
-    task.pipe(sourcemaps.init())
-      .pipe(babel(babelConfig))
-      .on('error', () => { process.exit(1) })
-      .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('./lib'))
-      .on('end', () => { })
-
-    return task
-  }
-
-  task.pipe(babel(babelConfig))
-    .on('error', () => { process.exit(1) })
-    .pipe(gulp.dest("./lib/"));
-
-  return task;
+gulp.task('js', () => {
+  return compileJs();
 });
 
 gulp.task('clean', (done) => {
@@ -72,6 +88,30 @@ gulp.task('debug', gulp.series(['style', 'js'], (done) => {
   gulp.src(['./lib/**'])
     .pipe(gulp.dest(targetLib))
 
-  console.log('compile is finished.')
+  log('compile success');
+
+  const cssWatch = gulp.watch([
+    'src/**/*.less',
+    'src/**/*.css'], function (done) {
+      done();
+    });
+
+  const jsWatch = gulp.watch([
+    './src/**/*.js'
+  ], function (done) {
+    done();
+  })
+
+  cssWatch.on('change', function (_path) {
+    gulp.src(['src/**/*.less', 'src/**/*.css'], { base: 'src' })
+      .pipe(gulp.dest(targetLib));
+    log(`style File ${_path} was changed`, '->', targetLib);
+  });
+
+  jsWatch.on('change', function (_path) {
+    compileJs(targetLib);
+    log(`js File ${_path} was changed`, '->', targetLib);
+  });
+
   done();
 }));
