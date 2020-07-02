@@ -9,7 +9,8 @@ const propTypes = {
   spin: PropTypes.bool
 };
 const defaultProps = {
-  clsPrefix: 'anticon'
+  clsPrefix: 'anticon',
+  type: ''
 };
 
 const Icon = props => {
@@ -21,7 +22,7 @@ const Icon = props => {
     ...restProps
   } = props;
   let key = clsPrefix+'-'+type;
-  if(clsPrefix=='uf')key=type;
+  if(clsPrefix === 'uf' && type.indexOf('uf-') > -1) key = type;
   const classString = classNames(
     's-icon',
     {
