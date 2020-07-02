@@ -40,7 +40,7 @@ function compileJs(target = './lib', cb) {
   if (sourcemap) {
     task.pipe(sourcemaps.init())
       .pipe(babel(babelConfig))
-      .on('error', () => { process.exit(1) })
+      // .on('error', () => { process.exit(1) })
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(target))
       .on('end', () => { })
@@ -50,7 +50,7 @@ function compileJs(target = './lib', cb) {
   }
 
   task.pipe(babel(babelConfig))
-    .on('error', () => { process.exit(1) })
+    // .on('error', () => { process.exit(1) })
     .pipe(gulp.dest(target));
 
   cb && cb();
@@ -60,20 +60,22 @@ function compileJs(target = './lib', cb) {
 gulp.task('style', (done) => {
   gulp.src([
     'src/**/*.less',
-    'src/**/*.css',
-    'src/**/font.js',
-    'src/**/iconfont.js',
-    'src/**/index.js',
-    'src/**/index.jsx',
-    'src/**/filtercontainer.jsx'
+    'src/**/*.css'
   ])
-    .pipe(gulp.dest('./lib'))
+    .pipe(gulp.dest('./lib'));
+
+  gulp.src([
+    'src/theme/**/*.js',
+    'src/theme/**/*.jsx'
+  ])
+    .pipe(gulp.dest('./lib/theme'));
 
   done();
 })
 
-gulp.task('js', () => {
-  return compileJs();
+gulp.task('js', (done) => {
+  compileJs();
+  done();
 });
 
 gulp.task('clean', (done) => {
