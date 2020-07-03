@@ -766,10 +766,6 @@
       }
     }
 
-    .ant-form-explain {
-      // line-height: 32px;
-    }
-
     .ant-select {
       .ant-checkbox-group {
         width: 500px;
@@ -1090,27 +1086,27 @@
     //新增收款协议协议有效期添加特殊类名
     .enableStartDate {
       .has-related {
-        // display: block;
-
         .viewCell {
-          width: 45.8333%;
+          width: ~'calc(50% - 15px)';
         }
 
         .width-percent-100 {
-          width: 54.1667%;
+          width: ~'calc(50% + 15px)' !important;
           margin-left: 0px;
+
+          .enableEndDate>.ant-row {
+            min-height: 28px;
+          }
 
           .label-control {
             margin-left: 0px;
-            width: 15.3845444% !important;
-            margin-right: 0px;
-            padding-left: 0px;
+            width: 30px !important;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
             text-align: center;
             line-height: 28px;
-          }
-
-          .control-width {
-            width: 84.6154556% !important;
+            flex: 0 0 30px;
           }
         }
       }
