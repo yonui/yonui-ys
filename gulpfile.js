@@ -34,7 +34,7 @@ function log(message) {
  * @param target 输出路径
  */
 function compileJs(target = './lib', cb) {
-  const task = gulp.src(['./src/**/*.js'])
+  const task = gulp.src(['./src/**/*.js', '!./src/theme/**/*.js'])
     .pipe(plumber());
 
   if (sourcemap) {
