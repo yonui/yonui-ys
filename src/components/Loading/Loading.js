@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 import React, { Component } from 'react';
-import Loading from './simple';
+import Loading from 'bee-loading';
 
 // 值映射
 const sizeMap = {
@@ -25,7 +25,7 @@ class LoadingAdapter extends Component {
       ...this.props,
       show: this.props.hasOwnProperty('spinning') ? this.props.spinning : true,
       size: sizeMap[this.props.size] || 'sm',
-      container: this.needContainer ? this.getContainer : null
+      container: this.needContainer ? this.getContainer : this.props.container,
     };
 
     if (this.needContainer) {

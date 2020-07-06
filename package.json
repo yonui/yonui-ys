@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "1.0.101",
+  "version": "1.1.1",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
@@ -51,7 +51,7 @@
     "bee-input-number": "2.2.36",
     "bee-label": "1.0.0",
     "bee-layout": "1.2.7",
-    "bee-loading": "2.0.2",
+    "bee-loading": "3.0.1",
     "bee-loading-state": "2.0.5",
     "bee-locale": "1.0.4",
     "bee-menus": "2.0.11",
