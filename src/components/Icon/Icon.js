@@ -29,6 +29,7 @@ const Icon = props => {
     {
       [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
+      [`${key}`]: Boolean(type)
     },
     className
   );
