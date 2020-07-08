@@ -27,7 +27,7 @@ const Icon = props => {
     's-icon',
     `s-icon-${type}`,
     {
-      [`${clsPrefix}`]: true,
+      // [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
       // [`${key}`]: Boolean(type)
     },

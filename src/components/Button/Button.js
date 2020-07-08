@@ -84,7 +84,7 @@ class ButtonAdapter extends Component {
       if (ant2tinper[icon]) {
         return <i className={ant2tinper[icon]} />;
       }
-      const cls = iconType === 'iconfont' ? `icon iconfont icon-${icon}` : `anticon anticon-${icon}`;
+      const cls = iconType === 'iconfont' ? `icon iconfont icon-${icon}` : `s-icon s-icon-${icon}`;
       return <i className={cls} />;
     }
 
