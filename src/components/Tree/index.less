@@ -4,7 +4,7 @@
       background-color: #edf1f7;
     }
     a.u-tree-node-content-wrapper {
-      width: calc(~'100% - 16px');
+      width: calc(~'100% - 16px') !important;
       padding: 0;
       color: @custom-color;
 
@@ -62,11 +62,11 @@
       }
 
     }
-    ul li{
-      a.u-tree-node-content-wrapper{
-        width: calc(~'100% - 11px');
-      }
-    }
+    // ul li{
+    //   a.u-tree-node-content-wrapper{
+    //     width: calc(~'100% - 11px');
+    //   }
+    // }
     &.u-tree-treenode-focused > a {
       background-color: transparent;
       .u-tree-title {
