@@ -2,7 +2,7 @@
 @import '../../static/antd/anticon.less';
 
 .anticon,
-.s-icon.anticon
+.s-icon
  {
   display: inline-block;
   font-style: normal;
@@ -15,19 +15,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.s-icon.anticon:before {
+.s-icon:before {
   display: block;
   font-family: 'iconfont' !important;
 }
 
-.s-icon.anticon-zuidahua:before {
+.s-icon-zuidahua:before {
   content: "\e7cc";
   color: #999;
   font-size: 16px;
   font-family: "iconfont" !important;
 }
 
-.s-icon.anticon-canzhao:before {
+.s-icon-canzhao:before {
   content: "\e6fe";
   color: #adb4bc;
   font-size: 16px;
@@ -35,57 +35,32 @@
   line-height: 28px;
 }
 
-// fix: ys 默认方案箭头/下拉按钮箭头
-.s-icon.anticon-down:before {
+.s-icon-down:before {
   content: '\e633';
   font-family: 'iconfont' !important;
   font-size: 12px;
   transform: scale(.8);
 }
 
-.anticon-canzhao:before {
-  content: "\e6fe";
-  color: #adb4bc;
-  font-size: 16px;
-  font-family: "iconfont" !important;
-  line-height: 28px;
-}
-
-.anticon-down:before {
-  content: '\e633';
-  font-family: 'iconfont' !important;
-  font-size: 12px;
-  transform: scale(.8);
-}
-
-.anticon-canzhao:hover:before {
+.s-icon-canzhao:hover:before {
   color: #505766;
 }
 
-// 必填
-.anticon.anticon-star {
-  &:before{
-    content: "\e605";
-    font-family: 'iconfont' !important;
-  }
-}
-
-.anticon.anticon-close-circle {
+.s-icon-close-circle {
   &:before {
     font-family: "uf" !important;
     content: "\e66b" !important;
-    font-size: 14px; // fix: 工厂模型，机台生产状态
     color: #adb4bc; // fix: 工厂模型，机台生产状态
   }
 }
 
 // 树展开图标
-.anticon.anticon-minus-square-o:before {
+.s-icon-minus-square-o:before {
   content: "\e672" !important;
   font-weight: bold;
 }
 
-.anticon.anticon-ellipsis:before {
+.s-icon-ellipsis:before {
   content: "\e521" !important;
   font-family: "iconfont" !important;
 }
@@ -116,8 +91,9 @@
 }
 
 // fix: 基础数据，弹框，添加查询条件 分别：x up down
-.anticon-guanbi1:before .anticon-shanchucopy1:before,
-.anticon-shanchucopy2:before {
+.s-icon-guanbi1:before,
+.s-icon-shanchucopy1:before,
+.s-icon-shanchucopy2:before {
   font-family: 'iconfont' !important;
 }
 
@@ -141,4 +117,77 @@ i.uf-calendar:before {
 
 .uf-location:before {
   content: "\e78b";
+}
+
+.s-icon-zuixiaohua2::before {
+  content: "\e80f";
+}
+
+.s-icon-star {
+  color: #ff0000;
+  margin-right: 4px;
+  transform: scale(0.75);
+  width: 10px;
+  &:before {
+    content: "\e605";
+  }
+}
+
+.s-icon-weidongjie:before {
+  content: "\e789";
+}
+
+.s-icon-up:before {
+  content: '\e633';
+  transform: rotate(180deg) scale(.8);
+}
+
+.s-icon-down-circle:before {
+  content: "\e685"!important;
+}
+
+.s-icon-up-circle:before {
+  content: "\e684"!important;
+}
+
+.ant-row .s-icon-star {
+  margin-left: -14px;
+  vertical-align: -.04em;
+  color: #ff0000;
+  margin-right: 4px;
+  transform: scale(0.75);
+  transform-origin: 0 center;
+  width: 10px;
+}
+
+.s-icon-close:before {
+  content: "\e636";
+}
+
+.s-icon-ellipsis {
+  margin-right: 20px;
+  &:before {
+    content: "\e521";
+  }
+}
+
+.s-icon-bangzhu:before{
+  content: "\e66a";
+  font-size: 16px;
+  line-height: 28px;
+  color: #ccc;
+}
+
+.s-icon-shanchucopy2:before {
+  content: "\e676";
+}
+
+// 向下
+.s-icon-shanchucopy1:before {
+  content: "\e66d";
+}
+
+// 删除
+.s-icon-guanbi1:before {
+  content: "\e636";
 }

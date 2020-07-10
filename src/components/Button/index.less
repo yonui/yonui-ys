@@ -425,11 +425,11 @@
 }
 
 
-.u-button-border:not(.cancelScheme):focus,
-.u-button-border:not(.cancelScheme):active,
-.u-button-border:not(.cancelScheme):hover {
-   background-color: transparent !important;
-}
+// .u-button-border:not(.cancelScheme):focus,
+// .u-button-border:not(.cancelScheme):active,
+// .u-button-border:not(.cancelScheme):hover {
+//    background-color: transparent !important;
+// }
 
 .u-modal-footer {
   .u-button {
@@ -552,6 +552,10 @@
   .u-button {
     border-radius: 0;
     border-color: #d9d9d9;
+
+    &:hover {
+      background-color: unset;
+    }
 
     &:first-child:not(:last-child) {
       border-top-left-radius: 4px;

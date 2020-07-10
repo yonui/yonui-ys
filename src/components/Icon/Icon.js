@@ -25,10 +25,9 @@ const Icon = props => {
   if(clsPrefix === 'uf' && type.indexOf('uf-') > -1) key = type;
   const classString = classNames(
     's-icon',
+    `s-icon-${type}`,
     {
-      [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
-      [`${key}`]: Boolean(type)
     },
     className
   );
