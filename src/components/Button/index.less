@@ -625,3 +625,15 @@
 .u-modal-footer .u-button {
   display: inline-block;
 }
+
+.bottom-toolbar.footer-btns button {
+  float: none;
+  &:first-child {
+    background: #dbe0e5;
+    color: #535a69 !important;
+  }
+  &:last-child:not(.u-button-primary) {
+    color: #fff ;
+  background: linear-gradient(-45deg, #fc4c2f, #ee2223);
+  }
+}
