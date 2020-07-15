@@ -711,7 +711,7 @@
         }
 
         .u-input-group-btn {
-          .anticon-close-circle {
+          .yonicon-close-circle {
             right: 6px;
           }
         }
@@ -764,10 +764,6 @@
       .ant-input {
         width: 100% !important
       }
-    }
-
-    .ant-form-explain {
-      // line-height: 32px;
     }
 
     .ant-select {
@@ -1090,27 +1086,27 @@
     //新增收款协议协议有效期添加特殊类名
     .enableStartDate {
       .has-related {
-        // display: block;
-
         .viewCell {
-          width: 45.8333%;
+          width: ~'calc(50% - 15px)';
         }
 
         .width-percent-100 {
-          width: 54.1667%;
+          width: ~'calc(50% + 15px)' !important;
           margin-left: 0px;
+
+          .enableEndDate>.ant-row {
+            min-height: 28px;
+          }
 
           .label-control {
             margin-left: 0px;
-            width: 15.3845444% !important;
-            margin-right: 0px;
-            padding-left: 0px;
+            width: 30px !important;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
             text-align: center;
             line-height: 28px;
-          }
-
-          .control-width {
-            width: 84.6154556% !important;
+            flex: 0 0 30px;
           }
         }
       }
@@ -1631,6 +1627,16 @@
     width: 100% !important;
   }
 }
+// editVoucherlist 查询区样式
+.container-edit-mode {
+  .listheadRow {
+    .up-show {
+      .up-search {
+        margin-left: 10px;
+      }
+    } 
+  } 
+}
 
 //门店经营范围浏览态调整
 .container-browse-mode {
@@ -1731,11 +1737,11 @@
         transition: transform .3s;
         transition: transform .3s, -webkit-transform .3s;
 
-        &.anticon-plus-square-o {
+        &.yonicon-plus-square-o {
           transform: rotate(90deg) scale(.59);
         }
 
-        &.anticon-minus-square-o {
+        &.yonicon-minus-square-o {
           transform: rotate(180deg) scale(.59);
         }
       }
@@ -1924,16 +1930,6 @@ i.uf-search,
 .ant-calendar-picker:hover .ant-calendar-picker-input:not([disabled]) {
   color: #ccc;
   border-color: #505766;
-}
-
-.ant-row .anticon-star {
-  margin-left: -14px;
-  vertical-align: -.04em;
-  color: #ff0000;
-  margin-right: 4px;
-  transform: scale(0.75);
-  transform-origin: 0 center;
-  width: 10px;
 }
 
 .xuliehao-haborder {

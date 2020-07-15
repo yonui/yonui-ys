@@ -340,7 +340,7 @@
     margin-left: 0px;
   }
 
-  .table-header-name label i.anticon-star {
+  .table-header-name label i.yonicon-star {
     color: #f00;
     margin-top: -2px;
   }
@@ -2621,7 +2621,7 @@ a.Toolbar_Notification_Log {
           }
         }
 
-        .anticon-close-circle {
+        .yonicon-close-circle {
           position: absolute;
           top: 0;
           right: 52px;
@@ -3724,8 +3724,9 @@ div[id='bd_staff_card|photo'] {
   line-height: 28px !important;
   cursor: pointer;
 
-  .anticon-delete:before {
+  .yonicon-delete:before {
     font-size: 16px;
+    content: "\E68F";
   }
 }
 
@@ -4065,37 +4066,37 @@ div[id='bd_staff_card|photo'] {
             &:hover {
               background: #F3F5F9;
 
-              .anticon-tuodong:before {
+              .yonicon-tuodong:before {
                 color: #231815;
               }
 
-              .anticon-biaogeshanchu {
+              .yonicon-biaogeshanchu {
                 display: block;
               }
 
-              .anticon-biaogeshanchu:hover::before {
+              .yonicon-biaogeshanchu:hover::before {
                 color: #ee2233;
               }
             }
           }
 
-          .anticon-tuodong {
+          .yonicon-tuodong {
             margin-right: 5px;
           }
 
-          .anticon-tuodong:before {
+          .yonicon-tuodong:before {
             color: #CACACA;
             font-size: 13px;
           }
 
-          .anticon-biaogeshanchu {
+          .yonicon-biaogeshanchu {
             position: absolute;
             right: 12px;
             top: 10px;
             display: none;
           }
 
-          .anticon-biaogeshanchu::before {
+          .yonicon-biaogeshanchu::before {
             font-size: 14px;
             color: #505766;
           }
@@ -4259,17 +4260,17 @@ div[id='bd_staff_card|photo'] {
         border: 1px dashed #505766;
         box-shadow: 1px 0 10px rgba(0, 0, 0, .1);
 
-        .anticon-tianjiashuliang:before {
+        .yonicon-tianjiashuliang:before {
           color: #505766;
         }
       }
 
-      .anticon-tianjiashuliang {
+      .yonicon-tianjiashuliang {
         display: block;
         margin-top: 24px;
       }
 
-      .anticon-tianjiashuliang:before {
+      .yonicon-tianjiashuliang:before {
         font-size: 26px;
         color: #BCBCBC;
       }
@@ -4981,7 +4982,7 @@ div[id='bd_staff_card|photo'] {
         padding-left: 0px !important;
         padding-right: 0px;
 
-        .anticon-bangzhu:hover {
+        .yonicon-bangzhu:hover {
           cursor: pointer;
 
           &::before {
@@ -5074,7 +5075,7 @@ div[id='bd_staff_card|photo'] {
         right: 20px;//TINPER-2677
       }
 
-      .anticon-close-circle {
+      .yonicon-close-circle {
         top: 9px;
       }
     }
@@ -5764,5 +5765,11 @@ div[id='bd_staff_card|photo'] {
   div[id='yxyweb-support-mount-popover'] {
     width: 100%;
     height: 100%;
+  }
+}
+
+.jDiwork-container{
+  &>.ant-row.meta-default-container{
+    padding-bottom: 50px;
   }
 }

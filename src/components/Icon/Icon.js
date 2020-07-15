@@ -9,7 +9,7 @@ const propTypes = {
   spin: PropTypes.bool
 };
 const defaultProps = {
-  clsPrefix: 'anticon',
+  clsPrefix: 'yonicon',
   type: ''
 };
 
@@ -24,11 +24,10 @@ const Icon = props => {
   let key = clsPrefix+'-'+type;
   if(clsPrefix === 'uf' && type.indexOf('uf-') > -1) key = type;
   const classString = classNames(
-    's-icon',
+    'yonicon',
+    `yonicon-${type}`,
     {
-      [`${clsPrefix}`]: true,
       [`${clsPrefix}-spin`]: !!spin || type === 'loading',
-      [`${key}`]: Boolean(type)
     },
     className
   );

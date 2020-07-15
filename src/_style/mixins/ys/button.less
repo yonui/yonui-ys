@@ -217,10 +217,10 @@
 // 没有分割线的下拉按钮
 .no-split-drown-button-mixin() {
   padding: 0 10px;
-  i.anticon {
+  i.yonicon {
     margin-left: 4px;
     margin-right: -2px;
-    &.anticon-up {
+    &.yonicon-up {
       transform: translateY(-1px);
     }
   }
@@ -426,6 +426,16 @@
     float: right;
   }
 
+  .up-show {
+    .filter-reset {
+      .reset-button-mixin();
+      float: right;
+      margin-right: 2px;
+    }
+  }
+}
+// editVoucherlist 查询区样式
+.container-edit-mode{
   .up-show {
     .filter-reset {
       .reset-button-mixin();

@@ -395,6 +395,7 @@
     &:hover {
       color: #505766;
       border-color: #505766;
+      background-color: unset;
     }
     &:disabled {
       opacity: .5;
@@ -425,11 +426,11 @@
 }
 
 
-.u-button-border:not(.cancelScheme):focus,
-.u-button-border:not(.cancelScheme):active,
-.u-button-border:not(.cancelScheme):hover {
-   background-color: transparent !important;
-}
+// .u-button-border:not(.cancelScheme):focus,
+// .u-button-border:not(.cancelScheme):active,
+// .u-button-border:not(.cancelScheme):hover {
+//    background-color: transparent !important;
+// }
 
 .u-modal-footer {
   .u-button {
@@ -553,6 +554,10 @@
     border-radius: 0;
     border-color: #d9d9d9;
 
+    &:hover {
+      background-color: unset;
+    }
+
     &:first-child:not(:last-child) {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
@@ -620,4 +625,16 @@
 // fix: 弹框底部按钮，文字过长时省略
 .u-modal-footer .u-button {
   display: inline-block;
+}
+
+.bottom-toolbar.footer-btns button {
+  float: none;
+  &:first-child {
+    background: #dbe0e5;
+    color: #535a69 !important;
+  }
+  &:last-child:not(.u-button-primary) {
+    color: #fff ;
+  background: linear-gradient(-45deg, #fc4c2f, #ee2223);
+  }
 }
