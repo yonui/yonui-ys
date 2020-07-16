@@ -31,9 +31,10 @@ class TabsAdapter extends Component {
           ...this.props.tabBarStyle
         },
         tabBarPosition: this.props.tabPosition,
-        tabBarStyle: tabBarStyleTypeMap[this.props.type]
+        tabBarStyle: tabBarStyleTypeMap[this.props.type],
+        className:'ys-tabs'
       };
-      return <Tabs {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>;
+      return <Tabs  {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>
     }
 }
 
