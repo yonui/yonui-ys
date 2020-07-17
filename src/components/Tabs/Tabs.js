@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from 'bee-tabs';
 
 const tabBarStyleTypeMap = {
@@ -20,6 +19,7 @@ class TabsAdapter extends Component {
       // Todo：单独把 change 事件抽取出来，而不直接使用 props，因为onchange 会被其他组件（如radio ）触发
       const {
         onChange,
+        className,
         ...others
       } = this.props;
 
@@ -32,7 +32,7 @@ class TabsAdapter extends Component {
         },
         tabBarPosition: this.props.tabPosition,
         tabBarStyle: tabBarStyleTypeMap[this.props.type],
-        className:'ys-tabs'
+        className: 'ys-tabs ' + className
       };
       return <Tabs  {...newProps} onChange={this.handleChange}>{this.props.children}</Tabs>
     }
