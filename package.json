@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "1.1.1-snapshot.42",
+  "version": "1.1.1",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
@@ -44,7 +44,7 @@
     "bee-drawer": "0.0.7",
     "bee-dropdown": "2.0.11",
     "bee-form": "2.0.12",
-    "bee-form-control": "2.0.22",
+    "bee-form-control": "2.0.23",
     "bee-form-group": "2.0.0",
     "bee-icon": "^1.0.15",
     "bee-input-group": "2.0.3",
