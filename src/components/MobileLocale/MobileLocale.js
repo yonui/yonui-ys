@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import Url from 'c-url';
 import Select from 'bee-select';
 import FormControl from 'bee-form-control';
 import countryList from './CountryLocale';
+import _Locale from '../lang';
 
 const Option = Select.Option;
 
@@ -19,17 +21,19 @@ const propTypes = {
   disabled: PropTypes.bool,
   validate: PropTypes.func,//自定义校验方法，return true校验成功，return false 校验失败
 }
+
 const defaultProps = {
   className: '',
   countryList: countryList,
-  placeholder: window.YonyouLang("YS_FED_FW_YONUI_00050005") /* "请输入您的手机号" */,
+  placeholder: '',
 }
 
-const zhcnInfo = { shoupinyin: 'Z', en: 'China', country: window.YonyouLang("YS_FED_FW_YONUI_00050003") /* "中国" */, locale: 'CN', country_code: 86 };
-
 class MobileLocale extends Component {
+
   constructor(props) {
     super(props);
+    const zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale("YS_FED_FW_YONUI_00050003") /* "中国" */, locale: 'CN', country_code: 86 };
+
     const { country_code, mobile } = props
     const countryObj = country_code ? this.getFindObj(country_code) : null;
     this.state = {
@@ -37,6 +41,41 @@ class MobileLocale extends Component {
       country: countryObj ? countryObj.country : zhcnInfo.country,
       mobile: mobile || '',
     }
+  }
+
+  getLanguage = () => {
+    let lang = "zh_CN";
+    let global = window.cb?.lang?.lang;
+    if(global)return global;
+    globa = window.cb?.rest.AppContext?.globalization || global;
+    if (global?.locale) {
+      return global || global?.locale;
+    }
+    if (window && Url.query('locale')) { // url 配置页面语言
+      lang = Url.query('locale');
+    } else if (this.getCookie('locale')) {
+      lang = this.getCookie('locale');
+    } else if (global?.locale) {
+      lang = global.locale;
+    } else { // 系统浏览器语言
+    }
+    if (!lang) console.error('Please add the _lang parameter to the browser !');
+    return lang;
+  }
+
+  getCookie = (name) => {
+    const reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
+    const arr = document && document.cookie.match(reg)
+    if (arr) {
+      return unescape(arr[2]);
+    } else {
+      return null;
+    }
+  }
+
+  getLocale = (key) => {
+    let lang = this.getLanguage() || "zh_CN";
+    return _Locale[lang][key];
   }
 
   componentWillReceiveProps(nextProps) {
@@ -81,12 +120,14 @@ class MobileLocale extends Component {
 
   render() {
     const { country_code, mobile } = this.state
-    const { countryList, selectProps, className, inputProps, placeholder, disabled } = this.props;
+    const { countryList, selectProps, className, inputProps, placeholder: _placeholder, disabled } = this.props;
     const _defaultValue = zhcnInfo.country_code;
     let styleProp = {}
     if (this.state.elWidth) {
       styleProp = { width: parseInt(this.state.elWidth) };
     }
+
+    let placeholder = _placeholder || this.getLocale("YS_FED_FW_YONUI_00050005") /* "请输入您的手机号" */
 
     return (
       <div className={`mobile-locale ${className}`} ref='the_input'>
@@ -137,5 +178,5 @@ class MobileLocale extends Component {
 }
 
 MobileLocale.propTypes = propTypes;
-MobileLocale.defaultProps = defaultProps;
+// MobileLocale.defaultProps = defaultProps;
 export default MobileLocale;

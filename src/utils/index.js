@@ -1,5 +1,6 @@
 /* eslint-disable no-prototype-builtins */
-
+// import Url from 'c-url';
+// import Locale from './locale';
 /**
  * 深拷贝
  * @param {*} obj
@@ -88,3 +89,36 @@ export function isNumericalValue (target) {
 export function isFunction (target) {
   return Object.prototype.toString.call(target) === '[object Function]';
 }
+
+function getLanguage() {
+  let lang = "zh_CN";
+  const globa = window.cb?.lang?.lang || window.cb?.rest.AppContext?.globalization || null;
+  if (globa?.locale) {
+      return globa.locale;
+  }
+  if (window && Url.query('locale')) { // url 配置页面语言
+      lang = Url.query('locale');
+  } else if (getCookie('locale')) {
+      lang = getCookie('locale');
+  } else if (globa?.locale) {
+      lang = globa.locale;
+  } else { // 系统浏览器语言
+  }
+  if (!lang) console.error('Please add the _lang parameter to the browser !');
+  return lang;
+}
+
+// function getCookie(name) {
+//   const reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
+//   const arr = document && document.cookie.match(reg)
+//   if (arr) {
+//     return unescape(arr[2]);
+//   } else {
+//     return null;
+//   }
+// }
+
+// export function getLocale (key) {
+//   let lang = getLanguage();
+//   return Locale[lang]?Locale[lang][key]:Locale['zh_CN'][key];
+// }

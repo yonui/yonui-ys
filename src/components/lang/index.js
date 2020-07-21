@@ -1,6 +1,5 @@
-
-module.exports = {
-  zhcn: {
+const locale= {
+  zh_CN: {
     "YS_FED_FW_YONUI_00050006": "暂无数据~",
     "YS_FED_FW_YONUI_00050005": "请输入您的手机号",
     "YS_FED_FW_YONUI_00050004": "√",
@@ -9,7 +8,7 @@ module.exports = {
     "YS_FED_FW_YONUI_00050001": "取消",
     "YS_FED_FW_YONUI_00050000": "条/页"
   },
-  zhtw: {
+  zh_TW: {
     "YS_FED_FW_YONUI_00050006": "暫無數據~",
     "YS_FED_FW_YONUI_00050005": "請輸入您的手機號",
     "YS_FED_FW_YONUI_00050004": "√",
@@ -19,7 +18,7 @@ module.exports = {
     "YS_FED_FW_YONUI_00050000": "條/頁"
   }
   ,
-  enus: {
+  en_US: {
     "YS_FED_FW_YONUI_00050006": "No data",
     "YS_FED_FW_YONUI_00050005": "Enter Mobile account",
     "YS_FED_FW_YONUI_00050004": "√",
@@ -29,3 +28,11 @@ module.exports = {
     "YS_FED_FW_YONUI_00050000": "per page"
   },
 }
+
+module.exports = locale;
+//  {
+
+//   getLocale:(key)=>{
+//     return ""//locale[cb.lang.lang][key]
+//   }
+// }

@@ -1,8 +1,10 @@
 // ModalAdapter
 import React, { Component } from 'react';
+import Url from 'c-url';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';
+import _Locale from '../lang';
 
 const { Header, Body, Footer, Title } = Modal;
 
@@ -13,10 +15,47 @@ const defaultProps = {
   _innerType: ''
 };
 
+
+
 class ModalAdapter extends Component {
   constructor (props) {
     super(props);
     this.target = this.getContainerTarget();
+  }
+
+  getLanguage = () => {
+    let lang = "zh_CN";
+    let global = window.cb?.lang?.lang;
+    if (global) return global;
+    global = window.cb?.rest.AppContext?.globalization || null;
+    if (global?.locale) {
+      return global?.locale;
+    }
+    if (window && Url.query('locale')) { // url 配置页面语言
+      lang = Url.query('locale');
+    } else if (this.getCookie('locale')) {
+      lang = this.getCookie('locale');
+    } else if (global?.locale) {
+      lang = global.locale;
+    } else { // 系统浏览器语言
+    }
+    if (!lang) console.error('Please add the _lang parameter to the browser !');
+    return lang;
+  }
+
+  getCookie = (name) => {
+    const reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
+    const arr = document && document.cookie.match(reg)
+    if (arr) {
+      return unescape(arr[2]);
+    } else {
+      return null;
+    }
+  }
+
+  getLocale = (key) => {
+    let lang = this.getLanguage() || "zh_CN";
+    return _Locale[lang][key];
   }
 
   getContainerTarget () {
@@ -30,8 +69,8 @@ class ModalAdapter extends Component {
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
-          <Button onClick={onCancel} colors='secondary' className='s-cancel-button'>{cancelText || window.YonyouLang("YS_FED_FW_YONUI_00050001") /* "取消" */}</Button>
-          <Button onClick={onOk} colors='primary' className='s-ok-button'>{okText || window.YonyouLang("YS_FED_FW_YONUI_00050002") /* "确认" */}</Button>
+          <Button onClick={onCancel} colors='secondary' className='s-cancel-button'>{cancelText || this.getLocale("YS_FED_FW_YONUI_00050001") /* "取消" */}</Button>
+          <Button onClick={onOk} colors='primary' className='s-ok-button'>{okText || this.getLocale("YS_FED_FW_YONUI_00050002") /* "确认" */}</Button>
         </span>
       </Footer>
     );
