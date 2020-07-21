@@ -22,10 +22,10 @@ const propTypes = {
 const defaultProps = {
   className: '',
   countryList: countryList,
-  placeholder: '请输入您的手机号',
+  placeholder: window.YonyouLang("YS_FED_FW_YONUI_00050005") /* "请输入您的手机号" */,
 }
 
-const zhcnInfo = { shoupinyin: 'Z', en: 'China', country: '中国', locale: 'CN', country_code: 86 };
+const zhcnInfo = { shoupinyin: 'Z', en: 'China', country: window.YonyouLang("YS_FED_FW_YONUI_00050003") /* "中国" */, locale: 'CN', country_code: 86 };
 
 class MobileLocale extends Component {
   constructor(props) {

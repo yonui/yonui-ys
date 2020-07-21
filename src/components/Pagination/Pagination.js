@@ -22,7 +22,7 @@ class PaginationAdapter extends Component {
 
     renderPageSizeOptions = (options) => {
       return options.map((item) => {
-        return item + ' 条/页';
+        return item + window.YonyouLang("YS_FED_FW_YONUI_00050000") /* "条/页" */;
       });
     }
 

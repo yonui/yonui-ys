@@ -14,7 +14,7 @@ class SelectAdapter extends Component {
       const selectProps = ('value' in other && typeof other.value === 'undefined' && 'defaultValue' in other) ? {...omit(other, ['value'])} : {...other};
       return <Select
         {...selectProps}
-        notFoundContent='暂无数据~'
+        notFoundContent={window.YonyouLang("YS_FED_FW_YONUI_00050006") /* "暂无数据~" */}
         dropdownMatchSelectWidth // 传进来的是false，但不明白有什么意义
         combobox={mode === 'combobox'}
         onKeyDown={onInputKeyDown}

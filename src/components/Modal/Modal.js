@@ -30,8 +30,8 @@ class ModalAdapter extends Component {
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
-          <Button onClick={onCancel} colors='secondary' className='s-cancel-button'>{cancelText || '取消'}</Button>
-          <Button onClick={onOk} colors='primary' className='s-ok-button'>{okText || '确认'}</Button>
+          <Button onClick={onCancel} colors='secondary' className='s-cancel-button'>{cancelText || window.YonyouLang("YS_FED_FW_YONUI_00050001") /* "取消" */}</Button>
+          <Button onClick={onOk} colors='primary' className='s-ok-button'>{okText || window.YonyouLang("YS_FED_FW_YONUI_00050002") /* "确认" */}</Button>
         </span>
       </Footer>
     );
