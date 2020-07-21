@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Url from 'c-url';
+import Url from '../c-url';
 import Select from 'bee-select';
 import omit from 'omit.js';
 import _Locale from '../lang';

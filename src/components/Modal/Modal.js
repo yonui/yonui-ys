@@ -1,6 +1,6 @@
 // ModalAdapter
 import React, { Component } from 'react';
-import Url from 'c-url';
+import Url from '../c-url';
 import Modal from 'bee-modal';
 import Button from 'bee-button';
 import omit from 'omit.js';

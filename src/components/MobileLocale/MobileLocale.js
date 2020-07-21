@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Url from 'c-url';
+import Url from '../c-url';
 import Select from 'bee-select';
 import FormControl from 'bee-form-control';
 import countryList from './CountryLocale';

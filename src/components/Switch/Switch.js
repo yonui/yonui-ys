@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Url from 'c-url';
+import Url from '../c-url';
 import Switch from 'bee-switch';
 import _Locale from '../lang';
 

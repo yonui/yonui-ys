@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "1.1.1-snapshot.48",
+  "version": "1.1.1-snapshot.49",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
@@ -86,7 +86,6 @@
     "bee-tree-select": "0.0.5",
     "bee-upload": "2.1.1",
     "bee-viewer": "0.1.7",
-    "c-url": "^1.0.2",
     "classnames": "^2.2.6",
     "fixed-data-table-2": "^0.8.28",
     "libraui-extension": "^0.7.3",

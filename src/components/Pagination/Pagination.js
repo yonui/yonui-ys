@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Url from 'c-url';
+import Url from '../c-url';
 import Pagination from 'bee-pagination';
 import { findIndex } from '../../utils';
 import _Locale from '../lang';

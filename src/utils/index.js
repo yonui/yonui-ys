@@ -1,6 +1,4 @@
 /* eslint-disable no-prototype-builtins */
-// import Url from 'c-url';
-// import Locale from './locale';
 /**
  * 深拷贝
  * @param {*} obj
