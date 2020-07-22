@@ -49,7 +49,7 @@ class SwitchAdapter extends Component {
   switchChildren = (checked) => {
     if (process.env.__THEMETYPE__ !== 'ncc') return;
     if (checked) {
-      return getLocale("YS_FED_FW_YONUI_00050004") /* "√" */
+      return this.getLocale("YS_FED_FW_YONUI_00050004") /* "√" */
     } else {
       return 'X'
     }

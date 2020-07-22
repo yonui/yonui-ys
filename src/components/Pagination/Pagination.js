@@ -58,7 +58,7 @@ class PaginationAdapter extends Component {
     
     renderPageSizeOptions = (options) => {
       return options.map((item) => {
-        return item + getLocale("YS_FED_FW_YONUI_00050000") /* "条/页" */;
+        return item + this.getLocale("YS_FED_FW_YONUI_00050000") /* "条/页" */;
       });
     }
 
