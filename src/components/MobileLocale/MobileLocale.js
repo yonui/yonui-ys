@@ -47,7 +47,7 @@ class MobileLocale extends Component {
     let lang = "zh_CN";
     let global = window.cb?.lang?.lang;
     if(global)return global;
-    globa = window.cb?.rest.AppContext?.globalization || global;
+    global = window.cb?.rest.AppContext?.globalization || global;
     if (global?.locale) {
       return global || global?.locale;
     }
