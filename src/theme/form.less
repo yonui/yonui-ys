@@ -646,14 +646,16 @@
     width: 80px;
     color: #e8e8e8;
 
-    .anticon-noPic {
+    .anticon-noPic，
+    .yonicon-noPic {
       display: inline-block;
       background: url(./images/no-pic.png) no-repeat;
       width: 60px;
       height: 46px;
     }
 
-    .anticon-noFile {
+    .anticon-noFile，
+    .yonicon-noFile {
       display: inline-block;
       background: url(./images/no-file.png) no-repeat;
       width: 51px;
@@ -720,15 +722,19 @@
     .control-width{
         //编辑态输入框
         .u-input-group,.ant-select,.ac-input-locale{
-            width: 400px;
+            width: 400px!important;
         }
         //浏览态输入框
         .control-text{
             width: 400px;
         }
-        //地图
-        .map-row{
-            width: 400px;
+    }
+    .map{
+        .control-width{
+            //地图
+            .map-row{
+                width: 400px;
+            }
         }
     }
     .tag-refer-01 {
@@ -2054,9 +2060,6 @@ i.uf-search,
 /*盘点-范围-品类*/
 
 .st_storecheckplanhead .group-container .viewContainer.width-percent-33 {
-  .input-control {
-    width: 60% !important;
-  }
 
   .ant-select {
     width: 100% !important;
