@@ -1,6 +1,25 @@
-.u-select-tree li span.u-select-tree-switcher_close:before{
-    content: "\e604";
+.u-select-tree li span.u-select-tree-switcher_close:before {
+  content: "\e52a";
+  transform: rotate(180deg) scale(.6);
 }
-.u-select-tree li span.u-select-tree-switcher_open:before{
-    content: "\e719";
+
+.u-select-tree li span.u-select-tree-switcher_open:before {
+  content: "\e672";
+  transform: scale(.6);
+}
+
+.u-select-tree li span.u-select-tree-switcher {
+  padding-left: 0;
+  width: 14px;
+  height: 14px;
+  line-height: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  &:before {
+    display: inline-block;
+    font-family: 'iconfont';
+    margin-left: -1px;
+  }
 }
