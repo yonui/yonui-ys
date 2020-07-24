@@ -144,7 +144,7 @@ class MobileLocale extends Component {
               const current = countryList.find(value => String(value.country_code) === key, e);
               this.onChange({ country_code: current.country_code, country: current.country, mobile });
             }}>
-            {countryList.map((account) => <Option key={account.country_code} value={String(account.country_code)}>
+            {countryList && countryList.map((account) => <Option key={account.country_code} value={String(account.country_code)}>
               <span>{account.country}</span>
               <span className='opt1'>+{account.country_code}</span>
             </Option>)}
@@ -178,5 +178,5 @@ class MobileLocale extends Component {
 }
 
 MobileLocale.propTypes = propTypes;
-// MobileLocale.defaultProps = defaultProps;
+MobileLocale.defaultProps = defaultProps;
 export default MobileLocale;
