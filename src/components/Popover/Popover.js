@@ -1,26 +1,26 @@
 // PopoverAdapter
-import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
+import React, { Component } from 'react'
+import { findDOMNode } from 'react-dom'
 
-import Popover from 'bee-popover';
-import classnames from 'classnames';
-import omit from 'omit.js';
+import Popover from 'bee-popover'
+import classnames from 'classnames'
+import omit from 'omit.js'
 
 const defaultProps = {
   placement: 'bottom',
-  trigger: 'click', // fix: 智能录入弹框不显示
+  trigger: 'click' // fix: 智能录入弹框不显示
 }
 
 class PopoverAdapter extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       visible: this.props.visible || false
     }
   }
 
   componentDidMount () {
-    this.target = this.getContainerTarget();
+    this.target = this.getContainerTarget()
   }
 
   componentWillReceiveProps (nextProps) {
@@ -32,8 +32,8 @@ class PopoverAdapter extends Component {
   }
 
   onClick = () => {
-    const { onVisibleChange } = this.props;
-    onVisibleChange && onVisibleChange(true);
+    const { onVisibleChange } = this.props
+    onVisibleChange && onVisibleChange(true)
     this.setState({
       visible: true
     })
@@ -43,28 +43,28 @@ class PopoverAdapter extends Component {
     if (visible) {
       return
     }
-    const { onVisibleChange } = this.props;
-    onVisibleChange && onVisibleChange(visible);
-    this.setState({ visible });
+    const { onVisibleChange } = this.props
+    onVisibleChange && onVisibleChange(visible)
+    this.setState({ visible })
   }
 
   getContainerTarget = () => {
-    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer(findDOMNode(this)) : this.props.getPopupContainer;
+    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer(findDOMNode(this)) : this.props.getPopupContainer
   }
 
   render () {
-    const { children, overlayClassName, tinperClassName, className, onVisibleChange, placement, trigger, overlayStyle, _innerType, ...other } = this.props;
-    const { visible } = this.state;
+    const { children, overlayClassName, tinperClassName, className, onVisibleChange, placement, trigger, overlayStyle, _innerType, ...other } = this.props
+    const { visible } = this.state
 
-    const cls = classnames(overlayClassName, tinperClassName, 'ant-popover');
-    const innerSpanCls = classnames(_innerType, 's-popover-inner-span');
+    const cls = classnames(overlayClassName, tinperClassName, 'ant-popover')
+    const innerSpanCls = classnames(_innerType, 's-popover-inner-span')
 
     // if (!process.env.__CLIENT__) {
     //   // 修复服务端渲染 Popover 问题
     //   return <div />;
     // }
     if (trigger === 'hover') {
-      if(onVisibleChange){
+      if (onVisibleChange) {
         return (
           <Popover
             {...omit(other, ['getPopupContainer'])}
@@ -81,7 +81,7 @@ class PopoverAdapter extends Component {
             </span>
           </Popover>
         )
-      }else{
+      } else {
         return (
           <Popover
             {...omit(other, ['visible', 'getPopupContainer'])}
@@ -97,7 +97,6 @@ class PopoverAdapter extends Component {
           </Popover>
         )
       }
-      
     }
 
     return (
@@ -115,9 +114,9 @@ class PopoverAdapter extends Component {
           {children}
         </span>
       </Popover>
-    );
+    )
   }
 }
 
-PopoverAdapter.defaultProps = defaultProps;
-export default PopoverAdapter;
+PopoverAdapter.defaultProps = defaultProps
+export default PopoverAdapter

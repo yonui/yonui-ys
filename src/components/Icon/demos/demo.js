@@ -4,13 +4,13 @@
  */
 import React, { Component } from 'react'
 import Icon from '../index'
-import '../style';
-import './demo.less';
+import '../style'
+import './demo.less'
 import '../../../theme/index.less'
 export default class Demo extends Component {
-    render() {
-        return (
-            <Icon type="uf-star" clsPrefix='uf'/>
-        )
-    }
+  render () {
+    return (
+      <Icon type='uf-star' clsPrefix='uf' />
+    )
+  }
 }

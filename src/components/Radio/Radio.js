@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import Radio from 'bee-radio';
-import classnames from 'classnames';
+import React, { Component } from 'react'
+import Radio from 'bee-radio'
+import classnames from 'classnames'
 
 const antd2tinper = {
   small: 'sm',
   default: 'sm',
   large: 'lg'
-};
+}
 
 class RadioAdapter extends Component {
     onChangeChecked = () => {
       const {
         checked,
         onChange
-      } = this.props;
-      onChange && onChange(!checked);
+      } = this.props
+      onChange && onChange(!checked)
     }
 
     onChange = (val) => {
-      const { onChange } = this.props;
-      onChange && onChange(val);
+      const { onChange } = this.props
+      onChange && onChange(val)
     }
 
     render () {
@@ -30,21 +30,21 @@ class RadioAdapter extends Component {
         style,
         className,
         ...other
-      } = this.props;
+      } = this.props
 
-      const cls = classnames(className, 'custom-radio-wrapper');
+      const cls = classnames(className, 'custom-radio-wrapper')
       if (children) {
-        return <Radio checked={checked} onChange={(val) => { this.onChange(val) }} className={className} {...other}>{children}</Radio>;
+        return <Radio checked={checked} onChange={(val) => { this.onChange(val) }} className={className} {...other}>{children}</Radio>
       }
 
-      const checkedRadio = (<span className='custom-radio custom-radio-checked'><span className='radio-red-circle' /></span>);
-      const uncheckedRadio = (<span className='custom-radio custom-radio-unchecked' />);
+      const checkedRadio = (<span className='custom-radio custom-radio-checked'><span className='radio-red-circle' /></span>)
+      const uncheckedRadio = (<span className='custom-radio custom-radio-unchecked' />)
 
       return (
         <span onClick={this.onChangeChecked} {...other} style={{ ...style, display: 'inline-block' }} className={cls}>
           {checked ? checkedRadio : uncheckedRadio}
         </span>
-      );
+      )
     }
 }
 class RadioGroup extends Component {
@@ -53,8 +53,8 @@ class RadioGroup extends Component {
         target: {
           value: value
         }
-      };
-      this.props.onChange(res,value);
+      }
+      this.props.onChange(res, value)
     }
 
     render () {
@@ -64,10 +64,10 @@ class RadioGroup extends Component {
         onChange,
         size,
         ...other
-      } = this.props;
+      } = this.props
 
       if (children.length === 0) {
-        return null;
+        return null
       }
       return (
         <Radio.RadioGroup
@@ -79,13 +79,13 @@ class RadioGroup extends Component {
         >
           {children}
         </Radio.RadioGroup>
-      );
+      )
     }
 }
 
-RadioAdapter.Group = RadioGroup;
-RadioAdapter.RadioGroup = RadioGroup;
-RadioAdapter.RadioButton = Radio.RadioButton;
-RadioAdapter.Button = Radio.RadioButton;
+RadioAdapter.Group = RadioGroup
+RadioAdapter.RadioGroup = RadioGroup
+RadioAdapter.RadioButton = Radio.RadioButton
+RadioAdapter.Button = Radio.RadioButton
 
-export default RadioAdapter;
+export default RadioAdapter

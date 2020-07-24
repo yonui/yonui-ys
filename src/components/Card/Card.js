@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import Tile from 'bee-tile';
+import React, { Component } from 'react'
+import Tile from 'bee-tile'
 
 class CardAdapter extends Component {
     renderTitle = (title) => {
       if (title) {
         return <div className='u-tile-title'>
           <h3 className='u-tile-title-text'>{title}</h3>
-        </div>;
+        </div>
       }
-      return null;
+      return null
     }
 
     renderExtra = (extra) => {
       return <div className='u-tile-extra'>
         {extra}
-      </div>;
+      </div>
     }
 
     render () {
-      const { children, bordered, title, bodyStyle, extra, ...other } = this.props;
-      const titleElement = title && this.renderTitle(title);
-      const extraElement = extra && this.renderExtra(extra);
+      const { children, bordered, title, bodyStyle, extra, ...other } = this.props
+      const titleElement = title && this.renderTitle(title)
+      const extraElement = extra && this.renderExtra(extra)
       return (
         <Tile
           {...other}
@@ -30,8 +30,8 @@ class CardAdapter extends Component {
           {extraElement}
           <div className='u-tile-content' style={bodyStyle}>{children}</div>
         </Tile>
-      );
+      )
     }
 }
 
-export default CardAdapter;
+export default CardAdapter

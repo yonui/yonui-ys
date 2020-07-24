@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Step from 'bee-step';
+import Step from 'bee-step'
 
-
-
-export default Step;
+export default Step

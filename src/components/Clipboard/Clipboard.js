@@ -1,3 +1,3 @@
-import Clipboard from 'bee-clipboard';
+import Clipboard from 'bee-clipboard'
 
-export default Clipboard;
+export default Clipboard

@@ -1,3 +1,3 @@
-import Timeline from 'bee-timeline';
+import Timeline from 'bee-timeline'
 
-export default Timeline;
+export default Timeline

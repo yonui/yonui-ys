@@ -1,2 +1,2 @@
-import AutoComplete from 'bee-autocomplete';
-export default AutoComplete;
+import AutoComplete from 'bee-autocomplete'
+export default AutoComplete

@@ -14,8 +14,8 @@
     "no-prototype-builtins": "warn",
     "object-curly-spacing": "warn",
     "react/prop-types": "off",
-    "react/jsx-handler-names": "off",
-    "semi": [2, "always"]
+    "react/jsx-handler-names": "off"
+    // "semi": [2, "always"]
   },
   "parserOptions": {
     "ecmaVersion": 7,

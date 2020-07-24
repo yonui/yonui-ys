@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import FormControl from 'bee-form-control';
-import omit from 'omit.js';
+import React, { Component } from 'react'
+import classnames from 'classnames'
+import FormControl from 'bee-form-control'
+import omit from 'omit.js'
 
-const eventList = ['onChange', 'onSearch'];
+const eventList = ['onChange', 'onSearch']
 function filterNotEvent (obj) {
-  const result = {};
+  const result = {}
   Object.keys(obj).map(key => {
     if (!eventList.includes(key)) {
-      result[key] = obj[key];
+      result[key] = obj[key]
     }
-  });
-  return result;
+  })
+  return result
 }
 
 class Search extends Component {
   constructor (props) {
-    super(props);
+    super(props)
 
     this.state = {
       style: props.style,
@@ -24,12 +24,12 @@ class Search extends Component {
       value: props.value || props.defaultValue,
       placeholder: props.placeholder,
       attrs: filterNotEvent(props)
-    };
+    }
   }
 
   componentWillReceiveProps (nextProps) {
-    const { value: newValue } = nextProps;
-    const { value: oldValue } = this.props;
+    const { value: newValue } = nextProps
+    const { value: oldValue } = this.props
     if (newValue !== oldValue) {
       this.setState({
         value: newValue
@@ -38,18 +38,18 @@ class Search extends Component {
   }
 
   handleEvent = (val, e, propEvent) => {
-    const fn = this.props[propEvent];
+    const fn = this.props[propEvent]
 
     if (propEvent === 'onSearch') {
-      fn && fn(val);
+      fn && fn(val)
     } else {
-      fn && fn(e);
+      fn && fn(e)
     }
 
     if (propEvent === 'onChange') {
       this.setState({
         value: val
-      });
+      })
     }
   }
 
@@ -59,7 +59,7 @@ class Search extends Component {
       className,
       attrs,
       style
-    } = this.state;
+    } = this.state
 
     return (
       <span className={classnames(className, 'u-form-control-search-container')} style={style}>
@@ -75,8 +75,8 @@ class Search extends Component {
           type='search'
         />
       </span>
-    );
+    )
   }
 }
 
-export default Search;
+export default Search

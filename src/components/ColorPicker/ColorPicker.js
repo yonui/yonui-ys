@@ -1,3 +1,3 @@
-import ColorPicker from 'bee-colorpicker';
+import ColorPicker from 'bee-colorpicker'
 
-export default ColorPicker;
+export default ColorPicker

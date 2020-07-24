@@ -1,3 +1,3 @@
-import Label from 'bee-label';
+import Label from 'bee-label'
 
-export default Label;
+export default Label

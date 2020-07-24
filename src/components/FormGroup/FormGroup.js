@@ -1,3 +1,3 @@
-import FormGroup from 'bee-form-group';
+import FormGroup from 'bee-form-group'
 
-export default FormGroup;
+export default FormGroup

@@ -1,3 +1,3 @@
-import Backtop from 'bee-backtop';
+import Backtop from 'bee-backtop'
 
-export default Backtop;
+export default Backtop

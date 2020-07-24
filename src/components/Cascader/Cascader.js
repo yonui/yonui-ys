@@ -5,22 +5,22 @@
  *
  * 整体替换结果未知
  */
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Cascader from 'bee-cascader';
+import Cascader from 'bee-cascader'
 
 const defaultProps = {
   value: []
-};
+}
 
 class CascaderAdapter extends Component {
   render () {
-    const { getPopupContainer, displayRender, ...other } = this.props;
+    const { getPopupContainer, displayRender, ...other } = this.props
     return (
       <Cascader {...other} />
-    );
+    )
   }
 }
 
-CascaderAdapter.defaultProps = defaultProps;
-export default CascaderAdapter;
+CascaderAdapter.defaultProps = defaultProps
+export default CascaderAdapter

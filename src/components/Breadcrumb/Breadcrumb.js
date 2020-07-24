@@ -1,3 +1,3 @@
-import Breadcrumb from 'bee-breadcrumb';
+import Breadcrumb from 'bee-breadcrumb'
 
-export default Breadcrumb;
+export default Breadcrumb

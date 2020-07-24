@@ -1,3 +1,3 @@
-import Tile from 'bee-tile';
+import Tile from 'bee-tile'
 
-export default Tile;
+export default Tile

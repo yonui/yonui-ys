@@ -1,5 +1,5 @@
-import { PanelGroup,Panel }  from 'bee-panel';
+import { PanelGroup, Panel } from 'bee-panel'
 
-Panel.PanelGroup = PanelGroup;
+Panel.PanelGroup = PanelGroup
 
-export default Panel;
+export default Panel

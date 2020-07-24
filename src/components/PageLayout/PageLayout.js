@@ -1,3 +1,3 @@
-import PageLayout from 'bee-page-layout';
+import PageLayout from 'bee-page-layout'
 
-export default PageLayout;
+export default PageLayout

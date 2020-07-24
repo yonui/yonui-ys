@@ -1,3 +1,3 @@
-import Popconfirm from 'bee-popconfirm';
+import Popconfirm from 'bee-popconfirm'
 
-export default Popconfirm;
+export default Popconfirm

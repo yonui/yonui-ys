@@ -1,21 +1,21 @@
 /* eslint-disable no-prototype-builtins */
-import React, { Component } from 'react';
-import Loading from 'bee-loading';
+import React, { Component } from 'react'
+import Loading from 'bee-loading'
 
 // 值映射
 const sizeMap = {
   small: 'sm',
   default: 'sm',
   large: 'lg'
-};
+}
 
 class LoadingAdapter extends Component {
   constructor (props, context) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
 
-    this.needContainer = props.hasOwnProperty('children');
-    this.textTip = props.hasOwnProperty('tip') ? props.tip : null;
+    this.needContainer = props.hasOwnProperty('children')
+    this.textTip = props.hasOwnProperty('tip') ? props.tip : null
   }
 
   getContainer = () => document.getElementById('u-loading-container');
@@ -25,8 +25,8 @@ class LoadingAdapter extends Component {
       ...this.props,
       show: this.props.hasOwnProperty('spinning') ? this.props.spinning : true,
       size: sizeMap[this.props.size] || 'sm',
-      container: this.needContainer ? this.getContainer : this.props.container,
-    };
+      container: this.needContainer ? this.getContainer : this.props.container
+    }
 
     if (this.needContainer) {
       return (
@@ -34,13 +34,13 @@ class LoadingAdapter extends Component {
           {this.props.children}
           <Loading {...a2tProps}>{this.textTip}</Loading>
         </div>
-      );
+      )
     }
 
     return (
       <Loading {...a2tProps}>{this.textTip}</Loading>
-    );
+    )
   }
 }
 
-export default LoadingAdapter;
+export default LoadingAdapter

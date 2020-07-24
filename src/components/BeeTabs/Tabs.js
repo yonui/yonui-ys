@@ -1,3 +1,3 @@
-import Tabs from 'bee-tabs';
+import Tabs from 'bee-tabs'
 
-export default Tabs;
+export default Tabs

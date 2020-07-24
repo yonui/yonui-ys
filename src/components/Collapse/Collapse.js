@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
-import Collapse from 'bee-collapse';
+import React, { Component } from 'react'
+import Collapse from 'bee-collapse'
 
 class CollapseAdapter extends Component {
   render () {
-    const { className, children, ...other } = this.props;
-    const cls = `${className} collapse`;
+    const { className, children, ...other } = this.props
+    const cls = `${className} collapse`
     return (
       <div className={cls} {...other}>
         {children}
       </div>
-    );
+    )
   }
 }
 
 class PanelAdapter extends Component {
   constructor (props) {
-    super(props);
+    super(props)
 
     this.state = {
       open: false
-    };
+    }
   }
 
     openCollapse = () => {
       this.setState({
         open: !this.state.open
-      });
+      })
     }
 
     render () {
-      const { header } = this.props;
-      const icon = this.state.open ? 'uf-arrow-down' : 'uf-arrow-right';
+      const { header } = this.props
+      const icon = this.state.open ? 'uf-arrow-down' : 'uf-arrow-right'
       return (
         <div className='collapse-item'>
           <div className='collapse-item-header' onClick={this.openCollapse}>
@@ -47,9 +47,9 @@ class PanelAdapter extends Component {
 
         </div>
 
-      );
+      )
     }
 }
 
-CollapseAdapter.Panel = PanelAdapter;
-export default CollapseAdapter;
+CollapseAdapter.Panel = PanelAdapter
+export default CollapseAdapter

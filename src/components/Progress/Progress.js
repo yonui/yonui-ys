@@ -1,3 +1,3 @@
 
-import Progress from 'bee-progress';
-export default Progress;
+import Progress from 'bee-progress'
+export default Progress

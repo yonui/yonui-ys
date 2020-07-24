@@ -1,3 +1,3 @@
-import Button from 'bee-button';
+import Button from 'bee-button'
 
-export default Button;
+export default Button
