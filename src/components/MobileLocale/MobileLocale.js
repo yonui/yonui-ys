@@ -32,13 +32,13 @@ class MobileLocale extends Component {
 
   constructor(props) {
     super(props);
-    const zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale("YS_FED_FW_YONUI_00050003") /* "中国" */, locale: 'CN', country_code: 86 };
+    this.zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale("YS_FED_FW_YONUI_00050003") /* "中国" */, locale: 'CN', country_code: 86 };
 
     const { country_code, mobile } = props
     const countryObj = country_code ? this.getFindObj(country_code) : null;
     this.state = {
-      country_code: countryObj ? countryObj.country_code : zhcnInfo.country_code,
-      country: countryObj ? countryObj.country : zhcnInfo.country,
+      country_code: countryObj ? countryObj.country_code : this.zhcnInfo.country_code,
+      country: countryObj ? countryObj.country : this.zhcnInfo.country,
       mobile: mobile || '',
     }
   }
@@ -114,14 +114,14 @@ class MobileLocale extends Component {
 
   getFindObj = (code) => {
     const { countryList } = this.props;
-    if (!countryList) return zhcnInfo;
+    if (!countryList) return this.zhcnInfo;
     return countryList.forEach(da => da.country_code === code);
   }
 
   render() {
     const { country_code, mobile } = this.state
     const { countryList, selectProps, className, inputProps, placeholder: _placeholder, disabled } = this.props;
-    const _defaultValue = zhcnInfo.country_code;
+    const _defaultValue = this.zhcnInfo.country_code;
     let styleProp = {}
     if (this.state.elWidth) {
       styleProp = { width: parseInt(this.state.elWidth) };
