@@ -49,16 +49,18 @@ class SelectAdapter extends Component {
     render () {
       const { onInputKeyDown, mode, ...other } = this.props
       const selectProps = ('value' in other && typeof other.value === 'undefined' && 'defaultValue' in other) ? { ...omit(other, ['value']) } : { ...other }
-      return <Select
-        {...selectProps}
-        notFoundContent={this.getLocale('YS_FED_FW_YONUI_00050006') /* "暂无数据~" */}
-        dropdownMatchSelectWidth // 传进来的是false，但不明白有什么意义
-        combobox={mode === 'combobox'}
-        onKeyDown={onInputKeyDown}
-        enterKeyDown={__THEMETYPE__ !== 'ys'}
-      >
-        {this.props.children}
-      </Select>
+      return (
+        <Select
+          {...selectProps}
+          notFoundContent={this.getLocale('YS_FED_FW_YONUI_00050006') /* "暂无数据~" */}
+          dropdownMatchSelectWidth // 传进来的是false，但不明白有什么意义
+          combobox={mode === 'combobox'}
+          onKeyDown={onInputKeyDown}
+          enterKeyDown={__THEMETYPE__ !== 'ys'}
+        >
+          {this.props.children}
+        </Select>
+      )
     }
 }
 

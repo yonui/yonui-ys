@@ -224,11 +224,13 @@ class GroupAdapter extends Component {
       ))
     }
 
-    return <div {...others} className={classnames(className, 's-checkgroup-wrapper')} ref={el => { this.checkgroup = el }} tabIndex='0' onFocus={this.handleFocus}>
-      {
-        React.Children.map(children, child => React.cloneElement(child, { className: classnames(child.props.className, 's-checkgroup-inner-item') }))
-      }
-    </div>
+    return (
+      <div {...others} className={classnames(className, 's-checkgroup-wrapper')} ref={el => { this.checkgroup = el }} tabIndex='0' onFocus={this.handleFocus}>
+        {
+          React.Children.map(children, child => React.cloneElement(child, { className: classnames(child.props.className, 's-checkgroup-inner-item') }))
+        }
+      </div>
+    )
   }
 }
 

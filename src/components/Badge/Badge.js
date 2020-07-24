@@ -60,9 +60,11 @@ class BadgeAdapter extends Component {
 
     // TODO: antd 的 Badge style 属性会传递给子元素，这里暂未做处理
     return (
-      condition ? <Badge dataBadge={dataBadge} colors={$status} {...others} className={classnames(innerClassName, className)}>
-        {children}
-      </Badge> : null
+      condition ? (
+        <Badge dataBadge={dataBadge} colors={$status} {...others} className={classnames(innerClassName, className)}>
+          {children}
+        </Badge>
+      ) : null
     )
   }
 }

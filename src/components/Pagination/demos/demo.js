@@ -4,7 +4,6 @@
  */
 import React, { Component } from 'react'
 import Pagination from '../index'
-import Button from '../../Button'
 import '../style'
 import './demo.less'
 import '../../../theme/index.less'

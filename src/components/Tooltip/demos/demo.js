@@ -16,13 +16,14 @@ export default class Demo extends Component {
         这是一个很强的提醒！
       </div>
     )
-    return (<div>
-      <Tooltip inverse overlay={tip}>
-        <Button colors='primary'>
-          鼠标滑过显示
-        </Button>
-      </Tooltip>
-    </div>
+    return (
+      <div>
+        <Tooltip inverse overlay={tip}>
+          <Button colors='primary'>
+            鼠标滑过显示
+          </Button>
+        </Tooltip>
+      </div>
     )
   }
 }
