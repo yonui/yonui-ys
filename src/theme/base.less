@@ -114,6 +114,7 @@
   height: calc(~'100% - 46px');
 }
 
+
 .portal-spin {
   position: absolute;
   top: 50%;
@@ -122,6 +123,14 @@
   text-align: center;
   transform: translate(-50%, -50%);
   z-index: 11111;
+
+  .u-loading-spin {
+    animation: uRotate 1s 0s linear infinite;
+    
+    img {
+      width: 40px;
+    }
+  }
 }
 
 .tootip-txt {
