@@ -4,17 +4,21 @@ import Tile from 'bee-tile'
 class CardAdapter extends Component {
     renderTitle = (title) => {
       if (title) {
-        return <div className='u-tile-title'>
-          <h3 className='u-tile-title-text'>{title}</h3>
-        </div>
+        return (
+          <div className='u-tile-title'>
+            <h3 className='u-tile-title-text'>{title}</h3>
+          </div>
+        )
       }
       return null
     }
 
     renderExtra = (extra) => {
-      return <div className='u-tile-extra'>
-        {extra}
-      </div>
+      return (
+        <div className='u-tile-extra'>
+          {extra}
+        </div>
+      )
     }
 
     render () {

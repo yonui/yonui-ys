@@ -91,23 +91,25 @@ class InputAdapter extends Component {
       type = 'text'
     }
 
-    const formControl = <FormControl
-      {...omit(others, ['value', 'defaultValue'])}
-      type={type}
-      disabled={disabled}
-      ref={(e) => { this.inputRef = e }}
-      placeholder={placeholder}
-      value={value}
-      defaultValue={defaultValue}
-      size={sizeMap[size]}
-      onKeyDown={this.handleKeyDown}
-      onChange={this.handleChange}
-      onClick={this.handleClick}
-      onBlur={this.handleBlur}
-      onFocus={this.handleFocus}
-      componentClass={componentClass}
-      title={type !== 'password' && (value || placeholder)}
-    />
+    const formControl = (
+      <FormControl
+        {...omit(others, ['value', 'defaultValue'])}
+        type={type}
+        disabled={disabled}
+        ref={(e) => { this.inputRef = e }}
+        placeholder={placeholder}
+        value={value}
+        defaultValue={defaultValue}
+        size={sizeMap[size]}
+        onKeyDown={this.handleKeyDown}
+        onChange={this.handleChange}
+        onClick={this.handleClick}
+        onBlur={this.handleBlur}
+        onFocus={this.handleFocus}
+        componentClass={componentClass}
+        title={type !== 'password' && (value || placeholder)}
+      />
+    )
 
     if (suffix || withAddon) {
       // 目前 suffix 主要用于处理参照的 icon

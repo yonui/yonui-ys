@@ -91,9 +91,9 @@ export default class Demo extends Component {
       <div className='demo1'>
         <div className='content'>
           {
-            this.state.anthors.map(item => {
+            this.state.anthors.map((item, index) => {
               return (
-                <p style={{ paddingTop: '100px' }} id={item.href}>
+                <p style={{ paddingTop: '100px' }} id={item.href} key={index}>
                   <pre>
                     {item.content}
                   </pre>
@@ -105,9 +105,9 @@ export default class Demo extends Component {
         <Anchor nid='aaa' selector='#my-awesome-nav a' offset='100px'>
           <ul id='my-awesome-nav'>
             {
-              this.state.anthors.map(item => {
+              this.state.anthors.map((item, index) => {
                 return (
-                  <li><a href={`#${item.href}`}>{item.name}</a></li>
+                  <li key={index}><a href={`#${item.href}`}>{item.name}</a></li>
                 )
               })
             }

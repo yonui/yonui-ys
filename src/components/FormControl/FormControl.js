@@ -120,12 +120,14 @@ class InputAdapter extends Component {
           }
           {formControl}
           {
-            suffix && <InputGroup.Button
-              shape='border'
-              onClick={this.handleClick}
-            >
-              {suffix}
-            </InputGroup.Button>
+            suffix && (
+              <InputGroup.Button
+                shape='border'
+                onClick={this.handleClick}
+              >
+                {suffix}
+              </InputGroup.Button>
+            )
           }
           {
             withAddon && addonAfter && <InputGroup.Addon>{addonAfter}</InputGroup.Addon>

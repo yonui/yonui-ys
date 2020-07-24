@@ -196,7 +196,7 @@ class GroupAdapter extends Component {
           value: option
         }
       }
-      option.hasOwnProperty('value') && this.optionKeys.push(option.value)
+      Object.prototype.hasOwnProperty.call(option, 'value') && this.optionKeys.push(option.value)
       return option
     })
   }
