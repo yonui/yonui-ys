@@ -3,7 +3,6 @@
  * @description: Demo Description
  */
 import React, { Component } from 'react'
-import Drawer from '../index'
 import '../style'
 import './demo.less'
 import '../../../theme/index.less'
