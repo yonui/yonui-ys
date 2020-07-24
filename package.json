@@ -127,9 +127,6 @@
     "yonui-cli": "^0.1.87",
     "yonui-extension": "^0.7.17"
   },
-  "optionalDependencies": {
-    "antd": "2.12.6"
-  },
   "author": "FED",
   "license": "MIT",
   "bugs": {
