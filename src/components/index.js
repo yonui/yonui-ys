@@ -40,7 +40,7 @@ import Tree from './Tree';
 import TreeSelect from './TreeSelect';
 import Upload from './Upload';
 import Tooltip from './Tooltip';
-//无法兼容组件导出两个
+// 无法兼容组件导出两个
 import FormControl from './FormControl';
 import BeeCheckbox from './BeeCheckbox';
 import BeeRadio from './BeeRadio';
@@ -51,7 +51,7 @@ import BeeModal from './BeeModal';
 import BeeButton from './BeeButton';
 import BeeTabs from './BeeTabs';
 import BeePopconfirm from './BeePopconfirm';
-//部分tinper组件导出
+// 部分tinper组件导出
 import Transfer from './Transfer';
 // import Grid from './Grid';
 import Panel from './Panel';

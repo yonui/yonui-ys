@@ -4,6 +4,8 @@ const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const rimraf = require('rimraf');
+const eslint = require('gulp-eslint');
+const exec = require('child_process').execSync;
 
 const argvs = process.argv.splice(2, process.argv.length)
 const sourcemap = argvs.includes('--sourcemap')
@@ -117,3 +119,32 @@ gulp.task('debug', gulp.series(['style', 'js'], (done) => {
 
   done();
 }));
+
+function OctalDecode(str) {
+  const matches = str.match(/(\\\d{3}){3}/g);
+  if (matches) matches.forEach(match => {
+    let encoded = '';
+    const splits = match.split('\\');
+    splits.forEach(code => !code || (encoded += '%' + parseInt(code, 8).toString(16)));
+    const cChar = decodeURI(encoded);
+    str = str.replace(match, cChar);
+  });
+  return str;
+}
+
+let cachedJsList = [];
+gulp.task('pre-eslint', (done) => {
+  const stdout = exec('git diff --cached --name-only', {encoding: 'utf-8'});
+  cachedJsList = stdout.split('\n')
+    .map(v => OctalDecode(v.replace(/^"|"$/g, '')))
+    .filter(v => v.endsWith('.js') && v!=='gulpfile.js');
+  // console.log('需要eslint的文件:', cachedJsList);
+  done();
+});
+
+gulp.task('eslint', () => {
+  return gulp.src(['src/components/**/**.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError('failes'));
+});
