@@ -16,12 +16,12 @@ const content = (
 )
 
 export default class Demo extends Component {
-  render () {
+  render() {
     return (<div>
       <Popover content={content} title='Title' trigger='hover'>
         <Button type='primary'>Hover me</Button>
       </Popover>
-            </div>
+    </div>
     )
   }
 }
