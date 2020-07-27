@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Anchor from 'bee-anchor';
+import Anchor from 'bee-anchor'
 
-import AnchorLink from './AnchorLink';
+import AnchorLink from './AnchorLink'
 
 class AnchorAdapter extends Component {
   constructor (props) {
-    super(props);
+    super(props)
 
-    const { className, nested } = this.props;
+    const { className, nested } = this.props
 
     this.state = {
       className,
       nested: !!nested
-    };
+    }
   }
 
   render () {
-    const { className, children, ...other } = this.props;
+    const { className, children, ...other } = this.props
 
     return (
       <Anchor selector='#my-awesome-nav a' offset='100px' nested className={className} {...other}>
@@ -25,9 +25,9 @@ class AnchorAdapter extends Component {
           {children}
         </ul>
       </Anchor>
-    );
+    )
   }
 }
 
-AnchorAdapter.Link = AnchorLink;
-export default AnchorAdapter;
+AnchorAdapter.Link = AnchorLink
+export default AnchorAdapter

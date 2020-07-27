@@ -1,6 +1,6 @@
-import * as Tinper from './tinper';
-import Locale from './lang';
-import MobileLocale from './components/MobileLocale';
+import * as Tinper from './tinper'
+import Locale from './lang'
+import MobileLocale from './components/MobileLocale'
 
 // export default {
 //     ...Tinper,
@@ -8,14 +8,12 @@ import MobileLocale from './components/MobileLocale';
 //     MobileLocale
 // }
 
-
-
-let component = null;
+let component = null
 
 component = {
-    ...Tinper,
-    Locale,
-    MobileLocale
+  ...Tinper,
+  Locale,
+  MobileLocale
 }
 
-module.exports = component;
+module.exports = component

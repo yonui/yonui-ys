@@ -1,3 +1,3 @@
-import ButtonGroup from 'bee-button-group';
+import ButtonGroup from 'bee-button-group'
 
-export default ButtonGroup;
+export default ButtonGroup

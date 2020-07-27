@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import DatePicker from 'bee-datepicker';
-import moment from 'moment';
+import React, { Component } from 'react'
+import DatePicker from 'bee-datepicker'
+import moment from 'moment'
 
 class DatePickerAdapter extends Component {
   constructor (props) {
-    super(props);
-    const locale = window.cb && cb.lang && cb.lang.langType ? cb.lang.langType.substring(0, 2) : 'zh';
-    moment.locale(locale);// 设置为英文
-    const _locale = window.cb && cb.lang ? cb.lang.lang : 'zh_CN';
-    this.locale = require('bee-datepicker/build/locale/' + _locale + '.js');
+    super(props)
+    const locale = window.cb && cb.lang && cb.lang.langType ? cb.lang.langType.substring(0, 2) : 'zh'
+    moment.locale(locale)// 设置为英文
+    const _locale = window.cb && cb.lang ? cb.lang.lang : 'zh_CN'
+    this.locale = require('bee-datepicker/build/locale/' + _locale + '.js')
   }
 
   onChangeEventAdapter = time => {
-    const { format, onChange } = this.props;
-    let timeString = null;
+    const { format, onChange } = this.props
+    let timeString = null
     if (time !== null) {
-      timeString = time.format(format);
+      timeString = time.format(format)
     }
-    onChange && onChange(time, timeString);
+    onChange && onChange(time, timeString)
   };
 
   // handleFocus = (e) => {
@@ -33,13 +33,13 @@ class DatePickerAdapter extends Component {
 
   // 日期图标
   renderIcon = () => {
-    return <i className='anticon anticon-star-o' />;
+    return <i className='anticon anticon-star-o' />
   }
 
   render () {
-    const {dateTimeType} = this.props;
+    const { dateTimeType } = this.props
     // 支持首选项中的所有格式
-    const dateFormats = window.cb && cb.format.getDefaultDateFormats(dateTimeType,this.props.format);
+    const dateFormats = window.cb && cb.format.getDefaultDateFormats(dateTimeType, this.props.format)
     const a2tProps = {
       ...this.props,
       onChange: this.onChangeEventAdapter,
@@ -48,10 +48,10 @@ class DatePickerAdapter extends Component {
       renderIcon: this.renderIcon,
       format: dateFormats,
       enterKeyDown: false
-    };
-    return <DatePicker showToday={false} {...a2tProps} />;
+    }
+    return <DatePicker showToday={false} {...a2tProps} />
   }
 }
 
-DatePickerAdapter.YearPicker = DatePicker.YearPicker;
-export default DatePickerAdapter;
+DatePickerAdapter.YearPicker = DatePicker.YearPicker
+export default DatePickerAdapter

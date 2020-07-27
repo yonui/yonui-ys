@@ -4,16 +4,16 @@
  */
 import React, { Component } from 'react'
 import DatePicker from '../index'
-import '../style';
-import './demo.less';
+import '../style'
+import './demo.less'
 import '../../../theme/index.less'
-function onChange(date, dateString) {
-    console.log(date, dateString);
-  }
+function onChange (date, dateString) {
+  console.log(date, dateString)
+}
 export default class Demo extends Component {
-    render() {
-        return (
-            <DatePicker onChange={onChange} />
-        )
-    }
+  render () {
+    return (
+      <DatePicker onChange={onChange} />
+    )
+  }
 }

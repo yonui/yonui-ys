@@ -1,3 +1,3 @@
-import { Row } from 'bee-layout';
+import { Row } from 'bee-layout'
 
-export default Row;
+export default Row

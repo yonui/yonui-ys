@@ -3141,7 +3141,7 @@
 .ant-calendar-picker,
 .ant-select,
 .ant-cascader-picker {
-  width: 100% !important;
+  width: 100%;
 }
 
 /*编辑移动模板*/
@@ -4090,12 +4090,16 @@
 // 库存查检 - 销售订单
 .u-modal .ArchiveList {
   .dnd-handle+.u-modal-body {
-    padding-top: 12px;
-    padding-bottom: 50px;
     overflow: auto;
-
+    padding: 8px 0 0px!important;
     .line-tabs {
       margin-bottom: 4px;
+    }
+    .jDiwork-container>.ant-row.meta-default-container{
+        padding-bottom: 0px;
+        .listheadRow{
+            padding: 2px 0 12px;
+        }
     }
   }
 

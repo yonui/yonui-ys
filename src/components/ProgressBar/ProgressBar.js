@@ -1,3 +1,3 @@
-import ProgressBar from 'bee-progress-bar';
+import ProgressBar from 'bee-progress-bar'
 
-export default ProgressBar;
+export default ProgressBar

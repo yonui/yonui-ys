@@ -1,15 +1,15 @@
-import Message from 'bee-message';
+import Message from 'bee-message'
 
-const defaultDuration = 3;
+const defaultDuration = 3
 
 function noop () {}
 
 function notice (args) {
-  const { content, type, icon, color, style } = args;
+  const { content, type, icon, color, style } = args
 
   // 避免外部异常处理时直接传入content 为对象不好定位问题
   if (typeof content === 'object') {
-    throw new Error('content show be a string.');
+    throw new Error('content show be a string.')
   }
 
   const iconType = icon || {
@@ -17,14 +17,14 @@ function notice (args) {
     success: 'uf-correct uf',
     error: 'uf-close uf',
     warning: 'uf-exc uf'
-  }[type];
+  }[type]
 
-  const duration = args.duration ? args.duration : defaultDuration;
-  const onClose = args.onClose ? args.onClose : noop;
+  const duration = args.duration ? args.duration : defaultDuration
+  const onClose = args.onClose ? args.onClose : noop
   const position = process.env.__THEMETYPE === 'ncc' ? 'topRight' : 'top'
 
-  Message.destroy();
-  Message.create({ content, duration, icon: iconType, onClose, color, style, position });
+  Message.destroy()
+  Message.create({ content, duration, icon: iconType, onClose, color, style, position })
 }
 
 const api = {
@@ -32,7 +32,7 @@ const api = {
 
   },
   destroy () {
-    Message.destroy();
+    Message.destroy()
   },
   open: notice
 };
@@ -40,13 +40,13 @@ const api = {
 ['success', 'info', 'warning', 'error', 'loading'].forEach(type => {
   api[type] = (content, duration, onClose, icon, color, style = {}) => {
     if (typeof duration === 'function') {
-      onClose = duration;
-      duration = undefined;
+      onClose = duration
+      duration = undefined
     }
-    return api.open({ content, duration, type, onClose, icon, color, style });
-  };
-});
+    return api.open({ content, duration, type, onClose, icon, color, style })
+  }
+})
 
-api.create = api.open;
+api.create = api.open
 
-export default api;
+export default api

@@ -1,3 +1,3 @@
-import Transfer from 'bee-transfer';
+import Transfer from 'bee-transfer'
 
-export default Transfer;
+export default Transfer

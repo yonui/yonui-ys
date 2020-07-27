@@ -19,9 +19,7 @@
 
 .filter-btn-fixed {
   height: auto!important;
-  max-height: 298px;
   overflow: hidden!important;
-  // padding-bottom: 34px;
 }
 
 .filter-txt {
@@ -29,12 +27,6 @@
   max-height: 220px;
   overflow-x: hidden;
 }
-
-// .textCol {
-//   .edit-input-number {
-//     margin-top: -8px;
-//   }
-// }
 
 .meta-table {
   .editCol .edit-input-number .ant-select-selection {
@@ -506,8 +498,8 @@
       display: block;
       width: 228px;
       height: @base-input-height;
-      line-height: @base-input-height - 2;
       padding-right: 45px;
+      .ellipsis();
     }
   }
 
@@ -1222,6 +1214,7 @@
   color: #666;
   position: absolute;
   right: 0px;
+  background: #f3f5f9;
 
   span {
     cursor: pointer;
@@ -1244,6 +1237,7 @@
 
   .ant-row {
     display: flex;
+    align-items: center;
   }
 
   .scheme-List-content {
@@ -1253,10 +1247,11 @@
   }
 
   .groupCondition-Checked {
-    width: 20px;
-    height: 25px;
+    width: 16px;
+    height: 16px;
     display: block;
     float: left;
+    margin-left: 2px;
 
     .ant-checkbox {
       margin-top: 9px;
@@ -2772,7 +2767,7 @@
               height: 54px;
               display: block;
               padding: 10px 10px 10px 45px;
-              max-width: calc(~'100% - 680px');;
+              max-width: calc(~'100% - 500px');;
               float: left;
               white-space:nowrap;
               overflow:hidden;
@@ -2813,9 +2808,9 @@
               padding-right: 20px;
               justify-content: flex-end;
               flex-flow: row wrap;
-              max-width: 680px;
+              max-width: 500px;
               float: right;
-              padding-left: 200px;
+              padding-left: 12px;
               >span{
                 border-radius: 4px;
                 background:rgba(255,255,255,1);

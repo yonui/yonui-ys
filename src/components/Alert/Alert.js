@@ -1,3 +1,3 @@
-import Alert from 'bee-alert';
+import Alert from 'bee-alert'
 
-export default Alert;
+export default Alert

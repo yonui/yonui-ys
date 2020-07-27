@@ -1,3 +1,3 @@
-import Rate from 'bee-rate';
+import Rate from 'bee-rate'
 
-export default Rate;
+export default Rate

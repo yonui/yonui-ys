@@ -1,3 +1,3 @@
-import TreeSelect from 'bee-tree-select';
+import TreeSelect from 'bee-tree-select'
 
-export default TreeSelect;
+export default TreeSelect

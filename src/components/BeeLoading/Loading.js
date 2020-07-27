@@ -1,3 +1,3 @@
-import Loading from 'bee-loading';
+import Loading from 'bee-loading'
 
-export default Loading;
+export default Loading

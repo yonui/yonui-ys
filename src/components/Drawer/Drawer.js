@@ -1,3 +1,3 @@
-import Drawer from 'bee-drawer';
+import Drawer from 'bee-drawer'
 
-export default Drawer;
+export default Drawer

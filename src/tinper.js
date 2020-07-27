@@ -80,5 +80,5 @@ export {
   Locale,
   BeeLocale,
   BeeTabs,
-  BeePopconfirm,
-} from './components/index';
+  BeePopconfirm
+} from './components/index'

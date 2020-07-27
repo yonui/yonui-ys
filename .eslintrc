@@ -1,0 +1,27 @@
+{
+  "extends": ["@iuap", "standard"],
+  "plugins": ["react", "eslint-plugin-import"],
+  "rules": {
+    "brace-style": "warn",
+    "camelcase": "warn",
+    "import/no-duplicates": "warn",
+    "import/default": "error",
+    "no-var": "error",
+    "no-fallthrough": "warn",
+    "no-global-assign": "warn",
+    "no-new-func": "warn",
+    "no-throw-literal": "warn",
+    "no-prototype-builtins": "warn",
+    "object-curly-spacing": "warn",
+    "react/prop-types": "off",
+    "react/jsx-handler-names": "off"
+    // "semi": [2, "always"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "globals": {
+    "cb": true
+  }
+}

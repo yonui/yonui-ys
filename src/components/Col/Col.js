@@ -1,3 +1,3 @@
-import { Col } from 'bee-layout';
+import { Col } from 'bee-layout'
 
-export default Col;
+export default Col

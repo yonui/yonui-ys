@@ -1,24 +1,23 @@
 /* eslint-disable no-prototype-builtins */
-
 /**
  * 深拷贝
  * @param {*} obj
  */
 export function deepClone (obj) {
-  const objClone = Array.isArray(obj) ? [] : {};
+  const objClone = Array.isArray(obj) ? [] : {}
 
   if (obj && typeof obj === 'object') {
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
         if (obj[key] && typeof obj[key] === 'object') {
-          objClone[key] = deepClone(obj[key]);
+          objClone[key] = deepClone(obj[key])
         } else {
-          objClone[key] = obj[key];
+          objClone[key] = obj[key]
         }
       }
     }
   }
-  return objClone;
+  return objClone
 }
 
 /**
@@ -28,16 +27,16 @@ export function deepClone (obj) {
  * @param {*} copy
  */
 export function simpleMerge (target, config, copy = true) {
-  if (Object.prototype.toString.call(config) !== '[object Object]') return target;
+  if (Object.prototype.toString.call(config) !== '[object Object]') return target
 
-  const result = copy ? deepClone(target) : target;
+  const result = copy ? deepClone(target) : target
   Object.keys(config).forEach(key => {
     if (config[key]) {
-      result[key] = config[key];
+      result[key] = config[key]
     }
-  });
+  })
 
-  return result;
+  return result
 }
 
 /**
@@ -45,22 +44,22 @@ export function simpleMerge (target, config, copy = true) {
  * @param {*} target
  */
 export function isArray (target) {
-  return Object.prototype.toString.call(target) === '[object Array]';
+  return Object.prototype.toString.call(target) === '[object Array]'
 }
 
-const floatRegex = /^[0-9]+\.?[0-9]+?$/;
+const floatRegex = /^[0-9]+\.?[0-9]+?$/
 
 /**
  * 判断是否为小数
  * @param {*} number
  */
 export function isFloat (number) {
-  return floatRegex.test(number);
+  return floatRegex.test(number)
 }
 
 export function findIndex (arr, item) {
-  const i = arr.indexOf(item);
-  return i === -1 ? '' : i;
+  const i = arr.indexOf(item)
+  return i === -1 ? '' : i
 }
 
 /**
@@ -68,13 +67,13 @@ export function findIndex (arr, item) {
  * @param
  */
 export function isPlainString (target) {
-  let data = target;
+  let data = target
   try {
-    data = JSON.parse(target);
+    data = JSON.parse(target)
   } catch (e) {
-    data = target;
+    data = target
   }
-  return Object.prototype.toString.call(data) === '[object String]';
+  return Object.prototype.toString.call(data) === '[object String]'
 }
 
 /**
@@ -82,9 +81,9 @@ export function isPlainString (target) {
  * @param
  */
 export function isNumericalValue (target) {
-  return !isNaN(target);
+  return !isNaN(target)
 }
 
 export function isFunction (target) {
-  return Object.prototype.toString.call(target) === '[object Function]';
+  return Object.prototype.toString.call(target) === '[object Function]'
 }

@@ -1,4 +1,4 @@
-import { FieldTypes, EditTypes, ComponentManifest, ReactWrapper, UITable } from 'libraui-extension'
+import { ReactWrapper, UITable } from 'libraui-extension'
 const manifest = {
   name: 'name',
   label: 'label',

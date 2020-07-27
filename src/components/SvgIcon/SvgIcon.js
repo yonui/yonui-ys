@@ -1,3 +1,3 @@
-import SvgIcon from 'bee-svgicon';
+import SvgIcon from 'bee-svgicon'
 
-export default SvgIcon;
+export default SvgIcon

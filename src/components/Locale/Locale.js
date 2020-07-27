@@ -1,3 +1,3 @@
-import Locale from 'bee-locale';
+import Locale from 'bee-locale'
 
-export default Locale;
+export default Locale

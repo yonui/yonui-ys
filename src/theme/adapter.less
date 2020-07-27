@@ -239,7 +239,17 @@ textarea.u-form-control {
 
 .u-modal .u-modal-body {
   .viewCell.width-percent-100 .input-control {
-    width: 360px !important;
+      .ac-input-locale,.u-input-group,.ant-select,.u-select,.control-text,.u-form-control{
+        width: 360px;
+      }
+      //数字u-input-number-out
+      .u-input-number-out{
+        .u-input-number {
+          .u-form-control{
+            width: 100%;
+          }
+        } 
+      }
   }
 }
 
@@ -307,6 +317,13 @@ textarea.u-form-control {
         background: #f7f9fd;
       }
       .u-checkbox-label{
+        i.out{
+          font-style: normal;
+          i.high-light{
+            color: @high-light-color;
+            font-style: normal;
+          };
+        }
         width: 100%;
         position: relative;
         span{
@@ -907,7 +924,10 @@ div[id^='business_option'] {
 
 // 部门节点，内容区域上边距
 .bd_admindepttree {
-  padding-top: 12px;
+  padding-top: 0px!important;
+  .jDiwork-container>.ant-row.meta-default-container{
+      padding-bottom: 0px;
+  }
 }
 
 div[id="pc_product|productTemplate_NameTips"] {

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import classnames from 'classnames';
-import InputNumber from 'bee-input-number';
+import React, { Component } from 'react'
+import classnames from 'classnames'
+import InputNumber from 'bee-input-number'
 
 class InputNumberAdapter extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       focused: false
     }
@@ -14,21 +14,21 @@ class InputNumberAdapter extends Component {
     this.setState({
       focused: true
     })
-    this.props.onFocus && this.props.onFocus(val, e);
+    this.props.onFocus && this.props.onFocus(val, e)
   }
 
   handleBlur = (val, e) => {
     this.setState({
       focused: false
     })
-    this.props.onBlur && this.props.onBlur(val, e);
+    this.props.onBlur && this.props.onBlur(val, e)
   }
 
   render () {
-    const { iconStyle, formatter, className } = this.props;
+    const { iconStyle, formatter, className } = this.props
     const cls = classnames(className, {
-      'u-input-number-focused': this.state.focused,
-    });
+      'u-input-number-focused': this.state.focused
+    })
     return (
       <InputNumber
         {...this.props}
@@ -41,9 +41,9 @@ class InputNumberAdapter extends Component {
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
       />
-    );
+    )
   }
 }
 
-InputNumberAdapter.InputNumberGroup = InputNumber.InputNumberGroup;
-export default InputNumberAdapter;
+InputNumberAdapter.InputNumberGroup = InputNumber.InputNumberGroup
+export default InputNumberAdapter

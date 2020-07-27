@@ -1,4 +1,3 @@
-import Modal from 'bee-modal';
+import Modal from 'bee-modal'
 
-export default Modal;
-
+export default Modal

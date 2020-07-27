@@ -1,2 +1,2 @@
-import CarouselFigure from 'bee-carousel-figure';
-export default CarouselFigure;
+import CarouselFigure from 'bee-carousel-figure'
+export default CarouselFigure

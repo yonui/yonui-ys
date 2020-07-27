@@ -4,21 +4,19 @@
  */
 import React, { Component } from 'react'
 import Switch from '../index'
-import Button from '../../Button'
-import '../style';
-import './demo.less';
+import '../style'
+import './demo.less'
 import '../../../theme/index.less'
 
-function onChange(checked) {
-    console.log(`switch to ${checked}`);
-  }
+function onChange (checked) {
+  console.log(`switch to ${checked}`)
+}
 export default class Demo extends Component {
-    
-    render() {
-        return (
-            <div>
-               <Switch defaultChecked={false} onChange={onChange} />
-            </div>
-        )
-    }
+  render () {
+    return (
+      <div>
+        <Switch defaultChecked={false} onChange={onChange} />
+      </div>
+    )
+  }
 }

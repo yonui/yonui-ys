@@ -1,3 +1,3 @@
-import LoadingState from 'bee-loading-state';
+import LoadingState from 'bee-loading-state'
 
-export default LoadingState;
+export default LoadingState

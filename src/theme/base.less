@@ -47,12 +47,6 @@
   width: calc(~"100% - 175px");
 }
 
-.jDiwork-container .line-tabs-maximize {
-  height: calc(~"100% - 80px");
-  top: 80px;
-  width: calc(~"100% - 16px"); // 16px 是容器padding 边距效果
-}
-
 .line-tabs-maximize {
   &.org-structure-tabs {
     height: calc(~"100% - 80px");
@@ -3245,7 +3239,13 @@ a.Toolbar_Notification_Log {
       line-height: inherit;
       height: initial;
       padding: 8px 10px 8px 35px;
-
+      i.out{
+        font-style: normal;
+        i.high-light{
+          color: @high-light-color;
+          font-style: normal;
+        };
+      }
       span {
         display: none;
         background: transparent;
@@ -5326,6 +5326,7 @@ div[id='bd_staff_card|photo'] {
 
   .viewCell .label-control {
     width: auto !important;
+    flex: auto;
     min-width: 36px;
     padding-left: 0;
     flex: unset;

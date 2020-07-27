@@ -1,3 +1,3 @@
-import * as Layout from 'bee-layout';
+import * as Layout from 'bee-layout'
 
-export default Layout;
+export default Layout

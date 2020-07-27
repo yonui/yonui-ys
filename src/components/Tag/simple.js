@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Animate from 'rc-animate';
-import classNames from 'classnames';
-import omit from 'omit.js';
-import Icon from 'bee-icon';
-import CheckableTag from './simpleCheckableTag';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Animate from 'rc-animate'
+import classNames from 'classnames'
+import omit from 'omit.js'
+import Icon from 'bee-icon'
+import CheckableTag from './simpleCheckableTag'
 
 export default class Tag extends React.Component {
   static CheckableTag = CheckableTag;
@@ -14,29 +14,29 @@ export default class Tag extends React.Component {
   };
 
   constructor (props) {
-    super(props);
+    super(props)
 
     this.state = {
       closing: false,
       closed: false
-    };
+    }
   }
 
   close = (e) => {
-    const onClose = this.props.onClose;
+    const onClose = this.props.onClose
     if (onClose) {
-      onClose(e);
+      onClose(e)
     }
     if (e.defaultPrevented) {
-      return;
+      return
     }
-    const dom = ReactDOM.findDOMNode(this);
-    dom.style.width = `${dom.getBoundingClientRect().width}px`;
+    const dom = ReactDOM.findDOMNode(this)
+    dom.style.width = `${dom.getBoundingClientRect().width}px`
     // It's Magic Code, don't know why
-    dom.style.width = `${dom.getBoundingClientRect().width}px`;
+    dom.style.width = `${dom.getBoundingClientRect().width}px`
     this.setState({
       closing: true
-    });
+    })
   }
 
   animationEnd = (_, existed) => {
@@ -44,38 +44,38 @@ export default class Tag extends React.Component {
       this.setState({
         closed: true,
         closing: false
-      });
+      })
 
-      const afterClose = this.props.afterClose;
+      const afterClose = this.props.afterClose
       if (afterClose) {
-        afterClose();
+        afterClose()
       }
     }
   }
 
   isPresetColor (color) {
-    if (!color) { return false; }
-    return /^(pink|red|yellow|orange|cyan|green|blue|purple)(-inverse)?$/.test(color);
+    if (!color) { return false }
+    return /^(pink|red|yellow|orange|cyan|green|blue|purple)(-inverse)?$/.test(color)
   }
 
   render () {
-    const { prefixCls, closable, color, className, children, style, ...otherProps } = this.props;
-    const closeIcon = closable ? <Icon type='uf-close' onClick={this.close} /> : '';
-    const isPresetColor = this.isPresetColor(color);
+    const { prefixCls, closable, color, className, children, style, ...otherProps } = this.props
+    const closeIcon = closable ? <Icon type='uf-close' onClick={this.close} /> : ''
+    const isPresetColor = this.isPresetColor(color)
     const classString = classNames(prefixCls, {
       [`${prefixCls}-${color}`]: isPresetColor,
       [`${prefixCls}-has-color`]: (color && !isPresetColor),
       [`${prefixCls}-close`]: this.state.closing
-    }, className);
+    }, className)
     // fix https://fb.me/react-unknown-prop
     const divProps = omit(otherProps, [
       'onClose',
       'afterClose'
-    ]);
+    ])
     const tagStyle = {
       backgroundColor: (color && !isPresetColor) ? color : null,
       ...style
-    };
+    }
     const tag = this.state.closed ? null : (
       <div
         data-show={!this.state.closing}
@@ -86,7 +86,7 @@ export default class Tag extends React.Component {
         <span className={`${prefixCls}-text`}>{children}</span>
         {closeIcon}
       </div>
-    );
+    )
     return (
       <Animate
         component=''
@@ -97,6 +97,6 @@ export default class Tag extends React.Component {
       >
         {tag}
       </Animate>
-    );
+    )
   }
 }

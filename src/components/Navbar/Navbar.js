@@ -1,3 +1,3 @@
-import Navbar from 'bee-navbar';
+import Navbar from 'bee-navbar'
 
-export default Navbar;
+export default Navbar

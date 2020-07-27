@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import Checkbox from 'bee-checkbox';
-import { KeyCode } from 'tinper-bee-core';
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import omit from 'omit.js';
+import React, { Component } from 'react'
+import Checkbox from 'bee-checkbox'
+import { KeyCode } from 'tinper-bee-core'
+import classnames from 'classnames'
+import PropTypes from 'prop-types'
+import omit from 'omit.js'
 
-import { isNumericalValue, isPlainString } from '../../utils';
+import { isNumericalValue, isPlainString } from '../../utils'
 
 class CheckboxAdapter extends Component {
   constructor (props) {
-    super(props);
-    const checked = this.isGroup() ? false : !!props.checked;
+    super(props)
+    const checked = this.isGroup() ? false : !!props.checked
     this.state = {
       checked
     }
   }
 
   componentDidMount () {
-    if (this.isGroup())
-      this.setState({ checked: this.contextChecked() })
+    if (this.isGroup()) { this.setState({ checked: this.contextChecked() }) }
   }
 
   componentWillReceiveProps (nextProps) {
@@ -29,30 +28,30 @@ class CheckboxAdapter extends Component {
 
   // 外部使用了 checkbox.group
   isGroup = () => {
-    return this.props.checked === undefined;
+    return this.props.checked === undefined
   }
 
   // react context
   contextChecked = () => {
-    const { checkboxGroup = {} } = this.context;
-    const initialValueList = checkboxGroup.valueList;
-    return initialValueList && initialValueList.includes(this.props.value);
+    const { checkboxGroup = {} } = this.context
+    const initialValueList = checkboxGroup.valueList
+    return initialValueList && initialValueList.includes(this.props.value)
   }
 
   onChange = (checked) => {
-    const target = Object.assign({}, omit(this.props, ['checked', 'onChange']), { checked });
+    const target = Object.assign({}, omit(this.props, ['checked', 'onChange']), { checked })
 
-    const { onChange } = this.props;
-    onChange && onChange(checked);
+    const { onChange } = this.props
+    onChange && onChange(checked)
 
-    const { checkboxGroup } = this.context;
+    const { checkboxGroup } = this.context
     if (checkboxGroup && checkboxGroup.onChange) {
-      const value = target.value;
-      checkboxGroup.onChange(value, checked);
+      const value = target.value
+      checkboxGroup.onChange(value, checked)
 
       this.setState({
         checked
-      });
+      })
     }
   }
 
@@ -66,18 +65,18 @@ class CheckboxAdapter extends Component {
         inverse={process.env.__THEMETYPE__ === 'ncc'}
         onChange={this.onChange}
       />
-    );
+    )
   }
 }
 
 class GroupAdapter extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       valueList: props.value instanceof Array ? props.value : [],
-      focusKey: '',
+      focusKey: ''
     }
-    this.optionKeys = [];
+    this.optionKeys = []
   }
 
   static childContextTypes = {
@@ -95,40 +94,39 @@ class GroupAdapter extends Component {
         valueList: this.state.valueList,
         focusKey: this.state.focusKey
       }
-    };
+    }
   }
 
   componentDidMount () {
-    if (this.checkgroup)
-      this.checkgroup.addEventListener('keydown', this.handleKeyDown);
+    if (this.checkgroup) { this.checkgroup.addEventListener('keydown', this.handleKeyDown) }
   }
 
   componentWillReceiveProps (nextProps) {
-    const newValueList = nextProps.value instanceof Array ? nextProps.value : [];
+    const newValueList = nextProps.value instanceof Array ? nextProps.value : []
     this.setState({
       valueList: newValueList
-    });
-    if (!(nextProps.value instanceof Array)) console.error(('Error: value should be an array.'));
+    })
+    if (!(nextProps.value instanceof Array)) console.error(('Error: value should be an array.'))
   }
 
   componentDidUpdate (prevProps, prevState) {
-    const { focusKey } = this.state;
-    if (!isNumericalValue(focusKey) && !isPlainString(focusKey)) return;
+    const { focusKey } = this.state
+    if (!isNumericalValue(focusKey) && !isPlainString(focusKey)) return
 
     if (focusKey && focusKey !== prevState.focusKey) {
-      const focusEle = this.checkgroup ? this.checkgroup.querySelector(`input[value="${focusKey}"]`) : null;
-      focusEle && focusEle.focus();
+      const focusEle = this.checkgroup ? this.checkgroup.querySelector(`input[value="${focusKey}"]`) : null
+      focusEle && focusEle.focus()
     }
   }
 
   handleChange = (value, checked = true) => {
-    const newValueList = this.state.valueList.slice();
+    const newValueList = this.state.valueList.slice()
 
     if (checked) {
-      newValueList.push(value);
+      newValueList.push(value)
     } else {
       if (newValueList.includes(value)) {
-        newValueList.splice(newValueList.indexOf(value), 1);
+        newValueList.splice(newValueList.indexOf(value), 1)
       }
     }
 
@@ -137,22 +135,22 @@ class GroupAdapter extends Component {
       focusKey: value
     })
 
-    const { onChange } = this.props;
+    const { onChange } = this.props
     if (onChange) {
-      const options = this.getOptions();
+      const options = this.getOptions()
       const arr = newValueList.filter(val => newValueList.indexOf(val) !== -1).sort((a, b) => {
-        const indexA = options.findIndex(opt => opt.value === a);
-        const indexB = options.findIndex(opt => opt.value === b);
-        return indexA - indexB;
-      });
-      onChange(arr);
+        const indexA = options.findIndex(opt => opt.value === a)
+        const indexB = options.findIndex(opt => opt.value === b)
+        return indexA - indexB
+      })
+      onChange(arr)
     }
   }
 
   handleFocus = (e) => {
-    const activeDom = cb.dom(e.target);
-    const { optionKeys } = this;
-    if (!optionKeys.length) return;
+    const activeDom = cb.dom(e.target)
+    const { optionKeys } = this
+    if (!optionKeys.length) return
     if (activeDom.hasClass('s-checkgroup-wrapper')) {
       this.setState({
         focusKey: optionKeys[0]
@@ -161,46 +159,46 @@ class GroupAdapter extends Component {
   }
 
   handleKeyDown = (e) => {
-    const activeDom = cb.dom(e.target);
+    const activeDom = cb.dom(e.target)
     if (e.target.className.indexOf('s-checkgroup-wrapper') > 0 || activeDom.parents('.s-checkgroup-wrapper').length > 0) {
-      const { focusKey } = this.state;
-      const { optionKeys } = this;
-      const focusIndex = optionKeys.indexOf(focusKey);
-      const optionCount = optionKeys.length;
-      const st = {};
+      const { focusKey } = this.state
+      const { optionKeys } = this
+      const focusIndex = optionKeys.indexOf(focusKey)
+      const optionCount = optionKeys.length
+      const st = {}
       if (focusIndex > -1 && focusIndex < optionCount) {
-        let newIndex;
+        let newIndex
         switch (e.keyCode) {
           case KeyCode.LEFT:
-            newIndex = focusIndex - 1 < 0 ? optionCount - 1 : focusIndex - 1;
-            st.focusKey = optionKeys[newIndex];
-            break;
+            newIndex = focusIndex - 1 < 0 ? optionCount - 1 : focusIndex - 1
+            st.focusKey = optionKeys[newIndex]
+            break
           case KeyCode.RIGHT:
-            newIndex = focusIndex + 1 < optionCount ? focusIndex + 1 : 0;
-            st.focusKey = optionKeys[newIndex];
-            break;
+            newIndex = focusIndex + 1 < optionCount ? focusIndex + 1 : 0
+            st.focusKey = optionKeys[newIndex]
+            break
           default:
-            break;
+            break
         }
       }
-      this.setState(st);
+      this.setState(st)
     }
   }
 
   getOptions () {
-    const { options = [] } = this.props;
-    this.optionKeys = [];
+    const { options = [] } = this.props
+    this.optionKeys = []
     return (options).map(option => {
       if (typeof option === 'string') {
-        this.optionKeys.push(option);
+        this.optionKeys.push(option)
         return {
           label: option,
           value: option
         }
       }
-      option.hasOwnProperty('value') && this.optionKeys.push(option.value);
-      return option;
-    });
+      Object.prototype.hasOwnProperty.call(option, 'value') && this.optionKeys.push(option.value)
+      return option
+    })
   }
 
   render () {
@@ -211,7 +209,7 @@ class GroupAdapter extends Component {
       children,
       options,
       ...others
-    } = this.props;
+    } = this.props
     if (options && options.length > 0) {
       children = this.getOptions().map(option => (
         <CheckboxAdapter
@@ -223,19 +221,21 @@ class GroupAdapter extends Component {
         >
           {option.label}
         </CheckboxAdapter>
-      ));
+      ))
     }
 
-    return <div {...others} className={classnames(className, 's-checkgroup-wrapper')} ref={el => { this.checkgroup = el }} tabIndex='0' onFocus={this.handleFocus}>
-      {
-        React.Children.map(children, child => React.cloneElement(child, { className: classnames(child.props.className, 's-checkgroup-inner-item') }))
-      }
-    </div>
+    return (
+      <div {...others} className={classnames(className, 's-checkgroup-wrapper')} ref={el => { this.checkgroup = el }} tabIndex='0' onFocus={this.handleFocus}>
+        {
+          React.Children.map(children, child => React.cloneElement(child, { className: classnames(child.props.className, 's-checkgroup-inner-item') }))
+        }
+      </div>
+    )
   }
 }
 
-CheckboxAdapter.Group = GroupAdapter;
+CheckboxAdapter.Group = GroupAdapter
 CheckboxAdapter.contextTypes = {
   checkboxGroup: PropTypes.any
 }
-export default CheckboxAdapter;
+export default CheckboxAdapter

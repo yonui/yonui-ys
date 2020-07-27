@@ -1,3 +1,3 @@
-import Viewer from 'bee-viewer';
+import Viewer from 'bee-viewer'
 
-export default Viewer;
+export default Viewer

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Tree from 'bee-tree';
+import React, { Component } from 'react'
+import Tree from 'bee-tree'
 
 class TreeAdapter extends Component {
   render () {
-    const { showIcon, children, ...other } = this.props;
+    const { showIcon, children, ...other } = this.props
 
     return (
       <Tree
-        mustExpandable={true}
+        mustExpandable
         // showIcon={true}
         openIcon={<i className='uf uf-reduce-s-o' />}
         closeIcon={<i className='uf uf-add-s-o' />}
@@ -15,10 +15,10 @@ class TreeAdapter extends Component {
       >
         {children}
       </Tree>
-    );
+    )
   }
 }
 
-TreeAdapter.TreeNode = Tree.TreeNode;
+TreeAdapter.TreeNode = Tree.TreeNode
 
-export default TreeAdapter;
+export default TreeAdapter

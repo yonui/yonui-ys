@@ -1,3 +1,3 @@
-import Table from 'bee-table';
+import Table from 'bee-table'
 
-export default Table;
+export default Table

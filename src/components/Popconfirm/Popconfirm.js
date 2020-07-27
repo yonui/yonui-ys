@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Button from 'bee-button';
-import Popconfirm from 'bee-popconfirm';
+import React, { Component } from 'react'
+import Button from 'bee-button'
+import Popconfirm from 'bee-popconfirm'
 
 class PopconfirmAdapter extends Component {
   render () {
@@ -31,13 +31,13 @@ class PopconfirmAdapter extends Component {
       ),
       onClose: this.props.onConfirm,
       onCancel: this.props.onCancel
-    };
+    }
     return (
       <Popconfirm rootClose animation {...a2tProps}>
         {this.props.children}
       </Popconfirm>
-    );
+    )
   }
 }
 
-export default PopconfirmAdapter;
+export default PopconfirmAdapter

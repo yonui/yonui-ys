@@ -1,3 +1,3 @@
-import Collapse from 'bee-collapse';
+import Collapse from 'bee-collapse'
 
-export default Collapse;
+export default Collapse

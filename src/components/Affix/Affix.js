@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Affix from 'bee-affix';
+import Affix from 'bee-affix'
 
-const DefaultIndex = 2019;
+const DefaultIndex = 2019
 
 const defaultProps = {
   offsetTop: 0,
   offsetBottom: 0,
   target: () => window,
   onChange: (affixed) => { console.log(affixed) }
-};
+}
 
 class AffixAdapter extends Component {
   render () {
@@ -20,7 +20,7 @@ class AffixAdapter extends Component {
       target,
       onChange,
       ...others
-    } = this.props;
+    } = this.props
 
     return (
       <Affix
@@ -32,9 +32,9 @@ class AffixAdapter extends Component {
       >
         {children}
       </Affix>
-    );
+    )
   }
 }
 
-AffixAdapter.defaultProps = defaultProps;
-export default AffixAdapter;
+AffixAdapter.defaultProps = defaultProps
+export default AffixAdapter

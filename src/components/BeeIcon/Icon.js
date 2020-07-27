@@ -1,3 +1,3 @@
-import Icon from 'bee-icon';
+import Icon from 'bee-icon'
 
-export default Icon;
+export default Icon

@@ -1,4 +1,4 @@
-import { FieldTypes, EditTypes, ComponentManifest, UITable } from 'libraui-extension'
+import { UITable } from 'libraui-extension'
 const manifest = {
   name: 'name',
   label: 'label',

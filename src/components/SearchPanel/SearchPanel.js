@@ -1,3 +1,3 @@
-import SearchPanel from 'bee-search-panel';
+import SearchPanel from 'bee-search-panel'
 
-export default SearchPanel;
+export default SearchPanel
