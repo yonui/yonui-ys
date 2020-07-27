@@ -76,16 +76,9 @@
       }
 
     }
-    // ul li{
-    //   a.u-tree-node-content-wrapper{
-    //     width: calc(~'100% - 11px');
-    //   }
-    // }
+    
     &.u-tree-treenode-focused > a {
-      background-color: transparent;
-      .u-tree-title {
-        background: #edf1f7;
-      }
+      background-color: transparent !important;
     }
   }
 
@@ -176,4 +169,8 @@
 // fix: 树组织参照，收起展开和文字的间距
 .scroll_box .u-tree li span.u-tree-switcher {
   margin-right:8px;
+}
+
+.u-tree .u-tree-checkbox-checked .u-tree-checkbox-inner:after {
+  top: 2px;
 }
