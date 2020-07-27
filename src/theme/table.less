@@ -3070,3 +3070,43 @@
     }
   }
 }
+//展示已选行
+.table-pagination-container {
+  .table-selected-rows-content {
+    float: left;
+    height: 36px;
+    text-align: center;
+    padding-left: 10px;
+    line-height: 36px;
+    &>span {
+      cursor: pointer;
+      font-size: 14px;
+      span,i {
+        margin-right: 5px;
+      }
+      i:before {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/*表格多文本自动高度*/
+.autoHeightCol {
+  &.editCol {
+    padding: 4px 10px!important;
+    .has-feedback {
+      margin-top: 0 !important;
+    }
+    textarea {
+      line-height: 18px;
+    }
+  }
+  .rc-textarea.u-form-control {
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    min-height: 32px;
+    transition: all .3s,height 0s;
+  }
+}
