@@ -234,6 +234,7 @@ class GroupAdapter extends Component {
   }
 }
 
+CheckboxAdapter.CheckboxGroup = GroupAdapter
 CheckboxAdapter.Group = GroupAdapter
 CheckboxAdapter.contextTypes = {
   checkboxGroup: PropTypes.any
