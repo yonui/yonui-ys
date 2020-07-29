@@ -406,7 +406,18 @@ div[id='pc_product|detail!businessAttribute']>div,
     .search-tree-3 {
       height: calc(~'100% - 52px');
       overflow-y: auto;
+      overflow-x: hidden;
     }
+  }
+  .viewCell.width-percent-100{
+    //编辑态输入框
+    .u-input-group,.ant-select,.ac-input-locale,.u-select{
+        width: 100%!important;
+    }
+    //浏览态输入框
+    .control-text{
+        width: 100%;
+    }  
   }
 }
 
