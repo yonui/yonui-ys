@@ -725,7 +725,9 @@
             width: 400px!important;
         }
         //浏览态输入框
-        .control-text{
+        .control-text，
+        .timer-range,
+        .control-flex {
             width: 400px;
         }
     }
@@ -3187,17 +3189,18 @@ i.uf-search,
 // 时间选择
 // 零售 - 门店信息营业时间
 .timer-range {
+  display: flex;
   .timepicker {
-    width: calc(50% - 10px);//TINPER-2730
+    flex: 1;
     margin-right: 0 !important;
     float: left; //日期区间格式错乱
   }
 
   .sp-range-txt {
-    width: 8.33333%;
     display: block;
     float: left;
     text-align: center;
+    margin: 0 8px;
   }
 
   .ant-select-selection__clear {
