@@ -60,6 +60,7 @@
 }
 
 // 特征样式，应收参数等垂直form 页面
+.vertical-form,
 .vetical-form {
   .viewCell.width-percent-100 {
     .input-control{
@@ -153,5 +154,15 @@
   .sum-switch {
     float: left;
     margin-bottom: 12px;
+  }
+}
+
+.normal-space {
+  // 选择首个包含 group-container 的子 div
+  div.group-container:first-of-type,
+  div:not(.group-container):first-of-type + div.group-container {
+    .group-title {
+      margin-top: 0;
+    }
   }
 }

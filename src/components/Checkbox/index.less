@@ -94,3 +94,18 @@ div[id='org_center_card|orgtype'] .ant-row .control-width {
     }
   }
 }
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: #fff;
+  border-color: #d9d9d9;
+  &:after {
+    border: 2px solid red;
+    border-top: 0;
+    border-left: 0;
+  }
+}
+
+.ant-checkbox-input:focus + .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #d9d9d9;
+}

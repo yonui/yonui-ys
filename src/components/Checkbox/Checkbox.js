@@ -148,6 +148,7 @@ class GroupAdapter extends Component {
   }
 
   handleFocus = (e) => {
+    if (!cb) return;
     const activeDom = cb.dom(e.target)
     const { optionKeys } = this
     if (!optionKeys.length) return
@@ -159,6 +160,7 @@ class GroupAdapter extends Component {
   }
 
   handleKeyDown = (e) => {
+    if (!cb) return;
     const activeDom = cb.dom(e.target)
     if (e.target.className.indexOf('s-checkgroup-wrapper') > 0 || activeDom.parents('.s-checkgroup-wrapper').length > 0) {
       const { focusKey } = this.state

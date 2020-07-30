@@ -61,7 +61,7 @@
     }
   }
 
-  .anticon {
+  .yonicon {
     display: inline-block;
     font-style: normal;
     vertical-align: baseline;
@@ -73,48 +73,48 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .anticon:before {
+  .yonicon:before {
     display: block;
     font-family: "iconfont" !important;
   }
 
   // 这里主要修改font-family
   // 理论上为iconfont 也应该可以，但显示错误，暂未深入定位
-  .anticon-canzhao:before {
+  .yonicon-canzhao:before {
     content: "\e665";
   }
 
-  .anticon-down:before {
+  .yonicon-down:before {
     content: '\e633';
   }
 
-  .anticon-up:before {
-    content: "\e61e";
-  }
-
-  .anticon.anticon-star-o:before {
+  .yonicon.yonicon-star-o:before {
     content: "\e661";
   }
 
   .ant-select-arrow:before {
     content: "\E633";
+    font-family: 'iconfont';
+    display: block;
+    transform: scale(.8);
   }
 
-  .anticon-up-circle:before {
+  .yonicon-up-circle:before {
     content: "\e684;" !important;
   }
 
-  .anticon-down-circle:before {
+  .yonicon-down-circle:before {
     content: "\e685;" !important;
+  }
+
+  .groupCondition-Checked .icon-xuanzhong1::before {
+    content: "\e77f";
+    color: #ee2233;
+    font-family: "iconfont";
   }
 
   .uf-search:before {
     content: "\e518";
-  }
-
-  .anticon-ellipsis:before {
-    content: "\e73c";
-    font-family: "uf" !important;
   }
 
   .listheadRow { // 过滤区样式修改，有的样式会被引用项目自带的样式覆盖
@@ -221,5 +221,9 @@
         margin-right: 8px;
       }
     }
+  }
+
+  .u-button:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname):hover {
+    background-color: #d5d8da;
   }
 }
