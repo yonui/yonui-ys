@@ -156,3 +156,13 @@
     margin-bottom: 12px;
   }
 }
+
+.normal-space {
+  // 选择首个包含 group-container 的子 div
+  div.group-container:first-of-type,
+  div:not(.group-container):first-of-type + div.group-container {
+    .group-title {
+      margin-top: 0;
+    }
+  }
+}

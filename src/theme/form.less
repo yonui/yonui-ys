@@ -1360,10 +1360,6 @@
 .group-container {
   margin-bottom: 0;
   padding: 0;
-  .group-title{
-    margin-top: 0px;
-    margin-bottom: 10px;
-  }
   .viewCell {
     padding-left: 15px;
 
@@ -1727,64 +1723,68 @@
   }
 }
 
-.group-title {
-  font-size: 14px;
-  font-weight: bolder;
-  color: #505766;
-  padding-left: 25px;
-
-  span {
-    cursor: pointer;
-  }
-
-  .group-collapse {
-    font-size: 12px;
-    color: #588CE9;
-    margin-left: 20px;
-    cursor: pointer;
-
-    &.expand-icon {
-      margin-right: 8px;
-      width: 14px;
-      height: 14px;
-      line-height: 12px;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      font-size: 14px;
+.group-container {
+  .group-title {
+    font-size: 14px;
+    font-weight: bolder;
+    color: #505766;
+    padding-left: 25px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  
+    span {
       cursor: pointer;
-      display: inline-block;
-
-      i {
-        margin: -2px;
-        transition: -webkit-transform .3s;
-        transition: transform .3s;
-        transition: transform .3s, -webkit-transform .3s;
-
-        &.yonicon-plus-square-o {
-          transform: rotate(90deg) scale(.59);
-        }
-
-        &.yonicon-minus-square-o {
-          transform: rotate(180deg) scale(.59);
+    }
+  
+    .group-collapse {
+      font-size: 12px;
+      color: #588CE9;
+      margin-left: 20px;
+      cursor: pointer;
+  
+      &.expand-icon {
+        margin-right: 8px;
+        width: 14px;
+        height: 14px;
+        line-height: 12px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-block;
+  
+        i {
+          margin: -2px;
+          transition: -webkit-transform .3s;
+          transition: transform .3s;
+          transition: transform .3s, -webkit-transform .3s;
+  
+          &.yonicon-plus-square-o {
+            transform: rotate(90deg) scale(.59);
+          }
+  
+          &.yonicon-minus-square-o {
+            transform: rotate(180deg) scale(.59);
+          }
         }
       }
-    }
-
-    svg {
-      width: 10px;
-      height: 10px;
-      margin-left: 1px;
-      margin-bottom: 2px;
-    }
-
-    .group-self-jian {
-      transform: rotate(180deg) scale(.8);
-      transition: transform .3s;
-    }
-
-    .group-self-jia {
-      transform: rotate(90deg) scale(.8);
-      transition: transform .3s;
+  
+      svg {
+        width: 10px;
+        height: 10px;
+        margin-left: 1px;
+        margin-bottom: 2px;
+      }
+  
+      .group-self-jian {
+        transform: rotate(180deg) scale(.8);
+        transition: transform .3s;
+      }
+  
+      .group-self-jia {
+        transform: rotate(90deg) scale(.8);
+        transition: transform .3s;
+      }
     }
   }
 }
