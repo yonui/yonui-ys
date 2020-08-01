@@ -28,6 +28,7 @@ const Icon = props => {
   const classString = classNames(
     'yonicon',
     `yonicon-${type}`,
+    `anticon-${type}`,
     {
       [`${clsPrefix}-spin`]: !!spin || type === 'loading'
     },
