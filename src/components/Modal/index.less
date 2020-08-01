@@ -809,8 +809,18 @@
   }
 }
 
-.u-modal .u-modal-footer {
-  div[id='pu_venandinv_ven|btnAbandon'] {
-    margin-right: 0;
+.u-modal.pu_venandinv_ven {
+  .u-modal-body {
+    .line-tabs .tab-top-right {
+      button.btn-maximize {
+        display: none;
+      }
+    }
+  }
+
+  .u-modal-footer {
+    div[id='pu_venandinv_ven|btnAbandon'] {
+      margin-right: 0;
+    }
   }
 }
