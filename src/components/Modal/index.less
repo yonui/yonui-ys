@@ -440,15 +440,15 @@
             text-align: center;
           }
 
-          &.icon-right-enabled::before,
-          &.icon-right-disabled::before {
-            content: "\e6a5";
-          }
+          // &.icon-right-enabled::before,
+          // &.icon-right-disabled::before {
+          //   content: "\e6a5";
+          // }
 
-          &.icon-left-enabled::before,
-          &.icon-left-disabled::before {
-            content: "\e6a4";
-          }
+          // &.icon-left-enabled::before,
+          // &.icon-left-disabled::before {
+          //   content: "\e6a4";
+          // }
 
           &.icon-right-disabled::before,
           &.icon-left-disabled::before {
@@ -805,6 +805,22 @@
         padding: 10px 20px !important;
         height: 48px;
       }
+    }
+  }
+}
+
+.u-modal.pu_venandinv_ven {
+  .u-modal-body {
+    .line-tabs .tab-top-right {
+      button.btn-maximize {
+        display: none;
+      }
+    }
+  }
+
+  .u-modal-footer {
+    div[id='pu_venandinv_ven|btnAbandon'] {
+      margin-right: 0;
     }
   }
 }
