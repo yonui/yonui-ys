@@ -400,3 +400,35 @@ i.uf-calendar:before {
   content: "\e815";
   font-family: "iconfont" !important;
 }
+
+.yonicon-close-circle:before {
+  font-size: 12px;
+  color: #ccc;
+  &:hover {
+    color: #999;
+  }
+}
+
+.yonicon.yonicon-plus-square-o:before {
+  content: "\E52A";
+  font-family: "iconfont" !important;
+}
+
+// fix: ys 银行网点记录删除状态的图标
+.yonicon-info-circle::before {
+  content: "\E61d";
+  font-family: 'iconfont' !important;
+}
+
+// tinper 的搜索图标略微不同于antd 的，这里先恢复使用 anticon
+.uf-search:before {
+  content: "\e518" !important;
+  font-family: 'iconfont';
+}
+
+.ant-select-arrow:before {
+  font-family: uf !important;
+  content: "\e609" !important;
+  color: #98a2ad;
+  transition: transform .2s ease;
+}
