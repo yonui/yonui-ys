@@ -3292,3 +3292,55 @@ i.uf-search,
     }
   }
 }
+
+// 库存单据支持扫码验货
+.stock-toolbar {
+  .basic-input-text {
+    float: left;
+    &>.ant-row {
+      display: flex;
+      .multi-line {
+        // display: none;
+      }
+      &>.control-width {
+        width: 100%!important;
+      }
+    }
+  }
+  .pull-left:first-child {
+    line-height: 30px;
+  }
+}
+
+// 进度条
+.basic-input-progressBar {
+  padding: 5px;
+  float: left;
+  .label-control {
+    display: none;
+  }
+  .control-width {
+    width: 100%;
+  }
+  .u-progress {
+    background: #EBEBEB;
+    border-radius:4px;
+    height: 6px;
+    min-width: 100px;
+    margin-right: 34px;
+    .u-progress-bar {
+      height:6px;
+      background:linear-gradient(45deg,rgba(0,145,255,1) 0%,rgba(65,101,255,1) 100%);
+      border-radius:4px;
+      span {
+        color: #999999;
+        font-size:12px;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+
+      }
+    }
+  }
+}
