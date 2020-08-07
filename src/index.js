@@ -2,7 +2,9 @@ import * as Tinper from './tinper'
 import Locale from './lang'
 import MobileLocale from './components/MobileLocale'
 
-// import './theme/font.js';
+const pkg = require('../package.json')
+const global = window || {}
+global.__YONUI_VERSION__ = pkg.version
 
 let component = null
 
