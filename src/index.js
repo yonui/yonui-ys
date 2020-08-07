@@ -3,8 +3,13 @@ import Locale from './lang'
 import MobileLocale from './components/MobileLocale'
 
 const pkg = require('../package.json')
-const global = window || {}
-global.__YONUI_VERSION__ = pkg.version
+try {
+  const global = window || {}
+  global.__YONUI_VERSION__ = pkg.version
+} catch (err) {
+  console.log(err)
+}
+
 
 let component = null
 
