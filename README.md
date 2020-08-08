@@ -130,3 +130,8 @@ export {
 - 新增过滤项label 显示宽度问题
 - 添加gulp 文件,支持debug
 - 更新 bee-form-confirm
+
+### Referance
+[调试文档](https://www.yuque.com/docs/share/0dab4cdb-30fe-46f3-b70c-0d60c4db4815)
+[维护手册](https://www.yuque.com/docs/share/f5a24951-2665-4b05-b110-8840705a7930)
+[字体图标](http://iuap-design-cdn.oss-cn-beijing.aliyuncs.com/static/mdd/ys/newfont/demo_index.html)
