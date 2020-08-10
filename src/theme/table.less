@@ -3078,6 +3078,7 @@
     text-align: center;
     padding-left: 10px;
     line-height: 36px;
+    margin-top: 10px;
     &>span {
       cursor: pointer;
       font-size: 14px;
@@ -3098,15 +3099,20 @@
     .has-feedback {
       margin-top: 0 !important;
     }
-    textarea {
+    .rc-textarea.u-form-control {
+      padding: 0 !important;
+      border: 0 !important;
+      margin: 0 !important;
+      padding-right: 24px !important;
+      min-height: 32px;
+      transition: all .3s,height 0s;
       line-height: 18px;
+      resize: none;
     }
   }
-  .rc-textarea.u-form-control {
-    padding: 0 !important;
-    border: 0 !important;
-    margin: 0 !important;
-    min-height: 32px;
-    transition: all .3s,height 0s;
+  &.textCol {
+    padding-right: 34px !important;
+    white-space: pre-wrap !important;
   }
+
 }
