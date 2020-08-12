@@ -7,7 +7,7 @@ try {
   const global = window || {}
   global.__YONUI_VERSION__ = pkg.version
 } catch (err) {
-  console.log(err)
+  // console.log(err)
 }
 
 
