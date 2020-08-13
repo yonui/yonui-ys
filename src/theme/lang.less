@@ -1,121 +1,124 @@
 // 西语输入类控件，label + input
-.region-lang() {
-  .ant-row.foreign-lang {
-    display: block;
-    min-height: 46px;
-    padding-left: 80px;
-
-    .refer-div {
-      .ant-row.foreign-lang {
-        padding-left: 0;
+.enus {
+  .region-lang() {
+    .ant-row {
+      display: block;
+      min-height: 46px;
+      padding-left: 80px;
+  
+      .refer-div {
+        .ant-row {
+          padding-left: 0;
+        }
       }
     }
-  }
-
-  .ant-row.foreign-lang .label-control {
-    padding: 0;
-    line-height: 14px;
-    text-align: left;
-    width: 100% !important;
-    .ellipsis();
-    float: unset;
-  }
-
-  .ant-row.foreign-lang .input-control {
-    .ant-row.foreign-lang {
-      padding-left: 0;
-      min-height: unset;
-    }
-  }
-}
-
-.listheadRow .filter-hide {
-  .region-lang();
-}
-
-// 统一入口的公共样式 basic-control
-.basic-control {
-  .region-lang();
-}
-
-.basic-input-text {
-  .region-lang();
-}
-
-.basic-input-textarea {
-  .region-lang();
-}
-
-.basic-input-qrcode {
-  .region-lang();
-}
-
-.basic-tree-refer {
-  .region-lang();
-}
-
-.basic-list-refer {
-  .region-lang();
-}
-
-.basic-tagarea {
-  .region-lang();
-}
-
-.control-radio {
-  .region-lang();
-}
-
-.refer-div {
-  .region-lang();
-}
-
-.number-control {
-  .region-lang();
-}
-
-.checkboxenum-control {
-  .region-lang();
-}
-
-.datepicker-control {
-  .region-lang();
-}
-
-.upload-content {
-  .region-lang();
-}
-
-.tag-group {
-  .region-lang();
-
-  .ant-row.foreign-lang {
-    .enum-control {
-      margin-top: 4px;
-    }
-  }
-}
-
-// tag-refer 特殊处理
-.tag-refer {
-  &.ant-row.foreign-lang {
-    display: block;
-    min-height: 46px;
-    padding-left: 80px;
-
-    .p-v-5 {
+  
+    .ant-row .label-control {
       padding: 0;
       line-height: 14px;
       text-align: left;
       width: 100% !important;
       .ellipsis();
+      float: unset;
+    }
+  
+    .ant-row .input-control {
+      .ant-row {
+        padding-left: 0;
+        min-height: unset;
+      }
     }
   }
-}
-
-// 不同容器的兼容
-.form-left {
-  .ant-row.foreign-lang {
-    padding-left: 0;
+  
+  .listheadRow .filter-hide {
+    .region-lang();
   }
+  
+  // 统一入口的公共样式 basic-control
+  .basic-control {
+    .region-lang();
+  }
+  
+  .basic-input-text {
+    .region-lang();
+  }
+  
+  .basic-input-textarea {
+    .region-lang();
+  }
+  
+  .basic-input-qrcode {
+    .region-lang();
+  }
+  
+  .basic-tree-refer {
+    .region-lang();
+  }
+  
+  .basic-list-refer {
+    .region-lang();
+  }
+  
+  .basic-tagarea {
+    .region-lang();
+  }
+  
+  .control-radio {
+    .region-lang();
+  }
+  
+  .refer-div {
+    .region-lang();
+  }
+  
+  .number-control {
+    .region-lang();
+  }
+  
+  .checkboxenum-control {
+    .region-lang();
+  }
+  
+  .datepicker-control {
+    .region-lang();
+  }
+  
+  .upload-content {
+    .region-lang();
+  }
+  
+  .tag-group {
+    .region-lang();
+  
+    .ant-row {
+      .enum-control {
+        margin-top: 4px;
+      }
+    }
+  }
+  
+  // tag-refer 特殊处理
+  .tag-refer {
+    &.ant-row {
+      display: block;
+      min-height: 46px;
+      padding-left: 80px;
+  
+      .p-v-5 {
+        padding: 0;
+        line-height: 14px;
+        text-align: left;
+        width: 100% !important;
+        .ellipsis();
+      }
+    }
+  }
+  
+  // 不同容器的兼容
+  .form-left {
+    .ant-row {
+      padding-left: 0;
+    }
+  }
+  
 }
