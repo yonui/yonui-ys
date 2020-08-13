@@ -15,11 +15,12 @@
 
   .ant-row .label-control {
     padding: 0;
-    line-height: 14px;
+    line-height: 12px;
     text-align: left;
     width: @labelWidthPercent !important;
     .ellipsis();
     float: unset;
+    margin-bottom: 4px;
   }
 
   .ant-row .input-control {
@@ -156,4 +157,7 @@
     }
   }
 
+  .tag-group:not(.single-line) .label-control {
+    padding-top: 0 !important;
+  }
 }
