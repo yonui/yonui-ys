@@ -1,6 +1,6 @@
 // 西语输入类控件，label + input
 
-.region-lang(@leftPadding: 80px) {
+.region-lang(@leftPadding: 80px, @labelWidthPercent: 80%) {
   .ant-row {
     display: block;
     min-height: 46px;
@@ -17,12 +17,13 @@
     padding: 0;
     line-height: 14px;
     text-align: left;
-    width: 100% !important;
+    width: @labelWidthPercent !important;
     .ellipsis();
     float: unset;
   }
 
   .ant-row .input-control {
+    width: @labelWidthPercent !important;
     .ant-row {
       padding-left: 0;
       min-height: unset;
@@ -109,12 +110,16 @@
         padding: 0;
         line-height: 14px;
         text-align: left;
-        width: 100% !important;
+        width: 80% !important;
         .ellipsis();
+      }
+
+      .TagList {
+        width: 80% !important;
       }
     }
   }
-  
+
   // 不同容器的兼容
 
   // 左树
@@ -141,6 +146,13 @@
 
     .basic-input-text {
       .region-lang(40px);
+    }
+  }
+
+  // 表格编辑，参照
+  .editCol {
+    .refer-div {
+      .region-lang(0);
     }
   }
 
