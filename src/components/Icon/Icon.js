@@ -23,11 +23,11 @@ const Icon = props => {
     spin,
     ...restProps
   } = props
-  // let key = clsPrefix + '-' + type
-  // if (clsPrefix === 'uf' && type.indexOf('uf-') > -1) key = type
+  let key = clsPrefix + '-' + type
+  if (clsPrefix === 'uf' && type.indexOf('uf-') > -1) key = type
   const classString = classNames(
     'yonicon',
-    `yonicon-${type}`,
+    `${key}`,
     `anticon-${type}`,
     {
       [`${clsPrefix}-spin`]: !!spin || type === 'loading'
