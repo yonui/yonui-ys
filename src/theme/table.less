@@ -1243,6 +1243,9 @@
   .scheme-List-content {
     .ant-row {
       display: flex;
+      &:hover {
+        background: #f3f5f9;
+      }
     }
   }
 
@@ -1451,6 +1454,25 @@
       border: none;
     }
   }
+  .readOnlyTable .fixedDataTableCellLayout_main {
+    border-right: 1px solid #d3d3d3;
+  }
+  
+  .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
+    .public_fixedDataTable_header {
+      .fixedDataTableRowLayout_main {
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+  &.listTable .fixedDataTableCellLayout_main {
+    border-right: 1px solid #d3d3d3;
+  }
+}
+
+#container .design-canvas .design-canvas-body .meta-dynamic-view.design-border .rptTable [uitype] {
+  border: none;
+  border-top: 1px solid #d9d9d9;
 }
 
 /*盘点复核-打印模板*/
@@ -3092,7 +3114,7 @@
   }
 }
 
-/*表格多文本自动高度*/
+/*表格多文本自动高度 wuxlr */
 .autoHeightCol {
   &.editCol {
     padding: 4px 10px!important;

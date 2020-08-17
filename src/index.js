@@ -10,7 +10,6 @@ try {
   // console.log(err)
 }
 
-
 let component = null
 
 component = {
