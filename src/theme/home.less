@@ -1328,7 +1328,7 @@
 
       >.ant-row {
         .control-width {
-          width: 60% !important;
+          width: 60%;
           height: auto;
 
           textarea.u-form-control {
@@ -1616,9 +1616,7 @@
 }
 
 .form-base .ant-row-flex.btn-toolbar-bottom {
-  padding: 0;
   align-items: center;
-  margin: 4px 8px;
 }
 
 .ant-btn .anticon {
@@ -4082,7 +4080,7 @@
   padding: 7px 32px;
   max-height: unset;
   margin: 0 0 0 8px;
-  width: calc(100% - 16px);
+  width: calc(~'100% - 16px');
   min-width: unset;
   box-sizing: border-box;
 }
@@ -4169,6 +4167,15 @@
           }
         }
       }
+    }
+  }
+}
+
+// fix:QDJM-2474
+.aim_equip_list {
+  .line-tabs-menu-container .tab-top-right .btn-toolbar-bottom {
+    .col-auto {
+      display: flex;
     }
   }
 }

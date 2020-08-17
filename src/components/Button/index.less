@@ -232,6 +232,10 @@
       background: @primary-color-hover;
     }
 
+    &:not(.u-button-primary):hover {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+
     &[disabled] {
       opacity: .5;
       &:hover {
@@ -315,10 +319,10 @@
       border: none;
       color: @custom2-font-color;
       padding: 0 12px;
-      margin-right: 8px;
+      // margin-right: 8px;
 
       &:hover {
-        background: @custom2-color-hover;
+        background: @custom2-color-hover !important;
       }
     }
   }
@@ -636,6 +640,13 @@
   &:last-child:not(.u-button-primary) {
     color: #fff ;
     background: linear-gradient(-45deg, #fc4c2f, #ee2223);
+  }
+}
+
+.btn-toolbar-bottom .Toolbar_Group {
+  .u-button,
+  .u-button-group {
+    margin-left: -1px;
   }
 }
 

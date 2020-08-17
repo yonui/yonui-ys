@@ -10,7 +10,7 @@
     .filter-text {
       .u-form-control-search-container {
         .filter-search-mixin();
-        padding: 0 15px !important;
+        padding: 0 12px !important;
       }
     }
 
@@ -35,7 +35,8 @@
       }
 
       .colFilter-scroll {
-        height: 224px;
+        max-height: 224px;
+        min-height: 80px;
         margin: 6px 0;
         overflow-x: hidden;
         max-width: 520px;
@@ -76,9 +77,10 @@
         //暂无搜索结果
         .no-data {
           color: #999;
-          margin-top: 70px;
+          margin-top: 32px;
           display: block;
           height: 30px;
+          padding: 0;
         }
       }
 
@@ -91,7 +93,7 @@
 
 .u-popover.u-popover-tooltip.u-tooltip.inverse {
   z-index: 1700;
-  transform: translateY(-4px);
+//   transform: translateY(-4px);
 
   &.inverse-arrow {
     transform: translateY(8px);

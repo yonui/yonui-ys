@@ -5,11 +5,11 @@
     border: none;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     max-width: inherit;
-    min-width: 180px;
+    min-width: 120px;
     // padding-right: 0;
     // padding-left: 0;
     border: 1px solid #dcdcdc;
-
+    padding: 8px 0;
     // .u-checkbox .u-checkbox-label {
     //   color: rgba(0, 0, 0, 0.65);
     // }
@@ -61,6 +61,10 @@
 
           &>.u-button {
             margin-right: 8px;
+          }
+
+          &>.u-button-default:hover {
+            background: rgba(0, 0, 0, .1);
           }
         }
       }
@@ -118,7 +122,7 @@
     border: none;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.1) !important;
     }
   }
 }

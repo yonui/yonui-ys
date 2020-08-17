@@ -1,35 +1,38 @@
 // 西语输入类控件，label + input
-.enus {
-  .region-lang() {
-    .ant-row {
-      display: block;
-      min-height: 46px;
-      padding-left: 80px;
-  
-      .refer-div {
-        .ant-row {
-          padding-left: 0;
-        }
-      }
-    }
-  
-    .ant-row .label-control {
-      padding: 0;
-      line-height: 14px;
-      text-align: left;
-      width: 100% !important;
-      .ellipsis();
-      float: unset;
-    }
-  
-    .ant-row .input-control {
+
+.region-lang(@leftPadding: 80px, @labelWidthPercent: 80%) {
+  .ant-row {
+    display: block !important;
+    min-height: 44px !important;
+    padding-left: @leftPadding;
+
+    .refer-div {
       .ant-row {
         padding-left: 0;
-        min-height: unset;
       }
     }
   }
-  
+
+  .ant-row .label-control {
+    padding: 0;
+    line-height: 12px;
+    text-align: left;
+    width: @labelWidthPercent !important;
+    .ellipsis();
+    float: unset;
+    margin-bottom: 4px;
+  }
+
+  .ant-row .input-control {
+    width: @labelWidthPercent !important;
+    .ant-row {
+      padding-left: 0;
+      min-height: unset !important;
+    }
+  }
+}
+
+.enus {
   .listheadRow .filter-hide {
     .region-lang();
   }
@@ -86,13 +89,18 @@
   .upload-content {
     .region-lang();
   }
+
+  .basic-avatar {
+    .region-lang();
+  }
   
   .tag-group {
     .region-lang();
   
     .ant-row {
       .enum-control {
-        margin-top: 4px;
+        // 枚举项宽度不同于其他的 80%，直接使用100%
+        width: 100% !important;
       }
     }
   }
@@ -101,24 +109,83 @@
   .tag-refer {
     &.ant-row {
       display: block;
-      min-height: 46px;
+      min-height: 44px;
       padding-left: 80px;
   
       .p-v-5 {
         padding: 0;
-        line-height: 14px;
+        line-height: 12px;
         text-align: left;
-        width: 100% !important;
+        width: 80% !important;
         .ellipsis();
+        margin-bottom: 4px;
+      }
+
+      .TagList {
+        width: 80% !important;
       }
     }
   }
-  
+
   // 不同容器的兼容
+
+  // 左树
   .form-left {
     .ant-row {
       padding-left: 0;
     }
   }
-  
+
+  // 必填图标
+  .ant-row .yonicon-star {
+    margin-left: 0;
+    vertical-align: unset;
+  }
+
+  // 帮助图标高度调整
+  .yonicon-bangzhu:before {
+    line-height: 22px;
+  }
+
+  // 弹框
+  .u-modal .u-modal-body {
+    .basic-control {
+      .region-lang(40px);
+    }
+
+    .number-control {
+      .region-lang(40px);
+    }
+
+    .checkboxenum-control {
+      .region-lang(40px);
+    }
+
+    .basic-tree-refer {
+      .region-lang(40px);
+    }
+
+    .basic-input-text {
+      .region-lang(40px);
+    }
+
+    .basic-input-textarea {
+      .region-lang(40px);
+    }
+  }
+
+  // 表格编辑，参照
+  .editCol {
+    .refer-div {
+      .region-lang(0);
+    }
+  }
+
+  .tag-group:not(.single-line) .label-control {
+    padding-top: 0 !important;
+  }
+
+  .label-control.multi-line {
+    padding-top: 0;
+  }
 }

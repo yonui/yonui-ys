@@ -23,6 +23,7 @@
     "CarouselFigure": "./src/components/Carousel",
     "Dropdown": "./src/components/Dropdown",
     "DatePicker": "./src/components/DatePicker",
+    "Dnd": "./src/components/Dnd",
     "Form": "./src/components/Form",
     "BeeCheckbox": "./src/components/BeeCheckbox",
     "BeeRadio": "./src/components/BeeRadio",

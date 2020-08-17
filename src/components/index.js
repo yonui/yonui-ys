@@ -14,6 +14,7 @@ import Con from './_Con'
 import Card from './Card'
 import Dropdown from './Dropdown'
 import DatePicker from './DatePicker'
+import Dnd from './Dnd'
 import Form from './Form'
 import Icon from './Icon'
 import Input from './Input'
@@ -94,6 +95,7 @@ export {
   CarouselFigure,
   Dropdown,
   DatePicker,
+  Dnd,
   Form,
   Input,
   InputNumber,

@@ -10,6 +10,13 @@ try {
   // console.log(err)
 }
 
+const pkg = require('../package.json')
+try {
+  const global = window || {}
+  global.__YONUI_VERSION__ = pkg.version
+} catch (err) {
+  // console.log(err)
+}
 
 let component = null
 

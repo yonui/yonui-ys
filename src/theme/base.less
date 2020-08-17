@@ -3201,7 +3201,6 @@ a.Toolbar_Notification_Log {
 
       .table-list-btn {
         color: #666;
-        background: #f7f9fd;
       }
 
       &:hover {
@@ -3215,6 +3214,12 @@ a.Toolbar_Notification_Log {
       span {
         background: #f7f9fd;
       }
+    }
+    .anticon-icon-xuanzhong1{
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
     }
   }
 
@@ -4675,8 +4680,8 @@ div[id='bd_staff_card|photo'] {
       &:before {
         content: '';
         display: block;
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
         border-radius: 100%;
         border: #E4E4E4 1px solid;
         background-color: #fff;
@@ -4770,7 +4775,7 @@ div[id='bd_staff_card|photo'] {
 
 .group-container-anchor:before {
   position: absolute;
-  left: 19px;
+  left: 18.5px;
   top: 25px;
   content: '';
   display: block;
@@ -4982,11 +4987,14 @@ div[id='bd_staff_card|photo'] {
       }
 
       .viewCell+.width-percent-100 {
-        position: absolute;
+        position: relative;
         left: 132px;
         padding-left: 0px !important;
         padding-right: 0px;
+        margin-left: -16px!important;
+        right: -24px!important;
 
+        .anticon-bangzhu:hover,
         .yonicon-bangzhu:hover {
           cursor: pointer;
 
@@ -5047,6 +5055,9 @@ div[id='bd_staff_card|photo'] {
 }
 
 // async
+.viewCell .upload-content{
+    padding-top: 0;
+}
 .tab-list .u-tabs-content .u-tabs-tabpane {
   div[id='pc_product|imgName'] .upload-content {
     margin-top: 16px;
