@@ -5790,4 +5790,19 @@ div[id='bd_staff_card|photo'] {
 //     padding-bottom: 50px;
 //   }
 // }
-
+/*详情页去掉title*/
+.group-title-hidden {
+    padding-top: 16px!important;
+  
+    >.list-top-toolbar {
+      padding: 0 0 16px 20px;
+    }
+  
+    .group-title,
+    .viewCell h1 {
+      display: none;
+    }
+  }
+  .list-top-toolbar+.group-title-hidden{
+      padding-top: 0px!important;
+  }
