@@ -522,17 +522,23 @@
     }
   }
 
+  .uf-arrow-down:before {
+    content: "\e633" !important;
+  }
+
   .dropdown-btn-icon {
     background: @add-button-arrow-bg-color;
     width: 20px;
     text-align: center;
+    line-height: 28px;
+    border-radius: 4px;
     height: @base-input-height;
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 
     .uf-arrow-down {
       color: #fff !important;
-      top: 2px;
+      top: 0;
       padding: 0;
       &:after {
         background: linear-gradient(180deg, #f12b26, #fff 41%, #feeeed 72%, #f33128);
