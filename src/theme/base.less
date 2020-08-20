@@ -5314,6 +5314,20 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
+// 友零售portal 页
+.uretail-right-content {
+  .split_container .split_right .ant-row-flex.btn-toolbar-bottom.bottom-toolbar,
+  .split_container .split_right [uitype=footer] {
+    width: calc(~"100% - 175px - 250px") !important; // 计算了144px 导航 15px * 2 左右间距，左树250
+    margin-left: 250px !important;
+
+    &.expended {
+      width: calc(~"100% - 175px") !important; // 计算了144px 导航 15px * 2 左右间距
+      margin-left: 0px !important;
+    }
+  }
+}
+
 // 电商通新增定时任务
 .group-buttons {
   .meta-checkbox-container {
