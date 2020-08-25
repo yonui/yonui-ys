@@ -1678,6 +1678,10 @@ i.anticon.anticon-ellipsis {
     .pay-title {
       font-size: 16px;
       color: #505766;
+      display: block;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
   }
 
@@ -3203,7 +3207,6 @@ a.Toolbar_Notification_Log {
 
       .table-list-btn {
         color: #666;
-        background: #f7f9fd;
       }
 
       &:hover {
@@ -3217,6 +3220,12 @@ a.Toolbar_Notification_Log {
       span {
         background: #f7f9fd;
       }
+    }
+    .anticon-icon-xuanzhong1{
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
     }
   }
 
@@ -3502,7 +3511,9 @@ a.Toolbar_Notification_Log {
     max-height: 100%;
   }
 }
-
+.viewCell .id-card-license .basic-avatar-default{
+    height: 64px!important;
+}
 // 法人证件
 .viewCell .basic-avatar-default .basic-avatar-right {
   margin-left: 0;
@@ -3832,7 +3843,7 @@ div[id='bd_staff_card|photo'] {
   }
 
   .input-bottom-text {
-    bottom: -25px;
+    bottom: -16px;
     color: #ccc;
   }
 }
@@ -3921,7 +3932,7 @@ div[id='bd_staff_card|photo'] {
   }
 
   .input-bottom-text {
-    bottom: -25px;
+    bottom: -16px;
     color: #ccc;
   }
 }
@@ -4673,8 +4684,8 @@ div[id='bd_staff_card|photo'] {
       &:before {
         content: '';
         display: block;
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
         border-radius: 100%;
         border: #E4E4E4 1px solid;
         background-color: #fff;
@@ -4768,7 +4779,7 @@ div[id='bd_staff_card|photo'] {
 
 .group-container-anchor:before {
   position: absolute;
-  left: 19px;
+  left: 18.5px;
   top: 25px;
   content: '';
   display: block;
@@ -4980,10 +4991,12 @@ div[id='bd_staff_card|photo'] {
       }
 
       .viewCell+.width-percent-100 {
-        position: absolute;
+        position: relative;
         left: 132px;
         padding-left: 0px !important;
         padding-right: 0px;
+        margin-left: -16px!important;
+        right: -24px!important;
 
         .anticon-bangzhu:hover,
         .yonicon-bangzhu:hover {
@@ -5046,6 +5059,9 @@ div[id='bd_staff_card|photo'] {
 }
 
 // async
+.viewCell .upload-content{
+    padding-top: 0!important;
+}
 .tab-list .u-tabs-content .u-tabs-tabpane {
   div[id='pc_product|imgName'] .upload-content {
     margin-top: 16px;
@@ -5796,4 +5812,19 @@ div[id='bd_staff_card|photo'] {
 //     padding-bottom: 50px;
 //   }
 // }
-
+/*详情页去掉title*/
+.group-title-hidden {
+    padding-top: 16px!important;
+  
+    >.list-top-toolbar {
+      padding: 0 0 16px 20px;
+    }
+  
+    .group-title,
+    .viewCell h1 {
+      display: none;
+    }
+  }
+  .list-top-toolbar+.group-title-hidden{
+      padding-top: 0px!important;
+  }

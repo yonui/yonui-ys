@@ -9,6 +9,18 @@
     &>div>.ant-row {
       margin-bottom: 11px;
     }
+    .control-radio{
+        .label-control{
+          padding-top: 11px;
+        }
+    }
+    .number-control{
+        .input-control .u-input-number {
+            .u-form-control{
+                width: 330px!important;
+            }
+        }
+    }
     .has-error {
       position: relative;
 
@@ -3074,7 +3086,7 @@
       .BatchModify-ModifyField {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
 
         >span:first-child {
           width: 87px;
@@ -3477,6 +3489,7 @@
   .u-modal-header.modal-header {
     border-bottom-color: transparent !important;
     min-height: 28px;
+    border-bottom: none;
   }
 
   .u-modal-content {
@@ -3544,6 +3557,9 @@
         color: #999;
         text-align: left;
         padding-left: 6px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
       }
 
       &:hover {
@@ -3817,6 +3833,9 @@
 
       .rightPanel {
         padding-top: 12px;
+        .scheme-list{
+          margin-top: -10px;
+        }
       }
     }
   }
@@ -3944,6 +3963,11 @@
     width: calc(~'100% - 240px');
     float: left;
     margin-left: 15px;
+    .multi-line+.input-control{
+      .u-checkbox{
+        margin-top: 12px;
+      }
+    }
   }
 
   .up-show {
@@ -4505,6 +4529,8 @@
   .u-modal-body {
     padding-top: 12px;
     min-height: 450px;
+    padding-left: 0px;
+    padding-right: 0;
   }
 
   .tempitem_button {
@@ -5324,4 +5350,15 @@
 
  .u-modal  .u-modal-content  .u-modal-header {
   padding: 10px 15px;
+}
+
+// 提示信息优化
+.u-popover.u-popover-tooltip.u-tooltip[overlayclassname='input-tip-pover-dialog'] {
+  .tooltip-inner {
+    line-height: 28px;
+    padding: 0 8px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+    color: #ee2233;
+    min-width: auto;
+  }
 }

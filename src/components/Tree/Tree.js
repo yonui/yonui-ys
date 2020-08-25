@@ -3,7 +3,7 @@ import Tree from 'bee-tree'
 
 class TreeAdapter extends Component {
   render () {
-    const { showIcon, children, ...other } = this.props
+    const { children, ...other } = this.props
 
     return (
       <Tree

@@ -384,3 +384,91 @@
     }
   }
 }
+.form-left.Manual-calculation-left{
+    .search-tree-3 {
+        //一级树的层级改成列表
+      .tree-nochildren.u-tree {
+        padding: 0 !important;
+        margin-right: 0px;
+        overflow-y: auto;
+
+        li {
+          padding: 0;
+          width: 100%;
+
+          .u-tree-switcher-noop {
+            display: none;
+          }
+
+          .u-tree-node-content-wrapper {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            white-space: normal;
+            padding: 0px !important;
+
+            &:hover {
+              border-radius: 0px;
+              background: #edf1f7;
+            }
+          }
+
+          &.u-tree-treenode-selected {
+            .u-tree-title {
+              border-radius: 0px;
+              line-height: initial;
+              background: #fff7e7 !important;
+              position: relative;
+
+              &::before {
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                content: "";
+                display: block;
+                left: 0;
+                top: 0;
+                background: #ee2223;
+              }
+            }
+          }
+
+          .u-tree-title {
+            height: auto;
+            margin: 0px;
+            padding: 9px 0px 9px 0px;
+            line-height: 16px;
+            border-radius: 0;
+            display: block;
+            width: 100%;
+
+            span {
+              white-space: normal;
+              line-height: 16px;
+              position: relative;
+              color: #333;
+              padding-left: 8px;
+              display: block;
+            }
+          }
+
+          a {
+            border: none;
+
+            &:hover {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+}
+// 对带图标的searchTree样式处理
+.searchtree-has-icon.u-tree{
+  li span.u-tree-iconEle{
+    text-align: center;
+  }
+}
+.search-tree-3 .u-tree.searchtree-has-icon li a.u-tree-node-content-wrapper .u-tree-title{
+  padding:0 0;
+}

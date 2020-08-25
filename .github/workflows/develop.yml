@@ -1,8 +1,8 @@
 on:
   push:
     branches:
-      - rv1.1
-name: Release 1.1
+      - develop
+name: Develop
 jobs:
 
   publish:
@@ -16,7 +16,7 @@ jobs:
         registry-url: https://registry.npmjs.org/
     - run: npm install
     - run: npm run build
-    - run: npm publish
+    - run: npm publish --tag snapshot
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 

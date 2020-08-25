@@ -1427,9 +1427,12 @@
 
 /*多表头样式 add by jinzh1*/
 .rptTable {
+  &.readOnlyTable .fixedDataTableRowLayout_main {
+    overflow: hidden!important;
+  }
   .table-group-header {
     .group-row {
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3!important;
 
       .group-col {
         float: left;
@@ -1445,6 +1448,32 @@
       border: none;
     }
   }
+  .readOnlyTable .fixedDataTableCellLayout_main {
+    border-right: 1px solid #d3d3d3;
+  }
+  .public_fixedDataTableCell_main[role="columnheader"] {
+    .headerName {
+      height: 66px!important;
+    }
+  }
+  
+  .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
+    .public_fixedDataTable_header {
+      .fixedDataTableRowLayout_main {
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+  &.listTable{
+    .fixedDataTableCellLayout_main{
+       border-right: 1px solid #d3d3d3;
+    }
+  }
+}
+
+#container .design-canvas .design-canvas-body .meta-dynamic-view.design-border .rptTable [uitype] {
+  border: none;
+  border-top: 1px solid #d9d9d9;
 }
 
 /*盘点复核-打印模板*/
@@ -3072,6 +3101,7 @@
     text-align: center;
     padding-left: 10px;
     line-height: 36px;
+    margin-top: 10px;
     &>span {
       cursor: pointer;
       font-size: 14px;
@@ -3108,4 +3138,9 @@
     white-space: pre-wrap !important;
   }
 
+}
+.stockcol-table-red {
+    color: #ee2223;
+    font-weight: bold;
+    display: block;
 }
