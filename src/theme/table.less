@@ -1427,9 +1427,12 @@
 
 /*多表头样式 add by jinzh1*/
 .rptTable {
+  &.readOnlyTable .fixedDataTableRowLayout_main {
+    overflow: hidden!important;
+  }
   .table-group-header {
     .group-row {
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3!important;
 
       .group-col {
         float: left;
@@ -1447,6 +1450,11 @@
   }
   .readOnlyTable .fixedDataTableCellLayout_main {
     border-right: 1px solid #d3d3d3;
+  }
+  .public_fixedDataTableCell_main[role="columnheader"] {
+    .headerName {
+      height: 66px!important;
+    }
   }
   
   .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
