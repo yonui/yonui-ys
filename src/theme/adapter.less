@@ -241,6 +241,7 @@ textarea.u-form-control {
   .viewCell.width-percent-100 .input-control {
       .ac-input-locale,.u-input-group,.ant-select,.u-select,.control-text,.u-form-control{
         width: 360px !important;
+        max-width: 100%;
       }
       //数字u-input-number-out
       .u-input-number-out{
@@ -712,6 +713,16 @@ div[id='aa_paymentmethod|code'] {
   }
 }
 
+// 资产类别左树
+.ampub_category_tree {
+  .split_container .split_left .left-container>.meta-default-container {
+    height: 100%;
+    &>.bg-white.border-r {
+      height: 100%;
+    }
+  }
+}
+
 .ant-row.meta-title {
   margin-top: 16px;
 }
@@ -1077,5 +1088,13 @@ div[id='st_storeinlist'],
 div[id='st_storeoutlist'] {
   .u-tabs-tabpane-active {
     padding-bottom: 64px;
+  }
+}
+
+div[id='aa_vendor|aa_vendor_page_base'] {
+  .jDiwork-container {
+    & > .group-container {
+      padding-bottom: 60px;
+    }
   }
 }

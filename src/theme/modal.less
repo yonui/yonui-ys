@@ -9,6 +9,18 @@
     &>div>.ant-row {
       margin-bottom: 11px;
     }
+    .control-radio{
+        .label-control{
+          padding-top: 11px;
+        }
+    }
+    .number-control{
+        .input-control .u-input-number {
+            .u-form-control{
+                width: 330px!important;
+            }
+        }
+    }
     .has-error {
       position: relative;
 
@@ -1349,7 +1361,7 @@
   .search_scroll {
     height: 100% !important;
     text-align: left;
-    max-height: 213px;
+    max-height: 220px;
     overflow-y: auto;
 
     .ant-row {
@@ -1441,9 +1453,15 @@
 .filter-edit {
   max-height: 220px;
 
-  // .search_scroll {
-  //   max-height: 162px !important;
-  // }
+  .search_scroll {
+    max-height: 180px !important;
+  }
+  .drag_drop {
+    padding-left: 10px;
+    &:hover {
+      background: #f3f5f9;
+    }
+  }
 }
 
 /* 表尾 */
@@ -2869,7 +2887,7 @@
       background: #F9F9F9;
       margin-left: 102px;
       padding: 12px 0px 1px 10px;
-      margin-right: 20px;
+      margin-right: 10px;
 
       .BatchModify-FilterRow {
         .BatchModify-JiaJian {
@@ -2886,7 +2904,7 @@
             margin-top: 4px;
             min-width: unset;
 
-            .anticon {
+            .yonicon {
               font-size: 12px;
               text-align: center;
               line-height: 20px;
@@ -3074,7 +3092,7 @@
       .BatchModify-ModifyField {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
 
         >span:first-child {
           width: 87px;
@@ -3477,6 +3495,7 @@
   .u-modal-header.modal-header {
     border-bottom-color: transparent !important;
     min-height: 28px;
+    border-bottom: none;
   }
 
   .u-modal-content {
@@ -3544,6 +3563,9 @@
         color: #999;
         text-align: left;
         padding-left: 6px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
       }
 
       &:hover {
@@ -3817,6 +3839,9 @@
 
       .rightPanel {
         padding-top: 12px;
+        .scheme-list{
+          margin-top: -10px;
+        }
       }
     }
   }
@@ -3944,6 +3969,11 @@
     width: calc(~'100% - 240px');
     float: left;
     margin-left: 15px;
+    .multi-line+.input-control{
+      .u-checkbox{
+        margin-top: 12px;
+      }
+    }
   }
 
   .up-show {
@@ -3969,7 +3999,7 @@
 
       &:hover {
         border: none;
-        color: #91BCFF;
+        color: #8dbbf5!important;
       }
 
     }
@@ -4029,7 +4059,8 @@
 
   .refer-toolbar {
     overflow: hidden;
-    padding: 0px 24px 16px;
+    // padding: 6px 24px 8px;
+    padding: 0 24px 12px;
 
     .refer-toobar-wrapper {
       display: flex;
@@ -4379,11 +4410,11 @@
       .container-edit-mode {
         .height-100 {
           .meta-default-container {
-            height: 100%;
+            // height: 100%;
             background: transparent;
 
             .list-top-toolbar {
-              padding: 12px 20px;
+              padding: 12px 20px 0;
             }
 
             .card-tabs {
@@ -4504,6 +4535,8 @@
   .u-modal-body {
     padding-top: 12px;
     min-height: 450px;
+    padding-left: 0px;
+    padding-right: 0;
   }
 
   .tempitem_button {
@@ -5323,4 +5356,15 @@
 
  .u-modal  .u-modal-content  .u-modal-header {
   padding: 10px 15px;
+}
+
+// 提示信息优化
+.u-popover.u-popover-tooltip.u-tooltip[overlayclassname='input-tip-pover-dialog'] {
+  .tooltip-inner {
+    line-height: 28px;
+    padding: 0 8px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+    color: #ee2233;
+    min-width: auto;
+  }
 }

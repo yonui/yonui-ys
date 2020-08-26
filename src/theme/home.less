@@ -730,17 +730,27 @@
 
 /* 门店弹窗 */
 .saleTrend_popover {
-  .ant-popover-inner-content .pull-left .ant-checkbox-wrapper {
-    width: 100%;
-  }
-
-  .filter-btn-fixed .filter-btn-1 {
-    bottom: 1px;
-  }
-
-  .ant-popover-inner-content .filter-txt {
-    padding-bottom: 30px;
-  }
+    .ant-popover-inner-content .pull-left .ant-checkbox-wrapper {
+      width: 100%;
+    }
+    .filter-btn-fixed{
+      padding-bottom: 30px;
+      .filter-txt{
+          padding-bottom: 0px;
+          .ant-row,.ant-row div{
+              height: 32px;
+              line-height: 32px;
+          }
+      }
+      .filter-btn-1 {
+          bottom: 8px;
+          .ant-btn{
+              height: 26px;
+              padding: 0px 12px;
+              font-size: 12px;
+          }
+        }
+    }
 }
 
 .ant-progress-inner {

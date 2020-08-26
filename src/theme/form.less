@@ -721,7 +721,7 @@
     }
     .control-width{
         //编辑态输入框
-        .u-input-group,.ant-select,.ac-input-locale,.u-select{
+        .u-input-group,.ant-select,.ac-input-locale,.u-select,.u-form-control{
             width: 400px!important;
             max-width: 100%;
         }
@@ -1280,8 +1280,12 @@
     }
 
     &.width-percent-100 {
-      margin-left: 10px;
       width: 56%;
+      position: relative;
+      padding-left: 0px !important;
+      padding-right: 0px;
+      margin-left: -16px!important;
+      right: -26px!important;
 
       .u-button {
         width: 100%;
@@ -1669,7 +1673,7 @@
   bottom: 0;
   left: 159px;
   right: 15px;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .container-less-height .tab-bottom-txt {
@@ -1677,7 +1681,7 @@
   bottom: 0;
   left: 159px;
   right: 15px;
-  z-index: 2;
+  z-index: 1000;
 }
 
 // 编辑态表单
@@ -1730,7 +1734,7 @@
     color: #505766;
     padding-left: 25px;
     margin-top: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   
     span {
       cursor: pointer;
@@ -2162,91 +2166,75 @@ i.uf-search,
 }
 
 // 触屏基本设置
-// .ant-tabs-content .line-tabs .ant-tabs-tabpane-active .touchBasicSetting .ant-row h3 {
-//   display: block
-// }
-
-// .touchBasicSetting {
-//   padding-top: 16px !important;
-
-//   &>.ant-row {
-//     margin-bottom: 20px;
-
-//     &:first-child .col-float {
-//       width: auto !important;
-
-//       h3 {
-//         display: block !important;
-//         font-size: 12px;
-//         color: #666;
-//         line-height: 16px;
-//         padding-left: 15px;
-//         margin-left: 18px;
-//         margin-right: 15px;
-//         margin-top: 5px;
-//       }
-
-//       &>.viewCell {
-//         padding-left: 0;
-
-//         &:first-child {
-//           margin-left: 0;
-//         }
-
-//         .label-control {
-//           margin-right: 8px;
-//         }
-
-//         .anticon-star {
-//           margin-left: 2px;
-//         }
-
-//         .control-radio {
-//           line-height: 28px;
-//           margin-left: 0;
-//         }
-
-//         .u-checkbox {
-//           height: 28px;
-//           margin-right: 0;
-//           line-height: 28px;
-
-//           &.u-checkbox.disabled .u-checkbox-label {
-//             color: #333;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   .viewCell:first-child {
-//     margin-top: 0 !important;
-//   }
-
-//   .has-related .viewCell {
-//     margin-top: 0 !important;
-//     width: 100%;
-//     width: auto;
-//     flex: initial;
-
-//     .control-radio {
-//       margin-top: 0 !important;
-//       margin-left: 5px;
-//     }
-//   }
-
-//   .ant-checkbox-disabled+span {
-//     color: #333;
-//   }
-
-//   .checkboxenum-bottom {
-//     color: #999;
-//   }
-// }
-
-.ant-tabs-content .container-edit-mode .line-tabs .touchBasicSetting .control-radio>.ant-row {
-  margin-bottom: 20px;
+.ant-tabs-content .line-tabs .ant-tabs-tabpane-active .touchBasicSetting .ant-row h3 {
+    display: block
 }
+.touchBasicSetting {
+    padding-top: 16px !important;
+  
+    &>.ant-row:nth-child(2)>.ant-row {
+      margin-bottom: 20px;
+      display: flex;
+  
+      .col-float {
+        width: auto !important;
+  
+        h3 {
+          font-size: 12px;
+          color: #666;
+          line-height: 32px;
+          margin-left: 18px;
+          padding-left: 15px;
+          margin-right: 15px;
+          display: block;
+          min-width: 87px;
+        }
+  
+        .control-text {
+          width: auto;
+          text-align: center;
+        }
+  
+        &>.viewCell {
+          padding-left: 0;
+  
+          &:first-child {
+            margin-left: 0;
+          }
+  
+          &:nth-of-type(2) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  
+    .viewCell:first-child {
+      margin-top: 0 !important;
+    }
+  
+    .has-related .viewCell {
+      margin-top: 0 !important;
+      width: auto;
+  
+      .control-radio {
+        margin-top: 0 !important;
+        margin-left: 5px;
+      }
+    }
+  
+    .ant-checkbox-disabled+span {
+      color: #333;
+    }
+  
+    .checkboxenum-bottom {
+      color: #999;
+    }
+  }
+
+  .ant-tabs-content .container-edit-mode .line-tabs .touchBasicSetting .control-radio>.ant-row {
+    margin-bottom: 20px;
+  }
 
 .meta-container .voucher-list.container-browse-mode.container-less-height {
   height: 100%;
@@ -3288,6 +3276,58 @@ i.uf-search,
             }
           }
         }
+      }
+    }
+  }
+}
+
+// 库存单据支持扫码验货
+.stock-toolbar {
+  .basic-input-text {
+    float: left;
+    &>.ant-row {
+      display: flex;
+      .multi-line {
+        // display: none;
+      }
+      &>.control-width {
+        width: 100%!important;
+      }
+    }
+  }
+  .pull-left:first-child {
+    line-height: 30px;
+  }
+}
+
+// 进度条
+.basic-input-progressBar {
+  padding: 5px;
+  float: left;
+  .label-control {
+    display: none;
+  }
+  .control-width {
+    width: 100%;
+  }
+  .u-progress {
+    background: #EBEBEB;
+    border-radius:4px;
+    height: 6px;
+    min-width: 100px;
+    margin-right: 34px;
+    .u-progress-bar {
+      height:6px;
+      background:linear-gradient(45deg,rgba(0,145,255,1) 0%,rgba(65,101,255,1) 100%);
+      border-radius:4px;
+      span {
+        color: #999999;
+        font-size:12px;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+
       }
     }
   }

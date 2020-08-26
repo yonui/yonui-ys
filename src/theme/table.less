@@ -547,7 +547,7 @@
   .u-modal-body {
     color: #666;
     padding: 16px 20px 0px 20px;
-    height: 548px;
+    height: 450px;
     .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
       top: 1px;
     }
@@ -741,15 +741,6 @@
             padding-left: 5px;
           }
         }
-      }
-    }
-
-    .crossadddata {
-      width: 270px !important;
-      margin-left: 78px;
-
-      .crossaddnamemargin {
-        line-height: 16px !important;
       }
     }
 
@@ -1238,14 +1229,14 @@
   .ant-row {
     display: flex;
     align-items: center;
+    &:hover {
+      background: #f3f5f9;
+    }
   }
 
   .scheme-List-content {
     .ant-row {
       display: flex;
-      &:hover {
-        background: #f3f5f9;
-      }
     }
   }
 
@@ -1255,6 +1246,7 @@
     display: block;
     float: left;
     margin-left: 2px;
+    color: #ee2233;
 
     .ant-checkbox {
       margin-top: 9px;
@@ -1436,9 +1428,12 @@
 
 /*多表头样式 add by jinzh1*/
 .rptTable {
+  &.readOnlyTable .fixedDataTableRowLayout_main {
+    overflow: hidden!important;
+  }
   .table-group-header {
     .group-row {
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3!important;
 
       .group-col {
         float: left;
@@ -1454,6 +1449,32 @@
       border: none;
     }
   }
+  .readOnlyTable .fixedDataTableCellLayout_main {
+    border-right: 1px solid #d3d3d3;
+  }
+  .public_fixedDataTableCell_main[role="columnheader"] {
+    .headerName {
+      height: 66px!important;
+    }
+  }
+  
+  .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
+    .public_fixedDataTable_header {
+      .fixedDataTableRowLayout_main {
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+  &.listTable{
+    .fixedDataTableCellLayout_main{
+       border-right: 1px solid #d3d3d3;
+    }
+  }
+}
+
+#container .design-canvas .design-canvas-body .meta-dynamic-view.design-border .rptTable [uitype] {
+  border: none;
+  border-top: 1px solid #d9d9d9;
 }
 
 /*盘点复核-打印模板*/
@@ -3081,6 +3102,7 @@
     text-align: center;
     padding-left: 10px;
     line-height: 36px;
+    margin-top: 10px;
     &>span {
       cursor: pointer;
       font-size: 14px;
@@ -3117,4 +3139,9 @@
     white-space: pre-wrap !important;
   }
 
+}
+.stockcol-table-red {
+    color: #ee2223;
+    font-weight: bold;
+    display: block;
 }
