@@ -3304,6 +3304,7 @@ i.uf-search,
 .basic-input-progressBar {
   padding: 5px;
   float: left;
+  margin-right: 16px;
   .label-control {
     display: none;
   }
@@ -3316,6 +3317,7 @@ i.uf-search,
     height: 6px;
     min-width: 100px;
     margin-right: 34px;
+    vertical-align: middle;
     .u-progress-bar {
       height:6px;
       background:linear-gradient(45deg,rgba(0,145,255,1) 0%,rgba(65,101,255,1) 100%);
@@ -3330,5 +3332,23 @@ i.uf-search,
 
       }
     }
+    .progressBar-after {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      line-height: 20px;
+      display: block;
+    }
   }
+  &+.s-popover-inner-span {
+    .u-button {
+      padding: 0;
+      border:none;
+      color: #ee2233;
+    }
+  }
+}
+
+.line-tabs-menu-container .tab-top-right .btn-toolbar-bottom .btn-maximize {
+  min-width: auto;
 }
