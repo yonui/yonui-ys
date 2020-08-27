@@ -4587,13 +4587,13 @@
 }
 
 //零售收款结算弹窗
-.retail_receipts {
+.retail_receipts.u-modal {
   .u-modal-dialog {
     width: 794px !important;
   }
 
   .u-modal-header {
-    position: absolute;
+    position: absolute!important;
     right: 0px;
     width: 28px;
     height: 28px;
@@ -4603,7 +4603,7 @@
     top: 0px;
     border: none;
     z-index: 1;
-
+    border-bottom-color: transparent!important;
     .uf-close {
       top: 4px !important;
       right: 8px !important;
