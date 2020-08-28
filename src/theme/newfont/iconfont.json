@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "16828423",
+      "name": "设备",
+      "font_class": "shebei",
+      "unicode": "e857",
+      "unicode_decimal": 59479
+    },
+    {
+      "icon_id": "16828424",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e858",
+      "unicode_decimal": 59480
+    },
+    {
+      "icon_id": "16828425",
+      "name": "零件",
+      "font_class": "lingjian",
+      "unicode": "e859",
+      "unicode_decimal": 59481
+    },
+    {
       "icon_id": "16801112",
       "name": "联动下级",
       "font_class": "liandongxiaji1",
