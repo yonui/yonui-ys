@@ -68,6 +68,7 @@
   font-weight: bold;
 }
 
+.anticon-ellipsis:before,
 .yonicon-ellipsis:before {
   content: "\e521" !important;
 }
@@ -187,7 +188,11 @@ i.uf-calendar:before {
   color: #ccc;
   font-family: 'iconfont' !important;
 }
-
+.anticon-liandongxiaji1::before,
+.yonicon-liandongxiaji1:before{
+    content: "\e60c";
+    font-family: "iconfont" !important;
+}
 .yonicon-shanchucopy2:before {
   content: "\e676";
 }
@@ -452,10 +457,18 @@ i.uf-calendar:before {
 
 .yonicon-zanting:before {
   content: "\e850";
+  color: #999;
+  &:hover {
+    color: #505766;
+  }
 }
 
 .yonicon-bofang:before {
   content: "\e851";
+  color: #999;
+  &:hover {
+    color: #505766;
+  }
 }
 
 .yonicon-left:before {
