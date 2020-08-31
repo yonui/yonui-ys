@@ -18,11 +18,11 @@
 .primary-button-mixin(@height: 28px, @minWidth: 60px) {
   .u-button-mixin(@height, @minWidth);
   color: #fff;
-  background: linear-gradient(-45deg, #fc4c2f, #ee2223);
+  background: linear-gradient(-45deg,#ee2223,#fc4c2f );
   border: none;
   border-radius: 4px;
   &:hover {
-    background: linear-gradient(-225deg, #FC4C2F, #EE2223);
+    background: linear-gradient(-225deg,#EE2223,#FC4C2F);
   }
 }
 
@@ -265,8 +265,10 @@
 }
 
 .u-button.button-only-icon {
-  min-width: 28px;
-  background: #F8f8f8!important;
+  min-width: 28px!important;
+  &:hover {
+    background: #F8f8f8!important;
+  }
 }
 
 // fix: 供货目录，按钮组的primary 按钮右边距

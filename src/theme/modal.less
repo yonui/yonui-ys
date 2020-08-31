@@ -14,13 +14,17 @@
           padding-top: 11px;
         }
     }
-    .number-control{
+
+    div[id='pc_unit|precision'] {
+      .number-control{
         .input-control .u-input-number {
             .u-form-control{
                 width: 330px!important;
             }
         }
+      }
     }
+    
     .has-error {
       position: relative;
 
@@ -3431,14 +3435,6 @@
   }
 }
 
-/*嵌入页面底部 bottom-toolbar*/
-// .height-100 .bottom-toolbar .ant-btn {
-//   padding: 0 27px !important;
-//   height: 32px !important;
-//   line-height: 32px !important;
-//   border-radius: 4px;
-// }
-
 /*自定义过滤弹窗tips提示*/
 .tips_content {
   max-height: 290px;
@@ -3848,7 +3844,7 @@
 }
 
 // 树参照模态框
-.u-modal .Tree {
+.u-modal .Tree,.u-modal .ReferGroup {
   width: 520px !important;
 
   .u-select-combobox .u-select-search__field {
@@ -4587,13 +4583,13 @@
 }
 
 //零售收款结算弹窗
-.retail_receipts {
+.retail_receipts.u-modal {
   .u-modal-dialog {
     width: 794px !important;
   }
 
   .u-modal-header {
-    position: absolute;
+    position: absolute!important;
     right: 0px;
     width: 28px;
     height: 28px;
@@ -4603,7 +4599,7 @@
     top: 0px;
     border: none;
     z-index: 1;
-
+    border-bottom-color: transparent!important;
     .uf-close {
       top: 4px !important;
       right: 8px !important;
@@ -5366,5 +5362,79 @@
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
     color: #ee2233;
     min-width: auto;
+  }
+}
+//pc手机验证弹窗
+.msgcode-modal {
+    .Table.u-modal-dialog {
+      width: 540px !important;
+    }
+    .msgcode-phonenum{
+        line-height: 20px;
+        margin: 25px auto 15px;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+    }
+    .viewCell.width-percent-100{
+		.msgcode-yxy{
+			position: relative;
+			height: 70px;
+			overflow: hidden;
+			.u-form-control{
+				position:absolute;
+				left:0;
+				z-index: 2;
+				background-color: inherit;
+				border:none;
+			    letter-spacing: 57px;
+				font-size: 40px;
+				line-height: 60px;
+				height: 60px;
+				padding-left: 28px;
+				outline: none;
+				font-size: 0px;
+				text-indent: -999em; /*文本向左缩进*/
+				margin-left: -100%; /*输入框光标起始点向左左移*/
+				width:200%!important; /*输入框增大一倍*/
+				opacity: 0;
+			}   
+		}
+		.msgcode-yxy-box{
+			z-index: 1;
+			position:absolute;
+			top:0;
+			left:0;
+			p{
+				border:#505766 solid 1px;
+				width: 60px!important;
+				height: 60px;
+				color: #505766;
+				font-size: 30px;
+				text-align: center;
+				margin: 0 10px;
+				float: left;
+				border-radius:2px;
+				line-height: 60px;
+			}
+			span{
+				position:absolute;
+				top: 12px;
+				left: 54px;
+				display: block;
+				width: 1px;
+				height: 35px;
+				background-color:black;
+				animation: blink 1s infinite steps(1, start)
+			}
+		}
+	}
+}
+
+.modalkey_aa_productsku {
+  .refer-listheader-toolbar {
+    .Toolbar_Group_Length1:last-child {
+      margin-top: 16px;
+    }
   }
 }

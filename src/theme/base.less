@@ -1921,6 +1921,9 @@
       color: #ee2233;
     }
   }
+  .u-notification-notice{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .Toolbar_Notification_Img {
@@ -2313,6 +2316,13 @@ a.Toolbar_Notification_Log {
               .label-control+.col-float {
                 width: auto !important;
               }
+            }
+          }
+          .showPosition {
+            margin-left: 8px;
+            width: auto!important;
+            .u-select-selection--single .u-select-selection-selected-value {
+              margin-right: 20px;
             }
           }
         }
@@ -5269,7 +5279,9 @@ div[id='bd_staff_card|photo'] {
         border-right: 1px solid #505766 !important;
       }
     }
-
+    .toleft{
+        border-right: #e9e9e9 solid 1px;
+    }
     .toright {
       &:hover {
         cursor: e-resize;
@@ -5828,3 +5840,342 @@ div[id='bd_staff_card|photo'] {
   .list-top-toolbar+.group-title-hidden{
       padding-top: 0px!important;
   }
+/*热区*/
+.aa_floorlist{
+    .view-container,
+    .jDiwork-container>.ant-row{
+        height: 100%;
+    }
+    .edit-floor-archives+.div-container{
+        height: calc(~'100% - 104px') !important; 
+    }
+}
+.edit-floor-archives {
+  padding-top: 16px;
+}
+
+.HotAreaMapDesign_ZhanWei {
+  width: 100%;
+  height: 56px;
+}
+
+.HotAreaMapDesign_MapOuter {
+  padding-top: 7px; //height: 100%;
+  // overflow: hidden!important;
+  height: 100% !important;
+
+  .HotAreaMapDesign_Map {
+    border-top: #E1E1E1 solid 1px;
+    height: 100%;
+
+    .HotAreaMapDesign_Row {
+      height: 100% !important;
+
+      .HotAreaMapDesign_LeftPanel_Outer {
+        width: 250px !important;
+        height: 100%;
+        float: left;
+        position: relative;
+
+        .HotAreaMapDesign_LeftPanel {
+          height: 100%;
+          overflow-y: auto;
+          padding-bottom: 20px;
+          overflow-x: hidden;
+          .viewCell.width-percent-100 .control-width .u-input-group, 
+          .viewCell.width-percent-100 .control-width .ant-select, 
+          .viewCell.width-percent-100 .control-width .ac-input-locale, 
+          .viewCell.width-percent-100 .control-width .u-select, 
+          .viewCell.width-percent-100 .control-width .u-form-control{
+              width: 100%!important;
+          }
+        }
+
+        .HotAreaMapDesign_Container {
+          .viewCell.width-percent-100 {
+            .ant-row {
+              display: block;
+              margin-bottom: 0px;
+            }
+
+            .label-control {
+              width: 100% !important;
+              text-align: left;
+              margin-right: 0px;
+              padding-left: 0px;
+              margin-top: 20px;
+              margin-bottom: 10px;
+            }
+
+            .input-control.control-width {
+              width: 100% !important;
+
+              .ant-input,
+              .control-text {
+                width: 210px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .HotAreaMapDesign_LeftPanel_Outer::before {
+        content: '';
+        width: 1px;
+        position: absolute;
+        height: 100%;
+        background: #E1E1E1;
+        right: -1px;
+      }
+
+      .HotAreaMapDesign_HotArea_Outer {
+        width: calc(~'100% - 251px') !important;
+        float: left;
+        padding-left: 0px;
+        position: relative;
+        height: 100%;
+
+        .HotAreaMapDesign_TopPanel_NoImg {
+          position: absolute;
+          width: 210px;
+          top: 50%;
+          left: 50%;
+          margin-top: -150px;
+          margin-left: -105px;
+
+          .HotAreaMapDesign_Upload_Outer {
+            width: 140px;
+            height: 140px;
+            background: rgba(251, 251, 251, 1);
+            border-radius: 4px;
+            border: 1px rgba(217, 217, 217, 1) dashed;
+            margin: 0 auto;
+            cursor: pointer;
+            >span{
+                width: 100%;
+                display: block;
+                .u-upload.u-upload-select{
+                    display: block;
+                }
+            }
+            .u-upload.u-upload-select {
+              width: 140px;
+              height: 140px;
+
+              .anticon-uploadimg:before {
+                font-size: 42px;
+                color: #CCCCCC;
+                content: "\e710";
+              }
+
+              .anticon-uploadimg {
+                margin: 34px auto 0px auto;
+                display: block;
+              }
+
+              p {
+                text-align: center;
+                font-size: 12px;
+                color: #999;
+                margin-top: 5px;
+              }
+            }
+          }
+
+          .HotAreaMapDesign_Upload_Outer:hover {
+            border: #505766 dashed 1px;
+          }
+
+          .HotAreaMapDesign_Upload_Text {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            text-align: center;
+          }
+        }
+
+        .HotArea_Inner {
+          // width: 100%;
+          // height: calc(~'100% - 58px') !important;
+          // display: flex!important;
+          // margin-top: 55px;
+          // overflow: auto;
+        }
+
+        //上传之后的图片
+        .HotAreaMapDesign_TopPanel_HasImg {
+          height: 55px;
+          padding-right: 0px;
+          width: 100%;
+
+          .u-button,
+          .u-upload {
+            float: right;
+            margin-top: 15px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            svg {
+              width: 15px;
+              height: 15px;
+              margin-right: 5px;
+              float: left;
+            }
+          }
+
+          .u-upload {
+            .u-upload {
+              margin-right: 0px;
+            }
+          }
+
+          .u-btn {
+            display: flex;
+            align-items: center;
+            height: 30px;
+          }
+
+          .u-upload-select-text {
+            display: block;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            padding: 6px 12px;
+            height: 30px;
+            cursor: pointer;
+
+            .u-upload {
+              margin-top: 0px;
+            }
+
+            div {
+              display: flex;
+              align-items: center;
+            }
+          }
+
+          .u-upload-select-text:hover {
+            border: 1px solid #505766;
+          }
+        }
+
+        .HotArea_Media {
+          width: 100%; // display: flex;
+          // align-items: center;
+          // justify-content: space-around;
+          // flex-direction: column;
+          overflow-x: auto;
+        }
+
+        .HotArea_Inner {
+          width: 100%;
+          padding-left: 1px;
+
+          img {
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+
+        .AreaCrop_Inner {
+          background: rgba(51, 136, 255, .55) !important;
+          border: #3388FF solid 1px;
+          border-radius: 5px;
+          box-shadow: none !important;
+        }
+
+        .rmc-icon-container {
+          display: none;
+          width: 22px;
+          height: 22px;
+          background: rgba(0, 0, 0, 1) !important;
+          border-radius: 50%;
+          position: absolute;
+          right: -12px;
+          top: -12px;
+        }
+
+        .rmc-remove {
+          color: white;
+          position: absolute;
+          margin-top: 10px;
+          margin-left: 6px;
+        }
+
+        .rmc-remove:before {
+          content: '';
+          position: absolute;
+          width: 9px;
+          height: 1px;
+          background-color: currentColor;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+        .rmc-remove:after {
+          content: '';
+          position: absolute;
+          width: 9px;
+          height: 1px;
+          background-color: currentColor;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+
+        .AreaCrop_Inner:hover {
+          .rmc-icon-container {
+            display: block;
+          }
+        }
+
+        .AreaCrop_Caption_1,
+        .AreaCrop_Caption_2 {
+          font-size: 16px;
+          color: #fff;
+          line-height: initial;
+          padding: 0px 10px;
+          font-weight: bold;
+        }
+
+        .AreaCrop_Caption_1 {
+          padding-top: 10px;
+          font-size: 14px;
+        }
+
+        .AreaCrop_Caption_2 {
+          font-size: 12px;
+        }
+      }
+
+      .HotAreaMapDesign_HotArea_Outer::before {
+        content: "";
+        width: 1px;
+        position: absolute;
+        height: 100%;
+        background: #e1e1e1;
+        left: 0px;
+        z-index: 99;
+      }
+
+      .HotArea_AreaCrop_Outer.HotArea_AreaCrop_Selected {
+        .AreaCrop_Inner {
+          background: rgba(51, 136, 255, .65) !important;
+        }
+      }
+    }
+  }
+}
+
+/*热区浏览态*/
+
+.HotAreaMapDesign_MapOuter.HotAreaMapDesign_MapOuter_ReadOnly {
+
+  // height:  calc(~'100vh - 247px') !important;
+  .HotAreaMapDesign_Map .HotAreaMapDesign_Row .HotAreaMapDesign_HotArea_Outer {
+    .HotArea_Inner {
+      margin-top: 0px;
+      height: 100% !important;
+    }
+  }
+}
