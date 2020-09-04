@@ -444,11 +444,9 @@
 /*表格部分按钮*/
 .acticonCell {
   position: absolute;
-  right: 15px;
   overflow: hidden;
   z-index: 999;
   border: 0;
-  background: #edf1f7;
 
   .anticon {
     font-size: 17px;
@@ -588,15 +586,6 @@
   }
 }
 
-.fixedDataTableCellGroupLayout_cellGroupWrapper {
-  .acticonCell {
-    padding-top: 7px;
-    background: none;
-    right: 10px;
-    padding-left: 0px;
-  }
-}
-
 .fixedDataTableRowLayout_rowWrapper {
   .textCol .edit-input-number {
     margin-top: 0px;
@@ -718,11 +707,6 @@
 
   .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
     width: 100%;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
   }
 
   .expand-icon {
@@ -978,9 +962,16 @@
     }
   }
 
+  .public_fixedDataTableRow_selected {
+    &:hover {
+      .acticonCell {
+        background-color: #edf1f7;
+      }
+    }
+  }
+
   .acticonCell {
     padding-top: 0px;
-    background: #edf1f7;
 
     .table-list-btn {
       display: block;
