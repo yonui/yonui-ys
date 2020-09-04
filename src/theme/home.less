@@ -1365,248 +1365,251 @@
 
 // 日结
 .u-tabs-content .line-tabs {
-  .u-tabs-tabpane-active {
-    .ant-row {
-      h3 {
-        display: none;
-      }
-    }
-
-    .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row {
-      margin-top: 0
-    }
-
-    .listTable {
-      .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .public_fixedDataTableCell_main:first-child .textCol.table-header-name {
-        padding-left: 20px;
-      }
-
-      .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .editCol,
-      .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .textCol {
-        margin-left: 0;
-
-        div {
-          height: 28px !important;
-          line-height: 26px;
-        }
-
-        .viewCell:first-child {
-          margin-top: 0px;
-        }
-
-        div.viewCell+span {
-          margin-left: 5px;
-        }
-
-        .has-related+.ant-form-explain {
-          height: auto !important;
+    .u-tabs-tabpane-active {
+      .ant-row {
+        h3 {
+          display: none;
         }
       }
-
-      //编辑态下拉框多数据显示
-      .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .editCol {
-        .has-feedback {
-          .ant-select-selection--single {
-            .show_tag {
-              height: 22px !important;
-              line-height: 20px;
-              margin-bottom: 4px !important;
-
-              .u-tag-text {
-                line-height: 20px;
-                width: 100%;
-              }
-            }
+  
+      .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row {
+        margin-top: 0
+      }
+  
+      .listTable {
+        .public_fixedDataTableCell_main {
+  
+          // background:none;
+          // border: none;
+          .headerName {
+            color: #333;
           }
         }
+  
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .public_fixedDataTableCell_main:first-child .textCol.table-header-name {
+          padding-left: 20px;
+        }
+  
+        .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .editCol,
+        .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .textCol {
+          margin-left: 0;
+  
+          div {
+            height: 28px !important;
+            line-height: 26px;
+          }
+  
+          .viewCell:first-child {
+            margin-top: 0px;
+          }
+  
+          div.viewCell+span {
+            margin-left: 5px;
+          }
+  
+          .has-related+.ant-form-explain {
+            height: auto !important;
+          }
+  
+        }
+  
+        .public_fixedDataTableCell_disabled.textCol {
+          color: #333 !important
+        }
       }
-
-      .public_fixedDataTableCell_disabled.textCol {
-        color: #333 !important
-      }
+  
     }
-
-  }
-
-  .width-percent-25 {
-    // margin-top: 30px;
-    // margin-left: 3%;
-    // overflow: hidden;
-    // float: left;
-
-    .listTable {
-      .public_fixedDataTableCell_main {
-        background: none;
-        border: none;
+  
+    .width-percent-30 {
+      width: 30% !important;
+      margin-top: 30px;
+      margin-left: 2%;
+      overflow: hidden;
+      float: left;
+  
+      .listTable {
+        .public_fixedDataTableCell_main {
+          background: none;
+          border: none;
+        }
+  
+        .public_fixedDataTable_footer .aggregates,
+        .public_fixedDataTable_footer .subtotal {
+          line-height: 45px;
+        }
       }
-
-      .public_fixedDataTable_footer .aggregates,
-      .public_fixedDataTable_footer .subtotal {
-        line-height: 45px;
-      }
-
-    }
-
-    .listTable .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .textCol {
-      padding-left: 20px !important;
-    }
-
-    .listTable .fixedDataTableLayout_main.public_fixedDataTable_main .fixedDataTableRowLayout_rowWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main.public_fixedDataTableCell_main:first-child {
-      .public_fixedDataTableCell_disabled {
+  
+      .listTable .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .textCol {
         padding-left: 20px !important;
       }
-    }
-
-    .fixedDataTableRowLayout_rowWrapper .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
-      .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1.headerName {
+  
+      .listTable .fixedDataTableLayout_main.public_fixedDataTable_main .fixedDataTableRowLayout_rowWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main.public_fixedDataTableCell_main:first-child {
+        .public_fixedDataTableCell_disabled {
+          padding-left: 20px !important;
+        }
+      }
+  
+      .fixedDataTableRowLayout_rowWrapper .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
+        .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1.headerName {
+          padding-left: 20px;
+        }
+      }
+  
+      .fixedDataTableLayout_rowsContainer {
+        bottom: -2px;
+      }
+  
+      .public_fixedDataTableRow_CheckedRow,
+      .public_fixedDataTableRow_CheckedRow .public_fixedDataTableCell_main,
+      .public_fixedDataTable_bodyRow:hover {
+        background-color: #fff !important;
+      }
+  
+      .public_fixedDataTable_footer .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
         padding-left: 20px;
       }
-    }
-
-    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
-      cursor: initial;
-      border-bottom: none;
-      padding-right: 20px !important;
-    }
-
-    .fixedDataTableLayout_rowsContainer {
-      bottom: -2px;
-    }
-
-    .public_fixedDataTableRow_CheckedRow,
-    .public_fixedDataTableRow_CheckedRow .public_fixedDataTableCell_main,
-    .public_fixedDataTable_bodyRow:hover {
-      background-color: #fff !important;
-    }
-
-    .public_fixedDataTable_footer .fixedDataTableCellGroupLayout_cellGroup .public_fixedDataTableCell_main:first-child {
-      padding-left: 20px;
-    }
-
-    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
-      cursor: initial;
-    }
-
-    .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol.table-header-name {
-      padding: 0 10px !important;
-    }
-
-    .public_fixedDataTableCell_disabled,
-    .public_fixedDataTableCell_disabled .ant-tag,
-    .public_fixedDataTableCell_disabled.textCol {
-      padding: 0;
-
-    }
-
-    .public_fixedDataTable_footer {
+  
       .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
-        line-height: 21px !important;
+        cursor: initial;
       }
-    }
-
-    .caption-title {
-      width: 130px;
-      position: relative;
-      left: 50%;
-      margin-left: -65px;
-
-      svg {
+  
+      .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol.table-header-name {
+        padding: 0 10px !important;
+      }
+  
+      .public_fixedDataTableCell_disabled,
+      .public_fixedDataTableCell_disabled .ant-tag,
+      .public_fixedDataTableCell_disabled.textCol {
+        padding: 0;
+  
+      }
+  
+      .public_fixedDataTable_footer {
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
+          line-height: 21px !important;
+        }
+      }
+  
+      .public_fixedDataTableCell_main {
+        .fixedDataTable-footer-title {
+          line-height: 45px;
+        }
+  
+        .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1 {
+          height: 45px !important;
+        }
+      }
+  
+      .caption-title {
+        width: 130px;
+        position: relative;
+        left: 50%;
+        margin-left: -65px;
+  
+        svg {
+          float: left;
+          width: 24px;
+          height: 24px;
+          /* position: relative;
+                  left: 50%;
+                  margin-left: -77px; */
+          margin-top: 12px;
+          margin-right: 5px;
+        }
+      }
+  
+      h3 {
+        line-height: 50px;
+        color: #333;
+        text-align: center;
+        font-size: 16px;
+        display: block !important;
         float: left;
-        width: 24px;
-        height: 24px;
-        margin-top: 12px;
-        margin-right: 5px;
+      }
+  
+      .public_fixedDataTableCell_main {
+        border: none;
+      }
+  
+      .public_fixedDataTableCell_main:hover {
+        background: none;
+      }
+  
+      .fixedDataTableLayout_main {
+        border: none;
+      }
+  
+      .fixedDataTableRowLayout_main {
+        border: none;
+  
+      }
+  
+      .public_fixedDataTable_header {
+        background: #fff;
+  
+      }
+  
+      .columnSetting,
+      .columnSetting button {
+        background: #fff;
+      }
+  
+      .columnSetting:hover {
+        background: #fff;
       }
     }
-
-    h3 {
-      line-height: 50px;
-      color: #333;
-      text-align: center;
-      font-size: 16px;
-      display: block !important;
-      float: left;
+  
+    .width-percent-30 {
+      padding-left: 0;
+  
+      .table-nodata {
+        padding-left: 0px;
+      }
+  
+      .ant-row {
+        display: block !important;
+        margin-bottom: 0;
+      }
+  
+      border: 1px solid #ffa600;
+      box-shadow: 0 0 10px 0 #fff0d3;
+      border-radius: 5px;
+      width: 30% !important;
+      margin-bottom: 20px;
+  
+      .public_fixedDataTable_footer {
+        background: #fff7e7;
+        color: #ff5735;
+      }
     }
-
-    .public_fixedDataTableCell_main {
-      border: none;
+  
+    .width-percent-30:first-child {
+      border: 1px solid #588ce9;
+      box-shadow: 0 0 10px 0 #e3edff;
+      border-radius: 5px;
+      margin-left: 3%;
+      width: 30% !important;
+      margin-bottom: 20px;
+  
+      .public_fixedDataTable_footer {
+        background: #f0f6ff;
+        color: #588ce9;
+      }
     }
-
-    .public_fixedDataTableCell_main:hover {
-      background: none;
-    }
-
-    .fixedDataTableLayout_main {
-      border: none;
-    }
-
-    .fixedDataTableRowLayout_main {
-      border: none;
-
-    }
-
-    .public_fixedDataTable_header {
-      background: #fff;
-
-    }
-
-    .columnSetting,
-    .columnSetting button {
-      background: #fff;
-    }
-
-    .columnSetting:hover {
-      background: #fff;
+  
+    .width-percent-30:last-child {
+      border: 1px solid #18b681;
+      box-shadow: 0 0 10px 0 #c9e8de;
+      border-radius: 5px;
+      width: 30% !important;
+      margin-bottom: 20px;
+  
+      .public_fixedDataTable_footer {
+        background: #e8f8f3;
+        color: #18b681;
+      }
     }
   }
-
-  .width-percent-25 {
-    padding-left: 0;
-
-    // .ant-row {
-    //   display: block !important;
-    //   margin-bottom: 0;
-    // }
-
-    // border: 1px solid #FFA600;
-    // box-shadow: 0 0 10px 0 #FFF0D3;
-    // border-radius: 5px;
-    // width: 25% !important;
-    // margin-bottom: 20px;
-
-    // .public_fixedDataTable_footer {
-    //   background: #FFF7E7;
-    //   color: #FF5735;
-    // }
-  }
-
-  // .width-percent-25:first-child {
-  //   border: 1px solid #588CE9;
-  //   box-shadow: 0 0 10px 0 #E3EDFF;
-  //   border-radius: 5px;
-  //   margin-left: 9.5%;
-  //   width: 25% !important;
-  //   margin-bottom: 20px;
-
-  //   .public_fixedDataTable_footer {
-  //     background: #F0F6FF;
-  //     color: #588CE9;
-  //   }
-  // }
-
-  // .width-percent-25:last-child {
-  //   border: 1px solid #18B681;
-  //   box-shadow: 0 0 10px 0 #C9E8DE;
-  //   border-radius: 5px;
-  //   width: 25% !important;
-  //   margin-bottom: 20px;
-
-  //   .public_fixedDataTable_footer {
-  //     background: #E8F8F3;
-  //     color: #18B681;
-  //   }
-  // }
-}
 
 .table-nodata {
   padding-left: 65px;
