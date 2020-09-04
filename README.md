@@ -124,14 +124,6 @@ export {
 
 ```
 
-<<<<<<< Updated upstream
-### develop 分支更新日志（合并主干后清除）
-- 更新字体图标
-- 模态框title 区域的行高
-- 新增过滤项label 显示宽度问题
-- 添加gulp 文件,支持debug
-- 更新 bee-form-confirm
-=======
 ### 分支管理
 [分支管理 ](https://www.yuque.com/docs/share/32194616-5a6e-4031-af0c-d34041e35a2c)
 
@@ -141,4 +133,3 @@ export {
 [维护手册](https://www.yuque.com/docs/share/f5a24951-2665-4b05-b110-8840705a7930) <br/>
 [字体图标](http://iuap-design-cdn.oss-cn-beijing.aliyuncs.com/static/mdd/ys/newfont/demo_index.html) <br/>
 
->>>>>>> Stashed changes
