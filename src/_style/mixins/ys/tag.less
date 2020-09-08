@@ -36,12 +36,21 @@
   // 折行
   &:not(.single-line) {
     .form-lable-top-mixin();
-    .label-control {
-      padding-top: 8px !important;
-    }
+    // .label-control {
+    //   padding-top: 8px !important;
+    // }
     .enum-control {
       max-height: 42px;
       padding-top: 2px;
+      margin-bottom: 12px;
+
+      .has-related {
+        height: 28px;
+      }
+
+      .filter-hide .ant-row {
+        margin-bottom: 0;
+      }
     }
     .u-tag {
       margin-top: 2px;
