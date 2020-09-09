@@ -111,6 +111,7 @@ div[id='pc_product|time!RelativeDate'] {
 .control-flex>span.input-after {
   width: auto;
   margin-left: 10px;
+  line-height: 28px;
 }
 
 // fix: 物料计划，预测单，编辑页面，底部按钮没有svg 图标
@@ -675,6 +676,11 @@ div[id='pc_attachmentgrouplist|lookat1'] {
 .aa_touchsettinglist .list-top-toolbar{
   padding-bottom: 0;
 }
+
+.mm_memberrulelist .list-top-toolbar {
+  margin-bottom: 0;
+}
+
 .u-select-search--inline .showTitle{
   z-index: -1 !important;
 }
@@ -949,13 +955,13 @@ div[id^='business_option'] {
 }
 
 div[id="pc_product|productTemplate_NameTips"] {
-  right: -26px;
+  right: -20px;
   position: absolute;
   width: 16px!important;
 }
 
 div[id$="|tips"] {
-  right: -26px;
+  right: -20px;
   left: unset !important;
   position: absolute;
   width: 16px!important;
@@ -1142,5 +1148,11 @@ div[id='aa_vendor|aa_vendor_page_base'] {
     .input-control .u-input-group input {
       padding-right: 45px;
     }
+  }
+}
+
+.bd_virtualaccbodylist {
+  .tree-list .height-100 > .ant-row.meta-default-container {
+    overflow: auto;
   }
 }
