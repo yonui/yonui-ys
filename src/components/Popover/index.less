@@ -36,10 +36,17 @@
             .lock_disable,
             .unlock_able {
               padding-left: 10px;
-
+              .yonicon-dongjie:before,
+              .yonicon-weidongjie::before{
+                color: #ccc;
+              }
               &:hover {
                 background: #f3f5f9;
                 .pull-left .yonicon-tuodong:before {
+                  color: #505766;
+                }
+                .yonicon-dongjie:before,
+                .yonicon-weidongjie::before{
                   color: #505766;
                 }
               }
