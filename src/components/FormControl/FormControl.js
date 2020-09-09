@@ -65,7 +65,8 @@ class InputAdapter extends Component {
     this.props.onBlur && this.props.onBlur(e, clearOpt)
   }
 
-  handleClick = (e) => {
+  handleClick = (val, e) => {
+    if (!e) e = val;
     this.props.onClick && this.props.onClick(e)
   }
 
