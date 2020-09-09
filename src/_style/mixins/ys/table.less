@@ -40,10 +40,10 @@
     line-height: 28px;
 
     i.yonicon {
-      line-height: 24px;
-      margin-top: 0px;
-      top: -2px;
-      vertical-align: middle;
+      line-height: 1;
+      margin-top: 0;
+      top: 0;
+      vertical-align: baseline;
     }
     .yonicon-close-circle{
       top: 0px!important;
@@ -421,7 +421,7 @@
 
   .ScrollbarLayout_faceVertical:after {
     left: auto !important;
-    right: 8px !important;
+    // right: 8px !important;
   }
 }
 
@@ -444,11 +444,9 @@
 /*表格部分按钮*/
 .acticonCell {
   position: absolute;
-  right: 15px;
   overflow: hidden;
   z-index: 999;
   border: 0;
-  background: #edf1f7;
 
   .anticon {
     font-size: 17px;
@@ -588,15 +586,6 @@
   }
 }
 
-.fixedDataTableCellGroupLayout_cellGroupWrapper {
-  .acticonCell {
-    padding-top: 7px;
-    background: none;
-    right: 10px;
-    padding-left: 0px;
-  }
-}
-
 .fixedDataTableRowLayout_rowWrapper {
   .textCol .edit-input-number {
     margin-top: 0px;
@@ -718,11 +707,6 @@
 
   .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
     width: 100%;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
   }
 
   .expand-icon {
@@ -965,7 +949,9 @@
   }
 
   .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .public_fixedDataTableCell_disabled,
     .headerName {
+      line-height: 28px;
       border-bottom: 1px solid #dbe0e5;
     }
   }
@@ -978,9 +964,16 @@
     }
   }
 
+  .public_fixedDataTableRow_selected {
+    &:hover {
+      .acticonCell {
+        background-color: #edf1f7;
+      }
+    }
+  }
+
   .acticonCell {
     padding-top: 0px;
-    background: #edf1f7;
 
     .table-list-btn {
       display: block;

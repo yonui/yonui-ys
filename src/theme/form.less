@@ -1621,6 +1621,7 @@
 
           // zhangkunk 总账-凭证查询-设置中选了会计期间，但不显示期间段选择框
           .has-related {
+            height: 28px;
             .viewCell {
               width: auto;
               display: inline-flex;
@@ -2526,22 +2527,6 @@ i.uf-search,
   }
 }
 
-// 组合分页按钮
-.btn-toolbar-bottom .col-auto .Toolbar_Group:last-child {
-  .u-button.icon-normal-width {
-    min-width: 32px;
-    // width: 32px;
-    padding: 0 7px;
-
-    .icon {
-      width: 12px;
-      height: 12px;
-      vertical-align: -.2em;
-      margin: 0;
-    }
-  }
-}
-
 // 电商通单笔容差
 .btn-toolbar-bottom .Toolbar_Group_Length1 .basic-input-text {
 
@@ -3273,9 +3258,9 @@ i.uf-search,
       .col-float {
         .tag-group {
           > .ant-row {
-            > .label-control {
-              padding-top: 13px !important;
-            }
+            // > .label-control {
+            //   padding-top: 13px !important;
+            // }
             > .enum-control {
               .has-related {
                 .tagCell {

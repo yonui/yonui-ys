@@ -4,11 +4,17 @@
   pointer-events: unset !important
 }
 
-#yxyweb-support-container{
-  @import './minxin-themeColors.less';
-  @import '../index.less';
+@import './minxin-themeColors.less';
 
-  @import './mixin.less';
+.enus {
+  #yxyweb-support-container {
+    @import './locale/enus/index.less';
+  }
+}
+
+#yxyweb-support-container{
+  @import '../index.less';
+  @import '../_style/mixins/index.less';
 
 	@import './base.less';
 	@import './form.less';
@@ -20,7 +26,6 @@
 	@import './large-screen.less';
   @import './adapter.less';
   @import './adapterIcon.less';
-  // @import './lang.less';
 
   div[id='yxyweb-filter'] {
     clear: both;
