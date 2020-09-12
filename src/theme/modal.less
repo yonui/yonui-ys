@@ -3779,23 +3779,11 @@
 
   .btn-toolbar-bottom {
     .u-button:nth-of-type(1) {
-      background: #eef1f3;
-      border: none;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.1);
-      }
+      .cancel-button-mixin();
     }
 
     .u-button:nth-of-type(2) {
-      background: #505766;
-      border-color: #505766;
-      color: #fff;
-
-      &:hover {
-        background: #616875;
-        color: #fff;
-      }
+      .secondary-button-mixin();
     }
   }
 }
