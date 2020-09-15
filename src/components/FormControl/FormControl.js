@@ -66,6 +66,7 @@ class InputAdapter extends Component {
   }
 
   handleClick = (val, e) => {
+    if (!e) e = val;
     this.props.onClick && this.props.onClick(e)
   }
 

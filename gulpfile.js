@@ -5,6 +5,7 @@ const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const rimraf = require('rimraf');
 const eslint = require('gulp-eslint');
+const replace = require('gulp-replace');
 const exec = require('child_process').execSync;
 
 const argvs = process.argv.splice(2, process.argv.length)
@@ -147,4 +148,14 @@ gulp.task('eslint', () => {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError('failes'));
+});
+
+// tinper 样式文件去除字体引用
+// TODO: 待测试
+gulp.task('removeTinperFont', () => {
+  return gulp.src([
+    'src/static/tinper-bee/2.2.2/*.less'
+  ])
+    .pipe(replace(/@font-face{.*}/mg, ''))
+    .pipe(gulp.dest('src/static/tinper-bee/2.2.2/'));
 });

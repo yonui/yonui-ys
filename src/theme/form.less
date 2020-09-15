@@ -363,7 +363,7 @@
 
     .control-width {
       line-height: @base-input-height;
-      width: calc(~'100% - 132px')!important;
+      // width: calc(~'100% - 132px')!important;
       .u-input-group {
         line-height: 0;
         &>div {
@@ -963,7 +963,9 @@
             .u-button {
               line-height: 0px;
             }
-
+            .u-button[disabled]:hover{
+                background-color: #f7f7f7;
+            }
             span {
               .u-upload {
                 display: block;
@@ -1395,7 +1397,7 @@
 
 .group-container .ant-row+.group-buttons {
   .group-container {
-    padding-top: 2px;
+    padding-top: 0;
   }
 }
 
@@ -3349,4 +3351,59 @@ i.uf-search,
 
 .line-tabs-menu-container .tab-top-right .btn-toolbar-bottom .btn-maximize {
   min-width: auto;
+}
+
+/* 表体行附件图片样式 */
+.fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent{
+  .upload-picture-book{
+    .pictureBook{
+      width: 28px;
+      height: 28px;
+      border-radius:4px;
+      border: solid 1px transparent;
+      line-height: 24px;
+      text-align: center;
+      margin-top: -2px;
+      overflow: hidden;
+      .pictureImg{
+        height: 28px;
+        width: 28px;
+        overflow: hidden;
+        border-radius: 0;
+        background-color: #fff;
+        position: relative;
+        img{
+          width: 100%;
+          height: auto!important;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .s-popover-inner-span{
+        line-height: 1;
+
+        .yonicon-plus-copy{
+          vertical-align: middle;
+          width: 24px;
+          height: 24px;
+          &::after{
+            content: "\e6a3";
+            font-family: "iconfont";
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+
+.control-text.invoice-remark.pre-wrap-textarea {
+  white-space: pre-wrap !important;
 }

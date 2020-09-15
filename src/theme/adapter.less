@@ -134,12 +134,6 @@ div[id='mr_plan_workbench_list|others_data_param'] .container-browse-mode.contai
   padding-top: 16px;
 }
 
-// fix: 采购，alert
-.icon-tongzhixinxi:before {
-  content: "\e6cd";
-  font-family: 'uf' !important;
-}
-
 // fix: 调入，单据日期文字按钮垂直居中
 .filter-controls .basic-predicate-data-picker .ant-row>.input-control .ant-row {
   display: flex;
@@ -810,49 +804,9 @@ div[id='aa_paymentmethod|code'] {
     display: none;
   }
 }
+
 .u-select-show-search.u-select-nowarp .u-select-selection--multiple .u-select-selection-rendered ul{
   overflow: unset;
-}
-//TINPER-2678
-.aa_selfscreensettinglist .container-edit-mode .viewCell .basic-avatar-btn-item:hover span.avatar-uploader .u-upload.u-upload-select{
-  span.u-upload{
-    width: 50%;
-    display: inline-block;
-    margin-top: 12px;
-    position: relative;
-    i.anticon.anticon-uploadimg:before{
-      content: "\e6ac";
-      font-family: uf!important;
-      font-size: 20px;
-      position: absolute;
-      top: 5px;
-      right: 42%;
-    }
-  }
-  span.u-upload:hover{
-    background: none;
-  }
-}
-.aa_selfscreensettinglist .container-edit-mode .viewCell .basic-avatar-btn-item:hover img + span.avatar-uploader .u-upload.u-upload-select{
-  span.u-upload{
-    width: 50%;
-    display: block;
-    height: 28px;
-    margin-top: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    position: relative;
-    i.anticon.anticon-uploadimg:before {
-      content: "\e6ac";
-      font-family: "uf" !important;
-      font-size: 16px;
-      position: absolute;
-      top: 5px;
-      right: calc(50% - 8px);
-    }
-  }
-  span.u-upload:hover{
-    background: rgba(0, 0, 0, 0.75);
-  }
 }
 
 // 库存参数
@@ -1156,3 +1110,4 @@ div[id='aa_vendor|aa_vendor_page_base'] {
     overflow: auto;
   }
 }
+

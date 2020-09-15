@@ -31,9 +31,11 @@
   .u-button-mixin(@height, @minWidth);
   background: #505766;
   color: #fff;
+  border: none;
   &:hover {
     background: #616875;
     color: #fff;
+    border: none;
   }
 }
 
@@ -45,7 +47,7 @@
   color: #535a69;
   &:hover {
     color: #505766;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.1) !important;
   }
 }
 
@@ -426,7 +428,7 @@
 }
 
 // 组合分页按钮
-.btn-toolbar-bottom .col-auto .Toolbar_Group:last-child {
+.btn-toolbar-bottom .col-auto .Toolbar_Group {
   .icon-normal-width.u-button-sm {
     min-width: 32px;
     padding: 0 7px;
@@ -496,4 +498,23 @@
 .u-button.rc-calendar-btn-ok[disabled] {
   color: #fff;
   opacity: .5;
+}
+
+// Toolbar
+.btn-toolbar-bottom {
+
+  // 取消
+  .btnAbandon {
+    .cancel-button-mixin();
+  }
+
+  // 保存并新增
+  .btnSaveAndAdd {
+    .secondary-button-mixin();
+  }
+
+  // 保存
+  .btnSave {
+    .primary-button-mixin();
+  }
 }
