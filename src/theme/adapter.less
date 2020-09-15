@@ -242,7 +242,7 @@ textarea.u-form-control {
       .u-input-number-out{
         .u-input-number {
           .u-form-control{
-            width: 100%;
+            width: 100% !important;
           }
         } 
       }
@@ -968,11 +968,11 @@ div[id="pc_productbrandpro"] {
   }
 }
 
-div[id="st_transferapplylist"],
-div[id="st_morphologyconversionlist"],
-div[id="st_transferreqlist"] {
-  min-width: 1200px;
-}
+// div[id="st_transferapplylist"],
+// div[id="st_morphologyconversionlist"],
+// div[id="st_transferreqlist"] {
+//   min-width: 1200px;
+// }
 
 //TINPER-5221
 .st_wareandinv_ware.u-modal{
@@ -1085,6 +1085,10 @@ div[id='aa_vendor|aa_vendor_page_base'] {
   }
 }
 
+.control-width .u-input-group {
+  display: block;
+}
+
 @media screen and (max-width: 600px) {
   // 自适应单列
   .viewCell.width-percent-100 {
@@ -1110,3 +1114,4 @@ div[id='aa_vendor|aa_vendor_page_base'] {
     overflow: auto;
   }
 }
+

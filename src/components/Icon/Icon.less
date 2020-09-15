@@ -40,6 +40,7 @@
   content: "\e6fe";
   color: #adb4bc;
   font-size: 16px;
+  line-height: 28px;
 }
 
 .yonicon-down:before {
@@ -60,9 +61,9 @@
 
 .yonicon-close-circle {
   &:before {
+    content: "\e690";
     font-family: "iconfont";
-    content: "\e671" !important;
-    color:#adb4bc; // fix: 工厂模型，机台生产状态
+    color:#adb4bc;
   }
 }
 
@@ -81,6 +82,12 @@
 .u-select-dropdown.u-select-dropdown--multiple .u-select-dropdown-menu-item:after {
   font-family: "iconfont";
   content: "\e6af";
+}
+
+// 库存预警
+.ant-select-selection__clear:before {
+  content: "\e690";
+  font-family: "iconfont";
 }
 
 // 模态框中穿梭框的向右、向左

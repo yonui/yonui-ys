@@ -8,7 +8,7 @@
 
     .control-radio {
       .label-control {
-        padding-top: 11px;
+        // padding-top: 11px;
       }
     }
 
@@ -1346,8 +1346,8 @@
 
   .yonicon-close-circle {
     position: absolute;
-    right: 45px;
-    top: 27px;
+    right: 46px;
+    top: 22px;
 
     &::before {
       color: rgba(0, 0, 0, .25);
@@ -3779,23 +3779,11 @@
 
   .btn-toolbar-bottom {
     .u-button:nth-of-type(1) {
-      background: #eef1f3;
-      border: none;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.1);
-      }
+      .cancel-button-mixin();
     }
 
     .u-button:nth-of-type(2) {
-      background: #505766;
-      border-color: #505766;
-      color: #fff;
-
-      &:hover {
-        background: #616875;
-        color: #fff;
-      }
+      .secondary-button-mixin();
     }
   }
 }
@@ -5419,4 +5407,8 @@
     line-height: 14px;
     max-width: 300px;
   }
+}
+// 采购入库
+.tableclassname111.header-dispaly-in-row .u-table-body{
+  height: 150px;
 }
