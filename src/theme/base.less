@@ -1727,89 +1727,143 @@
 
 /*收款单 筛选条件表格变高特殊样式 gathering-list*/
 
-.ant-tabs-content {
-  .gathering-list {
-    height: 100%;
-    padding-bottom: 70px;
-
-    .listheadRow {
-      margin: 0 15px 0 0;
-      padding-top: 30px;
-      font-size: 14px;
-
-      .scheme-list {
-        margin-left: 14px;
-      }
-
-      .sp-range-txt {
-        line-height: 40px;
-      }
-
-      .filter-hide .input-control {
-        height: 40px;
-
-        .ant-calendar-picker-icon {
-          width: 16px;
-          height: 16px;
+.u-tabs-content {
+    .gathering-list {
+      height: 100%;
+      padding-bottom: 70px;
+  
+      .listheadRow {
+        margin: 0 15px 0 0;
+        padding-top: 30px;
+        font-size: 14px;
+  
+        .scheme-list {
+          margin-left: 14px;
         }
-
-        .ant-calendar-picker-icon:after {
-          font-size: 16px;
+        .up-show{
+            .u-button{
+                height: 40px;
+                font-size: 14px;
+            }
         }
-
-        .ant-search-input-wrapper {
+        .sp-range-txt {
+          line-height: 40px;
+        }
+  
+        .filter-hide .input-control {
           height: 40px;
-
-          .anticon-canzhao:before {
-            font-size: 18px;
+  
+          .ant-calendar-picker-icon {
+            width: 16px;
+            height: 16px;
+          }
+  
+          .ant-calendar-picker-icon:after {
+            font-size: 16px;
+          }
+          .u-form-control,
+          .u-select-selection--single{
+              height: 40px;
+              font-size: 14px;
+              line-height: 38px;
+              .u-select-selection-rendered{
+                  line-height: 38px;
+              }
+          }
+          .ant-search-input-wrapper {
+            height: 40px;
+  
+            .anticon-canzhao:before {
+              font-size: 18px;
+            }
           }
         }
-      }
-
-      .filter-hide .input-control .ant-input,
-      .filter-hide .input-control .ant-select {
-        height: 40px;
-        font-size: 14px;
-      }
-
-      .filter-hide .input-control .ant-select {
-        .ant-select-selection {
+  
+        .filter-hide .input-control .ant-input,
+        .filter-hide .input-control .ant-select {
           height: 40px;
-
-          .ant-select-selection__rendered {
-            line-height: 38px;
-          }
-
-          .ant-select-arrow {
-            font-size: 14px;
+          font-size: 14px;
+        }
+  
+        .filter-hide .input-control .ant-select {
+          .ant-select-selection {
+            height: 40px;
+  
+            .ant-select-selection__rendered {
+              line-height: 38px;
+            }
+  
+            .ant-select-arrow {
+              font-size: 14px;
+            }
           }
         }
+  
+        .ant-popover-open-count {
+          height: 40px;
+        }
+  
+        .label-control {
+          line-height: 20px;
+          max-height: 40px;
+          min-width: 110px;
+          padding-left: 10px;
+        }
+    
+        .ant-row .ant-btn {
+          height: 40px;
+          font-size: 14px;
+        }
       }
-
-      .ant-popover-open-count {
-        height: 40px;
+  
+      /*表格部分*/
+      .meta-table {
         font-size: 14px;
+  
+        .ant-checkbox-inner {
+          width: 18px;
+          height: 18px;
+        }
+  
+        .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+          content: " ";
+          transform: scale(1);
+          position: absolute;
+          left: 3px;
+          top: 7px;
+          width: 9px;
+          height: 2px;
+        }
+  
+        .ant-checkbox-checked .ant-checkbox-inner:after {
+          transform: rotate(45deg) scale(1);
+          position: absolute;
+          left: 4px;
+          top: 1px;
+          display: table;
+          width: 7px;
+          height: 10px;
+          border: 2px solid #ee2223;
+          border-top: 0;
+          border-left: 0;
+          content: " ";
+          transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+        }
+  
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .checkboxHD .ant-checkbox-wrapper .ant-checkbox {
+          margin-top: 10px;
+        }
+  
+        .public_fixedDataTable_header .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
+          padding: 0px !important;
+        }
+  
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
+          padding: 10px 10px !important;
+        }
       }
-
-      .label-control {
-        line-height: 20px;
-        max-height: 40px;
-        min-width: 80px;
-        padding-left: 10px;
-      }
-
-      .ant-row .ant-btn {
-        height: 40px;
-        font-size: 14px;
-      }
-    }
-
-    /*表格部分*/
-    .meta-table {
-      font-size: 14px;
     }
   }
-}
 
 /*零售收款小屏适配*/
 
