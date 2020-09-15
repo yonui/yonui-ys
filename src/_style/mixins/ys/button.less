@@ -58,7 +58,7 @@
   border: #d9d9d9 solid 1px;
   &:hover {
     border: 1px solid @custom-color;
-    background: #fff;
+    background: #fff !important;
   }
 }
 
@@ -527,5 +527,9 @@
 
 // UI 模板
 .btnBillsetting {
+  .normal-button-mixin();
+}
+
+.u-button.temp_header {
   .normal-button-mixin();
 }
