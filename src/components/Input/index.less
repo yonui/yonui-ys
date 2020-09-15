@@ -9,7 +9,7 @@
 
   &.simple .u-input-group-btn {
     width: auto;
-    height: 28px;
+    height: @base-input-height - 2;
   }
 }
 
@@ -78,12 +78,12 @@
 
   .u-input-number.u-input-group.simple {
     .u-form-control {
-      height: @base-input-height - 6;
+      height: @base-input-height - 2;
     }
 
     .u-input-group-btn {
       .icon-group {
-        height: @base-input-height - 6;
+        height: @base-input-height - 2;
       }
     }
   }
@@ -141,7 +141,7 @@
 // .listheadRow,
 .Scheme-Content-body {
   .ant-row .ant-search-input-wrapper .u-input-group-btn {
-    line-height: @base-input-height; // fix: 采购管理->参照按钮不居中
+    line-height: @base-input-height - 2; // fix: 采购管理->参照按钮不居中
     top: 0;
   }
 }
@@ -149,7 +149,7 @@
 // fix: 采购管理->供应目录，采购调价单，默认方案新增查询条件日期控件图标
 .u-input-group.simple .u-input-group-btn {
   top: 0px;
-  line-height: @base-input-height;
+  line-height: @base-input-height - 2;
   min-width: auto;
 }
 

@@ -18,6 +18,12 @@
   cursor: pointer;
 }
 
+.iconfont {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
+}
+
 .yonicon-zuidahua:before {
   content: "\e7cc";
   color: #bac0c7;
@@ -34,12 +40,17 @@
   content: "\e6fe";
   color: #adb4bc;
   font-size: 16px;
-  font-family: "iconfont" !important;
   line-height: 28px;
 }
 
 .yonicon-down:before {
   content: '\e633';
+  font-size: 12px;
+  transform: scale(.8);
+}
+
+.yonicon-up:before {
+  content: '\e606';
   font-size: 12px;
   transform: scale(.8);
 }
@@ -50,9 +61,9 @@
 
 .yonicon-close-circle {
   &:before {
-    font-family: "uf" !important;
-    content: "\e66b" !important;
-    color:#adb4bc; // fix: 工厂模型，机台生产状态
+    content: "\e690";
+    font-family: "iconfont";
+    color:#adb4bc;
   }
 }
 
@@ -62,30 +73,37 @@
   font-weight: bold;
 }
 
+.anticon-ellipsis:before,
 .yonicon-ellipsis:before {
   content: "\e521" !important;
 }
 
 // 下拉框选项勾选态
 .u-select-dropdown.u-select-dropdown--multiple .u-select-dropdown-menu-item:after {
-  font-family: "uf" !important;
-  content: "\e658";
+  font-family: "iconfont";
+  content: "\e6af";
+}
+
+// 库存预警
+.ant-select-selection__clear:before {
+  content: "\e690";
+  font-family: "iconfont";
 }
 
 // 模态框中穿梭框的向右、向左
 .u-modal .crossGroupingModal .u-modal-body .crossbtncount {
   .u-button-icon.icon-right-enabled::before,
   .u-button-icon.icon-right-disabled::before {
-    content: "\e61e" !important;
-    font-family: 'uf' !important;
+    content: "\e514";
+    font-family: 'iconfont';
   }
 }
 
 .u-modal .crossGroupingModal .u-modal-body .crossbtncount {
   .u-button-icon.icon-left-enabled::before,
   .u-button-icon.icon-left-disabled::before {
-    content: "\e624" !important;
-    font-family: 'uf' !important;
+    content: "\e515";
+    font-family: 'iconfont';
   }
 }
 
@@ -112,6 +130,7 @@ i.uf-calendar:before {
   content: "\e661";
   font-family: 'iconfont' !important;
   color: #c3c3c3;
+  font-size: 12px;
 }
 
 .uf-location:before {
@@ -128,7 +147,18 @@ i.uf-calendar:before {
   }
 }
 
-.anticon-star {
+.ant-row .anticon-star {
+  margin-left: -14px;
+  vertical-align: -.04em;
+  color: red;
+  margin-right: 4px;
+  transform: scale(.75);
+  transform-origin: 0 center;
+  width: 10px;
+}
+
+
+.anticon.anticon-star {
   &:before {
     content: "\e605" !important;
     font-family: "iconfont" !important;
@@ -137,6 +167,10 @@ i.uf-calendar:before {
 
 .yonicon-weidongjie:before {
   content: "\e789";
+}
+
+.yonicon-dongjie:before {
+  content: "\e788";
 }
 
 .yonicon-up:before {
@@ -173,13 +207,15 @@ i.uf-calendar:before {
   }
 }
 
-.anticon-bangzhu:before,
 .yonicon-bangzhu:before {
   content: "\e66a";
   font-size: 16px;
   line-height: 28px;
   color: #ccc;
-  font-family: 'iconfont' !important;
+}
+
+.yonicon-liandongxiaji1:before{
+    content: "\e60c";
 }
 
 .yonicon-shanchucopy2:before {
@@ -227,9 +263,11 @@ i.uf-calendar:before {
   content: "\e69a";
 }
 
+.icon-xuanzhong1:before,
 .yonicon-icon-xuanzhong1:before {
   content: "\E6AF";
   font-family: "iconfont" !important;
+  color: #ee2233;
 }
 
 .yonicon-tuodong:before {
@@ -242,12 +280,6 @@ i.uf-calendar:before {
   content: "\e66e";
   color: #18B681;
   font-size: 18px;
-}
-
-.iconfont {
-  font-family: "iconfont";
-  font-size: 16px;
-  font-style: normal;
 }
 
 .icon-home:before {
@@ -400,7 +432,6 @@ i.uf-calendar:before {
 
 .yonicon-caret-down:before {
   content: "\e815";
-  font-family: "iconfont" !important;
 }
 
 .yonicon-close-circle:before {
@@ -413,13 +444,11 @@ i.uf-calendar:before {
 
 .yonicon.yonicon-plus-square-o:before {
   content: "\E52A";
-  font-family: "iconfont" !important;
 }
 
 // fix: ys 银行网点记录删除状态的图标
 .yonicon-info-circle::before {
   content: "\E61d";
-  font-family: 'iconfont' !important;
 }
 
 // tinper 的搜索图标略微不同于antd 的，这里先恢复使用 anticon
@@ -428,10 +457,17 @@ i.uf-calendar:before {
   font-family: 'iconfont';
 }
 
+.ant-select {
+  .ant-select-arrow:before {
+    font-family: 'iconfont' !important;
+  }
+}
+
 .ant-select-arrow:before {
-  font-family: uf !important;
-  content: "\e609" !important;
+  content: "\E633" !important;
+  font-family: 'iconfont' !important;
   color: #98a2ad;
+  display: block;
   transition: transform .2s ease;
 }
 
@@ -445,8 +481,56 @@ i.uf-calendar:before {
 
 .yonicon-zanting:before {
   content: "\e850";
+  color: #999;
+  &:hover {
+    color: #505766;
+  }
 }
 
 .yonicon-bofang:before {
   content: "\e851";
+  color: #999;
+  &:hover {
+    color: #505766;
+  }
+}
+
+.yonicon-left:before {
+  content: "\e515";
+}
+
+.yonicon-right:before {
+  content: "\e514";
+}
+
+.require-star {
+  color: #ff0000;
+}
+
+.yonicon-fanyezhankai:before {
+  content: "\e82e";
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.yonicon-fanyeshouqi:before {
+  content: "\e82d";
+  font-size: 16px;
+  line-height: 30px;
+}
+
+// message error 图标
+.icon-qingkong:before {
+  font-family: 'iconfont';
+  content: "\e671";
+}
+
+// message tip 图标
+.icon-tongzhixinxi:before {
+  content: "\e61d";
+  font-family: 'iconfont';
+}
+
+.yonicon-download:before {
+  content: "\e69d";
 }

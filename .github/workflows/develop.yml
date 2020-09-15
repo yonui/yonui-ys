@@ -1,8 +1,8 @@
 on:
   push:
     branches:
-      - rv1.1
-name: Release 1.1
+      - develop
+name: Develop
 jobs:
 
   publish:
@@ -14,9 +14,9 @@ jobs:
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org/
+    - run: 'sed -i -e ''s/"version": "\(.*\)"/"version": "\1-snapshot.''${GITHUB_SHA}''"/'' package.json'
     - run: npm install
     - run: npm run build
-    - run: npm publish
+    - run: npm publish --tag snapshot
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-

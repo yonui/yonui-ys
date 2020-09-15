@@ -268,7 +268,6 @@
 
 .listheadRow+.line-tabs {
   position: relative;
-  // top: -15px;
 
   .viewCell.width-percent-100>.upload-content .col-float.input-control.control-width {
     width: calc(~'100% - 120px') !important;
@@ -364,6 +363,7 @@
 
     .control-width {
       line-height: @base-input-height;
+      // width: calc(~'100% - 132px')!important;
       .u-input-group {
         line-height: 0;
         &>div {
@@ -721,7 +721,7 @@
     }
     .control-width{
         //编辑态输入框
-        .u-input-group,.ant-select,.ac-input-locale,.u-select{
+        .u-input-group,.ant-select,.ac-input-locale,.u-select,.u-form-control{
             width: 400px!important;
             max-width: 100%;
         }
@@ -963,7 +963,10 @@
             .u-button {
               line-height: 0px;
             }
-
+            .u-button[disabled]:hover{
+                background-color: #f7f7f7;
+                color: rgb(153, 153, 153);
+            }
             span {
               .u-upload {
                 display: block;
@@ -1070,7 +1073,6 @@
       .control-text.invoice-remark,
       .ant-calendar-picker,
       .control-text,
-      // .ant-select,
       .ant-input-affix-wrapper,
       .ant-time-picker {
         height: @base-input-height;
@@ -1135,7 +1137,14 @@
       }
     }
   }
-
+  // 五列
+  &.width-percent-20 {
+    width: 20%
+  }
+  // 二列
+  &.width-percent-50 {
+    width: 50%
+  }
   // 四列
   &.width-percent-25 {
     width: 25%
@@ -1265,7 +1274,7 @@
   flex-flow: wrap;
   align-items: center;
   min-height: 24px;
-  padding-top: 4px;
+  // padding-top: 4px;
 }
 
 .has-related {
@@ -1280,8 +1289,12 @@
     }
 
     &.width-percent-100 {
-      margin-left: 10px;
       width: 56%;
+      position: relative;
+      padding-left: 0px !important;
+      padding-right: 0px;
+      margin-left: -16px!important;
+      right: -20px!important;
 
       .u-button {
         width: 100%;
@@ -1385,7 +1398,7 @@
 
 .group-container .ant-row+.group-buttons {
   .group-container {
-    padding-top: 2px;
+    padding-top: 0;
   }
 }
 
@@ -1609,6 +1622,7 @@
 
           // zhangkunk 总账-凭证查询-设置中选了会计期间，但不显示期间段选择框
           .has-related {
+            height: 28px;
             .viewCell {
               width: auto;
               display: inline-flex;
@@ -1669,7 +1683,7 @@
   bottom: 0;
   left: 159px;
   right: 15px;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .container-less-height .tab-bottom-txt {
@@ -1677,7 +1691,7 @@
   bottom: 0;
   left: 159px;
   right: 15px;
-  z-index: 2;
+  z-index: 1000;
 }
 
 // 编辑态表单
@@ -1730,7 +1744,7 @@
     color: #505766;
     padding-left: 25px;
     margin-top: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   
     span {
       cursor: pointer;
@@ -2162,91 +2176,75 @@ i.uf-search,
 }
 
 // 触屏基本设置
-// .ant-tabs-content .line-tabs .ant-tabs-tabpane-active .touchBasicSetting .ant-row h3 {
-//   display: block
-// }
-
-// .touchBasicSetting {
-//   padding-top: 16px !important;
-
-//   &>.ant-row {
-//     margin-bottom: 20px;
-
-//     &:first-child .col-float {
-//       width: auto !important;
-
-//       h3 {
-//         display: block !important;
-//         font-size: 12px;
-//         color: #666;
-//         line-height: 16px;
-//         padding-left: 15px;
-//         margin-left: 18px;
-//         margin-right: 15px;
-//         margin-top: 5px;
-//       }
-
-//       &>.viewCell {
-//         padding-left: 0;
-
-//         &:first-child {
-//           margin-left: 0;
-//         }
-
-//         .label-control {
-//           margin-right: 8px;
-//         }
-
-//         .anticon-star {
-//           margin-left: 2px;
-//         }
-
-//         .control-radio {
-//           line-height: 28px;
-//           margin-left: 0;
-//         }
-
-//         .u-checkbox {
-//           height: 28px;
-//           margin-right: 0;
-//           line-height: 28px;
-
-//           &.u-checkbox.disabled .u-checkbox-label {
-//             color: #333;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   .viewCell:first-child {
-//     margin-top: 0 !important;
-//   }
-
-//   .has-related .viewCell {
-//     margin-top: 0 !important;
-//     width: 100%;
-//     width: auto;
-//     flex: initial;
-
-//     .control-radio {
-//       margin-top: 0 !important;
-//       margin-left: 5px;
-//     }
-//   }
-
-//   .ant-checkbox-disabled+span {
-//     color: #333;
-//   }
-
-//   .checkboxenum-bottom {
-//     color: #999;
-//   }
-// }
-
-.ant-tabs-content .container-edit-mode .line-tabs .touchBasicSetting .control-radio>.ant-row {
-  margin-bottom: 20px;
+.ant-tabs-content .line-tabs .ant-tabs-tabpane-active .touchBasicSetting .ant-row h3 {
+    display: block
 }
+.touchBasicSetting {
+    padding-top: 16px !important;
+  
+    &>.ant-row:nth-child(2)>.ant-row {
+      margin-bottom: 20px;
+      display: flex;
+  
+      .col-float {
+        width: auto !important;
+  
+        h3 {
+          font-size: 12px;
+          color: #666;
+          line-height: 32px;
+          margin-left: 18px;
+          padding-left: 15px;
+          margin-right: 15px;
+          display: block;
+          min-width: 87px;
+        }
+  
+        .control-text {
+          width: auto;
+          text-align: center;
+        }
+  
+        &>.viewCell {
+          padding-left: 0;
+  
+          &:first-child {
+            margin-left: 0;
+          }
+  
+          &:nth-of-type(2) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  
+    .viewCell:first-child {
+      margin-top: 0 !important;
+    }
+  
+    .has-related .viewCell {
+      margin-top: 0 !important;
+      width: auto;
+  
+      .control-radio {
+        margin-top: 0 !important;
+        margin-left: 5px;
+      }
+    }
+  
+    .ant-checkbox-disabled+span {
+      color: #333;
+    }
+  
+    .checkboxenum-bottom {
+      color: #999;
+    }
+  }
+
+  .ant-tabs-content .container-edit-mode .line-tabs .touchBasicSetting .control-radio>.ant-row {
+    margin-bottom: 20px;
+  }
 
 .meta-container .voucher-list.container-browse-mode.container-less-height {
   height: 100%;
@@ -2530,22 +2528,6 @@ i.uf-search,
   }
 }
 
-// 组合分页按钮
-.btn-toolbar-bottom .col-auto .Toolbar_Group:last-child {
-  .u-button.icon-normal-width {
-    min-width: 32px;
-    // width: 32px;
-    padding: 0 7px;
-
-    .icon {
-      width: 12px;
-      height: 12px;
-      vertical-align: -.2em;
-      margin: 0;
-    }
-  }
-}
-
 // 电商通单笔容差
 .btn-toolbar-bottom .Toolbar_Group_Length1 .basic-input-text {
 
@@ -2576,6 +2558,7 @@ i.uf-search,
     .u-select-selection {
       padding: 0 22px 0px 12px;
       z-index: 2;
+      height: 28px;
 
       &:hover {
         border-color: #505766;
@@ -2836,10 +2819,6 @@ i.uf-search,
   }
 }
 
-// .ant-form-item {
-//   margin-bottom: 15px;
-// }
-
 // 新增过滤条件，的枚举弹框层级
 .enum-pop.u-popover {
   z-index: 1701;
@@ -2988,7 +2967,7 @@ i.uf-search,
       }
     }
     .control-radio.ticket-opening {
-      height: 32px;
+      height: 40px;
       min-height: 32px;
     }
     .viewCell .has-related {
@@ -3059,7 +3038,7 @@ i.uf-search,
     .control-width {
       display: flex;
       align-items: center;
-      height: 32px;
+      // height: 32px;
       flex-wrap: wrap;
       &>div {
         flex: 1;
@@ -3242,6 +3221,7 @@ i.uf-search,
 .st_materialoutlist .container-edit-mode {
   .list-top-toolbar {
     padding-bottom: 0;
+    // margin-bottom: -16px;
   }
 }
 .Test-time-two {
@@ -3275,9 +3255,6 @@ i.uf-search,
       .col-float {
         .tag-group {
           > .ant-row {
-            > .label-control {
-              padding-top: 13px !important;
-            }
             > .enum-control {
               .has-related {
                 .tagCell {
@@ -3291,4 +3268,143 @@ i.uf-search,
       }
     }
   }
+}
+
+// 库存单据支持扫码验货
+.stock-toolbar {
+  .basic-input-text {
+    float: left;
+    &>.ant-row {
+      display: flex;
+      &>.control-width {
+        width: 100%!important;
+      }
+    }
+  }
+  .pull-left:first-child {
+    line-height: 30px;
+  }
+}
+
+// 进度条
+.basic-input-progressBar {
+  padding: 5px;
+  float: left;
+  margin-right: 16px;
+  .input-bottom {
+    &>div:first-child {
+      display: flex;
+      float: right;
+    }
+  }
+  .input-bottom-text {
+    float: left;
+    margin-right: 16px;
+  }
+  .label-control {
+    display: none;
+  }
+  .control-width {
+    width: 100%;
+  }
+  .u-progress {
+    background: #EBEBEB;
+    border-radius:4px;
+    height: 6px;
+    min-width: 100px;
+    margin-right: 8px;
+    vertical-align: middle;
+    .u-progress-bar {
+      height:6px;
+      background:linear-gradient(45deg,rgba(0,145,255,1) 0%,rgba(65,101,255,1) 100%);
+      border-radius:4px;
+      span {
+        color: #999999;
+        font-size:12px;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+
+      }
+    }
+    .progressBar-after {
+      font-size: 12px;
+    }
+    &+span {
+      font-size: 12px;
+      color: #999;
+      margin-right: 18px;
+    }
+  }
+  &+.s-popover-inner-span {
+    .u-button {
+      padding: 0;
+      border:none;
+      color: #ee2233;
+      &:hover {
+        background: transparent;
+        color: #ee2233!important;
+      }
+    }
+  }
+}
+
+.line-tabs-menu-container .tab-top-right .btn-toolbar-bottom .btn-maximize {
+  min-width: auto;
+}
+
+/* 表体行附件图片样式 */
+.fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent{
+  .upload-picture-book{
+    .pictureBook{
+      width: 28px;
+      height: 28px;
+      border-radius:4px;
+      border: solid 1px transparent;
+      line-height: 24px;
+      text-align: center;
+      margin-top: -2px;
+      overflow: hidden;
+      .pictureImg{
+        height: 28px;
+        width: 28px;
+        overflow: hidden;
+        border-radius: 0;
+        background-color: #fff;
+        position: relative;
+        img{
+          width: 100%;
+          height: auto!important;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .s-popover-inner-span{
+        line-height: 1;
+
+        .yonicon-plus-copy{
+          vertical-align: middle;
+          width: 24px;
+          height: 24px;
+          &::after{
+            content: "\e6a3";
+            font-family: "iconfont";
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+
+.control-text.invoice-remark.pre-wrap-textarea {
+  white-space: pre-wrap !important;
 }

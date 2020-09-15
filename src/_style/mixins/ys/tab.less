@@ -10,11 +10,6 @@
   .u-tabs-bar {
     margin-bottom: 2px;
 
-    // .u-tabs-tab-prev,
-    // .u-tabs-tab-next {
-    //   opacity: 0;
-    // }
-
     .u-tabs-nav-wrap {
       .u-tabs-nav-scroll {
         overflow: visible;
@@ -46,12 +41,12 @@
             border-bottom: 2px solid #e4e4e4;
 
             &.u-tabs-tab-active {
-              color: #505766;
+              color: @custom-color;
               background: #fff;
               transform: translateZ(0);
               border-left: 1px solid #e4e4e4;
               border-right: 1px solid #e4e4e4;
-              border-top: 2px solid #505766;
+              border-top: 2px solid @custom-color;
               border-bottom: 1px solid #fff;
               border-radius: 0;
               margin-top: -1px;
@@ -86,6 +81,16 @@
 // 电商通 -portal
 .rootTabs > .ant-tabs-bar {
   display: none;
+}
+
+.ec_accountStatementList.oms {
+  .u-modal .u-modal-body {
+    .viewCell.width-percent-100 .input-control {
+        .ac-input-locale,.u-input-group,.ant-select,.u-select,.control-text,.u-form-control{
+          width: auto !important;
+        }
+      }
+  }
 }
 
 // line-tabs 内容区域的 tab-top-right 区域按钮

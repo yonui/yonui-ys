@@ -166,3 +166,81 @@
     }
   }
 }
+
+// 表格区域，右上方的操作按钮
+.tab-top-right-operater-mixin() {
+  .tab-top-right {
+    margin-right: 20px !important;
+  }
+}
+
+// 表单区域，标题部分居上对齐
+.form-lable-top-mixin() {
+  & > .ant-row {
+    width: 100%;
+    display: block;
+    & > .label-control {
+      .form-label-mixin();
+      // padding-top: 8px;
+      // align-self: flex-start;
+    }
+  }
+}
+
+// 客户档案等节点，左侧的分类下拉框
+.select-combox-uneditable-mixin() {
+  width: 100%;
+  line-height: 16px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .u-select-show-search {
+    .u-select-selection {
+      border: none;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      display: inline-block;
+      .u-select-selection-rendered {
+        padding-right: 8px;
+        line-height: 14px;
+        display: block;
+        .u-select-selection-selected-value {
+          padding-left: 0;
+          white-space: normal;
+          opacity: 1!important;
+        }
+        .u-select-search .u-select-search-field {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// 输入类控件disabled 状态样式
+.form-control-disabled-mixin() {
+  &:focus,
+  &:hover {
+    border-color: @input-border-color;
+    cursor: not-allowed;
+  }
+}
+
+// 页面顶部16px
+.page-top-16-mixin() {
+  .u-tabs .u-tabs-content {
+    padding-top: 16px;
+    .line-tabs {
+      .u-tabs .u-tabs-content{
+        padding-top: 0;
+      }
+    }
+    .u-tabs.meta-container > .u-tabs-content{
+      padding-top: 0;
+    }
+  }
+}

@@ -7,14 +7,14 @@
 }
 
 .u-select-selection:hover {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 
 .u-select-focused .u-select-selection,
 .u-select-selection:active,
 .u-select-selection:focus {
-  border: 1px solid #505766 !important;
+  border: 1px solid @custom-color !important;
 }
 
 .u-select-disabled {
@@ -24,7 +24,7 @@
 }
 
 .u-select-open .u-select-selection {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .u-select .u-select-selection :hover {
-  border-color:@custom-color;
+  border-color:@custom-color !important;
 }
 
 .u-select-show-search {
@@ -92,7 +92,6 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 #E4E4E4;
-  // min-width: 100px !important;
 }
 
 // 全球化-下拉框规范
@@ -114,13 +113,13 @@
   &:active,
   &:focus,
   &:hover {
-    border: 1px solid #505766;
+    border: 1px solid @custom-color;
     box-shadow: none;
   }
 }
 
 .ant-select-open .ant-select-selection {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 

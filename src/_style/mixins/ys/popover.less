@@ -93,7 +93,10 @@
 
 .u-popover.u-popover-tooltip.u-tooltip.inverse {
   z-index: 1700;
-  transform: translateY(-4px);
+  min-width: 240px;
+  &.filter_scheme_popover {
+    min-width: auto;
+  }
 
   &.inverse-arrow {
     transform: translateY(8px);
@@ -139,6 +142,16 @@
       font-size: 12px;
       color: #666;
       line-height: 18px;
+    }
+  }
+  //浮层为数组情况
+  .field_help1{
+    padding: 0px 12px;
+    color: #888;
+    line-height: 18px;
+    display: flex;
+    span:first-child{
+      padding-right: 4px;
     }
   }
 }

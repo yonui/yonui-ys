@@ -3,7 +3,7 @@
 // ============================================
 
 .left-search-tree-2-mixin() {
-  padding: 10px 14px 0;
+  padding: 10px 14px 8px;
   position: relative;
 
   .u-button-icon {
@@ -35,13 +35,6 @@
     line-height: 28px;
     z-index: 2;
     position: absolute;
-
-    &:before {
-      font-size: 12px;
-      color: #ccc;
-      font-family: "uf" !important;
-      content: "\e66b" !important;
-    }
 
     &:hover {
       &::before {
@@ -84,7 +77,7 @@
   overflow: hidden;
 
   .u-tree {
-    padding: 0 20px 0 20px;
+    padding: 0 14px 0 14px;
     overflow-y: scroll;
     height: 100%;
 
@@ -129,8 +122,8 @@
           height: 24px;
           line-height: 24px;
           padding: 0 8px;
-          border-radius: 12px;
-          margin: 0 5px;
+          border-radius: 4px;
+          margin: 0 2px;
         }
       }
     }
@@ -151,7 +144,7 @@
     text-overflow: ellipsis;
 
     .u-select-selection {
-      border: none;
+      border: none!important;
       height: 14px;
       line-height: 14px;
       font-size: 14px;
@@ -235,7 +228,7 @@
           }
 
           .yonicon-up:before {
-            color: #505766;
+            color: @custom-color;
             font-size: 14px;
           }
         }

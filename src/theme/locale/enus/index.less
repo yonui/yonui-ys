@@ -1,0 +1,213 @@
+// 不包含作用域
+
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 西语输入类控件，label + input
+.region-lang(@leftPadding: 80px, @labelWidthPercent: 80%) {
+  .ant-row {
+    display: block !important;
+    min-height: 48px !important;
+    padding-left: @leftPadding;
+    .refer-div {
+      .ant-row {
+        padding-left: 0;
+      }
+    }
+  }
+  .ant-row .label-control {
+    padding: 0;
+    line-height: 16px;
+    text-align: left;
+    width: @labelWidthPercent !important;
+    .ellipsis();
+    float: unset;
+    margin-bottom: 4px;
+  }
+  .ant-row .input-control {
+    width: @labelWidthPercent !important;
+    .ant-row {
+      padding-left: 0;
+      min-height: unset !important;
+    }
+  }
+}
+
+.listheadRow .filter-hide {
+  .region-lang();
+}
+
+// 统一入口的公共样式 basic-control
+.basic-control {
+  .region-lang();
+}
+
+.basic-input-text {
+  .region-lang();
+}
+
+.basic-input-textarea {
+  .region-lang();
+}
+
+.basic-input-qrcode {
+  .region-lang();
+}
+
+.basic-tree-refer {
+  .region-lang();
+}
+
+.basic-list-refer {
+  .region-lang();
+}
+
+.basic-tagarea {
+  .region-lang();
+}
+
+.control-radio {
+  .region-lang();
+}
+
+.ac_mobile_locale {
+  .region-lang();
+}
+
+.refer-div {
+  .region-lang(); // TODO: 待优化，（项目类别，新增）参照高度莫名的高度了28.89px
+  .ant-row .input-control {
+    .ant-row {
+      height: 28px;
+    }
+  }
+}
+
+.number-control {
+  .region-lang();
+}
+
+.checkboxenum-control {
+  .region-lang();
+}
+
+.basic-predicate-data-picker {
+  .region-lang();
+}
+
+.datepicker-control {
+  .region-lang();
+}
+
+.upload-content {
+  .region-lang();
+}
+
+.basic-avatar {
+  .region-lang();
+}
+
+.tag-group {
+  .region-lang();
+  .ant-row {
+    .enum-control {
+      // 枚举项宽度不同于其他的 80%，直接使用100%
+      width: 100% !important;
+    }
+  }
+} 
+
+// tag-refer 特殊处理
+.tag-refer {
+  &.ant-row {
+    display: block;
+    min-height: 48px;
+    padding-left: 80px;
+    .p-v-5 {
+      padding: 0;
+      line-height: 12px;
+      text-align: left;
+      width: 80% !important;
+      .ellipsis();
+      margin-bottom: 4px;
+    }
+    .TagList {
+      width: 80% !important;
+    }
+  }
+} 
+
+// 不同容器的兼容
+
+// 左树
+.form-left {
+  .ant-row {
+    padding-left: 0;
+  }
+} 
+
+// 必填图标
+.ant-row .yonicon-star {
+  margin-left: 0;
+  vertical-align: unset;
+} 
+
+// 帮助图标高度调整
+.yonicon-bangzhu:before {
+  line-height: 22px;
+} 
+
+// 弹框
+.u-modal .u-modal-body {
+  .basic-control {
+    .region-lang(40px);
+  }
+  .number-control {
+    .region-lang(40px);
+  }
+  .checkboxenum-control {
+    .region-lang(40px);
+  }
+  .basic-tree-refer {
+    .region-lang(40px);
+  }
+  .basic-input-text {
+    .region-lang(40px);
+  }
+  .basic-input-textarea {
+    .region-lang(40px);
+  }
+} 
+
+// 表格编辑，参照
+.editCol {
+  .refer-div {
+    .region-lang(0);
+  }
+}
+
+.tag-group:not(.single-line) .label-control {
+  padding-top: 0 !important;
+}
+
+.label-control.multi-line {
+  // padding-top: 0;
+}
+
+div[id='org_center_card|orgtype'] .ant-row .control-width {
+  line-height: 28px;
+}
+
+.control-radio .u-radio-group {
+  min-height: 28px;
+}
+
+@media screen and (max-width: 600px) {
+  // 自适用多语单列
+  .viewCell.width-percent-100 .input-control .u-input-group input {
+    padding-right: 5px;
+  }
+}

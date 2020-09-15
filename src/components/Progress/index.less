@@ -118,6 +118,9 @@
   height: 262px;
   left: auto !important; // fix: liulili 异步导入
   right: 98px;
+  .tooltip-arrow{
+    margin-top: -15px;
+  }
   .tooltip-inner {
     padding: 12px 0;
     box-shadow: 0 0 0px 0 rgba(0, 0, 0, .2);
@@ -132,7 +135,7 @@
     .ImportProgressBall_Items {
       width: 217px;
       height: 212px;
-      overflow-y: scroll;
+      overflow-y: auto;
       padding-right: 16px;
       margin-top: 10px;
 
@@ -222,7 +225,7 @@
       .ImportProgressBall_Items {
         width: 217px;
         height: 212px;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding-right: 16px;
         margin-top: -1px; // async: liulili 导入导出
 

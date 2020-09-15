@@ -78,6 +78,39 @@
   z-index: 1702;
 }
 
+//UI模板弹框样式
+.bill-setting-modal {
+  .u-modal-content {
+    .modal-body.u-modal-body {
+      .bill-modal-tabs {
+        .bill-setting-tabs {
+          .u-tabs-top {
+            .u-tabs-bar {
+              padding-top: 0;
+
+              .u-tabs-nav-container {
+                .u-tabs-nav-wrap {
+                  .u-tabs-tab {
+                    padding: 8px !important;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          .tabs-button {
+            margin: 8px !important;
+          }
+        }
+      }
+    }
+  }
+}
+// fix: QDJM-2912
+// .no-iframe .btn-group-bottom.bottom-toolbar {
+//   bottom: 0
+// }
 //新增方案
 
 .u-modal .scheme-content {
@@ -259,11 +292,12 @@
         color: #ee2223;
       }
 
-      button.confirmScheme {
-        margin-left: 8px;
-      }
+      // button.confirmScheme {
+      //   margin-left: 8px;
+      // }
 
       button.cancelScheme {
+        margin-right: 8px;
         .cancel-button-mixin();
       }
     }
@@ -780,7 +814,9 @@
   .ant-modal {
     width: 600px !important;
     height: 600px !important;
-
+    .ant-modal-header{
+        padding: 9px 16px;
+    }
     .ant-modal-body {
       padding: 14px 0px 0px 0px;
 
@@ -796,13 +832,12 @@
         }
 
         .code-box {
-          height: 200px;
+          height: 260px;
           margin-bottom: 8px;
 
           .clearfix {
             line-height: 26px;
           }
-
           p>span {
             padding-top: 0px;
             padding-left: 0px;
@@ -811,6 +846,11 @@
 
         .code-box-container {
           border-radius: 4px;
+          .code-box{
+              p{
+                line-height: 26px;
+              }
+          }
         }
       }
 
@@ -818,6 +858,7 @@
         border-top: 1px solid #e9e9e9 !important;
         padding: 10px 20px !important;
         height: 48px;
+        
       }
     }
   }
@@ -839,6 +880,20 @@
   }
 }
 
-.s-ok-button {
-  margin-left: 8px;
+// .s-ok-button {
+//   margin-left: 8px;
+// }
+
+.bill-setting-modal {
+  .u-modal-footer {
+    // .u-button-primary {
+    //   margin-left: 8px;
+    // }
+    .u-button-border {
+      &:hover {
+        color: #505766;
+        background: #e5e9ec;
+      }
+    }
+  }
 }

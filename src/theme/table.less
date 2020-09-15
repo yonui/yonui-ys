@@ -547,7 +547,7 @@
   .u-modal-body {
     color: #666;
     padding: 16px 20px 0px 20px;
-    height: 450px;
+    height: 520px;
     .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
       top: 1px;
     }
@@ -1189,7 +1189,9 @@
   vertical-align: text-bottom;
   padding: 0px 2px !important;
   background: rgba(238, 34, 35, 0.05);
-  margin-left: 4px;
+  margin-left: 0;
+  display: inline-block;
+  transform: scale(.85);
 
   span {
     text-align: center;
@@ -1246,6 +1248,7 @@
     display: block;
     float: left;
     margin-left: 2px;
+    color: #ee2233;
 
     .ant-checkbox {
       margin-top: 9px;
@@ -1427,9 +1430,12 @@
 
 /*多表头样式 add by jinzh1*/
 .rptTable {
+  &.readOnlyTable .fixedDataTableRowLayout_main {
+    overflow: hidden!important;
+  }
   .table-group-header {
     .group-row {
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3!important;
 
       .group-col {
         float: left;
@@ -1445,6 +1451,41 @@
       border: none;
     }
   }
+  .readOnlyTable .fixedDataTableCellLayout_main {
+    border-right: 1px solid #d3d3d3;
+  }
+  .fixedDataTableRowLayout_rowWrapper .public_fixedDataTableRow_even .public_fixedDataTableCell_main[role="columnheader"] {
+    .headerName {
+      height: 66px!important;
+    }
+  }
+  
+  .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
+    .public_fixedDataTable_header {
+      .fixedDataTableRowLayout_main {
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+  &.listTable{
+    .fixedDataTableCellLayout_main{
+       border-right: 1px solid #d3d3d3;
+    }
+  }
+}
+
+.rptTable.sn_querysnflowdirection_report_Table,
+.rptTable.sn_querysnstate_report_Table {
+  .public_fixedDataTableCell_main[role="columnheader"] {
+    .headerName {
+      height: 30px !important;
+    }
+  }
+}
+
+#container .design-canvas .design-canvas-body .meta-dynamic-view.design-border .rptTable [uitype] {
+  border: none;
+  border-top: 1px solid #d9d9d9;
 }
 
 /*盘点复核-打印模板*/
@@ -1963,7 +2004,8 @@
               margin-top: 3px;
               margin-left: 10px;
               &.cell-avatar-logo {
-                background: url(images/default-logo-table.png);
+                background: url(images/Default-picture.png);
+                background-size: 100%;
               }
             }
           }
@@ -2072,10 +2114,6 @@
       padding-top: 0;
     }
   }
-
-  .container-edit-mode .list-top-toolbar {
-    padding-bottom: 8px;
-  }
 }
 
 .pu_pursettlefee {
@@ -2136,7 +2174,7 @@
 // UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
 .u-tabs-content .listheadRow {
   margin: 0px 20px;
-  padding-top: 10px;
+  padding-top: 16px;
 }
 
 /*多级维度导航*/
@@ -2558,7 +2596,7 @@
 
     // 右边表格
     .Table2D_Right {
-      overflow-y: scroll;
+      overflow: auto;
       border-left: #dadada solid 1px;
       position: relative;
 
@@ -2652,6 +2690,9 @@
     right: 0;
     padding-left: 10px;
     padding-right: 20px;
+    display: flex;
+    align-items: center;
+    height: calc(~'100% - 1px'); // -1 避免遮挡底部border
 
     span:last-child {
       margin-right: 0;
@@ -3072,6 +3113,7 @@
     text-align: center;
     padding-left: 10px;
     line-height: 36px;
+    margin-top: 10px;
     &>span {
       cursor: pointer;
       font-size: 14px;
@@ -3108,4 +3150,9 @@
     white-space: pre-wrap !important;
   }
 
+}
+.stockcol-table-red {
+    color: #ee2223;
+    font-weight: bold;
+    display: block;
 }
