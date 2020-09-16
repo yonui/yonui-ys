@@ -67,10 +67,15 @@
   }
 }
 
-// 树展开图标
+// 树展开/收缩图标 -
 .yonicon-minus-square-o:before {
   content: "\e672" !important;
   font-weight: bold;
+}
+
+// 树展开/收缩图标 +
+.yonicon.yonicon-plus-square-o:before {
+  content: "\e62a";
 }
 
 .anticon-ellipsis:before,
@@ -440,10 +445,6 @@ i.uf-calendar:before {
   &:hover {
     color: #999;
   }
-}
-
-.yonicon.yonicon-plus-square-o:before {
-  content: "\e62a";
 }
 
 // fix: ys 银行网点记录删除状态的图标
