@@ -48,7 +48,7 @@ class MobileLocale extends Component {
     if (global) return global
     global = window.cb?.rest.AppContext?.globalization || global
     if (global?.locale) {
-      return global?.locale
+      return global.locale
     }
     if (window && Url.query('locale')) { // url 配置页面语言
       lang = Url.query('locale')
