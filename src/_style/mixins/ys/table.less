@@ -476,6 +476,8 @@
 
   .ant-row {
     display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .table-list-btn {
@@ -628,6 +630,15 @@
         text-overflow: ellipsis;
         .joinQueryCell {
           color: #588ce9;
+        }
+      }
+
+      .acticonCell {
+        height: calc(~'100% - 1px'); // 减 1 是取消奇数偏差
+
+        &.ant-row {
+          display: flex;
+          align-items: center;
         }
       }
     }
