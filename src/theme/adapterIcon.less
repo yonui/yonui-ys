@@ -710,13 +710,11 @@
 .u-tree li {
   &.u-tree-treenode-open {
     span.u-tree-switcher.icon-none .uf::before {
-      content: "\E672";
       transform: scale(0.58333333) rotate(0deg);
     }
   }
   &.u-tree-treenode-close {
     span.u-tree-switcher.icon-none .uf::before {
-      content: "\E52a";
       transform: rotate(270deg) scale(.58333333);
     }
   }
@@ -733,6 +731,18 @@
       font-weight: 700;
       color: #333;
       transition: transform .3s;
+    }
+
+    // +
+    &.uf-add-s-o:before {
+      content: "\e62a" !important;
+      font-family: "iconfont";
+    }
+
+    // -
+    &.uf-reduce-s-o:before {
+      content: "\e672" !important;
+      font-family: "iconfont";
     }
   }
 }
