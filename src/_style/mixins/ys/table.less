@@ -476,6 +476,8 @@
 
   .ant-row {
     display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .table-list-btn {
@@ -634,8 +636,11 @@
 
       .acticonCell {
         height: calc(~'100% - 1px'); // 减 1 是取消奇数偏差
-        display: flex;
-        align-items: center;
+
+        &.ant-row {
+          display: flex;
+          align-items: center;
+        }
       }
     }
 
