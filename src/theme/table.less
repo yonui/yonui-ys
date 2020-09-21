@@ -29,9 +29,21 @@
 }
 
 .meta-table {
-  .editCol .edit-input-number .ant-select-selection {
-    margin-top: 2px;
-  }
+  .editCol{
+    .edit-input-number .ant-select-selection {
+        margin-top: 2px;
+    }
+    //编辑态启用按钮的居中
+    .edit-input-number.contorl-switch{
+        position: relative;
+        height: 100%;
+        .u-switch-span{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+  } 
 }
 
 /*报表 add by 金子涵*/
@@ -2181,8 +2193,8 @@
 // ====================start====================
 // UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
 .u-tabs-content .listheadRow {
-  margin: 0px 20px;
-  padding-top: 16px;
+  margin: 0px 24px;
+  padding-top: 8px;
 }
 
 /*多级维度导航*/

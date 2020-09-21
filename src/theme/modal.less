@@ -5283,14 +5283,30 @@
 }
 
 // 提示信息优化
-.u-popover.u-popover-tooltip.u-tooltip[overlayclassname='input-tip-pover-dialog'] {
+.u-popover.u-popover-tooltip.u-tooltip[overlayclassname~='input-tip-pover-dialog'] {
+  transform: translateY(0)!important;
   .tooltip-inner {
     line-height: 28px;
-    padding: 0 8px;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+    padding: 0 8px!important;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05)!important;
     color: #ee2233;
-    min-width: auto;
+    min-width: auto!important;
   }
+}
+
+//提示信息优化-参照
+.refer-div .s-popover-inner-span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+// 提示信息优化-下拉树
+.basic-tree-refer .s-popover-inner-span .uretail-treerefer-selection .s-popover-inner-span {
+  height: 28px;
+  line-height: 28px;
+  display: block;
+  width: calc(~'100% + 30px');
 }
 
 //pc手机验证弹窗

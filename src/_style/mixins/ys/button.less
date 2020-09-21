@@ -537,6 +537,26 @@
   .normal-button-mixin();
 }
 
+// 表格记录，删除、新增、批改、分摊
+// TODO: 待抽取共性
+.btnApportion,
+.btnBatchDeleteRow,
+.btnBatchAlter,
+.btnAddRow {
+  .normal-button-mixin();
+}
+
 .u-button.temp_header {
   .normal-button-mixin();
+}
+
+// 上、下页
+.u-button.btnMovenext,
+.u-button.btnMoveprev {
+  min-width: unset;
+  padding: 0 6px;
+
+  svg {
+    margin-right: 0;
+  }
 }

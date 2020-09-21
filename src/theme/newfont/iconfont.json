@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17206607",
+      "name": "停用",
+      "font_class": "tingyong",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "17206576",
+      "name": "启用",
+      "font_class": "qiyong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "17015949",
+      "name": "UI模板",
+      "font_class": "UImoban",
+      "unicode": "e85a",
+      "unicode_decimal": 59482
+    },
+    {
       "icon_id": "16828423",
       "name": "设备",
       "font_class": "shebei",

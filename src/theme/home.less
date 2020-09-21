@@ -174,46 +174,51 @@
 
 /* 预警 */
 .billing-expireInfoWrap {
-  float: left;
-  width: calc(~'100% - 145px');
-  background: #FFF7E7;
-  height: 37px;
-  line-height: 37px;
-  font-size: 12px;
-  color: #EE2223;
-  margin-left: 145px;
-  margin-top: -5px;
-  padding-left: 15px;
-
-  .exp-btn {
+    float: left;
+    width: calc(~'100% - 145px');
+    background: #FFF7E7;
+    height: 37px;
+    line-height: 37px;
     font-size: 12px;
-    color: #FFFFFF;
-    height: 20px;
-    line-height: 20px;
-    padding: 0 8px;
-    display: inline-block;
-    background-image: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
-    border-radius: 20px;
-    margin-left: 15px;
-
-    &:hover {
-      background-image: linear-gradient(45deg, #FC4C2F 0%, #EE2223 100%);
+    color: #333;
+    margin-left: 145px;
+    margin-top: -5px;
+    padding-left: 15px;
+    position: relative;
+    .exp-btn {
+      font-size: 12px;
+      color: #FFFFFF;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 8px;
+      display: inline-block;
+      background-image: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
+      border-radius: 20px;
+      margin-left: 15px;
+  
+      &:hover {
+        background-image: linear-gradient(45deg, #FC4C2F 0%, #EE2223 100%);
+      }
+    }
+  
+    .ant-btn-primary {
+      height: 22px;
+      padding: 0 6px;
+    }
+    .item{
+      padding-left: 22px;
     }
   }
-
-  .ant-btn-primary {
-    height: 22px;
-    padding: 0 6px;
+  
+  .billing-expireInfoWrap svg {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 9px;
+      left: 15px;
+      margin-right: 6px;
+      color: #e23;
   }
-}
-
-.billing-expireInfoWrap .billing-expireInfo svg {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: 1px;
-  margin-right: 6px;
-}
 
 /* 过期 */
 .billing-expire-overdue {
