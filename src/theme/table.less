@@ -1474,6 +1474,14 @@
   }
 }
 
+.OperationHeaderName {
+  position: fixed;
+  width: 4px;
+  background: #f9f6fd;
+  right: -1px;
+  top: 0;
+}
+
 .rptTable.sn_querysnflowdirection_report_Table,
 .rptTable.sn_querysnstate_report_Table {
   .public_fixedDataTableCell_main[role="columnheader"] {
@@ -2690,8 +2698,6 @@
     right: 0;
     padding-left: 10px;
     padding-right: 20px;
-    display: flex;
-    align-items: center;
     height: calc(~'100% - 1px'); // -1 避免遮挡底部border
 
     span:last-child {

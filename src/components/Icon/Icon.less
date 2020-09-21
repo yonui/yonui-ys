@@ -14,8 +14,13 @@
 
 .yonicon:before {
   display: block;
-  font-family: 'iconfont' !important;
+  // font-family: 'iconfont';
   cursor: pointer;
+}
+
+.yonicon,
+.uf {
+  font-family: "iconfont"!important;
 }
 
 .iconfont {
@@ -62,32 +67,29 @@
 .yonicon-close-circle {
   &:before {
     content: "\e690";
-    font-family: "iconfont";
     color:#adb4bc;
   }
 }
 
 // 树展开图标
 .yonicon-minus-square-o:before {
-  content: "\e672" !important;
+  content: "\e672";
   font-weight: bold;
 }
 
 .anticon-ellipsis:before,
 .yonicon-ellipsis:before {
-  content: "\e521" !important;
+  content: "\e521";
 }
 
 // 下拉框选项勾选态
 .u-select-dropdown.u-select-dropdown--multiple .u-select-dropdown-menu-item:after {
-  font-family: "iconfont";
   content: "\e6af";
 }
 
 // 库存预警
 .ant-select-selection__clear:before {
   content: "\e690";
-  font-family: "iconfont";
 }
 
 // 模态框中穿梭框的向右、向左
@@ -95,7 +97,6 @@
   .u-button-icon.icon-right-enabled::before,
   .u-button-icon.icon-right-disabled::before {
     content: "\e514";
-    font-family: 'iconfont';
   }
 }
 
@@ -103,32 +104,23 @@
   .u-button-icon.icon-left-enabled::before,
   .u-button-icon.icon-left-disabled::before {
     content: "\e515";
-    font-family: 'iconfont';
   }
 }
 
 // fix: 基础数据，弹框，添加查询条件 分别：x up down
-.yonicon-guanbi1:before,
-.yonicon-shanchucopy1:before,
-.yonicon-shanchucopy2:before {
-  font-family: 'iconfont' !important;
-}
 
 .wuliu_none .icon-cuowutishi:before {
-  font-family: 'iconfont' !important;
   content: "\e671";
 }
 
 .anticon-shurukuangshanchu::before {
   content: "\e690";
-  font-family: 'iconfont' !important;
 }
 
 // 新组件的日期图标暂用iconfont 的
 .uf-calendar:before,
 i.uf-calendar:before {
   content: "\e661";
-  font-family: 'iconfont' !important;
   color: #c3c3c3;
   font-size: 12px;
 }
@@ -160,8 +152,7 @@ i.uf-calendar:before {
 
 .anticon.anticon-star {
   &:before {
-    content: "\e605" !important;
-    font-family: "iconfont" !important;
+    content: "\e605";
   }
 }
 
@@ -179,11 +170,11 @@ i.uf-calendar:before {
 }
 
 .yonicon-down-circle:before {
-  content: "\e685"!important;
+  content: "\e685";
 }
 
 .yonicon-up-circle:before {
-  content: "\e684"!important;
+  content: "\e684";
 }
 
 .ant-row .yonicon-star {
@@ -266,7 +257,6 @@ i.uf-calendar:before {
 .icon-xuanzhong1:before,
 .yonicon-icon-xuanzhong1:before {
   content: "\E6AF";
-  font-family: "iconfont" !important;
   color: #ee2233;
 }
 
@@ -427,7 +417,6 @@ i.uf-calendar:before {
 
 .yonicon-caret-up:before {
   content: "\e814";
-  font-family: "iconfont" !important;
 }
 
 .yonicon-caret-down:before {
@@ -443,7 +432,7 @@ i.uf-calendar:before {
 }
 
 .yonicon.yonicon-plus-square-o:before {
-  content: "\E52A";
+  content: "\e62a";
 }
 
 // fix: ys 银行网点记录删除状态的图标
@@ -453,19 +442,12 @@ i.uf-calendar:before {
 
 // tinper 的搜索图标略微不同于antd 的，这里先恢复使用 anticon
 .uf-search:before {
-  content: "\e518" !important;
-  font-family: 'iconfont';
+  content: "\e518";
 }
 
-.ant-select {
-  .ant-select-arrow:before {
-    font-family: 'iconfont' !important;
-  }
-}
 
 .ant-select-arrow:before {
-  content: "\E633" !important;
-  font-family: 'iconfont' !important;
+  content: "\E633";
   color: #98a2ad;
   display: block;
   transition: transform .2s ease;
@@ -475,7 +457,6 @@ i.uf-calendar:before {
 .anticon-search:before {
   content: "\e518";
   color: #adb4bc;
-  font-family: 'iconfont' !important;
   font-size: 14px;
 }
 
@@ -528,7 +509,6 @@ i.uf-calendar:before {
 // message tip 图标
 .icon-tongzhixinxi:before {
   content: "\e61d";
-  font-family: 'iconfont';
 }
 
 .yonicon-download:before {
