@@ -14,12 +14,13 @@
 
 .yonicon:before {
   display: block;
-  // font-family: 'iconfont';
+  font-family: 'iconfont';
   cursor: pointer;
 }
 
 .yonicon,
-.uf {
+.uf,
+.uf:before {
   font-family: "iconfont"!important;
 }
 
@@ -71,10 +72,16 @@
   }
 }
 
-// 树展开图标
+// 树展开/收缩图标 -
 .yonicon-minus-square-o:before {
-  content: "\e672";
-  font-weight: bold;
+  content: "\e773";
+  font-weight: 800;
+}
+
+// 树展开/收缩图标 +
+.yonicon.yonicon-plus-square-o:before {
+  content: "\e772";
+  font-weight: 800;
 }
 
 .anticon-ellipsis:before,
@@ -90,6 +97,7 @@
 // 库存预警
 .ant-select-selection__clear:before {
   content: "\e690";
+  font-family: "iconfont";
 }
 
 // 模态框中穿梭框的向右、向左
@@ -431,10 +439,6 @@ i.uf-calendar:before {
   }
 }
 
-.yonicon.yonicon-plus-square-o:before {
-  content: "\e62a";
-}
-
 // fix: ys 银行网点记录删除状态的图标
 .yonicon-info-circle::before {
   content: "\E61d";
@@ -503,14 +507,36 @@ i.uf-calendar:before {
 // message error 图标
 .icon-qingkong:before {
   font-family: 'iconfont';
-  content: "\e671";
+  content: "\e690";
 }
 
 // message tip 图标
 .icon-tongzhixinxi:before {
   content: "\e61d";
+  font-family: 'iconfont';
+  font-size: 14px;
 }
 
 .yonicon-download:before {
   content: "\e69d";
+}
+
+.yonicon-location:before {
+  content: "\e7b2";
+}
+
+.yonicon-self-jian:before {
+  content: "\e773";
+}
+
+.yonicon-self-jia:before {
+  content: "\e772";
+}
+
+.yonicon-pingmushiyong:before {
+  content: "\e848";
+}
+
+.yonicon-shijidaxiao:before {
+  content: "\e843";
 }
