@@ -85,7 +85,7 @@ class ButtonAdapter extends Component {
         return <i className={ant2tinper[icon]} />
       }
       // 这里添加 anticon 是为了兼容，理想状态下是需要删除掉的
-      const cls = iconType === 'iconfont' ? `icon iconfont icon-${icon}` : `yonicon yonicon-${icon} anticon-${icon}`
+      const cls = iconType === 'iconfont' ? `icon iconfont icon-${icon}` : `yonicon yonicon-${icon}`
       return <i className={cls} />
     }
 
