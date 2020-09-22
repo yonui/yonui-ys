@@ -718,7 +718,10 @@ div[id='aa_paymentmethod|code'] {
   .split_container .split_left .left-container>.meta-default-container {
     height: 100%;
     &>.bg-white.border-r {
-      height: 100%;
+      height: calc(~'100% - 32px');
+    }
+    &>.list-top-toolbar {
+      margin-bottom: 0;
     }
   }
 }

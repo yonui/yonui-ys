@@ -3275,7 +3275,13 @@ a.Toolbar_Notification_Log {
       font-size: 12px;
       line-height: inherit;
       height: initial;
-      padding: 8px 10px 8px 35px;
+      padding: 8px 12px 8px 12px;
+      .yonicon-icon-xuanzhong1{
+        margin-right: 8px;
+        &::before{
+          font-size: 16px;
+        }
+      }
       i.out{
         font-style: normal;
         i.high-light{
@@ -5735,7 +5741,7 @@ div[id='bd_staff_card|photo'] {
   }
 
 }
-#mountNode{
+.show-relation-wrapper{
   background: #fff;
   overflow-x: hidden;
   box-shadow: inset 0px 6px 12px -6px rgba(80, 87, 102, 0.15);
@@ -5804,6 +5810,7 @@ div[id='bd_staff_card|photo'] {
       color: #999;
     }
     &:hover{
+      background-color: transparent;
       i:before{
         color: #505766;
       }
