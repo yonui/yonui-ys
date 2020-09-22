@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17288824",
+      "name": "重置",
+      "font_class": "chongzhi1",
+      "unicode": "e998",
+      "unicode_decimal": 59800
+    },
+    {
       "icon_id": "17206607",
       "name": "停用",
       "font_class": "tingyong",
