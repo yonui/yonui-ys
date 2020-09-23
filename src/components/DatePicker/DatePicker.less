@@ -46,18 +46,26 @@
   border-color: #dedede!important;
 }
 
-.rc-calendar .rc-calendar-today .rc-calendar-date {
-  border-color: #588ce9;
-  color: #333!important;
-}
-
 .rc-calendar-selected-date .rc-calendar-date,
 .rc-calendar-selected-day .rc-calendar-date {
 
   &,
   &:hover {
-    background: #588ce9;
+    background: #588ce9 !important;
+    color: #fff;
   }
+}
+
+.rc-calendar-today-btn:hover {
+  color: #588ce9 !important;
+}
+
+.rc-calendar-date:hover {
+  background: #f5f5f5 !important;
+}
+
+.rc-calendar .rc-calendar-today .rc-calendar-date {
+  border: 1px solid #578ce9 !important;
 }
 
 .rc-calendar td {
@@ -143,9 +151,12 @@
 /*日期控件 - 带有谓词*/
 .yxy_datepicker_design {
   position: relative;
+  >.u-form-control{
+    display: none;
+  }
   >div{
     width: 100%!important;
-    margin-top: -28px;
+    // margin-top: -28px;
     position: relative;
     top: initial;
     visibility: initial;

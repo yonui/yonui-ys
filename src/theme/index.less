@@ -1,13 +1,18 @@
 @import '~fixed-data-table-2/dist/fixed-data-table.css';
 
-// metaui 中的css 优先级高
-@import './minxin-themeColors.less';
 @import '../static/tinper-bee/2.2.2/tinper-bee-yonsuite.less';
-// @mdf/baseui 要优先依赖，内部定义了一些mixin 方法
+
+// 引入变量
+@import './minxin-themeColors.less';
+
+// 引入字体图标
+@import './newfont/iconfont.less';
+
+// 引入组件样式
 @import '../index.less';
 
-@import './mixin.less';
-@import './newfont/iconfont.less';
+// mixin 优先级高于组件样式
+@import '../_style/mixins/index.less';
 
 @import './base.less';
 @import './form.less';
@@ -23,4 +28,5 @@
 @import './ui-manage.less';
 @import './portal.less';
 @import './no-iframe.less';
-@import './lang.less';
+
+@import './locale/index.less';

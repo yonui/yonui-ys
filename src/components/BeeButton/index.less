@@ -80,38 +80,6 @@
 }
 
 .listheadRow {
-  .up-show {
-    .up-search {
-      background: @custom-color;
-      color: @custom-font-color;
-      border: 1px solid @custom-border-color;
-
-      &:hover {
-        background: @custom-color-hover;
-        color: #fff;
-      }
-    }
-
-    .u-button.showMore {
-      min-width: 24px;
-
-      &:hover {
-        color: @icon-hover-color-blue;
-      }
-
-      i {
-        margin-left: 0;
-      }
-    }
-
-    .u-button.filterSetting {
-      height: @base-input-height;
-
-      &:hover {
-        border: 1px solid @custom-color;
-      }
-    }
-  }
   .Toolbar_Group_Length1 {
     display: flex;
     .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) {
@@ -151,7 +119,12 @@
 
         &:hover {
           z-index: 4;
+          border: 1px solid #505766;
         }
+      }
+
+      .u-button-group:hover .u-button{
+        border-color: transparent;
       }
 
       .u-button:first-child,
@@ -303,21 +276,6 @@
         padding: 0 12px;
         margin-top: 8px;
         min-width: 0;
-      }
-    }
-  }
-}
-
-.u-modal {
-  .modal-footer {
-    .u-button:not(.u-button-primary) {
-      background: @custom2-color;
-      border: none;
-      color: @custom2-font-color;
-      padding: 0 12px;
-
-      &:hover {
-        background: @custom2-color-hover;
       }
     }
   }
@@ -598,21 +556,11 @@
   background: #f3f5f9;
 }
 
-// 参照框中的按钮
-.tag-refer.tag-refer-01 .TagList .tagBtn-add {
-  min-width: 0;
-}
-
 // fix: 新增默认方案modal 左下角“添加查询条件” 的图文居中问题
 .scheme-content .query-item-button svg.icon {
   width: 14px;
   height: 14px;
 }
-
-// fix: 采购管理-> 供货目录中物料参照的左侧搜索 icon
-// .leftPanel .search-tree-2 .u-button {
-//   top: 12px;
-// }
 
 // fix: 期初采购入库单，新增页面放大按钮样式
 .u-button.u-button[disabled].btn-maximize {

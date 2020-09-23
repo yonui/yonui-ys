@@ -2,7 +2,6 @@
 // tag 类控件的原子样式
 // ============================================
 
-// @import './form.less';
 // 全局变量
 
 // tag-group
@@ -36,12 +35,18 @@
   // 折行
   &:not(.single-line) {
     .form-lable-top-mixin();
-    .label-control {
-      padding-top: 8px !important;
-    }
     .enum-control {
       max-height: 42px;
       padding-top: 2px;
+      margin-bottom: 12px;
+
+      .has-related {
+        height: 28px;
+      }
+
+      .filter-hide .ant-row {
+        margin-bottom: 0;
+      }
     }
     .u-tag {
       margin-top: 2px;
@@ -58,12 +63,9 @@
   }
 }
 
-.tag-refer.tag-refer-01 .TagList {
-  padding-right: 48px;
-}
-
 .tag-refer.tag-refer-01 .TagList .tagBtn-add {
   width: auto;
+  min-width: 0;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -74,6 +76,7 @@
 .tag-refer.tag-refer-01 .TagList .ant-select-selection__clear {
   top: 7px;
   margin-top: 0;
+  right: 28px !important;
 }
 
 
@@ -83,8 +86,6 @@
   display: block;
 
   .p-v-5 {
-    // width: 87px;
-    // margin-right: 15px;
     width: 100px;
     padding-right: 10px;
     text-align: right;
@@ -144,7 +145,8 @@
         display: block;
       }
 
-      .anticon-cross:hover {
+      .anticon-cross:hover,
+      .uf-close:hover {
         color: #EE2223;
       }
     }
@@ -157,9 +159,11 @@
       padding: 0;
       margin-left: 5px;
       float: right;
-      margin-right: 2px;
+      margin-right: 0;
+      background: transparent;
 
-      .anticon.anticon-canzhao:before {
+      .anticon.anticon-canzhao:before,
+      .yonicon.yonicon-canzhao::before {
         line-height: @base-input-height - 2;
       }
 
@@ -193,7 +197,6 @@
     .u-select-search--inline {
       position: static;
       flex: 1;
-      // padding-right: 30px;
 
       .u-select-search-field {
         height: 26px;
