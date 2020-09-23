@@ -68,8 +68,16 @@
   display: inline-block;
 }
 
-.u-select .u-select-selection :hover {
-  border-color:@custom-color !important;
+.u-select {
+  .u-select-selection :hover {
+    border-color:@custom-color !important;
+  }
+  &.u-select-disabled .u-select-selection {
+    background: @input-bg-disabled;
+    &:hover {
+      border-color:@input-border-disabled-hover!important;
+    }
+  }
 }
 
 .u-select-show-search {
