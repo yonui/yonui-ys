@@ -5297,10 +5297,16 @@
 }
 
 //提示信息优化-参照
-.refer-div .s-popover-inner-span {
+.refer-div,
+.basic-control .control-width > {
+  .s-popover-inner-span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.basic-input-text .s-popover-inner-span {
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
 // 提示信息优化-下拉树
