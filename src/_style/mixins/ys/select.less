@@ -73,8 +73,9 @@
     border-color:@custom-color !important;
   }
   &.u-select-disabled .u-select-selection {
-    background: @input-bg-disabled;
-    &:hover {
+    background: @input-bg-disabled!important;
+    &:hover,
+    &:focus {
       border-color:@input-border-disabled-hover!important;
     }
   }
