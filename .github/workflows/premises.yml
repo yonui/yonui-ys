@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - premises1.2
+name: Premises1.2
+jobs:
+
+  publish:
+    # needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
+    - run: npm install
+    - run: npm run build
+    - run: npm publish --tag premises1.2
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
