@@ -7,14 +7,14 @@
 }
 
 .u-select-selection:hover {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 
 .u-select-focused .u-select-selection,
 .u-select-selection:active,
 .u-select-selection:focus {
-  border: 1px solid #505766 !important;
+  border: 1px solid @custom-color !important;
 }
 
 .u-select-disabled {
@@ -24,7 +24,7 @@
 }
 
 .u-select-open .u-select-selection {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 
@@ -68,8 +68,17 @@
   display: inline-block;
 }
 
-.u-select .u-select-selection :hover {
-  border-color:@custom-color !important;
+.u-select {
+  .u-select-selection :hover {
+    border-color:@custom-color !important;
+  }
+  &.u-select-disabled .u-select-selection {
+    background: @input-bg-disabled!important;
+    &:hover,
+    &:focus {
+      border-color:@input-border-disabled-hover!important;
+    }
+  }
 }
 
 .u-select-show-search {
@@ -113,13 +122,13 @@
   &:active,
   &:focus,
   &:hover {
-    border: 1px solid #505766;
+    border: 1px solid @custom-color;
     box-shadow: none;
   }
 }
 
 .ant-select-open .ant-select-selection {
-  border: 1px solid #505766;
+  border: 1px solid @custom-color;
   box-shadow: none;
 }
 
@@ -217,4 +226,18 @@
 
 .has-error .ant-select-selection {
   border-color: #f04134 !important;
+}
+
+.u-select-arrow:before {
+  color: #98a2ad;
+}
+
+.u-select-disabled {
+  .u-select-arrow:before {
+    color: #ccc !important;
+  }
+}
+
+.u-select-arrow:hover:before {
+  color: #505766;
 }

@@ -6,6 +6,11 @@
   white-space: nowrap;
 }
 
+// 左边距流白
+@normal-padding: 80px;
+@middle-padding: 40px;
+@small-padding: 28px;
+
 // 西语输入类控件，label + input
 .region-lang(@leftPadding: 80px, @labelWidthPercent: 80%) {
   .ant-row {
@@ -33,6 +38,10 @@
       padding-left: 0;
       min-height: unset !important;
     }
+  }
+  .ant-form-explain {
+    left: @leftPadding;
+    top: 48px;
   }
 }
 
@@ -125,7 +134,7 @@
   &.ant-row {
     display: block;
     min-height: 48px;
-    padding-left: 80px;
+    padding-left: @normal-padding;
     .p-v-5 {
       padding: 0;
       line-height: 12px;
@@ -163,22 +172,26 @@
 // 弹框
 .u-modal .u-modal-body {
   .basic-control {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
   }
   .number-control {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
   }
   .checkboxenum-control {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
   }
   .basic-tree-refer {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
   }
   .basic-input-text {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
   }
   .basic-input-textarea {
-    .region-lang(40px);
+    .region-lang(@middle-padding);
+  }
+  .width-percent-100 .has-error .ant-form-explain {
+    left: @middle-padding;
+    top: 48px;
   }
 } 
 
@@ -193,10 +206,6 @@
   padding-top: 0 !important;
 }
 
-.label-control.multi-line {
-  padding-top: 0;
-}
-
 div[id='org_center_card|orgtype'] .ant-row .control-width {
   line-height: 28px;
 }
@@ -209,5 +218,79 @@ div[id='org_center_card|orgtype'] .ant-row .control-width {
   // 自适用多语单列
   .viewCell.width-percent-100 .input-control .u-input-group input {
     padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .basic-control {
+    .region-lang(@middle-padding);
+  }
+  .number-control {
+    .region-lang(@middle-padding);
+  }
+  .checkboxenum-control {
+    .region-lang(@middle-padding);
+  }
+  .basic-tree-refer {
+    .region-lang(@middle-padding);
+  }
+  .basic-input-text {
+    .region-lang(@middle-padding);
+  }
+  .basic-input-textarea {
+    .region-lang(@middle-padding);
+  }
+  .width-percent-100 .has-error .ant-form-explain {
+    left: @middle-padding;
+    top: 48px;
+  }
+  .tag-refer {
+    &.ant-row {
+      padding-left: @middle-padding;
+    }
+  }
+  .listheadRow .filter-hide {
+    .region-lang(@middle-padding);
+
+    .ant-row .input-control {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .basic-control {
+    .region-lang(@small-padding);
+  }
+  .number-control {
+    .region-lang(@small-padding);
+  }
+  .checkboxenum-control {
+    .region-lang(@small-padding);
+  }
+  .basic-tree-refer {
+    .region-lang(@small-padding);
+  }
+  .basic-input-text {
+    .region-lang(@small-padding);
+  }
+  .basic-input-textarea {
+    .region-lang(@small-padding);
+  }
+  .width-percent-100 .has-error .ant-form-explain {
+    left: @small-padding;
+    top: 48px;
+  }
+  .tag-refer {
+    &.ant-row {
+      padding-left: @small-padding;
+    }
+  }
+  .listheadRow .filter-hide {
+    .region-lang(@small-padding);
+
+    .ant-row .input-control {
+      max-width: 100%;
+    }
   }
 }

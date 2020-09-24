@@ -27,6 +27,9 @@
   .u-checkbox {
     margin-right: 15px;
   }
+  .textCol > div {
+    .ellipsis();
+  }
 }
 
 // 产品入库，新增页面，编辑表格，参照居中
@@ -326,7 +329,7 @@
 
 .fixedDataTableLayout_main {
   border: none;
-  border-top: 1px solid #505766;
+  border-top: 1px solid @custom-color;
 
   .has-error {
     .ant-form-explain {
@@ -476,6 +479,8 @@
 
   .ant-row {
     display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .table-list-btn {
@@ -604,9 +609,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     min-height: 15px;
-    padding: 10px 12px;
+    padding: 0 12px;
     border-bottom: 1px solid #dbe0e5;
     height: 35px;
+    line-height: 35px;
   }
 
   .public_fixedDataTableCell_cellContent .ant-search-input-wrapper {
@@ -622,11 +628,21 @@
       background: #fff;
       border-bottom: 1px solid #dbe0e5;
       .cell-text {
-        padding: 10px 12px;
+        padding: 0 12px;
         overflow: inherit;
         text-overflow: ellipsis;
+        line-height: 35px;
         .joinQueryCell {
           color: #588ce9;
+        }
+      }
+
+      .acticonCell {
+        height: calc(~'100% - 1px'); // 减 1 是取消奇数偏差
+
+        &.ant-row {
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -650,7 +666,6 @@
 
   .acticonCell {
     padding-left: 0px;
-    margin-top: -4px; // 客户分类表格，操作按钮垂直居中
     text-align: right;
     right: 40px;
     height: 22px;
@@ -890,7 +905,6 @@
 
   .acticonCell {
     padding-top: 0px;
-    background: #edf1f7;
 
     .table-list-btn {
       min-width: 44px;

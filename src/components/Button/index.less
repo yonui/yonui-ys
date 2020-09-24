@@ -80,38 +80,7 @@
 }
 
 .listheadRow {
-  .up-show {
-    .up-search {
-      background: @custom-color;
-      color: @custom-font-color;
-      border: 1px solid @custom-border-color;
-
-      &:hover {
-        background: @custom-color-hover;
-        color: #fff;
-      }
-    }
-
-    .u-button.showMore {
-      min-width: 24px;
-
-      &:hover {
-        color: @icon-hover-color-blue;
-      }
-
-      i {
-        margin-left: 0;
-      }
-    }
-
-    .u-button.filterSetting {
-      height: @base-input-height;
-
-      &:hover {
-        border: 1px solid @custom-color;
-      }
-    }
-  }
+  
   .Toolbar_Group_Length1 {
     display: flex;
     .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) {
@@ -151,6 +120,7 @@
 
         &:hover {
           z-index: 4;
+          border: 1px solid @custom-color;
         }
       }
 
@@ -312,22 +282,6 @@
   }
 }
 
-.u-modal {
-  .modal-footer {
-    .u-button:not(.u-button-primary) {
-      background: @custom2-color;
-      border: none;
-      color: @custom2-font-color;
-      padding: 0 12px;
-      margin-right: 8px;
-
-      &:hover {
-        background: @custom2-color-hover;
-      }
-    }
-  }
-}
-
 // 表格里面的button
 .meta-table {
   .btn-caret {
@@ -396,11 +350,11 @@
   }
 
   &:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname) {
-    &:hover {
-      color: #505766;
-      border-color: #505766;
-      background-color: unset; // 先注释掉
-    }
+    // &:hover {
+    //   color: #505766;
+    //   border-color: #505766;
+    //   background-color: unset; // 先注释掉
+    // }
     &:disabled {
       opacity: .5;
       &:hover {

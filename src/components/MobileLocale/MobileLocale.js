@@ -31,7 +31,7 @@ const defaultProps = {
 class MobileLocale extends Component {
   constructor (props) {
     super(props)
-    this.zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale('YS_FED_FW_YONUI_00050003') /* "中国" */, locale: 'CN', country_code: 86 }
+    this.zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale('YS_FED_FW_YONUI_00050003') /* "中国" */, locale: 'CN', country_code: '86' }
 
     const { country_code, mobile } = props
     const countryObj = country_code ? this.getFindObj(country_code) : null
@@ -47,8 +47,9 @@ class MobileLocale extends Component {
     let global = window.cb?.lang?.lang
     if (global) return global
     global = window.cb?.rest.AppContext?.globalization || global
+    // 兼容非多语场景
     if (global?.locale) {
-      return global || global?.locale
+      return global.locale
     }
     if (window && Url.query('locale')) { // url 配置页面语言
       lang = Url.query('locale')

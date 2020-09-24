@@ -29,9 +29,21 @@
 }
 
 .meta-table {
-  .editCol .edit-input-number .ant-select-selection {
-    margin-top: 2px;
-  }
+  .editCol{
+    .edit-input-number .ant-select-selection {
+        margin-top: 2px;
+    }
+    //编辑态启用按钮的居中
+    .edit-input-number.contorl-switch{
+        position: relative;
+        height: 100%;
+        .u-switch-span{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+  } 
 }
 
 /*报表 add by 金子涵*/
@@ -156,62 +168,6 @@
 
 #eChartId_chart1 .react_for_echarts>div {
   height: 320px !important;
-}
-
-// async sku 浮层
-.taggroup-popover {
-  .filter-list-search{
-    margin: 7px 15px 0px 15px;
-    input.u-form-control-search{
-      padding-right: 45px;
-    }
-  }
-  .filter-list-content{
-    line-height: 32px;
-  }
-  .filter-btn-1 {
-    min-width: 260px;
-    border-top: 1px solid #dcdcdc;
-    padding: 5px 0px 0px 15px;
-    .u-checkbox{
-        margin-top: 4px;
-        .u-checkbox-label{
-          line-height: 16px;
-        }
-    }
-    .u-button{
-      height: 26px;
-    }
-    .u-button-border{
-      float: right;
-      background: #eef1f3;
-      border: none;
-      color: #555c6a;
-      &:hover{
-        background: #d5d8da;
-      }
-    }
-    .sku-newbtn {
-      float: right;
-      background: transparent;
-      margin-right: 34px;
-      border: none;
-      padding: 6px 0px;
-      vertical-align: middle;
-      display: flex;
-
-      svg {
-        width: 13px;
-        height: 13px;
-        margin-right: 5px;
-      }
-
-      &:hover {
-        background: transparent !important;
-        color: #ee2223 !important;
-      }
-    }
-  }
 }
 
 .icon-plus-copy {
@@ -1474,6 +1430,14 @@
   }
 }
 
+.OperationHeaderName {
+  position: fixed;
+  width: 4px;
+  background: #f9f6fd;
+  right: -1px;
+  top: 0;
+}
+
 .rptTable.sn_querysnflowdirection_report_Table,
 .rptTable.sn_querysnstate_report_Table {
   .public_fixedDataTableCell_main[role="columnheader"] {
@@ -2173,8 +2137,8 @@
 // ====================start====================
 // UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
 .u-tabs-content .listheadRow {
-  margin: 0px 20px;
-  padding-top: 16px;
+  margin: 0px 24px;
+  padding-top: 8px;
 }
 
 /*多级维度导航*/
@@ -2690,8 +2654,6 @@
     right: 0;
     padding-left: 10px;
     padding-right: 20px;
-    display: flex;
-    align-items: center;
     height: calc(~'100% - 1px'); // -1 避免遮挡底部border
 
     span:last-child {

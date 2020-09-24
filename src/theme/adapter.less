@@ -134,12 +134,6 @@ div[id='mr_plan_workbench_list|others_data_param'] .container-browse-mode.contai
   padding-top: 16px;
 }
 
-// fix: 采购，alert
-.icon-tongzhixinxi:before {
-  content: "\e6cd";
-  font-family: 'uf' !important;
-}
-
 // fix: 调入，单据日期文字按钮垂直居中
 .filter-controls .basic-predicate-data-picker .ant-row>.input-control .ant-row {
   display: flex;
@@ -248,7 +242,7 @@ textarea.u-form-control {
       .u-input-number-out{
         .u-input-number {
           .u-form-control{
-            width: 100%;
+            width: 100% !important;
           }
         } 
       }
@@ -724,7 +718,10 @@ div[id='aa_paymentmethod|code'] {
   .split_container .split_left .left-container>.meta-default-container {
     height: 100%;
     &>.bg-white.border-r {
-      height: 100%;
+      height: calc(~'100% - 32px');
+    }
+    &>.list-top-toolbar {
+      margin-bottom: 0;
     }
   }
 }
@@ -810,49 +807,9 @@ div[id='aa_paymentmethod|code'] {
     display: none;
   }
 }
+
 .u-select-show-search.u-select-nowarp .u-select-selection--multiple .u-select-selection-rendered ul{
   overflow: unset;
-}
-//TINPER-2678
-.aa_selfscreensettinglist .container-edit-mode .viewCell .basic-avatar-btn-item:hover span.avatar-uploader .u-upload.u-upload-select{
-  span.u-upload{
-    width: 50%;
-    display: inline-block;
-    margin-top: 12px;
-    position: relative;
-    i.anticon.anticon-uploadimg:before{
-      content: "\e6ac";
-      font-family: uf!important;
-      font-size: 20px;
-      position: absolute;
-      top: 5px;
-      right: 42%;
-    }
-  }
-  span.u-upload:hover{
-    background: none;
-  }
-}
-.aa_selfscreensettinglist .container-edit-mode .viewCell .basic-avatar-btn-item:hover img + span.avatar-uploader .u-upload.u-upload-select{
-  span.u-upload{
-    width: 50%;
-    display: block;
-    height: 28px;
-    margin-top: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    position: relative;
-    i.anticon.anticon-uploadimg:before {
-      content: "\e6ac";
-      font-family: "uf" !important;
-      font-size: 16px;
-      position: absolute;
-      top: 5px;
-      right: calc(50% - 8px);
-    }
-  }
-  span.u-upload:hover{
-    background: rgba(0, 0, 0, 0.75);
-  }
 }
 
 // 库存参数
@@ -1014,11 +971,11 @@ div[id="pc_productbrandpro"] {
   }
 }
 
-div[id="st_transferapplylist"],
-div[id="st_morphologyconversionlist"],
-div[id="st_transferreqlist"] {
-  min-width: 1200px;
-}
+// div[id="st_transferapplylist"],
+// div[id="st_morphologyconversionlist"],
+// div[id="st_transferreqlist"] {
+//   min-width: 1200px;
+// }
 
 //TINPER-5221
 .st_wareandinv_ware.u-modal{
@@ -1131,6 +1088,10 @@ div[id='aa_vendor|aa_vendor_page_base'] {
   }
 }
 
+.control-width .u-input-group {
+  display: block;
+}
+
 @media screen and (max-width: 600px) {
   // 自适应单列
   .viewCell.width-percent-100 {
@@ -1139,7 +1100,7 @@ div[id='aa_vendor|aa_vendor_page_base'] {
       .ac-input-locale,
       .u-select,
       .u-form-control {
-        width: initial !important;
+        width: 100% !important;
       }
       .ac-input-locale .input-text {
         padding-right: 45px;
@@ -1155,4 +1116,8 @@ div[id='aa_vendor|aa_vendor_page_base'] {
   .tree-list .height-100 > .ant-row.meta-default-container {
     overflow: auto;
   }
+}
+
+#yxyweb-support-container {
+  padding: 0 !important;
 }
