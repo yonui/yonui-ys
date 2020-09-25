@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13760254",
+      "name": "星星",
+      "font_class": "xingxing1",
+      "unicode": "ead6",
+      "unicode_decimal": 60118
+    },
+    {
+      "icon_id": "17420776",
+      "name": "星星",
+      "font_class": "xingxing1-huise",
+      "unicode": "ead7",
+      "unicode_decimal": 60119
+    },
+    {
       "icon_id": "17288824",
       "name": "重置",
       "font_class": "chongzhi1",
