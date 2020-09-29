@@ -170,6 +170,62 @@
   height: 320px !important;
 }
 
+// async sku 浮层
+.taggroup-popover {
+  .filter-list-search{
+    margin: 7px 15px 0px 15px;
+    input.u-form-control-search{
+      padding-right: 45px;
+    }
+  }
+  .filter-list-content{
+    line-height: 32px;
+  }
+  .filter-btn-1 {
+    min-width: 260px;
+    border-top: 1px solid #dcdcdc;
+    padding: 5px 0px 0px 15px;
+    .u-checkbox{
+        margin-top: 4px;
+        .u-checkbox-label{
+          line-height: 16px;
+        }
+    }
+    .u-button{
+      height: 26px;
+    }
+    .u-button-border{
+      float: right;
+      background: #eef1f3;
+      border: none;
+      color: #555c6a;
+      &:hover{
+        background: #d5d8da;
+      }
+    }
+    .sku-newbtn {
+      float: right;
+      background: transparent;
+      margin-right: 34px;
+      border: none;
+      padding: 6px 0px;
+      vertical-align: middle;
+      display: flex;
+
+      svg {
+        width: 13px;
+        height: 13px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        background: transparent !important;
+        color: #ee2223 !important;
+      }
+    }
+  }
+}
+
 .icon-plus-copy {
   font-size: 14px;
   color: #fff;
@@ -2652,7 +2708,8 @@
 .fixedDataTableCellGroupLayout_cellGroupWrapper {
   .acticonCell {
     right: 0;
-    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
     height: calc(~'100% - 1px'); // -1 避免遮挡底部border
 
     span:last-child {
@@ -2726,7 +2783,7 @@
         .u-table-bordered table{
           border-left: none;
           border-right: none;
-          border-top-color: transparent;
+          border-top-color: #505766;
         }
         .u-table th{
           padding: 6px 10px;
@@ -2953,12 +3010,33 @@
                   .cell-wrapper{
                     //图片和订单信息
                     .order-info-brand{
+                      overflow: hidden;
                       .order-info-img{
                         width: 68px;
                         height: 68px;
-                        svg{
-                          width: 68px;
-                          height: 68px;
+                        float: left;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        position: relative;
+                        background: #f8f8f8;
+                        //暂无图片
+                        .order-without-image{
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                          svg{
+                            width: 68px;
+                            height: 68px;
+                          }
+                        }
+                        //有图片上下垂直居中
+                        img{
+                          max-height: 100%;
+                          transform: translate(-50%,-50%);
+                          top: 50%;
+                          left: 50%;
+                          position: absolute;
+                          max-width: 100%;
                         }
                       }
                       .order-info-content{
@@ -3095,37 +3173,4 @@
     color: #ee2223;
     font-weight: bold;
     display: block;
-}
-
-//图片和订单信息
-.order-info-brand{
-  overflow: hidden;
-  .order-info-img{
-    width: 28px;
-    height: 28px;
-    float: left;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    background: #f8f8f8;
-    //暂无图片
-    .order-without-image{
-      display: block;
-      width: 100%;
-      height: 100%;
-      svg{
-        width: 28px;
-        height: 28px;
-      }
-    }
-    //有图片上下垂直居中
-    img{
-      max-height: 100%;
-      transform: translate(-50%,-50%);
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      max-width: 100%;
-    }
-  }
 }

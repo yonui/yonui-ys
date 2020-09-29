@@ -80,7 +80,38 @@
 }
 
 .listheadRow {
-  
+  .up-show {
+    .up-search {
+      background: @custom-color;
+      color: @custom-font-color;
+      border: 1px solid @custom-border-color;
+
+      &:hover {
+        background: @custom-color-hover;
+        color: #fff;
+      }
+    }
+
+    .u-button.showMore {
+      min-width: 24px;
+
+      &:hover {
+        color: @icon-hover-color-blue;
+      }
+
+      i {
+        margin-left: 0;
+      }
+    }
+
+    .u-button.filterSetting {
+      height: @base-input-height;
+
+      &:hover {
+        border: 1px solid @custom-color;
+      }
+    }
+  }
   .Toolbar_Group_Length1 {
     display: flex;
     .Toolbar_Common_Btn_Menus:not(.ToolBar_isAddButton) {

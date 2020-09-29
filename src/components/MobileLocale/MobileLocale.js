@@ -31,7 +31,7 @@ const defaultProps = {
 class MobileLocale extends Component {
   constructor (props) {
     super(props)
-    this.zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale('YS_FED_FW_YONUI_00050003') /* "中国" */, locale: 'CN', country_code: '86' }
+    this.zhcnInfo = { shoupinyin: 'Z', en: 'China', country: this.getLocale('YS_FED_FW_YONUI_00050003') /* "中国" */, locale: 'CN', country_code: 86 }
 
     const { country_code, mobile } = props
     const countryObj = country_code ? this.getFindObj(country_code) : null
