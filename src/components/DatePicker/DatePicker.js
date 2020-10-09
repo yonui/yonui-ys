@@ -7,7 +7,7 @@ class DatePickerAdapter extends Component {
     super(props)
     const locale = window.cb && cb.lang && cb.lang.langType ? cb.lang.langType.substring(0, 2) : 'zh'
     moment.locale(locale)// 设置为英文
-    const _locale = window.cb && cb.lang ? cb.lang.lang : 'zh_CN'
+    const _locale = window.cb && cb.lang ? cb.lang.lang : 'zh_CN' || 'zh_CN'
     this.locale = require('bee-datepicker/build/locale/' + _locale + '.js')
   }
 
