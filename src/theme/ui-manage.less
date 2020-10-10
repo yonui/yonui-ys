@@ -30,18 +30,22 @@
   max-width: calc(~'100% - 17px ');
   overflow: hidden;
   text-overflow: ellipsis;
-  vertical-align: middle !important
+  vertical-align: middle !important;
+
+  .ant-tree-title .edit-title-ellipsis {
+    display: inline;
+  }
 }
 
-.ant-tree li span.ant-tree-iconEle,
-.ant-tree li span.ant-tree-switcher {
-  width: 14px !important;
-  height: 14px !important;
-  // line-height: 12px !important;
-  // border: 1px solid #ccc !important;
-  border-radius: 2px !important;
-  margin-right: 3px !important;
-}
+// .ant-tree li span.ant-tree-iconEle,
+// .ant-tree li span.ant-tree-switcher {
+//   width: 14px !important;
+//   height: 14px !important;
+//   // line-height: 12px !important;
+//   // border: 1px solid #ccc !important;
+//   border-radius: 2px !important;
+//   margin-right: 3px !important;
+// }
 
 .ant-tree li span.ant-tree-switcher.ant-tree-switcher-noop {
   border: none !important;
