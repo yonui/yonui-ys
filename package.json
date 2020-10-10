@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
     "dev": "node --max_old_space_size=4096 ./node_modules/yonui-cli/bin start",
-    "build": "rm -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build -p",
-    "dist": "rm -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build dist -p",
+    "build": "rimraf -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build -p",
+    "dist": "rimraf -rf dist && node --max_old_space_size=4096 ./node_modules/yonui-cli/bin build dist -p",
     "debug": "gulp debug --sourcemap",
     "eslint": "gulp eslint --ext .js --quiet --fix"
   },
