@@ -62,6 +62,18 @@
   }
 }
 
+// 重置
+.reset-button-mixin() {
+  .u-button-mixin();
+  padding: 0px;
+  color: #588ce9;
+  min-width: auto;
+  border: none;
+  &:hover {
+    border: none;
+    color: #8dbbf5!important;
+  }
+}
 
 // 按钮组，主按钮
 .group-primary-button-mixin() {
@@ -437,6 +449,39 @@
     }
   }
 }
+
+.container-browse-mode {
+  .filterSetting {
+    .normal-button-mixin();
+    margin-left: 8px;
+    float: right;
+  }
+
+  .up-show {
+    .filter-reset {
+      .reset-button-mixin();
+      float: right;
+      margin-right: 2px;
+      &:hover{
+        background: transparent!important;
+      }
+    }
+  }
+}
+// editVoucherlist 查询区样式
+.container-edit-mode{
+  .up-show {
+    .filter-reset {
+      .reset-button-mixin();
+      float: right;
+      margin-right: 2px;
+      &:hover{
+        background: transparent!important;
+      }
+    }
+  }
+}
+
 .listheadRow .btn-toolbar-bottom {
   .u-button-primary {
     svg {
@@ -509,7 +554,7 @@
 .u-button.btnMovenext,
 .u-button.btnMoveprev {
   min-width: unset;
-  padding: 0 6px;
+  padding: 0 8px !important;
 
   svg {
     margin-right: 0;
