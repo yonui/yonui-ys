@@ -191,6 +191,7 @@
   }
 }
 
+// 劳动合同签订
 .hrht_contract_sign_main {
   .container-browse-mode > .jDiwork-container > div {
     height: 100%;
@@ -198,12 +199,20 @@
       height: 100%;
 
       & > .ys-tabs {
-        height: calc(100% - 80px);
+        height: 100%;
+
+        & > .u-tabs-content {
+          height: calc(100% - 40px);
+        }
 
         div[id='hrht_contract_sign_main|tabs_hrht_contract_sign_staff_list'] {
-          height: calc(100% - 80px);
+          height: 100%;
         }
       }
+    }
+
+    .form-left.Manual-calculation-left .bg-white.border-r .search-tree-3 {
+      height: calc(100% - 60px);
     }
   }
 }
