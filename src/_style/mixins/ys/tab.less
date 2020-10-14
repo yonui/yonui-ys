@@ -101,15 +101,24 @@
 }
 
 .line-tabs .u-tabs .u-tabs-content .u-tabs-tabpane {
-  // tabs 页签与下面的开单logo单独设置
-  .basic-avatar {
-    padding-top: 16px;
-    .basic-avatar-billing-logo{
-      .basic-avatar-right{
-        line-height: 17px;
+    // tabs 页签与下面的开单logo单独设置
+    .basic-avatar {
+      padding-top: 16px;
+      .basic-avatar-billing-logo{
+        .basic-avatar-right{
+          line-height: 17px;
+        }
+      }
+      .ant-row{
+          margin-bottom: 16px;
+      }
+      &.has-error{
+          .ant-form-explain{
+              top: auto;
+              bottom: 2px;
+          }
       }
     }
-  }
 }
 
 // 最大化
