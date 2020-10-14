@@ -621,6 +621,11 @@
         opacity: 1;
       }
 
+      // 避免透明状态下遮挡
+      &:not(.u-tabs-tab-arrow-show) {
+        margin-top: -40px;
+      }
+
       span {
         position: absolute;
       }
@@ -683,6 +688,10 @@
   .tab-menu.u-tabs-top .u-tabs-bar {
     margin-bottom: 0 !important;
     border-bottom: none;
+  }
+
+  .u-tabs-content-no-animated {
+    display: none;
   }
 
   & + .ys-tabs {
