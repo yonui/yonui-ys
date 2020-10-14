@@ -7,18 +7,18 @@
 @font-color-hover: #49a9ee;
 
 // /* ys 基础 tabs 样式 */
-// .ys-tabs.u-tabs {
-//   .u-tabs-tab-prev,
-//   .u-tabs-tab-next {
-//     opacity: 0;
-//   }
-//   &-top &-tab-arrow-show,
-//   &-left &-tab-arrow-show,
-//   &-bottom &-tab-arrow-show,
-//   &-right &-tab-arrow-show {
-//     opacity: 1;
-//   }
-// }
+.ys-tabs.u-tabs {
+  .u-tabs-tab-prev,
+  .u-tabs-tab-next {
+    opacity: 0;
+  }
+  &-top &-tab-arrow-show,
+  &-left &-tab-arrow-show,
+  &-bottom &-tab-arrow-show,
+  &-right &-tab-arrow-show {
+    opacity: 1;
+  }
+}
 
 .ys-tabs.u-tabs.u-tabs-upborder {
   .u-tabs-nav .u-tabs-tab {
@@ -652,24 +652,27 @@
     line-height: 40px !important;
   }
 
-  .u-tabs-tab-active {
-    color: #f53c32 !important;
-    margin-top: 0 !important;
-
-    &:before {
-      content: "";
-      position: absolute;
-      background-color: #505766;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 4px solid #505766;
-      background: none;
-      left: 50%;
-      margin-top: 8px!important;
-      bottom: 0;
-      margin-left: -3px;
+  .u-tabs-nav {
+    .u-tabs-tab.u-tabs-tab-active {
+      color: #f53c32 !important;
+      margin-top: 0 !important;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: #505766;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 4px solid #505766;
+        background: none;
+        left: 50%;
+        margin-top: 8px!important;
+        bottom: 0;
+        top: unset;
+        margin-left: -3px;
+      }
     }
   }
 
@@ -679,6 +682,7 @@
 
   .tab-menu.u-tabs-top .u-tabs-bar {
     margin-bottom: 0 !important;
+    border-bottom: none;
   }
 
   & + .ys-tabs {
@@ -698,7 +702,6 @@
 
       .u-tabs-nav-container {
         background: #fff;
-        height: 32px;
       }
     }
   }
@@ -714,4 +717,8 @@
     margin-top: -1px;
     line-height: 30px;
   }
+}
+
+.u-tabs {
+  max-width: unset !important;
 }
