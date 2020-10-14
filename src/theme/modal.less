@@ -5329,36 +5329,55 @@
 }
 
 // 表体行附件图片浮层
-.linefile-button-pop .u-popover-content {
-  .fileBtn {
-    display: flex;
-    align-items: center;
-    margin: 0 -8px;
-
-    a {
-      display: block;
-      width: 28px;
-      height: 14px;
-      position: relative;
-
-      svg {
-        width: 14px;
+.linefile-button-pop.u-popover.u-popover-tooltip.u-tooltip.inverse {
+  transform: translateY(0);
+  .tooltip-inner{
+    min-width: 32px;
+    padding: 5px 4px;
+  }
+  .u-popover-content {
+    .fileBtn {
+      display: flex;
+      align-items: center;
+      margin: 0;
+  
+      a {
+        display: block;
+        width: 28px;
         height: 14px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+  
+        svg {
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
-  }
-  .ant-popover-inner-content {
-    padding: 0 16px;
-    font-size: 12px;
-    color: #999;
-    line-height: 14px;
-    max-width: 300px;
+    .ant-popover-inner-content {
+      padding: 0 16px;
+      font-size: 12px;
+      color: #999;
+      line-height: 14px;
+      max-width: 300px;
+    }
   }
 }
+
+.linefile-tips-pop.u-popover.u-popover-tooltip.u-tooltip.inverse{
+  .tooltip-inner{
+    min-width: 32px;
+    padding: 4px 8px;
+
+    .u-popover-content{
+      line-height: 16px;
+    }
+  }
+}
+
 // 采购入库
 .tableclassname111.header-dispaly-in-row .u-table-body{
   height: 150px;

@@ -3386,20 +3386,21 @@ i.uf-search,
 /* 表体行附件图片样式 */
 .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent{
   .upload-picture-book{
+    position: absolute;
+    margin-top: -1px;
     .pictureBook{
       width: 28px;
       height: 28px;
       border-radius:4px;
-      border: solid 1px transparent;
-      line-height: 24px;
+      border: solid 1px #D9D9D9;
+      line-height: 26px;
       text-align: center;
-      margin-top: -2px;
       overflow: hidden;
       .pictureImg{
         height: 28px;
         width: 28px;
         overflow: hidden;
-        border-radius: 0;
+        border-radius: 4px;
         background-color: #fff;
         position: relative;
         img{
@@ -3415,12 +3416,10 @@ i.uf-search,
         }
       }
       .s-popover-inner-span{
-        line-height: 1;
+        width: 28px;
+        height: 28px;
 
         .yonicon-plus-copy{
-          vertical-align: middle;
-          width: 24px;
-          height: 24px;
           &::after{
             content: "\e6a3";
             font-family: "iconfont";
@@ -3431,6 +3430,16 @@ i.uf-search,
         }
       }
     }
+    
+    &:hover{
+      .linefile:not(.readOnly) {
+        border-color: #505766;
+      }
+    }
+  }
+  
+  .textCol.linefile{
+    overflow: visible;
   }
 }
 
