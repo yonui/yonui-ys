@@ -29,14 +29,14 @@
     text-align: left;
     width: @labelWidthPercent !important;
     .ellipsis();
-    float: unset;
+    float: none;
     margin-bottom: 4px;
   }
   .ant-row .input-control {
     width: @labelWidthPercent !important;
     .ant-row {
       padding-left: 0;
-      min-height: unset !important;
+      min-height: auto !important;
     }
   }
   .ant-form-explain {
@@ -204,6 +204,21 @@
 
 .tag-group:not(.single-line) .label-control {
   padding-top: 0 !important;
+}
+
+// 有关联的控件，关联控件不处理，避免错位
+.tag-group .enum-control .has-related {
+  .ant-row {
+    min-height: 32px !important;
+    display: flex !important;
+    padding-left: 40px;
+
+    .label-control {
+      width: 100px !important;
+      padding-right: 8px;
+      text-align: right;
+    }
+  }
 }
 
 div[id='org_center_card|orgtype'] .ant-row .control-width {
