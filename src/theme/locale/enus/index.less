@@ -206,6 +206,21 @@
   padding-top: 0 !important;
 }
 
+// 有关联的控件，关联控件不处理，避免错位
+.tag-group .enum-control .has-related {
+  .ant-row {
+    min-height: 32px !important;
+    display: flex !important;
+    padding-left: 40px;
+
+    .label-control {
+      width: 100px !important;
+      padding-right: 8px;
+      text-align: right;
+    }
+  }
+}
+
 div[id='org_center_card|orgtype'] .ant-row .control-width {
   line-height: 28px;
 }
