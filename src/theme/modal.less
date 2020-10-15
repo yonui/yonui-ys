@@ -5456,3 +5456,25 @@
 .tableclassname111.header-dispaly-in-row .u-table-body{
   height: 150px;
 }
+
+
+//供应商档案-新增兼容ie11,去掉transform
+.u-modal.in {
+  .u-modal-dialog.add-modal-wrapper{
+    transform: none!important;
+      .u-modal-content {
+        .modal-body {
+          .container-edit-mode {
+            .height-100 {
+              .bottom-toolbar{
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                width: auto !important;
+              }             
+            }
+          }
+        }
+      }
+  }
+}
