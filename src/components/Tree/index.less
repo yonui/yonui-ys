@@ -191,19 +191,28 @@
   }
 }
 
-.hrht_contract_sign_main {
+// 劳动合同签订（TODO：移至人力项目扩展）
+.hrcloud-contract {
   .container-browse-mode > .jDiwork-container > div {
     height: 100%;
     .card-tabs {
       height: 100%;
 
       & > .ys-tabs {
-        height: calc(100% - 80px);
+        height: 100%;
 
-        div[id='hrht_contract_sign_main|tabs_hrht_contract_sign_staff_list'] {
-          height: calc(100% - 80px);
+        & > .u-tabs-content {
+          height: calc(~'100% - 40px');
+        }
+
+        div[id$='|tabs_hrht_contract_sign_staff_list'] {
+          height: 100%;
         }
       }
+    }
+
+    .form-left.Manual-calculation-left .bg-white.border-r .search-tree-3 {
+      height: calc(~'100% - 60px');
     }
   }
 }

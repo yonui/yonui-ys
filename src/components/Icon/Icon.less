@@ -108,6 +108,7 @@
   .u-button-icon.icon-right-enabled::before,
   .u-button-icon.icon-right-disabled::before {
     content: "\e514";
+    font-family: "iconfont";
   }
 }
 
@@ -115,6 +116,7 @@
   .u-button-icon.icon-left-enabled::before,
   .u-button-icon.icon-left-disabled::before {
     content: "\e515";
+    font-family: "iconfont";
   }
 }
 
@@ -126,6 +128,8 @@
 
 .anticon-shurukuangshanchu::before {
   content: "\e690";
+  font-family: "iconfont" !important;
+  font-size: 12px;
 }
 
 // 新组件的日期图标暂用iconfont 的
@@ -164,6 +168,7 @@ i.uf-calendar:before {
 .anticon.anticon-star {
   &:before {
     content: "\e605";
+    font-family: "iconfont" !important;
   }
 }
 
@@ -460,8 +465,7 @@ i.uf-calendar:before {
   transition: transform .2s ease;
 }
 
-.yonicon-search:before,
-.anticon-search:before {
+.yonicon-search:before {
   content: "\e518";
   color: #adb4bc;
   font-size: 14px;
@@ -546,4 +550,16 @@ i.uf-calendar:before {
 
 .yonicon-tishi1:before {
   content: "\e77c";
+}
+.yonicon-sousuo::before{
+  content: "\e518";
+}
+.yonicon-jichushezhi1::before{
+  content: "\e63e";
+}
+.yonicon-chongzhi1::before{
+  content: "\e998";
+}
+.uf-star:before {
+  content: "\ead7";
 }

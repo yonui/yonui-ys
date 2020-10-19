@@ -246,14 +246,59 @@
 }
 
 .up-show {
+  .u-button{
+    padding: 0;
+    min-width: 28px;
+    i{
+      margin-left: 0;
+      &:not(.yonicon-down-circle){
+        font-size: 14px;
+      }
+    }
+  }
+  
   .ant-btn-ghost {
     width: 68px;
     height: 32px;
   }
 
-  .showMore {
+  .up-search {
+    background: @custom-color;
+    color: @custom-font-color;
+    border: 1px solid @custom-border-color;
+    min-width: 36px;
+
+    &:hover {
+      background: @custom-color-hover;
+      border-color: @custom-color-hover;
+    }
+  }
+  .filter-reset{
     float: right;
-    width: 20px;
+  }
+
+  .filterSetting {
+    display: block;
+  }
+
+  .filter-reset,
+  .filterSetting {
+    margin-left: 8px;
+    &:hover {
+      border: 1px solid @custom-color;
+      background: transparent;
+    }
+  }
+  
+  .showMore {
+    width: 18px;
+    min-width: 18px;
+    text-align: right;
+    float: right;
+
+    &:hover {
+      color: @icon-hover-color-blue;
+    }
   }
 }
 
@@ -1616,7 +1661,7 @@
     padding: 15px 0px 12px 0px;
 
     .filter-controls {
-      margin-right: 220px;
+      margin-right: 150px;
       padding-bottom: 2px;
 
       .col-float {
@@ -1642,7 +1687,7 @@
     }
 
     .up-show {
-      width: 220px;
+      width: 150px;
       float: left;
       margin-right: 0px;
       overflow: hidden;
@@ -1663,16 +1708,6 @@
   .twoInclusion .basic-input-textarea .input-control .invoice-remark {
     width: 100% !important;
   }
-}
-// editVoucherlist 查询区样式
-.container-edit-mode {
-  .listheadRow {
-    .up-show {
-      .up-search {
-        margin-left: 10px;
-      }
-    } 
-  } 
 }
 
 //门店经营范围浏览态调整
@@ -2054,9 +2089,9 @@ i.uf-search,
   margin-bottom: 4px;
 }
 
-.ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
-  overflow-x: hidden
-}
+// .ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
+//   overflow-x: hidden
+// }
 
 .ant-input-number-focused {
   border-color: #ccc;
@@ -2630,16 +2665,6 @@ i.uf-search,
   padding-top: 20px;
 }
 
-.container-edit-mode .up-show {
-  width: 200px;
-  float: left;
-  margin-right: 0px;
-  overflow-x: hidden;
-  bottom: 10px;
-  overflow-y: hidden;
-  padding-bottom: 10px;
-}
-
 // ====================start====================
 // UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
 
@@ -2798,7 +2823,7 @@ i.uf-search,
   }
 
   .up-show {
-    width: 200px;
+    width: 150px;
     float: left;
     margin-right: 0px;
     overflow-x: hidden;

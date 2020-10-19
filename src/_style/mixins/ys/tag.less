@@ -145,7 +145,8 @@
         display: block;
       }
 
-      .anticon-cross:hover {
+      .anticon-cross:hover,
+      .uf-close:hover {
         color: #EE2223;
       }
     }
@@ -159,8 +160,10 @@
       margin-left: 5px;
       float: right;
       margin-right: 0;
+      background: transparent;
 
-      .anticon.anticon-canzhao:before {
+      .anticon.anticon-canzhao:before,
+      .yonicon.yonicon-canzhao::before {
         line-height: @base-input-height - 2;
       }
 

@@ -6,9 +6,8 @@
 @font-color-ative: #108ee9;
 @font-color-hover: #49a9ee;
 
-/* ys 基础 tabs 样式 */
+// /* ys 基础 tabs 样式 */
 .ys-tabs.u-tabs {
-  max-width: none !important;
   .u-tabs-tab-prev,
   .u-tabs-tab-next {
     opacity: 0;
@@ -21,39 +20,13 @@
   }
 }
 
-.ys-tabs.u-tabs-top .u-tabs-content {
-  font-size: 12px;
-}
-
 .ys-tabs.u-tabs.u-tabs-upborder {
-
-  .u-tabs-bar,
-  .u-tabs-nav-container {
-    background-color: @bg-white;
-  }
-
-  .u-tabs-nav-scroll {
-    margin-left: -1px;
-  }
-
-  // .u-tabs-nav .u-tabs-tab.u-tabs-tab-active {
-  //   background-color: @bg-white;
-  //   border-right: 1px solid @bg-grey;
-  //   border-left: 1px solid @bg-grey;
-  //   border-bottom: 1px solid @bg-white;
-  //   border-top: 2px solid @font-color;
-  //   padding: 9px 16px 9px;
-  //   color: @font-color;
-  // }
-
   .u-tabs-nav .u-tabs-tab {
     margin: 0;
     border: 0;
     border-radius: 0;
-    // background: transparent;
     margin-right: 0;
     color: @font-color-shallow;
-    // padding: 11px 17px 10px;
     min-width: 50px;
 
     &::after {
@@ -142,9 +115,9 @@
     border-bottom: none
   }
 
-  .ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
-    overflow-x: hidden
-  }
+  // .ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
+  //   overflow-x: hidden
+  // }
 }
 
 /* menus 下 tabs 样式 */
@@ -473,88 +446,6 @@
 
 }
 
-/* list 下 tabs 样式 */
-.list-tab-css {
-
-  .ant-tabs-nav-scroll {
-    margin-left: -1px;
-  }
-
-  .ant-tabs-extra-content {
-    margin-right: 20px;
-  }
-
-  .ant-tabs-bar {
-    margin-bottom: 0px;
-  }
-
-  .ant-tabs-nav .ant-tabs-tab-active {
-    color: #333;
-  }
-
-  .ant-tabs-nav .ant-tabs-tab-active:hover {
-    color: #ee2223;
-  }
-
-  .ant-tabs-line {
-    height: 312px;
-    overflow-y: auto;
-  }
-
-  .ant-tabs-ink-bar {
-    background-color: transparent;
-    height: 4px;
-  }
-
-  .ant-tabs-ink-bar:before {
-    position: absolute;
-  }
-
-  .ant-tabs-ink-bar-animated:before {
-    bottom: 0;
-    position: absolute;
-    border-bottom: 4px solid #505766;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    content: "";
-    width: 0;
-    left: 50%;
-    display: block;
-    margin-left: -6px;
-    opacity: 1;
-    background: transparent;
-    color: #db6f16;
-  }
-
-  .ant-tabs-nav-scroll {
-    line-height: 36px;
-  }
-
-  .ant-tabs-line .ant-tabs-bar {
-    height: 50px;
-  }
-
-  .ant-tabs-extra-content {
-    line-height: 30px;
-  }
-}
-
-/* main 下 tabs 样式 */
-.main-tab-css {
-
-  .ant-tabs {
-    color: #333
-  }
-
-  .ant-tabs-bar {
-    border-bottom: none
-  }
-
-  .ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
-    overflow-x: hidden
-  }
-}
-
 .ys-tabs.u-tabs {
   .viewCell.viewSetting {
     .ant-row {
@@ -656,8 +547,6 @@
     }
 
     > .u-tabs-bar > .u-tabs-nav-container {
-      background: #f3f5f9;
-      height: 32px;
       .u-tabs-nav-wrap {
         height: 32px;
       }
@@ -676,13 +565,6 @@
     }
   }
 
-  &.u-tabs-top .u-tabs-bar {
-    margin-bottom: 2px;
-  }
-}
-
-.ys-tabs .u-tabs-content .u-tabs-tabpane .card-tabs {
-  margin-top: 10px;
 }
 
 /*盘点 详情-扫码*/
@@ -694,4 +576,164 @@
   .u-tabs-nav-scroll{
     width: auto;
   }
+}
+
+// 销售订单  发货单 5个单据
+.voucher_orderlist,
+.voucher_deliverylist,
+.voucher_salereturnlist,
+.voucher_saleinvoicelist,
+.voucher_orderchangelist {
+  div[id='voucher_order|voucher_order_scmsa_body_attach_base'] {
+    padding-top: 20px;
+  }
+}
+
+// Tabs 组件样式：方案二
+.line-tabs-menu-container {
+  display: flex !important;
+  height: 40px;
+
+  .tab-menu {
+    display: flex;
+    flex: 1;
+    border-bottom: none;
+    padding-left: 20px;
+  
+    .u-tabs-bar .u-tabs-nav-wrap .u-tabs-nav-scroll {
+      background: unset;
+      border: unset;
+      height: 40px;
+    }
+  
+    .tab-top-right {
+      margin-top: 0;
+    }
+  
+    .u-tabs-content-no-animated {
+      height: inherit;
+    }
+
+    .u-tabs-tab-prev, .u-tabs-tab-next {
+      line-height: 40px;
+      
+      &.u-tabs-tab-arrow-show {
+        opacity: 1;
+      }
+
+      // 避免透明状态下遮挡
+      &:not(.u-tabs-tab-arrow-show) {
+        margin-top: -40px;
+      }
+
+      span {
+        position: absolute;
+      }
+    }
+
+    .u-tabs-bar .u-tabs-nav-wrap .u-tabs-nav-scroll .u-tabs-nav .u-tabs-tab {
+      border: none;
+      background: #fff;
+      padding: 0px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .u-tabs-nav .u-tabs-ink-bar {
+      display: none !important;
+    }
+
+    .u-tabs-top .u-tabs-nav-wrap {
+      background: #fff;
+    }
+  }
+  
+  .u-tabs-tab {
+    min-width: 28px;
+    max-width: 250px;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    line-height: 40px !important;
+  }
+
+  .u-tabs-nav {
+    .u-tabs-tab.u-tabs-tab-active {
+      color: #f53c32 !important;
+      margin-top: 0 !important;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: #505766;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 4px solid #505766;
+        background: none;
+        left: 50%;
+        margin-top: 8px!important;
+        bottom: 0;
+        top: unset;
+        margin-left: -3px;
+      }
+    }
+  }
+
+  .tab-menu + .tab-top-right {
+    margin-top: 6px;
+  }
+
+  .tab-menu.u-tabs-top .u-tabs-bar {
+    margin-bottom: 0 !important;
+    border-bottom: none;
+  }
+
+  .u-tabs-content-no-animated {
+    display: none;
+  }
+
+  & + .ys-tabs {
+    border-top: 1px solid #505766;
+  }
+}
+
+// Tabs 组件样式：方案一
+.card-tabs {
+  margin-top: 0;
+
+  .tab-list {
+    color: #333;
+
+    .u-tabs-bar {
+      margin-bottom: 2px;
+
+      .u-tabs-nav-container {
+        background: #fff;
+      }
+    }
+  }
+
+  .u-tabs-tab.u-tabs-tab-active {
+    color: rgb(80, 87, 102);
+    background: rgb(255, 255, 255);
+    transform: translateZ(0px);
+    border-width: 2px 1px 1px;
+    border-style: solid;
+    border-color: rgb(80, 87, 102) rgb(228, 228, 228) rgb(255, 255, 255);
+    border-radius: 0px;
+    margin-top: -1px;
+    line-height: 30px;
+  }
+
+  .u-tabs-tab-prev, .u-tabs-tab-next {
+    &.u-tabs-tab-arrow-show {
+      opacity: 1;
+    }
+  }
+}
+
+.u-tabs {
+  max-width: unset !important;
 }
