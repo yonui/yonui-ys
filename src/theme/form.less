@@ -417,7 +417,6 @@
       }
 
       .invoice-remark {
-        width: 400px !important;
         height: 52px;
         overflow-y: auto;
       }
@@ -719,7 +718,17 @@
         }
       }
     }
+
+    .basic-control {
+      .input-control {
+        .invoice-remark {
+          width: 100%;
+        }
+      }
+    }
+
     .control-width{
+        width: 86.66% !important;
         //编辑态输入框
         .u-input-group,.ant-select,.ac-input-locale,.u-select,.u-form-control{
             width: 400px!important;
@@ -760,10 +769,6 @@
     }
 
     .ant-row {
-      margin-right: 10px;
-      min-height: 32px;
-      line-height: 28px;
-
       .control-width {
         .undefined:first-child {
           margin-right: 8px;
@@ -1337,11 +1342,11 @@
 }
 
 // 付款协议日期
-.list-top {
-  .has-related .viewCell.width-percent-100 {
-    width: 100%;
-  }
-}
+// .list-top {
+//   .has-related .viewCell.width-percent-100 {
+//     width: 100%;
+//   }
+// }
 
 .control-flex {
   display: flex;
@@ -3308,6 +3313,7 @@ i.uf-search,
   .label-control {
     display: none;
   }
+
   .control-width {
     width: 100%;
   }
