@@ -3582,14 +3582,15 @@ a.Toolbar_Notification_Log {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100% !important;
     background: rgba(0, 0, 0, .4);
     color: #fff;
     font-size: 12px;
     text-align: center;
-    line-height: 58px;
 
     .yonicon-uploading:before {
       font-size: 26px;
@@ -3597,16 +3598,12 @@ a.Toolbar_Notification_Log {
     //TINPER-2662
     .u-upload.u-upload-select{
       display:block;
-      strong{
-        line-height: 50px;
-      }
     }
   }
 
   strong {
     display: block;
     font-weight: 400;
-    line-height: 40px;
 
     .yonicon-uploading {
       float: left;
@@ -3854,14 +3851,15 @@ div[id='bd_staff_card|photo'] {
       position: absolute;
       left: 0;
       top: 0;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100% !important;
       background: rgba(0, 0, 0, .4);
       color: #fff;
       font-size: 12px;
       text-align: center;
-      line-height: 68px;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -3953,14 +3951,15 @@ div[id='bd_staff_card|photo'] {
       position: absolute;
       left: 0;
       top: 0;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100% !important;
       background: rgba(0, 0, 0, .4);
       color: #fff;
       font-size: 12px;
       text-align: center;
-      line-height: 68px;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -6201,3 +6200,67 @@ div[id='bd_staff_card|photo'] {
     }
   }
 }
+
+//客户档案-资质信息上传组件
+.viewCell{
+  .face-img{
+    .basic-avatar-bg{
+      .yonicon-uploadimg{
+        display: block;
+        font-size: 16px;
+      }
+      .yonicon-uploadimg::before{
+        content: "\e749";
+      }
+      &:hover{
+        strong{
+          line-height: 1!important;
+        }
+        .yonicon-uploadimg{
+          margin-bottom: 8px;
+        }
+        span.avatar-uploader {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100% !important;
+          background: rgba(0, 0, 0, .4);
+          color: #fff;
+          font-size: 12px;
+          text-align: center;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        strong.basic-avator-deleteimg{
+          line-height:28px !important;
+        }         
+      }
+    }
+    .basic-avatar-btn-item:hover{
+      span.basic-avator-changeimg{
+        .u-upload-select-text{
+          background: rgba(0, 0, 0, 0.4);
+          position: absolute;
+          width: 50%;
+          height: 28px !important;
+          bottom: 0px;
+          left: 0px;
+          color: #fff;
+          text-align: center;
+          line-height: 28px !important;
+          cursor: pointer;
+          .yonicon-uploadimg::before{
+            content: "\e749";
+          }
+          &:hover{
+            background: rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+    }
+  }
+} 
