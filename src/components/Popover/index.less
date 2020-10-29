@@ -105,12 +105,39 @@
       .tree-refer-radio {
         max-height: 300px;
         overflow: auto;
-        overflow-x: hidden;
-        .u-tree-title {
-          // overflow: hidden;
-          // text-overflow: ellipsis;
-          width: 100%;
+        overflow-x: hidden;        
+        li {
+          .u-tree-title{
+            li {
+             display: inline-flex;
+             border-radius: 4px;
+             padding: 0 8px;
+            }
+          }
+          a.u-tree-node-content-wrapper.u-tree-node-selected {
+            .u-tree-title{
+              background: transparent;
+              li {
+                background: rgb(253, 242, 220);
+              }
+            }
+          }
         }
+
+        li {
+          a.u-tree-node-content-wrapper:not(.u-tree-node-selected) {
+            .u-tree-title {
+              width: 100%;
+              &:hover{
+                background: transparent;
+              }
+              li:hover{
+                background: rgb(237, 241, 247);
+              }
+            }
+          }
+        }
+        
       }
 
       .footer-btn {
