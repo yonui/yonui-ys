@@ -3075,24 +3075,30 @@ a.Toolbar_Notification_Log {
 .list-top-toolbar {
   overflow: hidden;
   padding: 8px 20px;
-  position: fixed;
   z-index: 101;
-  width: calc(100% - 16px);
-  border-bottom: 1px solid #d9d9d9;
-  background: #fff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-
-  & + .card-tabs,
-  & + .group-container {
-    padding-top: 45px;
-  }
-  & + .group-title-hidden {
-    padding-top: 60px;
-  }
 }
 
 .list-top-toolbar+.listheadRow {
   padding-bottom: 0px;
+}
+
+// 需要置顶的 .list-top-toolbar
+.container-browse-mode {
+  .top-fixed.list-top-toolbar{
+    position: fixed;
+    width: calc(100% - 16px);
+    background: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    
+    // & + .card-tabs,
+    // & + .group-container {
+    //   padding-top: 45px;
+    // }
+    // & + .group-title-hidden {
+    //   padding-top: 60px;
+    // }
+  }
 }
 
 /*pc商品选配*/
@@ -5878,7 +5884,7 @@ div[id='bd_staff_card|photo'] {
 
 /*详情页去掉title*/
 .group-title-hidden {
-    padding-top: 16px!important;
+    padding-top: 16px;
   
     >.list-top-toolbar {
       padding: 0 0 16px 20px;
