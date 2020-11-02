@@ -1295,7 +1295,7 @@
   .yonicon-close-circle {
     position: absolute;
     right: 46px;
-    top: 22px;
+    top: 27px;
 
     &::before {
       color: rgba(0, 0, 0, .25);
@@ -5407,5 +5407,12 @@
           }
         }
       }
+  }
+}
+
+//1366屏幕下，新增应用时弹窗偏下QDJM-5095
+.u-modal.add-comp-modal {
+  .u-modal-dialog{
+    margin-top: 30px!important;
   }
 }
