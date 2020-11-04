@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "18024295",
+      "name": "增加redbg",
+      "font_class": "zengjiaredbg",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "18024296",
+      "name": "购物车redbg",
+      "font_class": "gouwucheredbg",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "18024297",
+      "name": "增加redline",
+      "font_class": "zengjiaredline",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "18024298",
+      "name": "增加greyline",
+      "font_class": "zengjiagreyline",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "18024299",
+      "name": "购物车redline",
+      "font_class": "gouwucheredline",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "18024300",
+      "name": "购物车greyline",
+      "font_class": "gouwuchegreyline",
+      "unicode": "e7df",
+      "unicode_decimal": 59359
+    },
+    {
+      "icon_id": "18020319",
+      "name": "pem",
+      "font_class": "pem",
+      "unicode": "e99d",
+      "unicode_decimal": 59805
+    },
+    {
       "icon_id": "648792",
       "name": "星_虚",
       "font_class": "xingxu",
