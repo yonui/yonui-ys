@@ -6,6 +6,132 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "18024295",
+      "name": "增加redbg",
+      "font_class": "zengjiaredbg",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "18024296",
+      "name": "购物车redbg",
+      "font_class": "gouwucheredbg",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "18024297",
+      "name": "增加redline",
+      "font_class": "zengjiaredline",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "18024298",
+      "name": "增加greyline",
+      "font_class": "zengjiagreyline",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "18024299",
+      "name": "购物车redline",
+      "font_class": "gouwucheredline",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "18024300",
+      "name": "购物车greyline",
+      "font_class": "gouwuchegreyline",
+      "unicode": "e7df",
+      "unicode_decimal": 59359
+    },
+    {
+      "icon_id": "18020319",
+      "name": "pem",
+      "font_class": "pem",
+      "unicode": "e99d",
+      "unicode_decimal": 59805
+    },
+    {
+      "icon_id": "648792",
+      "name": "星_虚",
+      "font_class": "xingxu",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "11749408",
+      "name": "心",
+      "font_class": "xin",
+      "unicode": "e7b2",
+      "unicode_decimal": 59314
+    },
+    {
+      "icon_id": "15644390",
+      "name": "心",
+      "font_class": "xin1",
+      "unicode": "e7b3",
+      "unicode_decimal": 59315
+    },
+    {
+      "icon_id": "17858634",
+      "name": "成功提示",
+      "font_class": "chenggongtishi",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "17858546",
+      "name": "警示提示",
+      "font_class": "tishi",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "17858547",
+      "name": "失败提示",
+      "font_class": "cuowutishi",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "17858548",
+      "name": "常规提示",
+      "font_class": "xingzhuangbeifen",
+      "unicode": "e99c",
+      "unicode_decimal": 59804
+    },
+    {
+      "icon_id": "17744282",
+      "name": "业务监管",
+      "font_class": "yewujianguan",
+      "unicode": "e85b",
+      "unicode_decimal": 59483
+    },
+    {
+      "icon_id": "15337774",
+      "name": "图钉",
+      "font_class": "icon-locked",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "13760254",
+      "name": "星星",
+      "font_class": "xingxing1",
+      "unicode": "ead6",
+      "unicode_decimal": 60118
+    },
+    {
+      "icon_id": "17288824",
+      "name": "重置",
+      "font_class": "chongzhi1",
+      "unicode": "e998",
+      "unicode_decimal": 59800
+    },
+    {
       "icon_id": "17206607",
       "name": "停用",
       "font_class": "tingyong",
@@ -837,6 +963,13 @@
       "font_class": "yuandanju",
       "unicode": "e7d7",
       "unicode_decimal": 59351
+    },
+    {
+      "icon_id": "17693906",
+      "name": "原单据",
+      "font_class": "yuandanju-copy",
+      "unicode": "ead8",
+      "unicode_decimal": 60120
     },
     {
       "icon_id": "9322046",
@@ -3478,32 +3611,11 @@
       "unicode_decimal": 58994
     },
     {
-      "icon_id": "3094239",
-      "name": "成功提示",
-      "font_class": "chenggongtishi",
-      "unicode": "e66e",
-      "unicode_decimal": 58990
-    },
-    {
       "icon_id": "3094240",
       "name": "通知信息",
       "font_class": "tongzhixinxi",
       "unicode": "e66f",
       "unicode_decimal": 58991
-    },
-    {
-      "icon_id": "3094241",
-      "name": "询问提示",
-      "font_class": "tishi",
-      "unicode": "e670",
-      "unicode_decimal": 58992
-    },
-    {
-      "icon_id": "3094242",
-      "name": "错误提示",
-      "font_class": "cuowutishi",
-      "unicode": "e671",
-      "unicode_decimal": 58993
     },
     {
       "icon_id": "3093822",

@@ -1067,6 +1067,7 @@ div[id='aa_vendor|aa_vendor_page_base'] {
 #yxyweb-support-container {
   .u-select-selection--single {
     height: 28px;
+    border:1px solid #d9d9d9;
   }
   .u-select-selection-rendered {
     line-height: 26px;
@@ -1134,4 +1135,12 @@ div[id='aa_vendor|aa_vendor_page_base'] {
 svg.icon-fabufangan {
   width: 16px;
   height: 16px;
+}
+// 控件单独设置一行 100% 宽度显示
+.width-percent-100 > .basic-tagarea > .ant-row .input-control {
+  width: calc(~'100% - 214px') !important;
+}
+
+.width-percent-50 .input-control {
+  max-width: 400px;
 }

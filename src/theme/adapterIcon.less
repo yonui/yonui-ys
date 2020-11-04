@@ -739,7 +739,8 @@
   content: "\e673";
 }
 
-.uf-treearrow-down:before {
+.uf-treearrow-down:before,
+.editCol .uf-treearrow-down:before {
   content: "\e633";
   font-size: 12px;
 }
@@ -831,4 +832,23 @@ i.uf.group {
 
 .uf-arrow-right:before {
   content: "\e514"!important;
+}
+
+// xiaoyou 图标大小控制
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+// 报表而分析，head 头部图标
+.analysis-browse-header {
+  .icon {
+    width: unset;
+    height: unset;
+    vertical-align: unset;
+    overflow: unset;
+  }
 }

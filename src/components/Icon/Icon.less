@@ -43,7 +43,7 @@
 }
 
 .yonicon-canzhao:before {
-  content: "\e6fe";
+  content: "\e665";
   color: #adb4bc;
   font-size: 16px;
   line-height: 28px;
@@ -108,6 +108,7 @@
   .u-button-icon.icon-right-enabled::before,
   .u-button-icon.icon-right-disabled::before {
     content: "\e514";
+    font-family: "iconfont";
   }
 }
 
@@ -115,6 +116,7 @@
   .u-button-icon.icon-left-enabled::before,
   .u-button-icon.icon-left-disabled::before {
     content: "\e515";
+    font-family: "iconfont";
   }
 }
 
@@ -126,6 +128,8 @@
 
 .anticon-shurukuangshanchu::before {
   content: "\e690";
+  font-family: "iconfont" !important;
+  font-size: 12px;
 }
 
 // 新组件的日期图标暂用iconfont 的
@@ -164,6 +168,7 @@ i.uf-calendar:before {
 .anticon.anticon-star {
   &:before {
     content: "\e605";
+    font-family: "iconfont" !important;
   }
 }
 
@@ -545,4 +550,60 @@ i.uf-calendar:before {
 
 .yonicon-tishi1:before {
   content: "\e77c";
+}
+.yonicon-sousuo::before{
+  content: "\e518";
+}
+.yonicon-jichushezhi1::before{
+  content: "\e63e";
+}
+.yonicon-chongzhi1::before{
+  content: "\e998";
+}
+.uf-star:before {
+  content: "\ead7";
+}
+
+.yonicon-cuowutishi:before {
+  content: "\e671";
+}
+
+// TODO: 待适配的uf 字体图标，后面uf 字体将去掉统一为 iconfont
+.uf {
+  &.uf-nodata,
+  &.uf-heart,
+  &.uf-heart-o,
+  &.uf-star-o,
+  &.u-start {
+    &:before {
+      font-family: "uf" !important;
+    }
+  }
+}
+
+//评分的图标样式
+.uf-star:before{
+  content: "\ead6";
+}
+.uf-star-o:before{
+  content: "\e7d9";
+}
+.uf-heart:before{
+  content: "\e7b2";
+}
+.uf-heart-o:before{
+  content: "\e7b3";
+}
+
+//附件icon
+.uf-triangle-right:before{
+  content: "\e6c5"!important;
+  font-size: 14px;
+  color: #999;
+}
+
+.uf-triangle-down:before{
+  content: "\e78e"!important;
+  font-size: 14px;
+  color: #999;
 }

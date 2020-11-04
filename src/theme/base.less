@@ -2286,7 +2286,7 @@ a.Toolbar_Notification_Log {
             width: 83px !important;
             line-height: 16px;
             max-height: 32px;
-            margin-right: 15px;
+            margin-right: 8px;
             text-align: right;
           }
 
@@ -2295,7 +2295,12 @@ a.Toolbar_Notification_Log {
           }
 
           .scheme-set {
-            margin-left: 5px;
+            display: flex;
+            margin-left: 8px;
+            padding-left: 0px;
+            .u-checkbox{
+              margin-right: 10px;
+            }
           }
         }
 
@@ -2328,14 +2333,14 @@ a.Toolbar_Notification_Log {
             width: 83px !important;
             line-height: 14px;
             max-height: 28px;
-            margin-right: 15px!important;
+            margin-right: 8px!important;
             overflow: hidden;
             text-align: right;
           }
 
           .compareLogic {
             width: 120px !important;
-            margin-right: 10px;
+            margin-right: 8px;
           }
 
           .query-component-3 {
@@ -2408,14 +2413,14 @@ a.Toolbar_Notification_Log {
             width: 83px !important;
             line-height: 32px;
             max-height: 32px;
-            margin-right: 15px;
+            margin-right: 8px;
             overflow: hidden;
             text-align: right;
           }
 
           .compareLogic {
             width: 120px !important;
-            margin-right: 10px;
+            margin-right: 8px;
           }
 
           .query-component-2 {
@@ -3278,6 +3283,7 @@ a.Toolbar_Notification_Log {
       padding: 8px 12px 8px 12px;
       .yonicon-icon-xuanzhong1{
         margin-right: 8px;
+        float: left;
         &::before{
           font-size: 16px;
         }
@@ -3558,7 +3564,10 @@ a.Toolbar_Notification_Log {
   bottom: -14px;
   color: #ccc;
 }
-
+//客户档案-编辑-资质信息-logo间距 
+.aa_merchant_logo>.ant-row{
+  margin-bottom: 24px!important;
+}
 .viewCell .basic-avatar-default .ant-upload.ant-upload-select {
   width: auto !important;
 }
@@ -3573,14 +3582,15 @@ a.Toolbar_Notification_Log {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100% !important;
     background: rgba(0, 0, 0, .4);
     color: #fff;
     font-size: 12px;
     text-align: center;
-    line-height: 58px;
 
     .yonicon-uploading:before {
       font-size: 26px;
@@ -3588,16 +3598,12 @@ a.Toolbar_Notification_Log {
     //TINPER-2662
     .u-upload.u-upload-select{
       display:block;
-      strong{
-        line-height: 50px;
-      }
     }
   }
 
   strong {
     display: block;
     font-weight: 400;
-    line-height: 40px;
 
     .yonicon-uploading {
       float: left;
@@ -3845,14 +3851,15 @@ div[id='bd_staff_card|photo'] {
       position: absolute;
       left: 0;
       top: 0;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100% !important;
       background: rgba(0, 0, 0, .4);
       color: #fff;
       font-size: 12px;
       text-align: center;
-      line-height: 68px;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -3944,14 +3951,15 @@ div[id='bd_staff_card|photo'] {
       position: absolute;
       left: 0;
       top: 0;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100% !important;
       background: rgba(0, 0, 0, .4);
       color: #fff;
       font-size: 12px;
       text-align: center;
-      line-height: 68px;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -5694,151 +5702,156 @@ div[id='bd_staff_card|photo'] {
 }
 /*交易关系*/
 .chart-or-table{
-  width: auto;
-  float: right;
-  span{
+    width: auto;
+    float: right;
+    span{
+      .u-button{
+        min-width: auto;
+        margin-left: -1px;
+        float: left;
+        height: 28px;
+        padding: 0 10px;
+        svg{
+          margin-right: 0px;
+          width: 18px;
+          height: 18px;
+        }
+        &:hover{
+          border-color: #505766;
+          z-index: 2;
+        }
+      }
+      &:first-child{
+        .u-button{
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          border-top-right-radius: 0!important;
+          border-bottom-right-radius: 0!important;
+        }
+      }
+      &:last-child{
+        .u-button{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          margin-right: 0!important;
+        }
+      }
+      &.chart-active,
+      &.table-active
+      {
+        .u-button{
+          border-color: #505766;
+          z-index: 2;
+        }
+      }
+    }
+  
+  }
+  .show-relation-wrapper{
+    background: #fff;
+    overflow-x: hidden;
+    box-shadow: inset 0px 6px 12px -6px rgba(80, 87, 102, 0.15);
+  }
+  .relation-control-wrapper{
+    position: fixed;
+    bottom: 24px;
+    right: 40px;
+    background: #fff;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0px 16px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 12px 0px rgba(80, 87, 102, 0.15);
     .u-button{
+      border: none;
+      padding: 0px;
       min-width: auto;
-      margin-left: -1px;
-      float: left;
-      height: 28px;
-      padding: 0 10px;
-      svg{
-        margin-right: 0px;
-        width: 18px;
-        height: 18px;
+      i{
+        margin: 0px;
+      }
+    }
+    span{
+      margin: 0px 8px;
+      display: block;
+      width: 34px;
+      text-align: center;
+    }
+    //加减号区域
+    .relation-reduce-button,
+    .relation-add-button{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 15px;
+      background: rgba(0, 0, 0, 0.2);
+      i{
+        &::before{
+          font-size: 12px;
+          color: #fff;
+          transform: scale(0.8);
+          padding-right: 1px;
+        }
       }
       &:hover{
-        border-color: #505766;
-        z-index: 2;
+        background: rgba(0, 0, 0, 0.3);
+        i:before{
+          color: #fff;
+        }
       }
     }
-    &:first-child{
-      .u-button{
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-        border-top-right-radius: 0!important;
-        border-bottom-right-radius: 0!important;
+    .relation-reduce-button[disabled],
+    .relation-add-button[disabled]{
+      background: rgba(0, 0, 0, 0.15);
+      opacity: 1!important;
+      &:hover{
+        background: rgba(0, 0, 0, 0.15);
       }
     }
-    &:last-child{
-      .u-button{
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        margin-right: 0!important;
-      }
-    }
-    &.chart-active,
-    &.table-active
-    {
-      .u-button{
-        border-color: #505766;
-        z-index: 2;
-      }
-    }
-  }
-
-}
-.show-relation-wrapper{
-  background: #fff;
-  overflow-x: hidden;
-  box-shadow: inset 0px 6px 12px -6px rgba(80, 87, 102, 0.15);
-}
-.relation-control-wrapper{
-  position: fixed;
-  bottom: 24px;
-  right: 40px;
-  background: #fff;
-  border-radius: 4px;
-  height: 40px;
-  padding: 0px 16px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 0px 12px 0px rgba(80, 87, 102, 0.15);
-  .u-button{
-    border: none;
-    padding: 0px;
-    min-width: auto;
-    i{
-      margin: 0px;
-    }
-  }
-  span{
-    margin: 0px 8px;
-    display: block;
-    width: 34px;
-    text-align: center;
-  }
-  //加减号区域
-  .relation-reduce-button,
-  .relation-add-button{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 15px;
-    background: rgba(0, 0, 0, 0.35);
-    i{
-      &::before{
-        font-size: 12px;
-        color: #fff;
-      }
-    }
-    &:hover{
-      background: rgba(0, 0, 0, 0.5);
+    //放大、实际大小
+    .relation-fit-button,
+    .relation-true-button{
+      margin-left: 12px;
+      padding-top: 1px;
       i:before{
-        color: #fff;
+        font-size: 20px;
+        color: #999;
+      }
+      &:hover{
+        background-color: transparent;
+        i:before{
+          color: #505766;
+        }
       }
     }
   }
-  .relation-reduce-button[disabled],
-  .relation-add-button[disabled]{
-    background: rgba(0, 0, 0, 0.15);
-    opacity: 1!important;
-  }
-  //放大、实际大小
-  .relation-fit-button,
-  .relation-true-button{
-    margin-left: 12px;
-    padding-top: 1px;
-    i:before{
-      font-size: 20px;
-      color: #999;
+  .chart-tooltip,
+  .relation-tooltip
+  {
+    .tooltip-arrow{
+      border-bottom-color: transparent!important;
+      border-top-color: transparent!important;
     }
-    &:hover{
-      background-color: transparent;
-      i:before{
-        color: #505766;
-      }
+    .tooltip-inner{
+      border: none!important;
+      box-shadow: 0 0 13px 0 rgba(172, 172, 172, 0.5);
+      padding: 5.5px 12px;
     }
   }
-}
-.chart-tooltip,
-.relation-tooltip
-{
-  .tooltip-arrow{
-    border-bottom-color: transparent!important;
-    border-top-color: transparent!important;
-  }
-  .tooltip-inner{
-    border: none!important;
-    box-shadow: 0 0 13px 0 rgba(172, 172, 172, 0.5);
-    padding: 5.5px 12px;
-  }
-}
-
-#yxyweb-support-container{
-  width: 100%;
-  height: 100%;
-  div[id='yxyweb-support-mount-popover'] {
+  
+  #yxyweb-support-container{
     width: 100%;
     height: 100%;
+    div[id='yxyweb-support-mount-popover'] {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
 
 /*详情页去掉title*/
 .group-title-hidden {
@@ -6187,3 +6200,83 @@ div[id='bd_staff_card|photo'] {
     }
   }
 }
+
+//客户档案-资质信息上传组件
+.viewCell{
+  .face-img{
+    .basic-avatar-bg{
+      .yonicon-uploadimg{
+        display: block;
+        font-size: 16px;
+      }
+      .yonicon-uploadimg::before{
+        content: "\e749";
+      }
+      &:hover{
+        strong{
+          line-height: 1!important;
+        }
+        .yonicon-uploadimg{
+          margin-bottom: 8px;
+        }
+        span.avatar-uploader {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100% !important;
+          background: rgba(0, 0, 0, .4);
+          color: #fff;
+          font-size: 12px;
+          text-align: center;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        strong.basic-avator-deleteimg{
+          line-height:28px !important;
+        }         
+      }
+    }
+    .basic-avatar-btn-item:hover{
+      span.basic-avator-changeimg{
+        .u-upload-select-text{
+          background: rgba(0, 0, 0, 0.4);
+          position: absolute;
+          width: 50%;
+          height: 28px !important;
+          bottom: 0px;
+          left: 0px;
+          color: #fff;
+          text-align: center;
+          line-height: 28px !important;
+          cursor: pointer;
+          .yonicon-uploadimg::before{
+            content: "\e749";
+          }
+          &:hover{
+            background: rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+    }
+  }
+} 
+//附件鼠标滑过图标改变颜色
+.ac-upload-list{
+  .ac-upload-list-text{
+    .uf-triangle-down:hover{
+      &::before{
+        color: #505766;
+      }
+    }
+    .uf-triangle-right:hover{
+      &::before{
+        color: #505766;
+      }
+    }
+  }
+}
+

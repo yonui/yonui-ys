@@ -141,7 +141,6 @@
   align-items: center;
   min-height: 32px;
   position: relative;
-  margin-bottom: 12px; // 这里的12px 只有在编辑态时是这个边距；浏览态时需要其他让是覆盖
 
   .input-control {
     height: 28px;
@@ -160,11 +159,15 @@
           height: 28px;
           vertical-align: top;
 
-          .u-input-group .u-input-group-btn {
-            top: 0px;
-            line-height: 28px;
-            min-width: auto;
-          }
+          .u-input-group {
+            line-height: 0px;
+            display: block;
+            .u-input-group-btn {
+              top: 0px;
+              line-height: 28px;
+              min-width: auto;
+            }
+          } 
         }
       }
     }
@@ -399,13 +402,14 @@ div[id='pc_product|detail!businessAttribute']>div,
   display: block !important;
   float: left;
   width: 240px;
-
+  .filter-tree>div:nth-child(2){
+    overflow: hidden!important;
+  }
   .left-tree-select-count.meta-default-container {
     height: 100%;
   }
 
   .bg-white.border-r {
-    border-right: none !important;
     height: 100%;
     overflow: initial; // fix: zhangkunk 折叠效果样式调整
 

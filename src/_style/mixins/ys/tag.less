@@ -10,7 +10,15 @@
     display: flex;
     align-items: center;
     min-height: 32px;
-    min-width: 300px;
+    min-width: 270px;
+    .col-float.enum-control{
+      white-space: nowrap;
+      float: none;
+      .u-tag{
+        float: none;
+        display: inline-block;
+      }
+    }
   }
 
   .label-control {
@@ -37,11 +45,11 @@
     .form-lable-top-mixin();
     .enum-control {
       max-height: 42px;
-      padding-top: 2px;
-      margin-bottom: 12px;
 
       .has-related {
-        height: 28px;
+        .filter-hide {
+          margin-bottom: 0;
+        }
       }
 
       .filter-hide .ant-row {
@@ -145,7 +153,8 @@
         display: block;
       }
 
-      .anticon-cross:hover {
+      .anticon-cross:hover,
+      .uf-close:hover {
         color: #EE2223;
       }
     }
@@ -159,8 +168,10 @@
       margin-left: 5px;
       float: right;
       margin-right: 0;
+      background: transparent;
 
-      .anticon.anticon-canzhao:before {
+      .anticon.anticon-canzhao:before,
+      .yonicon.yonicon-canzhao::before {
         line-height: @base-input-height - 2;
       }
 
@@ -201,5 +212,9 @@
       }
     }
   }
-
+  &.has-error{
+    .TagList {
+      border-color: #f44336;
+    }
+  }
 }

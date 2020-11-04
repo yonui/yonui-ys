@@ -31,7 +31,8 @@ class PopoverAdapter extends Component {
     }
   }
 
-  onClick = () => {
+  onClick = (e) => {
+    if (e.target && e.target.dragging) return;
     const { onVisibleChange } = this.props
     onVisibleChange && onVisibleChange(true)
     this.setState({

@@ -67,10 +67,6 @@
   padding: 24px 0 0;
 }
 
-.u-modal .u-modal-footer {
-  padding: 10px 18px!important;
-}
-
 // 仓库物料关系，新增
 .st_wareandinv_ware.u-modal .u-modal-body {
   padding: 24px 0 0;
@@ -169,12 +165,11 @@
   z-index: 1702;
 
   .u-modal-content {
-    min-height: 150px;
-
+    min-height: 160px;
+    padding-bottom: 52px;
     .u-modal-header {
-      padding-top: 30px;
+      padding-top: 28px;
       border-bottom-color: transparent !important;
-
       .u-modal-title {
         font-size: 14px;
         color: rgba(0,0,0,.85);
@@ -182,17 +177,19 @@
         .model-title {
           font-size: 16px;
           font-weight: 400;
-          line-height: 30px;
+          line-height: 26px;
           opacity: .8;
           color: rgba(0,0,0,.85);
-          padding-bottom: 40px;
-
+          padding-bottom: 0;
+          padding-left: 17px;
           svg {
-            width: 1.8em;
-            height: 1.8em;
+            width: 24px;
+            height: 24px;
             margin-right: 10px;
             vertical-align: middle;
             float: left;
+            position: relative;
+            top: 2px;
           }
         }
       }
@@ -200,12 +197,16 @@
 
     .u-modal-body {
       padding: 0;
+      .u-modal-confirm-content{
+        padding-left: 68px;
+        padding-right: 32px;
+      }
     }
 
     .u-modal-footer {
       position: absolute;
-      bottom: 20px;
-      right: 30px;
+      bottom: 24px;
+      right:24px;
       padding: 0;
 
       .u-button {
@@ -279,5 +280,18 @@
     width: 100%!important;
   }
   
+}
+
+.u-modal{
+  .bill-setting-modal{
+    .u-modal-content{
+      .u-modal-footer{
+        padding: 15px 32px;
+        .u-button{
+          margin-left: 8px;
+        }
+      }
+    }
+  }
 }
 // ================== z-index end =========================
