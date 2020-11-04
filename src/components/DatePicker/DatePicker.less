@@ -46,18 +46,26 @@
   border-color: #dedede!important;
 }
 
-.rc-calendar .rc-calendar-today .rc-calendar-date {
-  border-color: #588ce9;
-  color: #333!important;
-}
-
 .rc-calendar-selected-date .rc-calendar-date,
 .rc-calendar-selected-day .rc-calendar-date {
 
   &,
   &:hover {
-    background: #588ce9;
+    background: #588ce9 !important;
+    color: #fff;
   }
+}
+
+.rc-calendar-today-btn:hover {
+  color: #588ce9 !important;
+}
+
+.rc-calendar-date:hover {
+  background: #f5f5f5 !important;
+}
+
+.rc-calendar .rc-calendar-today .rc-calendar-date {
+  border: 1px solid #578ce9 !important;
 }
 
 .rc-calendar td {
@@ -137,57 +145,5 @@
 .datepicker-input-group.u-input-group {
   .u-input-group-btn {
     top: 6px;
-  }
-}
-
-/*日期控件 - 带有谓词*/
-.yxy_datepicker_design {
-  position: relative;
-  >div{
-    width: 100%!important;
-    margin-top: -28px;
-    position: relative;
-    top: initial;
-    visibility: initial;
-  }
-  .anticon-close-circle {
-    position: absolute;
-    top: 50%;
-    right: 7px;
-    opacity: 0;
-    z-index: 1;
-    color: rgba(0, 0, 0, .25);
-    background: #fff;
-    pointer-events: none;
-    cursor: pointer;
-    width: 15px;
-    height: 14px;
-    line-height: 14px;
-    margin-top: -7px;
-  }
-
-  &:hover {
-    .anticon-close-circle {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
-  .ant-calendar-picker {
-    .ant-calendar-picker-input {
-      display: none;
-    }
-  }
-
-  .ant-input~div {
-    width: 100% !important;
-
-    .ant-calendar-picker-icon {
-      margin-top: 7px;
-    }
-
-    .ant-calendar-picker-clear {
-      display: none;
-    }
   }
 }

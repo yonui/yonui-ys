@@ -11,12 +11,16 @@
 
   .u-select-selection:focus,
   .u-select-selection:hover {
-    border: 1px solid #505766;
+    border: 1px solid #505766 !important;
     box-shadow: none;
   }
 
   .u-select-selection-clear {
     right: 25px;
+    &:before {
+      content: "\e690";
+      font-family: "iconfont";
+    }
   }
 
   // 禁用样式
@@ -112,10 +116,21 @@
 }
 
 .u-select-nowarp {
-  overflow: hidden; }
-  .u-select-nowarp .u-select-selection-rendered {
-    display: flex;
-    white-space: nowrap; }
-    .u-select-nowarp .u-select-selection-rendered ul {
-      display: flex;
-      white-space: nowrap; }
+  overflow: hidden; 
+}
+
+.u-select-nowarp .u-select-selection-rendered {
+  display: flex;
+  white-space: nowrap;
+}
+
+.u-select-nowarp .u-select-selection-rendered ul {
+  display: flex;
+  white-space: nowrap;
+}
+
+.u-select-selection--multiple .u-select-selection-rendered>ul>li {
+  // 下拉框选中元素高度调整，eg：凭证查询页-凭证状态
+  height: 20px !important;
+  line-height: 20px !important;
+}

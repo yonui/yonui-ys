@@ -93,7 +93,10 @@
 
 .u-popover.u-popover-tooltip.u-tooltip.inverse {
   z-index: 1700;
-//   transform: translateY(-4px);
+  // min-width: 240px;
+  &.filter_scheme_popover {
+    min-width: auto;
+  }
 
   &.inverse-arrow {
     transform: translateY(8px);

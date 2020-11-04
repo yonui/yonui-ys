@@ -14,7 +14,7 @@
   max-height: 30px;
   overflow: hidden;
   padding-left: 15px;
-  padding-right: 10px;
+  padding-right: 8px;
   text-align: right;
   word-wrap: break-word;
   -webkit-box-orient: vertical;
@@ -68,7 +68,7 @@
       &.ant-select-open,
       &.ant-select-focused {
         .ant-select-selection {
-          border: 1px solid #505766;
+          border: 1px solid @custom-color;
           box-shadow: none;
         }
       }
@@ -85,15 +85,14 @@
         cursor: pointer;
 
         &:hover {
-          border: 1px solid #505766;
+          border: 1px solid @custom-color;
         }
 
         .ant-select-selection__rendered {
           margin-right: 38px;
           margin-left: 8px!important;
-          display: block;
           position: relative;
-          line-height: 26px;
+          line-height: 24px;
         }
       }
     }
@@ -373,6 +372,9 @@ div[id='pc_product|detail!businessAttribute']>div,
         .invoice-remark {
           min-height: 120px;
           line-height: 22px !important;
+          overflow-y: hidden;
+          border: none;
+          width: 340px!important;
         }
       }
     }

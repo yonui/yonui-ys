@@ -29,9 +29,21 @@
 }
 
 .meta-table {
-  .editCol .edit-input-number .ant-select-selection {
-    margin-top: 2px;
-  }
+  .editCol{
+    .edit-input-number .ant-select-selection {
+        margin-top: 2px;
+    }
+    //编辑态启用按钮的居中
+    .edit-input-number.contorl-switch{
+        position: relative;
+        height: 100%;
+        .u-switch-span{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+  } 
 }
 
 /*报表 add by 金子涵*/
@@ -547,7 +559,7 @@
   .u-modal-body {
     color: #666;
     padding: 16px 20px 0px 20px;
-    height: 450px;
+    height: 548px;
     .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
       top: 1px;
     }
@@ -1178,7 +1190,6 @@
 }
 
 .crossdefault-btn {
-  width: 30px;
   height: 18px;
   border: #EE2223 solid 1px !important;
   border-radius: 4px;
@@ -1189,7 +1200,9 @@
   vertical-align: text-bottom;
   padding: 0px 2px !important;
   background: rgba(238, 34, 35, 0.05);
-  margin-left: 4px;
+  margin-left: 0;
+  display: inline-block;
+  transform: scale(.85);
 
   span {
     text-align: center;
@@ -1470,6 +1483,14 @@
        border-right: 1px solid #d3d3d3;
     }
   }
+}
+
+.OperationHeaderName {
+  position: fixed;
+  width: 4px;
+  background: #f9f6fd;
+  right: -1px;
+  top: 0;
 }
 
 .rptTable.sn_querysnflowdirection_report_Table,
@@ -2002,7 +2023,8 @@
               margin-top: 3px;
               margin-left: 10px;
               &.cell-avatar-logo {
-                background: url(images/default-logo-table.png);
+                background: url(images/Default-picture.png);
+                background-size: 100%;
               }
             }
           }
@@ -2111,10 +2133,6 @@
       padding-top: 0;
     }
   }
-
-  .container-edit-mode .list-top-toolbar {
-    padding-bottom: 8px;
-  }
 }
 
 .pu_pursettlefee {
@@ -2174,8 +2192,8 @@
 // ====================start====================
 // UPC-Web 工程，适配 tinper-bee 组件，后续阶段逐渐删除 antd 的样式
 .u-tabs-content .listheadRow {
-  margin: 0px 20px;
-  padding-top: 10px;
+  margin: 0px 24px;
+  padding-top: 8px;
 }
 
 /*多级维度导航*/
@@ -2597,7 +2615,7 @@
 
     // 右边表格
     .Table2D_Right {
-      overflow-y: scroll;
+      overflow: auto;
       border-left: #dadada solid 1px;
       position: relative;
 
@@ -2691,6 +2709,7 @@
     right: 0;
     padding-left: 10px;
     padding-right: 20px;
+    height: calc(~'100% - 1px'); // -1 避免遮挡底部border
 
     span:last-child {
       margin-right: 0;

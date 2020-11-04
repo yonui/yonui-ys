@@ -10,11 +10,6 @@
   .u-tabs-bar {
     margin-bottom: 2px;
 
-    // .u-tabs-tab-prev,
-    // .u-tabs-tab-next {
-    //   opacity: 0;
-    // }
-
     .u-tabs-nav-wrap {
       .u-tabs-nav-scroll {
         overflow: visible;
@@ -46,12 +41,12 @@
             border-bottom: 2px solid #e4e4e4;
 
             &.u-tabs-tab-active {
-              color: #505766;
+              color: @custom-color;
               background: #fff;
               transform: translateZ(0);
               border-left: 1px solid #e4e4e4;
               border-right: 1px solid #e4e4e4;
-              border-top: 2px solid #505766;
+              border-top: 2px solid @custom-color;
               border-bottom: 1px solid #fff;
               border-radius: 0;
               margin-top: -1px;
@@ -106,15 +101,24 @@
 }
 
 .line-tabs .u-tabs .u-tabs-content .u-tabs-tabpane {
-  // tabs 页签与下面的开单logo单独设置
-  .basic-avatar {
-    padding-top: 16px;
-    .basic-avatar-billing-logo{
-      .basic-avatar-right{
-        line-height: 17px;
+    // tabs 页签与下面的开单logo单独设置
+    .basic-avatar {
+      padding-top: 16px;
+      .basic-avatar-billing-logo{
+        .basic-avatar-right{
+          line-height: 17px;
+        }
+      }
+      .ant-row{
+          margin-bottom: 8px;
+      }
+      &.has-error{
+          .ant-form-explain{
+              top: auto;
+              bottom: 2px;
+          }
       }
     }
-  }
 }
 
 // 最大化

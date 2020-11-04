@@ -151,6 +151,7 @@
 
         &:hover {
           z-index: 4;
+          border: 1px solid @custom-color;
         }
       }
 
@@ -312,22 +313,6 @@
   }
 }
 
-.u-modal {
-  .modal-footer {
-    .u-button:not(.u-button-primary) {
-      background: @custom2-color;
-      border: none;
-      color: @custom2-font-color;
-      padding: 0 12px;
-      margin-right: 8px;
-
-      &:hover {
-        background: @custom2-color-hover;
-      }
-    }
-  }
-}
-
 // 表格里面的button
 .meta-table {
   .btn-caret {
@@ -396,11 +381,11 @@
   }
 
   &:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname) {
-    &:hover {
-      color: #505766;
-      border-color: #505766;
-      background-color: unset;
-    }
+    // &:hover {
+    //   color: #505766;
+    //   border-color: #505766;
+    //   background-color: unset; // 先注释掉
+    // }
     &:disabled {
       opacity: .5;
       &:hover {
@@ -428,13 +413,6 @@
   height: 15px;
   margin-right: 5px;
 }
-
-
-// .u-button-border:not(.cancelScheme):focus,
-// .u-button-border:not(.cancelScheme):active,
-// .u-button-border:not(.cancelScheme):hover {
-//    background-color: transparent !important;
-// }
 
 .u-modal-footer {
   .u-button {
@@ -584,10 +562,6 @@
   }
 }
 
-// .list-top-toolbar {
-//   padding: 15px 0 0px 10px;
-// }
-
 // modal 底部取消按钮，仅业务适配，需工程节点侧调整
 .u-button[id='accountingDelegate|btnAbandon'] {
   border: none;
@@ -611,21 +585,11 @@
   background: #f3f5f9;
 }
 
-// 参照框中的按钮
-.tag-refer.tag-refer-01 .TagList .tagBtn-add {
-  min-width: 0;
-}
-
 // fix: 新增默认方案modal 左下角“添加查询条件” 的图文居中问题
 .scheme-content .query-item-button svg.icon {
   width: 14px;
   height: 14px;
 }
-
-// fix: 采购管理-> 供货目录中物料参照的左侧搜索 icon
-// .leftPanel .search-tree-2 .u-button {
-//   top: 12px;
-// }
 
 // fix: 期初采购入库单，新增页面放大按钮样式
 .u-button.u-button[disabled].btn-maximize {

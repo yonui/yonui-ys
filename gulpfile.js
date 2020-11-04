@@ -5,13 +5,15 @@ const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const rimraf = require('rimraf');
 const eslint = require('gulp-eslint');
+const replace = require('gulp-replace');
 const exec = require('child_process').execSync;
 
 const argvs = process.argv.splice(2, process.argv.length)
 const sourcemap = argvs.includes('--sourcemap')
 
 // 请不要直接修改 targetPath 的值，避免此文件来回修改。换成修改环境变量 MDF_DEBUG_TARGET，指定到项目路径顶层路径(不包括node_modules)
-const targetPath = process.env.MDF_DEBUG_TARGET || path.join(__dirname, '../yonyou-mdf-framework/packages/mdf-app')
+const targetPath = process.env.MDF_DEBUG_TARGET || path.join(__dirname, '../../yonyou-mdf/yonyou-mdf-framework/packages/mdf-app')
+
 const targetPackage = path.join(targetPath, 'node_modules/yonui-ys/lib')
 const targetLib = path.resolve('.', targetPackage);
 
@@ -26,7 +28,7 @@ const babelConfig = {
   ]
 }
 
-function log(message) {
+function log (message) {
   console.log('\x1B[32m' + message + '\x1B[39m');
 }
 
@@ -35,7 +37,7 @@ function log(message) {
  * @param source 输人路径
  * @param target 输出路径
  */
-function compileJs(target = './lib', cb) {
+function compileJs (target = './lib', cb) {
   const task = gulp.src(['./src/**/*.js', '!./src/theme/**/*.js'])
     .pipe(plumber());
 
@@ -120,7 +122,7 @@ gulp.task('debug', gulp.series(['style', 'js'], (done) => {
   done();
 }));
 
-function OctalDecode(str) {
+function OctalDecode (str) {
   const matches = str.match(/(\\\d{3}){3}/g);
   if (matches) matches.forEach(match => {
     let encoded = '';
@@ -134,10 +136,10 @@ function OctalDecode(str) {
 
 let cachedJsList = [];
 gulp.task('pre-eslint', (done) => {
-  const stdout = exec('git diff --cached --name-only', {encoding: 'utf-8'});
+  const stdout = exec('git diff --cached --name-only', { encoding: 'utf-8' });
   cachedJsList = stdout.split('\n')
     .map(v => OctalDecode(v.replace(/^"|"$/g, '')))
-    .filter(v => v.endsWith('.js') && v!=='gulpfile.js');
+    .filter(v => v.endsWith('.js') && v !== 'gulpfile.js');
   // console.log('需要eslint的文件:', cachedJsList);
   done();
 });
@@ -147,4 +149,14 @@ gulp.task('eslint', () => {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError('failes'));
+});
+
+// tinper 样式文件去除字体引用
+// TODO: 待测试
+gulp.task('removeTinperFont', () => {
+  return gulp.src([
+    'src/static/tinper-bee/2.2.2/*.less'
+  ])
+    .pipe(replace(/@font-face{.*}/mg, ''))
+    .pipe(gulp.dest('src/static/tinper-bee/2.2.2/'));
 });

@@ -22,19 +22,20 @@
   border: none;
   border-radius: 4px;
   &:hover {
-    background: linear-gradient(-225deg, #FC4C2F, #EE2223);
+    background: linear-gradient(-225deg, #fc4c2f, #ee2223);
   }
 }
 
 // 次操作按钮（灰色底部）
 .secondary-button-mixin(@height: 28px, @minWidth: 60px) {
   .u-button-mixin(@height, @minWidth);
-  background: #505766;
+  background: @custom-color;
   color: #fff;
-  // border: 1px solid #505766;
+  border: none;
   &:hover {
     background: #616875;
     color: #fff;
+    border: none;
   }
 }
 
@@ -42,13 +43,11 @@
 .cancel-button-mixin(@height: 28px, @minWidth: 60px) {
   .u-button-mixin(@height, @minWidth);
   background: #eef1f3;
-  // background: #dbe0e5;
   border: none;
   color: #535a69;
   &:hover {
-    color: #505766;
-    background: rgba(0,0,0,.1);
-    // background: #e5e9ec;
+    color: @custom-color;
+    background: rgba(0,0,0,.1) !important;
   }
 }
 
@@ -58,7 +57,8 @@
   color: #535a69;
   border: #d9d9d9 solid 1px;
   &:hover {
-    border: 1px solid #505766;
+    border: 1px solid @custom-color;
+    background: #fff !important;
   }
 }
 
@@ -123,8 +123,8 @@
   border-color: #d9d9d9;
   color: #535a69;
   &:hover {
-    color: #505766;
-    border-color: #505766;
+    color: @custom-color;
+    border-color: @custom-color;
   }
   svg {
     width: 15px;
@@ -265,8 +265,10 @@
 }
 
 .u-button.button-only-icon {
-  min-width: 28px;
-  background: #F8f8f8!important;
+  min-width: 28px!important;
+  &:hover {
+    background: #F8f8f8!important;
+  }
 }
 
 // fix: 供货目录，按钮组的primary 按钮右边距
@@ -426,6 +428,28 @@
   }
 }
 
+// 组合下拉 - uselect-menu
+.Toolbar_PrintTemplate_Down {
+  .u-select-dropdown-menu {
+    padding: 8px 0;
+  }
+}
+
+// 组合分页按钮
+.btn-toolbar-bottom .col-auto .Toolbar_Group {
+  .icon-normal-width.u-button-sm {
+    min-width: 32px;
+    padding: 0 7px;
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      vertical-align: -.2em;
+      margin: 0;
+    }
+  }
+}
+
 .container-browse-mode {
   .filterSetting {
     .normal-button-mixin();
@@ -438,6 +462,9 @@
       .reset-button-mixin();
       float: right;
       margin-right: 2px;
+      &:hover{
+        background: transparent!important;
+      }
     }
   }
 }
@@ -448,6 +475,9 @@
       .reset-button-mixin();
       float: right;
       margin-right: 2px;
+      &:hover{
+        background: transparent!important;
+      }
     }
   }
 }
@@ -476,4 +506,57 @@
 .u-button.rc-calendar-btn-ok[disabled] {
   color: #fff;
   opacity: .5;
+}
+
+// Toolbar
+.btn-toolbar-bottom {
+
+  // 取消
+  .btnAbandon {
+    .cancel-button-mixin();
+  }
+
+  // 保存并新增
+  .btnSaveAndAdd {
+    .secondary-button-mixin();
+  }
+
+  // 保存
+  .btnSave {
+    .primary-button-mixin();
+  }
+}
+
+// 删除
+.btnBatchDelete {
+  .normal-button-mixin();
+}
+
+// UI 模板
+.btnBillsetting {
+  .normal-button-mixin();
+}
+
+// 表格记录，删除、新增、批改、分摊
+// TODO: 待抽取共性
+.btnApportion,
+.btnBatchDeleteRow,
+.btnBatchAlter,
+.btnAddRow {
+  .normal-button-mixin();
+}
+
+.u-button.temp_header {
+  .normal-button-mixin();
+}
+
+// 上、下页
+.u-button.btnMovenext,
+.u-button.btnMoveprev {
+  min-width: unset;
+  padding: 0 8px !important;
+
+  svg {
+    margin-right: 0;
+  }
 }

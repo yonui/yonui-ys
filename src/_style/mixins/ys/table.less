@@ -15,7 +15,6 @@
     bottom: 0;
     left: 0;
     border-bottom: 1px solid #dbe0e5;
-    // background: #dbe0e5;
   }
 }
 
@@ -27,6 +26,9 @@
 .public_fixedDataTableCell_cellContent {
   .u-checkbox {
     margin-right: 15px;
+  }
+  .textCol > div {
+    .ellipsis();
   }
 }
 
@@ -40,10 +42,10 @@
     line-height: 28px;
 
     i.yonicon {
-      line-height: 24px;
-      margin-top: 0px;
-      top: -2px;
-      vertical-align: middle;
+      line-height: 1;
+      margin-top: 0;
+      top: 0;
+      vertical-align: baseline;
     }
     .yonicon-close-circle{
       top: 0px!important;
@@ -180,8 +182,7 @@
         width: 28px !important;
         height: 28px !important;
         border-radius: 60px;
-        margin-top: 3px;//TINPER-2676
-        // margin-left: 10px;
+        margin-top: 3px;
 
         &.cell-avatar-logo {
           border-radius: 4px;
@@ -328,7 +329,7 @@
 
 .fixedDataTableLayout_main {
   border: none;
-  border-top: 1px solid #505766;
+  border-top: 1px solid @custom-color;
 
   .has-error {
     .ant-form-explain {
@@ -421,7 +422,6 @@
 
   .ScrollbarLayout_faceVertical:after {
     left: auto !important;
-    right: 8px !important;
   }
 }
 
@@ -444,11 +444,9 @@
 /*表格部分按钮*/
 .acticonCell {
   position: absolute;
-  right: 15px;
   overflow: hidden;
   z-index: 999;
   border: 0;
-  background: #edf1f7;
 
   .anticon {
     font-size: 17px;
@@ -481,6 +479,8 @@
 
   .ant-row {
     display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .table-list-btn {
@@ -537,6 +537,11 @@
   svg {
     margin-top: 6px;
     display: inline-block;
+    &.icon-kucunshangpin {
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+    }
   }
 }
 
@@ -583,15 +588,6 @@
   }
 }
 
-.fixedDataTableCellGroupLayout_cellGroupWrapper {
-  .acticonCell {
-    padding-top: 7px;
-    background: none;
-    right: 10px;
-    padding-left: 0px;
-  }
-}
-
 .fixedDataTableRowLayout_rowWrapper {
   .textCol .edit-input-number {
     margin-top: 0px;
@@ -613,9 +609,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     min-height: 15px;
-    padding: 10px 12px;
+    padding: 0 12px;
     border-bottom: 1px solid #dbe0e5;
     height: 35px;
+    line-height: 35px;
   }
 
   .public_fixedDataTableCell_cellContent .ant-search-input-wrapper {
@@ -631,11 +628,21 @@
       background: #fff;
       border-bottom: 1px solid #dbe0e5;
       .cell-text {
-        padding: 10px 12px;
+        padding: 0 12px;
         overflow: inherit;
         text-overflow: ellipsis;
+        line-height: 35px;
         .joinQueryCell {
           color: #588ce9;
+        }
+      }
+
+      .acticonCell {
+        height: calc(~'100% - 1px'); // 减 1 是取消奇数偏差
+
+        &.ant-row {
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -659,7 +666,6 @@
 
   .acticonCell {
     padding-left: 0px;
-    margin-top: -4px; // 客户分类表格，操作按钮垂直居中
     text-align: right;
     right: 40px;
     height: 22px;
@@ -713,11 +719,6 @@
 
   .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
     width: 100%;
-  }
-
-  .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
-    padding-top: 0px;
-    background: #edf1f7;
   }
 
   .expand-icon {
@@ -858,14 +859,6 @@
     }
   }
 
-  // &.readOnlyTable {
-  //   .textCol {
-  //     .edit-input-number {
-  //       margin-top: 0 !important;
-  //     }
-  //   }
-  // }
-
   .acticonCell .ant-row {
     display: flex;
     justify-content: flex-end;
@@ -960,7 +953,9 @@
   }
 
   .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
+    .public_fixedDataTableCell_disabled,
     .headerName {
+      line-height: 28px;
       border-bottom: 1px solid #dbe0e5;
     }
   }
@@ -973,9 +968,16 @@
     }
   }
 
+  .public_fixedDataTableRow_selected {
+    &:hover {
+      .acticonCell {
+        background-color: #edf1f7;
+      }
+    }
+  }
+
   .acticonCell {
     padding-top: 0px;
-    background: #edf1f7;
 
     .table-list-btn {
       display: block;
@@ -1039,4 +1041,9 @@
 
 .headerName {
   color: #c0c1c1;
+}
+
+//IE11-物料分类滑动出来的按钮错位
+.tree-table .expand-rows .expand-row .cell-text.action-col.action-cell-container{
+  position: absolute!important;
 }

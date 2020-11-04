@@ -4,11 +4,20 @@
   pointer-events: unset !important
 }
 
-#yxyweb-support-container{
-  @import './minxin-themeColors.less';
-  @import '../index.less';
+@import './minxin-themeColors.less';
 
-  @import './mixin.less';
+.enus {
+  #yxyweb-support-container {
+    @import './locale/enus/index.less';
+  }
+}
+
+#yxyweb-support-container{
+  @import '../index.less';
+  @import '../_style/mixins/index.less';
+
+  // 引入字体图标
+  @import './newfont/iconfont.less';
 
 	@import './base.less';
 	@import './form.less';
@@ -20,7 +29,6 @@
 	@import './large-screen.less';
   @import './adapter.less';
   @import './adapterIcon.less';
-  // @import './lang.less';
 
   div[id='yxyweb-filter'] {
     clear: both;
@@ -76,7 +84,7 @@
 
   .yonicon:before {
     display: block;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
   }
 
   // 这里主要修改font-family
@@ -105,7 +113,7 @@
   }
 
   .yonicon-down-circle:before {
-    content: "\e685;" !important;
+    content: "\e685" !important;
   }
 
   .groupCondition-Checked .icon-xuanzhong1::before {
@@ -158,12 +166,14 @@
     }
   }
 
+  // TODO: 报表过滤区，图标加载iconfont 无效，这里暂用 uf 复写
   .u-checkbox.is-checked .u-checkbox-label:after {
     color: #f53c32;
     content: "\e658";
     line-height: 16px;
     font-size: 12px;
     font-weight: 600;
+    font-family: "uf";
   }
 
 }

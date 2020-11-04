@@ -20,4 +20,25 @@
     .u-modal-body .bottom-toolbar {
         bottom: 0;
     }
+
+    // TODO: 待找出通用的适配方法
+    // .bd_entercashacctlist,
+    // #st_workbench {
+    //     .btn-group-bottom.bottom-toolbar {
+    //         width: calc(100% - 16px) !important;
+    //         left: 8px;
+    //         bottom: 0;
+    //     }
+    // }
+
+    .btn-group-bottom.bottom-toolbar {
+        width: calc(~'100% - 16px') !important;
+        bottom: 0;
+        margin-left: 8px;
+    }
+    .u-modal .btn-group-bottom.bottom-toolbar{
+        left: 0;
+        margin-left: 0;
+        width: 100%!important;
+    }
 }

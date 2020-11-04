@@ -1,10 +1,101 @@
 {
   "id": "367570",
-  "name": "零售云",
+  "name": "YonBIP",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "17206607",
+      "name": "停用",
+      "font_class": "tingyong",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "17206576",
+      "name": "启用",
+      "font_class": "qiyong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "17015949",
+      "name": "UI模板",
+      "font_class": "UImoban",
+      "unicode": "e85a",
+      "unicode_decimal": 59482
+    },
+    {
+      "icon_id": "16828423",
+      "name": "设备",
+      "font_class": "shebei",
+      "unicode": "e857",
+      "unicode_decimal": 59479
+    },
+    {
+      "icon_id": "16828424",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e858",
+      "unicode_decimal": 59480
+    },
+    {
+      "icon_id": "16828425",
+      "name": "零件",
+      "font_class": "lingjian",
+      "unicode": "e859",
+      "unicode_decimal": 59481
+    },
+    {
+      "icon_id": "16801112",
+      "name": "联动下级",
+      "font_class": "liandongxiaji1",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "3258568",
+      "name": "留言",
+      "font_class": "liuyan",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "16615376",
+      "name": "联动下级",
+      "font_class": "liandongxiaji",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "16289894",
+      "name": "降序",
+      "font_class": "jiangxu",
+      "unicode": "e855",
+      "unicode_decimal": 59477
+    },
+    {
+      "icon_id": "16289906",
+      "name": "升序",
+      "font_class": "shengxu",
+      "unicode": "e856",
+      "unicode_decimal": 59478
+    },
+    {
+      "icon_id": "16257608",
+      "name": "组织单元",
+      "font_class": "zuzhidanyuan",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "16168439",
+      "name": "质量信息",
+      "font_class": "zhiliangxinxi",
+      "unicode": "e854",
+      "unicode_decimal": 59476
+    },
     {
       "icon_id": "15552010",
       "name": "CER",

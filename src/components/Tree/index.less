@@ -179,12 +179,31 @@
 }
 
 // 添加复选框的树的宽度限制
-.search-tree-3.checkable-tree {
-  .u-tree li a.u-tree-node-content-wrapper {
-    width: calc(~"100% - 40px") !important;
+.search-tree-3 {
+  &.checkable-tree {
+    .u-tree li a.u-tree-node-content-wrapper {
+      width: calc(~"100% - 40px") !important;
+    }
+  }
+
+  .u-tree li a.u-tree-node-content-wrapper{
+    width: calc(~"100% - 16px") !important;
   }
 }
 
-.u-tree li a.u-tree-node-content-wrapper{
-  width: inherit;
+.hrht_contract_sign_main {
+  .container-browse-mode > .jDiwork-container > div {
+    height: 100%;
+    .card-tabs {
+      height: 100%;
+
+      & > .ys-tabs {
+        height: calc(100% - 80px);
+
+        div[id='hrht_contract_sign_main|tabs_hrht_contract_sign_staff_list'] {
+          height: calc(100% - 80px);
+        }
+      }
+    }
+  }
 }

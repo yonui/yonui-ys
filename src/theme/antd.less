@@ -143,7 +143,7 @@
 
 .public_fixedDataTableCell_cellContent {
     .ant-row {
-        height: 28px;
+        // height: 28px;
 
         .col-line {
             height: 28px;
@@ -691,7 +691,7 @@
 }
 /*收款单 筛选条件表格变高特殊样式 gathering-list*/
 
-.ant-tabs-content {
+.u-tabs-content {
     .gathering-list {
       height: 100%;
       padding-bottom: 70px;
@@ -704,7 +704,12 @@
         .scheme-list {
           margin-left: 14px;
         }
-  
+        .up-show{
+            .u-button{
+                height: 40px;
+                font-size: 14px;
+            }
+        }
         .sp-range-txt {
           line-height: 40px;
         }
@@ -720,7 +725,15 @@
           .ant-calendar-picker-icon:after {
             font-size: 16px;
           }
-  
+          .u-form-control,
+          .u-select-selection--single{
+              height: 40px;
+              font-size: 14px;
+              line-height: 38px;
+              .u-select-selection-rendered{
+                  line-height: 38px;
+              }
+          }
           .ant-search-input-wrapper {
             height: 40px;
   
@@ -752,16 +765,15 @@
   
         .ant-popover-open-count {
           height: 40px;
-          font-size: 14px;
         }
   
         .label-control {
           line-height: 20px;
           max-height: 40px;
-          min-width: 80px;
+          min-width: 110px;
           padding-left: 10px;
         }
-  
+    
         .ant-row .ant-btn {
           height: 40px;
           font-size: 14px;
@@ -771,6 +783,48 @@
       /*表格部分*/
       .meta-table {
         font-size: 14px;
+  
+        .ant-checkbox-inner {
+          width: 18px;
+          height: 18px;
+        }
+  
+        .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+          content: " ";
+          transform: scale(1);
+          position: absolute;
+          left: 3px;
+          top: 7px;
+          width: 9px;
+          height: 2px;
+        }
+  
+        .ant-checkbox-checked .ant-checkbox-inner:after {
+          transform: rotate(45deg) scale(1);
+          position: absolute;
+          left: 4px;
+          top: 1px;
+          display: table;
+          width: 7px;
+          height: 10px;
+          border: 2px solid #ee2223;
+          border-top: 0;
+          border-left: 0;
+          content: " ";
+          transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+        }
+  
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .checkboxHD .ant-checkbox-wrapper .ant-checkbox {
+          margin-top: 10px;
+        }
+  
+        .public_fixedDataTable_header .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
+          padding: 0px !important;
+        }
+  
+        .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent .textCol {
+          padding: 10px 10px !important;
+        }
       }
     }
   }
@@ -799,10 +853,6 @@
   
       .public_fixedDataTableCell_cellContent .editCol {
         padding: 14px 10px !important;
-      }
-  
-      .fixedDataTableCellGroupLayout_cellGroupWrapper .acticonCell {
-        padding-top: 5px;
       }
   
       .public_fixedDataTable_bottomShadow {
@@ -871,7 +921,7 @@
           &:before {
             content: "\E690" !important;
             font-size: 14px;
-            font-family: "iconfont" !important;
+            font-family: "iconfont";
           }
         }
       }
@@ -1516,7 +1566,7 @@
 
 .anticon-zuixiaohua2::before {
     content: "\e80f";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-error:before {
@@ -1527,7 +1577,7 @@
     content: "\e6fe";
     color: #adb4bc;
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     line-height: 28px;
 }
 
@@ -1717,23 +1767,23 @@
 .anticon-quanping:before {
     content: "\e624";
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-zuixiaohua:before {
     content: "\e625";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-guanbi:before {
     content: "\e623";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-dayin:before {
     content: "\e65c";
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-tongzhixinxi-copy:before {
@@ -1770,7 +1820,7 @@
 
 .ant-tabs-tab-prev-icon:before {
     content: "\E515";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-yemianfenlan-zhankai:before {
@@ -1797,14 +1847,14 @@
 
 .anticon-rowBottom:before {
     content: "\e633";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .ant-calendar-picker-icon:after {
     content: "\e661";
     font-size: 14px;
     color: #ADB4BC;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .ant-calendar-picker-icon:hover:after {
@@ -1825,7 +1875,7 @@
 
 .ant-pagination-prev a:after {
     content: '\e515';
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-shanchu1:before {
@@ -1848,7 +1898,7 @@
 .ant-select-arrow:before {
     content: "\E633";
     color: #98a2ad;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .ant-select-arrow:hover:before {
@@ -2032,7 +2082,7 @@
 .anticon-circle-down:before,
 .anticon-down-circle:before {
     content: "\e685" !important;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .ant-menu-item:hover,
@@ -2067,7 +2117,7 @@
 
 .anticon-icon-xuanzhong1::before {
     content: "\E6AF";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 // fix: ys 默认方案箭头/下拉按钮箭头
@@ -2081,12 +2131,6 @@
 // fix: ys 银行网点记录删除状态的图标
 .yonicon-info-circle::before {
     content: "\E61d";
-    font-family: 'iconfont' !important;
-}
-
-// fix: ys modal 弹框关闭
-.ant-modal-close-x:before {
-    content: "\e636";
     font-family: 'iconfont' !important;
 }
 
@@ -2137,28 +2181,28 @@
 }
 
 .anticon-ellipsis:before {
-    content: "\e73c";
-    font-family: "uf" !important;
+    content: "\e521";
+    font-family: "iconfont";
 }
 
 .ant-select-selection__clear:before {
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     content: "\e66b" !important;
 }
 
 .yonicon.yonicon-plus-square-o:before {
     content: "\E52A";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-caret-up:before {
     content: "\e814";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-caret-down:before {
     content: "\e815";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-search:before {
@@ -2169,39 +2213,39 @@
 .anticon-fanyezhankai:before {
     content: "\e82e";
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     line-height: 28px;
 }
 
 .anticon-fanyeshouqi:before {
     content: "\e82d";
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     line-height: 30px;
 }
 
 .anticon-bangzhu:before {
     content: "\e66a";
     font-size: 16px;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     line-height: 28px;
     color: #ccc;
 }
 
 .anticon-checked:before {
     content: "\e673";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .uf-treearrow-down:before {
     content: "\e633" !important;
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
     font-size: 12px;
 }
 
 .anticon-delete::before {
     content: "\E68F";
-    font-family: "iconfont" !important;
+    font-family: "iconfont";
 }
 
 .anticon-zuixiaohua1::before {

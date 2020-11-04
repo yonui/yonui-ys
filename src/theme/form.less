@@ -253,7 +253,7 @@
 
   .showMore {
     float: right;
-    width: 24px;
+    width: 20px;
   }
 }
 
@@ -268,7 +268,6 @@
 
 .listheadRow+.line-tabs {
   position: relative;
-  // top: -15px;
 
   .viewCell.width-percent-100>.upload-content .col-float.input-control.control-width {
     width: calc(~'100% - 120px') !important;
@@ -364,6 +363,7 @@
 
     .control-width {
       line-height: @base-input-height;
+      // width: calc(~'100% - 132px')!important;
       .u-input-group {
         line-height: 0;
         &>div {
@@ -722,7 +722,7 @@
     .control-width{
         //编辑态输入框
         .u-input-group,.ant-select,.ac-input-locale,.u-select,.u-form-control{
-            width: 400px!important;
+            // width: 400px!important; 规范一列输入框占满
             max-width: 100%;
         }
         //浏览态输入框
@@ -963,7 +963,10 @@
             .u-button {
               line-height: 0px;
             }
-
+            .u-button[disabled]:hover{
+                background-color: #f7f7f7;
+                color: rgb(153, 153, 153);
+            }
             span {
               .u-upload {
                 display: block;
@@ -1070,7 +1073,6 @@
       .control-text.invoice-remark,
       .ant-calendar-picker,
       .control-text,
-      // .ant-select,
       .ant-input-affix-wrapper,
       .ant-time-picker {
         height: @base-input-height;
@@ -1135,7 +1137,14 @@
       }
     }
   }
-
+  // 五列
+  &.width-percent-20 {
+    width: 20%
+  }
+  // 二列
+  &.width-percent-50 {
+    width: 50%
+  }
   // 四列
   &.width-percent-25 {
     width: 25%
@@ -1162,6 +1171,10 @@
     line-height: 12px;
   }
 
+}
+
+.viewCell .ant-form-explain {
+  margin-bottom: 0;
 }
 
 //两列
@@ -1265,7 +1278,7 @@
   flex-flow: wrap;
   align-items: center;
   min-height: 24px;
-  padding-top: 4px;
+  // padding-top: 4px;
 }
 
 .has-related {
@@ -1285,7 +1298,7 @@
       padding-left: 0px !important;
       padding-right: 0px;
       margin-left: -16px!important;
-      right: -26px!important;
+      right: -20px!important;
 
       .u-button {
         width: 100%;
@@ -1389,7 +1402,7 @@
 
 .group-container .ant-row+.group-buttons {
   .group-container {
-    padding-top: 2px;
+    padding-top: 0;
   }
 }
 
@@ -1604,7 +1617,7 @@
 
     .filter-controls {
       margin-right: 220px;
-      padding-bottom: 6px;
+      padding-bottom: 2px;
 
       .col-float {
         .tag-group {
@@ -1613,6 +1626,7 @@
 
           // zhangkunk 总账-凭证查询-设置中选了会计期间，但不显示期间段选择框
           .has-related {
+            height: 28px;
             .viewCell {
               width: auto;
               display: inline-flex;
@@ -1632,7 +1646,7 @@
       float: left;
       margin-right: 0px;
       overflow: hidden;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
 
       .up-search {
         margin-left: 10px;
@@ -2040,9 +2054,9 @@ i.uf-search,
   margin-bottom: 4px;
 }
 
-.ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
-  overflow-x: hidden
-}
+// .ant-tabs:not(.ant-tabs-vertical)>.ant-tabs-content {
+//   overflow-x: hidden
+// }
 
 .ant-input-number-focused {
   border-color: #ccc;
@@ -2518,22 +2532,6 @@ i.uf-search,
   }
 }
 
-// 组合分页按钮
-.btn-toolbar-bottom .col-auto .Toolbar_Group:last-child {
-  .u-button.icon-normal-width {
-    min-width: 32px;
-    // width: 32px;
-    padding: 0 7px;
-
-    .icon {
-      width: 12px;
-      height: 12px;
-      vertical-align: -.2em;
-      margin: 0;
-    }
-  }
-}
-
 // 电商通单笔容差
 .btn-toolbar-bottom .Toolbar_Group_Length1 .basic-input-text {
 
@@ -2564,6 +2562,7 @@ i.uf-search,
     .u-select-selection {
       padding: 0 22px 0px 12px;
       z-index: 2;
+      height: 28px;
 
       &:hover {
         border-color: #505766;
@@ -2786,7 +2785,7 @@ i.uf-search,
 
 .container-edit-mode {
   .listheadRow .ant-popover-open-count {
-    width: 80px;
+    // width: 80px;
     height: @base-input-height;
     float: right;
   }
@@ -2823,10 +2822,6 @@ i.uf-search,
     box-shadow: none;
   }
 }
-
-// .ant-form-item {
-//   margin-bottom: 15px;
-// }
 
 // 新增过滤条件，的枚举弹框层级
 .enum-pop.u-popover {
@@ -2976,7 +2971,7 @@ i.uf-search,
       }
     }
     .control-radio.ticket-opening {
-      height: 32px;
+      height: 40px;
       min-height: 32px;
     }
     .viewCell .has-related {
@@ -3047,7 +3042,7 @@ i.uf-search,
     .control-width {
       display: flex;
       align-items: center;
-      height: 32px;
+      // height: 32px;
       flex-wrap: wrap;
       &>div {
         flex: 1;
@@ -3230,6 +3225,7 @@ i.uf-search,
 .st_materialoutlist .container-edit-mode {
   .list-top-toolbar {
     padding-bottom: 0;
+    // margin-bottom: -16px;
   }
 }
 .Test-time-two {
@@ -3263,9 +3259,6 @@ i.uf-search,
       .col-float {
         .tag-group {
           > .ant-row {
-            > .label-control {
-              padding-top: 13px !important;
-            }
             > .enum-control {
               .has-related {
                 .tagCell {
@@ -3287,9 +3280,6 @@ i.uf-search,
     float: left;
     &>.ant-row {
       display: flex;
-      .multi-line {
-        // display: none;
-      }
       &>.control-width {
         width: 100%!important;
       }
@@ -3304,18 +3294,30 @@ i.uf-search,
 .basic-input-progressBar {
   padding: 5px;
   float: left;
+  margin-right: 16px;
+  .input-bottom {
+    &>div:first-child {
+      display: flex;
+      float: right;
+    }
+  }
+  .input-bottom-text {
+    float: left;
+    margin-right: 16px;
+  }
   .label-control {
     display: none;
   }
   .control-width {
-    width: 100%;
+    width: 100%!important;
   }
   .u-progress {
     background: #EBEBEB;
     border-radius:4px;
     height: 6px;
     min-width: 100px;
-    margin-right: 34px;
+    margin-right: 8px;
+    vertical-align: middle;
     .u-progress-bar {
       height:6px;
       background:linear-gradient(45deg,rgba(0,145,255,1) 0%,rgba(65,101,255,1) 100%);
@@ -3330,5 +3332,92 @@ i.uf-search,
 
       }
     }
+    .progressBar-after {
+      font-size: 12px;
+    }
+    &+span {
+      font-size: 12px;
+      color: #999;
+      margin-right: 18px;
+    }
   }
+  &+.s-popover-inner-span {
+    .u-button {
+      padding: 0;
+      border:none;
+      color: #ee2233;
+      &:hover {
+        background: transparent;
+        color: #ee2233!important;
+      }
+    }
+  }
+}
+
+.line-tabs-menu-container .tab-top-right .btn-toolbar-bottom .btn-maximize {
+  min-width: auto;
+}
+
+/* 表体行附件图片样式 */
+.fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent{
+  .upload-picture-book{
+    position: absolute;
+    margin-top: -1px;
+    .pictureBook{
+      width: 28px;
+      height: 28px;
+      border-radius:4px;
+      border: solid 1px #D9D9D9;
+      line-height: 26px;
+      text-align: center;
+      overflow: hidden;
+      .pictureImg{
+        height: 28px;
+        width: 28px;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #fff;
+        position: relative;
+        img{
+          width: 100%;
+          height: auto!important;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .s-popover-inner-span{
+        width: 28px;
+        height: 28px;
+
+        .yonicon-plus-copy{
+          &::after{
+            content: "\e6a3";
+            font-family: "iconfont";
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+    }
+    
+    &:hover{
+      .linefile:not(.readOnly) {
+        border-color: #505766;
+      }
+    }
+  }
+  
+  .textCol.linefile{
+    overflow: visible;
+  }
+}
+
+.control-text.invoice-remark.pre-wrap-textarea {
+  white-space: pre-wrap !important;
 }
