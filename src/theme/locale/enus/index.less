@@ -14,6 +14,9 @@
 // 西语输入类控件，label + input
 .region-lang(@leftPadding: 80px, @labelWidthPercent: 810%) {
   .ant-row {
+    display: block!important;
+    min-height: 48px!important;
+    padding-left: @leftPadding;
     .refer-div {
       .ant-row {
         padding-left: 0;
@@ -40,6 +43,7 @@
     left: @leftPadding;
     top: 48px;
   }
+ 
 }
 
 .listheadRow .filter-hide {
