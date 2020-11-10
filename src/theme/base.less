@@ -3067,8 +3067,35 @@ a.Toolbar_Notification_Log {
 
 .container-edit-mode {
   .list-top-toolbar+.group-container {
-    padding-top: 0px;
+    // padding-top: 0px;
     overflow: hidden;
+  }
+}
+
+.list-top-toolbar {
+  overflow: hidden;
+  padding: 8px 20px;
+  z-index: 101;
+}
+
+.list-top-toolbar+.listheadRow {
+  padding-bottom: 0px;
+}
+
+// 需要置顶的 .list-top-toolbar
+.container-browse-mode {
+  .top-fixed.list-top-toolbar{
+    position: fixed;
+    width: calc(100% - 16px);
+    background: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    // top: 0; 由js 动态设置
+  }
+  .form-base {
+    .top-fixed.list-top-toolbar {
+      width: calc(100% - 16px - 240px - 8px);
+    }
   }
 }
 
@@ -5855,7 +5882,7 @@ div[id='bd_staff_card|photo'] {
 
 /*详情页去掉title*/
 .group-title-hidden {
-    padding-top: 16px!important;
+    padding-top: 16px;
   
     >.list-top-toolbar {
       padding: 0 0 16px 20px;
@@ -5866,9 +5893,9 @@ div[id='bd_staff_card|photo'] {
       display: none;
     }
   }
-  .list-top-toolbar+.group-title-hidden{
-      padding-top: 0px!important;
-  }
+  // .list-top-toolbar+.group-title-hidden{
+  //     padding-top: 0px!important;
+  // }
 /*热区*/
 .aa_floorlist{
     .view-container,
