@@ -4653,11 +4653,54 @@ div[id='bd_staff_card|photo'] {
 
 /*锚点*/
 
-.group-container-anchor {
+.anchor-wrapper {
   position: fixed;
-  right: 0px;
+  right: 8px;
   top: 15%;
   z-index: 1000;
+
+  &:hover .anchor-to-top {
+    display: block;
+  }
+
+  .anchor-to-top {
+    position: absolute;
+    bottom: -20px;
+    height: 30px;
+    width: 80px;
+    left: 50%;
+    margin-left: -40px;
+    background: url(images/maodian.png) no-repeat center bottom;
+    display: none;
+
+    a {
+      height: 31px;
+    }
+
+    a.active {
+      color: #afafaf;
+    }
+
+    .yonicon-fanhuidingbu {
+      display: block;
+      margin-top: 0px;
+
+      &::before {
+        font-size: 16px;
+        color: #afafaf;
+      }
+    }
+
+    a:hover {
+      .yonicon-fanhuidingbu::before {
+        color: #505766;
+      }
+    }
+  }
+}
+
+.anchor-container {
+  position: relative;
   border-right: none;
   border-radius: 3px;
   padding: 12px 0 2px 40px;
@@ -4666,10 +4709,12 @@ div[id='bd_staff_card|photo'] {
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.06);
   background-color: #fff;
   transition: all 0.5s;
+  // max-height: calc(~'100% - 150px');
+  // overflow: scroll;
 
   &:hover {
-    padding-right: 30px;
     background: #fff;
+    padding-right: 30px;
 
     @keyframes dowidth {
       from {
@@ -4697,7 +4742,7 @@ div[id='bd_staff_card|photo'] {
       }
     }
 
-    .anchor-item-last {
+    .anchor-to-top {
       display: block !important;
       animation: dowidt 0.5s;
 
@@ -4721,6 +4766,7 @@ div[id='bd_staff_card|photo'] {
 
   .anchor-item-list {
     position: relative;
+    
 
     .anchor-item {
       line-height: 27px;
@@ -4738,6 +4784,22 @@ div[id='bd_staff_card|photo'] {
         position: absolute;
         left: -24px;
         top: 11px;
+        z-index: 2;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: -21px;
+        top: 14px;
+        display: block;
+        height: 27px;
+        width: 1px;
+        border: solid 0.5px #E4E4E4;
+      }
+
+      &:last-child:after {
+        height: 0;
       }
 
       a {
@@ -4794,7 +4856,7 @@ div[id='bd_staff_card|photo'] {
         color: #afafaf;
       }
 
-      .anticon-fanhuidingbu {
+      .yonicon-fanhuidingbu {
         display: block;
         margin-top: 0px;
 
@@ -4805,7 +4867,7 @@ div[id='bd_staff_card|photo'] {
       }
 
       a:hover {
-        .anticon-fanhuidingbu::before {
+        .yonicon-fanhuidingbu::before {
           color: #505766;
         }
       }
@@ -4813,7 +4875,7 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
-.group-container-anchor:hover {
+.anchor-wrapper:hover {
   &::before {
     height: calc(~'100% - 55px');
   }
@@ -4821,17 +4883,6 @@ div[id='bd_staff_card|photo'] {
   a {
     display: block;
   }
-}
-
-.group-container-anchor:before {
-  position: absolute;
-  left: 18.5px;
-  top: 25px;
-  content: '';
-  display: block;
-  width: 0px;
-  height: calc(~'100% - 55px');
-  border: solid 0.5px #E4E4E4;
 }
 
 /*广告图片*/
