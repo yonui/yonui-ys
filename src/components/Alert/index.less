@@ -97,17 +97,50 @@
   }
   /*错误*/
   .uretail-notification-error {
-    display: -webkit-flex;
-    display: flex;
-    padding: 8px 12px;
     background: #FEF3EB;
     border: #FCCCA7 solid 1px;
     border-radius: 4px;
-    max-width: 800px;
-    min-width: 300px;
+    width: 400px;
+    padding-bottom: 24px;
     .anticon-cross-circle-o:before {
       font-size: 22px;
       color: #FF5735;
+    }
+    .icon-count{
+      position: absolute;
+      left: 12px;
+      top:9px;
+      &:last-child{
+        left: auto;
+        right: 0;
+        padding: 0;
+        width: auto;
+        right: 16px;
+        .icon-guanbi:hover{
+          color: #505766;
+        }
+      }
+    }
+    .uretail-notice-count{
+      margin: 0;
+      overflow: hidden!important;
+      max-width: 100%;
+      max-height: none;
+    }
+    .main-table-message-container{
+      margin-bottom: 0!important;
+    }
+    .error-message-title{
+      font-weight: normal!important;
+      position: absolute;
+      top: 12px;
+      left: 40px;
+    }
+    .error-message-content{
+      overflow-y: auto;
+      max-height: 220px;
+      margin-top: 40px;
+      padding: 0 40px;
     }
   }
   /*消息*/
