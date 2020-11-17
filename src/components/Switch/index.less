@@ -1,20 +1,22 @@
 .u-switch-span {
 
   .u-switch {
-    height: 16px;
-    width: 32px;
-
+    height: 10px;
+    width: 26px;
+    background: linear-gradient(90deg, #858A94 0%, #B9BCC2 100%);
+    border: none;
     &:after {
       height: 14px;
       width: 14px;
-      top: 0;
+      top: -3px;
+      box-shadow: 0px 1px 4px 0px rgba(80, 87, 102, 0.3);
+      left: -1px;
     }
 
     &.is-checked {
-      border-color: #4586fa;
-      background-color: #4586fa;
+      background: linear-gradient(270deg, #A4C0F3 0%, #6A98EB 100%);
       &:after {
-        left: 16px;
+        left: 13px;
       }
     }
 
