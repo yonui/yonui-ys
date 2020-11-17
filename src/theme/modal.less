@@ -5413,3 +5413,24 @@
     margin-top: 30px!important;
   }
 }
+
+//QDJM-6024
+.Archive.u-modal-dialog{
+  .u-modal-footer{
+    .btn-toolbar-bottom{
+      .u-button:disabled {
+        opacity: .5;
+      }
+      .u-button:first-of-type{
+        border: none;
+      }
+      .u-button:nth-of-type(3) {
+        color: #fff;
+      }
+      .u-button:not(:first-child):not(:last-child){
+        background: #505766;
+        color: #fff;
+      }
+    }
+  }
+}
