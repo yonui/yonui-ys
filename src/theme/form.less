@@ -1536,7 +1536,8 @@
 
   .viewCell {
     .control-text {
-      border-color: #eee;
+      // border-color: #eee;
+      border-color: transparent;
     }
 
     .ant-row .ant-row {
@@ -1548,7 +1549,8 @@
     }
 
     .TagList {
-      border-color: #eee !important;
+      // border-color: #eee !important;
+      border-color: transparent!important;
       padding: 0 10px;
     }
 
@@ -1725,6 +1727,16 @@
 
   .twoInclusion .basic-input-textarea .input-control .invoice-remark {
     width: 100% !important;
+  }
+  .has-related {
+    .refer-div .s-popover-inner-span,
+    .basic-control .control-width .s-popover-inner-span,
+    .s-popover-inner-span {
+      display: none;
+    }
+  }
+  .viewCell.width-percent-33 .control-width .control-text.invoice-remark {
+    width: auto!important;
   }
 }
 
