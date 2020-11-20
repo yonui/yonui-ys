@@ -299,3 +299,27 @@ input:-ms-input-placeholder{
 .container-browse-mode{
   height: 100%;
 }
+
+//错误信息提示框关闭图标
+.uretail-notification-notice.uretail-notification-notice-closable{
+  .uretail-message-error{
+    padding-right: 30px;
+  }
+  .uretail-notification-notice-close{
+    right: 16px;
+    top: 12px;
+    opacity: 1;
+    font-weight: normal;
+  }
+  .uretail-notification-notice-close-x{
+    font-family: iconfont;
+    font-size: 12px;
+    color: #999;
+    &:after{
+      content: "\e623";
+    }
+    &:hover{
+      color:#505766 ;
+    }
+  }
+}
