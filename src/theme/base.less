@@ -3085,6 +3085,14 @@ a.Toolbar_Notification_Log {
       width: 30px;
     }
   }
+  &.func-share {
+    display: flex;
+    .special-row:not(:last-child) {
+      &:after {
+        content: ','
+      }
+    }
+  }
 }
 
 /*草稿下拉框*/
