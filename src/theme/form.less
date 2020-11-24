@@ -3468,3 +3468,32 @@ i.uf-search,
 .control-text.invoice-remark.pre-wrap-textarea {
   white-space: pre-wrap !important;
 }
+
+//QDJM-6304-fyf
+.meta-dynamic-view.recruit_post_list{
+  .u-tabs-editable-card{
+    .input-control {
+      .has-related{
+        .viewCell{
+          width: calc(~'50% - 0px');        
+        }
+        .viewSetting.viewCell{
+          width: calc(~'50% + 20px');
+        }
+        .viewSetting[id='recruit_post_card|salaryMax']{
+          .number-control>.ant-row{
+            .label-control{
+              flex: 0 0 20px;
+              padding: 0;
+              text-align: center;
+            }
+            .input-control {
+              width:100%!important;
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
