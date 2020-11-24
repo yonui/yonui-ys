@@ -497,6 +497,19 @@
   }
 }
 
+.u-modal-footer{
+  // 弹窗底部按钮次级按钮样式
+  .u-button:not(:first-child):not(:last-child) {
+    .secondary-button-mixin();
+  }
+  
+  // 保存并新增
+  .btnSaveAdd,
+  .btnSaveAndAdd {
+    .secondary-button-mixin();
+  }
+}
+
 // 删除
 .btnBatchDelete {
   .normal-button-mixin();
