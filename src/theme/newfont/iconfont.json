@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "18455962",
+      "name": "暂无",
+      "font_class": "zanwu",
+      "unicode": "e9a5",
+      "unicode_decimal": 59813
+    },
+    {
+      "icon_id": "18358744",
+      "name": "虚拟组织",
+      "font_class": "xunizuzhi",
+      "unicode": "e9a1",
+      "unicode_decimal": 59809
+    },
+    {
+      "icon_id": "18358745",
+      "name": "版本变更",
+      "font_class": "lishibanben",
+      "unicode": "e9a2",
+      "unicode_decimal": 59810
+    },
+    {
       "icon_id": "18203967",
       "name": "查询",
       "font_class": "chaxun",
