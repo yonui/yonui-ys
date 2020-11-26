@@ -459,7 +459,7 @@ div[id='pc_product|detail!businessAttribute']>div,
   word-wrap: break-word;
 }
 
-//QDJM-5999
+//QDJM-5999-滑动出现input编辑框
 .meta-table.listTable.OrgTable{
   .editCol{
     padding: 3px 10px!important;
@@ -479,6 +479,28 @@ div[id='pc_product|detail!businessAttribute']>div,
   .public_fixedDataTable_bodyRow:hover{
     .textCol.listrefer{
       padding-left: 2px!important;
+    }
+  }
+}
+//UISJ-5-滑动出现input编辑框
+.u-modal{
+  .bill-setting-modal {
+    .public_fixedDataTable_bodyRow:hover{
+      .textCol{
+        .basic-input-text{
+          margin-left: -9px;
+        }
+      }
+    }
+    .public_fixedDataTableCell_cellContent{
+      .textCol{
+        .basic-input-text{
+          margin-left: -9px;
+        }
+      }
+      .editCol>div{
+        margin-left: -9px;
+       }
     }
   }
 }
