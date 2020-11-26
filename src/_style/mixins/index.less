@@ -40,13 +40,24 @@
   }
   .productAssistUnitExchanges .width-percent-50 {
     .frc-select-readonly .frc-select-content,
-    .frc-inputnumber-readonly.frc-inputnumber-assistUnitCount .ant-input-number {
-      border-color: transparent;
+    .frc-inputnumber-readonly{
+      &.frc-inputnumber-assistUnitCount,
+      &.frc-inputnumber-mainUnitCount {
+        .ant-input-number {
+          border-color: transparent;
+        }
+      }
     }
     .frc-listrefer-readonly {
       border-color: transparent;
       width: auto;
     }
+    .frc-select-readonly .frc-select-content {
+      padding: 0 4px;
+    }
+  }
+  .control-text {
+    padding: 0 4px;
   }
 }
 
