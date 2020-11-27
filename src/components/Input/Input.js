@@ -58,6 +58,8 @@ class InputAdapter extends Component {
   }
 
   handleFocus = (val, e) => {
+    if (e?.target)
+      e.target.setSelectionRange(0, e.target.value.length);
     this.props.onFocus && this.props.onFocus(e)
   }
 
