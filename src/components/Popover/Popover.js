@@ -1,6 +1,5 @@
 // PopoverAdapter
 import React, { Component } from 'react'
-import { findDOMNode } from 'react-dom'
 
 import Popover from 'bee-popover'
 import classnames from 'classnames'
@@ -17,10 +16,6 @@ class PopoverAdapter extends Component {
     this.state = {
       visible: this.props.visible || false
     }
-  }
-
-  componentDidMount () {
-    this.target = this.getContainerTarget()
   }
 
   componentWillReceiveProps (nextProps) {
@@ -50,7 +45,7 @@ class PopoverAdapter extends Component {
   }
 
   getContainerTarget = () => {
-    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer(findDOMNode(this)) : this.props.getPopupContainer
+    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer() : this.props.getPopupContainer
   }
 
   render () {
@@ -62,6 +57,7 @@ class PopoverAdapter extends Component {
       's-popover-open': visible
     })
 
+    this.target = this.getContainerTarget();
     // if (!process.env.__CLIENT__) {
     //   // 修复服务端渲染 Popover 问题
     //   return <div />;
