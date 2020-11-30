@@ -5515,93 +5515,118 @@ div[id='bd_staff_card|photo'] {
 
 // 自动化营销客户档案头像
 .viewCell .customerAvatar .face-img.basic-avatar-portrait {
-  >.ant-row {
-    .control-width .no-avatar-man {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 1px solid #d9d9d9;
-      background: url(./images/user.png);
-      background-size: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .anticon-uploadimg::before {
+    content: "\e6ac";
+    font-family: uf !important;
+  }
+
+  .yonicon-delete:before,
+  .anticon-uploadimg::before {
+    font-size: 14px !important;
+  }
+
+  .basic-avator-deleteimg {
+    height: 20px !important;
+    line-height: 22px !important;
+  }
+
+  .basic-avator-changeimg {
+    .u-upload-select {
+      width: 50%;
+      height: 20px;
+      line-height: 22px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.75);
+      }
     }
   }
 
-  .basic-avatar-browse-img-container {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
+  .avatar-uploader {
+    width: 100%;
+    height: 100% !important;
   }
 
-  .basic-avatar-bg {
-    width: 80px;
-    height: 80px;
-  }
-
-  .basic-avatar-btn-item {
-    background-size: contain;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    .avatar-uploader.basic-avator-changeimg {
+  .basic-avatar-btn-item,
+  .basic-avator-uplaoadimg .u-upload-select-text {
+    img {
       width: 100%;
       height: 100%;
     }
+  }
 
+  .basic-avatar-bg {
+    &>span.basic-avator-uploadimg {
+      display: block;
+    }
+
+    .u-upload-select-text {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    strong {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1 !important;
+      font-weight: normal;
+      text-align: center;
+
+      .yonicon-uploadimg {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .basic-avatar-btn-item {
     img {
-      width: 80px;
-      height: 80px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: unset;
+      max-height: inherit;
+    }
+
+    .basic-avator-deleteimg {
+      display: none!important;
+    }
+
+    &>span.basic-avator-changeimg {
+      display: none;
+
+      .yonicon-uploadimg:before {
+        content: "\e845" !important;
+      }
     }
 
     &:hover {
-      span.avatar-uploader {
-        width: 100%;
-        height: 100% !important;
-
-        &.basic-avator-uploadimg {
-          .ant-upload.ant-upload-select strong {
-            margin-top: 0px;
-            width: 100%;
-
-            .yonicon-uploading:before {
-              font-size: 30px;
-            }
-          }
-        }
-
-        &.basic-avator-changeimg {
-          &:hover {
-            background: rgba(0, 0, 0, .5);
-          }
-
-          .yonicon-uploading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin-top: 0;
-
-            &:before {
-              font-size: 30px;
-            }
-          }
-        }
+      border-color: #505766;
+      .basic-avator-changeimg,
+      .u-upload-select {
+        display: block;
+        width: 100%!important;
       }
 
-      strong {
-        flex-direction: column;
-        line-height: 100%;
-
-        .yonicon-uploading {
-          margin-right: 0;
-        }
-
-        &.basic-avator-deleteimg {
-          display: none;
-        }
+      span.avatar-uploader {
+        display: block;
+        background: transparent;
+        color: #ccc;
       }
     }
   }
