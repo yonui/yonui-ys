@@ -307,12 +307,12 @@ textarea.u-form-control {
     margin:0 0 6px 0;
     .u-checkbox {
       display: block;
-      height: @base-input-height;
-      line-height: @base-input-height;
+      height:32px;
+      line-height:32px;
       margin: 0;
-      padding: 0px 10px;
+      padding: 0px 12px;
       &:hover{
-        background: #f7f9fd;
+        background: #f3f5f9;
       }
       .u-checkbox-label{
         i.out{
@@ -344,7 +344,12 @@ textarea.u-form-control {
 
         }
       }
-
+      &.is-checked{    
+        background: #FFF7E7;
+        &:hover{
+          background: #FFF7E7;
+        }
+      }
     }
   }
   .no-data {
