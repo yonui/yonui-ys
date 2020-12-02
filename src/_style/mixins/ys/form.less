@@ -503,16 +503,24 @@ div[id='pc_product|detail!businessAttribute']>div,
     }
   }
 }
+//针对调价单-UISJ-3
+.meta-table.listTable.ap_adjustprice_body_page_price_data{
+  .editCol{
+    padding: 3px 10px 0 2px!important;
+    &>.refer-div{
+      margin-top: -2px;
+    }
+  }
+  .public_fixedDataTable_bodyRow:hover{
+    .textCol:not(.public_fixedDataTableCell_disabled){
+      padding-top: 3px!important;
+      padding-left: 2px!important;
+    }
+  }
+}
 //UISJ-5-滑动出现input编辑框
 .u-modal{
   .bill-setting-modal {
-    .public_fixedDataTable_bodyRow:hover{
-      .textCol{
-        .basic-input-text{
-          margin-left: -8px;
-        }
-      }
-    }
     .public_fixedDataTableCell_cellContent{
       .textCol{
         .basic-input-text{
@@ -520,11 +528,23 @@ div[id='pc_product|detail!businessAttribute']>div,
         }
       }
       .editCol{
-        padding-left: 2px!important;
+        .number-control{
+          margin-left: -8px;
+        }
+        .edit-input-number>.u-select{
+          margin-left: -8px; 
+        }
+        .basic-input-text>.ac-input-locale{
+          margin-left: -8px;
+        }
       }
-      .editCol>div{
-        margin-left: 0;
-       }
+    }
+    .public_fixedDataTable_bodyRow:hover{
+      .textCol{
+        .basic-input-text{
+          margin-left: -8px;
+        }
+      }
     }
   }
 }
