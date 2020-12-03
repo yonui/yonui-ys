@@ -462,62 +462,67 @@ div[id='pc_product|detail!businessAttribute']>div,
 //QDJM-5999-滑动出现input编辑框
 .meta-table.listTable{
   .editCol{
-    padding: 1px 10px 0 2px!important;
+    padding: 3px 10px 0 2px!important;
   }
-  .public_fixedDataTable_bodyRow:hover{
-    .textCol.listrefer{
-      padding-left: 2px!important;
-      padding-top: 1px!important;
-    }
-    .textCol.refer{
-      padding-left: 2px!important;
-      padding-top: 3px!important;
-    }
-    .textCol.input{
-      padding-top: 3px!important;
-    }
-    .textCol.inputnumber{
-      padding-top: 3px!important;
-    }
+  // .public_fixedDataTable_bodyRow:hover{
+  //   .textCol.listrefer{
+  //     padding-left: 2px!important;
+  //     padding-top: 1px!important;
+  //   }
+  //   .textCol.refer{
+  //     padding-left: 2px!important;
+  //     padding-top: 3px!important;
+  //   }
+  //   .textCol.input{
+  //     padding-top: 3px!important;
+  //     padding-left: 2px!important;
+  //   }
+  //   .textCol.inputnumber{
+  //     padding-top: 3px!important;
+  //   }
+  // }
+  .public_fixedDataTable_bodyRow .textCol >div.has-feedback {
+    margin-left: -8px;
+    margin-top: -3px!important;
   }
 }
 //针对物料档案
-.meta-table.listTable.OrgTable{
-  .editCol{
-    padding: 3px 20px 0 2px!important;
-  }
-  .textCol.listrefer{
-    padding: 3px 20px 0 10px!important;
-    .ant-input{
-      padding-top: 0!important;
-      padding-bottom: 0!important;
-      line-height: 26px;
-    }
-    &:hover{
-      padding-left: 2px!important;
-    }
-  }
-  .public_fixedDataTable_bodyRow:hover{
-    .textCol.listrefer{
-      padding-top: 3px!important;
-    }
-  }
-}
-//针对调价单-UISJ-3
-.meta-table.listTable.ap_adjustprice_body_page_price_data{
-  .editCol{
-    padding: 3px 10px 0 2px!important;
-    &>.refer-div{
-      margin-top: -2px;
-    }
-  }
-  .public_fixedDataTable_bodyRow:hover{
-    .textCol:not(.public_fixedDataTableCell_disabled){
-      padding-top: 3px!important;
-      padding-left: 2px!important;
-    }
-  }
-}
+// .meta-table.listTable.OrgTable{
+//   .editCol{
+//     padding: 3px 20px 0 2px!important;
+//   }
+//   .textCol.listrefer{
+//     padding: 3px 20px 0 10px!important;
+//     .ant-input{
+//       padding-top: 0!important;
+//       padding-bottom: 0!important;
+//       line-height: 26px;
+//     }
+//     &:hover{
+//       padding-left: 2px!important;
+//     }
+//   }
+//   .public_fixedDataTable_bodyRow:hover{
+//     .textCol.listrefer{
+//       padding-top: 3px!important;
+//     }
+//   }
+// }
+// //针对调价单-UISJ-3
+// .meta-table.listTable.ap_adjustprice_body_page_price_data{
+//   .editCol{
+//     padding: 3px 10px 0 2px!important;
+//     &>.refer-div{
+//       margin-top: -2px;
+//     }
+//   }
+//   .public_fixedDataTable_bodyRow:hover{
+//     .textCol:not(.public_fixedDataTableCell_disabled){
+//       padding-top: 3px!important;
+//       padding-left: 2px!important;
+//     }
+//   }
+// }
 .meta-table.listTable.ap_adjustprice_sunbody_page_ml_data{
   .editCol{
     padding: 3px 10px 0 2px!important;
@@ -550,7 +555,10 @@ div[id='pc_product|detail!businessAttribute']>div,
           margin-left: -8px; 
         }
         .basic-input-text>.ac-input-locale{
-          margin-left: -8px;
+          // margin-left: -8px;
+        }
+        .u-form-control {
+          display: block;
         }
       }
     }
@@ -560,6 +568,12 @@ div[id='pc_product|detail!businessAttribute']>div,
           margin-left: -8px;
         }
       }
+    }
+    .editCol .checkradio-container {
+      padding-left: 8px;
+    }
+    .editCol .edit-input-number {
+      padding-top: 1px;
     }
   }
 }
