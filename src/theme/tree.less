@@ -479,60 +479,75 @@
 }
 //rc-tree
 .rc-tree{
-    li{
-        padding: 2px 0;
+    margin: 12px 4px 0px 4px;
+    .rc-tree-treenode{
+        padding: 0px 0px 0px 18px;
+        margin: 1px 0px;
+        border-radius: 2px;
+        display: flex!important;
+        align-items: center;
+        &:hover{
+            background: #edf1f7;
+        }
+        //文件夹图标隐藏
+        span.rc-tree-iconEle{
+            display: none;
+        }
+        //加减号
         span.rc-tree-switcher{
-            background-image: none;
-            border: 1px solid #ccc;
             width: 14px;
             height: 14px;
             line-height: 13px;
-            position: relative;
-            background: #fff;
-            margin-top: 4px;
+            border-radius: 2px;
+            border: 1px solid #CCCCCC;
+            background-image: none;
+            margin-right: 0px;
+            
             &.rc-tree-switcher_open{
+                position: relative;
                 &::before{
                     content: "\e773"!important;
                     transform: rotate(0deg);
                 }
-
             }
             &.rc-tree-switcher_close{
+                position: relative;
                 &::before{
                     content: "\e772"!important;
                     transform: rotate(270deg);
                     transition: transform .3s;
                 }
             }
+            &.rc-tree-switcher-noop{
+                border: 1px solid transparent;
+            }
         }
+        //checkbox
         span.rc-tree-checkbox{
             width: 14px;
             height: 14px;
             background: #FFFFFF;
             border-radius: 2px;
             border: 1px solid #CCCCCC;
-            margin-top: 4px;
-        }
-        .rc-tree-node-content-wrapper{
-            height: 24px;
-            line-height: 24px;
-            padding: 0 8px;
-            border-radius: 4px;
-            margin: 0 3px;
-            span.rc-tree-iconEle{
-                display: none;
-            }
-            &:hover{
-                background: #edf1f7;
-            }
-            &.rc-tree-node-selected{
-                border: none;
-                background: #fdf2dc;
-                &:hover{
-                 background: #fdf2dc;
+            margin: 0px 8px 0px 8px;
+            line-height: 13px;
+            &.rc-tree-checkbox-checked{
+                &::after{
+                    content: "\E6af";
+                    font-weight: 700;
+                    color: #ee2223;
                 }
             }
         }
-        
+    }
+    //选中态变黄色
+    .rc-tree-treenode-selected{
+        background: #FFF5E2;
+        border-radius: 2px;
+        .rc-tree-node-selected{
+            background-color: transparent;
+            box-shadow: none;
+            opacity: 1;
+        }
     }
 }
