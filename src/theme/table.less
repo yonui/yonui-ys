@@ -1671,8 +1671,22 @@
       .u-button{
         border: none;
         background: transparent;
+        max-width: 87px;
+        height: 30px;
+        line-height: 26px;
+        padding: 0px;
         span{
           color: #588CE9 ;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 67px;
+          float: left;
+        }
+        .arrow_direction{
+            float: left;
+            margin-top: 10px;
         }
       }
       .ant-btn {
