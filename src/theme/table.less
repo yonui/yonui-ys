@@ -1018,11 +1018,17 @@
         .groupCondition-HideAllZeroRow{
           .u-checkbox .u-checkbox-label{
             padding-right: 24px;
+            display: block;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            max-width: 180px;
           }
           .u-checkbox .u-checkbox-label:before,
           .u-checkbox .u-checkbox-label:after{
             left: auto;
             right: 0px;
+            top: 0px;
           }
         }
       }
