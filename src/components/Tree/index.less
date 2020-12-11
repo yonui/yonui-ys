@@ -93,70 +93,6 @@
     background-color: #eff1f7;
   }
 }
-// 树结构调整
-.qam_checkprojectclass_tree{
-  .Manual-calculation-left{
-    .unitlistTreeOuter{
-      .unitGroupHeader{
-        .btn-toolbar-bottom{
-          .u-button.btnAddEquality{
-            border:none;
-            svg{
-              margin-right: 8px;
-            }
-            span{
-              color: #588CE9;
-            }
-          }
-        }
-      }
-      .search-tree-3{
-        padding:0 10px;
-        .editable_tree{
-          padding:0 !important;
-          overflow: auto;
-          min-width: auto !important;
-          .u-tree-node-content-wrapper{
-            width: calc(~'100% - 22px') !important;
-            .u-tree-title{
-              width: 100%;
-              .treebody_button{
-                padding:0;
-                i.yonicon{
-                  margin-right: 8px;
-                  &:last-child{
-                    margin-right: 0;
-                  }
-                }
-              }
-            } 
-          }
-          .u-tree-node-content-wrapper-open{
-            .u-tree-title{
-              >span{
-                display: block;
-                width: 100%;
-                .treebody_button{
-                  background: #fff;
-                  position: absolute;
-                  right: 0;
-                  padding:0;
-                }
-              }
-              &:hover{
-                >span{
-                  .treebody_button{
-                    background: #edf1f7;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .form-left.Manual-calculation-left .bg-white.border-r,
 .referModal.TreeTable.u-modal .u-modal-body .leftPanel {
   border-right: 1px solid #ebebeb;
@@ -182,7 +118,7 @@
 .uretail-pop .u-popover-content {
   .u-tree {
     max-height: 224px;
-    overflow: auto;
+    overflow-y: auto;
     &::-webkit-scrollbar {
       width: 0;
     }
