@@ -61,7 +61,6 @@
 
 // 列表页查询条件筛选表单
 .listheadRow {
-  line-height: @base-input-height;
   margin: 0 20px;
   padding: 20px 0 12px;
 
@@ -541,7 +540,7 @@
 
   // 上传长方形图
   .basic-avatar-default {
-    .avatar-uploader {
+    .basic-avatar-btn-item {
       width: 122px;
       height: 62px !important;
 
@@ -1850,11 +1849,11 @@
         width: 10px;
         height: 10px;
         margin-left: 1px;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
       }
   
       .group-self-jian {
-        transform: rotate(180deg) scale(.8);
+        transform: scale(.8);
         transition: transform .3s;
       }
   
@@ -1865,7 +1864,9 @@
     }
   }
 }
-
+.group-title-hide{
+  display: none;
+}
 // treeRefer 多选参照样式
 .uretail-treerefer-selection .ant-select-selection__rendered.multiple {
   display: flex;

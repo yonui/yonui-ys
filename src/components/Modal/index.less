@@ -108,6 +108,10 @@
       }
     }
   }
+  //UISJ-18
+  .u-input-group.simple .u-form-control:not(:last-child){
+    padding-right: 24px!important;
+  }
 }
 
 //新增方案
@@ -540,7 +544,8 @@
                 display: inline-block;
                 margin-left: 20px;
                 .u-checkbox{
-                  vertical-align: unset;
+                    line-height: 18px;
+                    height: 18px;
                 }
               }
 
@@ -609,7 +614,6 @@
                   right: 10px;
 
                   .groupCondition-ColumnDefine-Design {
-                    float: none;
                     span:hover{
                       color: #588ce9;
                     }
@@ -896,6 +900,7 @@
 //   margin-left: 8px;
 // }
 
+.u-modal:not(.new-interactive-scheme-modal),
 .bill-setting-modal {
   .u-modal-footer {
     // .u-button-primary {
@@ -903,6 +908,7 @@
     // }
     .u-button-border {
       background: #eceff1;
+      border: none;
       &:hover {
         color: #505766;
         background: #dfe1e6;
@@ -927,7 +933,7 @@
        .col-float {
          .label-control {
            float: none;
-           text-align: left;
+           text-align: left!important;
            overflow: visible !important;
          }
 
@@ -956,6 +962,13 @@
           text-align: left;
           padding: 0;
         }
+      }
+    }
+    .u-modal-body {
+      .add_defined .tips_popover,
+      .enumeration .tips_popover {
+        top: 20px;
+        left: 368px;
       }
     }
   }

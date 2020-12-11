@@ -472,3 +472,82 @@
 .search-tree-3 .u-tree.searchtree-has-icon li a.u-tree-node-content-wrapper .u-tree-title{
   padding:0 0;
 }
+
+// searchTree如果没有下级，需要将树左移
+.searchtree-has-no-child.u-tree li span.u-tree-switcher{
+  display: none;
+}
+//rc-tree
+.rc-tree{
+    margin: 12px 4px 0px 4px;
+    .rc-tree-treenode{
+        padding: 0px 0px 0px 18px;
+        margin: 1px 0px;
+        border-radius: 2px;
+        display: flex!important;
+        align-items: center;
+        &:hover{
+            background: #edf1f7;
+        }
+        //文件夹图标隐藏
+        span.rc-tree-iconEle{
+            display: none;
+        }
+        //加减号
+        span.rc-tree-switcher{
+            width: 14px;
+            height: 14px;
+            line-height: 13px;
+            border-radius: 2px;
+            border: 1px solid #CCCCCC;
+            background-image: none;
+            margin-right: 0px;
+            
+            &.rc-tree-switcher_open{
+                position: relative;
+                &::before{
+                    content: "\e773"!important;
+                    transform: rotate(0deg);
+                }
+            }
+            &.rc-tree-switcher_close{
+                position: relative;
+                &::before{
+                    content: "\e772"!important;
+                    transform: rotate(270deg);
+                    transition: transform .3s;
+                }
+            }
+            &.rc-tree-switcher-noop{
+                border: 1px solid transparent;
+            }
+        }
+        //checkbox
+        span.rc-tree-checkbox{
+            width: 14px;
+            height: 14px;
+            background: #FFFFFF;
+            border-radius: 2px;
+            border: 1px solid #CCCCCC;
+            margin: 0px 8px 0px 8px;
+            line-height: 13px;
+            &.rc-tree-checkbox-checked{
+                &::after{
+                    content: "\E6af";
+                    font-weight: 700;
+                    color: #ee2223;
+                }
+            }
+        }
+    }
+    //选中态变黄色
+    .rc-tree-treenode-selected{
+        background: #FFF5E2;
+        border-radius: 2px;
+        .rc-tree-node-selected{
+            background-color: transparent;
+            box-shadow: none;
+            opacity: 1;
+        }
+    }
+}

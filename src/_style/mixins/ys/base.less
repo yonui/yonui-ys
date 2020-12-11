@@ -311,7 +311,7 @@ input:-ms-input-placeholder{
   }
   .uretail-notification-notice-close{
     right: 16px;
-    top: 12px;
+    top: 11px;
     opacity: 1;
     font-weight: normal;
   }
@@ -324,6 +324,49 @@ input:-ms-input-placeholder{
     }
     &:hover{
       color:#505766 ;
+    }
+  }
+}
+
+//请购单底部高度-UISJ-1
+.meta-dynamic-view .tab-bottom-txt{
+  padding: 7px 16px!important;
+}
+
+//UISJ-37
+.ys-tabs.u-tabs {
+  .viewCell.viewSetting[id='drft_billtype|isEnabled'],.viewCell.viewSetting[id='drft_billtype|iselecbill']{
+    .ant-row {
+      .col-float{
+        min-height: auto;
+        .u-radio-group{
+          min-height: auto;
+        }
+      }
+    }
+  }
+}
+
+//QDJM-6624
+.meta-dynamic-view{
+  .mdf-footer{
+    .tab-bottom-txt{
+      left: 8px;
+      right: 8px;
+    }
+  }
+}
+.container-browse-mode {
+  .top-fixed.list-top-toolbar{
+    border-bottom: none;
+  }
+}
+
+//UISJ-34
+.meta-dynamic-view{
+  .line-tabs-menu-container{
+    .u-tabs-tab.u-tabs-tab-active{
+      line-height: 40px !important;
     }
   }
 }

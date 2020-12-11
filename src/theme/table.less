@@ -283,6 +283,7 @@
 
       .btn-toolbar-bottom {
         padding-right: 0px !important;
+        margin: 0!important;
       }
 
       .btn-toolbar-bottom .col-auto {
@@ -1018,11 +1019,17 @@
         .groupCondition-HideAllZeroRow{
           .u-checkbox .u-checkbox-label{
             padding-right: 24px;
+            display: block;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            max-width: 170px;
           }
           .u-checkbox .u-checkbox-label:before,
           .u-checkbox .u-checkbox-label:after{
             left: auto;
             right: 0px;
+            top: 0px;
           }
         }
       }
@@ -1032,11 +1039,12 @@
       }
 
       .groupCondition-HideAllZeroRow {
-        width: 180px;
-        float: right;
+        width: 180px!important;
+        float: right!important;
         height: 28px;
+        display: block!important;
         line-height: 25px;
-        margin-left: 23px!important;
+        margin-left: 0px!important;
         .ant-checkbox-wrapper {
           display: inline;
 
@@ -1665,8 +1673,22 @@
       .u-button{
         border: none;
         background: transparent;
+        max-width: 87px;
+        height: 30px;
+        line-height: 26px;
+        padding: 0px;
         span{
           color: #588CE9 ;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 67px;
+          float: left;
+        }
+        .arrow_direction{
+            float: left;
+            margin-top: 10px;
         }
       }
       .ant-btn {
@@ -1958,21 +1980,7 @@
 
       .retail-table-cell {
         .public_fixedDataTableCell_wrap3 {
-          .textCol {
-            .no-avatar-man {//TINPER-2676
-              width: 28px;
-              height: 28px;
-              background: url(images/icon-person.png);
-              background-size: 100%;
-              margin-top: 3px;
-              margin-left: 10px;
-              &.cell-avatar-logo {
-                background: url(images/Default-picture.png);
-                background-size: 100%;
-              }
-            }
-          }
-
+          
           .public_fixedDataTableCell_disabled.textCol {
             margin-left: 0 !important
           }
@@ -1980,12 +1988,26 @@
           .editCol {
             text-align: left;
             padding: 12px 10px;
-            padding-right: 20px !important;
+            // padding-right: 20px !important;
 
             div:not(.checkradio-checked) {
               height: 28px
             }
           }
+        }
+      }
+    }
+    .textCol {
+      .no-avatar-man {//TINPER-2676
+        width: 28px;
+        height: 28px;
+        background: url(images/icon-person.png);
+        background-size: 100%;
+        margin-top: 3px;
+        margin-left: 10px;
+        &.cell-avatar-logo {
+          background: url(images/Default-picture.png);
+          background-size: 100%;
         }
       }
     }
@@ -2217,6 +2239,12 @@
             height: 20px;
             float: left;
             margin: 10px 10px 10px 15px;
+          }
+          div{
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
 
@@ -3048,11 +3076,11 @@
 .table-pagination-container {
   .table-selected-rows-content {
     float: left;
-    height: 36px;
+    height: 40px;
     text-align: center;
     padding-left: 10px;
-    line-height: 36px;
-    margin-top: 10px;
+    line-height: 40px;
+    margin-top: 0;
     &>span {
       cursor: pointer;
       font-size: 14px;
@@ -3063,6 +3091,11 @@
         font-size: 12px;
       }
     }
+  }
+  .pagination-new{
+    margin-top: 0;
+    padding-bottom: 0;
+    height: 40px;
   }
 }
 

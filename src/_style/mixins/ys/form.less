@@ -8,14 +8,14 @@
 .form-label-mixin() {
   display: block;
   position: relative;
-  width: 100px !important;
-  flex: 0 0 100px;
+  width: 110px !important;
+  flex: 0 0 110px;
   line-height: 14px;
   // max-height: 30px;
   color: #666;
   max-height: 28px;
   overflow: hidden;
-  padding-left: 15px;
+  padding-left: 24px;
   padding-right: 8px;
   text-align: right;
   word-wrap: break-word;
@@ -460,47 +460,120 @@ div[id='pc_product|detail!businessAttribute']>div,
 }
 
 //QDJM-5999-滑动出现input编辑框
-.meta-table.listTable.OrgTable{
+.meta-table.listTable{
   .editCol{
-    padding: 3px 10px!important;
-    padding-left: 2px!important;
+    padding: 3px 10px 0 2px!important;
   }
-  .textCol.listrefer{
-    padding: 3px 20px 3px 10px!important;
-    .ant-input{
-      padding-top: 0!important;
-      padding-bottom: 0!important;
-      line-height: 26px;
-    }
-    &:hover{
-      padding-left: 2px!important;
-    }
+  // .public_fixedDataTable_bodyRow:hover{
+  //   .textCol.listrefer{
+  //     padding-left: 2px!important;
+  //     padding-top: 1px!important;
+  //   }
+  //   .textCol.refer{
+  //     padding-left: 2px!important;
+  //     padding-top: 3px!important;
+  //   }
+  //   .textCol.input{
+  //     padding-top: 3px!important;
+  //     padding-left: 2px!important;
+  //   }
+  //   .textCol.inputnumber{
+  //     padding-top: 3px!important;
+  //   }
+  // }
+  .public_fixedDataTable_bodyRow .textCol >div.has-feedback {
+    margin-left: -8px;
+    margin-top: -1px!important;
   }
-  .public_fixedDataTable_bodyRow:hover{
-    .textCol.listrefer{
-      padding-left: 2px!important;
+}
+//针对物料档案
+// .meta-table.listTable.OrgTable{
+//   .editCol{
+//     padding: 3px 20px 0 2px!important;
+//   }
+//   .textCol.listrefer{
+//     padding: 3px 20px 0 10px!important;
+//     .ant-input{
+//       padding-top: 0!important;
+//       padding-bottom: 0!important;
+//       line-height: 26px;
+//     }
+//     &:hover{
+//       padding-left: 2px!important;
+//     }
+//   }
+//   .public_fixedDataTable_bodyRow:hover{
+//     .textCol.listrefer{
+//       padding-top: 3px!important;
+//     }
+//   }
+// }
+// //针对调价单-UISJ-3
+// .meta-table.listTable.ap_adjustprice_body_page_price_data{
+//   .editCol{
+//     padding: 3px 10px 0 2px!important;
+//     &>.refer-div{
+//       margin-top: -2px;
+//     }
+//   }
+//   .public_fixedDataTable_bodyRow:hover{
+//     .textCol:not(.public_fixedDataTableCell_disabled){
+//       padding-top: 3px!important;
+//       padding-left: 2px!important;
+//     }
+//   }
+// }
+.meta-table.listTable.ap_adjustprice_sunbody_page_ml_data{
+  .editCol{
+    padding: 3px 10px 0 2px!important;
+    &>.refer-div{
+      margin-top: -2px!important;
     }
   }
 }
 //UISJ-5-滑动出现input编辑框
 .u-modal{
   .bill-setting-modal {
-    .public_fixedDataTable_bodyRow:hover{
-      .textCol{
-        .basic-input-text{
-          margin-left: -9px;
+    .ant-search-input-wrapper {
+      .u-input-group.simple {
+        .u-form-control:not(:last-child){
+          padding-right:45px!important;
         }
       }
     }
     .public_fixedDataTableCell_cellContent{
       .textCol{
         .basic-input-text{
-          margin-left: -9px;
+          margin-left: -8px;
         }
       }
-      .editCol>div{
-        margin-left: -9px;
-       }
+      .editCol{
+        .number-control{
+          margin-left: -8px;
+        }
+        .edit-input-number>.u-select{
+          margin-left: -8px; 
+        }
+        .basic-input-text>.ac-input-locale{
+          // margin-left: -8px;
+        }
+        .u-form-control {
+          display: block;
+        }
+      }
+    }
+    .public_fixedDataTable_bodyRow:hover{
+      .textCol{
+        .basic-input-text{
+          margin-left: -8px;
+        }
+      }
+    }
+    .editCol .checkradio-container {
+      padding-left: 8px;
+    }
+    .editCol .edit-input-number {
+      padding-top: 1px;
     }
   }
 }

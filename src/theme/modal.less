@@ -1161,7 +1161,7 @@
 }
 
 .public_fixedDataTableCell_cellContent .editCol .ant-search-input-wrapper {
-  margin-top: -1px;
+  // margin-top: -1px;
 }
 
 .ant-confirm .ant-confirm-btns {
@@ -1564,7 +1564,6 @@
 
     .input-control {
       height: 28px;
-      overflow: auto;
       width: calc(~'100% - 130px');
     }
   }
@@ -3866,7 +3865,8 @@
 /*参照部分-筛选条件*/
 .u-modal .referModal.Table,
 .u-modal .TreeTable,
-.referModal.TransferTable{
+.referModal.TransferTable,
+.u-modal .referModal.modalkey_auth_User_Ref{
   margin-top: 0px;
 
   //表格里面的checkbox
@@ -3921,6 +3921,16 @@
     bottom: 0;
     overflow-y: hidden;
     padding-right: 15px;
+
+    .s-popover-inner-span {
+      float: right;
+    }
+    .filter-button-wrapper {
+      float: right;
+      .filter-reset {
+        margin-right: 0;
+      }
+    }
   }
 
   .ant-popover-open-count {
@@ -3965,8 +3975,8 @@
 
     .input-control {
       height: 28px;
-      overflow: auto;
       width: calc(~'100% - 130px');
+      overflow-y: hidden;
     }
   }
 
@@ -4083,7 +4093,19 @@
     }
   }
 }
-
+//分配用户参照和分配角色参照
+.referModal.TransferTable,
+.referModal.modalkey_auth_User_Ref{
+    .readOnlyTable{
+        margin-bottom: 0px;
+    }
+} 
+//分配用户参照
+.referModal.modalkey_auth_User_Ref{
+    .new-filter-container{
+        padding-top: 14px;
+    }
+}
 .u-modal .TreeTable .u-modal-body {
   margin-top: 0;
 }

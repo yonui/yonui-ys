@@ -63,6 +63,9 @@
   div[id="pc_product|detail!businessAttribute"]>div>.ant-row {
     display: flex;
   }
+  .control-flex .control-text.invoice-remark {
+    width: auto;
+  }
 }
 
 // 和 tablines 并列的表格右边的 toolbar 样式特别处理
@@ -168,14 +171,19 @@
 
 // 查询区域
 .listheadRow {
+  line-height:normal;
   // 操作按钮
   .btn-toolbar-bottom {
     padding-bottom: 8px;
     padding-right: 0px;
-
     >.col-auto {
       display: flex;
       height: 28px;
+      position: static!important;
+      .u-button-primary[disabled]{
+        color: #fff;
+        opacity: 0.5;
+      }
     }
   }
   // 店存入库 - 入库 - 表格上方单选间距

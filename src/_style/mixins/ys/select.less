@@ -223,6 +223,9 @@
 
 .ant-select-selection__clear {
   right: 26px !important;
+  .ant-select-clear-icon:only-child {
+    display: none;
+  }
 }
 
 .has-error .ant-select-selection {
@@ -241,4 +244,35 @@
 
 .u-select-arrow:hover:before {
   color: #505766;
+}
+
+//select-公共样式-UISJ-9
+.u-select-dropdown{
+  padding: 8px 0;
+  .u-select-dropdown-menu-item-active,.u-select-dropdown-menu-item:hover{
+    background-color:#f3f5f9 ;
+  }
+  .u-select-dropdown-menu-item-selected,.u-select-dropdown-menu-item-selected:hover{
+    background-color: #fff7e7;
+  }
+  .u-select-dropdown-menu-item{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+  }
+}
+.u-dropdown {
+  .u-dropdown-menu {
+    .u-dropdown-menu-item{
+      height: 32px;
+      line-height: 32px;
+      padding: 0 12px;
+    }
+  }
+  .u-dropdown-menu > .u-dropdown-menu-item:hover{
+    background-color:#f3f5f9 ;
+  }
+  .u-dropdown-menu-item.u-dropdown-menu-item-selected:hover{
+    background-color: #fff7e7;
+  }
 }
