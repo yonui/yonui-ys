@@ -744,9 +744,19 @@
 // }
 
 .u-modal-dialog {
+
   // top: 80px;
   &.referModal {
     top: 30px;
+  }
+
+  &.addfilter_content {
+    .u-modal-body .add_defined,
+    .u-modal-body .enumeration {
+      .error {
+        left: 0;
+      }
+    }
   }
 
   .btn-toolbar-bottom {
