@@ -750,15 +750,6 @@
     top: 30px;
   }
 
-  &.addfilter_content {
-    .u-modal-body .add_defined,
-    .u-modal-body .enumeration {
-      .error {
-        left: 0;
-      }
-    }
-  }
-
   .btn-toolbar-bottom {
     display: flex;
     justify-content: flex-end;
@@ -975,10 +966,16 @@
       }
     }
     .u-modal-body {
-      .add_defined .tips_popover,
-      .enumeration .tips_popover {
-        top: 20px;
-        left: 368px;
+      .add_defined,
+      .enumeration {
+        .tips_popover {
+          top: 20px;
+          left: 368px;
+        }
+
+        .error {
+          left: 0;
+        }
       }
     }
   }
