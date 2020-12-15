@@ -1,5 +1,6 @@
 // PopoverAdapter
 import React, { Component } from 'react'
+import { findDOMNode } from 'react-dom'
 
 import Popover from 'bee-popover'
 import classnames from 'classnames'
@@ -45,7 +46,7 @@ class PopoverAdapter extends Component {
   }
 
   getContainerTarget = () => {
-    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer() : this.props.getPopupContainer
+    return typeof this.props.getPopupContainer === 'function' ? this.props.getPopupContainer(findDOMNode(this)) : this.props.getPopupContainer
   }
 
   render () {
