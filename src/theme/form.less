@@ -1331,12 +1331,25 @@
   }
 }
 
-.control-radio .u-radio-group {
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  min-height: 24px;
-  // padding-top: 4px;
+//UISJ-89
+.control-radio {
+  &>.ant-row{
+    &>.col-float{
+      .viewCell{
+        display: flex;
+        align-items: center;
+        .u-radio-group {
+          min-height: auto;
+        }
+      }
+    }
+  }
+  .u-radio-group {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    min-height: 24px;
+  }
 }
 
 .has-related {
