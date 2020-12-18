@@ -379,3 +379,65 @@ input:-ms-input-placeholder{
     }
   }
 }
+
+//UISJ-62/UISJ-64-采购合同
+.yccontractlist{
+  .u-tabs-content {
+    .listheadRow{
+      .advance-model{
+        height: 30px;
+        margin-top: 6px;
+        .advance-tabs {
+          .active-advance-tab {
+            margin: 0px 10px;
+            .triangle-up{
+              border-bottom:4px solid #505766;
+              border-left:7px solid transparent;
+              border-right:7px solid transparent;
+            }
+          }
+          .no-active-tab{
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+//QDJM-7201
+.u-tooltip.inverse.bottom {
+  padding: 0;
+  .tooltip-arrow{
+    display: none;
+  }
+  .advance-tag{
+    margin: 0;
+    .u-tag-checkable{
+      margin: 0!important;
+      height: 28px;
+      line-height: 28px;
+      :hover:not(.u-tag-checkable-checked){
+        border-color: transparent;
+        background: #f3f5f9;
+      }
+      &.u-tag-checkable-checked{
+        background: #fff7e7;
+        border-color: transparent;
+      }
+    }
+  } 
+}
+
+//UISJ-99
+.st_storecheckrealitylist.ustock{
+  .tab-menu+.tab-top-right .btn-toolbar-bottom {
+    .col-auto .pull-left {
+      margin-right: 0;
+      .u-checkbox{
+        height: 28px;
+        line-height: 28px;
+        margin-right: 8px;
+      }
+    }
+  }
+}

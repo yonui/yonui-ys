@@ -3089,7 +3089,7 @@ a.Toolbar_Notification_Log {
 
 .list-top-toolbar {
   overflow: hidden;
-  padding: 8px 20px;
+  padding: 8px 20px 0;
   z-index: 9999;
 }
 
@@ -3097,6 +3097,9 @@ a.Toolbar_Notification_Log {
   padding-bottom: 0px;
 }
 
+.group-title-hide{
+  margin-top: 16px;
+}
 // 需要置顶的 .list-top-toolbar
 .container-browse-mode {
   .top-fixed.list-top-toolbar{
@@ -4535,7 +4538,7 @@ div[id='bd_staff_card|photo'] {
     }
 
     .bg-white.border-r {
-      border-right: none;
+      border-right: none!important;
       position: relative; // zhangkunk 左树右表展开折叠效果
 
       .search-tree-2 {
