@@ -3102,17 +3102,28 @@ a.Toolbar_Notification_Log {
 }
 // 需要置顶的 .list-top-toolbar
 .container-browse-mode {
-  .top-fixed.list-top-toolbar{
+  .list-top-toolbar {
     position: fixed;
-    width: calc(~'100% - 16px');
-    background: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    padding: 8px 20px;
-    // top: 0; 由js 动态设置
+    left: 8px;
+    right: 8px;
+
+    & + div {
+      margin-top: 48px;
+    }
+
+    &.top-fixed {
+      position: fixed;
+      background: #fff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      padding: 8px 20px;
+      transform: translateZ(0);
+      // top: 0; 由js 动态设置
+    }
   }
+
   .form-base {
-    .top-fixed.list-top-toolbar {
-      width: calc(~'100% - 16px - 240px');
+    .list-top-toolbar {
+      left: 248px;
     }
   }
 }
