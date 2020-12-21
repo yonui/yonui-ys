@@ -456,11 +456,59 @@ input:-ms-input-placeholder{
   }
 }
 
-//UISJ-116-时间选择框
+//UISJ-116-时间选择框底部按钮
 .new-picker-popover {
   .u-popconfirm-confirm {
     .u-button.u-popconfirm-btn{
       box-shadow: none;
+    }
+  }
+}
+
+//UISJ-84-时间选择控件
+.rc-calendar-picker,.rc-calendar{
+  //年
+  .rc-calendar-year-panel-header,.rc-calendar-month-panel-header{
+    &>a{
+      color: #999;
+      &:hover{
+        color: #578ce9;
+      }
+    }
+  }
+  .rc-calendar-year-panel-selected-cell{
+    .rc-calendar-year-panel-year{
+      background: #578ce9!important;
+      &:hover{
+        background: #578ce9!important;
+      }
+    }
+  }
+  .rc-calendar-year-panel-year{
+    height: 28px;
+    line-height: 28px;
+    &:hover{
+      background: #f5f5f5;
+      color: #666;
+    }
+  }
+  //月
+  .rc-calendar-month-panel-selected-cell{
+    .rc-calendar-month-panel-month{
+      background: #578ce9!important;
+      &:hover{
+        background: #578ce9!important;
+      }
+    }
+  }
+  .rc-calendar-month-panel-cell{
+    .rc-calendar-month-panel-month{
+      height: 28px;
+      line-height: 28px;
+      &:hover{
+        background: #f5f5f5;
+        color: #666;
+      }
     }
   }
 }
