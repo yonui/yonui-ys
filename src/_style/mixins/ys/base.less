@@ -416,9 +416,15 @@ input:-ms-input-placeholder{
       margin: 0!important;
       height: 28px;
       line-height: 28px;
-      :hover:not(.u-tag-checkable-checked){
+      :hover{
         border-color: transparent;
         background: #f3f5f9;
+      }
+      &.u-tag-checkable-checked{
+        &:hover{
+          background: #fff7e7;
+          border-color: transparent;
+        }
       }
       &.u-tag-checkable-checked{
         background: #fff7e7;
