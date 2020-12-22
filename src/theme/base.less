@@ -3108,13 +3108,9 @@ a.Toolbar_Notification_Log {
     right: 8px;
 
     & + div {
-      margin-top: 48px;
+      margin-top: 48px!important;
       // 避免相邻的是隐藏的元素
       &.hide {
-        height: 48px;
-        visibility: hidden;
-        margin-top: 0;
-        margin-bottom: 0;
         display: block !important;
       }
     }
