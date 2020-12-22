@@ -416,6 +416,9 @@ input:-ms-input-placeholder{
       margin: 0!important;
       height: 28px;
       line-height: 28px;
+      width: 100%;
+      text-align: left;
+      position: relative;
       &:hover{
         border-color: transparent;
         background: #f3f5f9;
@@ -424,6 +427,17 @@ input:-ms-input-placeholder{
         &:hover{
           background: #fff7e7;
           border-color: transparent;
+        }
+        &::after{
+          content: "\E6AF";
+          color: #ee2233;
+          font-family: 'iconfont';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          right: 10px;
+          top: 0;
+          font-size: 16px;
         }
       }
       &.u-tag-checkable-checked{
