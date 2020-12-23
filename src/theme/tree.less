@@ -500,19 +500,27 @@
             border: 1px solid #CCCCCC;
             background-image: none;
             margin-right: 0px;
-            
+            &::before{
+                transform: scale(.58333333) rotate(0deg);
+                display: block;
+                font-weight: 700;
+                color: #333;
+                transition: transform .3s;
+                font-size: 14px;
+                font-family: iconfont;
+            }
             &.rc-tree-switcher_open{
                 position: relative;
                 &::before{
                     content: "\e773"!important;
-                    transform: rotate(0deg);
+                    transform: scale(.58333333) rotate(0deg);
                 }
             }
             &.rc-tree-switcher_close{
                 position: relative;
                 &::before{
                     content: "\e772"!important;
-                    transform: rotate(270deg);
+                    transform: rotate(270deg) scale(.58333333);
                     transition: transform .3s;
                 }
             }
@@ -534,6 +542,7 @@
                     content: "\E6af";
                     font-weight: 700;
                     color: #ee2223;
+                    font-family: iconfont;
                 }
             }
         }
