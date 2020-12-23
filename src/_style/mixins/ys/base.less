@@ -381,25 +381,22 @@ input:-ms-input-placeholder{
 }
 
 //UISJ-62/UISJ-64-采购合同
-.yccontractlist{
-  .u-tabs-content {
-    .listheadRow{
-      .advance-model{
-        height: 30px;
-        margin-top: 6px;
-        .advance-tabs {
-          .active-advance-tab {
-            margin: 0px 10px;
-            .triangle-up{
-              border-bottom:4px solid #505766;
-              border-left:7px solid transparent;
-              border-right:7px solid transparent;
-            }
-          }
-          .no-active-tab{
-            margin: 0px 10px;
-          }
+.listheadRow{
+  .advance-model{
+    height: 30px;
+    margin-top: 6px;
+    .advance-tabs {
+      .active-advance-tab {
+        margin: 0px 10px;
+        color: #ee2233;
+        .triangle-up{
+          border-bottom:4px solid #505766;
+          border-left:7px solid transparent;
+          border-right:7px solid transparent;
         }
+      }
+      .no-active-tab{
+        margin: 0px 10px;
       }
     }
   }
@@ -407,6 +404,7 @@ input:-ms-input-placeholder{
 //QDJM-7201
 .u-tooltip.inverse.bottom {
   padding: 0;
+  transform:translateY(-8px);
   .tooltip-arrow{
     display: none;
   }
