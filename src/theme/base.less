@@ -3097,9 +3097,18 @@ a.Toolbar_Notification_Log {
   padding-bottom: 0px;
 }
 
-.group-title-hide{
-  margin-top: 16px;
+// .group-title-hide{
+//   margin-top: 16px;
+// }
+// 编辑态
+.container-edit-mode {
+  .list-top-toolbar.hide + .group-container {
+    .group-title-hide {
+      margin-top: 16px;
+    }
+  }
 }
+
 // 需要置顶的 .list-top-toolbar
 .container-browse-mode {
   .list-top-toolbar {
