@@ -532,16 +532,17 @@ input:-ms-input-placeholder{
 }
 
 //左侧树不超出不显示横线滚动条
-// .split_left{
-//   .u-tree {
-//     li {
-//       span.u-tree-switcher{
-//         width: 14px!important;
-//         height:14px!important;
-//       }
-//     }
-//   }
-// }
+.split_left{
+  .search-tree-3 {
+    .u-tree {
+      li {
+        a.u-tree-node-content-wrapper{
+          width: calc(~'100% - 22px')!important;   
+        }
+      }
+    }
+  }
+}
 
 //UISJ-141-招聘需求详情，时间组件的icon大小
 .hrrecruit{
