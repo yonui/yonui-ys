@@ -559,3 +559,25 @@ input:-ms-input-placeholder{
     }
   }
 }
+
+//UISJ-145-公式编辑器弹窗按钮样式错误
+.Formula-Designer{
+  .RightContent {
+    .show-more-operatorData{
+      color: #999999;
+      margin-top: 5px;
+      &:hover{
+        color: #333333;
+      }
+    }
+  }
+  .modal-footer{
+    .u-button{
+      margin-left: 8px;
+    }
+    .u-button:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname):disabled:hover{
+      background: linear-gradient(-45deg,#fc4c2f,#ee2223);
+      color: #fff;
+    }
+  }
+}
