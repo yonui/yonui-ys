@@ -152,6 +152,12 @@
 
   .isInFilterJSX-Select {
     line-height: 100%;
+    .u-select {
+      .u-select-selection{
+        height: 28px;
+        overflow: auto;
+      }
+    }
   }
 
   .u-select-selection--single {
@@ -465,8 +471,9 @@
       }
 
       .invoice-remark {
-        height: 52px;
-        overflow-y: auto;
+        // height: 52px;
+        // overflow-y: auto;
+        overflow: hidden;
       }
     }
   }
@@ -3485,7 +3492,7 @@ i.uf-search,
 }
 
 //QDJM-6304-fyf
-.meta-dynamic-view.recruit_post_list{
+.meta-dynamic-view{
   .u-tabs-editable-card{
     .input-control {
       .has-related{

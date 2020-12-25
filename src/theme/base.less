@@ -3090,29 +3090,53 @@ a.Toolbar_Notification_Log {
 .list-top-toolbar {
   overflow: hidden;
   padding: 8px 20px 0;
-  z-index: 9999;
+  z-index: 1700;
 }
 
 .list-top-toolbar+.listheadRow {
   padding-bottom: 0px;
 }
 
-.group-title-hide{
-  margin-top: 16px;
+// .group-title-hide{
+//   margin-top: 16px;
+// }
+// 编辑态
+.container-edit-mode {
+  .list-top-toolbar.hide + .group-container {
+    .group-title-hide {
+      margin-top: 16px;
+    }
+  }
 }
+
 // 需要置顶的 .list-top-toolbar
 .container-browse-mode {
-  .top-fixed.list-top-toolbar{
+  .list-top-toolbar {
     position: fixed;
-    width: calc(~'100% - 16px');
-    background: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    padding: 8px 20px;
-    // top: 0; 由js 动态设置
+    left: 8px;
+    right: 8px;
+
+    & + div {
+      margin-top: 48px!important;
+      // 避免相邻的是隐藏的元素
+      &.hide {
+        display: block !important;
+      }
+    }
+
+    &.top-fixed {
+      position: fixed;
+      background: #fff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      padding: 8px 20px;
+      transform: translateZ(0);
+      // top: 0; 由js 动态设置
+    }
   }
+
   .form-base {
-    .top-fixed.list-top-toolbar {
-      width: calc(~'100% - 16px - 240px');
+    .list-top-toolbar {
+      left: 248px;
     }
   }
 }
@@ -4497,8 +4521,7 @@ div[id='bd_staff_card|photo'] {
   .basic-input-textarea {
     .input-control {
       .control-text {
-        height: 52px;
-        ;
+        // height: 52px;
       }
     }
   }
@@ -4696,7 +4719,7 @@ div[id='bd_staff_card|photo'] {
 
 .anchor-wrapper {
   position: fixed;
-  right: 8px;
+  right: 0;
   top: 136px!important;
   z-index: 1000;
 
@@ -4744,7 +4767,7 @@ div[id='bd_staff_card|photo'] {
   position: relative;
   border-right: none;
   border-radius: 3px;
-  padding: 12px 0 2px 40px;
+  padding: 12px 0 2px 28px;
   padding-bottom: 20px;
   border: solid 1px #ECECEC;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.06);
@@ -4823,7 +4846,7 @@ div[id='bd_staff_card|photo'] {
         border: #E4E4E4 1px solid;
         background-color: #fff;
         position: absolute;
-        left: -24px;
+        left: -14px;
         top: 11px;
         z-index: 2;
       }
@@ -4831,7 +4854,7 @@ div[id='bd_staff_card|photo'] {
       &:after {
         position: absolute;
         content: '';
-        left: -21px;
+        left: -11px;
         top: 14px;
         display: block;
         height: 27px;
