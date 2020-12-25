@@ -1977,11 +1977,12 @@ i.uf-search,
 }
 
 // 地图控件
-.viewCell .map .ant-row {
-  display: block;
+.viewCell .map > .ant-row {
+  display: flex;
 
   .label-control {
     line-height: @base-input-height;
+    align-self: flex-start;
   }
 
   .ant-row {
