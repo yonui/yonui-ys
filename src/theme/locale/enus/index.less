@@ -12,7 +12,7 @@
 @small-padding: 28px;
 
 // 西语输入类控件，label + input
-.region-lang(@leftPadding: 80px, @labelWidthPercent: 80%) {
+.region-lang(@leftPadding:0, @labelWidthPercent: 100%) {
   .ant-row {
     display: block!important;
     min-height: 48px!important;
@@ -30,7 +30,7 @@
     width: @labelWidthPercent !important;
     .ellipsis();
     float: none;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
   .ant-row .input-control {
     width: @labelWidthPercent !important;
@@ -44,6 +44,45 @@
     top: 48px;
   }
 
+}
+
+.container-edit-mode{
+  .group-container{
+    .group-buttons{
+      &>.ant-row{
+        padding: 0 24px;
+      }
+    }
+  }
+  .viewSetting.viewCell{
+    padding: 0 8px;
+    &>.basic-control{
+      margin-bottom: 16px;
+    }
+  }
+  .viewCell {
+    .ant-row{
+      margin-bottom: 0;
+      textarea{
+        margin-top: 0;
+      }
+    }
+  }
+  .ant-search-input-wrapper{
+    vertical-align: 0;
+  }
+  div[id$="|tips"]{
+    position: static;
+    width: auto!important;
+    padding: 0!important;
+    margin-left: 10px!important;
+  }
+  div[id="pc_product|productTemplate_NameTips"]{
+    position: static;
+    width: auto!important;
+    padding: 0!important;
+    margin-left: 10px!important;
+  }
 }
 
 .listheadRow .filter-hide {
@@ -103,17 +142,17 @@
   &.ant-row {
     display: block;
     min-height: 48px;
-    padding-left: @normal-padding;
+    padding-left: 0;
     .p-v-5 {
       padding: 0;
       line-height: 16px;
       text-align: left;
-      width: 80% !important;
+      width: 100% !important;
       .ellipsis();
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     .TagList {
-      width: 80% !important;
+      width: 100% !important;
     }
   }
 }
