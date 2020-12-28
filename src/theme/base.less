@@ -754,9 +754,22 @@
         border-color: #DBE0E5;
         background: #f7f9fd;
         margin-bottom: 0 !important;
+        max-width: 100%;
 
         &:hover {
           border-color: #DBE0E5;
+        }
+
+        .u-tag-text {
+          max-width: calc(100% - 20px);
+          display: inline-block;
+          overflow: hidden;
+          vertical-align: top;
+          text-overflow: ellipsis;
+        }
+
+        .uf-close {
+          vertical-align: top;
         }
 
         .uf-close:hover {
