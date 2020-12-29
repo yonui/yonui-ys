@@ -3151,7 +3151,17 @@ a.Toolbar_Notification_Log {
     }
   }
 }
-
+/* fix: UDH-29949 */
+.container-edit-mode.container-less-height{
+  .list-top-toolbar {
+    & + div {
+      margin-top: 16px;
+      &.hide {
+        display: block !important;
+      }
+    }
+  }
+}
 /*pc商品选配*/
 
 .special-rows {
