@@ -754,9 +754,22 @@
         border-color: #DBE0E5;
         background: #f7f9fd;
         margin-bottom: 0 !important;
+        max-width: 100%;
 
         &:hover {
           border-color: #DBE0E5;
+        }
+
+        .u-tag-text {
+          max-width: calc(100% - 20px);
+          display: inline-block;
+          overflow: hidden;
+          vertical-align: top;
+          text-overflow: ellipsis;
+        }
+
+        .uf-close {
+          vertical-align: top;
         }
 
         .uf-close:hover {
@@ -3102,10 +3115,8 @@ a.Toolbar_Notification_Log {
 // }
 // 编辑态
 .container-edit-mode {
-  .list-top-toolbar.hide + .group-container {
-    .group-title-hide {
-      margin-top: 16px;
-    }
+  .group-title-hide {
+    margin-top: 16px;
   }
 }
 
@@ -3143,7 +3154,17 @@ a.Toolbar_Notification_Log {
     }
   }
 }
-
+/* fix: UDH-29949 */
+.container-edit-mode.container-less-height{
+  .list-top-toolbar {
+    & + div {
+      margin-top: 16px;
+      &.hide {
+        display: block !important;
+      }
+    }
+  }
+}
 /*pc商品选配*/
 
 .special-rows {
@@ -4989,7 +5010,7 @@ div[id='bd_staff_card|photo'] {
     width: 120px;
     height: 60px;
     border-radius: 4px;
-    background: url(images/ad.png) center center #f3f6f8;
+    // background: url(images/ad.png) center center #f3f6f8;
     cursor: pointer;
 
     .basic-avatar-btn-item {

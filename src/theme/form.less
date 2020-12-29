@@ -1977,11 +1977,12 @@ i.uf-search,
 }
 
 // 地图控件
-.viewCell .map .ant-row {
-  display: block;
+.viewCell .map > .ant-row {
+  display: flex;
 
   .label-control {
     line-height: @base-input-height;
+    align-self: flex-start;
   }
 
   .ant-row {
@@ -2167,6 +2168,7 @@ i.uf-search,
 }
 
 .st_storecheckplanhead {
+  padding-top: 8px;
   .viewContainer.width-percent-33 {
     padding-left: 15px;
 
@@ -3492,31 +3494,35 @@ i.uf-search,
 }
 
 //QDJM-6304-fyf
-// .meta-dynamic-view{
-//   .u-tabs-editable-card{
-//     .input-control {
-//       .has-related{
-//         .viewCell{
-//           width: calc(~'50% - 0px');        
-//         }
-//         .viewSetting.viewCell{
-//           width: calc(~'50% + 20px');
-//         }
-//         .viewSetting[id='recruit_post_card|salaryMax']{
-//           .number-control>.ant-row{
-//             .label-control{
-//               flex: 0 0 20px;
-//               padding: 0;
-//               text-align: center;
-//               margin-top: -4px;
-//             }
-//             .input-control {
-//               width:100%!important;
-//               align-self: flex-start;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+.meta-dynamic-view{
+  .u-tabs-editable-card{
+    .group-buttons{
+      .viewCell[id='recruit_post_card|salaryMin']{
+        .input-control {
+          .has-related{
+            .viewCell{
+              width: calc(~'50% - 0px');        
+            }
+            .viewSetting.viewCell{
+              width: calc(~'50% + 20px');
+            }
+            .viewSetting[id='recruit_post_card|salaryMax']{
+              .number-control>.ant-row{
+                .label-control{
+                  flex: 0 0 20px;
+                  padding: 0;
+                  text-align: center;
+                  margin-top: -4px;
+                }
+                .input-control {
+                  width:100%!important;
+                  align-self: flex-start;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
