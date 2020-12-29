@@ -27,6 +27,7 @@
     padding: 0;
     line-height: 16px;
     text-align: left;
+    font-size: 12px;
     width: @labelWidthPercent !important;
     .ellipsis();
     float: none;
@@ -93,7 +94,7 @@
     padding-right: 32px;
     .viewSetting.viewCell{
       &>.basic-control{
-        margin-bottom: 16px;
+        margin-bottom: 24px;
       }
       .control-text{
         padding: 0;
@@ -101,8 +102,15 @@
     }
   }
   .ant-row {
-    .label-control{
-      margin-bottom: 0!important;
+    .control-width{
+      line-height: 12px;
+      height: auto;
+      .control-text{
+        height: auto;
+        min-height: auto;
+        line-height: 12px;
+        border: none;
+      }
     }
   }
 }
@@ -225,7 +233,7 @@
     padding-left: 0;
     .p-v-5 {
       padding: 0;
-      line-height: 16px;
+      line-height: 12px;
       text-align: left;
       width: 100% !important;
       .ellipsis();
