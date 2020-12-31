@@ -479,11 +479,11 @@
     height: 100%;
     overflow-y: auto;
     .rc-tree-treenode{
-        padding: 0px 0px 0px 18px;
-        margin: 1px 0px;
         border-radius: 2px;
         display: flex!important;
         align-items: center;
+        line-height: 24px;
+        margin-bottom:10px;
         &:hover{
             background: #edf1f7;
         }
@@ -557,5 +557,67 @@
             opacity: 1;
         }
     }
+    .rc-tree-node-content-wrapper {
+      width: calc(~'100% - 22px') !important;
 
+      .rc-tree-title {
+        width: 100%;
+
+        .treebody_button {
+          padding: 0 !important;
+
+          i.yonicon {
+            margin-right: 8px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &:hover {
+              color: #588CE9;
+            }
+          }
+
+          .yonicon-self-jia:before {
+            content: "\e749"
+          }
+        }
+      }
+    }
+
+    .rc-tree-treenode-switcher-close {
+      .rc-tree-title {
+        >span {
+          display: block;
+          width: 100%;
+
+          .treebody_button {
+            background: #fff;
+            position: absolute;
+            right: 5px;
+            padding: 0;
+          }
+        }
+
+        &:hover {
+          >span {
+            .treebody_button {
+              background: #edf1f7;
+            }
+          }
+        }
+      }
+    }
+}
+.search-tree-toolbar-btn-group{
+  text-align: right;
+  padding-right: 16px;
+  margin-top:4px;
+  .search-tree-toolbar-btn{
+    cursor: pointer;
+    color:#588CE9;
+    .icon{
+      margin-right: 4px;
+    }
+  }
 }
