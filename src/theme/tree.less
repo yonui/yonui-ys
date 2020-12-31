@@ -475,95 +475,166 @@
 
 
 //rc-tree
-.rc-tree{
-    height: 100%;
-    overflow-y: auto;
-    .rc-tree-treenode{
-        padding: 0px 0px 0px 18px;
-        margin: 1px 0px;
-        border-radius: 2px;
-        display: flex!important;
-        align-items: center;
-        &:hover{
-            background: #edf1f7;
-        }
-        //文件夹图标隐藏
-        span.rc-tree-iconEle{
-            display: none;
-        }
-        //加减号
-        span.rc-tree-switcher{
-            width: 14px;
-            height: 14px;
-            line-height: 13px;
-            border-radius: 2px;
-            border: 1px solid #CCCCCC;
-            background-image: none;
-            margin-right: 0px;
-            &::before{
-                transform: scale(.58333333) rotate(0deg);
-                display: block;
-                font-weight: 700;
-                color: #333;
-                transition: transform .3s;
-                font-size: 14px;
-                font-family: iconfont;
-            }
-            &.rc-tree-switcher_open{
-                position: relative;
-                &::before{
-                    content: "\e773"!important;
-                    transform: scale(.58333333) rotate(0deg);
-                }
-            }
-            &.rc-tree-switcher_close{
-                position: relative;
-                &::before{
-                    content: "\e772"!important;
-                    transform: rotate(270deg) scale(.58333333);
-                    transition: transform .3s;
-                }
-            }
-            &.rc-tree-switcher-noop{
-                border: 1px solid transparent;
-            }
-        }
-        .rc-tree-checkbox-indeterminate{
-            &::before{
-                content: "";
-                font-family: iconfont;
-                color: rgb(245, 60, 50);
-                font-weight: 700;
-            }
-        }
-        //checkbox
-        span.rc-tree-checkbox{
-            width: 14px;
-            height: 14px;
-            background: #FFFFFF;
-            border-radius: 2px;
-            border: 1px solid #CCCCCC;
-            margin: 0px 8px 0px 8px;
-            line-height: 13px;
-            &.rc-tree-checkbox-checked{
-                &::after{
-                    content: "\E6af";
-                    font-weight: 700;
-                    color: #ee2223;
-                    font-family: iconfont;
-                }
-            }
-        }
-    }
-    //选中态变黄色
-    .rc-tree-treenode-selected{
-        background: #FFF5E2;
-        border-radius: 2px;
-        .rc-tree-node-selected{
-            background-color: transparent;
-            box-shadow: none;
-            opacity: 1;
-        }
+.rc-tree {
+  height: 100%;
+  overflow-y: auto;
+
+  .rc-tree-treenode {
+    border-radius: 2px;
+    display: flex !important;
+    align-items: center;
+    line-height: 24px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background: #edf1f7;
     }
 
+    //文件夹图标隐藏
+    span.rc-tree-iconEle {
+      display: none;
+    }
+
+    //加减号
+    span.rc-tree-switcher {
+      width: 14px;
+      height: 14px;
+      line-height: 13px;
+      border-radius: 2px;
+      border: 1px solid #CCCCCC;
+      background-image: none;
+      margin-right: 0px;
+
+      &::before {
+        transform: scale(.58333333) rotate(0deg);
+        display: block;
+        font-weight: 700;
+        color: #333;
+        transition: transform .3s;
+        font-size: 14px;
+        font-family: iconfont;
+      }
+
+      &.rc-tree-switcher_open {
+        position: relative;
+
+        &::before {
+          content: "\e773" !important;
+          transform: scale(.58333333) rotate(0deg);
+        }
+      }
+
+      &.rc-tree-switcher_close {
+        position: relative;
+
+        &::before {
+          content: "\e772" !important;
+          transform: rotate(270deg) scale(.58333333);
+          transition: transform .3s;
+        }
+      }
+
+      &.rc-tree-switcher-noop {
+        border: 1px solid transparent;
+      }
+    }
+
+    //checkbox
+    span.rc-tree-checkbox {
+      width: 14px;
+      height: 14px;
+      background: #FFFFFF;
+      border-radius: 2px;
+      border: 1px solid #CCCCCC;
+      margin: 0px 8px 0px 8px;
+      line-height: 13px;
+
+      &.rc-tree-checkbox-checked {
+        &::after {
+          content: "\E6af";
+          font-weight: 700;
+          color: #ee2223;
+          font-family: iconfont;
+        }
+      }
+    }
+  }
+
+  //选中态变黄色
+  .rc-tree-treenode-selected {
+    background: #FFF5E2;
+    border-radius: 2px;
+
+    .rc-tree-node-selected {
+      background-color: transparent;
+      box-shadow: none;
+      opacity: 1;
+    }
+  }
+
+  .rc-tree-node-content-wrapper {
+    width: calc(~'100% - 22px') !important;
+
+    .rc-tree-title {
+      width: 100%;
+
+      .treebody_button {
+        padding: 0 !important;
+
+        i.yonicon {
+          margin-right: 8px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: #588CE9;
+          }
+        }
+
+        .yonicon-self-jia:before {
+          content: "\e749"
+        }
+      }
+    }
+  }
+
+  .rc-tree-treenode-switcher-close {
+    .rc-tree-title {
+      >span {
+        display: block;
+        width: 100%;
+
+        .treebody_button {
+          background: #fff;
+          position: absolute;
+          right: 5px;
+          padding: 0;
+        }
+      }
+
+      &:hover {
+        >span {
+          .treebody_button {
+            background: #edf1f7;
+          }
+        }
+      }
+    }
+  }
+}
+.search-tree-toolbar-btn-group {
+  text-align: right;
+  padding-right: 16px;
+  margin-top: 4px;
+
+  .search-tree-toolbar-btn {
+    cursor: pointer;
+    color: #588CE9;
+
+    .icon {
+      margin-right: 4px;
+    }
+  }
 }
