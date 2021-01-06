@@ -18,10 +18,10 @@
 }
 
 .line-tabs-maximize {
-  position: fixed !important;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  padding-bottom: 0 !important;
+  z-index: 1701;
+  padding-bottom: 0;
   width: inherit;
   background: #fff;
   height: 100%;
@@ -3135,6 +3135,7 @@ a.Toolbar_Notification_Log {
         visibility: hidden;
         height: 0;
         overflow: hidden;
+        margin-bottom: 0;
       }
     }
 
@@ -4142,7 +4143,7 @@ div[id='bd_staff_card|photo'] {
 .tree-table .expand-rows .expand-row-selected .hide-actionCell,
 .tree-table .public_fixedDataTable_bodyRow .fixedDataTableRowLayout_body:hover .hide-actionCell,
 .public_fixedDataTableRow_selected .hide-actionCell {
-  background: #edf1f7 !important;
+  background: #edf1f7;
 }
 
 /*常用功能设置*/
@@ -4528,6 +4529,14 @@ div[id='bd_staff_card|photo'] {
 .container-edit-mode {
   .list-top {
     margin-top: 16px;
+  }
+  .basic-input-textarea {
+    padding-top: 2px;
+    .input-control {
+      textarea {
+        height: 48px;
+      }
+    }
   }
 }
 
@@ -5355,6 +5364,7 @@ div[id='bd_staff_card|photo'] {
         padding: 8px 14px;
         padding-bottom: 0;
         margin-bottom: 0;
+        position: static;
         .filter-hide{
           margin-bottom: 0!important;
         }

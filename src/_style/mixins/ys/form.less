@@ -280,7 +280,54 @@ div[id='pc_product|detail!businessAttribute']>div,
     height: 100%;
   }
 }
-
+//树结构按钮的调整
+.editable_tree{
+  padding:0 !important;
+  overflow: auto;
+  min-width: auto !important;
+  .u-tree-node-content-wrapper{
+    width: calc(~'100% - 22px') !important;
+    .u-tree-title{
+      width: 100%;
+      .treebody_button{
+        padding:0 !important;
+        i.yonicon{
+          margin-right: 8px;
+          &:last-child{
+            margin-right: 0;
+          }
+          &:hover{
+            color:#588CE9;
+          }
+        }
+        .yonicon-self-jia:before{
+          content: "\e749"
+        }
+      }
+    } 
+  }
+  .u-tree-node-content-wrapper-open{
+    .u-tree-title{
+      >span{
+        display: block;
+        width: 100%;
+        .treebody_button{
+          background: #fff;
+          position: absolute;
+          right: 0;
+          padding:0;
+        }
+      }
+      &:hover{
+        >span{
+          .treebody_button{
+            background: #edf1f7;
+          }
+        }
+      }
+    }
+  }
+}
 // 左树右表各占50%特殊处理
 .balanceadjust-list {
   .form-left.Manual-calculation-left {

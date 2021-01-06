@@ -191,7 +191,7 @@ canvas {
 }
 
 // fix: 滚动条影响工作台，且无法覆盖
-#yxyweb-support-container {
+// #yxyweb-support-container {
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -221,7 +221,7 @@ canvas {
     background-color: #B0C0D0 !important;
   }
   
-}
+// }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -580,6 +580,23 @@ input:-ms-input-placeholder{
     .u-button:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname):disabled:hover{
       background: linear-gradient(-45deg,#fc4c2f,#ee2223);
       color: #fff;
+    }
+  }
+}
+
+//临时处理-QDJM-7576-后期需要删掉
+.pcm_OnpAssignDef_list.fipcm{
+  .u-tabs-tabpane.u-tabs-tabpane-active.padd-bottom-60{
+    .container-edit-mode{
+      .ant-row.view-container{
+        &>.ant-row.group-container{
+          &>.ant-row{
+            &>div:last-child{
+              padding-bottom: 60px;
+            }
+          }
+        } 
+      }
     }
   }
 }
