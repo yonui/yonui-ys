@@ -485,6 +485,7 @@
     align-items: center;
     line-height: 24px;
     margin-bottom: 10px;
+    padding:0 8px;
 
     &:hover {
       background: #edf1f7;
@@ -560,7 +561,8 @@
         }
       }
     }
-    .rc-tree-indent{
+
+    .rc-tree-indent {
       height: 0;
     }
   }
@@ -587,35 +589,54 @@
 
   .rc-tree-node-content-wrapper {
     width: calc(~'100% - 22px') !important;
-
     .rc-tree-title {
       width: 100%;
-      i.out{
-        display: inline-block;
-        vertical-align: middle;
-        width: 100%;
+      white-space: normal;
+
+      >span {
+        display: block;
+        height: 24px;
+        position: relative;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
 
-      .treebody_button {
-        padding: 0 !important;
+        .treebody_button {
+          display: none;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          padding: 0px 4px 0px 6px;
+          border-bottom-right-radius: 8px;
+          border-top-right-radius: 8px;
 
-        i.yonicon {
-          margin-right: 8px;
-
-          &:last-child {
-            margin-right: 0;
+          .yonicon-edit-disabled,
+          .anticon-edit-disabled {
+            margin-right: 8px;
           }
 
-          &:hover {
-            color: #588CE9;
+          .anticon-edit-disabled,
+          .anticon-delete-disabled {
+            &::before {
+              font-size: 14px;
+              color: #999;
+            }
+
+            &:hover {
+              &::before {
+                color: #505766;
+              }
+            }
           }
         }
+      }
 
-        .yonicon-self-jia:before {
-          content: "\e749"
+      &:hover {
+        >span {
+          .treebody_button {
+            display: inline-block;
+            background: #edf1f7;
+          }
         }
       }
     }
