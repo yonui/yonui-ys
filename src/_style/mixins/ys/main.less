@@ -1,0 +1,513 @@
+// 浏览态间距小一些
+.container-browse-mode {
+  .viewCell .ant-row {
+    margin-bottom: 0 !important;
+  }
+  .productAssistUnitExchanges .width-percent-50 {
+    .frc-select-readonly .frc-select-content,
+    .frc-inputnumber-readonly {
+      border-color: transparent;
+      &.frc-inputnumber-assistUnitCount,
+      &.frc-inputnumber-mainUnitCount {
+        .ant-input-number {
+          border-color: transparent;
+        }
+      }
+    }
+    .frc-listrefer-readonly {
+      border-color: transparent;
+      width: auto;
+    }
+    .frc-select-readonly .frc-select-content {
+      padding: 0 4px;
+    }
+  }
+  .control-text {
+    padding: 0 4px;
+  }
+  div[id="pc_product|detail!businessAttribute"]>div>.ant-row {
+    display: flex;
+  }
+  .control-flex .control-text.invoice-remark {
+    width: auto;
+  }
+} 
+// 和 tablines 并列的表格右边的 toolbar 样式特别处理
+.tab-top-right .table-toolbar {
+  margin-right: unset;
+  margin-bottom: unset;
+} 
+// 特征样式，表格右上部分的操作区域
+.table-toolbar {
+  margin-right: 20px;
+  margin-bottom: 12px;
+} 
+// 特征样式，tab 内容区域容器样式
+// 特征样式，portal 内容区域底部间距
+.tab-padding-bottom {
+  padding-bottom: 60px;
+} 
+
+// 特征样式，应收参数等垂直form 页面
+.vertical-form,
+.vetical-form {
+  .viewCell.width-percent-100 {
+    .tag-refer-01 .TagList {
+      max-width: 400px;
+    }
+    .input-control {
+      max-width: 400px;
+    } 
+    // eg：副屏设置、自助大屏设置
+    .ticket-opening,
+    .upload-content,
+    .basic-avatar {
+      .input-control {
+        max-width: unset;
+      }
+    }
+  }
+} 
+// 特征样式，页面顶部间距
+.normal-space {
+  padding-top: 16px;
+}
+
+#container .meta-dynamic-view {
+  height: 100%;
+} 
+
+// ======================= 工程侧使用的 ant 适配 start ===========================
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.btn-group-bottom .ant-btn-primary:hover {
+  color: #fff;
+  background: linear-gradient(-225deg, #fc4c2f, #ee2223);
+  border: none;
+}
+
+.ant-btn-primary,
+.btn-group-bottom .ant-btn-primary {
+  color: #fff;
+  background: linear-gradient(-45deg, #FC4C2F 0%, #EE2223 100%);
+  border: none;
+}
+
+.ant-btn-lg {
+  height: 28px;
+} 
+// ======================= 工程侧使用的 ant 适配 end =======================
+// ant 的loading 样式适配
+.ant-spin {
+  color: #f23f40;
+  .ant-spin-dot i {
+    background-color: #f23f40;
+  }
+}
+// 多语的小地球
+.ant-input-disabled {
+  .icon {
+    cursor: no-drop;
+  }
+}
+
+// C
+.bg-white.border-r {
+  .search-tree-2 {
+    .left-search-tree-2-mixin();
+  }
+}
+
+// 编辑态，底部创建人信息不显示
+.container-edit-mode {
+  .tab-bottom-txt {
+    display: none;
+  }
+}
+
+// 查询区域
+.listheadRow {
+  line-height: normal; // 操作按钮
+  .btn-toolbar-bottom {
+    padding-bottom: 8px;
+    padding-right: 0px;
+    >.col-auto {
+      display: flex;
+      height: 28px;
+      position: static!important;
+      .u-button-primary[disabled] {
+        color: #fff;
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  // 店存入库 - 入库 - 表格上方单选间距
+  .sum-switch {
+    float: left;
+    margin-bottom: 8px;
+    margin-top: 2px;
+  }
+  
+  //UISJ-109
+  .rpt-select {
+    margin-right: 8px;
+  }
+}
+
+.normal-space {
+  // 选择首个包含 group-container 的子 div
+  div.group-container:first-of-type,
+  div:not(.group-container):first-of-type+div.group-container {
+    .group-title {
+      margin-top: 0;
+    }
+  }
+}
+// 表格区域，右上方的操作按钮
+.tab-top-right-operater-mixin() {
+  .tab-top-right {
+    margin-right: 20px !important;
+  }
+}
+// 表单区域，标题部分居上对齐
+.form-lable-top-mixin() {
+  &>.ant-row {
+    width: 100%;
+    display: block;
+    &>.label-control {
+      .form-label-mixin();
+      // padding-top: 8px;
+      // align-self: flex-start;
+    }
+  }
+}
+// 客户档案等节点，左侧的分类下拉框
+.select-combox-uneditable-mixin() {
+  width: 100%;
+  line-height: 16px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .u-select-show-search {
+    .u-select-selection {
+      border: none;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      display: inline-block;
+      .u-select-selection-rendered {
+        padding-right: 8px;
+        line-height: 14px;
+        display: block;
+        .u-select-selection-selected-value {
+          padding-left: 0;
+          white-space: normal;
+          opacity: 1!important;
+        }
+        .u-select-search .u-select-search-field {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+// 输入类控件disabled 状态样式
+.form-control-disabled-mixin() {
+  &:focus,
+  &:hover {
+    border-color: @input-border-color;
+    cursor: not-allowed;
+  }
+}
+// 页面顶部16px
+.page-top-16-mixin() {
+  .u-tabs .u-tabs-content {
+    padding-top: 16px;
+    .line-tabs {
+      .u-tabs .u-tabs-content {
+        padding-top: 0;
+      }
+    }
+    .u-tabs.meta-container>.u-tabs-content {
+      padding-top: 0;
+    }
+  }
+}
+//UISJ-113-错误input
+.has-error {
+  .u-select .u-select-selection:hover {
+    border-color: #f44336!important;
+  }
+  .u-time-picker .u-time-picker-input {
+    border-color: #f44336;
+    &:hover,
+    &:focus {
+      border-color: #f44336;
+    }
+  }
+}
+
+.container-browse-mode {
+  .viewSetting {
+    .basic-input-textarea {
+      .input-control .control-text {
+        height: 100%;
+      }
+    }
+  }
+}
+
+//错误信息提示框关闭图标
+.uretail-notification-notice.uretail-notification-notice-closable{
+  .uretail-message-error{
+    padding-right: 30px;
+  }
+  .uretail-notification-notice-close{
+    right: 16px;
+    top: 11px;
+    opacity: 1;
+    font-weight: normal;
+  }
+  .uretail-notification-notice-close-x{
+    font-family: iconfont;
+    font-size: 12px;
+    color: #999;
+    &:after{
+      content: "\e623";
+    }
+    &:hover{
+      color:#505766 ;
+    }
+  }
+}
+
+
+//请购单底部高度-UISJ-1
+.meta-dynamic-view .tab-bottom-txt{
+  padding: 7px 16px!important;
+}
+
+//UISJ-37
+.ys-tabs.u-tabs {
+  .viewCell.viewSetting[id='drft_billtype|isEnabled'],.viewCell.viewSetting[id='drft_billtype|iselecbill']{
+    .ant-row {
+      .col-float{
+        min-height: auto;
+        .u-radio-group{
+          min-height: auto;
+        }
+      }
+    }
+  }
+}
+
+//QDJM-6624
+.meta-dynamic-view{
+  .mdf-footer{
+    .tab-bottom-txt{
+      left: 8px;
+      right: 8px;
+    }
+  }
+}
+.container-browse-mode {
+  .top-fixed.list-top-toolbar{
+    border-bottom: none;
+  }
+}
+
+//UISJ-34
+.meta-dynamic-view{
+  .line-tabs-menu-container{
+    .u-tabs-tab.u-tabs-tab-active{
+      line-height: 40px !important;
+    }
+  }
+}
+
+//UISJ-64
+#ycPurContract{
+  .u-tooltip.inverse.bottom {
+    .tooltip-arrow{
+      display: none;
+    }
+  }
+}
+
+//UISJ-62/UISJ-64-采购合同
+.listheadRow{
+  .advance-model{
+    height: 30px;
+    margin-top: 6px;
+    .advance-tabs {
+      .active-advance-tab {
+        margin: 0px 10px;
+        color: #ee2233;
+        .triangle-up{
+          border-bottom:4px solid #505766;
+          border-left:7px solid transparent;
+          border-right:7px solid transparent;
+        }
+      }
+      .no-active-tab{
+        margin: 0px 10px;
+      }
+    }
+  }
+}
+//QDJM-7201
+.u-tooltip.inverse.bottom {
+  padding: 0;
+  transform:translateY(-8px);
+  .tooltip-arrow{
+    display: none;
+  }
+  .advance-tag{
+    margin: 0;
+    .u-tag-checkable{
+      margin: 0!important;
+      height: 28px;
+      line-height: 28px;
+      width: 100%;
+      text-align: left;
+      padding: 0 12px;
+      position: relative;
+      &:hover{
+        border-color: transparent;
+        background: #f3f5f9;
+      }
+      &.u-tag-checkable-checked{
+        &:hover{
+          background: #fff7e7;
+          border-color: transparent;
+        }
+        &::after{
+          content: "\E6AF";
+          color: #ee2233;
+          font-family: 'iconfont';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          right: 10px;
+          top: 0;
+          font-size: 16px;
+        }
+      }
+      &.u-tag-checkable-checked{
+        background: #fff7e7;
+        border-color: transparent;
+      }
+    }
+  } 
+}
+
+//UISJ-99
+.st_storecheckrealitylist.ustock{
+  .tab-menu+.tab-top-right .btn-toolbar-bottom {
+    .col-auto .pull-left {
+      margin-right: 0;
+      .u-checkbox{
+        height: 28px;
+        line-height: 28px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+//UISJ-104
+.hybridHidden{
+  .group-buttons{
+    .tipsChange{
+      .ant-row>.col-float>.has-related>.viewCell{
+        width: auto;
+        .u-checkbox{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//UISJ-116-时间选择框底部按钮
+.new-picker-popover {
+  .u-popconfirm-confirm {
+    .u-button.u-popconfirm-btn{
+      box-shadow: none;
+      letter-spacing: 0;
+    }
+  }
+}
+
+//左侧树不超出不显示横线滚动条
+.split_left{
+  .search-tree-3 {
+    .u-tree {
+      li {
+        a.u-tree-node-content-wrapper{
+          width: calc(~'100% - 22px')!important;   
+        }
+      }
+    }
+  }
+}
+
+//UISJ-141-招聘需求详情，时间组件的icon大小
+.hrrecruit{
+  .datepicker-container {
+    .datepicker-input-group{
+      .u-input-group-btn{
+        .uf-calendar{
+          position: absolute;
+          right: 2px;
+          font-size: 12px;
+          line-height: 1;
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+
+//UISJ-145-公式编辑器弹窗按钮样式错误
+.Formula-Designer{
+  .RightContent {
+    .show-more-operatorData{
+      color: #999999;
+      margin-top: 5px;
+      &:hover{
+        color: #333333;
+      }
+    }
+  }
+  .modal-footer{
+    .u-button{
+      margin-left: 8px;
+    }
+    .u-button:not(.u-button-primary):not(.u-button-ghost):not(.u-button-secondary):not(.workbench-classname):disabled:hover{
+      background: linear-gradient(-45deg,#fc4c2f,#ee2223);
+      color: #fff;
+    }
+  }
+}
+
+//临时处理-QDJM-7576-后期需要删掉
+.pcm_OnpAssignDef_list.fipcm{
+  .u-tabs-tabpane.u-tabs-tabpane-active.padd-bottom-60{
+    .container-edit-mode{
+      .ant-row.view-container{
+        &>.ant-row.group-container{
+          &>.ant-row{
+            &>div:last-child{
+              padding-bottom: 60px;
+            }
+          }
+        } 
+      }
+    }
+  }
+}
