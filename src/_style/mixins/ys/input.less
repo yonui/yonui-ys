@@ -117,3 +117,18 @@ input:not(:focus){
 .input-control > div {
   width: 100%;
 }
+
+// 表单基本控件（输入框、数字、下拉）
+.u-form-control,
+.u-input-number,
+.u-time-picker-input {
+  outline: none;
+  height: @base-input-height;
+  color: #333;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #505766;
+    box-shadow: none;
+  }
+}
