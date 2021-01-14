@@ -4058,14 +4058,19 @@
 // }
 
 /*fix:QDJM-2228*/
-.meta-dynamic-view.voucher_orderlist.udinghuo .mdf-footer .tab-bottom-txt {
-  margin-top: 0;
-  padding: 7px 32px;
-  max-height: unset;
-  margin: 0 0 0 8px;
-  width: calc(~'100% - 16px');
-  min-width: unset;
-  box-sizing: border-box;
+.meta-dynamic-view.voucher_orderlist.udinghuo {
+  .mdf-footer .tab-bottom-txt {
+    margin-top: 0;
+    padding: 7px 32px;
+    max-height: unset;
+    margin: 0 0 0 8px;
+    width: calc(~'100% - 16px');
+    min-width: unset;
+    box-sizing: border-box;
+  }
+  .container-edit-mode {
+    height: 100%;
+  }
 }
 
 .mdf-footer .tab-bottom-txt .viewSetting.viewCell .ant-row {
