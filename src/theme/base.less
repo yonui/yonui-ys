@@ -3112,13 +3112,23 @@ a.Toolbar_Notification_Log {
   .split_container .split_right,
   .form-base {
     .list-top-toolbar {
-      left: 248px;
+      left: 300px;
     }
   }
 }
-.fixed .container-browse-mode .list-top-toolbar {
-  left: 192px;
+
+.fixed .container-browse-mode {
+  .list-top-toolbar {
+    left: 192px;
+  }
+  .split_container .right,
+  .form-base {
+    .list-top-toolbar {
+      left: 432px;
+    }
+  }
 }
+
 /* fix: UDH-29949 */
 .container-edit-mode.container-less-height{
   .list-top-toolbar {
