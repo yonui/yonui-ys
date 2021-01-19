@@ -25,6 +25,8 @@
 .mobile{
   width: 100%;
   border: 1px solid #e0e0e0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   border-left: 0px;
   box-sizing: border-box;
   &>span{
@@ -36,10 +38,13 @@
     margin-left: -1px;
   }
   .u-form-control{
-    height: 24px;
-    border: 0px;
+    height: 26px;
+    border: 0;
     border-radius: 0;
-    // border-right: 1px solid #e0e0e0 !important;
+    vertical-align: top;
+    &:focus {
+      border: 0;
+    }
   }
 }
 
