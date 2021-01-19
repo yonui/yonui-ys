@@ -159,7 +159,7 @@ class MobileLocale extends Component {
         <div className='mobile'>
           <span />
           <FormControl
-            showClose
+            showClose={!disabled}
             onBlur={() => {
               this.props.onBlur && this.props.onBlur({ ...this.state })
             }}
