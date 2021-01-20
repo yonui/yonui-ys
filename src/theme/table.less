@@ -1666,50 +1666,54 @@
     }
 
     .summary_select_all {
-      float: left;
-      margin-left: 10px;
-      line-height: 32px;
-      min-width: 87px;
-      text-align: right;
-      .u-button{
-        border: none;
-        background: transparent;
-        max-width: 87px;
-        height: 30px;
-        line-height: 26px;
-        padding: 0px;
-        span{
-          color: #588CE9 ;
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 67px;
-          float: left;
+        float: left;
+        margin-left: 10px;
+        line-height: 32px;
+        height: 22px;
+        width: 30px;
+  
+        .u-button {
+          border: none;
+          padding: 0!important;
+          color: #588ce9;
+          font-size: 12px;
+          background: transparent;
+          position: absolute;
+          right: 82px;
+          width: 12%;
+          text-align: right;
+          span{
+              color: #588CE9;
+              display: block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 67px;
+              float: left;
+              width: 100%;
+              text-align: right;
+              padding-right: 12px;
+          }
         }
+  
         .arrow_direction{
-            float: left;
-            margin-top: 10px;
+          color: #588CE9;
+          margin-left: 38px;
+          -webkit-transform: scale(.75) rotate(0deg);
+          transform: scale(.75) rotate(0deg);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+          cursor: pointer;
+          margin-top: -1px;
+          font-size: 6px;
+          font-family: anticon;
+          font-style: normal;
+          position: absolute;
+          left: 13px;
+          top: 11px;
         }
+  
+  
       }
-      .ant-btn {
-        border: none;
-        padding: 0px !important;
-        color: #588CE9;
-        font-size: 12px;
-        background: transparent;
-      }
-
-      .anticon-down,
-      .anticon-up {
-        margin-left: 3px;
-        -webkit-transform: scale(.75) rotate(0deg);
-        transform: scale(.75) rotate(0deg);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
-        cursor: pointer;
-      }
-
-    }
 
     .sumarea_list_updown {
       position: absolute;
