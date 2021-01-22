@@ -3068,8 +3068,9 @@ a.Toolbar_Notification_Log {
 
 .list-top-toolbar {
   overflow: hidden;
-  padding: 8px 20px 0;
+  padding: 8px 20px;
   z-index: 1700;
+  
 }
 
 .list-top-toolbar+.listheadRow {
@@ -3083,15 +3084,30 @@ a.Toolbar_Notification_Log {
   }
 }
 
+.container-edit-mode {
+  .topbar-holder {
+    height: 0;
+  }
+}
+
 // 需要置顶的 .list-top-toolbar
 .no-iframe .container-browse-mode {
+  .topbar-holder {
+    height: 45px;
+  }
+
   .list-top-toolbar {
-    position: fixed;
-    left: 8px;
-    right: 8px;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    padding: 8px 20px;
 
     & + div {
-      margin-top: 48px!important;
+      // margin-top: 48px!important;
       // 避免相邻的是隐藏的元素
       &.hide {
         display: block !important;
@@ -3102,20 +3118,27 @@ a.Toolbar_Notification_Log {
       }
     }
 
+    &>.yon-row {
+      position: relative;
+    }
+
     &.top-fixed {
-      position: fixed;
-      background: #fff;
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-      padding: 8px 20px;
       transform: translateZ(0);
       // top: 0; 由js 动态设置
     }
   }
 
-  .split_container .split_right,
-  .form-base {
-    .list-top-toolbar {
-      left: 248px;
+  // .split_container .split_right,
+  // .form-base {
+  //   .list-top-toolbar {
+  //     left: 248px;
+  //   }
+  // }
+
+  .split_container .split_right {
+    &.top-fixed {
+      box-shadow: none;
     }
   }
 }
