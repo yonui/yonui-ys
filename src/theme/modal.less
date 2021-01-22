@@ -180,6 +180,7 @@
   height: 50px;
   padding: 11px 0;
   background: #fff;
+  width: 100%;
   // padding-left: 120px;
 
   .col-auto {
@@ -193,7 +194,7 @@
 
 /*角色新增-底部按钮*/
 .bottom-toolbar {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   z-index: 1000; // fix: 成本分配方法，参照遮罩要大于等于底部toolbar
   // left: 159px;
@@ -324,7 +325,7 @@
 // zhangkunk 展开折叠效果
 .form-left+.form-base {
   width: calc(~"100% - 241px");
-  position: relative;
+  // position: relative;
 
   .line-tabs.line-tabs-maximize {
     width: calc(~"100% - 241px");
@@ -1216,7 +1217,7 @@
 
 .voucher-list {
   .height-100 {
-    position: relative;
+    // position: relative; // QDJM-2503
 
     .reserve-money {
       width: 100%;
