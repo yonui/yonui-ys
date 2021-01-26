@@ -1,6 +1,6 @@
 // 浏览态间距小一些
 .container-browse-mode {
-  .viewCell .ant-row {
+  .viewCell .yon-row {
     margin-bottom: 0 !important;
   }
   .productAssistUnitExchanges .width-percent-50 {
@@ -25,7 +25,7 @@
   .control-text {
     padding: 0 4px;
   }
-  div[id="pc_product|detail!businessAttribute"]>div>.ant-row {
+  div[id="pc_product|detail!businessAttribute"]>div>.yon-row {
     display: flex;
   }
   .control-flex .control-text.invoice-remark {
@@ -168,7 +168,7 @@
 }
 // 表单区域，标题部分居上对齐
 .form-lable-top-mixin() {
-  &>.ant-row {
+  &>.yon-row {
     width: 100%;
     display: block;
     &>.label-control {
@@ -290,7 +290,7 @@
 //UISJ-37
 .ys-tabs.u-tabs {
   .viewCell.viewSetting[id='drft_billtype|isEnabled'],.viewCell.viewSetting[id='drft_billtype|iselecbill']{
-    .ant-row {
+    .yon-row {
       .col-float{
         min-height: auto;
         .u-radio-group{
@@ -426,7 +426,7 @@
 .hybridHidden{
   .group-buttons{
     .tipsChange{
-      .ant-row>.col-float>.has-related>.viewCell{
+      .yon-row>.col-float>.has-related>.viewCell{
         width: auto;
         .u-checkbox{
           margin-right: 0;
@@ -501,9 +501,9 @@
 .pcm_OnpAssignDef_list.fipcm{
   .u-tabs-tabpane.u-tabs-tabpane-active.padd-bottom-60{
     .container-edit-mode{
-      .ant-row.view-container{
-        &>.ant-row.group-container{
-          &>.ant-row{
+      .yon-row.view-container{
+        &>.yon-row.group-container{
+          &>.yon-row{
             &>div:last-child{
               padding-bottom: 60px;
             }
@@ -516,7 +516,7 @@
 
 // 平滑的方式替换 ant-row
 .yon-row {
-  position: inherit !important;
+  position: inherit;
 }
 
 .acticonCell .yon-row {
