@@ -19,4 +19,3 @@ component = {
 }
 
 module.exports = component
-
