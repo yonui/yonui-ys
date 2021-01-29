@@ -13,19 +13,20 @@
 }
 
 .no-iframe {
-    .bottom-toolbar {
-        bottom: 8px; // 减去工作台的底部8px 间距
-    }
+    // .bottom-toolbar {
+    //     bottom: 8px; // 减去工作台的底部8px 间距
+    //     right: 8px;
+    // }
 
     .u-modal-body .bottom-toolbar {
         bottom: 0;
     }
 
-    .btn-group-bottom.bottom-toolbar {
-        width: calc(~'100% - 16px') !important;
-        bottom: 0;
-        margin-left: 8px;
-    }
+    // .btn-group-bottom.bottom-toolbar {
+    //     width: calc(~'100% - 16px') !important;
+    //     bottom: 0;
+    //     margin-left: 8px;
+    // }
     .u-modal .btn-group-bottom.bottom-toolbar{
         left: 0;
         margin-left: 0;
@@ -37,11 +38,8 @@
 
 //无iframe
 .no-iframe .referModal.refer-modal-maximize {
-    height: unset;
-    width: unset;
-    top: 83px;
     bottom: 8px;
     left: 8px;
     right: 8px;
-    margin: 0;
+    top: 0;
 }

@@ -451,6 +451,10 @@
   z-index: 998 !important;
 }
 
+.meta-table {
+  position: relative;
+}
+
 /*表格部分按钮*/
 .acticonCell {
   position: absolute;
@@ -487,10 +491,11 @@
     }
   }
 
-  .ant-row {
+  .yon-row {
     display: flex;
     align-items: center;
     height: 100%;
+    position: relative !important; // 表格的 columnSetting
   }
 
   .table-list-btn {
@@ -652,7 +657,7 @@
       .acticonCell {
         height: calc(~'100% - 1px'); // 减 1 是取消奇数偏差
 
-        &.ant-row {
+        &.yon-row {
           display: flex;
           align-items: center;
         }
@@ -871,7 +876,7 @@
     }
   }
 
-  .acticonCell .ant-row {
+  .acticonCell .yon-row {
     display: flex;
     justify-content: flex-end;
   }

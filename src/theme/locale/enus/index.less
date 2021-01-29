@@ -13,17 +13,17 @@
 
 // 西语输入类控件，label + input
 .region-lang(@leftPadding:0, @labelWidthPercent: 100%) {
-  .ant-row {
+  .yon-row {
     display: block!important;
     min-height: auto!important;
     padding-left: @leftPadding;
     .refer-div {
-      .ant-row {
+      .yon-row {
         padding-left: 0;
       }
     }
   }
-  .ant-row .label-control {
+  .yon-row .label-control {
     padding: 0;
     line-height: 16px;
     text-align: left;
@@ -33,9 +33,9 @@
     float: none;
     margin-bottom: 8px;
   }
-  .ant-row .input-control {
+  .yon-row .input-control {
     width: @labelWidthPercent !important;
-    .ant-row {
+    .yon-row {
       padding-left: 0;
       min-height: auto !important;
     }
@@ -51,7 +51,7 @@
 .container-edit-mode{
   .group-container{
     .group-buttons{
-      &>.ant-row{
+      &>.yon-row{
         padding: 0 24px;
       }
     }
@@ -63,7 +63,7 @@
     }
   }
   .viewCell {
-    .ant-row{
+    .yon-row{
       margin-bottom: 0;
       textarea{
         margin-top: 0;
@@ -89,7 +89,7 @@
 
 //查看
 .container-browse-mode{
-  .group-buttons>.group-container>.ant-row{
+  .group-buttons>.group-container>.yon-row{
     padding-left: 17px;
     padding-right: 32px;
     .viewSetting.viewCell{
@@ -101,7 +101,7 @@
       }
     }
   }
-  .ant-row {
+  .yon-row {
     .control-width{
       line-height: 12px;
       height: auto;
@@ -125,7 +125,7 @@
     max-height: 95px;
     padding:7px 40px 0 40px!important;
     .viewSetting.viewCell {
-      .ant-row {
+      .yon-row {
         min-height: auto!important;
         margin-bottom: 6px!important;
         .label-control{
@@ -190,8 +190,8 @@
 
 .refer-div {
   .region-lang(); // TODO: 待优化，（项目类别，新增）参照高度莫名的高度了28.89px
-  .ant-row .input-control {
-    .ant-row {
+  .yon-row .input-control {
+    .yon-row {
       height: 28px;
     }
   }
@@ -223,7 +223,7 @@
 
 .tag-group {
   .region-lang();
-  .ant-row {
+  .yon-row {
     .enum-control {
       // 枚举项宽度不同于其他的 80%，直接使用100%
       width: 100% !important;
@@ -233,7 +233,7 @@
 
 // tag-refer 特殊处理
 .tag-refer {
-  &.ant-row {
+  &.yon-row {
     display: block;
     min-height: 48px;
     padding-left: 0;
@@ -255,13 +255,13 @@
 
 // 左树
 .form-left {
-  .ant-row {
+  .yon-row {
     padding-left: 0;
   }
 } 
 
 // 必填图标
-.ant-row .yonicon-star {
+.yon-row .yonicon-star {
   margin-left: 0;
   vertical-align: unset;
 } 
@@ -316,7 +316,7 @@
 
 // 有关联的控件，关联控件不处理，避免错位
 .tag-group .enum-control .has-related {
-  .ant-row {
+  .yon-row {
     min-height: 32px !important;
     display: flex !important;
     padding-left: 40px;
@@ -329,7 +329,7 @@
   }
 }
 
-div[id='org_center_card|orgtype'] .ant-row .control-width {
+div[id='org_center_card|orgtype'] .yon-row .control-width {
   line-height: 28px;
 }
 
@@ -371,14 +371,14 @@ div[id='org_center_card|orgtype'] .ant-row .control-width {
     top: 48px;
   }
   .tag-refer {
-    &.ant-row {
+    &.yon-row {
       padding-left: @middle-padding;
     }
   }
   .listheadRow .filter-hide {
     .region-lang(@middle-padding);
 
-    .ant-row .input-control {
+    .yon-row .input-control {
       max-width: 100%;
     }
   }
@@ -411,17 +411,17 @@ div[id='org_center_card|orgtype'] .ant-row .control-width {
     top: 48px;
   }
   .tag-refer {
-    &.ant-row {
+    &.yon-row {
       padding-left: @small-padding;
     }
   }
-  .tag-group .ant-row{
+  .tag-group .yon-row{
     padding-left: @small-padding;
   }
   .listheadRow .filter-hide {
     .region-lang(@small-padding);
 
-    .ant-row .input-control {
+    .yon-row .input-control {
       max-width: 100%;
     }
   }
