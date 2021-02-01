@@ -4936,19 +4936,12 @@
 }
 
 .referModal.refer-modal-maximize {
-  position: fixed !important;
-  top: 0!important;
+  position: absolute !important;
   z-index: 1000;
-  padding-bottom: 0 !important;
   background: #fff;
-  height: 100%;
-  width: 100%!important;
-  height: unset;
+  width: calc(~'100% - 16px') !important;
+  margin: 0 auto !important;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
 
   .u-modal-content {
     box-shadow: unset;
