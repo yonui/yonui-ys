@@ -4939,9 +4939,12 @@
     position: absolute!important;
     z-index: 1000;
     background: #fff;
-    width: calc(100% - 32px)!important;
-    margin: 0 16px!important;
-    top: 16px!important;
+    width: auto!important;
+    margin: 0 !important;
+    top: 6px;
+    bottom: 16px;
+    left: 68px;
+    right: 16px;
 
   .u-modal-content {
     box-shadow: unset;
@@ -4953,10 +4956,14 @@
       flex: 1;
       overflow-y: scroll;
     }
-
   }
 }
 
+.um-win.fixed{
+  .referModal.refer-modal-maximize{
+    left: 200px;
+  }
+}
 // 提示信息优化
 .u-popover.u-popover-tooltip.u-tooltip[overlayclassname~='input-tip-pover-dialog'] {
   transform: translateY(0)!important;
