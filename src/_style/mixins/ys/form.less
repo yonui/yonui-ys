@@ -109,7 +109,7 @@
 .basic-tagarea-mixin() {
   width: 100%;
   overflow: hidden;
-  &>.ant-row {
+  &>.yon-row {
     width: 100%;
     display: block;
 
@@ -132,7 +132,7 @@
       }
     }
   }
-  &>.ant-row+.ant-form-explain {
+  &>.yon-row+.ant-form-explain {
     position: absolute;
     left: 100px;
     top: 48px;
@@ -156,7 +156,7 @@
 
     .refer-div {
       height: 28px;
-      &>.ant-row {
+      &>.yon-row {
         margin-bottom: 0;
         min-height: 28px;
 
@@ -185,7 +185,7 @@
   .basic-input-text,
   .basic-list-refer,
   .basic-tree-refer {
-    & > .ant-row {
+    & > .yon-row {
       .form-item-mixin();
     }
   }
@@ -219,7 +219,7 @@ div[id='pc_product|detail!businessAttribute']>div,
 }
 
 .form-left.Manual-calculation-left {
-  .ant-row.left-tree-select.meta-default-container>.ant-row>.col-float {
+  .yon-row.left-tree-select.meta-default-container>.yon-row>.col-float {
     margin-top: 14px;
 
     .viewSetting {
@@ -347,11 +347,11 @@ div[id='pc_product|detail!businessAttribute']>div,
 .listheadRow {
   .filter-hide {
 
-    .ant-row {
+    .yon-row {
       .form-item-mixin();
       .input-control{
         flex:1;
-        max-width: calc(~'100% - 100px');
+        max-width: calc(~'100% - 110px') !important;
       }
     }
   }
@@ -461,6 +461,9 @@ div[id='pc_product|detail!businessAttribute']>div,
   .form-left.Manual-calculation-left {
     width: 100%;
   }
+  .form-left+.form-base{
+    flex: 1;
+  }
 }
 
 // 左树右表结构
@@ -469,7 +472,6 @@ div[id='pc_product|detail!businessAttribute']>div,
   display: block !important;
   float: left;
   width: 240px;
-  width: 100%;
   .filter-tree>div:nth-child(2){
     overflow: hidden!important;
   }

@@ -276,7 +276,7 @@
 
 /*报表--分组方案右移*/
 .container-browse-mode{
-  .listheadRow .ant-row {
+  .listheadRow .yon-row {
     .rpt-toolbar {
       min-width: 70px;
       float: right;
@@ -284,6 +284,10 @@
       .btn-toolbar-bottom {
         padding-right: 0px !important;
         margin: 0!important;
+        .s-popover-inner-span{
+            display: block;
+            height: 28px;
+        }
       }
 
       .btn-toolbar-bottom .col-auto {
@@ -348,7 +352,7 @@
 }
 
 /*U8C调价单列表显示显示一列问题*/
-.container-browse-mode.container-greater-height .listheadRow .ant-row .rpt-toolbar {
+.container-browse-mode.container-greater-height .listheadRow .yon-row .rpt-toolbar {
   min-width: 70px;
   float: right;
 }
@@ -509,11 +513,11 @@
     .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
       top: 1px;
     }
-    .ant-row {
+    .yon-row {
       margin-bottom: 10px !important;
     }
 
-    .ant-row.crossaddnamemargin {
+    .yon-row.crossaddnamemargin {
       line-height: 16px !important;
       margin-bottom: 6px !important;
     }
@@ -646,7 +650,7 @@
       }
     }
 
-    .ant-row.crosstype {
+    .yon-row.crosstype {
       width: 100%;
       margin-bottom: 10px;
       color: #666;
@@ -772,7 +776,7 @@
       height: 264px;
       overflow-y: auto;
 
-      .ant-row {
+      .yon-row {
         margin-bottom: 0px !important;
         height: 26px;
         line-height: 22px;
@@ -782,14 +786,14 @@
         line-height: 26px;
       }
 
-      .ant-row {
+      .yon-row {
         .ant-checkbox-wrapper {
           padding-left: 15px;
           width: 100%;
         }
       }
 
-      .ant-row:hover {
+      .yon-row:hover {
         background: #f3f5f9;
       }
     }
@@ -800,7 +804,7 @@
       margin: 15px 0px;
       overflow-y: auto;
 
-      .ant-row {
+      .yon-row {
         .ant-checkbox-wrapper {
           padding-left: 15px;
           width: 100%;
@@ -811,7 +815,7 @@
         line-height: 29px;
       }
 
-      .ant-row:hover {
+      .yon-row:hover {
         background: #f3f5f9;
       }
     }
@@ -988,7 +992,7 @@
         .titlename-list {
           height: 65px;
 
-          .ant-row {
+          .yon-row {
             margin-bottom: 0px !important;
           }
         }
@@ -1025,6 +1029,7 @@
             overflow:hidden;
             text-overflow:ellipsis;
             max-width: 170px;
+            padding-left: 0;
           }
           .u-checkbox .u-checkbox-label:before,
           .u-checkbox .u-checkbox-label:after{
@@ -1069,7 +1074,7 @@
           line-height: 29px;
         }
 
-        .ant-row {
+        .yon-row {
           margin-bottom: 0px !important;
           height: 26px;
           line-height: 22px;
@@ -1091,7 +1096,7 @@
           }
         }
 
-        .ant-row:hover {
+        .yon-row:hover {
           background: #f3f5f9;
         }
       }
@@ -1100,7 +1105,7 @@
         height: 120px;
         width: 100%;
 
-        .ant-row {
+        .yon-row {
           label {
             width: auto !important;
           }
@@ -1170,7 +1175,7 @@
 .groupCondition-MouseEnter3 {
   color: #666;
   position: absolute;
-  right: 0px;
+  right: 8px;
   background: #f3f5f9;
 
   span {
@@ -1192,7 +1197,7 @@
   position: relative;
   padding-bottom: 30px;
 
-  .ant-row {
+  .yon-row {
     display: flex;
     align-items: center;
     &:hover {
@@ -1201,8 +1206,9 @@
   }
 
   .scheme-List-content {
-    .ant-row {
+    .yon-row {
       display: flex;
+      position: relative!important;
     }
   }
 
@@ -1232,18 +1238,9 @@
     display: block;
 
   }
-
-  // .groupCondition-MouseEnter,
-  // .groupCondition-MouseEnter1,
-  // .groupCondition-MouseEnter2,
-  // .groupCondition-MouseEnter3 {
-  //   background: #f3f5f9;
-  // }
 }
 
 .group-add-grouping-count.group-add-grouping-count-noauth {
-  // padding-bottom: 0;
-
   .group-add-grouping {
     display: none;
   }
@@ -1637,7 +1634,7 @@
       }
     }
     .sumarea_list_item_1 {
-      width: 250px;
+      width: 210px;
       float: left;
       margin-left: 27px;
       .u-checkbox-primary {
@@ -1666,50 +1663,54 @@
     }
 
     .summary_select_all {
-      float: left;
-      margin-left: 10px;
-      line-height: 32px;
-      min-width: 87px;
-      text-align: right;
-      .u-button{
-        border: none;
-        background: transparent;
-        max-width: 87px;
-        height: 30px;
-        line-height: 26px;
-        padding: 0px;
-        span{
-          color: #588CE9 ;
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 67px;
-          float: left;
+        float: left;
+        margin-left: 10px;
+        line-height: 32px;
+        height: 22px;
+        width: 30px;
+  
+        .u-button {
+          border: none;
+          padding: 0!important;
+          color: #588ce9;
+          font-size: 12px;
+          background: transparent;
+          position: absolute;
+          right: 82px;
+          width: 12%;
+          text-align: right;
+          span{
+              color: #588CE9;
+              display: block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 67px;
+              float: left;
+              width: 100%;
+              text-align: right;
+              padding-right: 12px;
+          }
         }
+  
         .arrow_direction{
-            float: left;
-            margin-top: 10px;
+          color: #588CE9;
+          margin-left: 38px;
+          -webkit-transform: scale(.75) rotate(0deg);
+          transform: scale(.75) rotate(0deg);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+          cursor: pointer;
+          margin-top: -1px;
+          font-size: 6px;
+          font-family: anticon;
+          font-style: normal;
+          position: absolute;
+          left: 13px;
+          top: 11px;
         }
+  
+  
       }
-      .ant-btn {
-        border: none;
-        padding: 0px !important;
-        color: #588CE9;
-        font-size: 12px;
-        background: transparent;
-      }
-
-      .anticon-down,
-      .anticon-up {
-        margin-left: 3px;
-        -webkit-transform: scale(.75) rotate(0deg);
-        transform: scale(.75) rotate(0deg);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
-        cursor: pointer;
-      }
-
-    }
 
     .sumarea_list_updown {
       position: absolute;
@@ -1807,7 +1808,7 @@
       margin-right: 12px;
       padding: 5px 12px;
       height: 26px;
-      float: left;
+      float: right;
       font-size: 12px;
     }
 
@@ -1815,7 +1816,7 @@
       margin-right: 10px;
       padding: 5px 12px;
       height: 26px;
-      float: left;
+      float: right;
       font-size: 12px;
     }
 
@@ -1872,6 +1873,7 @@
       padding: 5px 12px;
       height: 26px;
       margin-top: 14px;
+      float: right;
     }
 
     .u-button-primary {
@@ -1887,6 +1889,7 @@
     .up-search{
       background: #505766;
       color: #fff;
+      line-height: initial;
     }
   }
 }
@@ -1926,7 +1929,6 @@
         border-radius: 2px;
         padding: 0 4px;
         margin-right: 6px;
-        // float: left;
         margin-top: 1px;
       }
     }
@@ -1989,7 +1991,6 @@
           .editCol {
             text-align: left;
             padding: 12px 10px;
-            // padding-right: 20px !important;
 
             div:not(.checkradio-checked) {
               height: 28px
@@ -2507,14 +2508,15 @@
 // ====================end====================
 
 .publishMenu .publishMenu_Pc {
-  input[type='checkout'] {
-    top: 10px;
+  input[type='checkbox'] {
+    top: 8px;
   }
 
   label {
     line-height: 32px;
 
-    &:before {
+    &:before,
+    &::after {
       top: 8px;
     }
   }
@@ -2622,7 +2624,7 @@
 }
 
 // 二维录入表体最大化
-.ant-row.line-tabs.line-tabs-maximize {
+.yon-row.line-tabs.line-tabs-maximize {
 
   //top: 75px;
   .TableContainer_Outer {
@@ -2717,7 +2719,6 @@
     //表头
     .order-header-wrapper{
       position: relative;
-      //order-column-setting/u-checkbox定位
       .order-column-setting,.u-checkbox{
         position: absolute;
       }
@@ -3095,6 +3096,9 @@
     margin-top: 0;
     padding-bottom: 0;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 

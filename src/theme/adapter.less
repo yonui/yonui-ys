@@ -2,9 +2,9 @@
 
 // fix: 采购->转存，编辑记录时，底部的表格区域遮挡
 #container .container-browse-mode {
-  .ant-row.tab-bottom-txt {
+  .yon-row.tab-bottom-txt {
     z-index: 999;
-    .viewSetting.viewCell .ant-row {
+    .viewSetting.viewCell .yon-row {
       min-height: unset;
     }
   }
@@ -19,17 +19,17 @@
 .viewSetting.viewCell {
   .basic-input-textarea {
     // fix: 材料出库，表单中有textarea 时，外部div 默认比内嵌textarea 高出一定像素
-    &>.ant-row>.input-control {
+    &>.yon-row>.input-control {
       line-height: 0;
     }
-    .ant-row .input-control textarea+.u-form-control-suffix{
+    .yon-row .input-control textarea+.u-form-control-suffix{
       top: 0px;
       transform: translateY(0%);
     }
   }
 
   // fix: 基础数据，物料规格，新增页面，textarea 区域的高度
-  &.width-percent-33 .ant-row .control-width textarea {
+  &.width-percent-33 .yon-row .control-width textarea {
     height: @base-input-height;
     line-height: @base-input-height - 2;
     padding-top: 0;
@@ -43,13 +43,13 @@
 // fix: 保存草稿的提示框，表单的标题左边距
 .savedraft_modal {
 
-  .ant-row .savedraft_title {
+  .yon-row .savedraft_title {
     margin-left: 20px;
     text-align: right;
     padding-right: 15px;
   }
 
-  .ant-row > .draft_name {
+  .yon-row > .draft_name {
     margin-left: 96px;
     color: @error-color;
   }
@@ -86,7 +86,7 @@
 }
 
 // fix: 生产制造，制造参数，inputNumber 宽度需要减去右侧山下键
-.meta-option .viewCell.width-percent-100 .ant-row .u-input-number .u-form-control {
+.meta-option .viewCell.width-percent-100 .yon-row .u-input-number .u-form-control {
   width: 375px;
 }
 
@@ -130,7 +130,7 @@ div[id='mr_plan_workbench_list|others_data_param'] .container-browse-mode.contai
 }
 
 // fix: 调入，单据日期文字按钮垂直居中
-.filter-controls .basic-predicate-data-picker .ant-row>.input-control .ant-row {
+.filter-controls .basic-predicate-data-picker .yon-row>.input-control .yon-row {
   display: flex;
   align-items: center;
 }
@@ -292,7 +292,7 @@ textarea.u-form-control {
 }
 
 
-.u-modal-dialog .u-modal-body .viewCell.width-percent-100 .ant-row {
+.u-modal-dialog .u-modal-body .viewCell.width-percent-100 .yon-row {
   float: unset;
 }
 
@@ -637,11 +637,11 @@ div[id='pc_attachmentgrouplist|lookat1'] {
   //TINPER-2729
   .container-edit-mode.container-greater-height .meta-default-container{
     padding-top: 0;
-    .ant-row.meta-title{
+    .yon-row.meta-title{
       margin-top: 0;
     }
   }
-  .container-browse-mode .list-top-toolbar + .group-container .ant-row.meta-title{
+  .container-browse-mode .list-top-toolbar + .group-container .yon-row.meta-title{
     margin-top: 0;
     h1{
       margin-top: 0;
@@ -731,7 +731,7 @@ div[id='aa_paymentmethod|code'] {
   }
 }
 
-.ant-row.meta-title {
+.yon-row.meta-title {
   margin-top: 16px;
 }
 
@@ -772,7 +772,7 @@ div[id='aa_paymentmethod|code'] {
   border-bottom: none;
 }
 //TINPER-2650
-.ec_passauditlist .u-tabs-content .container-edit-mode .ant-row.card-tabs{
+.ec_passauditlist .u-tabs-content .container-edit-mode .yon-row.card-tabs{
   margin-top: 9px;
 }
 .ec_passauditlist {
@@ -806,7 +806,7 @@ div[id='aa_paymentmethod|code'] {
   }
 }
 //TINPER-2672
-.es_suitgoodslist .group-container .ant-row + .group-buttons .group-container .btn-toolbar-bottom{
+.es_suitgoodslist .group-container .yon-row + .group-buttons .group-container .btn-toolbar-bottom{
   margin-bottom: 12px;
   button[id='ec_suitgoods|btnAddRow'] .icon.icon-plus{
     display: none;
@@ -858,7 +858,7 @@ div[id^='business_option'] {
     }
     .bd_payagreement(@n,(@i+1));
   }
-  .ant-row-flex.ant-row-flex-start.bottom-toolbar{
+  .yon-row-flex.yon-row-flex-start.bottom-toolbar{
     z-index: 101;
   }
   .bd_payagreement .u-select-dropdown .u-select-dropdown-menu{
@@ -876,7 +876,7 @@ div[id^='business_option'] {
     }
     .bd_receiveagreement(@n,(@i+1));
   }
-  .ant-row-flex.ant-row-flex-start.bottom-toolbar{
+  .yon-row-flex.yon-row-flex-start.bottom-toolbar{
     z-index: 101;
   }
   .bd_receiveagreement .u-select-dropdown .u-select-dropdown-menu{
@@ -911,7 +911,7 @@ div[id^='business_option'] {
 // 部门节点，内容区域上边距
 .bd_admindepttree {
   padding-top: 0px!important;
-  .jDiwork-container>.ant-row.meta-default-container{
+  .jDiwork-container>.yon-row.meta-default-container{
       padding-bottom: 0px;
   }
 }
@@ -1018,7 +1018,7 @@ div[id="pc_productbrandpro"] {
 }
 
 .viewSetting.viewCell {
-.ant-row{
+.yon-row{
   line-height: @base-input-height;
   min-height: @base-input-height + 4;//兼容多语的title两行正常显示
 }
@@ -1059,17 +1059,6 @@ div[id='aa_vendor|aa_vendor_page_base'] {
     & > .group-container {
       padding-bottom: 60px;
     }
-  }
-}
-
-// 工作台样式冲突
-#yxyweb-support-container {
-  .u-select-selection--single {
-    height: 28px;
-    border:1px solid #d9d9d9;
-  }
-  .u-select-selection-rendered {
-    line-height: 26px;
   }
 }
 
@@ -1114,7 +1103,7 @@ div[id='aa_vendor|aa_vendor_page_base'] {
 }
 
 .bd_virtualaccbodylist {
-  .tree-list .height-100 > .ant-row.meta-default-container {
+  .tree-list .height-100 > .yon-row.meta-default-container {
     overflow: auto;
   }
 }
@@ -1136,7 +1125,7 @@ svg.icon-fabufangan {
   height: 16px;
 }
 // 控件单独设置一行 100% 宽度显示
-.width-percent-100 > .basic-tagarea > .ant-row .input-control {
+.width-percent-100 > .basic-tagarea > .yon-row .input-control {
   width: calc(~'100% - 214px') !important;
 }
 

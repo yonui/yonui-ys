@@ -137,9 +137,9 @@
 }
 
 #container,
-#container>.ant-row,
-#container>.ant-row>div:last-of-type>div,
-#container>.ant-row>div:last-of-type>div>div {
+#container>.yon-row,
+#container>.yon-row>div:last-of-type>div,
+#container>.yon-row>div:last-of-type>div>div {
   height: 100%;
 }
 
@@ -501,7 +501,7 @@
   }
 
   .u-tile-content {
-    .ant-row {
+    .yon-row {
       margin-bottom: 12px;
 
     }
@@ -592,7 +592,7 @@
     }
   }
 
-  .ant-row {
+  .yon-row {
     margin-bottom: 10px;
   }
 
@@ -740,7 +740,7 @@
       padding-bottom: 30px;
       .filter-txt{
           padding-bottom: 0px;
-          .ant-row,.ant-row div{
+          .yon-row,.yon-row div{
               height: 32px;
               line-height: 32px;
           }
@@ -774,10 +774,6 @@
 /* 档案 */
 /* 列表左侧树 */
 .u-tabs-content {
-  // .container-edit-mode {
-  //   // height: 100%;  fix:DDMPT-23370
-  // }
-
   .height-100 {
     .form-left {
       .bg-white.border-r {
@@ -785,7 +781,6 @@
       }
 
       .search-tree-2 {
-        // margin-top: 10px;
         position: relative;
 
         .ant-btn {
@@ -874,13 +869,13 @@
       padding-left: 10px;
     }
 
-    .bottom-toolbar .ant-btn {
-      padding: 0px 20px !important;
-      height: @base-input-height  !important;
-      line-height: @base-input-height  !important;
-      border-radius: 4px;
-      min-width: 68px;
-    }
+    // .bottom-toolbar .ant-btn {
+    //   padding: 0px 20px !important;
+    //   height: @base-input-height  !important;
+    //   line-height: @base-input-height  !important;
+    //   border-radius: 4px;
+    //   min-width: 68px;
+    // }
 
   }
 
@@ -890,9 +885,9 @@
   display: none
 }
 
-.u-tabs-content .container-edit-mode .ant-row.card-tabs,
+.u-tabs-content .container-edit-mode .yon-row.card-tabs,
 .u-tabs-content .container-edit-mode .line-tabs,
-.u-tabs-content .container-browse-mode .ant-row.card-tabs,
+.u-tabs-content .container-browse-mode .yon-row.card-tabs,
 .u-tabs-content .container-browse-mode .line-tabs,
 .u-tabs-content .meta-option {
   padding-bottom: 60px;
@@ -903,7 +898,7 @@
       width: 100%;
       position: relative;
 
-      >.ant-row {
+      >.yon-row {
         float: left;
         width: calc(~'100% - 275px') !important;
 
@@ -1004,7 +999,7 @@
         }
       }
 
-      >.ant-row+.basic-input-text {
+      >.yon-row+.basic-input-text {
         position: absolute;
         right: 78px;
 
@@ -1016,7 +1011,7 @@
         }
       }
 
-      >.ant-row+.basic-input-text+button {
+      >.yon-row+.basic-input-text+button {
         position: absolute;
         right: 0;
         width: 68px;
@@ -1047,16 +1042,16 @@
     .meta-table.listTable {
       background: none;
 
-      .ant-row {
+      .yon-row {
         height: auto;
         line-height: auto;
       }
 
-      .ant-row:hover {
+      .yon-row:hover {
         background: none;
       }
 
-      .ant-row div {
+      .yon-row div {
         height: auto;
         line-height: auto
       }
@@ -1065,11 +1060,11 @@
         color: #333 !important;
       }
 
-      .ant-row div.table-header-name {
+      .yon-row div.table-header-name {
         color: #666;
       }
 
-      .ant-row div.public_fixedDataTableCell_main {
+      .yon-row div.public_fixedDataTableCell_main {
         border-bottom: 1px solid #dbe0e5
       }
 
@@ -1121,7 +1116,7 @@
       height: auto;
     }
 
-    .ant-row {
+    .yon-row {
       width: 100%;
     }
 
@@ -1159,7 +1154,7 @@
     }
   }
 
-  .control-radio>.ant-row {
+  .control-radio>.yon-row {
     margin-bottom: 5px;
   }
 
@@ -1189,21 +1184,21 @@
   }
 }
 
-.u-tabs-content .container-edit-mode .ant-row.card-tabs+.ant-row,
-.u-tabs-content .container-edit-mode .line-tabs+.ant-row,
-.u-tabs-content .container-browse-mode .ant-row.card-tabs+.ant-row,
-.u-tabs-content .container-browse-mode .line-tabs+.ant-row {
+.u-tabs-content .container-edit-mode .yon-row.card-tabs+.yon-row,
+.u-tabs-content .container-edit-mode .line-tabs+.yon-row,
+.u-tabs-content .container-browse-mode .yon-row.card-tabs+.yon-row,
+.u-tabs-content .container-browse-mode .line-tabs+.yon-row {
   margin-top: -20px;
 }
 
 //库存单据序列号商品点击"序列号"进入孙表后，点击最大化无法返回单据界面
 .u-tabs-content .container-edit-mode .line-tabs+.line-tabs-maximize,
-.u-tabs-content .container-edit-mode .line-tabs-maximize+.ant-row,
+.u-tabs-content .container-edit-mode .line-tabs-maximize+.yon-row,
 .u-tabs-content .container-browse-mode .line-tabs+.line-tabs-maximize {
   margin-top: 0px;
 }
 
-.u-tabs-content .container-browse-mode .line-tabs+.ant-row .upload-content {
+.u-tabs-content .container-browse-mode .line-tabs+.yon-row .upload-content {
   margin-top: 15px;
 }
 
@@ -1239,11 +1234,12 @@
   height: 100%;
 }
 
-// @media screen and (max-height: 768px) {}
-
 .viewCell {
   .input-control .u-select-show-search.u-select {
     display: inherit;
+  }
+  .input-control .u-select {
+    max-width: 100%;
   }
 }
 
@@ -1267,11 +1263,6 @@
   background: none !important;
   z-index: 9999;
 }
-
-/* 交班 */
-// .tab-menu .ant-menu-item-selected a {
-//   color: #ee2223;
-// }
 
 .viewContainer.width-percent-33 {
   width: 33.33% !important;
@@ -1339,7 +1330,7 @@
       width: 100%;
       overflow: hidden;
 
-      >.ant-row {
+      >.yon-row {
         .control-width {
           width: 60%;
           height: auto;
@@ -1355,27 +1346,27 @@
   }
 }
 
-.width-percent-33+.ant-row+.line-tabs {
-  .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row {
+.width-percent-33+.yon-row+.line-tabs {
+  .u-tabs .u-tabs-content div>.yon-row:first-child .yon-row {
     margin-top: 0 !important;
   }
 }
 
-.u-tabs-content .container-browse-mode .line-tabs .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row.caption-title,
-.u-tabs-content .container-browse-mode .line-tabs .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row.caption-title+.listTable .ant-row {
+.u-tabs-content .container-browse-mode .line-tabs .u-tabs .u-tabs-content div>.yon-row:first-child .yon-row.caption-title,
+.u-tabs-content .container-browse-mode .line-tabs .u-tabs .u-tabs-content div>.yon-row:first-child .yon-row.caption-title+.listTable .yon-row {
   margin-top: 0 !important;
 }
 
 // 日结
 .u-tabs-content .line-tabs {
     .u-tabs-tabpane-active {
-      .ant-row {
+      .yon-row {
         h3 {
           display: none;
         }
       }
   
-      .u-tabs .u-tabs-content div>.ant-row:first-child .ant-row {
+      .u-tabs .u-tabs-content div>.yon-row:first-child .yon-row {
         margin-top: 0
       }
   
@@ -1394,11 +1385,6 @@
         .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .editCol,
         .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main:first-child .retail-table-cell .public_fixedDataTableCell_wrap3 .textCol {
           margin-left: 0;
-  
-          // div {
-          //   height: 28px !important;
-          //   line-height: 26px;
-          // }
   
           .viewCell:first-child {
             margin-top: 0px;
@@ -1491,16 +1477,6 @@
         }
       }
   
-    //   .public_fixedDataTableCell_main {
-    //     .fixedDataTable-footer-title {
-    //       line-height: 45px;
-    //     }
-  
-    //     .fixedDataTableCellLayout_wrap1.public_fixedDataTableCell_wrap1 {
-    //       height: 45px !important;
-    //     }
-    //   }
-  
       .caption-title {
         width: 130px;
         position: relative;
@@ -1511,9 +1487,6 @@
           float: left;
           width: 24px;
           height: 24px;
-          /* position: relative;
-                  left: 50%;
-                  margin-left: -77px; */
           margin-top: 12px;
           margin-right: 5px;
         }
@@ -1567,7 +1540,7 @@
         padding-left: 0px;
       }
   
-      .ant-row {
+      .yon-row {
         display: block !important;
         margin-bottom: 0;
       }
@@ -1628,14 +1601,12 @@
   }
 }
 
+// 类同“组织单元” 等左右结构的底部toolbar
 .form-base .ant-row-flex.btn-toolbar-bottom {
   align-items: center;
+  // position: absolute;
+  bottom: 0;
 }
-
-// .ant-btn .anticon {
-//   font-size: 16px;
-//   margin-left: -3px;
-// }
 
 /* 6.13  大屏设置 */
 .eChartPanelDesign_LeftPanel {
@@ -1673,7 +1644,6 @@
       border-radius: 0 100px 100px 0;
     }
 
-    // button.ant-btn-primary,
     button:hover {
       border: 1px solid #505766;
       z-index: 1
@@ -1894,9 +1864,6 @@
       margin-right: 0;
     }
 
-    // button.ant-btn-primary {
-    //   border: 1px solid #505766;
-    // }
   }
 
   .wide-high {
@@ -2107,7 +2074,7 @@
     height: calc(~'100% - 100px');
     overflow-y: auto;
 
-    .ant-row {
+    .yon-row {
       .col-all {
         .qingchu-btn {
           position: absolute;
@@ -2153,7 +2120,7 @@
               height: 100%;
               margin-right: 10px;
 
-              .ant-row {
+              .yon-row {
                 position: absolute;
                 bottom: 3px;
                 width: 30px;
@@ -2321,7 +2288,7 @@
     margin-bottom: 15px;
   }
 
-  >.clearfix>.ant-row {
+  >.clearfix>.yon-row {
     height: 28px;
     line-height: 28px;
   }
@@ -2371,19 +2338,19 @@
     float: left;
   }
 
-  .ant-row.label-title {
+  .yon-row.label-title {
     padding: 0;
     margin-left: 10px;
   }
 
-  .ant-row.direction,
-  .ant-row.num,
+  .yon-row.direction,
+  .yon-row.num,
   .bili {
     float: left;
     margin-left: -10px;
   }
 
-  .ant-row.num {
+  .yon-row.num {
     button {
       width: 38px;
       height: 28px;
@@ -2415,7 +2382,7 @@
     }
   }
 
-  .ant-row:hover {
+  .yon-row:hover {
     background: none;
   }
 
@@ -2526,7 +2493,7 @@
       }
     }
 
-    .ant-row {
+    .yon-row {
       margin-top: 15px;
 
       span {
@@ -2626,7 +2593,7 @@
       }
     }
 
-    .ant-row.fontSize {
+    .yon-row.fontSize {
       input {
         width: 54px;
         text-align: center;
@@ -2652,7 +2619,7 @@
     max-height: 491px;
     overflow-y: auto;
 
-    >div>.ant-row {
+    >div>.yon-row {
       margin-bottom: 15px;
 
       >.col-all:first-child {
@@ -2673,11 +2640,11 @@
         }
       }
 
-      .filter-controls .ant-row {
+      .filter-controls .yon-row {
         line-height: 32px;
 
         .basic-predicate-data-picker {
-          .ant-row {
+          .yon-row {
             .label-control {
               width: 60px !important;
               margin-right: 10px;
@@ -2696,7 +2663,7 @@
                 margin-bottom: 0px;
               }
 
-              .ant-row {
+              .yon-row {
                 .col-float {
                   width: 110px !important;
                 }
@@ -2718,7 +2685,7 @@
       }
 
       .filter-controls .filter-hide {
-        >.ant-row {
+        >.yon-row {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -2751,10 +2718,10 @@
       }
 
       .eChartPanelDesign {
-        >.ant-row>.col-all {
+        >.yon-row>.col-all {
           width: 607px;
 
-          >div>.ant-row {
+          >div>.yon-row {
             >.col-float {
               margin-bottom: 15px;
             }
@@ -2819,7 +2786,7 @@
       padding-right: 0;
     }
 
-    .ant-row.width-less {
+    .yon-row.width-less {
       .col-all:first-child {
         margin-right: 70px;
       }
@@ -2885,7 +2852,7 @@
 
     }
 
-    .ant-row.width-less-pl {
+    .yon-row.width-less-pl {
       .col-all:first-child {
         margin-right: 70px;
       }
@@ -2941,13 +2908,13 @@
     height: 340px;
   }
 
-  .ant-modal-body .ant-row.width-less .col-all:first-child,
-  .ant-modal-body .ant-row.width-less-pl .col-all:first-child {
+  .ant-modal-body .yon-row.width-less .col-all:first-child,
+  .ant-modal-body .yon-row.width-less-pl .col-all:first-child {
     margin-right: 15px;
   }
 
-  .ant-row.width-less,
-  .ant-row.width-less-pl {
+  .yon-row.width-less,
+  .yon-row.width-less-pl {
     margin-top: 15px;
 
     .col-all {
@@ -3003,7 +2970,7 @@
 }
 
 // 店存
-.u-tabs-content .container-edit-mode .line-tabs.diancun-yanhuo .tab-top-right .col-auto>.ant-row+.basic-input-text+button {
+.u-tabs-content .container-edit-mode .line-tabs.diancun-yanhuo .tab-top-right .col-auto>.yon-row+.basic-input-text+button {
   position: relative !important;
 }
 
@@ -3076,10 +3043,10 @@
   .twoInclusion .viewCell.width-percent-100 {
     padding-left: 15px !important;
 
-    .ant-row {
+    .yon-row {
       width: 50%;
 
-      .control-width .ant-row {
+      .control-width .yon-row {
         width: 100%;
       }
     }
@@ -3090,8 +3057,8 @@
     height: 28px;
   }
 
-  .twoInclusion:first-child+.ant-row,
-  .twoInclusion:first-child>.ant-row {
+  .twoInclusion:first-child+.yon-row,
+  .twoInclusion:first-child>.yon-row {
     margin-left: -102px
   }
 }
@@ -3132,13 +3099,6 @@
     }
   }
 }
-
-// .ant-input-number,
-// .ant-calendar-picker,
-// .ant-select,
-// .ant-cascader-picker {
-//   width: 100%;
-// }
 
 /*编辑移动模板*/
 .eChartPanelDesign_EditPanel3 {
@@ -3494,8 +3454,8 @@
 
   .tb {
 
-    .ant-row.width-less,
-    .ant-row.width-less-pl {
+    .yon-row.width-less,
+    .yon-row.width-less-pl {
       display: flex;
       align-items: center;
       margin-top: 15px;
@@ -3515,7 +3475,7 @@
       }
     }
 
-    .ant-row.width-less-pl {
+    .yon-row.width-less-pl {
       .col-all {
         .ant-input {
           width: 250px !important;
@@ -3523,7 +3483,7 @@
       }
     }
 
-    .ant-row.width-less:first-child {
+    .yon-row.width-less:first-child {
       margin-top: 0px;
     }
   }
@@ -3545,7 +3505,7 @@
     }
   }
 
-  .ant-row.gltj {
+  .yon-row.gltj {
     .UpDown_Location {
       position: relative;
 
@@ -3598,7 +3558,7 @@
       .input-control {
         flex: 1;
 
-        .ant-row {
+        .yon-row {
           .col-float {
             width: 114px !important;
           }
@@ -3615,7 +3575,7 @@
       }
     }
 
-    .basic-predicate-data-picker>.ant-row {
+    .basic-predicate-data-picker>.yon-row {
       display: flex;
     }
 
@@ -3625,7 +3585,7 @@
       .filter-hide {
         margin-top: 15px;
 
-        .ant-row {
+        .yon-row {
           display: flex;
           align-items: center;
 
@@ -3669,7 +3629,7 @@
       font-weight: bold;
     }
 
-    .ant-row.width-less {
+    .yon-row.width-less {
       display: flex;
       align-items: center;
       margin-top: 15px;
@@ -3722,7 +3682,7 @@
       }
     }
 
-    .ant-row.width-less:first-child {
+    .yon-row.width-less:first-child {
       margin-top: 0px;
     }
 
@@ -3753,7 +3713,7 @@
     overflow-y: auto;
 
     .hz {
-      .ant-row.width-less {
+      .yon-row.width-less {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
@@ -3770,7 +3730,7 @@
         }
       }
 
-      .ant-row.width-less-pl {
+      .yon-row.width-less-pl {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
@@ -3798,14 +3758,14 @@
         }
       }
 
-      .ant-row.gltj {
+      .yon-row.gltj {
         margin-bottom: 15px;
 
         .sp-range-txt {
           text-align: center;
         }
 
-        .ant-row {
+        .yon-row {
           line-height: 32px;
         }
 
@@ -3818,7 +3778,7 @@
           width: 660px;
           float: left;
 
-          .ant-row {
+          .yon-row {
             .col-float {
               margin-bottom: 15px;
 
@@ -3831,7 +3791,7 @@
           }
 
           .basic-predicate-data-picker {
-            .ant-row {
+            .yon-row {
               .label-control {
                 margin-bottom: 0px;
               }
@@ -3859,7 +3819,7 @@
           }
 
           .filter-hide {
-            .ant-row {
+            .yon-row {
               display: flex;
               align-items: center;
             }
@@ -3974,7 +3934,6 @@
     }
 
     .ant-btn {
-      // width: 120px;
       height: 40px;
       margin: 0 10px;
       border-radius: 24px;
@@ -4010,65 +3969,23 @@
   }
 }
 
-// 销售订单  发货单 5个单据
-// .voucher_orderlist,
-// .voucher_deliverylist,
-// .voucher_salereturnlist,
-// .voucher_saleinvoicelist,
-// .voucher_orderchangelist {
-//   .container-browse-mode {
-//     .group-container {
-//       padding-top: 0;
-//     }
-
-//     .list-top-toolbar {
-//       padding-bottom: 8px;
-//     }
-//   }
-
-//   .line-tabs-menu-container {
-//     .u-menu-horizontal {
-//       background: transparent;
-//     }
-//   }
-
-//   .u-select.u-select-disabled {
-//     display: block;
-//   }
-//   .u-tabs-content {
-//     .ant-search-input-wrapper {
-//       height: auto;
-//     }
-//     div[id='voucher_order|voucher_order_scmsa_body_attach_base'] {
-//       padding-top: 20px;
-//     }
-//   }
-//   .order-verification-container {
-//     .group-container>.col-float>.ant-row {
-//       display: flex;
-//       align-items: center;
-//     }
-//     .u-input-number.u-input-group.simple .u-input-group-btn .icon-group .uf {
-//       line-height: 12px;
-//     }
-//   }
-//   .line-tabs .line-tabs-menu-container .tab-menu {
-//     display: flex;
-//   }
-// }
-
 /*fix:QDJM-2228*/
-.meta-dynamic-view.voucher_orderlist.udinghuo .mdf-footer .tab-bottom-txt {
-  margin-top: 0;
-  padding: 7px 32px;
-  max-height: unset;
-  margin: 0 0 0 8px;
-  width: calc(~'100% - 16px');
-  min-width: unset;
-  box-sizing: border-box;
+.meta-dynamic-view.voucher_orderlist.udinghuo {
+  .mdf-footer .tab-bottom-txt {
+    margin-top: 0;
+    padding: 7px 32px;
+    max-height: unset;
+    margin: 0 0 0 8px;
+    width: calc(~'100% - 16px');
+    min-width: unset;
+    box-sizing: border-box;
+  }
+  .container-edit-mode {
+    height: 100%;
+  }
 }
 
-.mdf-footer .tab-bottom-txt .viewSetting.viewCell .ant-row {
+.mdf-footer .tab-bottom-txt .viewSetting.viewCell .yon-row {
   min-height: 18px;
   line-height: 1.5;
   margin-bottom: 0 !important;
@@ -4106,7 +4023,7 @@
     .line-tabs {
       margin-bottom: 4px;
     }
-    .jDiwork-container>.ant-row.meta-default-container{
+    .jDiwork-container>.yon-row.meta-default-container{
         padding-bottom: 0px;
         .listheadRow{
             padding: 2px 0 0px;
@@ -4119,7 +4036,7 @@
     width: 100%;
   }
 }
-.aa_adjacentstoregrouplist .u-tabs-content .height-100 .list-top-toolbar+.ant-row .viewCell h1 {
+.aa_adjacentstoregrouplist .u-tabs-content .height-100 .list-top-toolbar+.yon-row .viewCell h1 {
   margin-top: 0;
 }
 .fixedDataTableLayout_header.public_fixedDataTable_header {
@@ -4188,7 +4105,7 @@
   }
 }
 
-.po_production_order_list .container-browse-mode .container-edit-mode .viewCell .ant-row {
+.po_production_order_list .container-browse-mode .container-edit-mode .viewCell .yon-row {
   margin-bottom: 4px!important;
 }
 
