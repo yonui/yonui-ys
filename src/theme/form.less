@@ -930,9 +930,6 @@
         table-layout: fixed;
         word-break: break-all;
         overflow: hidden;
-        .text-wrapper{
-          line-height: 14px;
-        }
       }
 
       .ant-time-picker {
@@ -1032,7 +1029,13 @@
     }
   }
 }
-
+div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark{
+  display: flex;
+  align-items: center;
+  .text-wrapper{
+    line-height: 14px;
+  }
+}
 // 错误提示
 .has-error {
 
