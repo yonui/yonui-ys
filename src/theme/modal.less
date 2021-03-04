@@ -4938,12 +4938,9 @@
     position: absolute!important;
     z-index: 1000;
     background: #fff;
-    width: auto!important;
-    margin: 0 !important;
-    top: 6px;
-    bottom: 16px;
-    left: 68px;
-    right: 16px;
+    width: calc(100% - 32px)!important;
+    margin: 0 16px!important;
+    top: 16px!important;
 
   .u-modal-content {
     box-shadow: unset;
@@ -4955,6 +4952,17 @@
       flex: 1;
       overflow-y: scroll;
     }
+  }
+}
+
+.menuOuter {
+  .referModal.refer-modal-maximize {
+    width: auto!important;
+    margin: 0 !important;
+    top: 6px;
+    bottom: 16px;
+    left: 68px;
+    right: 16px;
   }
 }
 
