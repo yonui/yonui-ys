@@ -4,47 +4,33 @@
     }
 }
 
-.no-iframe {
-    .jDiwork-container .line-tabs-maximize {
-        height: calc(~"100% - 80px");
-        top: 80px;
-        width: calc(~"100% - 16px"); // 16px 是容器padding 边距效果
-    }
-}
 
-.no-iframe .menuOuter {
-    .jDiwork-container {
-        .line-tabs-maximize {
-            height: calc(~"100% - 80px");
-            top: 80px;
-            width: calc(~"100% - 69px"); 
-            z-index: 1700;
-        }
-    }
-    &.fixed{
+.no-iframe {
+    .menuOuter {
         .jDiwork-container {
             .line-tabs-maximize {
-                width: calc(~"100% - 201px"); 
+                height: calc(~"100% - 80px");
+                width: auto;
+                left: 61px;
+                right: 0;
+                top: 80px;
+                z-index: 1700;
+            }
+        }
+        &.fixed{
+            .jDiwork-container {
+                .line-tabs-maximize {
+                    left: 193px;
+                }
             }
         }
     }
 }
 
 .no-iframe {
-    // .bottom-toolbar {
-    //     bottom: 8px; // 减去工作台的底部8px 间距
-    //     right: 8px;
-    // }
-
     .u-modal-body .bottom-toolbar {
         bottom: 0;
     }
-
-    // .btn-group-bottom.bottom-toolbar {
-    //     width: calc(~'100% - 16px') !important;
-    //     bottom: 0;
-    //     margin-left: 8px;
-    // }
     .u-modal .btn-group-bottom.bottom-toolbar{
         left: 0;
         margin-left: 0;
