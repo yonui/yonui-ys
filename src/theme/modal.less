@@ -196,7 +196,7 @@
 .bottom-toolbar {
   position: absolute;
   bottom: 0;
-  z-index: 1700; // fix: 成本分配方法，参照遮罩要大于等于底部toolbar
+  z-index: 1000; // fix: 成本分配方法，参照遮罩要大于等于底部toolbar
   // left: 159px;
   // right: 10px;
   box-shadow: 0 -5px 12px -5px #dedede;
@@ -316,6 +316,11 @@
 
 .meta-option .btn-group-bottom.bottom-toolbar {
   margin-left: 0;
+}
+
+.common_option.u8c-authConfig .container-browse-mode div[id="common_option|selectTemplateMulLang"]{
+  margin-left: 227px;
+  margin-top: 4px;
 }
 
 .form-base {
@@ -4934,14 +4939,17 @@
   }
 }
 
+//老菜单
 .referModal.refer-modal-maximize {
-    position: absolute!important;
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
     z-index: 1000;
+    width: auto!important;
+    margin: 0;
     background: #fff;
-    width: calc(100% - 32px)!important;
-    margin: 0 16px!important;
-    top: 16px!important;
-
   .u-modal-content {
     box-shadow: unset;
     height: 100%;
@@ -4955,14 +4963,10 @@
   }
 }
 
+//新菜单
 .menuOuter {
   .referModal.refer-modal-maximize {
-    width: auto!important;
-    margin: 0 !important;
-    top: 6px;
-    bottom: 16px;
     left: 68px;
-    right: 16px;
   }
 }
 

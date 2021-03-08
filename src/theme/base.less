@@ -2070,12 +2070,6 @@ a.Toolbar_Notification_Log {
 /*地图问题*/
 
 .map {
-  .input-control {
-    .control-text.invoice-remark {
-      width: 400px;
-    }
-  }
-
   // 地图删除图标
   .map-row {
     &:hover {
@@ -5505,6 +5499,14 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
+.split_container .split_left .left-container>.meta-default-container{
+  display:flex;
+  flex-direction:column;
+}
+.split_container .split_left .left-container .border-r{
+  flex:1;
+}
+
 // 友零售portal 页
 // .uretail-right-content {
 //   .split_container .split_right .yon-row-flex.btn-toolbar-bottom.bottom-toolbar,
@@ -6514,7 +6516,7 @@ div[id='bd_staff_card|photo'] {
                 width: initial;
             }
             .viewSetting{
-                right: -14px!important;
+                right: -24px!important;
             }
         }
     }
@@ -6523,4 +6525,11 @@ div[id='bd_staff_card|photo'] {
 .btn-func-group-toolbar>.col-auto>div{
   display: flex;
   align-items: center;
+}
+
+.IMP-PLM-PSDM .container-edit-mode .split_container .split_right .listheadRow{
+  padding:0;
+  .ant-row-flex .col-auto .u-button{
+    margin:16px 12px;
+  }    
 }
