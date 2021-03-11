@@ -3727,16 +3727,10 @@
 
       .reload-button {
         float: left;
-        border: none;
         padding: 0px;
-        min-width: auto;
+        width: 28px;
         margin-left: 10px;
-        color: #588CE9;
         padding-right: 5px;
-
-        &:hover {
-          color: #92BDFF;
-        }
       }
 
       .yonicon-jichushezhi1 {
@@ -4941,15 +4935,14 @@
 
 //老菜单
 .referModal.refer-modal-maximize {
-    position: absolute;
-    top: 16px;
+    position: absolute!important;
+    top: 6px;
     bottom: 16px;
     left: 16px;
     right: 16px;
     z-index: 1000;
     width: auto!important;
-    margin: 0;
-    background: #fff;
+    margin: 0!important;
   .u-modal-content {
     box-shadow: unset;
     height: 100%;
@@ -5227,5 +5220,12 @@
   }
   .u-modal-footer {
     border-top: none;
+  }
+}
+
+.rmm_workorder_alterstatus_modal{
+  .modal-body{
+    padding: 0;
+    height: 360px;
   }
 }
