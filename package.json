@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "2.0.24",
+  "version": "2.0.24-devtest",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
@@ -65,7 +65,7 @@
     "bee-page-layout": "1.0.1",
     "bee-pagination": "3.0.3",
     "bee-panel": "2.0.2",
-    "bee-popconfirm": "2.0.0",
+    "bee-popconfirm": "2.0.3",
     "bee-popover": "3.1.0",
     "bee-progress": "0.0.1",
     "bee-progress-bar": "2.0.2",
