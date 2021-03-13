@@ -226,8 +226,8 @@
       "icon_id": "16257608",
       "name": "组织单元",
       "font_class": "zuzhidanyuan",
-      "unicode": "e614",
-      "unicode_decimal": 58900
+      "unicode": "e609",
+      "unicode_decimal": 58889
     },
     {
       "icon_id": "5488006",
@@ -247,8 +247,8 @@
       "icon_id": "3258568",
       "name": "留言",
       "font_class": "liuyan",
-      "unicode": "e618",
-      "unicode_decimal": 58904
+      "unicode": "e60b",
+      "unicode_decimal": 58891
     },
     {
       "icon_id": "3062132",
@@ -261,8 +261,8 @@
       "icon_id": "16801112",
       "name": "联动下级",
       "font_class": "liandongxiaji1",
-      "unicode": "e619",
-      "unicode_decimal": 58905
+      "unicode": "e60c",
+      "unicode_decimal": 58892
     },
     {
       "icon_id": "5528034",
@@ -310,8 +310,8 @@
       "icon_id": "3073015",
       "name": "编辑",
       "font_class": "bianji",
-      "unicode": "e602",
-      "unicode_decimal": 58882
+      "unicode": "e51c",
+      "unicode_decimal": 58652
     },
     {
       "icon_id": "5532951",
@@ -324,15 +324,15 @@
       "icon_id": "17206576",
       "name": "启用",
       "font_class": "qiyong",
-      "unicode": "e61a",
-      "unicode_decimal": 58906
+      "unicode": "e60d",
+      "unicode_decimal": 58893
     },
     {
       "icon_id": "17206607",
       "name": "停用",
       "font_class": "tingyong",
-      "unicode": "e61b",
-      "unicode_decimal": 58907
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "17288824",
@@ -345,8 +345,8 @@
       "icon_id": "3088590",
       "name": "搜索",
       "font_class": "sousuo",
-      "unicode": "e603",
-      "unicode_decimal": 58883
+      "unicode": "e518",
+      "unicode_decimal": 58648
     },
     {
       "icon_id": "5537256",
@@ -408,8 +408,8 @@
       "icon_id": "3094434",
       "name": "加",
       "font_class": "jia",
-      "unicode": "e604",
-      "unicode_decimal": 58884
+      "unicode": "e52a",
+      "unicode_decimal": 58666
     },
     {
       "icon_id": "648792",
@@ -436,8 +436,8 @@
       "icon_id": "3113197",
       "name": "修改密码",
       "font_class": "xiugaimima",
-      "unicode": "e605",
-      "unicode_decimal": 58885
+      "unicode": "e403",
+      "unicode_decimal": 58371
     },
     {
       "icon_id": "5950581",
@@ -450,8 +450,8 @@
       "icon_id": "3113198",
       "name": "退出登录",
       "font_class": "tuichudenglu",
-      "unicode": "e606",
-      "unicode_decimal": 58886
+      "unicode": "e402",
+      "unicode_decimal": 58370
     },
     {
       "icon_id": "5950582",
@@ -919,8 +919,8 @@
       "icon_id": "6065358",
       "name": "显示图片",
       "font_class": "xianshitupian",
-      "unicode": "e610",
-      "unicode_decimal": 58896
+      "unicode": "e608",
+      "unicode_decimal": 58888
     },
     {
       "icon_id": "3457147",
@@ -1157,8 +1157,8 @@
       "icon_id": "6733073",
       "name": "下  拉",
       "font_class": "arrow-down",
-      "unicode": "e611",
-      "unicode_decimal": 58897
+      "unicode": "e606",
+      "unicode_decimal": 58886
     },
     {
       "icon_id": "4044903",
@@ -1618,23 +1618,23 @@
     {
       "icon_id": "2046312",
       "name": "星号",
-      "font_class": "xinghao",
-      "unicode": "e60d",
-      "unicode_decimal": 58893
+      "font_class": "star",
+      "unicode": "e605",
+      "unicode_decimal": 58885
     },
     {
       "icon_id": "2047867",
       "name": "更多",
-      "font_class": "gengduo2",
-      "unicode": "e60e",
-      "unicode_decimal": 58894
+      "font_class": "ellipsis",
+      "unicode": "e521",
+      "unicode_decimal": 58657
     },
     {
       "icon_id": "2326946",
       "name": "上传",
       "font_class": "shangchuan",
-      "unicode": "e60f",
-      "unicode_decimal": 58895
+      "unicode": "e570",
+      "unicode_decimal": 58736
     },
     {
       "icon_id": "7900330",
@@ -1738,8 +1738,8 @@
       "icon_id": "2874798",
       "name": "向右",
       "font_class": "right",
-      "unicode": "e600",
-      "unicode_decimal": 58880
+      "unicode": "e514",
+      "unicode_decimal": 58644
     },
     {
       "icon_id": "4977859",
@@ -1808,8 +1808,8 @@
       "icon_id": "2874810",
       "name": "向左",
       "font_class": "left",
-      "unicode": "e601",
-      "unicode_decimal": 58881
+      "unicode": "515",
+      "unicode_decimal": 1301
     },
     {
       "icon_id": "4982856",
@@ -1845,13 +1845,6 @@
       "font_class": "kaishigaoliang",
       "unicode": "e830",
       "unicode_decimal": 59440
-    },
-    {
-      "icon_id": "2874812",
-      "name": "常用功能",
-      "font_class": "changyonggongneng",
-      "unicode": "e637",
-      "unicode_decimal": 58935
     },
     {
       "icon_id": "2888313",
