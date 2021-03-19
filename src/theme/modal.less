@@ -2490,10 +2490,6 @@
         padding-bottom: 0px;
       }
 
-      .bottom-toolbar {
-        left: 360px !important;
-      }
-
       .portal-container .line-tabs-maximize {
         height: calc(~'100% - 75px');
         top: 75px;
@@ -5229,7 +5225,35 @@
   }
 }
 
-.menuOuter.fixed{
+
+//老菜单
+.um-win{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar{
+          left: 308px !important;
+        }
+      }
+    }
+  }
+}
+
+//新菜单
+.um-win.menuOuter{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar {
+          left: 360px !important;
+        }
+      }
+    }
+  }
+}
+
+//新菜单固定
+.um-win.menuOuter.fixed{
   .workbench-container {
     .workbench-main {
       .workbench-right {
