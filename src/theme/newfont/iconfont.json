@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "20475133",
+      "name": "字段变更",
+      "font_class": "ziduanbiangeng",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "8513624",
       "name": "试机",
       "font_class": "roomstatuseight",
@@ -944,25 +951,11 @@
       "unicode_decimal": 59052
     },
     {
-      "icon_id": "8513625",
-      "name": "微修",
-      "font_class": "roomstatusnine",
-      "unicode": "e79e",
-      "unicode_decimal": 59294
-    },
-    {
       "icon_id": "3460520",
       "name": "浏览态-保存业务对象-不可用",
       "font_class": "baocun-disabled",
       "unicode": "e6ae",
       "unicode_decimal": 59054
-    },
-    {
-      "icon_id": "8513626",
-      "name": "转房",
-      "font_class": "roomstatustwo",
-      "unicode": "e79f",
-      "unicode_decimal": 59295
     },
     {
       "icon_id": "3515163",
@@ -972,20 +965,6 @@
       "unicode_decimal": 59055
     },
     {
-      "icon_id": "8513627",
-      "name": "领位",
-      "font_class": "roomstatusone",
-      "unicode": "e7a0",
-      "unicode_decimal": 59296
-    },
-    {
-      "icon_id": "8513628",
-      "name": "坏房",
-      "font_class": "roomstatusfive",
-      "unicode": "e7a1",
-      "unicode_decimal": 59297
-    },
-    {
       "icon_id": "3520763",
       "name": "浏览态-库存查询-不可用",
       "font_class": "kucunchaxun-disabled",
@@ -993,46 +972,11 @@
       "unicode_decimal": 59057
     },
     {
-      "icon_id": "8513629",
-      "name": "留房",
-      "font_class": "roomstatusfour",
-      "unicode": "e7a2",
-      "unicode_decimal": 59298
-    },
-    {
-      "icon_id": "8513630",
-      "name": "领位超时",
-      "font_class": "roomstatusten",
-      "unicode": "e7a3",
-      "unicode_decimal": 59299
-    },
-    {
       "icon_id": "3527583",
       "name": "浏览态-日报-不可用",
       "font_class": "ribao-disabled",
       "unicode": "e6b3",
       "unicode_decimal": 59059
-    },
-    {
-      "icon_id": "8513631",
-      "name": "清洁",
-      "font_class": "roomstatusthree",
-      "unicode": "e7a4",
-      "unicode_decimal": 59300
-    },
-    {
-      "icon_id": "8513632",
-      "name": "空闲",
-      "font_class": "roomstatussix",
-      "unicode": "e7a5",
-      "unicode_decimal": 59301
-    },
-    {
-      "icon_id": "8513633",
-      "name": "关机提醒",
-      "font_class": "roomstatuseleven",
-      "unicode": "e7a6",
-      "unicode_decimal": 59302
     },
     {
       "icon_id": "3529861",
@@ -1054,13 +998,6 @@
       "font_class": "tuodong",
       "unicode": "e805",
       "unicode_decimal": 59397
-    },
-    {
-      "icon_id": "8689245",
-      "name": "在用",
-      "font_class": "roomstatusseven",
-      "unicode": "e7a9",
-      "unicode_decimal": 59305
     },
     {
       "icon_id": "8713811",
