@@ -2397,7 +2397,7 @@
   .workbench-main {
     display: flex;
     width: 100%;
-    height: calc(~'100% - 60px');
+    height: calc(~'100% - 50px');
 
     .workbench-left {
       width: 300px;
@@ -2491,8 +2491,7 @@
       }
 
       .bottom-toolbar {
-        left: 308px !important;
-        width: calc(~'100% - 316px') !important;
+        left: 360px !important;
       }
 
       .portal-container .line-tabs-maximize {
@@ -5227,5 +5226,17 @@
   .modal-body{
     padding: 0;
     height: 360px;
+  }
+}
+
+.menuOuter.fixed{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar{
+          left: 492px !important;
+        }
+      }
+    }
   }
 }
