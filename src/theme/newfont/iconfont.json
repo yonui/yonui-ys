@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "20288050",
+      "name": "应付管理",
+      "font_class": "yingfuguanli",
+      "unicode": "e87f",
+      "unicode_decimal": 59519
+    },
+    {
       "icon_id": "20475133",
       "name": "字段变更",
       "font_class": "ziduanbiangeng",
