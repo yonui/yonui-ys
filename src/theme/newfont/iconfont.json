@@ -1618,7 +1618,7 @@
     {
       "icon_id": "2326946",
       "name": "上传",
-      "font_class": "shangchuan",
+      "font_class": "uploadimg",
       "unicode": "e570",
       "unicode_decimal": 58736
     },
