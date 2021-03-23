@@ -405,6 +405,13 @@
       "unicode_decimal": 58992
     },
     {
+      "icon_id": "17858547",
+      "name": "失败提示",
+      "font_class": "cuowutishi",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
       "icon_id": "17858548",
       "name": "常规提示",
       "font_class": "xingzhuangbeifen",
@@ -417,6 +424,13 @@
       "font_class": "nan",
       "unicode": "e66b",
       "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "17858634",
+      "name": "成功提示",
+      "font_class": "chenggongtishi",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
     },
     {
       "icon_id": "11749408",
@@ -536,13 +550,6 @@
       "font_class": "gouwucheredline",
       "unicode": "e7de",
       "unicode_decimal": 59358
-    },
-    {
-      "icon_id": "3113466",
-      "name": "全部删除",
-      "font_class": "quanbushanchu",
-      "unicode": "e678",
-      "unicode_decimal": 59000
     },
     {
       "icon_id": "18024300",
@@ -697,6 +704,13 @@
       "font_class": "youlingshoulogo",
       "unicode": "e76e",
       "unicode_decimal": 59246
+    },
+    {
+      "icon_id": "3207885",
+      "name": "通知信息",
+      "font_class": "tongzhixinxi",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
     },
     {
       "icon_id": "4350201",
@@ -1068,13 +1082,6 @@
       "font_class": "zuo",
       "unicode": "e6c3",
       "unicode_decimal": 59075
-    },
-    {
-      "icon_id": "3790647",
-      "name": "结算明细",
-      "font_class": "jiesuanmingxi",
-      "unicode": "e6c4",
-      "unicode_decimal": 59076
     },
     {
       "icon_id": "3790648",
