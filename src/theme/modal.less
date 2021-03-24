@@ -186,10 +186,6 @@
   .col-auto {
     margin-right: 20px;
   }
-
-  &.yon-row-flex-start {
-    justify-content: flex-end;
-  }
 }
 
 /*角色新增-底部按钮*/
@@ -1871,6 +1867,11 @@
       height: 26px;
       margin: 6px 8px;
     }
+
+    i {
+      font-size: 24px;
+      margin: 6px 8px;
+    }
   }
 }
 
@@ -2397,7 +2398,7 @@
   .workbench-main {
     display: flex;
     width: 100%;
-    height: calc(~'100% - 60px');
+    height: calc(~'100% - 50px');
 
     .workbench-left {
       width: 300px;
@@ -2488,11 +2489,6 @@
 
       .list-top-toolbar {
         padding-bottom: 0px;
-      }
-
-      .bottom-toolbar {
-        left: 308px !important;
-        width: calc(~'100% - 316px') !important;
       }
 
       .portal-container .line-tabs-maximize {
@@ -4970,7 +4966,7 @@
 }
 // 提示信息优化
 .u-popover.u-popover-tooltip.u-tooltip[overlayclassname~='input-tip-pover-dialog'] {
-  transform: translateY(0)!important;
+  transform: translateY(0);
   .tooltip-inner {
     line-height: 28px;
     padding: 0 8px!important;
@@ -5227,5 +5223,45 @@
   .modal-body{
     padding: 0;
     height: 360px;
+  }
+}
+
+
+//老菜单
+.um-win{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar{
+          left: 308px !important;
+        }
+      }
+    }
+  }
+}
+
+//新菜单
+.um-win.menuOuter{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar {
+          left: 360px !important;
+        }
+      }
+    }
+  }
+}
+
+//新菜单固定
+.um-win.menuOuter.fixed{
+  .workbench-container {
+    .workbench-main {
+      .workbench-right {
+        .bottom-toolbar{
+          left: 492px !important;
+        }
+      }
+    }
   }
 }
