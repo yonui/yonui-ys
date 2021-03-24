@@ -1,2 +1,2 @@
 require('./index-no-tinper.less');
-require('./font.js');
+// require('./font.js');
