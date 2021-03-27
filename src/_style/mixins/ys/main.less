@@ -251,18 +251,30 @@
   .viewSetting {
     .basic-input-textarea {
       .input-control .control-text {
-        height: 100%;
+        // height: 100%;
         // padding:0 4px;
         // line-height:26px;
-        padding:5px 24px 5px 4px;
+        padding:5px 24px 0 4px;
         line-height: 1.5;
         resize: vertical;
+        overflow: auto;
+        height:28px;
+        min-height:28px;
         .text-wrapper{
           white-space: pre-wrap;
         }
       }
     }
   }
+}
+
+.container-edit-mode  .viewSetting .basic-input-textarea .input-control textarea{
+  padding:5px 24px 0 4px;
+  line-height:1.5;
+  resize: vertical;
+  overflow: auto;
+  height:28px;
+  min-height:28px;
 }
 
 //错误信息提示框关闭图标
