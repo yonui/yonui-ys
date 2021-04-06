@@ -10,6 +10,7 @@ class PopconfirmAdapter extends Component {
       placement: this.props.placement,
       secondPlacement: this.props.placement,
       content: this.props.title,
+      noNegativeTop: this.props.noNegativeTop,
       close_btn: (
         <Button
           className='u-popconfirm-btn u-popconfirm-btn-ok'
