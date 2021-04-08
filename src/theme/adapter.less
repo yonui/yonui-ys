@@ -605,11 +605,16 @@ div[id='pc_attachmentgrouplist|lookat1'] {
 }
 
 // 参照关闭按钮微调，使垂直居中
-.viewSetting.viewCell {
-  .refer-div {
-    .input-control {
+.refer-div {
+  .u-input-group.simple {
+    .referSingle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
       .yonicon-close-circle {
-        transform: translateY(-1px);
+        transform: translateY(0.5px);
+        position: static;
       }
     }
   }
