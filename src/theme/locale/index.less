@@ -1,3 +1,40 @@
 .enus {
   @import './enus/index.less';
+  // LYJM-10696
+  .container-edit-mode {
+    .form-base.Manual-calculation {
+      flex: 1;
+    }
+
+    .viewSetting.viewCell {
+      padding: 0 8px;
+
+      &>.ac_mobile_locale {
+        margin-bottom: 16px;
+
+        .ant-row {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .group-buttons>.yon-row {
+      padding: 0 24px;
+    }
+
+    .basic-input-text,
+    .ac_mobile_locale {
+      .ant-row {
+        padding-left: 0;
+
+        .label-control {
+          width: 100% !important;
+        }
+
+        .input-control {
+          width: 100% !important;
+        }
+      }
+    }
+  }
 }
