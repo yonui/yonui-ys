@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "21048151",
+      "name": "hanshu",
+      "font_class": "hanshu",
+      "unicode": "ea1c",
+      "unicode_decimal": 59932
+    },
+    {
       "icon_id": "20475133",
       "name": "字段变更",
       "font_class": "ziduanbiangeng",
