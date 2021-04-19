@@ -38,6 +38,7 @@ export {
   Slider,
   Steps,
   Tag,
+  YonUITag,
   Tabs,
   TimePicker,
   Tree,

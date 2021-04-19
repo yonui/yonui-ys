@@ -36,6 +36,7 @@ import Slider from './Slider'
 import Steps from './Steps'
 import Tabs from './Tabs'
 import Tag from './Tag/simple'
+import YonUITag from './Tag'
 import TimePicker from './TimePicker'
 import Tree from './Tree'
 import TreeSelect from './TreeSelect'
@@ -117,6 +118,7 @@ export {
   Switch,
   Steps,
   Tag,
+  YonUITag,
   Tabs,
   // Grid,
   TimePicker,
