@@ -74,7 +74,7 @@ class TagAdapter extends Component {
         style={style}
         tagClick={this.props.onClick}
       >
-        {text}
+        {this.props.children}
       </Tag>
     )
   }
