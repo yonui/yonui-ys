@@ -186,12 +186,12 @@
   padding-left: 10px;
 
   .u-button:not(:first-child):not(:last-child) {
-    background: @custom-color  !important;
+    background: @custom-color;
     border: none;
-    color: #fff !important;
+    color: #fff;
 
     &:hover {
-      background: @custom-color-hover  !important;
+      background: @custom-color-hover;
       color: #fff;
     }
 
@@ -199,6 +199,12 @@
       opacity: .5;
       &:hover {
         background: @custom-color  !important;
+      }
+    }
+    &.u-button-primary{
+      background: @primary-color;
+      &:hover {
+        background: @primary-color-hover;
       }
     }
   }
