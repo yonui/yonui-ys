@@ -907,6 +907,40 @@
   }
 }
 
+// LYJM-10696
+.staffcenter{
+  .container-edit-mode {
+    .form-base.Manual-calculation {
+      flex: 1;
+    }
+
+    .viewSetting.viewCell {
+     
+      &>.ac_mobile_locale {
+        margin-bottom: 16px;
+      }
+    }
+
+    .group-buttons>.yon-row {
+      padding: 0 24px;
+    }
+
+    .ac_mobile_locale {
+      .ant-row {
+        padding-left: 0;
+
+        .label-control {
+          width: 100% !important;
+        }
+
+        .input-control {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
  //英文状态下增加宽度
  .enus{
   .u-modal-dialog.scheme-content{
