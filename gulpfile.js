@@ -12,7 +12,7 @@ const argvs = process.argv.splice(2, process.argv.length)
 const sourcemap = argvs.includes('--sourcemap')
 
 // 请不要直接修改 targetPath 的值，避免此文件来回修改。换成修改环境变量 MDF_DEBUG_TARGET，指定到项目路径顶层路径(不包括node_modules)
-const targetPath = process.env.MDF_DEBUG_TARGET || path.join(__dirname, '../../yonyou-mdf/yonyou-mdf-framework/packages/mdf-app')
+const targetPath = process.env.MDF_DEBUG_TARGET || path.join(__dirname, '../yonyou-mdf-framework/packages/mdf-app')
 
 const targetPackage = path.join(targetPath, 'node_modules/yonui-ys/lib')
 const targetLib = path.resolve('.', targetPackage);
