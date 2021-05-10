@@ -6,11 +6,123 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "21048151",
+      "name": "hanshu",
+      "font_class": "hanshu",
+      "unicode": "ea1c",
+      "unicode_decimal": 59932
+    },
+    {
+      "icon_id": "20475133",
+      "name": "字段变更",
+      "font_class": "ziduanbiangeng",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
       "icon_id": "20288050",
       "name": "应付管理",
       "font_class": "yingfuguanli",
       "unicode": "e87f",
       "unicode_decimal": 59519
+    },
+    {
+      "icon_id": "20253444",
+      "name": "待办",
+      "font_class": "daiban",
+      "unicode": "e87e",
+      "unicode_decimal": 59518
+    },
+    {
+      "icon_id": "19734525",
+      "name": "关  闭",
+      "font_class": "guanbi4",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "19843094",
+      "name": "措施",
+      "font_class": "cuoshi",
+      "unicode": "e87a",
+      "unicode_decimal": 59514
+    },
+    {
+      "icon_id": "19843095",
+      "name": "原因",
+      "font_class": "yuanyin",
+      "unicode": "e87b",
+      "unicode_decimal": 59515
+    },
+    {
+      "icon_id": "19843097",
+      "name": "现象",
+      "font_class": "xianxiang",
+      "unicode": "e87c",
+      "unicode_decimal": 59516
+    },
+    {
+      "icon_id": "19843098",
+      "name": "类别",
+      "font_class": "leibie",
+      "unicode": "e87d",
+      "unicode_decimal": 59517
+    },
+    {
+      "icon_id": "19778053",
+      "name": "打印异常",
+      "font_class": "dayinyichang",
+      "unicode": "e879",
+      "unicode_decimal": 59513
+    },
+    {
+      "icon_id": "7543754",
+      "name": "多语言",
+      "font_class": "globe",
+      "unicode": "e9db",
+      "unicode_decimal": 59867
+    },
+    {
+      "icon_id": "19346419",
+      "name": "复制",
+      "font_class": "fuzhi2",
+      "unicode": "e9bb",
+      "unicode_decimal": 59835
+    },
+    {
+      "icon_id": "18845498",
+      "name": "美团券",
+      "font_class": "meituanquan",
+      "unicode": "e873",
+      "unicode_decimal": 59507
+    },
+    {
+      "icon_id": "18836923",
+      "name": "开单首页",
+      "font_class": "kaidanshouye",
+      "unicode": "e872",
+      "unicode_decimal": 59506
+    },
+    {
+      "icon_id": "18833539",
+      "name": "现金支付-被扫",
+      "font_class": "xianjinzhifu-beisao",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
+      "icon_id": "18833540",
+      "name": "现金支付-推单",
+      "font_class": "xianjinzhifu-tuidan",
+      "unicode": "e871",
+      "unicode_decimal": 59505
+    },
+    {
+      "icon_id": "18503777",
+      "name": "现金支付",
+      "font_class": "xianjinzhifu",
+      "unicode": "e86b",
+      "unicode_decimal": 59499
     },
     {
       "icon_id": "20475133",

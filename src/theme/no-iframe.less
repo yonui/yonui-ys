@@ -17,6 +17,42 @@
 }
 
 .no-iframe {
+    .menuOuter {
+        .jDiwork-container {
+            .line-tabs-maximize {
+                height: auto;
+                width: auto;
+                left: 61px;
+                right: 8px;
+                top: 80px;
+                bottom: 60px;
+                z-index: 1700;
+                padding-bottom: 0 !important;
+            }
+            //有树的情况会计期间
+            .form-base.Manual-calculation{
+                .line-tabs-maximize{
+                    left: 300px;
+                }
+            }
+        }
+        &.fixed{
+            .jDiwork-container {
+                .line-tabs-maximize {
+                    left: 193px;
+                }
+                //有树的情况会计期间
+                .form-base.Manual-calculation{
+                    .line-tabs-maximize{
+                        left: 432px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.no-iframe {
     .u-modal-body .bottom-toolbar {
         bottom: 0;
     }
