@@ -1600,636 +1600,636 @@
 }
 
 /* 6.13  大屏设置 */
-.eChartPanelDesign_LeftPanel {
-  width: 250px !important;
-  padding: 15px 10px 20px 20px;
-  overflow-y: auto;
-
-  .tab {
-    width: 140px;
-    position: relative;
-    left: 50%;
-    margin-left: -62px;
-    margin-bottom: 10px;
-
-    button {
-      width: 60px;
-      border: 1px solid #D9D9D9;
-      font-size: 12px;
-      color: #505766;
-      background: #fff;
-      border-radius: 0;
-      height: 26px;
-      line-height: 24px;
-      padding: 0;
-      margin-left: -1px;
-      position: relative;
-
-    }
-
-    button:first-child {
-      border-radius: 100px 0 0 100px;
-    }
-
-    button:last-child {
-      border-radius: 0 100px 100px 0;
-    }
-
-    button:hover {
-      border: 1px solid #505766;
-      z-index: 1
-    }
-
-  }
-
-  .chart-img {
-    height: 36px;
-    line-height: 36px;
-    margin-bottom: 15px;
-
-    svg {
-      width: 36px;
-      height: 36px;
-      float: left;
-      margin-right: 9px;
-    }
-
-    svg+div {
-      float: left;
-      line-height: 36px;
-    }
-
-    button {
-      width: 16px;
-      height: 16px;
-      border: 1px solid #E4E4E4;
-      border-radius: 100px;
-      padding: 0;
-      float: right;
-
-      span {
-        position: relative;
-        top: -1px;
-      }
-    }
-
-    .icon-jia {
-      float: right;
-      width: 24px;
-      height: 24px;
-      border: 1px solid #E4E4E4;
-      border-radius: 50%;
-      cursor: pointer;
-      margin-top: 7px;
-      position: relative;
-      margin-right: 5px;
-
-      i {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        font-size: 10px;
-      }
-    }
-  }
-
-  .chart-img:hover {
-    color: #ee2223;
-
-    .icon-jia {
-      border: 1px solid #ee2223;
-    }
-
-    i {
-      color: #ee2223;
-    }
-  }
-
-  .title {
-    font-size: 12px;
-    color: #333333;
-    margin-bottom: 10px;
-    margin-top: 15px;
-  }
-
-  .tab+.title {
-    margin-top: 0px;
-  }
-
-  .eChartPanelDesign_TemplateLayOut {
-    >div {
-      width: 98px !important;
-      text-align: center;
-      font-size: 12px;
-      color: #333333;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      float: left;
-      cursor: pointer;
-
-      >div.icon {
-        width: 100% !important;
-        height: 55px !important;
-        border: 1px solid #d9d9d9 !important;
-        position: relative;
-        border-radius: 4px;
-
-        svg {
-          width: 140px;
-          height: 90px;
-          position: absolute;
-          left: -22px;
-          top: -19px;
-        }
-      }
-
-      div.explain {
-        margin-top: 5px;
-      }
-
-      >.eChartPanelDesign_template {
-        width: 100% !important;
-        height: 55px !important;
-        border-radius: 2px;
-        margin-bottom: 5px;
-      }
-    }
-
-    .eChartPanelDesign_Template_Selected {
-      div.icon {
-        border: 1px solid #505766 !important;
-      }
-    }
-
-    .eChartPanelDesign_Template_UnSelected:hover {
-      div.icon {
-        border: 1px solid #505766 !important;
-      }
-    }
-
-    >div:nth-child(2n) {
-      margin-right: 0;
-    }
-
-    >div:last-child {
-      margin-bottom: 0;
-    }
-
-
-  }
-
-  .eChartPanelDesign2_TemplateLayOut {
-    >div {
-      margin-right: 9px;
-
-      >div.icon {
-        width: 100% !important;
-        height: 36px !important;
-        border: 1px solid #d9d9d9 !important;
-        position: relative;
-        border-radius: 4px;
-
-        svg {
-          width: 90px;
-          height: 58px;
-          position: absolute;
-          left: -14px;
-          top: -12px;
-        }
-      }
-    }
-
-    >div.eChartPanelDesign2_Template_UnSelected {
-      width: 64px !important;
-    }
-
-    .eChartPanelDesign2_Template_Selected {
-      width: 64px !important;
-    }
-
-    .eChartPanelDesign2_Template_Selected {
-      div.icon {
-        border: 1px solid #505766 !important;
-      }
-    }
-
-    .eChartPanelDesign2_Template_UnSelected:hover {
-      div.icon {
-        border: 1px solid #505766 !important;
-      }
-    }
-
-    >div:nth-child(2n) {
-      margin-right: 9px;
-    }
-
-    >div:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-
-  .proportion {
-    margin-bottom: 10px;
-
-    button {
-      width: 98px;
-      height: 30px;
-      border: 1px solid #D9D9D9;
-      border-radius: 4px;
-      margin-right: 15px;
-      font-size: 12px;
-      color: #333333;
-      background: none;
-
-      i {
-        font-style: normal;
-        color: #ee2223;
-      }
-    }
-
-    button:hover {
-      border: 1px solid #505766;
-    }
-
-    button:last-child {
-      margin-right: 0;
-    }
-
-  }
-
-  .wide-high {
-    line-height: 30px;
-
-    >div {
-      float: left;
-      margin-right: 7px;
-    }
-
-    >div:last-child {
-      margin-right: 0;
-    }
-
-    .little-title {
-      width: 98px !important;
-      text-align: center;
-      margin-right: 15px;
-      color: #666;
-    }
-
-    .nums {
-      width: 40px !important;
-    }
-
-    .bi {
-      margin-right: 0;
-      width: 9px !important;
-    }
-
-    .ant-input {
-      padding: 0;
-      width: 40px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-    }
-  }
-
-  .background-color {
-    button {
-      width: 26px;
-      height: 26px;
-      border: none;
-      border-radius: 100px;
-      padding: 0;
-      margin-right: 10px;
-      float: left;
-
-      i {
-        color: #fff;
-        font-size: 12px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -6px;
-        margin-top: -5px;
-      }
-    }
-
-    .backgroundcolor2 {
-      i {
-        color: #aaa;
-      }
-    }
-
-    button.backgroundcolorselected {
-      border: 3px solid #d9d9d9;
-      transition: none;
-
-    }
-
-    button+div {
-      svg {
-        width: 30px;
-        height: 30px;
-        position: relative;
-        top: -3px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .bg-style {
-    margin-top: 18px;
-    margin-bottom: 8px;
-    padding-right: 8px;
-
-    button {
-      float: right;
-      border: none;
-      padding: .0;
-      height: auto;
-      color: #588CE9;
-      padding-right: 2px;
-    }
-  }
-
-  .bg-style-list {
-    .col-float {
-      width: 98px !important;
-      margin-right: 15px;
-      text-align: center;
-      font-size: 12px;
-      color: #333333;
-      margin-bottom: 10px;
-      cursor: pointer;
-
-      img {
-        width: 100%;
-      }
-
-      div:first-child {
-        border-radius: 2px;
-        width: 100% !important;
-        height: 55px;
-        margin-bottom: 5px;
-      }
-
-      .eChartPanelDesign_BackStyle_Selected {
-        position: relative;
-      }
-
-      .eChartPanelDesign_BackStyle_Selected:before {
-        position: absolute;
-        content: "";
-        transform: rotate(45deg) scale(1);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        display: table;
-        width: 7px;
-        height: 12px;
-        margin-top: -7px;
-        margin-left: -3px;
-        border: 2px solid #fff;
-        border-top: 0;
-        border-left: 0;
-        content: " ";
-        transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
-      }
-
-    }
-
-    .col-float:nth-child(2n) {
-      margin-right: 0;
-    }
-
-    .col-float:hover {
-      div:first-child {
-        position: relative;
-      }
-
-      div:first-child:before {
-        position: absolute;
-        content: "";
-        transform: rotate(45deg) scale(1);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        display: table;
-        width: 7px;
-        height: 12px;
-        margin-top: -7px;
-        margin-left: -3px;
-        border: 2px solid #fff;
-        border-top: 0;
-        border-left: 0;
-        content: " ";
-        transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
-      }
-    }
-
-  }
-}
-
-.eChartPanelDesign_EditPanel {
-  background: #F0F1F4;
-  width: calc(~'100% - 250px') !important;
-  padding-left: 20px;
-  padding-right: 0px;
-  position: relative;
-
-  /*滚动条*/
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
-
-  .template-name {
-    height: 52px;
-
-    span {
-      font-size: 12px;
-      color: #666666;
-      line-height: 32px;
-      margin-right: 15px;
-
-      .ant-input {
-        width: 400px;
-      }
-    }
-  }
-
-  .template-content {
-    background: #fff;
-    padding: 2px;
-    height: calc(~'100% - 100px');
-    overflow-y: auto;
-
-    .yon-row {
-      .col-all {
-        .qingchu-btn {
-          position: absolute;
-          top: 0px;
-          left: 0px;
-        }
-
-        .edit-btn,
-        .del-btn {
-          position: relative;
-          float: right;
-          width: 30px;
-          height: 100%;
-          margin-right: 10px;
-
-          .qingchu-btn-bg {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 0 10px 0 #E4E4E4;
-            position: absolute;
-            bottom: 4px;
-
-            svg {
-              width: 18px;
-              height: 18px;
-              margin: 6px;
-            }
-          }
-        }
-
-        >div.panelLayer-col-inner {
-          position: relative;
-
-          >div {
-            height: 100%;
-
-            .upload-content {
-              position: relative;
-              float: right;
-              width: 30px;
-              height: 100%;
-              margin-right: 10px;
-
-              .yon-row {
-                position: absolute;
-                bottom: 3px;
-                width: 30px;
-                height: 30px;
-                background: #fff;
-                border-radius: 50%;
-                box-shadow: 0 0 10px 0 #E4E4E4;
-              }
-
-              .btn-gray {
-                background: none;
-                font-size: 12px;
-                color: #333333;
-                padding: 0;
-
-                svg {
-                  width: 17px;
-                  height: 17px;
-                  margin-top: 6px;
-                  margin-left: 6px;
-                }
-              }
-
-            }
-
-            .eChartPanelSplit {
-              position: relative;
-              float: right;
-              width: 18px;
-              height: 100%;
-              margin-right: 10px;
-
-              .chaifen {
-                position: absolute;
-                bottom: 4px;
-                padding: 0px;
-                border: none;
-                right: 0px;
-                background: #fff;
-                width: 30px;
-                height: 30px;
-                box-shadow: 0 0 10px 0 #E4E4E4;
-                border-radius: 50%;
-
-                svg {
-                  width: 21px;
-                  height: 21px;
-                }
-              }
-
-            }
-          }
-
-          .panelLayer-col-hasbackgroundimage {
-            position: relative;
-
-            .eChartPanelSplit {
-              position: absolute;
-              right: 0px;
-              bottom: 0px;
-
-              .chaifen {
-                right: 0px !important;
-              }
-            }
-          }
-
-          .eChartPanelDesign_HasValue {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -5%;
-            width: 10% !important;
-            height: 100%;
-            min-width: auto;
-            display: flex;
-            align-items: center;
-
-            svg {
-              width: 100%;
-              height: 50%;
-              flex: 1;
-              display: flex;
-              justify-content: center;
-              /*水平轴居中*/
-            }
-
-            svg+span {
-              display: none;
-            }
-          }
-
-        }
-
-        .panelLayer-col-final {
-          white-space: nowrap;
-          overflow-x: auto;
-          box-sizing: border-box;
-          overflow-y: hidden;
-
-          >div {
-            min-width: 86px;
-            position: relative;
-            overflow-x: auto;
-            overflow-y: hidden;
-          }
-
-        }
-
-        .eChartPanelSplit_HasImg {
-          .chaifen {
-            right: 10px !important;
-          }
-        }
-      }
-    }
-  }
-}
+// .eChartPanelDesign_LeftPanel {
+//   width: 250px !important;
+//   padding: 15px 10px 20px 20px;
+//   overflow-y: auto;
+
+//   .tab {
+//     width: 140px;
+//     position: relative;
+//     left: 50%;
+//     margin-left: -62px;
+//     margin-bottom: 10px;
+
+//     button {
+//       width: 60px;
+//       border: 1px solid #D9D9D9;
+//       font-size: 12px;
+//       color: #505766;
+//       background: #fff;
+//       border-radius: 0;
+//       height: 26px;
+//       line-height: 24px;
+//       padding: 0;
+//       margin-left: -1px;
+//       position: relative;
+
+//     }
+
+//     button:first-child {
+//       border-radius: 100px 0 0 100px;
+//     }
+
+//     button:last-child {
+//       border-radius: 0 100px 100px 0;
+//     }
+
+//     button:hover {
+//       border: 1px solid #505766;
+//       z-index: 1
+//     }
+
+//   }
+
+//   .chart-img {
+//     height: 36px;
+//     line-height: 36px;
+//     margin-bottom: 15px;
+
+//     svg {
+//       width: 36px;
+//       height: 36px;
+//       float: left;
+//       margin-right: 9px;
+//     }
+
+//     svg+div {
+//       float: left;
+//       line-height: 36px;
+//     }
+
+//     button {
+//       width: 16px;
+//       height: 16px;
+//       border: 1px solid #E4E4E4;
+//       border-radius: 100px;
+//       padding: 0;
+//       float: right;
+
+//       span {
+//         position: relative;
+//         top: -1px;
+//       }
+//     }
+
+//     .icon-jia {
+//       float: right;
+//       width: 24px;
+//       height: 24px;
+//       border: 1px solid #E4E4E4;
+//       border-radius: 50%;
+//       cursor: pointer;
+//       margin-top: 7px;
+//       position: relative;
+//       margin-right: 5px;
+
+//       i {
+//         position: absolute;
+//         left: 5px;
+//         top: 5px;
+//         font-size: 10px;
+//       }
+//     }
+//   }
+
+//   .chart-img:hover {
+//     color: #ee2223;
+
+//     .icon-jia {
+//       border: 1px solid #ee2223;
+//     }
+
+//     i {
+//       color: #ee2223;
+//     }
+//   }
+
+//   .title {
+//     font-size: 12px;
+//     color: #333333;
+//     margin-bottom: 10px;
+//     margin-top: 15px;
+//   }
+
+//   .tab+.title {
+//     margin-top: 0px;
+//   }
+
+//   .eChartPanelDesign_TemplateLayOut {
+//     >div {
+//       width: 98px !important;
+//       text-align: center;
+//       font-size: 12px;
+//       color: #333333;
+//       margin-right: 15px;
+//       margin-bottom: 10px;
+//       float: left;
+//       cursor: pointer;
+
+//       >div.icon {
+//         width: 100% !important;
+//         height: 55px !important;
+//         border: 1px solid #d9d9d9 !important;
+//         position: relative;
+//         border-radius: 4px;
+
+//         svg {
+//           width: 140px;
+//           height: 90px;
+//           position: absolute;
+//           left: -22px;
+//           top: -19px;
+//         }
+//       }
+
+//       div.explain {
+//         margin-top: 5px;
+//       }
+
+//       >.eChartPanelDesign_template {
+//         width: 100% !important;
+//         height: 55px !important;
+//         border-radius: 2px;
+//         margin-bottom: 5px;
+//       }
+//     }
+
+//     .eChartPanelDesign_Template_Selected {
+//       div.icon {
+//         border: 1px solid #505766 !important;
+//       }
+//     }
+
+//     .eChartPanelDesign_Template_UnSelected:hover {
+//       div.icon {
+//         border: 1px solid #505766 !important;
+//       }
+//     }
+
+//     >div:nth-child(2n) {
+//       margin-right: 0;
+//     }
+
+//     >div:last-child {
+//       margin-bottom: 0;
+//     }
+
+
+//   }
+
+//   .eChartPanelDesign2_TemplateLayOut {
+//     >div {
+//       margin-right: 9px;
+
+//       >div.icon {
+//         width: 100% !important;
+//         height: 36px !important;
+//         border: 1px solid #d9d9d9 !important;
+//         position: relative;
+//         border-radius: 4px;
+
+//         svg {
+//           width: 90px;
+//           height: 58px;
+//           position: absolute;
+//           left: -14px;
+//           top: -12px;
+//         }
+//       }
+//     }
+
+//     >div.eChartPanelDesign2_Template_UnSelected {
+//       width: 64px !important;
+//     }
+
+//     .eChartPanelDesign2_Template_Selected {
+//       width: 64px !important;
+//     }
+
+//     .eChartPanelDesign2_Template_Selected {
+//       div.icon {
+//         border: 1px solid #505766 !important;
+//       }
+//     }
+
+//     .eChartPanelDesign2_Template_UnSelected:hover {
+//       div.icon {
+//         border: 1px solid #505766 !important;
+//       }
+//     }
+
+//     >div:nth-child(2n) {
+//       margin-right: 9px;
+//     }
+
+//     >div:nth-child(3n) {
+//       margin-right: 0;
+//     }
+//   }
+
+//   .proportion {
+//     margin-bottom: 10px;
+
+//     button {
+//       width: 98px;
+//       height: 30px;
+//       border: 1px solid #D9D9D9;
+//       border-radius: 4px;
+//       margin-right: 15px;
+//       font-size: 12px;
+//       color: #333333;
+//       background: none;
+
+//       i {
+//         font-style: normal;
+//         color: #ee2223;
+//       }
+//     }
+
+//     button:hover {
+//       border: 1px solid #505766;
+//     }
+
+//     button:last-child {
+//       margin-right: 0;
+//     }
+
+//   }
+
+//   .wide-high {
+//     line-height: 30px;
+
+//     >div {
+//       float: left;
+//       margin-right: 7px;
+//     }
+
+//     >div:last-child {
+//       margin-right: 0;
+//     }
+
+//     .little-title {
+//       width: 98px !important;
+//       text-align: center;
+//       margin-right: 15px;
+//       color: #666;
+//     }
+
+//     .nums {
+//       width: 40px !important;
+//     }
+
+//     .bi {
+//       margin-right: 0;
+//       width: 9px !important;
+//     }
+
+//     .ant-input {
+//       padding: 0;
+//       width: 40px;
+//       height: 30px;
+//       text-align: center;
+//       line-height: 30px;
+//     }
+//   }
+
+//   .background-color {
+//     button {
+//       width: 26px;
+//       height: 26px;
+//       border: none;
+//       border-radius: 100px;
+//       padding: 0;
+//       margin-right: 10px;
+//       float: left;
+
+//       i {
+//         color: #fff;
+//         font-size: 12px;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         margin-left: -6px;
+//         margin-top: -5px;
+//       }
+//     }
+
+//     .backgroundcolor2 {
+//       i {
+//         color: #aaa;
+//       }
+//     }
+
+//     button.backgroundcolorselected {
+//       border: 3px solid #d9d9d9;
+//       transition: none;
+
+//     }
+
+//     button+div {
+//       svg {
+//         width: 30px;
+//         height: 30px;
+//         position: relative;
+//         top: -3px;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+
+//   .bg-style {
+//     margin-top: 18px;
+//     margin-bottom: 8px;
+//     padding-right: 8px;
+
+//     button {
+//       float: right;
+//       border: none;
+//       padding: .0;
+//       height: auto;
+//       color: #588CE9;
+//       padding-right: 2px;
+//     }
+//   }
+
+//   .bg-style-list {
+//     .col-float {
+//       width: 98px !important;
+//       margin-right: 15px;
+//       text-align: center;
+//       font-size: 12px;
+//       color: #333333;
+//       margin-bottom: 10px;
+//       cursor: pointer;
+
+//       img {
+//         width: 100%;
+//       }
+
+//       div:first-child {
+//         border-radius: 2px;
+//         width: 100% !important;
+//         height: 55px;
+//         margin-bottom: 5px;
+//       }
+
+//       .eChartPanelDesign_BackStyle_Selected {
+//         position: relative;
+//       }
+
+//       .eChartPanelDesign_BackStyle_Selected:before {
+//         position: absolute;
+//         content: "";
+//         transform: rotate(45deg) scale(1);
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         display: table;
+//         width: 7px;
+//         height: 12px;
+//         margin-top: -7px;
+//         margin-left: -3px;
+//         border: 2px solid #fff;
+//         border-top: 0;
+//         border-left: 0;
+//         content: " ";
+//         transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+//       }
+
+//     }
+
+//     .col-float:nth-child(2n) {
+//       margin-right: 0;
+//     }
+
+//     .col-float:hover {
+//       div:first-child {
+//         position: relative;
+//       }
+
+//       div:first-child:before {
+//         position: absolute;
+//         content: "";
+//         transform: rotate(45deg) scale(1);
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         display: table;
+//         width: 7px;
+//         height: 12px;
+//         margin-top: -7px;
+//         margin-left: -3px;
+//         border: 2px solid #fff;
+//         border-top: 0;
+//         border-left: 0;
+//         content: " ";
+//         transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+//       }
+//     }
+
+//   }
+// }
+
+// .eChartPanelDesign_EditPanel {
+//   background: #F0F1F4;
+//   width: calc(~'100% - 250px') !important;
+//   padding-left: 20px;
+//   padding-right: 0px;
+//   position: relative;
+
+//   /*滚动条*/
+//   ::-webkit-scrollbar {
+//     width: 3px;
+//     height: 3px;
+//   }
+
+//   .template-name {
+//     height: 52px;
+
+//     span {
+//       font-size: 12px;
+//       color: #666666;
+//       line-height: 32px;
+//       margin-right: 15px;
+
+//       .ant-input {
+//         width: 400px;
+//       }
+//     }
+//   }
+
+//   .template-content {
+//     background: #fff;
+//     padding: 2px;
+//     height: calc(~'100% - 100px');
+//     overflow-y: auto;
+
+//     .yon-row {
+//       .col-all {
+//         .qingchu-btn {
+//           position: absolute;
+//           top: 0px;
+//           left: 0px;
+//         }
+
+//         .edit-btn,
+//         .del-btn {
+//           position: relative;
+//           float: right;
+//           width: 30px;
+//           height: 100%;
+//           margin-right: 10px;
+
+//           .qingchu-btn-bg {
+//             width: 30px;
+//             height: 30px;
+//             border-radius: 50%;
+//             background: #fff;
+//             box-shadow: 0 0 10px 0 #E4E4E4;
+//             position: absolute;
+//             bottom: 4px;
+
+//             svg {
+//               width: 18px;
+//               height: 18px;
+//               margin: 6px;
+//             }
+//           }
+//         }
+
+//         >div.panelLayer-col-inner {
+//           position: relative;
+
+//           >div {
+//             height: 100%;
+
+//             .upload-content {
+//               position: relative;
+//               float: right;
+//               width: 30px;
+//               height: 100%;
+//               margin-right: 10px;
+
+//               .yon-row {
+//                 position: absolute;
+//                 bottom: 3px;
+//                 width: 30px;
+//                 height: 30px;
+//                 background: #fff;
+//                 border-radius: 50%;
+//                 box-shadow: 0 0 10px 0 #E4E4E4;
+//               }
+
+//               .btn-gray {
+//                 background: none;
+//                 font-size: 12px;
+//                 color: #333333;
+//                 padding: 0;
+
+//                 svg {
+//                   width: 17px;
+//                   height: 17px;
+//                   margin-top: 6px;
+//                   margin-left: 6px;
+//                 }
+//               }
+
+//             }
+
+//             .eChartPanelSplit {
+//               position: relative;
+//               float: right;
+//               width: 18px;
+//               height: 100%;
+//               margin-right: 10px;
+
+//               .chaifen {
+//                 position: absolute;
+//                 bottom: 4px;
+//                 padding: 0px;
+//                 border: none;
+//                 right: 0px;
+//                 background: #fff;
+//                 width: 30px;
+//                 height: 30px;
+//                 box-shadow: 0 0 10px 0 #E4E4E4;
+//                 border-radius: 50%;
+
+//                 svg {
+//                   width: 21px;
+//                   height: 21px;
+//                 }
+//               }
+
+//             }
+//           }
+
+//           .panelLayer-col-hasbackgroundimage {
+//             position: relative;
+
+//             .eChartPanelSplit {
+//               position: absolute;
+//               right: 0px;
+//               bottom: 0px;
+
+//               .chaifen {
+//                 right: 0px !important;
+//               }
+//             }
+//           }
+
+//           .eChartPanelDesign_HasValue {
+//             position: absolute;
+//             top: 0;
+//             left: 50%;
+//             margin-left: -5%;
+//             width: 10% !important;
+//             height: 100%;
+//             min-width: auto;
+//             display: flex;
+//             align-items: center;
+
+//             svg {
+//               width: 100%;
+//               height: 50%;
+//               flex: 1;
+//               display: flex;
+//               justify-content: center;
+//               /*水平轴居中*/
+//             }
+
+//             svg+span {
+//               display: none;
+//             }
+//           }
+
+//         }
+
+//         .panelLayer-col-final {
+//           white-space: nowrap;
+//           overflow-x: auto;
+//           box-sizing: border-box;
+//           overflow-y: hidden;
+
+//           >div {
+//             min-width: 86px;
+//             position: relative;
+//             overflow-x: auto;
+//             overflow-y: hidden;
+//           }
+
+//         }
+
+//         .eChartPanelSplit_HasImg {
+//           .chaifen {
+//             right: 10px !important;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .ele_Panel {
   height: 100%;
@@ -2981,52 +2981,52 @@
 }
 
 /*桌面看板*/
-.eChartPanelDesign_LeftPanel {
-  .eChartPanelDesign_RowOperate {
-    width: 60px;
-    float: left;
-    margin-bottom: 20px;
-    margin-right: 16px;
-    cursor: pointer;
+// .eChartPanelDesign_LeftPanel {
+//   .eChartPanelDesign_RowOperate {
+//     width: 60px;
+//     float: left;
+//     margin-bottom: 20px;
+//     margin-right: 16px;
+//     cursor: pointer;
 
-    .icon {
-      width: 26px;
-      height: 26px;
-      margin: 0 auto;
-      display: block;
-    }
+//     .icon {
+//       width: 26px;
+//       height: 26px;
+//       margin: 0 auto;
+//       display: block;
+//     }
 
-    div {
-      margin-top: 4px;
-      color: #999;
-    }
-  }
+//     div {
+//       margin-top: 4px;
+//       color: #999;
+//     }
+//   }
 
-  .eChartPanelDesign_RowOperate:nth-child(3n) {
-    margin-right: 0px;
-  }
+//   .eChartPanelDesign_RowOperate:nth-child(3n) {
+//     margin-right: 0px;
+//   }
 
-  .eChartPanelDesign_RowOperate:hover {
-    div {
-      color: #333;
-    }
-  }
-}
+//   .eChartPanelDesign_RowOperate:hover {
+//     div {
+//       color: #333;
+//     }
+//   }
+// }
 
-.Tabletop-Kanban {
-  padding: 0px 0 10px 0px;
+// .Tabletop-Kanban {
+//   padding: 0px 0 10px 0px;
 
-  button.no-border-radius {
-    height: 32px;
-  }
+//   button.no-border-radius {
+//     height: 32px;
+//   }
 
-  button.no-border-radius svg {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    float: left;
-  }
-}
+//   button.no-border-radius svg {
+//     width: 15px;
+//     height: 15px;
+//     margin-right: 5px;
+//     float: left;
+//   }
+// }
 
 // 硬件设备方案
 .hardware {
@@ -3091,794 +3091,794 @@
   }
 }
 
-/*编辑移动模板*/
-.eChartPanelDesign_EditPanel3 {
-  .panelLayer3-col-final {
-    position: relative;
-
-    /*移动报表设置*/
-    .eChartSum_Mobile {
-      .eChartSum_Arrows {
-        position: absolute;
-        top: 50%;
-        margin-top: -16px;
-        z-index: 1;
-        width: 100%;
-
-        .anticon {
-          font-size: 22px;
-        }
-
-        .anticon-arrow-left:before {
-          content: "\e807";
-          color: #999;
-        }
-
-        .anticon-arrow-right:before {
-          content: "\e808";
-          color: #999;
-        }
-
-        .ant-btn {
-          background: transparent;
-
-          &:hover {
-
-            .anticon-arrow-left:before,
-            .anticon-arrow-right:before {
-              color: #505766;
-            }
-          }
-        }
-
-        .ant-btn:nth-of-type(1) {
-          float: left;
-          padding-left: 4px;
-        }
-
-        .ant-btn:nth-of-type(2) {
-          float: right;
-          padding-right: 4px;
-        }
-
-      }
-
-      .u-tabs.u-tabs-top.u-tabs-line {
-        .u-tabs-bar {
-          display: none;
-        }
-
-        .u-tabs-content {
-          min-width: 2540px;
-          max-width: 25400px;
-
-          .u-tabs-tabpane {
-            padding: 10px !important;
-            width: 254px;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-
-            .eChartSumTabSub {
-              width: 50%;
-              float: left;
-              padding: 0px 15px;
-
-              .eChartSumTabSubCaption {
-                display: block;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-
-              .eChartSumTabSubValue {
-                margin-top: 8px;
-                font-size: 20px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .qingchu-btn {
-      float: right;
-      width: 30px;
-      margin-right: 5px;
-
-      .qingchu-btn-bg {
-        position: absolute;
-        bottom: 3px;
-        width: 30px;
-        height: 30px;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 0 10px 0 #e4e4e4;
-
-        svg {
-          width: 18px;
-          height: 18px;
-          margin: 6px;
-        }
-      }
-    }
-
-    .panelLayer3-nocontrol {
-      .eChartPanelSplit {
-        width: 30px;
-        float: right;
-        margin-right: 5px;
-
-        .ant-btn.chaifen {
-          position: absolute;
-          bottom: 3px;
-          width: 30px;
-          height: 30px;
-          background: #fff;
-          border-radius: 50%;
-          box-shadow: 0 0 10px 0 #e4e4e4;
-          border: none;
-          padding: 0px;
-
-          svg {
-            width: 18px;
-            height: 18px;
-            margin: 6px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.eChartPanelDesign_EditPanel3 {
-  width: calc(~'100% - 650px') !important;
-  background: #f0f1f4;
-  padding: 0px;
-  overflow-y: hidden;
-
-  .template3-name {
-    display: flex;
-    align-items: center;
-    padding: 0 18px;
-
-    span:first-child {
-      margin-right: 15px;
-    }
-
-    span {
-      .ant-input {
-        width: 400px;
-      }
-    }
-  }
-
-  .template3-content_outer {
-    height: calc(~'100% - 100px') !important;
-    overflow-y: auto;
-    margin-top: 20px;
-  }
-
-  .template3-content.panelLayer3-all {
-    background: url(./images/edit-mobile-bg.png) no-repeat center 0px;
-    padding-top: 69px;
-    height: 699px;
-
-    .eChartPanel3.panelLayer3-all-outer.panelLayer3-all-outer-nopadding {
-      width: 270px !important;
-      margin: 5px auto 0px auto !important;
-      height: 535px !important;
-      overflow-y: auto;
-    }
-
-    .eChartPanel3.panelLayer3-all-outer.panelLayer3-all-outer-nopadding::-webkit-scrollbar {
-      display: none
-    }
-  }
-
-}
-
-/*编辑移动模板-图表*/
-.eChartPanelDesign_SettingPanelTitle {
-  color: #666666;
-  font-size: 14px;
-  padding-top: 20px;
-  width: 300px;
-  height: 60px;
-  float: left;
-  font-weight: bold;
-}
-
-.eChartPanelDesign_SettingPanel3 {
-  width: 400px !important;
-  position: relative;
-  padding: 0 0px 0px 0px;
-  background: #f0f1f4;
-
-  >div {
-    height: 100%;
-    background: #fff;
-    padding-left: 20px;
-  }
-
-  .icon-guanbi1 {
-    width: 25px;
-    height: auto;
-    float: right;
-    margin-top: 20px;
-    margin-right: 5px;
-
-  }
-
-  .anticon-guanbi1::before {
-    content: "\E636";
-    color: #ccc;
-    font-size: 14px;
-  }
-
-  .icon-guanbi1:hover {
-    .anticon-guanbi1::before {
-      color: #505766;
-    }
-  }
-
-  /*添加动画从右向左*/
-  @-webkit-keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0)
-    }
-
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none
-    }
-  }
-
-  @keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      -ms-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0)
-    }
-
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none
-    }
-  }
-
-  .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight
-  }
-
-  .eChartPanelDesign_SettingPanel_Show2 {
-    -webkit-animation: fadeInRight 0.5s 1;
-    animation: fadeInRight 0.5s 1;
-  }
-
-  /*添加动画从左向右*/
-  @-webkit-keyframes movewidth0 {
-    0% {
-      opacity: 1;
-      right: 0px;
-      width: 400px;
-    }
-
-    50% {
-      opacity: 0.6;
-      right: -200px;
-      width: 400px;
-    }
-
-    100% {
-      opacity: 0;
-      right: -400px;
-      display: none;
-    }
-  }
-
-  @-moz-keyframes movewidth0 {
-    0% {
-      opacity: 1;
-      right: 0px;
-      width: 400px;
-    }
-
-    50% {
-      opacity: 0.6;
-      right: -200px;
-      width: 400px;
-    }
-
-    100% {
-      opacity: 0;
-      right: -400px;
-      display: none;
-    }
-  }
-
-  @keyframes movewidth0 {
-    0% {
-      opacity: 1;
-      right: 0px;
-      width: 400px;
-    }
-
-    50% {
-      opacity: 0.6;
-      right: -200px;
-      width: 400px;
-    }
-
-    100% {
-      opacity: 0;
-      right: -400px;
-      display: none;
-    }
-  }
-
-  .eChartPanelDesign_SettingPanel_Hide {
-    position: relative;
-  }
-
-  .eChartPanelDesign_SettingPanel_Hide2 {
-    position: absolute;
-    right: -400px;
-    -webkit-animation: movewidth0 0.5s linear;
-    animation: movewidth0 0.5s linear;
-    padding-left: 20px;
-  }
-
-  .eChartPanelDesign_SetSum3 {
-    height: calc(~'100% - 165px') !important;
-    overflow-y: auto;
-    clear: both;
-    padding-bottom: 10px;
-  }
-
-  .tb {
-
-    .yon-row.width-less,
-    .yon-row.width-less-pl {
-      display: flex;
-      align-items: center;
-      margin-top: 15px;
-
-      .col-all:first-child {
-        width: 72px;
-        text-align: right;
-        padding-right: 15px;
-        line-height: 16px;
-
-      }
-
-      .col-all {
-        .ant-select {
-          width: 250px !important;
-        }
-      }
-    }
-
-    .yon-row.width-less-pl {
-      .col-all {
-        .ant-input {
-          width: 250px !important;
-        }
-      }
-    }
-
-    .yon-row.width-less:first-child {
-      margin-top: 0px;
-    }
-  }
-
-  .eChartPanelDesign_SetChart3 {
-    height: calc(~'100% - 165px') !important;
-    overflow-y: auto;
-    clear: both;
-    padding-bottom: 10px;
-
-    .eChartPanelSplit_bottom3 {
-      position: absolute;
-      bottom: 66px;
-      left: 20px;
-
-      .ant-btn {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  .yon-row.gltj {
-    .UpDown_Location {
-      position: relative;
-
-      .showMore {
-        position: absolute;
-        bottom: 7px;
-        left: 326px;
-
-        .anticon {
-          font-size: 12px;
-        }
-      }
-
-      .showMore:hover {
-
-        .anticon-down-circle:before,
-        .anticon-up-circle:before {
-          color: #588ce9;
-        }
-      }
-    }
-
-    .eChartPanelSetChart_4 {
-      color: #666666;
-      font-size: 14px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    .up-show {
-      bottom: 0px;
-      right: 20px;
-
-      .showMore {
-        float: left;
-        padding: 0;
-        overflow: hidden;
-      }
-    }
-
-    .basic-predicate-data-picker {
-      .col-float.label-control {
-        width: 72px !important;
-        text-align: right;
-        padding-right: 15px;
-        line-height: 16px;
-        margin-top: 22px;
-      }
-
-      .input-control {
-        flex: 1;
-
-        .yon-row {
-          .col-float {
-            width: 114px !important;
-          }
-
-          .m-r-10 {
-            margin-right: 5px;
-          }
-
-          .basic-predicate-to {
-            margin-top: 6px;
-          }
-        }
-
-      }
-    }
-
-    .basic-predicate-data-picker>.yon-row {
-      display: flex;
-    }
-
-    .filter-controls {
-      overflow: hidden;
-
-      .filter-hide {
-        margin-top: 15px;
-
-        .yon-row {
-          display: flex;
-          align-items: center;
-
-          .label-control {
-            width: 72px !important;
-            text-align: right;
-            padding-right: 15px;
-            line-height: 16px;
-          }
-
-          .input-control {
-            width: 250px !important;
-            height: 32px;
-          }
-        }
-
-        .Test-time-two {
-          .col-float.sp-range-txt {
-            margin-top: 5px;
-
-            span {
-              margin: 0 5px;
-            }
-          }
-        }
-      }
-    }
-
-  }
-}
-
-/*编辑移动模板-汇总*/
-.eChartPanelDesign_SetSum3 {
-  .hz {
-    overflow-y: auto;
-
-    .eChartPanelSetSum_8 {
-      color: #666666;
-      font-size: 14px;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    .yon-row.width-less {
-      display: flex;
-      align-items: center;
-      margin-top: 15px;
-
-      .col-all:first-child {
-        width: 72px;
-        text-align: right;
-        padding-right: 15px;
-        line-height: 16px;
-
-      }
-
-      .col-all {
-        .ant-select {
-          width: 250px !important;
-        }
-      }
-
-      .col-all.ckeck {
-        width: 250px;
-
-        .eChartPanelSetSum-Field {
-          display: flex;
-          margin-top: 15px;
-
-          .ant-checkbox-wrapper {
-            margin-right: 0px;
-          }
-
-          .eChartPanelSetSum-FieldEdit {
-            .icon {
-              margin-top: 7px;
-              width: 18px;
-              height: 18px;
-            }
-          }
-
-          .ant-checkbox-wrapper {
-
-            .ant-input.eChartPanelSetSum_CanNotEdit,
-            .ant-input.eChartPanelSetSum_CanEdit {
-              width: 180px;
-            }
-          }
-        }
-
-        .eChartPanelSetSum-Field:first-child {
-          margin-top: 0px;
-        }
-      }
-    }
-
-    .yon-row.width-less:first-child {
-      margin-top: 0px;
-    }
-
-    .eChartPanelSetSum_2_Outer {
-      align-items: baseline !important;
-    }
-  }
-
-  /*底部按钮*/
-  .eChartPanelSplit_bottom3 {
-    position: absolute;
-    bottom: 66px;
-    left: 20px;
-
-    .ant-btn {
-      margin-right: 10px;
-    }
-  }
-}
-
-/*汇总弹窗*/
-.ant-modal.eChartPanelDesign_SetSum {
-  width: 770px !important;
-
-  .ant-modal-body {
-    padding: 16px 0px 16px 25px;
-    max-height: 490px;
-    overflow-y: auto;
-
-    .hz {
-      .yon-row.width-less {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-
-        .eChartPanelSetSum_1,
-        .eChartPanelSetSum_3 {
-          width: 75px;
-          margin-right: 70px;
-        }
-
-        .ant-select,
-        .ant-input {
-          width: 250px !important;
-        }
-      }
-
-      .yon-row.width-less-pl {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-
-        .eChartPanelSetSum_5,
-        .eChartPanelSetSum_6,
-        .eChartPanelSetSum_7 {
-          width: 75px;
-          margin-right: 70px;
-        }
-
-        .ant-select,
-        .ant-input {
-          width: 75px !important;
-        }
-
-        .tips {
-          font-size: 12px;
-          margin-left: 10px;
-
-          span {
-            color: #ee2223;
-            margin-left: 4px;
-          }
-        }
-      }
-
-      .yon-row.gltj {
-        margin-bottom: 15px;
-
-        .sp-range-txt {
-          text-align: center;
-        }
-
-        .yon-row {
-          line-height: 32px;
-        }
-
-        .col-all.eChartPanelSetSum_8 {
-          width: 75px;
-          float: left;
-        }
-
-        .filter-controls {
-          width: 660px;
-          float: left;
-
-          .yon-row {
-            .col-float {
-              margin-bottom: 15px;
-
-              .filter-hide {
-                .col-float {
-                  margin-bottom: 0px;
-                }
-              }
-            }
-          }
-
-          .basic-predicate-data-picker {
-            .yon-row {
-              .label-control {
-                margin-bottom: 0px;
-              }
-            }
-
-            .label-control {
-              width: 60px !important;
-              margin-right: 10px;
-            }
-
-            .input-control {
-              width: 560px;
-              float: left;
-
-              .query-scheme-date {
-                width: 292px;
-                margin-left: 1px;
-
-                .col-float {
-                  width: 126px !important;
-                  margin-bottom: 0px !important;
-                }
-              }
-            }
-          }
-
-          .filter-hide {
-            .yon-row {
-              display: flex;
-              align-items: center;
-            }
-
-            .label-control {
-              width: 60px !important;
-              margin-right: 10px;
-              text-align: right;
-              line-height: 16px;
-              max-height: 32px;
-            }
-
-            .input-control {
-              width: 215px;
-            }
-          }
-        }
-
-        .up-show {
-          overflow: hidden;
-          top: 0px;
-          left: 615px;
-          right: auto;
-        }
-      }
-
-      .eChartPanelSetSum_2_Outer {
-        align-items: normal !important;
-        margin-bottom: 0px !important;
-
-        .eChartPanelSetSum_2 {
-          width: 75px;
-          margin-right: 70px;
-          float: left;
-        }
-
-        .ckeck {
-          float: left;
-          width: 600px;
-
-          .eChartPanelSetSum-Field {
-            width: 295px;
-            float: left;
-            display: flex;
-            margin-bottom: 15px;
-
-            .ant-input {
-              width: 204px !important;
-            }
-
-            .ant-checkbox+span {
-              padding-right: 0 !important;
-            }
-
-            .eChartPanelSetSum-FieldEdit {
-              svg {
-                width: 16px;
-                height: 16px;
-                margin-top: 8px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-  }
-}
+// /*编辑移动模板*/
+// .eChartPanelDesign_EditPanel3 {
+//   .panelLayer3-col-final {
+//     position: relative;
+
+//     /*移动报表设置*/
+//     .eChartSum_Mobile {
+//       .eChartSum_Arrows {
+//         position: absolute;
+//         top: 50%;
+//         margin-top: -16px;
+//         z-index: 1;
+//         width: 100%;
+
+//         .anticon {
+//           font-size: 22px;
+//         }
+
+//         .anticon-arrow-left:before {
+//           content: "\e807";
+//           color: #999;
+//         }
+
+//         .anticon-arrow-right:before {
+//           content: "\e808";
+//           color: #999;
+//         }
+
+//         .ant-btn {
+//           background: transparent;
+
+//           &:hover {
+
+//             .anticon-arrow-left:before,
+//             .anticon-arrow-right:before {
+//               color: #505766;
+//             }
+//           }
+//         }
+
+//         .ant-btn:nth-of-type(1) {
+//           float: left;
+//           padding-left: 4px;
+//         }
+
+//         .ant-btn:nth-of-type(2) {
+//           float: right;
+//           padding-right: 4px;
+//         }
+
+//       }
+
+//       .u-tabs.u-tabs-top.u-tabs-line {
+//         .u-tabs-bar {
+//           display: none;
+//         }
+
+//         .u-tabs-content {
+//           min-width: 2540px;
+//           max-width: 25400px;
+
+//           .u-tabs-tabpane {
+//             padding: 10px !important;
+//             width: 254px;
+//             min-height: 100px;
+//             display: flex;
+//             align-items: center;
+
+//             .eChartSumTabSub {
+//               width: 50%;
+//               float: left;
+//               padding: 0px 15px;
+
+//               .eChartSumTabSubCaption {
+//                 display: block;
+//                 white-space: nowrap;
+//                 overflow: hidden;
+//                 text-overflow: ellipsis;
+//               }
+
+//               .eChartSumTabSubValue {
+//                 margin-top: 8px;
+//                 font-size: 20px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .qingchu-btn {
+//       float: right;
+//       width: 30px;
+//       margin-right: 5px;
+
+//       .qingchu-btn-bg {
+//         position: absolute;
+//         bottom: 3px;
+//         width: 30px;
+//         height: 30px;
+//         background: #fff;
+//         border-radius: 50%;
+//         box-shadow: 0 0 10px 0 #e4e4e4;
+
+//         svg {
+//           width: 18px;
+//           height: 18px;
+//           margin: 6px;
+//         }
+//       }
+//     }
+
+//     .panelLayer3-nocontrol {
+//       .eChartPanelSplit {
+//         width: 30px;
+//         float: right;
+//         margin-right: 5px;
+
+//         .ant-btn.chaifen {
+//           position: absolute;
+//           bottom: 3px;
+//           width: 30px;
+//           height: 30px;
+//           background: #fff;
+//           border-radius: 50%;
+//           box-shadow: 0 0 10px 0 #e4e4e4;
+//           border: none;
+//           padding: 0px;
+
+//           svg {
+//             width: 18px;
+//             height: 18px;
+//             margin: 6px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .eChartPanelDesign_EditPanel3 {
+//   width: calc(~'100% - 650px') !important;
+//   background: #f0f1f4;
+//   padding: 0px;
+//   overflow-y: hidden;
+
+//   .template3-name {
+//     display: flex;
+//     align-items: center;
+//     padding: 0 18px;
+
+//     span:first-child {
+//       margin-right: 15px;
+//     }
+
+//     span {
+//       .ant-input {
+//         width: 400px;
+//       }
+//     }
+//   }
+
+//   .template3-content_outer {
+//     height: calc(~'100% - 100px') !important;
+//     overflow-y: auto;
+//     margin-top: 20px;
+//   }
+
+//   .template3-content.panelLayer3-all {
+//     background: url(./images/edit-mobile-bg.png) no-repeat center 0px;
+//     padding-top: 69px;
+//     height: 699px;
+
+//     .eChartPanel3.panelLayer3-all-outer.panelLayer3-all-outer-nopadding {
+//       width: 270px !important;
+//       margin: 5px auto 0px auto !important;
+//       height: 535px !important;
+//       overflow-y: auto;
+//     }
+
+//     .eChartPanel3.panelLayer3-all-outer.panelLayer3-all-outer-nopadding::-webkit-scrollbar {
+//       display: none
+//     }
+//   }
+
+// }
+
+// /*编辑移动模板-图表*/
+// .eChartPanelDesign_SettingPanelTitle {
+//   color: #666666;
+//   font-size: 14px;
+//   padding-top: 20px;
+//   width: 300px;
+//   height: 60px;
+//   float: left;
+//   font-weight: bold;
+// }
+
+// .eChartPanelDesign_SettingPanel3 {
+//   width: 400px !important;
+//   position: relative;
+//   padding: 0 0px 0px 0px;
+//   background: #f0f1f4;
+
+//   >div {
+//     height: 100%;
+//     background: #fff;
+//     padding-left: 20px;
+//   }
+
+//   .icon-guanbi1 {
+//     width: 25px;
+//     height: auto;
+//     float: right;
+//     margin-top: 20px;
+//     margin-right: 5px;
+
+//   }
+
+//   .anticon-guanbi1::before {
+//     content: "\E636";
+//     color: #ccc;
+//     font-size: 14px;
+//   }
+
+//   .icon-guanbi1:hover {
+//     .anticon-guanbi1::before {
+//       color: #505766;
+//     }
+//   }
+
+//   /*添加动画从右向左*/
+//   @-webkit-keyframes fadeInRight {
+//     0% {
+//       opacity: 0;
+//       -webkit-transform: translate3d(100%, 0, 0);
+//       transform: translate3d(100%, 0, 0)
+//     }
+
+//     100% {
+//       opacity: 1;
+//       -webkit-transform: none;
+//       transform: none
+//     }
+//   }
+
+//   @keyframes fadeInRight {
+//     0% {
+//       opacity: 0;
+//       -webkit-transform: translate3d(100%, 0, 0);
+//       -ms-transform: translate3d(100%, 0, 0);
+//       transform: translate3d(100%, 0, 0)
+//     }
+
+//     100% {
+//       opacity: 1;
+//       -webkit-transform: none;
+//       -ms-transform: none;
+//       transform: none
+//     }
+//   }
+
+//   .fadeInRight {
+//     -webkit-animation-name: fadeInRight;
+//     animation-name: fadeInRight
+//   }
+
+//   .eChartPanelDesign_SettingPanel_Show2 {
+//     -webkit-animation: fadeInRight 0.5s 1;
+//     animation: fadeInRight 0.5s 1;
+//   }
+
+//   /*添加动画从左向右*/
+//   @-webkit-keyframes movewidth0 {
+//     0% {
+//       opacity: 1;
+//       right: 0px;
+//       width: 400px;
+//     }
+
+//     50% {
+//       opacity: 0.6;
+//       right: -200px;
+//       width: 400px;
+//     }
+
+//     100% {
+//       opacity: 0;
+//       right: -400px;
+//       display: none;
+//     }
+//   }
+
+//   @-moz-keyframes movewidth0 {
+//     0% {
+//       opacity: 1;
+//       right: 0px;
+//       width: 400px;
+//     }
+
+//     50% {
+//       opacity: 0.6;
+//       right: -200px;
+//       width: 400px;
+//     }
+
+//     100% {
+//       opacity: 0;
+//       right: -400px;
+//       display: none;
+//     }
+//   }
+
+//   @keyframes movewidth0 {
+//     0% {
+//       opacity: 1;
+//       right: 0px;
+//       width: 400px;
+//     }
+
+//     50% {
+//       opacity: 0.6;
+//       right: -200px;
+//       width: 400px;
+//     }
+
+//     100% {
+//       opacity: 0;
+//       right: -400px;
+//       display: none;
+//     }
+//   }
+
+//   .eChartPanelDesign_SettingPanel_Hide {
+//     position: relative;
+//   }
+
+//   .eChartPanelDesign_SettingPanel_Hide2 {
+//     position: absolute;
+//     right: -400px;
+//     -webkit-animation: movewidth0 0.5s linear;
+//     animation: movewidth0 0.5s linear;
+//     padding-left: 20px;
+//   }
+
+//   .eChartPanelDesign_SetSum3 {
+//     height: calc(~'100% - 165px') !important;
+//     overflow-y: auto;
+//     clear: both;
+//     padding-bottom: 10px;
+//   }
+
+//   .tb {
+
+//     .yon-row.width-less,
+//     .yon-row.width-less-pl {
+//       display: flex;
+//       align-items: center;
+//       margin-top: 15px;
+
+//       .col-all:first-child {
+//         width: 72px;
+//         text-align: right;
+//         padding-right: 15px;
+//         line-height: 16px;
+
+//       }
+
+//       .col-all {
+//         .ant-select {
+//           width: 250px !important;
+//         }
+//       }
+//     }
+
+//     .yon-row.width-less-pl {
+//       .col-all {
+//         .ant-input {
+//           width: 250px !important;
+//         }
+//       }
+//     }
+
+//     .yon-row.width-less:first-child {
+//       margin-top: 0px;
+//     }
+//   }
+
+//   .eChartPanelDesign_SetChart3 {
+//     height: calc(~'100% - 165px') !important;
+//     overflow-y: auto;
+//     clear: both;
+//     padding-bottom: 10px;
+
+//     .eChartPanelSplit_bottom3 {
+//       position: absolute;
+//       bottom: 66px;
+//       left: 20px;
+
+//       .ant-btn {
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+
+//   .yon-row.gltj {
+//     .UpDown_Location {
+//       position: relative;
+
+//       .showMore {
+//         position: absolute;
+//         bottom: 7px;
+//         left: 326px;
+
+//         .anticon {
+//           font-size: 12px;
+//         }
+//       }
+
+//       .showMore:hover {
+
+//         .anticon-down-circle:before,
+//         .anticon-up-circle:before {
+//           color: #588ce9;
+//         }
+//       }
+//     }
+
+//     .eChartPanelSetChart_4 {
+//       color: #666666;
+//       font-size: 14px;
+//       margin-top: 20px;
+//       font-weight: bold;
+//     }
+
+//     .up-show {
+//       bottom: 0px;
+//       right: 20px;
+
+//       .showMore {
+//         float: left;
+//         padding: 0;
+//         overflow: hidden;
+//       }
+//     }
+
+//     .basic-predicate-data-picker {
+//       .col-float.label-control {
+//         width: 72px !important;
+//         text-align: right;
+//         padding-right: 15px;
+//         line-height: 16px;
+//         margin-top: 22px;
+//       }
+
+//       .input-control {
+//         flex: 1;
+
+//         .yon-row {
+//           .col-float {
+//             width: 114px !important;
+//           }
+
+//           .m-r-10 {
+//             margin-right: 5px;
+//           }
+
+//           .basic-predicate-to {
+//             margin-top: 6px;
+//           }
+//         }
+
+//       }
+//     }
+
+//     .basic-predicate-data-picker>.yon-row {
+//       display: flex;
+//     }
+
+//     .filter-controls {
+//       overflow: hidden;
+
+//       .filter-hide {
+//         margin-top: 15px;
+
+//         .yon-row {
+//           display: flex;
+//           align-items: center;
+
+//           .label-control {
+//             width: 72px !important;
+//             text-align: right;
+//             padding-right: 15px;
+//             line-height: 16px;
+//           }
+
+//           .input-control {
+//             width: 250px !important;
+//             height: 32px;
+//           }
+//         }
+
+//         .Test-time-two {
+//           .col-float.sp-range-txt {
+//             margin-top: 5px;
+
+//             span {
+//               margin: 0 5px;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//   }
+// }
+
+// /*编辑移动模板-汇总*/
+// .eChartPanelDesign_SetSum3 {
+//   .hz {
+//     overflow-y: auto;
+
+//     .eChartPanelSetSum_8 {
+//       color: #666666;
+//       font-size: 14px;
+//       margin-top: 15px;
+//       font-weight: bold;
+//     }
+
+//     .yon-row.width-less {
+//       display: flex;
+//       align-items: center;
+//       margin-top: 15px;
+
+//       .col-all:first-child {
+//         width: 72px;
+//         text-align: right;
+//         padding-right: 15px;
+//         line-height: 16px;
+
+//       }
+
+//       .col-all {
+//         .ant-select {
+//           width: 250px !important;
+//         }
+//       }
+
+//       .col-all.ckeck {
+//         width: 250px;
+
+//         .eChartPanelSetSum-Field {
+//           display: flex;
+//           margin-top: 15px;
+
+//           .ant-checkbox-wrapper {
+//             margin-right: 0px;
+//           }
+
+//           .eChartPanelSetSum-FieldEdit {
+//             .icon {
+//               margin-top: 7px;
+//               width: 18px;
+//               height: 18px;
+//             }
+//           }
+
+//           .ant-checkbox-wrapper {
+
+//             .ant-input.eChartPanelSetSum_CanNotEdit,
+//             .ant-input.eChartPanelSetSum_CanEdit {
+//               width: 180px;
+//             }
+//           }
+//         }
+
+//         .eChartPanelSetSum-Field:first-child {
+//           margin-top: 0px;
+//         }
+//       }
+//     }
+
+//     .yon-row.width-less:first-child {
+//       margin-top: 0px;
+//     }
+
+//     .eChartPanelSetSum_2_Outer {
+//       align-items: baseline !important;
+//     }
+//   }
+
+//   /*底部按钮*/
+//   .eChartPanelSplit_bottom3 {
+//     position: absolute;
+//     bottom: 66px;
+//     left: 20px;
+
+//     .ant-btn {
+//       margin-right: 10px;
+//     }
+//   }
+// }
+
+// /*汇总弹窗*/
+// .ant-modal.eChartPanelDesign_SetSum {
+//   width: 770px !important;
+
+//   .ant-modal-body {
+//     padding: 16px 0px 16px 25px;
+//     max-height: 490px;
+//     overflow-y: auto;
+
+//     .hz {
+//       .yon-row.width-less {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 15px;
+
+//         .eChartPanelSetSum_1,
+//         .eChartPanelSetSum_3 {
+//           width: 75px;
+//           margin-right: 70px;
+//         }
+
+//         .ant-select,
+//         .ant-input {
+//           width: 250px !important;
+//         }
+//       }
+
+//       .yon-row.width-less-pl {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 15px;
+
+//         .eChartPanelSetSum_5,
+//         .eChartPanelSetSum_6,
+//         .eChartPanelSetSum_7 {
+//           width: 75px;
+//           margin-right: 70px;
+//         }
+
+//         .ant-select,
+//         .ant-input {
+//           width: 75px !important;
+//         }
+
+//         .tips {
+//           font-size: 12px;
+//           margin-left: 10px;
+
+//           span {
+//             color: #ee2223;
+//             margin-left: 4px;
+//           }
+//         }
+//       }
+
+//       .yon-row.gltj {
+//         margin-bottom: 15px;
+
+//         .sp-range-txt {
+//           text-align: center;
+//         }
+
+//         .yon-row {
+//           line-height: 32px;
+//         }
+
+//         .col-all.eChartPanelSetSum_8 {
+//           width: 75px;
+//           float: left;
+//         }
+
+//         .filter-controls {
+//           width: 660px;
+//           float: left;
+
+//           .yon-row {
+//             .col-float {
+//               margin-bottom: 15px;
+
+//               .filter-hide {
+//                 .col-float {
+//                   margin-bottom: 0px;
+//                 }
+//               }
+//             }
+//           }
+
+//           .basic-predicate-data-picker {
+//             .yon-row {
+//               .label-control {
+//                 margin-bottom: 0px;
+//               }
+//             }
+
+//             .label-control {
+//               width: 60px !important;
+//               margin-right: 10px;
+//             }
+
+//             .input-control {
+//               width: 560px;
+//               float: left;
+
+//               .query-scheme-date {
+//                 width: 292px;
+//                 margin-left: 1px;
+
+//                 .col-float {
+//                   width: 126px !important;
+//                   margin-bottom: 0px !important;
+//                 }
+//               }
+//             }
+//           }
+
+//           .filter-hide {
+//             .yon-row {
+//               display: flex;
+//               align-items: center;
+//             }
+
+//             .label-control {
+//               width: 60px !important;
+//               margin-right: 10px;
+//               text-align: right;
+//               line-height: 16px;
+//               max-height: 32px;
+//             }
+
+//             .input-control {
+//               width: 215px;
+//             }
+//           }
+//         }
+
+//         .up-show {
+//           overflow: hidden;
+//           top: 0px;
+//           left: 615px;
+//           right: auto;
+//         }
+//       }
+
+//       .eChartPanelSetSum_2_Outer {
+//         align-items: normal !important;
+//         margin-bottom: 0px !important;
+
+//         .eChartPanelSetSum_2 {
+//           width: 75px;
+//           margin-right: 70px;
+//           float: left;
+//         }
+
+//         .ckeck {
+//           float: left;
+//           width: 600px;
+
+//           .eChartPanelSetSum-Field {
+//             width: 295px;
+//             float: left;
+//             display: flex;
+//             margin-bottom: 15px;
+
+//             .ant-input {
+//               width: 204px !important;
+//             }
+
+//             .ant-checkbox+span {
+//               padding-right: 0 !important;
+//             }
+
+//             .eChartPanelSetSum-FieldEdit {
+//               svg {
+//                 width: 16px;
+//                 height: 16px;
+//                 margin-top: 8px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//   }
+// }
 
 .search-tree-expand-menu {
   width: 100px;
