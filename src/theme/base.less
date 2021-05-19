@@ -3070,28 +3070,9 @@ a.Toolbar_Notification_Log {
   }
 }
 
-.container-edit-mode {
-  .topbar-holder {
-    height: 0;
-  }
-}
-
 // 需要置顶的 .list-top-toolbar
 .no-iframe .container-browse-mode {
-  .topbar-holder {
-    height: 45px;
-  }
-
   .list-top-toolbar {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-    top: 0;
-    width: 100%;
-    position: absolute;
-    background: #fff;
-    padding: 8px 20px;
-
     & + div {
       // margin-top: 48px!important;
       // 避免相邻的是隐藏的元素
@@ -3114,13 +3095,6 @@ a.Toolbar_Notification_Log {
       // top: 0; 由js 动态设置
     }
   }
-
-  // .split_container .split_right,
-  // .form-base {
-  //   .list-top-toolbar {
-  //     left: 248px;
-  //   }
-  // }
 
   .split_container .split_right {
     &.top-fixed {
@@ -5209,6 +5183,7 @@ div[id='bd_staff_card|photo'] {
       margin-top: 0;
       width: 16px;
       height: 16px;
+      line-height: 16px;
     }
   }
 }
@@ -5333,10 +5308,6 @@ div[id='bd_staff_card|photo'] {
     .left-container {
       height: 100%;
       .list-top-toolbar{
-        padding: 8px 14px;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        position: static;
         .filter-hide{
           margin-bottom: 0!important;
         }
@@ -5498,7 +5469,7 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
-.split_container .split_left .left-container>.meta-default-container{
+.split_container .split_left .left-container>.unitlistTreeOuter{
   display:flex;
   flex-direction:column;
 }
@@ -5675,10 +5646,6 @@ div[id='bd_staff_card|photo'] {
 
     &>span.basic-avator-changeimg {
       display: none;
-
-      .yonicon-uploadimg:before {
-        content: "\e845" !important;
-      }
     }
 
     &:hover {
@@ -6450,10 +6417,10 @@ div[id='bd_staff_card|photo'] {
     .btnAbandonBrowst,
     .btnAbandonHead{
         border: none;
-        padding: 0 8px 1.5px 8px;
+        padding: 0 8px;
         min-width: auto;
         height: 24px;
-        line-height: 22px;
+        line-height: 24px;
         border-radius: 4px;
         color: #333;
         margin-top: 2px;

@@ -209,10 +209,7 @@
   }
 
   .u-button:first-child {
-    color: #fff !important;
-    background: @primary-color;
     border: none;
-
     &:hover {
       background: @primary-color-hover;
     }
@@ -304,7 +301,12 @@
       padding: 0;
       display: block;
       height: 6px;
-
+      
+      &.ant-btn-icon-active{
+        i{
+          color:#505766;
+        }
+      }
       i {
         font-size: 12px;
         vertical-align: top;

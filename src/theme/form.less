@@ -244,11 +244,11 @@
     }
   }
 
-  .basic-input-textarea {
-    .label-control {
-      align-self: self-start;
-    }
-  }
+  // .basic-input-textarea {
+  //   .label-control {
+  //     align-self: self-start;
+  //   }
+  // }
 
   // 制造 - 新增仓库档案
   .map {
@@ -266,8 +266,7 @@
     margin-top: 35px;
   }
 
-  .input-barcode,
-  .basic-input-textarea {
+  .input-barcode {
     .yon-row {
       align-items: flex-start;
 
@@ -949,7 +948,6 @@
       .ant-input-affix-wrapper,
       .ant-time-picker {
         height: @base-input-height;
-        display: block;
       }
     }
 
@@ -1450,13 +1448,6 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
   }
 
   .tab-bottom-txt {
-    background: #fafafa;
-    margin-top: 30px;
-    // min-width: 1140px;
-    padding: 10px 40px;
-    max-height: 68px;
-    overflow: auto;
-
     .viewCell {
       padding-left: 0;
 
@@ -1559,22 +1550,6 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
   .Business-scope-store-count.group-container {
     padding-bottom: 2px;
   }
-}
-
-.container-greater-height .tab-bottom-txt {
-  position: fixed !important;
-  bottom: 0;
-  left: 159px;
-  right: 15px;
-  z-index: 1000;
-}
-
-.container-less-height .tab-bottom-txt {
-  position: fixed !important;
-  bottom: 0;
-  left: 159px;
-  right: 15px;
-  z-index: 1000;
 }
 
 // 编辑态表单
