@@ -180,63 +180,6 @@
   }
 }
 
-// 底部按钮,第一个为主题色,中间为蓝灰色,最后一个为灰色.ps:strange
-.bottom-toolbar {
-  padding-left: 10px;
-
-  .u-button:not(:first-child):not(:last-child) {
-    background: @custom-color;
-    border: none;
-    color: #fff;
-
-    &:hover {
-      background: @custom-color-hover;
-      color: #fff;
-    }
-
-    &[disabled] {
-      opacity: .5;
-      &:hover {
-        background: @custom-color  !important;
-      }
-    }
-    &.u-button-primary{
-      background: @primary-color;
-      &:hover {
-        background: @primary-color-hover;
-      }
-    }
-  }
-
-  .u-button:first-child {
-    border: none;
-    &:hover {
-      background: @primary-color-hover;
-    }
-
-    &:not(.u-button-primary):hover {
-      background: rgba(0, 0, 0, 0.1) !important;
-    }
-
-    &[disabled] {
-      opacity: .5;
-      &:hover {
-        background: @primary-color;
-      }
-    }
-  }
-
-  .u-button:last-child:not(.u-button:nth-last-child(1):last-child) {
-    border: none;
-    background: @custom2-color;
-    color: @custom2-font-color;
-
-    &:hover {
-      background: @custom2-color-hover;
-    }
-  }
-}
-
 // popover中的按钮
 .u-popover.u-popover-tooltip.u-tooltip.inverse {
   .tooltip-inner {
