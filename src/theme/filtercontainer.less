@@ -1,4 +1,5 @@
 @import '~fixed-data-table-2/dist/fixed-data-table.css';
+
 .react-draggable-transparent-selection * {
   pointer-events: unset !important
 }
@@ -11,16 +12,16 @@
   }
 }
 
-#yxyweb-support-container{
+#yxyweb-support-container {
   // 引入字体图标
   @import './newfont/iconfont.less';
 
-	@import './base.less';
-	@import './form.less';
-	@import './table.less';
-	@import './tree.less';
-	@import './modal.less';
-	@import './home.less';
+  @import './base.less';
+  @import './form.less';
+  @import './table.less';
+  @import './tree.less';
+  @import './modal.less';
+  @import './home.less';
   @import './adapter.less';
   @import './adapterIcon.less';
 
@@ -120,7 +121,8 @@
     content: "\e518";
   }
 
-  .listheadRow { // 过滤区样式修改，有的样式会被引用项目自带的样式覆盖
+  .listheadRow {
+    // 过滤区样式修改，有的样式会被引用项目自带的样式覆盖
     font-size: 12px;
 
     .anticon.anticon-star-o {
@@ -170,9 +172,20 @@
     font-family: "uf";
   }
 
+  .u-modal .refer-modal-maximize {
+    position: absolute !important;
+    top: 0;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    z-index: 1000;
+    width: auto !important;
+    margin: 0 !important;
+  }
 }
 
-.u-modal-confirm.u-modal-confirm-confirm.uretail_confirm.u-modal { // Model.confirm暂时挂不到特定dom节点上去，先将里面的样式抽出来
+.u-modal-confirm.u-modal-confirm-confirm.uretail_confirm.u-modal {
+  // Model.confirm暂时挂不到特定dom节点上去，先将里面的样式抽出来
   z-index: 1702;
 
   .u-modal-content {
@@ -184,14 +197,14 @@
       .u-modal-title {
         font-size: 14px;
         // line-height: 40px;
-        color: rgba(0,0,0,.85);
+        color: rgba(0, 0, 0, .85);
 
         .model-title {
           font-size: 16px;
           font-weight: 400;
           line-height: 30px;
           opacity: .8;
-          color: rgba(0,0,0,.85);
+          color: rgba(0, 0, 0, .85);
           padding-bottom: 40px;
 
           svg {
