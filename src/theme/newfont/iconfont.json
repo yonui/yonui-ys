@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "21744893",
+      "name": "works",
+      "font_class": "works",
+      "unicode": "ea58",
+      "unicode_decimal": 59992
+    },
+    {
+      "icon_id": "21744895",
+      "name": "prod",
+      "font_class": "prod",
+      "unicode": "ea59",
+      "unicode_decimal": 59993
+    },
+    {
+      "icon_id": "21744896",
+      "name": "quyu",
+      "font_class": "quyu",
+      "unicode": "ea5a",
+      "unicode_decimal": 59994
+    },
+    {
       "icon_id": "21048163",
       "name": "hanshu",
       "font_class": "hanshu",
