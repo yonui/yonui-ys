@@ -427,19 +427,15 @@
 // rc-tree
 .rc-tree {
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 
   .rc-tree-treenode {
-    border-radius: 2px;
     display: flex !important;
     align-items: center;
     line-height: 24px;
     margin-bottom: 10px;
-    padding-left:8px;
+    padding-left:0;
     cursor: pointer;
-    &:hover {
-      background: #edf1f7;
-    }
     
     //文件夹图标隐藏
     span.rc-tree-iconEle {
@@ -452,11 +448,14 @@
       height: 14px;
       flex: 0 0 14px;
       line-height: 13px;
-      border-radius: 2px;
-      border: 1px solid #CCCCCC;
-      background-image: none;
-      margin-right: 0px;
-
+        border-radius: 2px;
+        margin: 0 2px 0 0;
+        border: 1px solid #CCCCCC;
+        background-image: none;
+        user-select: none;
+        text-align: center;
+        cursor: pointer;
+      
       &::before {
         transform: scale(.58333333) rotate(0deg);
         display: block;
@@ -469,8 +468,6 @@
 
       &.rc-tree-switcher_open {
         position: relative;
-        margin-right: 8px;
-
         &::before {
           content: "\e773" !important;
           transform: scale(.58333333) rotate(0deg);
@@ -479,7 +476,6 @@
 
       &.rc-tree-switcher_close {
         position: relative;
-        margin-right: 8px;
 
         &::before {
           content: "\e772" !important;
@@ -498,12 +494,12 @@
     span.rc-tree-checkbox {
       width: 14px;
       height: 14px;
+      flex: 0 0 14px;
       background: #FFFFFF;
       border-radius: 2px;
       border: 1px solid #CCCCCC;
-      margin: 0 8px 0 0;
+      margin: 0 2px 0 0;
       line-height: 13px;
-      flex: 0 0 14px;
       &.rc-tree-checkbox-checked {
         &::after {
           content: "\E6af";
@@ -551,13 +547,14 @@
 
   //选中态变黄色
   .rc-tree-treenode-selected {
-    background: #FFF5E2;
-    border-radius: 2px;
 
     .rc-tree-node-selected {
       background-color: transparent;
       box-shadow: none;
       opacity: 1;
+    }
+    .rc-tree-title {
+      background: #FFF5E2;
     }
   }
   .rc-tree-indent-unit{
@@ -570,7 +567,14 @@
     display: flex;
     .rc-tree-title {
       width: 100%;
+      flex:auto;
       white-space: normal;
+      border-radius: 2px;
+      padding: 0  8px;
+      margin-left: 2px;
+      &:hover {
+        background: #edf1f7;
+      }
       >span {
         display: block;
         height: 24px;
@@ -665,7 +669,19 @@
     }
   }
 }
+.uretail-pop{
+  .rc-tree-list-holder-inner{
+    max-height: 245px;
+    overflow: auto;
+  }
+} 
 //树搜索结果高亮显示
 .high-light{
     color: #ee2233;
+}
+// 兼容ie11处理写法
+@media screen and(-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .rc-tree .rc-tree-treenode{
+    min-width:350px;
+  }
 }
