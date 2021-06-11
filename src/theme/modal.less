@@ -2435,7 +2435,7 @@
     .workbench-right {
       width: calc(~'100% - 301px');
       position: relative;
-      height: 100%;
+      height: calc(~'100% - 20px');
       overflow-y: auto;
       margin-top: 20px;
 
@@ -2582,6 +2582,13 @@
         span {
           margin-right: 8px;
         }
+        span.u-select-selection-choice-remove{
+          margin-right: 0;
+        }
+
+        span.u-select-selection-clear{
+          margin-right:0;
+        }
 
         span.u-select-selection-clear{
           margin-right:0;
@@ -2625,7 +2632,7 @@
               margin-right: 0;
               top:13px;
             }
-
+            
             .u-select-arrow{
               top:13px;
             }
