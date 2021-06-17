@@ -507,7 +507,7 @@
   color: #adb4bc;
 }
 .uf.uf-arrow-down:before {
-  content: "\e633";
+  /* content: "\e633"; */
   display: inline-block;
   transform: scale(0.8);
 }
