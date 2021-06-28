@@ -680,7 +680,7 @@
 
     &.show_tag {
       margin-right: 5px !important;
-      margin-bottom: 4px !important;
+      margin-bottom: 2px !important;
     }
 
     .uf-close:hover {
@@ -3647,10 +3647,10 @@ a.Toolbar_Notification_Log {
 }
 // 法人证件
 .viewCell .basic-avatar-default .basic-avatar-right {
-  margin-left: 0;
-  line-height: 16px;
-  position: absolute;
-  bottom: -14px;
+  // margin-left: 0;
+  // line-height: 16px;
+  // position: absolute;
+  // bottom: -14px;
   color: #ccc;
 }
 //客户档案-编辑-资质信息-logo间距 
@@ -4711,8 +4711,7 @@ div[id='bd_staff_card|photo'] {
 .anchor-wrapper {
   position: fixed;
   right: 0;
-  top: 136px!important;
-  z-index: 1000;
+  z-index: 1001;
 
   &:hover .anchor-to-top {
     display: block;
@@ -4752,6 +4751,11 @@ div[id='bd_staff_card|photo'] {
       }
     }
   }
+}
+
+.u-modal .anchor-wrapper {
+  top: 136px!important;
+  right: 8px;
 }
 
 .anchor-container {
