@@ -207,7 +207,7 @@
 }
 .anticon-rowBottom:before {
   content: "\e633";
-  font-family: "iconfont";
+  font-family: "yonicon";
 }
 .ant-calendar-picker-icon:after {
   content: "\e661";
@@ -526,7 +526,7 @@
   display: inline-block;
 }
 .u-tree li span.u-tree-switcher.icon-none .uf::before {
-  font-family: 'iconfont';
+  font-family: 'yonicon';
   display: block;
   font-weight: 700;
   color: #333;
