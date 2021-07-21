@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "23018767",
+      "name": "附件",
+      "font_class": "fujian",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "21744893",
       "name": "works",
       "font_class": "works",
@@ -799,7 +806,7 @@
     {
       "icon_id": "3219949",
       "name": "输入框删除",
-      "font_class": "shurukuangshanchu",
+      "font_class": "qingkong",
       "unicode": "e690",
       "unicode_decimal": 59024
     },
