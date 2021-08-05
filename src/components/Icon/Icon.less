@@ -62,7 +62,6 @@
 .yonicon-close-circle {
   &:before {
     content: "\e690";
-    color:#adb4bc;
   }
 }
 
@@ -257,12 +256,16 @@ i.uf-calendar:before {
   content: "\e815";
 }
 
-.yonicon-close-circle:before {
+.yonicon-close-circle {
   font-size: 12px;
   color: #ccc;
   &:hover {
     color: #999;
   }
+}
+
+.uf-calendar:hover::before {
+  color: #505766;
 }
 
 // fix: ys 银行网点记录删除状态的图标
