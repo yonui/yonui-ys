@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "23018767",
+      "name": "附件",
+      "font_class": "fujian",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "21744893",
       "name": "works",
       "font_class": "works",
@@ -799,7 +806,7 @@
     {
       "icon_id": "3219949",
       "name": "输入框删除",
-      "font_class": "shurukuangshanchu",
+      "font_class": "qingkong",
       "unicode": "e690",
       "unicode_decimal": 59024
     },
@@ -1098,11 +1105,11 @@
       "unicode_decimal": 59071
     },
     {
-      "icon_id": "8807971",
-      "name": "常用功能设置",
-      "font_class": "changyonggongnengshezhi",
-      "unicode": "e7b4",
-      "unicode_decimal": 59316
+      "icon_id": "3551171",
+      "name": "浏览态-弃审-不可用",
+      "font_class": "qishen-disabled",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
     },
     {
       "icon_id": "3790646",
