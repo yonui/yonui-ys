@@ -18,14 +18,6 @@
 }
 
 .line-tabs-maximize {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  padding-bottom: 0;
-  width: inherit;
-  background: #fff;
-  height: 100%;
-  width: 100%;
 
   .touch-grid {
     background: #fff;
@@ -61,7 +53,6 @@
 
 .line-tabs.line-tabs-upload.line-tabs-maximize,
 .line-tabs.line-tabs-maximize {
-  padding-bottom: 0px !important;
 
   .meta-table.listTable.readOnlyTable {
     margin-bottom: 0px;
@@ -296,6 +287,7 @@
     width: 16px;
     flex-shrink: 0;
     line-height: 0;
+    padding-top: 2px;
     svg {
       width: 15px;
       height: 15px;
@@ -330,7 +322,7 @@
 
   .btn-dongjie {
     padding-top: 1px;
-    height: 28px;
+    // height: 28px;
     margin-right: 2px;
   }
 
@@ -688,7 +680,7 @@
 
     &.show_tag {
       margin-right: 5px !important;
-      margin-bottom: 4px !important;
+      margin-bottom: 2px !important;
     }
 
     .uf-close:hover {
@@ -3053,6 +3045,9 @@ a.Toolbar_Notification_Log {
   .list-top-toolbar+.group-container {
     // padding-top: 0px;
     overflow: hidden;
+    .col-all .group-title{
+      margin-top:0;
+    }
   }
   .group-container+.meta-default-container.div-container{
       margin-top: 14px;
@@ -3078,28 +3073,9 @@ a.Toolbar_Notification_Log {
   }
 }
 
-.container-edit-mode {
-  .topbar-holder {
-    height: 0;
-  }
-}
-
 // 需要置顶的 .list-top-toolbar
 .no-iframe .container-browse-mode {
-  .topbar-holder {
-    height: 45px;
-  }
-
   .list-top-toolbar {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-    top: 0;
-    width: 100%;
-    position: absolute;
-    background: #fff;
-    padding: 8px 20px;
-
     & + div {
       // margin-top: 48px!important;
       // 避免相邻的是隐藏的元素
@@ -3122,13 +3098,6 @@ a.Toolbar_Notification_Log {
       // top: 0; 由js 动态设置
     }
   }
-
-  // .split_container .split_right,
-  // .form-base {
-  //   .list-top-toolbar {
-  //     left: 248px;
-  //   }
-  // }
 
   .split_container .split_right {
     &.top-fixed {
@@ -3678,10 +3647,10 @@ a.Toolbar_Notification_Log {
 }
 // 法人证件
 .viewCell .basic-avatar-default .basic-avatar-right {
-  margin-left: 0;
-  line-height: 16px;
-  position: absolute;
-  bottom: -14px;
+  // margin-left: 0;
+  // line-height: 16px;
+  // position: absolute;
+  // bottom: -14px;
   color: #ccc;
 }
 //客户档案-编辑-资质信息-logo间距 
@@ -4536,10 +4505,6 @@ div[id='bd_staff_card|photo'] {
     }
   }
 }
-.requirementsplanning .mr_time_bucket_list .basic-input-textarea.basic-control textarea.rc-textarea.u-form-control{
-  line-height: 1.5 !important;
-  padding-right: 25px;
-}
 
 .container-browse-mode {
   .list-top {
@@ -4746,8 +4711,7 @@ div[id='bd_staff_card|photo'] {
 .anchor-wrapper {
   position: fixed;
   right: 0;
-  top: 136px!important;
-  z-index: 1000;
+  z-index: 1001;
 
   &:hover .anchor-to-top {
     display: block;
@@ -4787,6 +4751,11 @@ div[id='bd_staff_card|photo'] {
       }
     }
   }
+}
+
+.u-modal .anchor-wrapper {
+  top: 136px!important;
+  right: 8px;
 }
 
 .anchor-container {
@@ -5221,6 +5190,7 @@ div[id='bd_staff_card|photo'] {
       margin-top: 0;
       width: 16px;
       height: 16px;
+      line-height: 16px;
     }
   }
 }
@@ -5345,10 +5315,6 @@ div[id='bd_staff_card|photo'] {
     .left-container {
       height: 100%;
       .list-top-toolbar{
-        padding: 8px 14px;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        position: static;
         .filter-hide{
           margin-bottom: 0!important;
         }
@@ -5510,7 +5476,7 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
-.split_container .split_left .left-container>.meta-default-container{
+.split_container .split_left .left-container>.unitlistTreeOuter{
   display:flex;
   flex-direction:column;
 }
@@ -5687,10 +5653,6 @@ div[id='bd_staff_card|photo'] {
 
     &>span.basic-avator-changeimg {
       display: none;
-
-      .yonicon-uploadimg:before {
-        content: "\e845" !important;
-      }
     }
 
     &:hover {
@@ -6462,10 +6424,10 @@ div[id='bd_staff_card|photo'] {
     .btnAbandonBrowst,
     .btnAbandonHead{
         border: none;
-        padding: 0 8px 1.5px 8px;
+        padding: 0 8px;
         min-width: auto;
         height: 24px;
-        line-height: 22px;
+        line-height: 24px;
         border-radius: 4px;
         color: #333;
         margin-top: 2px;
@@ -6482,6 +6444,10 @@ div[id='bd_staff_card|photo'] {
         &:first-child{
             margin-left: 4px !important;
         }
+    }
+    .yonicon {
+      margin-right: 5px;
+      margin-left: 0;
     }
 }
 .voucher-back-button-wrapper button {
@@ -6508,17 +6474,6 @@ div[id='bd_staff_card|photo'] {
   }
 }
 
-//QDJM-6238
-.split_container {
-  .split_right{
-    .yon-row.group-container{
-      .group-container{
-        padding-top: 8px;
-      }
-     
-    }
-  }
-}
 //系统参数-业务参数-帮助浮层距离调整
 .width-percent-100{
     .tipsChange{

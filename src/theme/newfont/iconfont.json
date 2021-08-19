@@ -1105,11 +1105,11 @@
       "unicode_decimal": 59071
     },
     {
-      "icon_id": "8807971",
-      "name": "常用功能设置",
-      "font_class": "changyonggongnengshezhi",
-      "unicode": "e7b4",
-      "unicode_decimal": 59316
+      "icon_id": "3551171",
+      "name": "浏览态-弃审-不可用",
+      "font_class": "qishen-disabled",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
     },
     {
       "icon_id": "3790646",

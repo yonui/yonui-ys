@@ -4,17 +4,18 @@
       background-color: #edf1f7;
     }
     a.u-tree-node-content-wrapper {
-      width: calc(~'100% - 25px')!important;
+      // width: calc(~'100% - 25px')!important;
       padding: 0;
       color: @custom-color;
 
       .u-tree-title {
         display: inline-block;
+        vertical-align: middle;
         height: 24px;
         line-height: 24px;
         padding: 0 8px;
         border-radius: 4px;
-        margin: 0 5px;
+        margin: 0;
         i.out{
           font-style: normal;
           i.high-light{
@@ -25,7 +26,8 @@
         li{
           position: relative;
           // padding: 0px 10px;
-          margin-left: 5px;
+          // margin-left: 5px;
+          margin: 0;
           i.out{
             font-style: normal;
             i.high-light{
@@ -89,9 +91,9 @@
   >li:first-child {
     padding-top: 7px;
   }
-  li.u-tree-treenode-focused{
-    background-color: #eff1f7;
-  }
+  // li.u-tree-treenode-focused{
+  //   background-color: #eff1f7;
+  // }
 }
 .form-left.Manual-calculation-left .bg-white.border-r,
 .referModal.TreeTable.u-modal .u-modal-body .leftPanel {
@@ -142,7 +144,7 @@
 }
 
 .uretail-pop .u-tree li {
-  padding: 2px 5px;
+  padding: 0;
 }
 
 .org-cite .treebox .u-tree {

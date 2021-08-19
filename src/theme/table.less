@@ -1417,11 +1417,11 @@
   .readOnlyTable .fixedDataTableCellLayout_main {
     border-right: 1px solid #d3d3d3;
   }
-  .fixedDataTableRowLayout_rowWrapper .public_fixedDataTableRow_even .public_fixedDataTableCell_main[role="columnheader"] {
-    .headerName {
-      height: 66px!important;
-    }
-  }
+  // .fixedDataTableRowLayout_rowWrapper .public_fixedDataTableRow_even .public_fixedDataTableCell_main[role="columnheader"] {
+  //   .headerName {
+  //     height: 66px!important;
+  //   }
+  // }
   
   .fixedDataTableRowLayout_rowWrapper::nth-of-type(2) {
     .public_fixedDataTable_header {
@@ -1993,10 +1993,6 @@
           .editCol {
             text-align: left;
             padding: 12px 10px;
-
-            div:not(.checkradio-checked) {
-              height: 28px
-            }
           }
         }
       }
@@ -2329,7 +2325,8 @@
         }
 
         .eChartSetting_ContentCol2 {
-          width: 517px !important;
+          // width: 517px !important;
+          width: 83.3333%;
           min-height: 22px;
           .u-cascader-input-group {
             display: block;
@@ -2508,26 +2505,6 @@
 }
 
 // ====================end====================
-
-.publishMenu .publishMenu_Pc {
-  input[type='checkbox'] {
-    top: 8px;
-  }
-
-  label {
-    line-height: 32px;
-
-    &:before,
-    &::after {
-      top: 8px;
-    }
-  }
-}
-
-// 采购二维录入
-.u-tabs-content .container-edit-mode .line-tabs {
-  padding-bottom: 50px !important;
-}
 
 .Table2D_Outer {
   width: 100%;
@@ -3200,7 +3177,6 @@
   }
 }
 
-.public_fixedDataTableRow_fixedColumnsDivider +
 .fixedDataTableCellGroupLayout_cellGroupWrapper {
   .fixedDataTableCellGroupLayout_cellGroup {
     overflow: visible;

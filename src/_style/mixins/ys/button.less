@@ -34,17 +34,17 @@
 // 次操作按钮（灰色底部）
 .secondary-button-mixin(@height: 28px, @minWidth: 60px) {
   .u-button-mixin(@height, @minWidth);
-  background: @custom-color !important;
-  color: #fff !important;
+  background: @custom-color;
+  color: #fff;
   border: none;
   &:hover {
-    background: #616875 !important;
-    color: #fff !important;
-    border: none !important;
+    background: #616875 ;
+    color: #fff ;
+    border: none;
   }
   &:disabled {
-    background: #505766!important;
-    color: #fff !important;
+    background: #505766;
+    color: #fff ;
     opacity: .5;
   }
 }
@@ -57,10 +57,10 @@
   color: #535a69;
   &:hover {
     color: @custom-color;
-    background: #e5e9ec !important;
+    background: #e5e9ec;
   }
   &:disabled {
-    background: #dbe0e5!important;
+    background: #dbe0e5;
     color: #535a69;
     opacity: .5;
   }
@@ -463,6 +463,10 @@
       height: 13px;
     }
   }
+  .Toolbar_Group .Toolbar_Common_Btn_Menus .u-button {
+    height: 100%;
+    margin-left: 0;
+  }
 }
 
 .btn-toolbar-bottom {
@@ -497,7 +501,8 @@
   }
 
   // 保存
-  .btnSave {
+    .btnSave,
+    .btnSavedatatemp {
     .primary-button-mixin();
   }
 }
@@ -524,6 +529,7 @@
 // TODO: 待抽取共性
 .u-button-border{
   .normal-button-mixin();
+  flex-shrink: 0;
 }
 
 .u-button.temp_header {
@@ -534,8 +540,10 @@
 .u-button.btnMovenext,
 .u-button.btnMoveprev {
   min-width: auto;
-  padding: 0 8px !important;
-
+  padding: 0 7px !important;
+  .yonicon{
+    margin-right: 0;
+  }
   svg {
     margin-right: 0;
   }

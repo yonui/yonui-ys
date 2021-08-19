@@ -58,8 +58,18 @@
   }
   .viewSetting.viewCell{
     padding: 0 8px;
-    &>.basic-control{
+    &>.basic-control,
+    &>.map,
+    &>.number-control,
+    &>.basic-input-undefined,
+    &>.tag-refer{
       margin-bottom: 16px;
+    }
+    .rate {
+      line-height: 26px;
+    }
+    .u-upload.u-upload-select-picture-card {
+      margin-bottom: 0;
     }
   }
   .viewCell {
@@ -110,11 +120,13 @@
         min-height: auto;
         line-height: 12px;
         border: none;
+        font-weight: 600;
       }
     }
   }
   div[id$="|tips"]{
     position: static;
+    margin-left: 10px!important;
   }
 }
 
@@ -211,7 +223,7 @@
     padding-left: 0;
     .p-v-5 {
       padding: 0;
-      line-height: 12px;
+      line-height: 16px;
       text-align: left;
       width: 100% !important;
       .ellipsis();

@@ -232,7 +232,7 @@ textarea.u-form-control {
   .viewCell.width-percent-100 .input-control {
       max-width: 360px !important;
       .ac-input-locale,.u-input-group,.ant-select,.u-select,.control-text,.u-form-control, .u-time-picker{
-        width: 360px !important;
+        // width: 360px !important;
         max-width: 100%;
       }
       //数字u-input-number-out
@@ -422,8 +422,7 @@ textarea.u-form-control {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          padding: 0;
-          padding-left: 8px;
+          padding: 0 8px;
         }
         .table-list-btn{
           background: #edf1f7;
@@ -540,10 +539,6 @@ textarea.u-form-control {
   font-size: 12px!important;
 }
 
-.viewCell.width-percent-33 .control-radio .input-control.control-width {
-  min-height: @base-input-height;
-}
-
 .viewCell.width-percent-33 .has-related {
   div[id='pc_product|weightUnit_Name'],
   div[id='pc_product|volumeUnit_Name'] {
@@ -566,8 +561,11 @@ textarea.u-form-control {
 }
 
 
-.container-browse-mode .listheadRow {
-  padding-bottom: 0;
+.container-browse-mode,
+.container-edit-mode {
+  .listheadRow {
+    padding-bottom: 0;
+  }
 }
 
 .u-select-selection--multiple .u-select-selection-rendered>ul>li {
@@ -612,6 +610,7 @@ div[id='pc_attachmentgrouplist|lookat1'] {
       align-items: center;
       justify-content: center;
       min-height: 26px;
+      height: 26px;
       .yonicon-close-circle {
         transform: translateY(0.5px);
         position: static;
@@ -619,6 +618,7 @@ div[id='pc_attachmentgrouplist|lookat1'] {
     }
   }
 }
+
 .u-input-number.u-input-group.simple .u-input-group-btn .icon-group .uf {
   line-height: 14px;
 }
@@ -750,9 +750,9 @@ div[id='aa_paymentmethod|code'] {
   padding-top: 16px;
 }
 
-.st_storecheckrealitylist {
-  .page-top-16-mixin();
-}
+// .st_storecheckrealitylist {
+//   .page-top-16-mixin();
+// }
 
 //TINPER-2673
 .aa_storelist .card-tabs .u-tabs .u-tabs-content{
@@ -1047,12 +1047,6 @@ a.btn-gray {
   color: #333;
 }
 
-.jDiwork-container {
-  .bottom-toolbar .u-button:last-child:not(.u-button-primary):hover {
-    background: #e5e9ec !important;
-  }
-}
-
 div[id='st_storeinlist'],
 div[id='st_storeoutlist'] {
   .u-tabs-tabpane-active {
@@ -1136,5 +1130,5 @@ svg.icon-fabufangan {
 }
 
 .width-percent-50 .input-control {
-  max-width: 400px;
+  // max-width: 400px;
 }

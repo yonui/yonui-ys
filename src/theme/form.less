@@ -244,11 +244,11 @@
     }
   }
 
-  .basic-input-textarea {
-    .label-control {
-      align-self: self-start;
-    }
-  }
+  // .basic-input-textarea {
+  //   .label-control {
+  //     align-self: self-start;
+  //   }
+  // }
 
   // 制造 - 新增仓库档案
   .map {
@@ -266,8 +266,7 @@
     margin-top: 35px;
   }
 
-  .input-barcode,
-  .basic-input-textarea {
+  .input-barcode {
     .yon-row {
       align-items: flex-start;
 
@@ -614,7 +613,7 @@
         .control-width{
             //地图
             .map-row{
-                width: 400px;
+                // width: 400px;
             }
         }
     }
@@ -863,7 +862,7 @@
 
     .has-related {
       textarea.u-form-control {
-        width: 400px;
+        // width: 400px;
       }
     }
   }
@@ -949,7 +948,6 @@
       .ant-input-affix-wrapper,
       .ant-time-picker {
         height: @base-input-height;
-        display: block;
       }
     }
 
@@ -1450,13 +1448,6 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
   }
 
   .tab-bottom-txt {
-    background: #fafafa;
-    margin-top: 30px;
-    // min-width: 1140px;
-    padding: 10px 40px;
-    max-height: 68px;
-    overflow: auto;
-
     .viewCell {
       padding-left: 0;
 
@@ -1561,22 +1552,6 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
   }
 }
 
-.container-greater-height .tab-bottom-txt {
-  position: fixed !important;
-  bottom: 0;
-  left: 159px;
-  right: 15px;
-  z-index: 1000;
-}
-
-.container-less-height .tab-bottom-txt {
-  position: fixed !important;
-  bottom: 0;
-  left: 159px;
-  right: 15px;
-  z-index: 1000;
-}
-
 // 编辑态表单
 .container-edit-mode {
   .control-text {
@@ -1650,7 +1625,6 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
         display: inline-block;
   
         i {
-          margin: -2px;
           transition: -webkit-transform .3s;
           transition: transform .3s;
           transition: transform .3s, -webkit-transform .3s;
@@ -1671,6 +1645,14 @@ div[id="um_order|cOrderNo"].viewCell .control-width .control-text.invoice-remark
         margin-left: 1px;
         margin-bottom: 1px;
         vertical-align: bottom;
+      }
+
+      .yonicon {
+        font-size: 12px;
+        color: #333;
+        &::before {
+          transform: scale(.8);
+        }
       }
   
       .group-self-jian {
@@ -2775,6 +2757,13 @@ i.uf-search,
           color: #999;
         }
       }
+    }
+    .no-data-SvgIcon{
+      height:auto;
+      padding:5px 8px;
+      line-height: 18px;
+      text-align: left;
+      justify-content:left;
     }
   }
 }

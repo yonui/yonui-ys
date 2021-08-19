@@ -45,7 +45,7 @@
       line-height: 1;
       margin-top: 0;
       top: 0;
-      vertical-align: baseline;
+      vertical-align: middle;
     }
     .yonicon-close-circle{
       top: 0px!important;
@@ -58,6 +58,11 @@
 .fixedDataTableCellLayout_wrap3 .public_fixedDataTableCell_cellContent {
   .editCol .ant-select-selection__rendered span {
     line-height: 26px;
+    .u-tag-text{
+      line-height: 18px;
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 }
 
@@ -303,7 +308,7 @@
   position: absolute;
   right: 0;
   overflow: hidden;
-  z-index: 999;
+  z-index: 1000;
   top: 1px;
   background: @table-header-background-color;
   border: 0;
@@ -347,13 +352,13 @@
   border-left: none
 }
 
-.fixedDataTableRowLayout_main {
-  border-bottom: 1px solid #DBE0E5;
-}
+// .fixedDataTableRowLayout_main {
+//   border-bottom: 1px solid #DBE0E5;
+// }
 
 .public_fixedDataTable_footer {
   // background-color: #f7f9fd !important;
-  border-bottom: 1px solid #dbe0e5;
+  // border-bottom: 1px solid #dbe0e5;
   background-color: #fdf3e1;
   color: #505766;
   font-weight: 700;
@@ -507,8 +512,8 @@
     border-radius: 3px;
     line-height: 22px;
     display: block;
-    min-width: 44px;
-    max-width: 150px;
+    // min-width: 44px;
+    max-width: 116px;
     white-space: nowrap;
     word-break: break-word;
     overflow:hidden;
@@ -863,13 +868,13 @@
 
   .textCol {
     .edit-input-number {
-      margin-top: -2px;
+      // margin-top: -2px;
     }
   }
 
   .editCol {
     .edit-input-number {
-      margin-top: -2px;
+      // margin-top: -2px;
       .u-select {
         top: 6px;
       }
@@ -924,8 +929,8 @@
     padding-top: 0px;
 
     .table-list-btn {
-      min-width: 44px;
-      max-width: 150px; // 多语UI规范，勿删
+      // min-width: 44px;
+      max-width: 116px; // 多语UI规范，勿删
       white-space: nowrap;
       word-break: break-word;
       overflow:hidden;
@@ -962,11 +967,11 @@
 /*表格悬浮公用样式*/
 .readOnlyTable {
 
-  .fixedDataTableRowLayout_main,
-  .fixedDataTableCellGroupLayout_cellGroup,
-  .fixedDataTableCellLayout_main {
-    overflow: inherit !important;
-  }
+  // .fixedDataTableRowLayout_main,
+  // .fixedDataTableCellGroupLayout_cellGroup,
+  // .fixedDataTableCellLayout_main {
+  //   overflow: inherit !important;
+  // }
 
   .fixedDataTableCellGroupLayout_cellGroupWrapper .fixedDataTableCellGroupLayout_cellGroup .fixedDataTableCellLayout_main {
     .public_fixedDataTableCell_disabled,
@@ -976,13 +981,13 @@
     }
   }
 
-  .retail-table-cell {
+  // .retail-table-cell {
 
-    .textCol,
-    .editCol {
-      border-bottom: 1px solid #dbe0e5;
-    }
-  }
+  //   .textCol,
+  //   .editCol {
+  //     border-bottom: 1px solid #dbe0e5;
+  //   }
+  // }
 
   .public_fixedDataTableRow_selected {
     &:hover {
@@ -997,8 +1002,8 @@
 
     .table-list-btn {
       display: block;
-      min-width: 44px;
-      max-width: 150px; // 多语UI规范，勿删
+      // min-width: 44px;
+      max-width: 116px; // 多语UI规范，勿删
       white-space: nowrap;
       word-break: break-word;
       overflow:hidden;

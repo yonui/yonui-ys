@@ -54,6 +54,7 @@ class TextArea extends Component {
         placeholder={this.state.placeholder}
         value={this.props.value}
         size={this.state.size}
+        autosize={this.props.autosize}
         onChange={(val, e) => this.handleChange(val, e)}
         componentClass={componentClass}
         {...this.state.others}

@@ -9,7 +9,7 @@ import CheckableTag from './CheckableTag'
 import { simpleMerge } from '../../utils'
 
 const DefaultProps = {
-  colors: 'light',
+  // colors: 'light',
   closable: false
 }
 
@@ -50,7 +50,7 @@ class TagAdapter extends Component {
   }
 
   render () {
-    const { className, style } = this.props
+    const { className, style ,colors} = this.props
     const {
       closable,
       text,
@@ -62,20 +62,19 @@ class TagAdapter extends Component {
     if (color) {
       clsObj[`u-tag-color-${color}`] = true
     }
-    const classes = classnames(className, clsObj)
+    // const classes = classnames(className, clsObj)
     return (
       <Tag
         ref='myTag'
         {...this.props}
-        colors='light'
         deleted={closable}
         visible={closable}
         onClose={this.handleClose}
-        className={classes}
+        // className={classes}
         style={style}
         tagClick={this.props.onClick}
       >
-        {text}
+        {this.props.children}
       </Tag>
     )
   }
