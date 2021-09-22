@@ -62,7 +62,7 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props
+    const { children, visible, title, width, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props
 
     let defaultFooter = (
       <Footer className='modal-footer'>
@@ -77,14 +77,17 @@ class ModalAdapter extends Component {
       defaultFooter = null
     }
 
+    const mClass = className + (width > 600 ? ' middle-modal' : ' small-modal')
+
     // const backdropClassName = this.props.backdropClassName || `${className}-backdrop`;
     return (
       <Modal
         {...omit(other, ['getContainer'])}
         className={wrapClassName}
-        dialogClassName={className}
+        dialogClassName={mClass}
         show={visible}
         onHide={onCancel}
+        width={width}
         onExited={afterClose}
         container={this.target}
         backdrop={mask}
