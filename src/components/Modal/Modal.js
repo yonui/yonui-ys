@@ -61,8 +61,25 @@ class ModalAdapter extends Component {
     return typeof getContainer === 'function' ? getContainer() : getContainer
   }
 
+  getMaxHeight = () => {
+  }
+
+  getModelClass = (width) => {
+    let modalClass = ''
+    if (width >= 800) {
+      modalClass = ' l-modal'
+    }
+    else if (width < 600) {
+      modalClass = ' s-modal'
+    }
+    else {
+      modalClass = ' m-modal'
+    }
+    return modalClass
+  }
+
   render () {
-    const { children, visible, title, width, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props
+    const { children, visible, title, width, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, maxHeight, ...other } = this.props
 
     let defaultFooter = (
       <Footer className='modal-footer'>
@@ -77,8 +94,7 @@ class ModalAdapter extends Component {
       defaultFooter = null
     }
 
-    const mClass = className + (width > 600 ? ' middle-modal' : ' small-modal')
-
+    const mClass = className + this.getModelClass(width)
     // const backdropClassName = this.props.backdropClassName || `${className}-backdrop`;
     return (
       <Modal
@@ -98,7 +114,7 @@ class ModalAdapter extends Component {
         <Header closeButton={closable} className='modal-header'>
           <Title>{title}</Title>
         </Header>
-        <Body className='modal-body'>
+        <Body className='modal-body' style={{maxHeight: maxHeight}}>
           {children}
         </Body>
         {footer ? <Footer className='modal-footer'>{footer}</Footer> : defaultFooter}
