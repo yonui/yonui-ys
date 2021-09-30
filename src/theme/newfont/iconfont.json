@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "24553183",
+      "name": "切换查询方式",
+      "font_class": "qiehuanchaxunfangshi",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
       "icon_id": "23520657",
       "name": "列表设置",
       "font_class": "liebiaoshezhi",
