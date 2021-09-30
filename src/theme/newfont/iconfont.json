@@ -1,10 +1,31 @@
 {
   "id": "2408995",
   "name": "yonbip单色",
-  "font_family": "iconfont",
+  "font_family": "yonicon",
   "css_prefix_text": "yonicon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "24553183",
+      "name": "切换查询方式",
+      "font_class": "qiehuanchaxunfangshi",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "23520657",
+      "name": "列表设置",
+      "font_class": "liebiaoshezhi",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "23018767",
+      "name": "附件",
+      "font_class": "fujian",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
     {
       "icon_id": "21744893",
       "name": "works",
@@ -799,7 +820,7 @@
     {
       "icon_id": "3219949",
       "name": "输入框删除",
-      "font_class": "shurukuangshanchu",
+      "font_class": "qingkong",
       "unicode": "e690",
       "unicode_decimal": 59024
     },
