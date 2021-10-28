@@ -1,6 +1,6 @@
 {
   "name": "yonui-ys",
-  "version": "2.0.24",
+  "version": "3.1.13",
   "description": "yonui ys",
   "main": "./lib/index",
   "scripts": {
@@ -47,6 +47,7 @@
     "bee-dropdown": "2.0.11",
     "bee-form": "2.0.12",
     "bee-form-control": "2.0.23",
+    "tinper-bee-core": "2.0.38",
     "bee-form-group": "2.0.0",
     "bee-icon": "^1.0.15",
     "bee-input-group": "2.0.3",
@@ -61,7 +62,7 @@
     "bee-modal": "2.2.13",
     "bee-navbar": "2.0.1",
     "bee-notification": "2.0.5",
-    "bee-overlay": "1.0.31",
+    "bee-overlay": "1.0.33",
     "bee-page-layout": "1.0.1",
     "bee-pagination": "3.0.7",
     "bee-panel": "2.0.2",
