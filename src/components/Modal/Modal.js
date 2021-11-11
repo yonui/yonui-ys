@@ -69,7 +69,7 @@ class ModalAdapter extends Component {
     if (width >= 800) {
       modalClass = ' l-modal'
     }
-    else if (width < 600) {
+    else if (width < 480) {
       modalClass = ' s-modal'
     }
     else {
