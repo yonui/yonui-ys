@@ -41,7 +41,7 @@ class SwitchAdapter extends Component {
 
   getLocale = (key) => {
     const lang = this.getLanguage() || 'zh_CN'
-    return _Locale[lang][key]
+    return _Locale[lang]?.[key]
   }
 
   // ncc 风格，Switch 带有符号
