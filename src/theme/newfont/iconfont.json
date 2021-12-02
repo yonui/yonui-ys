@@ -6,6 +6,69 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "26186382",
+      "name": "表头锁定normal",
+      "font_class": "biaotousuodingnormal",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "26186391",
+      "name": "表头锁定normal",
+      "font_class": "biaotousuodingnormal1",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "26186392",
+      "name": "表头正序未排序- normal",
+      "font_class": "a-biaotouzhengxuweipaixu-normal",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "26186393",
+      "name": "表头倒序未排序- normal",
+      "font_class": "a-biaotoudaoxuweipaixu-normal",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "26186394",
+      "name": "表头定位已定位normal",
+      "font_class": "biaotoudingweiyidingweinormal",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "26186395",
+      "name": "表头筛选已选normal",
+      "font_class": "biaotoushaixuanyixuannormal",
+      "unicode": "e6b0",
+      "unicode_decimal": 59056
+    },
+    {
+      "icon_id": "26186396",
+      "name": "表头解锁normal",
+      "font_class": "biaotoujiesuonormal",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "26186397",
+      "name": "表头定位常规normal",
+      "font_class": "biaotoudingweichangguinormal",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "26186398",
+      "name": "表头筛选常规normal",
+      "font_class": "biaotoushaixuanchangguinormal",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    },
+    {
       "icon_id": "24553183",
       "name": "切换查询方式",
       "font_class": "qiehuanchaxunfangshi",

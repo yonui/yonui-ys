@@ -1,10 +1,10 @@
 @font-face {
   font-family: "yonicon"; /* Project id 2408995 */
-  src: url('iconfont.eot?t=1632967581620'); /* IE9 */
-  src: url('iconfont.eot?t=1632967581620#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('iconfont.woff?t=1632967581620') format('woff'),
-       url('iconfont.ttf?t=1632967581620') format('truetype'),
-       url('iconfont.svg?t=1632967581620#yonicon') format('svg');
+  src: url('iconfont.eot?t=1638437616422'); /* IE9 */
+  src: url('iconfont.eot?t=1638437616422#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff?t=1638437616422') format('woff'),
+       url('iconfont.ttf?t=1638437616422') format('truetype'),
+       url('iconfont.svg?t=1638437616422#yonicon') format('svg');
 }
 
 .yonicon {
@@ -13,6 +13,42 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.yonicon-biaotousuodingnormal:before {
+  content: "\e6a1";
+}
+
+.yonicon-biaotousuodingnormal1:before {
+  content: "\e6a6";
+}
+
+.yonicon-a-biaotouzhengxuweipaixu-normal:before {
+  content: "\e6a7";
+}
+
+.yonicon-a-biaotoudaoxuweipaixu-normal:before {
+  content: "\e6aa";
+}
+
+.yonicon-biaotoudingweiyidingweinormal:before {
+  content: "\e6ad";
+}
+
+.yonicon-biaotoushaixuanyixuannormal:before {
+  content: "\e6b0";
+}
+
+.yonicon-biaotoujiesuonormal:before {
+  content: "\e6b2";
+}
+
+.yonicon-biaotoudingweichangguinormal:before {
+  content: "\e6b4";
+}
+
+.yonicon-biaotoushaixuanchangguinormal:before {
+  content: "\e6b5";
 }
 
 .yonicon-qiehuanchaxunfangshi:before {
