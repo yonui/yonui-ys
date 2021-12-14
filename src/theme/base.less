@@ -4,7 +4,7 @@
 @base-hover-btn: #f23f40;
 
 // @font-face {
-//   font-family: 'iconfont';
+//   font-family: 'yonicon';
 //   src: url('./newfont/iconfont.eot');
 //   src: url('./newfont/iconfont.eot?#iefix') format('embedded-opentype'), url('./newfont/iconfont.woff') format('woff'), url('./newfont/iconfont.ttf') format('truetype'), url('./newfont/iconfont.svg#iconfont') format('svg');
 // }
@@ -1938,8 +1938,6 @@
     padding-right: 16px;
   }
   .u-notification-notice-close {
-    top: 15px;
-    right: 16px;
     color: #999;
     &:hover {
       color: #ee2233;
@@ -2071,7 +2069,7 @@ a.Toolbar_Notification_Log {
         &:before {
           content: "\E690" !important;
           font-size: 14px;
-          font-family: "iconfont";
+          font-family: "yonicon";
         }
       }
     }
@@ -2697,6 +2695,13 @@ a.Toolbar_Notification_Log {
         margin-bottom: 15px;
       }
 
+      .operatorCom,
+      .processValueCom {
+        .yon-row {
+          margin-bottom: 7px;
+        }
+      }
+
       .operatorCom .u-button {
         padding: 0px;
         min-width: 0;
@@ -2738,7 +2743,7 @@ a.Toolbar_Notification_Log {
         min-width: 50px;
         height: @base-input-height - 2;
         background: #fff;
-        line-height: 22px;
+        line-height: 24px;
         text-align: center;
         margin-bottom: 8px !important;
         margin-left: 0;
@@ -3687,6 +3692,9 @@ div[id='bd_staff_card|photo'] {
     .basic-avatar-btn-item {
       margin-left: 30px;
       height: 150px;
+      img {
+        height: 100%;
+      }
     }
     .basic-avatar-right {
       margin-left: 26px;
@@ -6480,9 +6488,6 @@ div[id='bd_staff_card|photo'] {
         .has-related{
             .viewCell{
                 width: initial;
-            }
-            .viewSetting{
-                right: -24px!important;
             }
         }
     }

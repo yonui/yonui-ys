@@ -309,6 +309,7 @@
     .has-related {
       .related-bottom-text {
         top: 66px;
+        width: auto;
       }
     }
   }
@@ -363,7 +364,7 @@
   .basic-avatar-default {
     .basic-avatar-btn-item {
       width: 122px;
-      height: 64px !important;
+      height: 64px;
 
       .ant-upload {
         height: auto !important
@@ -723,10 +724,6 @@
 
         .label-control {
           line-height: @base-input-height;
-        }
-
-        .input-control {
-          width: 742px !important
         }
       }
     }
@@ -1754,20 +1751,6 @@ i.uf-search,
     }
   }
 
-}
-
-// 地图控件
-.viewCell .map > .yon-row {
-  display: flex;
-
-  .label-control {
-    line-height: @base-input-height;
-    align-self: flex-start;
-  }
-
-  .yon-row {
-    display: block;
-  }
 }
 
 .ant-btn.ant-btn-icon-only.ant-search-btn {
@@ -3220,7 +3203,7 @@ i.uf-search,
         .yonicon-plus-copy{
           &::after{
             content: "\e6a3";
-            font-family: "iconfont";
+            font-family: "yonicon";
             display: inline-block;
             font-size: 12px;
             color: #999;

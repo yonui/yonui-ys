@@ -24,6 +24,7 @@
   @import './home.less';
   @import './adapter.less';
   @import './adapterIcon.less';
+  @import '../_style/mixins/index.less';
 
   div[id='yxyweb-filter'] {
     clear: both;
@@ -79,7 +80,7 @@
 
   .yonicon:before {
     display: block;
-    font-family: "iconfont";
+    font-family: "yonicon";
   }
 
   // 这里主要修改font-family
@@ -98,7 +99,7 @@
 
   .ant-select-arrow:before {
     content: "\E633";
-    font-family: 'iconfont';
+    font-family: 'yonicon';
     display: block;
     transform: scale(.8);
   }
@@ -114,11 +115,11 @@
   .groupCondition-Checked .icon-xuanzhong1::before {
     content: "\e77f";
     color: #ee2233;
-    font-family: "iconfont";
+    font-family: "yonicon";
   }
 
   .uf-search:before {
-    content: "\e518";
+    // content: "\e518";
   }
 
   .listheadRow {
@@ -152,9 +153,9 @@
     display: none;
   }
 
-  .readOnlyTable .acticonCell .yon-row .table-list-btn {
-    display: none;
-  }
+  // .readOnlyTable .acticonCell .yon-row .table-list-btn {
+  //   display: none;
+  // }
 
   .u-popover.u-popover-tooltip.u-tooltip {
     .query-criteria-select .ant-checkbox-group {

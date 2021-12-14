@@ -98,6 +98,7 @@ class InputAdapter extends Component {
         {...omit(others, ['value', 'defaultValue'])}
         type={type}
         disabled={disabled}
+        autoComplete={type === 'password' ? 'new-password' : 'off'}
         ref={(e) => { this.inputRef = e }}
         placeholder={placeholder}
         value={value}

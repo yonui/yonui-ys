@@ -75,7 +75,7 @@ class MobileLocale extends Component {
 
   getLocale = (key) => {
     const lang = this.getLanguage() || 'zh_CN'
-    return _Locale[lang][key]
+    return _Locale[lang]?.[key]
   }
 
   componentWillReceiveProps (nextProps) {
@@ -146,7 +146,7 @@ class MobileLocale extends Component {
             }}
           >
             {countryList && countryList.map((account) => <Option key={account.country_code} value={String(account.country_code)}>
-              <span>{account.country}</span>
+              <span className='country'>{account.country}</span>
               <span className='opt1'>+{account.country_code}</span>
             </Option>)}
           </Select>

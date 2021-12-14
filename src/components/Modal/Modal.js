@@ -53,7 +53,7 @@ class ModalAdapter extends Component {
 
   getLocale = (key) => {
     const lang = this.getLanguage() || 'zh_CN'
-    return _Locale[lang][key]
+    return _Locale[lang]?.[key]
   }
 
   getContainerTarget () {

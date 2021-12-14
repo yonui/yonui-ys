@@ -1,10 +1,17 @@
 {
   "id": "2408995",
   "name": "yonbip单色",
-  "font_family": "iconfont",
+  "font_family": "yonicon",
   "css_prefix_text": "yonicon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "24553183",
+      "name": "切换查询方式",
+      "font_class": "qiehuanchaxunfangshi",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
     {
       "icon_id": "23520657",
       "name": "列表设置",

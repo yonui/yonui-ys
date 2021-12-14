@@ -25,6 +25,24 @@ const locale = {
     YS_FED_FW_YONUI_00050002: 'Confirm',
     YS_FED_FW_YONUI_00050001: 'Cancel',
     YS_FED_FW_YONUI_00050000: 'per page'
+  },
+  de_DE: {
+    YS_FED_FW_YONUI_00050006: '暂无数据~',
+    YS_FED_FW_YONUI_00050005: '请输入您的手机号',
+    YS_FED_FW_YONUI_00050004: '√',
+    YS_FED_FW_YONUI_00050003: '中国',
+    YS_FED_FW_YONUI_00050002: '确认',
+    YS_FED_FW_YONUI_00050001: '取消',
+    YS_FED_FW_YONUI_00050000: '条/页'
+  },
+  fr_FR: {
+    YS_FED_FW_YONUI_00050006: '暂无数据~',
+    YS_FED_FW_YONUI_00050005: '请输入您的手机号',
+    YS_FED_FW_YONUI_00050004: '√',
+    YS_FED_FW_YONUI_00050003: '中国',
+    YS_FED_FW_YONUI_00050002: '确认',
+    YS_FED_FW_YONUI_00050001: '取消',
+    YS_FED_FW_YONUI_00050000: '条/页'
   }
 }
 

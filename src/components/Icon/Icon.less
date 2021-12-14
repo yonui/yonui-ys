@@ -14,18 +14,12 @@
 
 .yonicon:before {
   display: block;
-  font-family: 'iconfont';
+  font-family: 'yonicon';
   cursor: pointer;
 }
 
-.yonicon,
-.uf,
-.uf:before {
-  font-family: "iconfont"!important;
-}
-
 .iconfont {
-  font-family: "iconfont";
+  font-family: "yonicon";
   font-size: 16px;
   font-style: normal;
 }
@@ -68,7 +62,6 @@
 .yonicon-close-circle {
   &:before {
     content: "\e690";
-    color:#adb4bc;
   }
 }
 
@@ -92,16 +85,13 @@
 // 下拉框选项勾选态
 .u-select-dropdown.u-select-dropdown--multiple .u-select-dropdown-menu-item:after {
   content: "\e6af";
-  font-family: "iconfont";
+  font-family: "yonicon";
 }
 
 // 库存预警
-.ant-select-selection__clear {
-  font-family: "iconfont"!important;
-}
 .ant-select-selection__clear:before {
   content: "\e690";
-  font-family: "iconfont";
+  font-family: "yonicon";
 }
 
 // 模态框中穿梭框的向右、向左
@@ -109,7 +99,7 @@
   .u-button-icon.icon-right-enabled::before,
   .u-button-icon.icon-right-disabled::before {
     content: "\e514";
-    font-family: "iconfont";
+    font-family: "yonicon";
   }
 }
 
@@ -117,7 +107,7 @@
   .u-button-icon.icon-left-enabled::before,
   .u-button-icon.icon-left-disabled::before {
     content: "\e515";
-    font-family: "iconfont";
+    font-family: "yonicon";
   }
 }
 
@@ -129,7 +119,7 @@
 
 .anticon-shurukuangshanchu::before {
   content: "\e690";
-  font-family: "iconfont" !important;
+  font-family: "yonicon" !important;
   font-size: 12px;
 }
 
@@ -139,10 +129,11 @@ i.uf-calendar:before {
   content: "\e661";
   color: #adb4bc;
   font-size: 14px;
+  font-family: 'yonicon';
 }
 
 .uf-location:before {
-  content: "\e78b";
+  // content: "\e78b";
 }
 
 .yonicon-star {
@@ -150,6 +141,7 @@ i.uf-calendar:before {
   margin-right: 4px;
   transform: scale(0.75);
   width: 10px;
+  font-size: 12px;
 }
 
 .yon-row .anticon-star {
@@ -166,7 +158,7 @@ i.uf-calendar:before {
 .anticon.anticon-star {
   &:before {
     content: "\e605";
-    font-family: "iconfont" !important;
+    font-family: "yonicon" !important;
   }
 }
 
@@ -264,12 +256,16 @@ i.uf-calendar:before {
   content: "\e815";
 }
 
-.yonicon-close-circle:before {
+.yonicon-close-circle {
   font-size: 12px;
   color: #ccc;
   &:hover {
     color: #999;
   }
+}
+
+.uf-calendar:hover::before {
+  color: #505766;
 }
 
 // fix: ys 银行网点记录删除状态的图标
@@ -279,7 +275,7 @@ i.uf-calendar:before {
 
 .ant-select-arrow:before {
   content: "\E633";
-  font-family: 'iconfont' !important;
+  font-family: 'yonicon' !important;
   color: #98a2ad;
   display: block;
   transition: transform .2s ease;
@@ -321,14 +317,14 @@ i.uf-calendar:before {
 
 // message error 图标
 .icon-qingkong:before {
-  font-family: 'iconfont';
+  font-family: 'yonicon';
   content: "\e690";
 }
 
 // message tip 图标
 .icon-tongzhixinxi:before {
   content: "\e99c";
-  font-family: 'iconfont';
+  font-family: 'yonicon';
 }
 
 // message success 弹框
@@ -354,76 +350,67 @@ i.uf-calendar:before {
 }
 
 .uf-star:before {
-  content: "\ead7";
-}
-
-// TODO: 待适配的uf 字体图标，后面uf 字体将去掉统一为 iconfont
-.uf {
-  &.uf-nodata {
-    &:before {
-      font-family: "uf" !important;
-    }
-  }
+  // content: "\ead7";
 }
 
 //评分的图标样式
 .uf-star:before{
-  content: "\ead6";
+  // content: "\ead6";
 }
 .uf-star-o:before{
-  content: "\e7d9";
+  // content: "\e7d9";
 }
 .uf-heart:before{
-  content: "\e7b2";
+  // content: "\e7b2";
 }
 .uf-heart-o:before{
-  content: "\e7b3";
+  // content: "\e7b3";
 }
 
 //附件icon
 .uf-triangle-right:before{
-  content: "\e6c5"!important;
+  // content: "\e6c5"!important;
   font-size: 14px;
   color: #999;
 }
 
 .uf-triangle-down:before{
-  content: "\e78e"!important;
+  // content: "\e78e"!important;
   font-size: 14px;
   color: #999;
 }
 
 .u-select .u-select-arrow:before {
   content: "\e633"!important;
-  font-family: "iconfont"!important;
+  font-family: "yonicon"!important;
 }
 
 .uf-search:before {
-  content: "\e518"!important;
+  // content: "\e518"!important;
 }
 
 .uf-close-c:before {
-  content: "\e690"!important;
+  // content: "\e690"!important;
 }
 
 .uf-arrow-up:before {
-  content: "\e606"!important;
+  // content: "\e606"!important;
 }
 
 .uf-close:before {
-  content: "\e636"!important;
+  // content: "\e636"!important;
 }
 
 .uf-arrow-left:before {
-  content: "\e515"!important;
+  // content: "\e515"!important;
 }
 
 .uf-arrow-right:before {
-  content: "\e514"!important;
+  // content: "\e514"!important;
 }
 
 .uf-maxmize:before {
-  content: "\e7cc" !important;
+  // content: "\e7cc" !important;
 }
 
 .icon-jia:before {
@@ -441,7 +428,3 @@ i.uf-calendar:before {
 .yonicon-daishenhe {
   color: #4e97ff;
 }
-
-// .yonicon-ziduanbiangeng:before {
-//   content: "\e612";
-// }
