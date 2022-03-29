@@ -62,13 +62,13 @@ class ModalAdapter extends Component {
   }
 
   render () {
-    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, ...other } = this.props
+    const { children, visible, title, closable, onCancel, onOk, footer, afterClose, cancelText, okText, mask, maskClosable, className, enforceFocus, wrapClassName, _innerType, id, ...other } = this.props
 
     let defaultFooter = (
       <Footer className='modal-footer'>
         <span>
-          <Button onClick={onCancel} colors='secondary' className='s-cancel-button'>{cancelText || this.getLocale('YS_FED_FW_YONUI_00050001') /* "取消" */}</Button>
-          <Button onClick={onOk} colors='primary' className='s-ok-button m-l-8'>{okText || this.getLocale('YS_FED_FW_YONUI_00050002') /* "确认" */}</Button>
+          <Button onClick={onCancel} colors='secondary' id={id + 'cancel'} className='s-cancel-button'>{cancelText || this.getLocale('YS_FED_FW_YONUI_00050001') /* "取消" */}</Button>
+          <Button onClick={onOk} colors='primary' id={id + 'ok'} className='s-ok-button m-l-8'>{okText || this.getLocale('YS_FED_FW_YONUI_00050002') /* "确认" */}</Button>
         </span>
       </Footer>
     )
@@ -91,6 +91,7 @@ class ModalAdapter extends Component {
         enforceFocus={false}
         backdropClassName={_innerType}
         backdropClosable={maskClosable}
+        id={id}
       >
         <Header closeButton={closable} className='modal-header'>
           <Title>{title}</Title>
